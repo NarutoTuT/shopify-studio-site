@@ -6,19 +6,22 @@ import { PricingSection } from "@/components/pricing-section"
 import { ContactSection } from "@/components/contact-section"
 import { SmoothScrollProvider } from "@/components/smooth-scroll"
 import { MouseFollowLight } from "@/components/mouse-follow-light"
+import { LanguageProvider } from "@/components/language-provider"
 
 export default function Home() {
   return (
-    <SmoothScrollProvider>
-      <div className="bg-background min-h-screen">
-        <MouseFollowLight />
-        <Navbar />
-        <HeroSection />
-        <ServicesSection />
-        <ShowcaseSection />
-        <PricingSection />
-        <ContactSection />
-      </div>
-    </SmoothScrollProvider>
+    <LanguageProvider>
+      <SmoothScrollProvider>
+        <div className="bg-background min-h-screen">
+          <MouseFollowLight />
+          <Navbar />
+          <HeroSection />
+          <ServicesSection />
+          <ShowcaseSection />
+          <PricingSection />
+          <ContactSection />
+        </div>
+      </SmoothScrollProvider>
+    </LanguageProvider>
   )
 }

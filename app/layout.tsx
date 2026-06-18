@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Shopify 独立站设计与开发 | 跨境电商建站方案',
-  description: '为跨境卖家提供 Shopify 独立站设计、主题开发、支付物流对接、SEO 与转化优化服务，帮助店铺从上线到可持续运营。',
+  title: 'Shopify 独立站设计与开发 | 把流量转成订单的建站方案',
+  description: '为跨境品牌搭建能投放、能成交、能追踪的 Shopify 独立站，覆盖页面结构、主题开发、支付物流、SEO 和转化数据。',
   generator: 'v0.app',
   icons: {
     icon: [
