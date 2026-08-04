@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { StructuredData } from '@/components/structured-data'
 import './globals.css'
 
 const inter = Inter({ 
@@ -10,9 +11,41 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Shopify 独立站设计与开发 | 把流量转成订单的建站方案',
-  description: '为跨境品牌搭建能投放、能成交、能追踪的 Shopify 独立站，覆盖页面结构、主题开发、支付物流、SEO 和转化数据。',
-  generator: 'v0.app',
+  metadataBase: new URL('https://whaleleap.studio'),
+  title: {
+    default: 'WhaleLeap Studio | Shopify 建站、主题定制与转化优化',
+    template: '%s | WhaleLeap Studio',
+  },
+  description: 'WhaleLeap Studio 为跨境品牌提供 Shopify 建站、主题定制、转化率优化、GA4/GTM 数据追踪和基础 SEO 服务。',
+  applicationName: 'WhaleLeap Studio',
+  authors: [{ name: 'WhaleLeap Studio' }],
+  creator: 'WhaleLeap Studio',
+  publisher: 'WhaleLeap Studio',
+  keywords: [
+    'Shopify 建站',
+    'Shopify 独立站建设',
+    'Shopify 主题定制',
+    'Shopify Liquid 开发',
+    'Shopify 转化率优化',
+    'Shopify GA4 GTM',
+    '跨境电商建站',
+  ],
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'zh_CN',
+    url: '/',
+    siteName: 'WhaleLeap Studio',
+    title: 'WhaleLeap Studio | Shopify 建站、主题定制与转化优化',
+    description: '面向跨境品牌的 Shopify 建站、主题定制、转化率优化、GA4/GTM 数据追踪和基础 SEO 服务。',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'WhaleLeap Studio | Shopify 建站、主题定制与转化优化',
+    description: '面向跨境品牌的 Shopify 建站、主题定制、转化率优化、GA4/GTM 数据追踪和基础 SEO 服务。',
+  },
   icons: {
     icon: [
       {
@@ -38,8 +71,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="zh-CN">
       <body className={`${inter.variable} font-sans antialiased`}>
+        <StructuredData />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

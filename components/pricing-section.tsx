@@ -25,48 +25,49 @@ const copy = {
     arrow: "›",
     plans: [
       {
-        name: "启动版",
-        badge: "适合验证产品",
-        price: "17888",
-        outcome: "适合有产品、想把 Shopify 正式上线的团队。交付一个品牌基础完整、支付可用、商品可管理的独立站。",
-        cta: "启动我的 Shopify 站",
+        name: "文档模板方案",
+        badge: "¥20,000 起",
+        price: "20,000",
+        outcome: "适合已有参考网站或清楚模块需求的团队。按模块组合开发，先把 Shopify 店铺稳定上线。",
+        cta: "选择模块建站",
         features: [
-          "品牌视觉和 Shopify 主题基础适配",
-          "首页、商品页、集合页等 6 个以内定制页面",
-          "购物车、产品搜索、邮件订阅和社媒入口",
-          "支付、域名、SSL 和 favicon 配置协助",
-          "产品批量导入导出与基础 SEO 设置",
-          "交付培训与 30 天上线支持",
+          "参考 1-3 个优秀网站拆解模块",
+          "首页、商品页、集合页、关于我们等模块按需选择",
+          "基础品牌视觉适配、移动端自适应和基础 SEO",
+          "可追加 GA4/GTM、动画、博客和新增 SKU",
+          "项目周期约 2-4 周，最长不超过 1.5 个月",
+          "上线后 2 个月免费技术支持",
         ],
       },
       {
-        name: "增长版",
+        name: "设计图定制方案",
         badge: "推荐",
-        price: "18888",
-        outcome: "适合准备投放广告，或现有店铺转化不稳的团队。交付一套更适合流量成交和数据追踪的销售路径。",
-        cta: "优化我的转化路径",
+        price: "35,000",
+        outcome: "适合需要完整品牌表达和更强转化路径的团队。先做 Figma UI/UX，再按确认设计稿开发 Shopify。",
+        cta: "定制我的设计稿",
         features: [
-          "包含启动版全部交付内容",
-          "8 个以内定制页面与购买路径优化",
-          "GA4、Meta Pixel、转化事件与渠道追踪",
-          "邮件模板、弃购召回和营销组件配置",
-          "支付网关、物流规则和多币种配置协助",
-          "交付培训与 60 天增长支持",
+          "首页、产品详情、关于我们、产品系列共 4 个页面",
+          "Desktop + Mobile 共 8 张 Figma 设计图",
+          "基础设计系统：品牌色、排版规范、间距体系",
+          "Liquid、HTML/CSS/JS、GSAP 或 Framer Motion 实现",
+          "GA4 电商追踪、GTM 容器和 Product Schema",
+          "项目周期约 3-6 周，最长不超过 2 个月",
+          "上线后 2 个月免费技术支持",
         ],
       },
       {
-        name: "旗舰版",
-        badge: "适合复杂业务",
-        price: "19888",
-        outcome: "适合 SKU 多、批发、询价、ERP 或复杂履约业务。交付的不只是前台页面，而是能接进业务流程的 Shopify 系统。",
+        name: "复杂业务定制",
+        badge: "按需评估",
+        price: "50,000",
+        outcome: "适合 SKU 多、批发、询价、ERP、CRM 或复杂履约业务。在定制设计基础上，把网站接进真实业务流程。",
         cta: "规划复杂业务方案",
         features: [
-          "包含增长版全部交付内容",
-          "10 个以内定制页面与高级视觉设计",
+          "包含设计图定制方案的设计与开发基础",
           "B2B 批发、客户分级、询价或分销流程",
           "Xero、ERP、CRM 或物流 API 对接评估",
-          "数据迁移、技术 SEO 与性能优化",
-          "交付培训与 90 天运营支持",
+          "复杂物流、支付、多币种或数据迁移方案",
+          "技术 SEO、性能优化和上线验收标准",
+          "按业务范围单独确认报价、排期和售后周期，最低 3 个月",
         ],
       },
     ],
@@ -80,48 +81,49 @@ const copy = {
     arrow: "›",
     plans: [
       {
-        name: "Launch",
-        badge: "Product validation",
-        price: "17,888",
-        outcome: "For teams with products ready to launch on Shopify. You get a store with brand basics, payments, and product management ready.",
-        cta: "Launch my Shopify store",
+        name: "Module-Based Build",
+        badge: "from ¥20,000",
+        price: "20,000",
+        outcome: "For teams with reference sites or clear module needs. We combine selected modules and launch a stable Shopify store.",
+        cta: "Choose module build",
         features: [
-          "Basic brand and Shopify theme adaptation",
-          "Up to 6 custom pages",
-          "Cart, product search, email capture, and social entry points",
-          "Payment, domain, SSL, and favicon setup support",
-          "Product import/export and basic SEO setup",
-          "Delivery training and 30 days of launch support",
+          "Use 1-3 reference sites to define modules",
+          "Homepage, product page, collection, about, and help modules as needed",
+          "Basic brand adaptation, responsive layout, and basic SEO",
+          "Optional GA4/GTM, animation, blog, and extra SKU work",
+          "Typical timeline: 2-4 weeks, capped at 1.5 months",
+          "2 months of post-launch technical support",
         ],
       },
       {
-        name: "Growth",
+        name: "Custom Design Build",
         badge: "Recommended",
-        price: "18,888",
-        outcome: "For teams preparing paid traffic, or stores with unstable conversion. You get a selling path built for traffic, conversion, and tracking.",
-        cta: "Improve my conversion path",
+        price: "35,000",
+        outcome: "For teams that need stronger brand expression and conversion structure. We design in Figma first, then build the approved Shopify site.",
+        cta: "Create my Figma design",
         features: [
-          "Everything in Launch",
-          "Up to 8 custom pages and buying path optimization",
-          "GA4, Meta Pixel, conversion events, and attribution",
-          "Email templates, abandoned cart, and marketing components",
-          "Payment gateway, logistics rules, and multi-currency setup support",
-          "Delivery training and 60 days of growth support",
+          "Homepage, product page, about page, and collection page",
+          "8 Figma screens: desktop and mobile for each page",
+          "Basic design system: brand color, typography, and spacing",
+          "Liquid, HTML/CSS/JS, GSAP or Framer Motion implementation",
+          "GA4 ecommerce tracking, GTM container, and Product Schema",
+          "Typical timeline: 3-6 weeks, capped at 2 months",
+          "2 months of post-launch technical support",
         ],
       },
       {
-        name: "Flagship",
-        badge: "Complex business",
-        price: "19,888",
-        outcome: "For larger SKU catalogs, wholesale, quote flows, ERP, or complex fulfillment. You get a Shopify system connected to your business flow.",
+        name: "Complex Business",
+        badge: "Scoped quote",
+        price: "50,000",
+        outcome: "For larger SKU catalogs, wholesale, quote flows, ERP, CRM, or complex fulfillment. We connect the site to the real business workflow.",
         cta: "Plan my complex build",
         features: [
-          "Everything in Growth",
-          "Up to 10 custom pages with advanced visual design",
-          "B2B wholesale, customer tiers, quotes, or distributor flows",
+          "Built on the custom design and development foundation",
+          "B2B wholesale, customer tiers, quote, or distributor flows",
           "Xero, ERP, CRM, or logistics API assessment",
-          "Data migration, technical SEO, and performance optimization",
-          "Delivery training and 90 days of operations support",
+          "Complex logistics, payments, multi-currency, or data migration",
+          "Technical SEO, performance optimization, and launch acceptance checks",
+          "Final quote, timeline, and support period confirmed by scope, minimum 3 months",
         ],
       },
     ],
@@ -226,7 +228,7 @@ export function PricingSection() {
                 <div className="flex items-start justify-center group cursor-default">
                   <span className={`text-xl md:text-2xl font-bold mt-1 mr-0.5 transition-transform duration-300 group-hover:-translate-y-1 ${styles.priceColor}`}>¥</span>
                   <span className={`text-5xl md:text-6xl font-bold tracking-tighter transition-all duration-300 ${styles.priceColor}`}>{plan.price}</span>
-                  {index === 2 && <span className="text-muted-foreground text-xs mt-8 ml-0.5">{text.from}</span>}
+                  {index !== 1 && <span className="text-muted-foreground text-xs mt-8 ml-0.5">{text.from}</span>}
                 </div>
               </div>
 
@@ -240,7 +242,7 @@ export function PricingSection() {
               </div>
 
               <div className="text-center mt-auto">
-                <a href="#contact" className={`inline-flex items-center justify-center w-full py-3.5 px-8 rounded-xl font-bold text-sm transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.97] group ${
+                <a href="/diagnosis" className={`inline-flex items-center justify-center w-full py-3.5 px-8 rounded-xl font-bold text-sm transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.97] group ${
                   styles.popular ? "bg-primary text-primary-foreground shadow-xl shadow-primary/20" : "bg-white/10 text-foreground hover:bg-white/20"
                 }`}>
                   {plan.cta}
@@ -254,4 +256,3 @@ export function PricingSection() {
     </section>
   )
 }
-

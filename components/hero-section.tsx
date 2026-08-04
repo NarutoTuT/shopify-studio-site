@@ -81,7 +81,7 @@ export function HeroSection() {
         </p>
 
         <div className="hero-animate flex flex-wrap gap-5 font-medium justify-center">
-          <a href="#contact" className="pointer-events-auto bg-primary text-primary-foreground px-8 py-4 md:px-10 md:py-5 text-base rounded-full cursor-pointer hover:brightness-110 transition-all duration-300 active:scale-[0.97] shadow-[0_0_20px_rgba(119,252,117,0.3)]">
+          <a href="/diagnosis" className="pointer-events-auto bg-primary text-primary-foreground px-8 py-4 md:px-10 md:py-5 text-base rounded-full cursor-pointer hover:brightness-110 transition-all duration-300 active:scale-[0.97] shadow-[0_0_20px_rgba(119,252,117,0.3)]">
             {text.primaryCta}
           </a>
           <a href="#work" className="pointer-events-auto border border-foreground/20 text-foreground px-8 py-4 md:px-10 md:py-5 text-base rounded-full cursor-pointer hover:bg-foreground/5 transition-all duration-300 active:scale-[0.97] backdrop-blur-sm">
@@ -100,4 +100,3 @@ export function HeroSection() {
     </section>
   )
 }
-

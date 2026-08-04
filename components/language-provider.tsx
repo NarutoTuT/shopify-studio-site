@@ -17,10 +17,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const saved = window.localStorage.getItem("site-language")
-    if (saved === "zh" || saved === "en") {
-      setLanguageState(saved)
-      document.documentElement.lang = saved === "zh" ? "zh-CN" : "en"
-    }
+    const initialLanguage = saved === "zh" || saved === "en" ? saved : "zh"
+
+    setLanguageState(initialLanguage)
+    document.documentElement.lang = initialLanguage === "zh" ? "zh-CN" : "en"
   }, [])
 
   const value = useMemo<LanguageContextValue>(() => {
@@ -49,4 +49,3 @@ export function useLanguage() {
 
   return context
 }
-

@@ -17,11 +17,11 @@ import { useLanguage } from "@/components/language-provider"
 gsap.registerPlugin(ScrollTrigger)
 
 const images = [
-  "https://images.unsplash.com/photo-1549007994-cb92ca817bc7?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1513519245088-0e12902e35ca?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=800",
+  "/case-studies/food-gift-shopify.png",
+  "/case-studies/outdoor-cycling-shopify.png",
+  "/case-studies/beauty-skincare-shopify.png",
+  "/case-studies/home-lifestyle-shopify.png",
+  "/case-studies/sports-retail-shopify.png",
 ]
 
 const copy = {
@@ -229,4 +229,3 @@ export function ShowcaseSection() {
     </section>
   )
 }
-
