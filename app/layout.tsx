@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { StructuredData } from '@/components/structured-data'
+import { GoogleAnalytics } from '@/components/google-analytics'
 import './globals.css'
 
 const inter = Inter({ 
@@ -75,6 +76,7 @@ export default function RootLayout({
       <body className={`${inter.variable} font-sans antialiased`}>
         <StructuredData />
         {children}
+        <GoogleAnalytics />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

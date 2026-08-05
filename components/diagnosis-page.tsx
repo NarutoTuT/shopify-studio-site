@@ -1,7 +1,7 @@
 "use client"
 
-import { FormEvent, useMemo, useState } from "react"
-import { ArrowUpRight, BarChart3, CheckCircle2, Clock3, Globe2, Send, ShieldCheck, Target } from "lucide-react"
+import { FormEvent, useState } from "react"
+import { AlertCircle, ArrowUpRight, BarChart3, CheckCircle2, Clock3, Globe2, LoaderCircle, Send, ShieldCheck, Target } from "lucide-react"
 
 import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
@@ -16,7 +16,9 @@ type FormState = {
   budget: string
   timeline: string
   problem: string
-  contact: string
+  email: string
+  wechat: string
+  companyWebsite: string
 }
 
 const initialForm: FormState = {
@@ -28,7 +30,9 @@ const initialForm: FormState = {
   budget: "",
   timeline: "",
   problem: "",
-  contact: "",
+  email: "",
+  wechat: "",
+  companyWebsite: "",
 }
 
 const copy = {
@@ -74,14 +78,16 @@ const copy = {
       budget: "预算区间",
       timeline: "期望上线时间",
       problem: "最想解决的问题",
-      contact: "联系方式",
+      email: "邮箱",
+      wechat: "微信（选填）",
     },
     placeholders: {
       storeUrl: "https://your-store.com",
       category: "例如：户外装备 / 美妆护肤 / 家居生活",
       market: "例如：美国、欧洲、东南亚",
       problem: "例如：广告有点击但转化低，商品页说服力不足，数据追踪不清楚",
-      contact: "邮箱或微信",
+      email: "name@company.com",
+      wechat: "微信号",
     },
     options: {
       stage: ["新品牌建站", "已有 Shopify 改版", "主题功能开发", "数据追踪优化", "B2B/批发定制"],
@@ -91,6 +97,11 @@ const copy = {
     },
     emailSubject: "Shopify 免费诊断咨询",
     emailIntro: "你好，我想预约 Shopify 免费诊断。以下是项目信息：",
+    submitting: "正在提交…",
+    submitSuccess: "提交成功，我们已收到你的诊断信息，将在 1 个工作日内回复。",
+    submitError: "提交失败，请稍后重试，或直接发送邮件联系我们。",
+    contactRequired: "请至少填写邮箱或微信，方便我们回复你。",
+    emailInvalid: "请输入有效的邮箱地址。",
     responseTitle: "提交后会得到什么",
     responseItems: ["页面结构建议", "功能范围判断", "预算梯度建议", "下一步交付节奏"],
     noteTitle: "适合提交的情况",
@@ -180,14 +191,16 @@ const copy = {
       budget: "Budget range",
       timeline: "Launch timeline",
       problem: "Main problem to solve",
-      contact: "Contact",
+      email: "Email",
+      wechat: "WeChat (optional)",
     },
     placeholders: {
       storeUrl: "https://your-store.com",
       category: "Outdoor gear / beauty / home lifestyle",
       market: "US, Europe, Southeast Asia",
       problem: "Paid clicks do not convert, product page lacks persuasion, analytics are unclear",
-      contact: "Email or WeChat",
+      email: "name@company.com",
+      wechat: "WeChat ID",
     },
     options: {
       stage: ["New brand build", "Existing Shopify redesign", "Theme feature development", "Analytics optimization", "B2B/wholesale customization"],
@@ -197,6 +210,11 @@ const copy = {
     },
     emailSubject: "Free Shopify diagnosis inquiry",
     emailIntro: "Hi, I would like to request a free Shopify diagnosis. Project details:",
+    submitting: "Submitting…",
+    submitSuccess: "Submitted successfully. We received your brief and will reply within 1 business day.",
+    submitError: "Submission failed. Please try again later or contact us by email.",
+    contactRequired: "Please enter at least an email or WeChat so we can reply.",
+    emailInvalid: "Please enter a valid email address.",
     responseTitle: "What you get next",
     responseItems: ["Page structure advice", "Feature scope assessment", "Budget range guidance", "Delivery rhythm suggestion"],
     noteTitle: "Good fit",
@@ -289,33 +307,69 @@ export function DiagnosisPage() {
   const { language } = useLanguage()
   const text = copy[language]
   const [form, setForm] = useState<FormState>(initialForm)
+  const [submitState, setSubmitState] = useState<"idle" | "submitting" | "success" | "error">("idle")
+  const [submitMessage, setSubmitMessage] = useState("")
+  const [startedAt, setStartedAt] = useState(() => Date.now())
   const email = "liaoshenyuan1999053@gmail.com"
-
-  const emailBody = useMemo(() => {
-    const rows = [
-      text.emailIntro,
-      "",
-      `${text.labels.storeUrl}: ${form.storeUrl || "-"}`,
-      `${text.labels.category}: ${form.category || "-"}`,
-      `${text.labels.market}: ${form.market || "-"}`,
-      `${text.labels.stage}: ${form.stage || "-"}`,
-      `${text.labels.skuCount}: ${form.skuCount || "-"}`,
-      `${text.labels.budget}: ${form.budget || "-"}`,
-      `${text.labels.timeline}: ${form.timeline || "-"}`,
-      `${text.labels.problem}: ${form.problem || "-"}`,
-      `${text.labels.contact}: ${form.contact || "-"}`,
-    ]
-
-    return encodeURIComponent(rows.join("\n"))
-  }, [form, text])
 
   const updateField = (field: keyof FormState, value: string) => {
     setForm((current) => ({ ...current, [field]: value }))
+    if (submitState !== "idle" && submitState !== "submitting") {
+      setSubmitState("idle")
+      setSubmitMessage("")
+    }
   }
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    window.location.href = `mailto:${email}?subject=${encodeURIComponent(text.emailSubject)}&body=${emailBody}`
+
+    if (!form.email.trim() && !form.wechat.trim()) {
+      setSubmitState("error")
+      setSubmitMessage(text.contactRequired)
+      return
+    }
+
+    if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      setSubmitState("error")
+      setSubmitMessage(text.emailInvalid)
+      return
+    }
+
+    setSubmitState("submitting")
+    setSubmitMessage("")
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...form,
+          language,
+          startedAt,
+          pageUrl: window.location.href,
+          referrer: document.referrer,
+          utmSource: new URLSearchParams(window.location.search).get("utm_source") || "",
+          utmMedium: new URLSearchParams(window.location.search).get("utm_medium") || "",
+          utmCampaign: new URLSearchParams(window.location.search).get("utm_campaign") || "",
+        }),
+      })
+      const result = (await response.json().catch(() => null)) as { message?: string } | null
+
+      if (!response.ok) {
+        throw new Error(result?.message || text.submitError)
+      }
+
+      setForm(initialForm)
+      setStartedAt(Date.now())
+      setSubmitState("success")
+      setSubmitMessage(text.submitSuccess)
+      ;(window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.("event", "generate_lead", {
+        lead_source: "diagnosis_form",
+      })
+    } catch (error) {
+      setSubmitState("error")
+      setSubmitMessage(error instanceof Error && error.message ? error.message : text.submitError)
+    }
   }
 
   return (
@@ -464,23 +518,81 @@ export function DiagnosisPage() {
                   />
                 </Field>
 
-                <Field label={text.labels.contact}>
+                <div className="grid gap-5 md:grid-cols-2">
+                  <Field label={text.labels.email}>
+                    <input
+                      className={inputClass()}
+                      value={form.email}
+                      onChange={(event) => updateField("email", event.target.value)}
+                      placeholder={text.placeholders.email}
+                      type="email"
+                      autoComplete="email"
+                      aria-describedby="contact-submit-status"
+                    />
+                  </Field>
+                  <Field label={text.labels.wechat}>
+                    <input
+                      className={inputClass()}
+                      value={form.wechat}
+                      onChange={(event) => updateField("wechat", event.target.value)}
+                      placeholder={text.placeholders.wechat}
+                      autoComplete="off"
+                      aria-describedby="contact-submit-status"
+                    />
+                  </Field>
+                </div>
+
+                <div className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+                  <label htmlFor="company-website">Company website</label>
                   <input
-                    className={inputClass()}
-                    value={form.contact}
-                    onChange={(event) => updateField("contact", event.target.value)}
-                    placeholder={text.placeholders.contact}
+                    id="company-website"
+                    name="companyWebsite"
+                    value={form.companyWebsite}
+                    onChange={(event) => updateField("companyWebsite", event.target.value)}
+                    tabIndex={-1}
+                    autoComplete="off"
                   />
-                </Field>
+                </div>
               </div>
+
+              {submitState !== "idle" && submitState !== "submitting" && (
+                <div
+                  id="contact-submit-status"
+                  role={submitState === "error" ? "alert" : "status"}
+                  aria-live="polite"
+                  className={`mt-5 flex items-start gap-3 rounded-xl border px-4 py-3 text-sm leading-relaxed ${
+                    submitState === "success"
+                      ? "border-emerald-400/25 bg-emerald-400/10 text-emerald-200"
+                      : "border-red-400/25 bg-red-400/10 text-red-200"
+                  }`}
+                >
+                  {submitState === "success" ? (
+                    <CheckCircle2 className="mt-0.5 size-4 shrink-0" />
+                  ) : (
+                    <AlertCircle className="mt-0.5 size-4 shrink-0" />
+                  )}
+                  <span>
+                    {submitMessage}
+                    {submitState === "error" && (
+                      <>
+                        {" "}
+                        <a className="font-semibold underline underline-offset-4" href={`mailto:${email}?subject=${encodeURIComponent(text.emailSubject)}`}>
+                          {email}
+                        </a>
+                      </>
+                    )}
+                  </span>
+                </div>
+              )}
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <button
                   type="submit"
-                  className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-bold text-primary-foreground transition-all hover:brightness-110 active:scale-[0.98]"
+                  disabled={submitState === "submitting"}
+                  className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-bold text-primary-foreground transition-all hover:brightness-110 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-65"
                 >
-                  {text.primaryCta}
-                  <ArrowUpRight className="size-4" />
+                  {submitState === "submitting" ? text.submitting : text.primaryCta}
+                  {submitState === "submitting" ? <LoaderCircle className="size-4 animate-spin" /> : <ArrowUpRight className="size-4" />}
                 </button>
                 <a
                   href="/"
