@@ -189,6 +189,26 @@ Structured data is handled through:
 components/page-structured-data.tsx
 ```
 
+## Deployment
+
+This site is deployed on Vercel.
+
+Production domain:
+
+```text
+https://whaleleap.studio
+```
+
+The Vercel project is connected to the `main` branch. After pushing to `main`, verify the production site and key routes:
+
+- /
+- /diagnosis
+- /services/shopify-website-build
+- /sitemap.xml
+- /robots.txt
+
+If DNS was updated recently, allow time for propagation before checking the custom domain.
+
 ## Project Notes
 
 - The main language strategy is Chinese-first with English support in key components.
