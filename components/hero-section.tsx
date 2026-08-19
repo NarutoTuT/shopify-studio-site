@@ -7,22 +7,22 @@ import { useLanguage } from "@/components/language-provider"
 
 const copy = {
   zh: {
-    proofPoints: ["Trusted by founders building global Shopify brands", "Shopify 2.0 主题开发", "支付物流与数据追踪"],
-    eyebrow: "面向跨境品牌的 Shopify 成交系统",
-    title: "把 Shopify 做成能接住广告流量的销售系统",
-    subtitle: "从首页、商品页、支付物流到数据追踪一次打通，让店铺上线后能投放、能成交、能继续优化。",
-    description: "适合已经有产品、准备出海销售，或者现有 Shopify 店铺转化不稳的团队。我们先判断卖货路径，再做页面、功能和数据。",
-    primaryCta: "免费诊断我的 Shopify 站",
-    secondaryCta: "查看行业方案",
+    proofPoints: ["Shopify Theme Development", "Conversion Optimization", "Tracking Setup"],
+    eyebrow: "面向海外华人跨境品牌",
+    title: "Shopify 增长工程工作室",
+    subtitle: "帮助海外华人跨境品牌打造更快、更稳定、更高转化的 Shopify 独立站。",
+    description: "从 Shopify 技术建设、主题开发，到转化优化和数据追踪，帮助品牌把流量真正转化为订单。",
+    primaryCta: "免费 Shopify 店铺诊断",
+    secondaryCta: "查看服务体系",
   },
   en: {
-    proofPoints: ["Trusted by founders building global Shopify brands", "Shopify 2.0 theme development", "Payments, logistics, and analytics"],
-    eyebrow: "Shopify revenue systems for global brands",
-    title: "Turn Shopify into a sales system that captures paid traffic",
-    subtitle: "Connect homepage, product pages, payments, logistics, and analytics so your store can launch, sell, and keep improving.",
-    description: "Built for teams with products ready to sell globally, or existing Shopify stores that need stronger conversion. We map the selling path first, then build pages, features, and data.",
-    primaryCta: "Get Free Store Diagnosis",
-    secondaryCta: "View Case Studies",
+    proofPoints: ["Shopify Theme Development", "Conversion Optimization", "Tracking Setup"],
+    eyebrow: "For Chinese-founded global ecommerce brands",
+    title: "Shopify Growth Engineering Studio",
+    subtitle: "Helping global ecommerce brands build faster, more stable, and higher-converting Shopify stores.",
+    description: "From Shopify engineering and theme development to conversion optimization and tracking setup, WhaleLeap helps brands turn traffic into orders.",
+    primaryCta: "Free Shopify Store Review",
+    secondaryCta: "View Service System",
   },
 }
 
@@ -84,7 +84,7 @@ export function HeroSection() {
           <a href="/diagnosis" className="pointer-events-auto bg-primary text-primary-foreground px-8 py-4 md:px-10 md:py-5 text-base rounded-full cursor-pointer hover:brightness-110 transition-all duration-300 active:scale-[0.97] shadow-[0_0_20px_rgba(119,252,117,0.3)]">
             {text.primaryCta}
           </a>
-          <a href="#work" className="pointer-events-auto border border-foreground/20 text-foreground px-8 py-4 md:px-10 md:py-5 text-base rounded-full cursor-pointer hover:bg-foreground/5 transition-all duration-300 active:scale-[0.97] backdrop-blur-sm">
+          <a href="#services" className="pointer-events-auto border border-foreground/20 text-foreground px-8 py-4 md:px-10 md:py-5 text-base rounded-full cursor-pointer hover:bg-foreground/5 transition-all duration-300 active:scale-[0.97] backdrop-blur-sm">
             {text.secondaryCta}
           </a>
         </div>

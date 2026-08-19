@@ -11,10 +11,9 @@ const copy = {
   zh: {
     servicesLabel: "服务",
     serviceLinks: [
-      { label: "Shopify 建站", href: "/services/shopify-website-build" },
-      { label: "主题定制", href: "/services/shopify-theme-customization" },
-      { label: "转化优化", href: "/services/shopify-conversion-optimization" },
-      { label: "GA4/GTM 追踪", href: "/services/shopify-ga4-gtm" },
+      { label: "Shopify Engineering", href: "/services/shopify-website-build" },
+      { label: "Conversion Optimization", href: "/services/shopify-conversion-optimization" },
+      { label: "Growth Analytics & Tracking", href: "/services/shopify-ga4-gtm" },
     ],
     navLinks: [
       { label: "案例", href: "/#work" },
@@ -29,10 +28,9 @@ const copy = {
   en: {
     servicesLabel: "Services",
     serviceLinks: [
-      { label: "Shopify Website Build", href: "/services/shopify-website-build" },
-      { label: "Theme Customization", href: "/services/shopify-theme-customization" },
+      { label: "Shopify Engineering", href: "/services/shopify-website-build" },
       { label: "Conversion Optimization", href: "/services/shopify-conversion-optimization" },
-      { label: "GA4/GTM Tracking", href: "/services/shopify-ga4-gtm" },
+      { label: "Growth Analytics & Tracking", href: "/services/shopify-ga4-gtm" },
     ],
     navLinks: [
       { label: "Case Studies", href: "/#work" },

@@ -5,9 +5,9 @@ import { LanguageProvider } from "@/components/language-provider"
 import { SmoothScrollProvider } from "@/components/smooth-scroll"
 
 export const metadata: Metadata = {
-  title: "Shopify 免费诊断",
+  title: "Free Shopify Review | 免费 Shopify 店铺增长检查",
   description:
-    "提交 Shopify 店铺链接、产品品类、目标市场、预算和上线时间，获取页面结构、功能范围、转化问题和交付节奏建议。",
+    "发现影响 Shopify 独立站转化的关键问题，获得 Shopify 技术、页面体验和数据追踪方面的初步优化建议。",
 }
 
 export default function Page() {

@@ -27,67 +27,87 @@ const images = [
 const copy = {
   zh: {
     eyebrow: "CASE STUDIES",
-    title: "不同行业，需要不同的成交结构",
-    description: "我们不会把同一套模板套给所有品牌。真实项目会根据产品、客单价、市场和履约方式重新设计，并用转化和收入指标验证。",
+    title: "案例不只展示视觉，更要展示增长问题如何被解决。",
+    description: "在没有可公开真实数据时，我们不使用虚假指标。案例重点展示 Challenge、Approach、Implementation 和 Outcome。",
     label: "行业路径",
     items: [
       {
         title: "食品礼盒品牌",
-        description: "把节日礼盒页做成复购入口，突出送礼场景、套装组合和订阅购买。",
-        metrics: ["转化提升 XX%", "复购收入 +XX%"],
+        challenge: "节日流量进入后，需要快速理解礼盒场景、套装价值和配送时效。",
+        approach: "把送礼场景、套装组合和订阅复购入口放进同一条购买路径。",
+        implementation: "活动页结构、商品页信任内容、套装购买路径",
+        outcome: "更清楚的节日销售路径，便于后续围绕复购和套装继续优化。",
       },
       {
         title: "户外与骑行装备",
-        description: "用规格筛选、配件联动和清楚的运费规则，减少用户在商品页来回确认。",
-        metrics: ["加购率 +XX%", "客服咨询 -XX%"],
+        challenge: "高客单产品需要解释规格、配件、物流和售后，用户购买决策成本高。",
+        approach: "把规格说明、配件联动和配送规则前置到商品页关键决策区。",
+        implementation: "PDP 架构、规格模块、配送说明、移动端内容层级",
+        outcome: "减少商品页反复确认成本，为广告落地页提供更清晰的购买路径。",
       },
       {
         title: "美妆护肤出海",
-        description: "把功效证明、成分解释和套装推荐放进购买路径，让社媒流量更快理解产品。",
-        metrics: ["落地页转化 +XX%", "套装收入 +XX%"],
+        challenge: "社媒流量需要快速理解功效、成分、适用人群和套装逻辑。",
+        approach: "用功效证明、成分解释和套装推荐重新组织页面阅读顺序。",
+        implementation: "落地页优化、PDP proof blocks、基础追踪检查",
+        outcome: "让用户从理解产品到进入购物车的路径更连贯。",
       },
       {
         title: "家居生活方式",
-        description: "用空间场景、系列搭配和内容导购，把浏览行为引导到组合购买。",
-        metrics: ["客单价 +XX%", "内容点击 +XX%"],
+        challenge: "用户浏览空间内容后，没有自然进入系列搭配和组合购买。",
+        approach: "用空间场景、系列搭配和内容导购连接浏览行为与商品选择。",
+        implementation: "集合页体验、内容导购路径、交叉推荐模块",
+        outcome: "让内容不只停留在展示，而是进入可购买的商品路径。",
       },
       {
         title: "运动装备零售",
-        description: "为多 SKU、尺码选择和会员折扣设计清楚的广告落地页，减少选择成本。",
-        metrics: ["广告 ROAS +XX%", "下单转化 +XX%"],
+        challenge: "多 SKU、尺码、会员折扣和广告落地页信息分散，选择成本高。",
+        approach: "重新整理广告落地页和 PDP 层级，让用户更快判断适合自己的产品。",
+        implementation: "广告落地页结构、移动端 UX、优惠信息表达",
+        outcome: "降低广告流量进入后的选择阻力，为后续转化测试建立基础。",
       },
     ],
   },
   en: {
     eyebrow: "CASE STUDIES",
-    title: "Different industries need different selling structures",
-    description: "We do not apply one template to every brand. Each project is rebuilt around product type, AOV, market, and fulfillment, then judged by conversion and revenue signals.",
+    title: "Case studies should show how growth problems are solved, not only visual output.",
+    description: "When real public data is unavailable, we do not use fake metrics. Each case focuses on challenge, approach, implementation, and outcome.",
     label: "Industry path",
     items: [
       {
         title: "Food gift box brand",
-        description: "Turn seasonal gift pages into repeat purchase entry points with gifting scenarios, bundles, and subscriptions.",
-        metrics: ["Conversion +XX%", "Repeat revenue +XX%"],
+        challenge: "Seasonal traffic needed to understand gifting context, bundle value, and delivery timing quickly.",
+        approach: "Connect gifting scenarios, bundle selection, and subscription entry points in one buying path.",
+        implementation: "Campaign page structure, PDP trust content, bundle purchase path",
+        outcome: "A clearer seasonal sales path that can support future repeat-purchase and bundle optimization.",
       },
       {
         title: "Outdoor and cycling gear",
-        description: "Use specs, accessory linking, and clear shipping rules to reduce back-and-forth before purchase.",
-        metrics: ["Add-to-cart +XX%", "Support tickets -XX%"],
+        challenge: "High-ticket products required specs, accessories, logistics, and support clarity before purchase.",
+        approach: "Bring specs, accessory logic, and shipping rules closer to the main product decision area.",
+        implementation: "PDP architecture, spec modules, shipping clarity, mobile hierarchy",
+        outcome: "Less product-page decision friction and a clearer path for paid traffic.",
       },
       {
         title: "Beauty and skincare export",
-        description: "Bring proof, ingredient education, and bundle recommendations into the buying path so social traffic understands faster.",
-        metrics: ["Landing CVR +XX%", "Bundle revenue +XX%"],
+        challenge: "Social traffic needed faster education around benefits, ingredients, fit, and bundle logic.",
+        approach: "Rebuild the page rhythm around proof, ingredient explanation, and bundle recommendations.",
+        implementation: "Landing page improvement, PDP proof blocks, basic tracking review",
+        outcome: "A more connected path from product education to cart entry.",
       },
       {
         title: "Home lifestyle brand",
-        description: "Use room scenes, collection pairing, and content-led shopping to guide browsing into bundled orders.",
-        metrics: ["AOV +XX%", "Content clicks +XX%"],
+        challenge: "Shoppers browsed lifestyle content but did not naturally move into collections and bundles.",
+        approach: "Connect room scenes, collection pairing, and content-led shopping with product selection.",
+        implementation: "Collection UX, content-led shopping path, cross-sell modules",
+        outcome: "Content becomes part of a shoppable path instead of only a brand display.",
       },
       {
         title: "Sports equipment retail",
-        description: "Design clearer ad landing pages for large SKU sets, sizing, and member discounts to reduce decision friction.",
-        metrics: ["Ad ROAS +XX%", "Checkout CVR +XX%"],
+        challenge: "Large SKU sets, sizing, member discounts, and ad landing pages created choice friction.",
+        approach: "Restructure landing page and PDP hierarchy so shoppers can identify the right product faster.",
+        implementation: "Ad landing page structure, mobile UX, offer clarity",
+        outcome: "Lower choice friction after paid clicks and a better base for conversion testing.",
       },
     ],
   },
@@ -202,14 +222,17 @@ export function ShowcaseSection() {
                             {item.title}
                           </span>
                         </div>
-                        <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                          {item.description}
-                        </p>
-                        <div className="mt-4 grid grid-cols-2 gap-2">
-                          {item.metrics.map((metric) => (
-                            <span key={metric} className="rounded-full border border-primary/20 bg-primary/10 px-3 py-2 text-xs font-semibold text-primary">
-                              {metric}
-                            </span>
+                        <div className="mt-4 grid gap-3 md:grid-cols-2">
+                          {[
+                            ["Challenge", item.challenge],
+                            ["Approach", item.approach],
+                            ["Implementation", item.implementation],
+                            ["Outcome", item.outcome],
+                          ].map(([label, value]) => (
+                            <div key={label} className="rounded-xl border border-white/10 bg-white/[0.04] p-3">
+                              <div className="mb-1 text-[10px] font-bold uppercase tracking-[0.18em] text-primary">{label}</div>
+                              <p className="text-xs leading-relaxed text-muted-foreground md:text-sm">{value}</p>
+                            </div>
                           ))}
                         </div>
                       </div>

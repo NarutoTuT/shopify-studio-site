@@ -1,7 +1,7 @@
 "use client"
 
 import { FormEvent, useState } from "react"
-import { AlertCircle, ArrowUpRight, BarChart3, CheckCircle2, Clock3, Globe2, LoaderCircle, Send, ShieldCheck, Target } from "lucide-react"
+import { AlertCircle, ArrowUpRight, BarChart3, CheckCircle2, Clock3, Gauge, Globe2, LoaderCircle, Send, ShieldCheck, Target } from "lucide-react"
 
 import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
@@ -37,38 +37,68 @@ const initialForm: FormState = {
 
 const copy = {
   zh: {
-    eyebrow: "FREE SHOPIFY DIAGNOSIS",
-    title: "先诊断卖货路径，再决定 Shopify 怎么建。",
-    description:
-      "这不是泛泛的建站咨询。你提交产品、市场、预算和当前问题后，我们会从页面结构、转化阻力、功能边界和数据追踪四个维度判断优先级。",
-    primaryCta: "提交诊断信息",
+    eyebrow: "FREE SHOPIFY REVIEW",
+    title: "免费 Shopify 店铺增长检查",
+    description: "发现影响独立站转化的关键问题，获得 Shopify 技术、页面体验和数据追踪方面的优化建议。",
+    primaryCta: "开始免费检查",
     secondaryCta: "返回首页",
-    trust: ["1 个工作日内初步回复", "不需要完整需求文档", "适合新建站与老站改版"],
-    auditTitle: "我们会重点判断",
-    auditItems: [
+    trust: ["面向海外华人跨境品牌", "1-2 个工作日内回复", "不需要完整需求文档"],
+    heroCards: [
+      { title: "Engineering", text: "主题、性能、移动端体验" },
+      { title: "Conversion", text: "首页、商品页、CTA、信任内容" },
+      { title: "Tracking", text: "GA4、Pixel、Events" },
+    ],
+    whyTitle: "为什么 Shopify 店铺需要一次增长检查？",
+    whyDescription: "很多店铺的问题不在单一页面，而是广告流量、页面说服力、技术性能和数据追踪之间没有形成闭环。",
+    whyItems: [
       {
-        title: "页面是否匹配投放流量",
-        text: "首页、商品页、集合页和信任内容是否能承接广告与自然搜索访客。",
+        title: "广告流量浪费",
+        text: "广告有点击，但落地页和商品页没有把用户顺利带到信任、加购和下单。",
         icon: Target,
       },
       {
-        title: "成交链路是否有断点",
-        text: "价格呈现、购物车、支付、物流、售后说明是否影响下单决策。",
+        title: "页面转化问题",
+        text: "首页结构、PDP 说服力、CTA 和信任内容可能正在制造隐性流失。",
         icon: ShieldCheck,
       },
       {
-        title: "数据是否能支持优化",
-        text: "GA4、GTM、转化事件和商品结构化数据是否能支撑投放复盘。",
-        icon: BarChart3,
+        title: "技术性能问题",
+        text: "主题结构、App 堆叠、速度和移动端体验会直接影响用户耐心。",
+        icon: Gauge,
       },
       {
-        title: "项目范围是否可控",
-        text: "按预算、上线时间和 SKU 复杂度拆出必要功能与可后置功能。",
-        icon: Globe2,
+        title: "数据追踪问题",
+        text: "GA4、Pixel 和关键事件不完整时，很难判断增长问题到底出在哪里。",
+        icon: BarChart3,
       },
     ],
-    formTitle: "提交诊断信息",
-    formDescription: "信息越具体，初步判断越准确。没有的字段可以留空。",
+    reviewTitle: "What We Review",
+    reviewDescription: "Free Shopify Review 会从三个方向判断当前店铺的主要增长阻塞点。",
+    reviewAreas: [
+      {
+        title: "Shopify Engineering",
+        text: "检查店铺技术基础是否支持更稳定的体验和后续增长。",
+        items: ["Theme", "Performance", "Mobile Experience"],
+        icon: Globe2,
+      },
+      {
+        title: "Conversion Optimization",
+        text: "检查页面是否能建立信任、解释价值，并推动用户进入购买路径。",
+        items: ["Homepage", "PDP", "CTA", "Trust"],
+        icon: Target,
+      },
+      {
+        title: "Growth Tracking",
+        text: "检查数据追踪是否足够支撑广告复盘和后续优化判断。",
+        items: ["GA4", "Pixel", "Events"],
+        icon: BarChart3,
+      },
+    ],
+    fitTitle: "Who It Is For",
+    fitIntro: "如果你已经有产品、流量或 Shopify 店铺，但不确定哪里影响转化，这个入口适合先做低成本判断。",
+    fitItems: ["Shopify 品牌", "跨境电商品牌", "正在投放广告的网站", "想提升转化的网站"],
+    formTitle: "提交 Free Shopify Review 信息",
+    formDescription: "保留现有字段即可提交。信息越具体，初步判断越准确；不确定的字段可以留空。",
     labels: {
       storeUrl: "Shopify 店铺链接",
       category: "产品品类",
@@ -96,92 +126,82 @@ const copy = {
       timeline: ["2-4 周", "3-6 周", "6 周以上", "暂不确定"],
     },
     emailSubject: "Shopify 免费诊断咨询",
-    emailIntro: "你好，我想预约 Shopify 免费诊断。以下是项目信息：",
     submitting: "正在提交…",
-    submitSuccess: "提交成功，我们已收到你的诊断信息，将在 1 个工作日内回复。",
+    submitSuccess: "已收到请求。我们会在 1-2 个工作日内完成初步问题判断，并给出优化建议方向。",
     submitError: "提交失败，请稍后重试，或直接发送邮件联系我们。",
     contactRequired: "请至少填写邮箱或微信，方便我们回复你。",
     emailInvalid: "请输入有效的邮箱地址。",
-    responseTitle: "提交后会得到什么",
-    responseItems: ["页面结构建议", "功能范围判断", "预算梯度建议", "下一步交付节奏"],
-    noteTitle: "适合提交的情况",
-    noteText: "已经有产品、准备投放广告、现有站点转化不稳，或需要判断模板方案与定制方案怎么选。",
-    scenariosTitle: "4 类常见诊断场景",
-    scenariosIntro: "不同入口进来的用户，诊断重点不同。我们会先判断你现在应该解决范围、体验、转化还是数据问题。",
-    scenarios: [
-      {
-        title: "Shopify 新建站",
-        text: "判断页面结构、SKU 复杂度、预算梯度、上线周期，以及模板方案和设计图定制方案怎么选。",
-      },
-      {
-        title: "主题定制",
-        text: "判断现有主题是否还能继续改，还是应该复制主题开发、重构模块，或重新规划整站。",
-      },
-      {
-        title: "转化优化",
-        text: "判断问题在商品页、集合页、购物车、支付物流、信任内容、移动端体验还是广告流量匹配。",
-      },
-      {
-        title: "GA4/GTM 追踪",
-        text: "判断当前事件是否能支持投放复盘，是否缺少 view_item、add_to_cart、begin_checkout、purchase 等关键事件。",
-      },
-    ],
-    prepTitle: "提交前最好准备这些信息",
-    prepIntro: "不用写完整需求文档，但这些信息越清楚，初步判断越准确。",
-    prepItems: ["店铺链接或参考站", "产品品类与 SKU 数量", "预算范围和上线时间", "当前最明显的问题", "是否已有广告投放、GA4 或 GTM"],
-    faqTitle: "诊断 FAQ",
-    faqs: [
-      {
-        q: "这个诊断收费吗？",
-        a: "初步诊断不收费。我们会先判断问题类型、优先级和大致范围；如果需要详细方案、页面设计、代码开发或长期优化，会再单独确认报价。",
-      },
-      {
-        q: "多久会回复？",
-        a: "通常 1 个工作日内给出初步回复。信息越完整，判断越快；如果涉及复杂系统、ERP/CRM、B2B 或多市场，可能需要补充资料后再评估。",
-      },
-      {
-        q: "必须已经有 Shopify 店铺吗？",
-        a: "不必须。新品牌可以提交产品、目标市场、参考站和预算；已有 Shopify 店铺则建议附上店铺链接和当前问题。",
-      },
-      {
-        q: "预算还不确定可以提交吗？",
-        a: "可以。预算不确定时，我们会先按 ¥20,000 起、¥35,000 起、¥50,000 起三个梯度判断哪些范围适合先做，哪些应该后置。",
-      },
-    ],
+    afterTitle: "提交后会发生什么？",
+    afterIntro: "这不是简单的 thank you。提交后，我们会把你的店铺放入初步检查队列。",
+    afterItems: ["已收到请求", "1-2 个工作日回复", "提供初步问题判断", "给出优化建议方向"],
+    auditCtaTitle: "需要更深入的方案？下一步是 Shopify Growth Audit。",
+    auditCtaText: "Free Review 用来判断方向。若问题复杂，我们会建议进入 Growth Audit，进一步拆解页面、技术、追踪和实施优先级。",
+    auditCtaButton: "先提交免费检查",
+    auditCtaSecondary: "查看服务体系",
   },
   en: {
-    eyebrow: "FREE SHOPIFY DIAGNOSIS",
-    title: "Diagnose the selling path before deciding how to build Shopify.",
-    description:
-      "This is not generic website advice. After you share product, market, budget, and current blockers, we evaluate page structure, conversion friction, feature scope, and analytics priorities.",
-    primaryCta: "Submit Diagnosis Brief",
+    eyebrow: "FREE SHOPIFY REVIEW",
+    title: "Free Shopify Store Growth Review",
+    description: "Find the key issues affecting store conversion and get optimization direction across Shopify engineering, page experience, and tracking.",
+    primaryCta: "Start Free Review",
     secondaryCta: "Back Home",
-    trust: ["Initial reply within 1 business day", "No full requirements doc needed", "For new builds and redesigns"],
-    auditTitle: "What we evaluate",
-    auditItems: [
+    trust: ["For Chinese-founded global brands", "Reply within 1-2 business days", "No full requirements doc needed"],
+    heroCards: [
+      { title: "Engineering", text: "Theme, performance, mobile UX" },
+      { title: "Conversion", text: "Homepage, PDP, CTA, trust" },
+      { title: "Tracking", text: "GA4, Pixel, Events" },
+    ],
+    whyTitle: "Why does a Shopify store need a growth review?",
+    whyDescription: "Most store problems are not isolated to one page. Paid traffic, page persuasion, technical performance, and tracking need to work together.",
+    whyItems: [
       {
-        title: "Traffic-to-page fit",
-        text: "Whether homepage, product pages, collections, and trust content can support paid and organic visitors.",
+        title: "Paid traffic gets wasted",
+        text: "Clicks arrive, but landing pages and product pages may not move visitors toward trust, cart, and checkout.",
         icon: Target,
       },
       {
-        title: "Conversion path gaps",
-        text: "Whether pricing, cart, payments, logistics, and after-sales details create purchase friction.",
+        title: "Page conversion issues",
+        text: "Homepage structure, PDP persuasion, CTAs, and trust content can create invisible drop-off.",
         icon: ShieldCheck,
       },
       {
-        title: "Analytics readiness",
-        text: "Whether GA4, GTM, conversion events, and product structured data support optimization.",
-        icon: BarChart3,
+        title: "Technical performance issues",
+        text: "Theme structure, app load, speed, and mobile experience directly affect user patience.",
+        icon: Gauge,
       },
       {
-        title: "Controlled scope",
-        text: "How to split must-have and later-stage features based on budget, timing, and SKU complexity.",
-        icon: Globe2,
+        title: "Tracking issues",
+        text: "Without clean GA4, Pixel, and events, it is hard to know where growth is blocked.",
+        icon: BarChart3,
       },
     ],
-    formTitle: "Submit your brief",
-    formDescription: "The more specific the input, the sharper the first diagnosis. Leave unknown fields blank.",
+    reviewTitle: "What We Review",
+    reviewDescription: "The Free Shopify Review identifies blockers across engineering, conversion, and tracking.",
+    reviewAreas: [
+      {
+        title: "Shopify Engineering",
+        text: "Review whether the technical foundation can support a stable experience and future growth.",
+        items: ["Theme", "Performance", "Mobile Experience"],
+        icon: Globe2,
+      },
+      {
+        title: "Conversion Optimization",
+        text: "Review whether pages build trust, explain value, and move visitors into the purchase path.",
+        items: ["Homepage", "PDP", "CTA", "Trust"],
+        icon: Target,
+      },
+      {
+        title: "Growth Tracking",
+        text: "Review whether tracking supports campaign review and optimization decisions.",
+        items: ["GA4", "Pixel", "Events"],
+        icon: BarChart3,
+      },
+    ],
+    fitTitle: "Who It Is For",
+    fitIntro: "Use this if you already have products, traffic, or a Shopify store, but are unsure what blocks conversion.",
+    fitItems: ["Shopify brands", "Cross-border ecommerce brands", "Stores running paid ads", "Stores trying to improve conversion"],
+    formTitle: "Submit your Free Shopify Review brief",
+    formDescription: "The existing fields are enough to submit. The more specific the input, the sharper the first review.",
     labels: {
       storeUrl: "Shopify store URL",
       category: "Product category",
@@ -209,78 +229,38 @@ const copy = {
       timeline: ["2-4 weeks", "3-6 weeks", "6+ weeks", "Not sure yet"],
     },
     emailSubject: "Free Shopify diagnosis inquiry",
-    emailIntro: "Hi, I would like to request a free Shopify diagnosis. Project details:",
-    submitting: "Submitting…",
-    submitSuccess: "Submitted successfully. We received your brief and will reply within 1 business day.",
+    submitting: "Submitting...",
+    submitSuccess: "Request received. We will complete an initial assessment within 1-2 business days and share optimization direction.",
     submitError: "Submission failed. Please try again later or contact us by email.",
     contactRequired: "Please enter at least an email or WeChat so we can reply.",
     emailInvalid: "Please enter a valid email address.",
-    responseTitle: "What you get next",
-    responseItems: ["Page structure advice", "Feature scope assessment", "Budget range guidance", "Delivery rhythm suggestion"],
-    noteTitle: "Good fit",
-    noteText: "Use this if you have products, plan to run ads, have unstable conversion, or need to choose between template and custom builds.",
-    scenariosTitle: "4 Common Diagnosis Scenarios",
-    scenariosIntro: "Different starting points need different decisions. We first judge whether the problem is scope, experience, conversion, or tracking.",
-    scenarios: [
-      {
-        title: "New Shopify build",
-        text: "Assess page structure, SKU complexity, budget tier, launch timeline, and whether a module build or custom design build fits.",
-      },
-      {
-        title: "Theme customization",
-        text: "Judge whether the current theme is worth customizing, should be duplicated for development, needs module refactoring, or should be rebuilt.",
-      },
-      {
-        title: "Conversion optimization",
-        text: "Find whether the issue is product pages, collections, cart, payments, logistics, trust content, mobile UX, or traffic fit.",
-      },
-      {
-        title: "GA4/GTM tracking",
-        text: "Check whether events support campaign review and whether key events like view_item, add_to_cart, begin_checkout, and purchase are missing.",
-      },
-    ],
-    prepTitle: "Information to prepare before submitting",
-    prepIntro: "You do not need a full requirements document. These details make the first diagnosis more accurate.",
-    prepItems: ["Store URL or reference site", "Product category and SKU count", "Budget range and launch timeline", "Most obvious current problem", "Whether ads, GA4, or GTM are already active"],
-    faqTitle: "Diagnosis FAQ",
-    faqs: [
-      {
-        q: "Is the diagnosis free?",
-        a: "The initial diagnosis is free. We first identify problem type, priority, and rough scope. Detailed plans, page design, code development, or ongoing optimization are quoted separately.",
-      },
-      {
-        q: "How fast will you reply?",
-        a: "Usually within 1 business day. More complete input leads to faster judgment. Complex systems, ERP/CRM, B2B, or multi-market work may require follow-up details.",
-      },
-      {
-        q: "Do I need an existing Shopify store?",
-        a: "No. New brands can submit product, target market, references, and budget. Existing stores should include the store URL and current blocker.",
-      },
-      {
-        q: "Can I submit if my budget is not clear yet?",
-        a: "Yes. If budget is unclear, we judge what fits the ¥20,000, ¥35,000, and ¥50,000 tiers, then separate must-have scope from later-stage work.",
-      },
-    ],
+    afterTitle: "What happens after submission?",
+    afterIntro: "This is not a simple thank-you flow. Your store enters the first review queue.",
+    afterItems: ["Request received", "Reply within 1-2 business days", "Initial problem assessment", "Optimization direction"],
+    auditCtaTitle: "Need a deeper plan? The next step is a Shopify Growth Audit.",
+    auditCtaText: "The Free Review identifies direction. If the problem is complex, we may suggest a Growth Audit to break down page, technical, tracking, and implementation priorities.",
+    auditCtaButton: "Start with Free Review",
+    auditCtaSecondary: "View Services",
   },
 }
 
 const diagnosisStructuredData = {
   breadcrumbs: [
     { name: "首页", url: "https://whaleleap.studio/" },
-    { name: "Shopify 免费诊断", url: "https://whaleleap.studio/diagnosis" },
+    { name: "Free Shopify Review", url: "https://whaleleap.studio/diagnosis" },
   ],
   service: {
-    name: "Shopify 免费诊断",
-    description: "为跨境品牌判断 Shopify 建站、主题定制、转化优化和 GA4/GTM 数据追踪的优先级、范围和下一步交付节奏。",
+    name: "Free Shopify Review",
+    description: "为海外华人跨境品牌检查 Shopify 技术基础、页面转化路径和数据追踪体系，判断影响独立站增长的关键问题。",
     url: "https://whaleleap.studio/diagnosis",
   },
   page: {
     type: "WebPage" as const,
-    name: "Shopify 免费诊断",
-    description: "提交 Shopify 店铺链接、产品品类、目标市场、预算和当前问题，获取页面结构、功能范围、转化问题和交付节奏的初步诊断。",
+    name: "Free Shopify Review",
+    description: "发现影响 Shopify 独立站转化的关键问题，获得 Shopify 技术、页面体验和数据追踪方面的初步优化建议。",
     url: "https://whaleleap.studio/diagnosis",
     inLanguage: "zh-CN",
-    about: ["Shopify 免费诊断", "Shopify 建站咨询", "Shopify 转化优化", "Shopify GA4/GTM 追踪"],
+    about: ["Free Shopify Review", "Shopify 增长检查", "Shopify 转化优化", "Shopify 数据追踪"],
   },
 }
 
@@ -372,32 +352,147 @@ export function DiagnosisPage() {
     }
   }
 
+  const reviewForm = (
+    <form id="review-form" onSubmit={handleSubmit} className="rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-5 shadow-2xl shadow-black/30 backdrop-blur md:p-8">
+      <div className="mb-7">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">Review Form</p>
+        <h2 className="text-2xl font-bold tracking-normal">{text.formTitle}</h2>
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text.formDescription}</p>
+      </div>
+
+      <div className="grid gap-5">
+        <Field label={text.labels.storeUrl}>
+          <input className={inputClass()} value={form.storeUrl} onChange={(event) => updateField("storeUrl", event.target.value)} placeholder={text.placeholders.storeUrl} type="url" />
+        </Field>
+
+        <div className="grid gap-5 md:grid-cols-2">
+          <Field label={text.labels.category}>
+            <input className={inputClass()} value={form.category} onChange={(event) => updateField("category", event.target.value)} placeholder={text.placeholders.category} />
+          </Field>
+          <Field label={text.labels.market}>
+            <input className={inputClass()} value={form.market} onChange={(event) => updateField("market", event.target.value)} placeholder={text.placeholders.market} />
+          </Field>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2">
+          <Field label={text.labels.stage}>
+            <select className={inputClass()} value={form.stage} onChange={(event) => updateField("stage", event.target.value)}>
+              <option value=""></option>
+              {text.options.stage.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </Field>
+          <Field label={text.labels.skuCount}>
+            <select className={inputClass()} value={form.skuCount} onChange={(event) => updateField("skuCount", event.target.value)}>
+              <option value=""></option>
+              {text.options.skuCount.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </Field>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2">
+          <Field label={text.labels.budget}>
+            <select className={inputClass()} value={form.budget} onChange={(event) => updateField("budget", event.target.value)}>
+              <option value=""></option>
+              {text.options.budget.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </Field>
+          <Field label={text.labels.timeline}>
+            <select className={inputClass()} value={form.timeline} onChange={(event) => updateField("timeline", event.target.value)}>
+              <option value=""></option>
+              {text.options.timeline.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </Field>
+        </div>
+
+        <Field label={text.labels.problem}>
+          <textarea className={`${inputClass()} min-h-32 py-3`} value={form.problem} onChange={(event) => updateField("problem", event.target.value)} placeholder={text.placeholders.problem} />
+        </Field>
+
+        <div className="grid gap-5 md:grid-cols-2">
+          <Field label={text.labels.email}>
+            <input className={inputClass()} value={form.email} onChange={(event) => updateField("email", event.target.value)} placeholder={text.placeholders.email} type="email" autoComplete="email" aria-describedby="contact-submit-status" />
+          </Field>
+          <Field label={text.labels.wechat}>
+            <input className={inputClass()} value={form.wechat} onChange={(event) => updateField("wechat", event.target.value)} placeholder={text.placeholders.wechat} autoComplete="off" aria-describedby="contact-submit-status" />
+          </Field>
+        </div>
+
+        <div className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+          <label htmlFor="company-website">Company website</label>
+          <input id="company-website" name="companyWebsite" value={form.companyWebsite} onChange={(event) => updateField("companyWebsite", event.target.value)} tabIndex={-1} autoComplete="off" />
+        </div>
+      </div>
+
+      {submitState !== "idle" && submitState !== "submitting" && (
+        <div
+          id="contact-submit-status"
+          role={submitState === "error" ? "alert" : "status"}
+          aria-live="polite"
+          className={`mt-5 flex items-start gap-3 rounded-xl border px-4 py-3 text-sm leading-relaxed ${
+            submitState === "success" ? "border-emerald-400/25 bg-emerald-400/10 text-emerald-200" : "border-red-400/25 bg-red-400/10 text-red-200"
+          }`}
+        >
+          {submitState === "success" ? <CheckCircle2 className="mt-0.5 size-4 shrink-0" /> : <AlertCircle className="mt-0.5 size-4 shrink-0" />}
+          <span>
+            {submitMessage}
+            {submitState === "error" && (
+              <>
+                {" "}
+                <a className="font-semibold underline underline-offset-4" href={`mailto:${email}?subject=${encodeURIComponent(text.emailSubject)}`}>
+                  {email}
+                </a>
+              </>
+            )}
+          </span>
+        </div>
+      )}
+
+      <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+        <button
+          type="submit"
+          disabled={submitState === "submitting"}
+          className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-bold text-primary-foreground transition-all hover:brightness-110 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-65"
+        >
+          {submitState === "submitting" ? text.submitting : text.primaryCta}
+          {submitState === "submitting" ? <LoaderCircle className="size-4 animate-spin" /> : <ArrowUpRight className="size-4" />}
+        </button>
+        <a href="/" className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/15 px-6 text-sm font-semibold text-foreground transition-colors hover:bg-white/5">
+          {text.secondaryCta}
+        </a>
+      </div>
+    </form>
+  )
+
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <PageStructuredData
-        breadcrumbs={diagnosisStructuredData.breadcrumbs}
-        faqItems={copy.zh.faqs}
-        service={diagnosisStructuredData.service}
-        page={diagnosisStructuredData.page}
-      />
+      <PageStructuredData breadcrumbs={diagnosisStructuredData.breadcrumbs} faqItems={[]} service={diagnosisStructuredData.service} page={diagnosisStructuredData.page} />
       <Navbar />
       <main>
         <section className="relative overflow-hidden px-6 pb-16 pt-32 md:px-10 md:pb-24 md:pt-40">
           <div className="absolute inset-0 bg-gradient-to-br from-[#050505] via-[#111111] to-[#050505]" />
           <div className="absolute inset-x-0 top-28 mx-auto h-72 max-w-4xl rounded-full bg-primary/10 blur-3xl" />
 
-          <div className="relative mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-            <div className="lg:sticky lg:top-28">
-              <p className="mb-5 inline-flex items-center rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
-                {text.eyebrow}
-              </p>
-              <h1 className="max-w-4xl text-[clamp(2.4rem,5vw,4.8rem)] font-bold leading-[1.04] tracking-normal">
-                {text.title}
-              </h1>
-              <p className="mt-6 max-w-2xl text-base leading-[1.7] text-muted-foreground md:text-lg">
-                {text.description}
-              </p>
-
+          <div className="relative mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+            <div>
+              <p className="mb-5 inline-flex items-center rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">{text.eyebrow}</p>
+              <h1 className="max-w-4xl text-[clamp(2.5rem,5vw,5rem)] font-bold leading-[1.04] tracking-normal">{text.title}</h1>
+              <p className="mt-6 max-w-2xl text-base leading-[1.7] text-muted-foreground md:text-lg">{text.description}</p>
               <div className="mt-8 flex flex-wrap gap-3">
                 {text.trust.map((item) => (
                   <span key={item} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-muted-foreground">
@@ -406,218 +501,44 @@ export function DiagnosisPage() {
                   </span>
                 ))}
               </div>
-
-              <div className="mt-10 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
-                  <Clock3 className="mb-4 size-6 text-primary" />
-                  <h2 className="mb-3 text-base font-semibold">{text.responseTitle}</h2>
-                  <div className="space-y-2">
-                    {text.responseItems.map((item) => (
-                      <p key={item} className="text-sm leading-relaxed text-muted-foreground">
-                        {item}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
-                  <Send className="mb-4 size-6 text-primary" />
-                  <h2 className="mb-3 text-base font-semibold">{text.noteTitle}</h2>
-                  <p className="text-sm leading-relaxed text-muted-foreground">{text.noteText}</p>
-                </div>
-              </div>
-            </div>
-
-            <form onSubmit={handleSubmit} className="rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-5 shadow-2xl shadow-black/30 backdrop-blur md:p-8">
-              <div className="mb-7">
-                <h2 className="text-2xl font-bold tracking-normal">{text.formTitle}</h2>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text.formDescription}</p>
-              </div>
-
-              <div className="grid gap-5">
-                <Field label={text.labels.storeUrl}>
-                  <input
-                    className={inputClass()}
-                    value={form.storeUrl}
-                    onChange={(event) => updateField("storeUrl", event.target.value)}
-                    placeholder={text.placeholders.storeUrl}
-                    type="url"
-                  />
-                </Field>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <Field label={text.labels.category}>
-                    <input
-                      className={inputClass()}
-                      value={form.category}
-                      onChange={(event) => updateField("category", event.target.value)}
-                      placeholder={text.placeholders.category}
-                    />
-                  </Field>
-                  <Field label={text.labels.market}>
-                    <input
-                      className={inputClass()}
-                      value={form.market}
-                      onChange={(event) => updateField("market", event.target.value)}
-                      placeholder={text.placeholders.market}
-                    />
-                  </Field>
-                </div>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <Field label={text.labels.stage}>
-                    <select className={inputClass()} value={form.stage} onChange={(event) => updateField("stage", event.target.value)}>
-                      <option value=""></option>
-                      {text.options.stage.map((option) => (
-                        <option key={option} value={option}>
-                          {option}
-                        </option>
-                      ))}
-                    </select>
-                  </Field>
-                  <Field label={text.labels.skuCount}>
-                    <select className={inputClass()} value={form.skuCount} onChange={(event) => updateField("skuCount", event.target.value)}>
-                      <option value=""></option>
-                      {text.options.skuCount.map((option) => (
-                        <option key={option} value={option}>
-                          {option}
-                        </option>
-                      ))}
-                    </select>
-                  </Field>
-                </div>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <Field label={text.labels.budget}>
-                    <select className={inputClass()} value={form.budget} onChange={(event) => updateField("budget", event.target.value)}>
-                      <option value=""></option>
-                      {text.options.budget.map((option) => (
-                        <option key={option} value={option}>
-                          {option}
-                        </option>
-                      ))}
-                    </select>
-                  </Field>
-                  <Field label={text.labels.timeline}>
-                    <select className={inputClass()} value={form.timeline} onChange={(event) => updateField("timeline", event.target.value)}>
-                      <option value=""></option>
-                      {text.options.timeline.map((option) => (
-                        <option key={option} value={option}>
-                          {option}
-                        </option>
-                      ))}
-                    </select>
-                  </Field>
-                </div>
-
-                <Field label={text.labels.problem}>
-                  <textarea
-                    className={`${inputClass()} min-h-32 py-3`}
-                    value={form.problem}
-                    onChange={(event) => updateField("problem", event.target.value)}
-                    placeholder={text.placeholders.problem}
-                  />
-                </Field>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <Field label={text.labels.email}>
-                    <input
-                      className={inputClass()}
-                      value={form.email}
-                      onChange={(event) => updateField("email", event.target.value)}
-                      placeholder={text.placeholders.email}
-                      type="email"
-                      autoComplete="email"
-                      aria-describedby="contact-submit-status"
-                    />
-                  </Field>
-                  <Field label={text.labels.wechat}>
-                    <input
-                      className={inputClass()}
-                      value={form.wechat}
-                      onChange={(event) => updateField("wechat", event.target.value)}
-                      placeholder={text.placeholders.wechat}
-                      autoComplete="off"
-                      aria-describedby="contact-submit-status"
-                    />
-                  </Field>
-                </div>
-
-                <div className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
-                  <label htmlFor="company-website">Company website</label>
-                  <input
-                    id="company-website"
-                    name="companyWebsite"
-                    value={form.companyWebsite}
-                    onChange={(event) => updateField("companyWebsite", event.target.value)}
-                    tabIndex={-1}
-                    autoComplete="off"
-                  />
-                </div>
-              </div>
-
-              {submitState !== "idle" && submitState !== "submitting" && (
-                <div
-                  id="contact-submit-status"
-                  role={submitState === "error" ? "alert" : "status"}
-                  aria-live="polite"
-                  className={`mt-5 flex items-start gap-3 rounded-xl border px-4 py-3 text-sm leading-relaxed ${
-                    submitState === "success"
-                      ? "border-emerald-400/25 bg-emerald-400/10 text-emerald-200"
-                      : "border-red-400/25 bg-red-400/10 text-red-200"
-                  }`}
-                >
-                  {submitState === "success" ? (
-                    <CheckCircle2 className="mt-0.5 size-4 shrink-0" />
-                  ) : (
-                    <AlertCircle className="mt-0.5 size-4 shrink-0" />
-                  )}
-                  <span>
-                    {submitMessage}
-                    {submitState === "error" && (
-                      <>
-                        {" "}
-                        <a className="font-semibold underline underline-offset-4" href={`mailto:${email}?subject=${encodeURIComponent(text.emailSubject)}`}>
-                          {email}
-                        </a>
-                      </>
-                    )}
-                  </span>
-                </div>
-              )}
-
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <button
-                  type="submit"
-                  disabled={submitState === "submitting"}
-                  className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-bold text-primary-foreground transition-all hover:brightness-110 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-65"
-                >
-                  {submitState === "submitting" ? text.submitting : text.primaryCta}
-                  {submitState === "submitting" ? <LoaderCircle className="size-4 animate-spin" /> : <ArrowUpRight className="size-4" />}
-                </button>
-                <a
-                  href="/"
-                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/15 px-6 text-sm font-semibold text-foreground transition-colors hover:bg-white/5"
-                >
+              <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+                <a href="#review-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-bold text-primary-foreground transition-all hover:brightness-110 active:scale-[0.98]">
+                  {text.primaryCta}
+                  <ArrowUpRight className="size-4" />
+                </a>
+                <a href="/" className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/15 px-6 text-sm font-semibold text-foreground transition-colors hover:bg-white/5">
                   {text.secondaryCta}
                 </a>
               </div>
-            </form>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+              {text.heroCards.map((item) => (
+                <div key={item.title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur">
+                  <p className="text-sm font-semibold text-primary">{item.title}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        <section className="border-t border-white/10 bg-black px-6 py-16 md:px-10">
+        <section className="border-t border-white/10 bg-black px-6 py-16 md:px-10 md:py-24">
           <div className="mx-auto max-w-[1500px]">
-            <h2 className="mb-6 text-2xl font-bold tracking-normal">{text.auditTitle}</h2>
+            <div className="mb-10 max-w-3xl">
+              <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-bold leading-tight tracking-normal">{text.whyTitle}</h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{text.whyDescription}</p>
+            </div>
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-              {text.auditItems.map((item) => {
+              {text.whyItems.map((item) => {
                 const Icon = item.icon
 
                 return (
-                  <div key={item.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                  <article key={item.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
                     <Icon className="mb-5 size-6 text-primary" />
                     <h3 className="mb-3 text-base font-semibold">{item.title}</h3>
                     <p className="text-sm leading-relaxed text-muted-foreground">{item.text}</p>
-                  </div>
+                  </article>
                 )
               })}
             </div>
@@ -627,16 +548,28 @@ export function DiagnosisPage() {
         <section className="bg-background px-6 py-16 md:px-10 md:py-24">
           <div className="mx-auto max-w-[1500px]">
             <div className="mb-10 max-w-3xl">
-              <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-bold leading-tight tracking-normal">{text.scenariosTitle}</h2>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{text.scenariosIntro}</p>
+              <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-bold leading-tight tracking-normal">{text.reviewTitle}</h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{text.reviewDescription}</p>
             </div>
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-              {text.scenarios.map((item) => (
-                <article key={item.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                  <h3 className="text-lg font-semibold tracking-normal">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
-                </article>
-              ))}
+            <div className="grid gap-4 lg:grid-cols-3">
+              {text.reviewAreas.map((item) => {
+                const Icon = item.icon
+
+                return (
+                  <article key={item.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                    <Icon className="mb-5 size-6 text-primary" />
+                    <h3 className="text-lg font-semibold tracking-normal">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {item.items.map((detail) => (
+                        <span key={detail} className="rounded-full border border-white/10 bg-black/30 px-3 py-1.5 text-xs font-medium text-muted-foreground">
+                          {detail}
+                        </span>
+                      ))}
+                    </div>
+                  </article>
+                )
+              })}
             </div>
           </div>
         </section>
@@ -644,11 +577,11 @@ export function DiagnosisPage() {
         <section className="border-y border-white/10 bg-black px-6 py-16 md:px-10 md:py-24">
           <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
-              <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-bold leading-tight tracking-normal">{text.prepTitle}</h2>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{text.prepIntro}</p>
+              <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-bold leading-tight tracking-normal">{text.fitTitle}</h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{text.fitIntro}</p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
-              {text.prepItems.map((item) => (
+              {text.fitItems.map((item) => (
                 <p key={item} className="flex min-h-14 items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-sm font-medium text-foreground">
                   <CheckCircle2 className="size-4 shrink-0 text-primary" />
                   {item}
@@ -659,15 +592,47 @@ export function DiagnosisPage() {
         </section>
 
         <section className="bg-background px-6 py-16 md:px-10 md:py-24">
-          <div className="mx-auto max-w-[1100px]">
-            <h2 className="mb-8 text-[clamp(2rem,4vw,3.2rem)] font-bold leading-tight tracking-normal">{text.faqTitle}</h2>
-            <div className="grid gap-4 md:grid-cols-2">
-              {text.faqs.map((item) => (
-                <article key={item.q} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                  <h3 className="text-lg font-semibold tracking-normal">{item.q}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">{item.a}</p>
+          <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
+            <div className="lg:sticky lg:top-28">
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">Review Form</p>
+              <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-bold leading-tight tracking-normal">{text.formTitle}</h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{text.formDescription}</p>
+            </div>
+            {reviewForm}
+          </div>
+        </section>
+
+        <section className="border-y border-white/10 bg-black px-6 py-16 md:px-10 md:py-24">
+          <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <Clock3 className="mb-5 size-7 text-primary" />
+              <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-bold leading-tight tracking-normal">{text.afterTitle}</h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{text.afterIntro}</p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {text.afterItems.map((item, index) => (
+                <article key={item} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                  <p className="text-sm font-semibold text-primary">0{index + 1}</p>
+                  <p className="mt-4 text-base font-semibold text-foreground">{item}</p>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-background px-6 py-16 md:px-10 md:py-24">
+          <div className="mx-auto max-w-[1100px] rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-6 md:p-10">
+            <Send className="mb-5 size-7 text-primary" />
+            <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-bold leading-tight tracking-normal">{text.auditCtaTitle}</h2>
+            <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.auditCtaText}</p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="#review-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-bold text-primary-foreground transition-all hover:brightness-110 active:scale-[0.98]">
+                {text.auditCtaButton}
+                <ArrowUpRight className="size-4" />
+              </a>
+              <a href="/#services" className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/15 px-6 text-sm font-semibold text-foreground transition-colors hover:bg-white/5">
+                {text.auditCtaSecondary}
+              </a>
             </div>
           </div>
         </section>

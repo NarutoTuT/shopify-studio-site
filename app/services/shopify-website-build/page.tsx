@@ -5,9 +5,9 @@ import { ShopifyWebsiteBuildPage } from "@/components/shopify-website-build-page
 import { SmoothScrollProvider } from "@/components/smooth-scroll"
 
 export const metadata: Metadata = {
-  title: "Shopify 独立站建设服务",
+  title: "Shopify Engineering | Shopify 技术建设与增长基础优化",
   description:
-    "WhaleLeap Studio 为跨境品牌提供 Shopify 独立站建设服务，覆盖页面结构、Shopify 2.0 主题开发、支付物流、GA4/GTM、基础 SEO 和上线检查。",
+    "WhaleLeap Studio 为海外华人跨境品牌提供 Shopify Engineering 服务，覆盖 Shopify Theme Development、Liquid 开发、Custom Sections、性能优化、Technical SEO 和 Launch QA。",
 }
 
 export default function Page() {

@@ -3,101 +3,69 @@
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { BarChart3, BriefcaseBusiness, CreditCard, LineChart, Palette, Search, Store, Truck } from "lucide-react"
+import { BarChart3, Code2, ShoppingCart } from "lucide-react"
 
 import { useLanguage } from "@/components/language-provider"
 
 gsap.registerPlugin(ScrollTrigger)
 
-const icons = [Store, Palette, CreditCard, Truck, BarChart3, BriefcaseBusiness, Search, LineChart]
+const icons = [Code2, ShoppingCart, BarChart3]
 
 const copy = {
   zh: {
-    title: "Shopify 独立站开发，围绕成交交付",
-    description: "我们把页面、支付、物流、SEO 和数据追踪放在同一条销售路径里做，目标是让店铺上线后能卖、能看数据、能继续优化。",
+    eyebrow: "SERVICE SYSTEM",
+    title: "围绕 Shopify 增长，而不是围绕开发任务拆服务。",
+    description: "三个服务方向对应三个核心问题：技术底座是否稳定、购买路径是否能转化、数据是否能指导下一步。",
     services: [
       {
-        title: "上线一个能承接销售的 Shopify 店铺",
-        description: "根据你的产品、客群和购买路径搭建独立站。交付的不是套模板页面，而是能跑广告、能收单、能继续运营的基础盘。",
+        label: "01",
+        title: "Shopify Engineering",
+        problem: "你的 Shopify 店铺需要一个稳定、快速、可维护的技术底座。",
+        solution: "我们建设和优化主题结构、核心页面模块、性能基础和技术 SEO，让运营团队后续能持续迭代。",
+        capability: "适合新建站、主题改版、Liquid 模块、Custom Sections 和性能优化。",
       },
       {
-        title: "让主题按你的品牌和转化路径走",
-        description: "用 Liquid、Section Schemas 和定制样式重做关键区块。用户看到的是清楚的品牌表达，不是被模板限制的拼装感。",
+        label: "02",
+        title: "Conversion Optimization",
+        problem: "你有流量，但用户没有被顺利带到信任、加购和下单。",
+        solution: "我们重组首页、产品页、活动页、移动端体验和购买路径，让页面更清楚地服务成交。",
+        capability: "适合广告落地页、PDP 优化、移动端体验、信任内容和活动页面优化。",
       },
       {
-        title: "让海外客户顺利完成付款",
-        description: "配置 Shopify Payments、Stripe、PayPal、Afterpay、POLi、Windcave 等常用支付方式，减少结账页掉单。",
+        label: "03",
+        title: "Growth Analytics & Tracking",
+        problem: "你不知道广告、页面和订单之间的真实关系。",
+        solution: "我们配置 GA4、GTM、Meta Pixel 和 Google Ads Tracking，帮助团队看清转化路径和增长机会。",
+        capability: "适合基础数据追踪、广告转化事件、归因问题排查和增长复盘体系。",
       },
-      {
-        title: "让运费在结账页自动算清",
-        description: "对接 Mainfreight、NZ Post、Aramex、CourierPost 等物流规则，客户下单前就能看到清楚的配送成本。",
-      },
-      {
-        title: "把订单接进你的财务和库存流程",
-        description: "连接 Xero、库存管理或 ERP，让订单、发票和库存同步起来，减少人工录入和后期对账。",
-      },
-      {
-        title: "支持批发、询价和客户分级销售",
-        description: "为 B2B 门户、客户分级定价、询价流程和 CRM 对接设计路径。现成 App 不够用时，再做定制开发。",
-      },
-      {
-        title: "让搜索流量更容易找到你的商品",
-        description: "处理 URL、Canonical、冗余代码和内容结构这些 Shopify 常见问题。我们曾帮客户从零做到 4,700+ 关键词排名。",
-      },
-      {
-        title: "知道每一笔订单从哪里来",
-        description: "配置 GA4 电商追踪、Meta Pixel、转化事件和渠道归因。你能看到广告、内容和 SKU 到底带来了多少收入。",
-      },
-    ],
-    processSteps: [
-      { step: "01", title: "诊断", text: "先看产品、客群、竞品、支付物流和现有数据，判断真正影响成交的环节。" },
-      { step: "02", title: "设计", text: "确认首页、商品页、购物路径和品牌视觉，让页面为购买决策服务。" },
-      { step: "03", title: "开发", text: "按 Shopify Online Store 2.0 开发主题、区块和关键功能，方便后续运营维护。" },
-      { step: "04", title: "上线", text: "完成支付、物流、SEO 基础、数据追踪和培训后交付，让团队能接着跑。" },
     ],
   },
   en: {
-    title: "Shopify development built around conversion",
-    description: "We connect pages, payments, logistics, SEO, and analytics into one selling path so your store can launch, sell, measure, and keep improving.",
+    eyebrow: "SERVICE SYSTEM",
+    title: "Services structured around Shopify growth, not development tasks.",
+    description: "Three service pillars map to three core problems: technical foundation, conversion path, and growth tracking.",
     services: [
       {
-        title: "Launch a Shopify store ready to sell",
-        description: "We build around your product, audience, and buying path. The result is not a template page, but a store that can run ads, take orders, and keep operating.",
+        label: "01",
+        title: "Shopify Engineering",
+        problem: "Your Shopify store needs a stable, fast, and maintainable technical foundation.",
+        solution: "We build and improve theme structure, key page modules, performance foundations, and technical SEO so your team can keep iterating.",
+        capability: "For new builds, theme redesigns, Liquid modules, custom sections, and performance improvements.",
       },
       {
-        title: "Make the theme follow your brand and funnel",
-        description: "We rebuild key sections with Liquid, Section Schemas, and custom styling so the store feels like your brand, not a forced template.",
+        label: "02",
+        title: "Conversion Optimization",
+        problem: "You have traffic, but shoppers are not guided into trust, cart, and checkout.",
+        solution: "We restructure homepage, PDPs, campaign pages, mobile UX, and buying paths so pages support revenue.",
+        capability: "For ad landing pages, PDP optimization, mobile UX, trust content, and campaign pages.",
       },
       {
-        title: "Help overseas customers complete payment",
-        description: "We configure Shopify Payments, Stripe, PayPal, Afterpay, POLi, Windcave, and other common payment options to reduce checkout drop-off.",
+        label: "03",
+        title: "Growth Analytics & Tracking",
+        problem: "You cannot clearly connect ads, pages, and orders.",
+        solution: "We set up GA4, GTM, Meta Pixel, and Google Ads tracking so teams can see conversion paths and growth opportunities.",
+        capability: "For tracking setup, ad conversion events, attribution cleanup, and growth reporting foundations.",
       },
-      {
-        title: "Calculate shipping clearly at checkout",
-        description: "We connect logistics rules such as Mainfreight, NZ Post, Aramex, and CourierPost so customers see shipping costs before they order.",
-      },
-      {
-        title: "Connect orders to finance and inventory",
-        description: "We connect Xero, inventory tools, or ERP workflows so orders, invoices, and stock updates move with less manual work.",
-      },
-      {
-        title: "Support wholesale, quotes, and customer tiers",
-        description: "We design paths for B2B portals, tiered pricing, quote flows, and CRM integration. When apps fall short, we build custom logic.",
-      },
-      {
-        title: "Make search traffic find your products",
-        description: "We fix common Shopify SEO issues around URLs, canonical tags, app bloat, and content structure. One client grew from zero to 4,700+ keyword rankings.",
-      },
-      {
-        title: "Know where every order comes from",
-        description: "We configure GA4 ecommerce tracking, Meta Pixel, conversion events, and attribution so you can see what revenue ads, content, and SKUs create.",
-      },
-    ],
-    processSteps: [
-      { step: "01", title: "Diagnose", text: "We review product, audience, competitors, payments, logistics, and existing data to find the real conversion blockers." },
-      { step: "02", title: "Design", text: "We define homepage, product pages, buying paths, and brand visuals so every page supports a buying decision." },
-      { step: "03", title: "Build", text: "We develop themes, sections, and key functions with Shopify Online Store 2.0 standards for easier operations." },
-      { step: "04", title: "Launch", text: "We deliver after payments, logistics, SEO basics, tracking, and training are ready, so your team can keep running." },
     ],
   },
 }
@@ -160,6 +128,7 @@ export function ServicesSection() {
   return (
     <section id="services" ref={sectionRef} className="relative py-24 md:py-32 px-6 md:px-10 bg-background scroll-mt-24">
       <div ref={titleRef} className="max-w-[1500px] mx-auto mb-16 md:mb-20 text-center">
+        <p className="animate-line mb-4 text-sm font-semibold tracking-[0.2em] text-primary uppercase">{text.eyebrow}</p>
         <h2 className="animate-line text-[clamp(1.8rem,3vw,2.5rem)] font-semibold tracking-normal text-foreground leading-tight">
           {text.title}
         </h2>
@@ -168,44 +137,35 @@ export function ServicesSection() {
         </p>
       </div>
 
-      <div ref={cardsRef} className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div ref={cardsRef} className="max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-5">
         {text.services.map((service, index) => {
           const Icon = icons[index]
 
           return (
             <div
               key={service.title}
-              className="service-card group relative p-6 md:p-8 rounded-xl bg-card border border-border/50 hover:border-border transition-all duration-300 hover:bg-card/80"
+              className="service-card group relative p-6 md:p-8 rounded-2xl bg-card border border-border/50 hover:border-border transition-all duration-300 hover:bg-card/80"
             >
-              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-white/[0.02] to-transparent" />
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-white/[0.02] to-transparent" />
               
-              <span className="mb-5 flex size-11 items-center justify-center rounded-full border border-primary/20 bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-105">
-                <Icon className="size-5" />
-              </span>
+              <div className="mb-8 flex items-center justify-between gap-4">
+                <span className="font-mono text-xs uppercase tracking-[0.2em] text-primary">{service.label}</span>
+                <span className="flex size-11 items-center justify-center rounded-full border border-primary/20 bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-105">
+                  <Icon className="size-5" />
+                </span>
+              </div>
               <h3 className="text-foreground font-semibold text-lg tracking-normal leading-[1.4] mb-3">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {service.description}
-              </p>
+              <div className="space-y-4 text-sm leading-relaxed">
+                <p className="text-foreground/90">{service.problem}</p>
+                <p className="text-muted-foreground">{service.solution}</p>
+                <p className="rounded-xl border border-white/10 bg-white/[0.035] p-4 text-muted-foreground/85">{service.capability}</p>
+              </div>
             </div>
           )
         })}
       </div>
-
-      <div className="max-w-[1500px] mx-auto mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-4 gap-4">
-        {text.processSteps.map((item) => (
-          <div key={item.step} className="rounded-xl border border-white/10 bg-white/[0.03] p-5">
-            <div className="mb-5 flex items-center justify-between">
-              <span className="font-mono text-xs text-primary">{item.step}</span>
-              <span className="h-px w-10 bg-primary/30" />
-            </div>
-            <h3 className="mb-2 text-base font-semibold text-foreground">{item.title}</h3>
-            <p className="text-sm leading-relaxed text-muted-foreground">{item.text}</p>
-          </div>
-        ))}
-      </div>
     </section>
   )
 }
-
