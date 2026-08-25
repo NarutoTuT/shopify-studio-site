@@ -184,7 +184,7 @@ export function ShowcaseSection() {
   }, [])
 
   return (
-    <section id="work" ref={sectionRef} className="relative flex scroll-mt-24 flex-col justify-center overflow-hidden bg-background py-16 md:min-h-[90vh] md:py-32">
+    <section id="work" ref={sectionRef} className="relative flex scroll-mt-24 flex-col justify-center overflow-hidden bg-background py-16 md:py-32">
       <div className="max-w-6xl mx-auto px-6 md:px-10 w-full">
         <div ref={titleRef} className="mb-8 text-center md:mb-16">
           <p className="animate-line mb-4 text-sm font-semibold tracking-[0.2em] text-primary uppercase">{text.eyebrow}</p>
@@ -216,14 +216,16 @@ export function ShowcaseSection() {
               >
                 <div className="group">
                   <article className="relative overflow-hidden rounded-3xl border border-border/40 bg-card shadow-2xl transition-all duration-700 hover:border-border/80 md:rounded-[2.5rem]">
-                    <img
-                      src={images[index]}
-                      alt={item.title}
-                      className="aspect-[16/9] w-full object-cover transition-transform duration-1000 ease-out md:group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <div className="relative z-20 mx-3 -mt-6 mb-3 md:absolute md:inset-x-10 md:bottom-10 md:mx-0 md:mt-0 md:mb-0">
-                      <div className="rounded-2xl border border-white/15 bg-background/95 p-4 text-foreground shadow-2xl backdrop-blur-xl md:border-white/20 md:bg-background/70 md:p-6">
+                    <div className="overflow-hidden">
+                      <img
+                        src={images[index]}
+                        alt={item.title}
+                        className="aspect-[16/9] w-full object-cover transition-transform duration-1000 ease-out md:group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="relative z-20 mx-3 -mt-6 mb-3 md:mx-8 md:-mt-10 md:mb-8">
+                      <div className="rounded-2xl border border-white/15 bg-background/95 p-4 text-foreground shadow-2xl backdrop-blur-xl md:border-white/20 md:p-6">
                         <div className="mb-2 flex items-center gap-3">
                           <Sparkles className="size-4 shrink-0 text-primary md:size-5" />
                           <h3 className="text-sm font-semibold tracking-tight md:text-lg">
@@ -252,8 +254,8 @@ export function ShowcaseSection() {
           </CarouselContent>
           
           <div className="hidden md:block">
-            <CarouselPrevious className="left-8 size-14 rounded-2xl bg-background/20 backdrop-blur-md border-white/10 hover:bg-background/40" />
-            <CarouselNext className="right-8 size-14 rounded-2xl bg-background/20 backdrop-blur-md border-white/10 hover:bg-background/40" />
+            <CarouselPrevious className="top-[32%] left-8 size-14 rounded-2xl border-white/10 bg-background/20 backdrop-blur-md hover:bg-background/40" />
+            <CarouselNext className="top-[32%] right-8 size-14 rounded-2xl border-white/10 bg-background/20 backdrop-blur-md hover:bg-background/40" />
           </div>
         </Carousel>
       </div>
