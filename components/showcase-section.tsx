@@ -17,11 +17,11 @@ import { useLanguage } from "@/components/language-provider"
 gsap.registerPlugin(ScrollTrigger)
 
 const images = [
-  "/case-studies/food-gift-shopify.png",
-  "/case-studies/outdoor-cycling-shopify.png",
-  "/case-studies/beauty-skincare-shopify.png",
-  "/case-studies/home-lifestyle-shopify.png",
-  "/case-studies/sports-retail-shopify.png",
+  "/case-studies/food-gift-real-v2.png",
+  "/case-studies/outdoor-cycling-real-v2.png",
+  "/case-studies/beauty-skincare-real-v2.png",
+  "/case-studies/home-lifestyle-real-v2.png",
+  "/case-studies/sports-retail-real-v2.png",
 ]
 
 const copy = {
