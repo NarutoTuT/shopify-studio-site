@@ -224,10 +224,10 @@ export function ShowcaseSection() {
                         loading="lazy"
                       />
                     </div>
-                    <div className="relative z-20 mx-3 -mt-12 mb-3 md:mx-8 md:-mt-32 md:mb-8">
-                      <div className="relative isolate overflow-hidden rounded-[1.75rem] border border-white/20 bg-black/35 p-4 text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.24),inset_0_-1px_0_rgba(255,255,255,0.06),0_24px_70px_rgba(0,0,0,0.42)] backdrop-blur-[24px] backdrop-saturate-150 md:p-6">
-                        <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.16)_0%,rgba(255,255,255,0.04)_42%,rgba(255,255,255,0.09)_100%)]" />
-                        <div aria-hidden="true" className="pointer-events-none absolute -top-20 left-[8%] h-36 w-1/2 rounded-full bg-white/10 blur-3xl" />
+                    <div className="relative z-20 mx-3 -mt-12 mb-3 md:mx-8 md:-mt-36 md:mb-5">
+                      <div className="relative isolate overflow-hidden rounded-[1.75rem] border border-white/[0.16] bg-black/25 p-4 text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.20),inset_0_-1px_0_rgba(255,255,255,0.04),0_22px_60px_rgba(0,0,0,0.34)] backdrop-blur-[24px] backdrop-saturate-150 md:p-5">
+                        <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0.025)_42%,rgba(255,255,255,0.06)_100%)]" />
+                        <div aria-hidden="true" className="pointer-events-none absolute -top-20 left-[8%] h-36 w-1/2 rounded-full bg-white/[0.07] blur-3xl" />
 
                         <div className="relative z-10">
                           <div className="mb-2 flex items-center gap-3">
@@ -236,16 +236,16 @@ export function ShowcaseSection() {
                               {item.title}
                             </h3>
                           </div>
-                          <div className="mt-3 grid grid-cols-2 gap-2 md:mt-4 md:gap-3">
+                          <div className="mt-3 grid grid-cols-2 gap-2 md:mt-3 md:gap-0">
                             {[
                               ["Challenge", item.challenge],
                               ["Approach", item.approach],
                               ["Implementation", item.implementation],
                               ["Outcome", item.outcome],
                             ].map(([label, value]) => (
-                              <div key={label} className="rounded-xl border border-white/10 bg-black/10 p-2.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-sm md:p-3">
+                              <div key={label} className="rounded-xl border border-white/10 bg-black/10 p-2.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-sm md:rounded-none md:border-0 md:bg-transparent md:px-4 md:py-2 md:shadow-none md:backdrop-blur-none md:[&:nth-child(odd)]:border-r md:[&:nth-child(odd)]:border-white/10 md:[&:nth-child(-n+2)]:border-b md:[&:nth-child(-n+2)]:border-white/10">
                                 <div className="mb-1 text-[9px] font-bold uppercase tracking-[0.14em] text-primary md:text-[10px] md:tracking-[0.18em]">{label}</div>
-                                <p className="text-[11px] leading-[1.5] text-muted-foreground md:text-sm md:leading-relaxed">{value}</p>
+                                <p className="text-[11px] leading-[1.5] text-muted-foreground md:text-[13px] md:leading-[1.5]">{value}</p>
                               </div>
                             ))}
                           </div>
