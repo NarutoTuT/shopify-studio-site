@@ -123,13 +123,16 @@ export function ShowcaseSection() {
   useEffect(() => {
     if (!api) return
 
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
+    if (reducedMotion.matches) return
+
     const interval = setInterval(() => {
       if (api.canScrollNext()) {
         api.scrollNext()
       } else {
         api.scrollTo(0)
       }
-    }, 4000)
+    }, 7000)
 
     return () => clearInterval(interval)
   }, [api])
@@ -181,9 +184,9 @@ export function ShowcaseSection() {
   }, [])
 
   return (
-    <section id="work" ref={sectionRef} className="relative py-24 md:py-32 bg-background overflow-hidden min-h-[90vh] flex flex-col justify-center scroll-mt-24">
+    <section id="work" ref={sectionRef} className="relative flex scroll-mt-24 flex-col justify-center overflow-hidden bg-background py-16 md:min-h-[90vh] md:py-32">
       <div className="max-w-6xl mx-auto px-6 md:px-10 w-full">
-        <div ref={titleRef} className="mb-12 md:mb-16 text-center">
+        <div ref={titleRef} className="mb-8 text-center md:mb-16">
           <p className="animate-line mb-4 text-sm font-semibold tracking-[0.2em] text-primary uppercase">{text.eyebrow}</p>
           <h2 className="animate-line text-[clamp(1.8rem,3vw,2.5rem)] font-bold tracking-normal text-foreground leading-[1.12]">
             {text.title}
@@ -201,43 +204,48 @@ export function ShowcaseSection() {
             align: "center",
             loop: true,
           }}
+          aria-label={language === "zh" ? "案例轮播" : "Case studies carousel"}
           className="w-full"
         >
-          <CarouselContent className="-ml-4 md:-ml-8">
+          <CarouselContent className="-ml-3 md:-ml-8">
             {text.items.map((item, index) => (
-              <CarouselItem key={item.title} className="pl-4 md:pl-8 basis-[85%] md:basis-[75%] lg:basis-[65%] xl:basis-[55%]">
-                <div className="group space-y-8">
-                  <div className="relative overflow-hidden rounded-[2.5rem] border border-border/40 bg-card shadow-2xl transition-all duration-700 hover:border-border/80">
+              <CarouselItem
+                key={item.title}
+                aria-label={`${index + 1} / ${text.items.length}`}
+                className="basis-[92%] pl-3 sm:basis-[85%] md:basis-[75%] md:pl-8 lg:basis-[65%] xl:basis-[55%]"
+              >
+                <div className="group">
+                  <article className="relative overflow-hidden rounded-3xl border border-border/40 bg-card shadow-2xl transition-all duration-700 hover:border-border/80 md:rounded-[2.5rem]">
                     <img
                       src={images[index]}
                       alt={item.title}
-                      className="aspect-[16/9] w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
+                      className="aspect-[16/9] w-full object-cover transition-transform duration-1000 ease-out md:group-hover:scale-110"
                       loading="lazy"
                     />
-                    <div className="absolute inset-x-4 bottom-4 z-20 md:inset-x-10 md:bottom-10">
-                      <div className="rounded-2xl bg-background/70 backdrop-blur-xl border border-white/20 shadow-2xl text-foreground p-5 md:p-6">
+                    <div className="relative z-20 mx-3 -mt-6 mb-3 md:absolute md:inset-x-10 md:bottom-10 md:mx-0 md:mt-0 md:mb-0">
+                      <div className="rounded-2xl border border-white/15 bg-background/95 p-4 text-foreground shadow-2xl backdrop-blur-xl md:border-white/20 md:bg-background/70 md:p-6">
                         <div className="mb-2 flex items-center gap-3">
-                          <Sparkles className="size-5 text-primary" />
-                          <span className="text-base md:text-lg font-semibold tracking-tight">
+                          <Sparkles className="size-4 shrink-0 text-primary md:size-5" />
+                          <h3 className="text-sm font-semibold tracking-tight md:text-lg">
                             {item.title}
-                          </span>
+                          </h3>
                         </div>
-                        <div className="mt-4 grid gap-3 md:grid-cols-2">
+                        <div className="mt-3 grid grid-cols-2 gap-2 md:mt-4 md:gap-3">
                           {[
                             ["Challenge", item.challenge],
                             ["Approach", item.approach],
                             ["Implementation", item.implementation],
                             ["Outcome", item.outcome],
                           ].map(([label, value]) => (
-                            <div key={label} className="rounded-xl border border-white/10 bg-white/[0.04] p-3">
-                              <div className="mb-1 text-[10px] font-bold uppercase tracking-[0.18em] text-primary">{label}</div>
-                              <p className="text-xs leading-relaxed text-muted-foreground md:text-sm">{value}</p>
+                            <div key={label} className="rounded-xl border border-white/10 bg-white/[0.04] p-2.5 md:p-3">
+                              <div className="mb-1 text-[9px] font-bold uppercase tracking-[0.14em] text-primary md:text-[10px] md:tracking-[0.18em]">{label}</div>
+                              <p className="text-[11px] leading-[1.5] text-muted-foreground md:text-sm md:leading-relaxed">{value}</p>
                             </div>
                           ))}
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </article>
                 </div>
               </CarouselItem>
             ))}
