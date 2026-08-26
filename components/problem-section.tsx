@@ -79,7 +79,7 @@ export function ProblemSection() {
   const text = copy[language]
 
   return (
-    <section className="relative overflow-hidden border-t border-white/10 bg-black px-6 py-[50px] md:px-10 md:py-[100px]">
+    <section className="relative overflow-hidden bg-black px-6 py-[50px] md:px-10 md:py-[100px]">
       <div className="pointer-events-none absolute inset-0 md:hidden">
         <div className="absolute -left-32 top-28 size-72 rounded-full bg-primary/15 blur-[100px]" />
         <div className="absolute -right-36 bottom-24 size-80 rounded-full bg-primary/10 blur-[110px]" />

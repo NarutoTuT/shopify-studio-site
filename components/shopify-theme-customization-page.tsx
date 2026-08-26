@@ -365,7 +365,7 @@ export function ShopifyThemeCustomizationPage() {
           </div>
         </section>
 
-        <section id="scope" className="border-t border-white/10 bg-black px-6 py-[50px] md:px-10 md:py-[100px] scroll-mt-24">
+        <section id="scope" className="bg-black px-6 py-[50px] md:px-10 md:py-[100px] scroll-mt-24">
           <div className="mx-auto max-w-[1500px]">
             <div className="mb-10 max-w-3xl">
               <Code2 className="mb-5 size-8 text-primary" />
@@ -406,7 +406,7 @@ export function ShopifyThemeCustomizationPage() {
           </div>
         </section>
 
-        <section className="border-y border-white/10 bg-black px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
+        <section className="bg-black px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
               <MonitorSmartphone className="mb-5 size-8 text-primary" />
@@ -442,7 +442,7 @@ export function ShopifyThemeCustomizationPage() {
           </div>
         </section>
 
-        <section className="border-y border-white/10 bg-black px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
+        <section className="bg-black px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto max-w-[1100px]">
             <div className="mb-8 max-w-3xl">
               <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold leading-tight tracking-normal">{text.relatedTitle}</h2>
