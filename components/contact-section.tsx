@@ -52,7 +52,7 @@ export function ContactSection() {
   const text = copy[language]
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-background px-6 py-24 md:px-10 md:py-32 scroll-mt-24">
+    <section id="contact" className="relative overflow-hidden bg-background px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0 scroll-mt-24">
       <div className="absolute inset-x-0 top-10 mx-auto h-72 max-w-4xl rounded-full bg-primary/10 blur-3xl" />
 
       <div className="relative mx-auto grid max-w-[1500px] grid-cols-1 gap-8 lg:grid-cols-[1.1fr_0.9fr]">

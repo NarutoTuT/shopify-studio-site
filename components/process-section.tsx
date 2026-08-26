@@ -70,7 +70,7 @@ export function ProcessSection() {
   const text = copy[language]
 
   return (
-    <section className="border-y border-white/10 bg-black px-6 py-20 md:px-10 md:py-28">
+    <section className="border-y border-white/10 bg-black px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
       <div className="mx-auto max-w-[1500px]">
         <div className="mb-12 grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>

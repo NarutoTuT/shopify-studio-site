@@ -210,7 +210,7 @@ export function ShopifyWebsiteCostPage() {
           </div>
         </section>
 
-        <section id="tiers" className="border-t border-white/10 bg-black px-6 py-16 md:px-10 md:py-24">
+        <section id="tiers" className="border-t border-white/10 bg-black px-6 py-[50px] md:px-10 md:py-[100px]">
           <div className="mx-auto max-w-[1500px]">
             <div className="mb-10 max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-normal text-primary">Price tiers</p>
@@ -278,7 +278,7 @@ export function ShopifyWebsiteCostPage() {
           </div>
         </section>
 
-        <section className="bg-background px-6 py-16 md:px-10 md:py-24">
+        <section className="bg-background px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
               <p className="text-sm font-semibold uppercase tracking-normal text-primary">Cost factors</p>
@@ -303,7 +303,7 @@ export function ShopifyWebsiteCostPage() {
           </div>
         </section>
 
-        <section className="border-y border-white/10 bg-black px-6 py-16 md:px-10 md:py-24">
+        <section className="border-y border-white/10 bg-black px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto max-w-[1180px]">
             <div className="mb-10 max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-normal text-primary">Decision guide</p>
@@ -320,7 +320,7 @@ export function ShopifyWebsiteCostPage() {
           </div>
         </section>
 
-        <section className="bg-background px-6 py-16 md:px-10 md:py-24">
+        <section className="bg-background px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto grid max-w-[1300px] gap-10 lg:grid-cols-2">
             <div>
               <CreditCard className="mb-5 size-8 text-primary" />
@@ -351,7 +351,7 @@ export function ShopifyWebsiteCostPage() {
           </div>
         </section>
 
-        <section className="border-t border-white/10 bg-black px-6 py-16 md:px-10 md:py-24">
+        <section className="border-t border-white/10 bg-black px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto max-w-[1180px]">
             <div className="mb-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
               <div>
@@ -371,7 +371,7 @@ export function ShopifyWebsiteCostPage() {
           </div>
         </section>
 
-        <section className="bg-background px-6 py-16 md:px-10 md:py-24">
+        <section className="bg-background px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto max-w-[1100px] rounded-3xl border border-primary/20 bg-primary/[0.08] p-8 text-center md:p-12">
             <h2 className="text-[clamp(2rem,4vw,3.4rem)] font-bold leading-tight tracking-normal">不确定预算应该放在哪一档？</h2>
             <p className="mx-auto mt-5 max-w-3xl text-base leading-[1.8] text-muted-foreground md:text-lg">

@@ -184,7 +184,7 @@ export function ShowcaseSection() {
   }, [])
 
   return (
-    <section id="work" ref={sectionRef} className="relative flex scroll-mt-24 flex-col justify-center overflow-hidden bg-background py-16 md:py-32">
+    <section id="work" ref={sectionRef} className="relative flex scroll-mt-24 flex-col justify-center overflow-hidden bg-background pb-[50px] pt-0 md:pb-[100px] md:pt-0">
       <div className="max-w-6xl mx-auto px-6 md:px-10 w-full">
         <div ref={titleRef} className="mb-8 text-center md:mb-16">
           <p className="animate-line mb-4 text-sm font-semibold tracking-[0.2em] text-primary uppercase">{text.eyebrow}</p>

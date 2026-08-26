@@ -523,7 +523,7 @@ export function DiagnosisPage() {
           </div>
         </section>
 
-        <section className="border-t border-white/10 bg-black px-6 py-16 md:px-10 md:py-24">
+        <section className="border-t border-white/10 bg-black px-6 py-[50px] md:px-10 md:py-[100px]">
           <div className="mx-auto max-w-[1500px]">
             <div className="mb-10 max-w-3xl">
               <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-bold leading-tight tracking-normal">{text.whyTitle}</h2>
@@ -545,7 +545,7 @@ export function DiagnosisPage() {
           </div>
         </section>
 
-        <section className="bg-background px-6 py-16 md:px-10 md:py-24">
+        <section className="bg-background px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto max-w-[1500px]">
             <div className="mb-10 max-w-3xl">
               <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-bold leading-tight tracking-normal">{text.reviewTitle}</h2>
@@ -574,7 +574,7 @@ export function DiagnosisPage() {
           </div>
         </section>
 
-        <section className="border-y border-white/10 bg-black px-6 py-16 md:px-10 md:py-24">
+        <section className="border-y border-white/10 bg-black px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
               <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-bold leading-tight tracking-normal">{text.fitTitle}</h2>
@@ -591,7 +591,7 @@ export function DiagnosisPage() {
           </div>
         </section>
 
-        <section className="bg-background px-6 py-16 md:px-10 md:py-24">
+        <section className="bg-background px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
             <div className="lg:sticky lg:top-28">
               <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">Review Form</p>
@@ -602,7 +602,7 @@ export function DiagnosisPage() {
           </div>
         </section>
 
-        <section className="border-y border-white/10 bg-black px-6 py-16 md:px-10 md:py-24">
+        <section className="border-y border-white/10 bg-black px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
               <Clock3 className="mb-5 size-7 text-primary" />
@@ -620,7 +620,7 @@ export function DiagnosisPage() {
           </div>
         </section>
 
-        <section className="bg-background px-6 py-16 md:px-10 md:py-24">
+        <section className="bg-background px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto max-w-[1100px] rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-6 md:p-10">
             <Send className="mb-5 size-7 text-primary" />
             <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-bold leading-tight tracking-normal">{text.auditCtaTitle}</h2>

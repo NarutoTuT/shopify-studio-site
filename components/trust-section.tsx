@@ -78,7 +78,7 @@ export function TrustSection() {
   const text = copy[language]
 
   return (
-    <section className="bg-background px-6 py-20 md:px-10 md:py-28">
+    <section className="bg-background px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
       <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div className="lg:sticky lg:top-28">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">{text.eyebrow}</p>

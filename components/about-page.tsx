@@ -254,7 +254,7 @@ export function AboutPage() {
           </div>
         </section>
 
-        <section className="border-t border-white/10 bg-black px-6 py-16 md:px-10 md:py-24">
+        <section className="border-t border-white/10 bg-black px-6 py-[50px] md:px-10 md:py-[100px]">
           <div className="mx-auto max-w-[1500px]">
             <div className="mb-10 max-w-3xl">
               <PackageCheck className="mb-5 size-8 text-primary" />
@@ -277,7 +277,7 @@ export function AboutPage() {
           </div>
         </section>
 
-        <section className="bg-background px-6 py-16 md:px-10 md:py-24">
+        <section className="bg-background px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.85fr_1.15fr]">
             <div>
               <ShieldCheck className="mb-5 size-8 text-primary" />
@@ -294,7 +294,7 @@ export function AboutPage() {
           </div>
         </section>
 
-        <section id="principles" className="border-y border-white/10 bg-black px-6 py-16 md:px-10 md:py-24 scroll-mt-24">
+        <section id="principles" className="border-y border-white/10 bg-black px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0 scroll-mt-24">
           <div className="mx-auto max-w-[1500px]">
             <div className="mb-10 max-w-3xl">
               <FileSearch className="mb-5 size-8 text-primary" />
@@ -316,7 +316,7 @@ export function AboutPage() {
           </div>
         </section>
 
-        <section className="bg-background px-6 py-16 md:px-10 md:py-24">
+        <section className="bg-background px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.85fr_1.15fr]">
             <div>
               <Target className="mb-5 size-8 text-primary" />
@@ -333,7 +333,7 @@ export function AboutPage() {
           </div>
         </section>
 
-        <section className="bg-black px-6 py-16 md:px-10 md:py-24">
+        <section className="bg-black px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto max-w-[1100px] rounded-[1.5rem] border border-primary/20 bg-primary/10 p-7 text-center md:p-12">
             <h2 className="text-[clamp(2rem,4vw,3.4rem)] font-bold leading-tight tracking-normal">{text.ctaTitle}</h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.ctaText}</p>
