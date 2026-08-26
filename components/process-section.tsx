@@ -70,28 +70,76 @@ export function ProcessSection() {
   const text = copy[language]
 
   return (
-    <section className="bg-black px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
-      <div className="mx-auto max-w-[1500px]">
-        <div className="mb-12 grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-          <div>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">{text.eyebrow}</p>
-            <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.08] tracking-normal text-foreground">{text.title}</h2>
-          </div>
-          <p className="max-w-3xl text-base leading-[1.7] text-muted-foreground md:text-lg lg:ml-auto">{text.description}</p>
+    <section className="relative overflow-hidden bg-black px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(119,252,117,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(119,252,117,0.08)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_78%)]" />
+      <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 size-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/[0.06] blur-[120px]" />
+
+      <div className="relative mx-auto max-w-[1500px]">
+        <div className="mx-auto mb-12 max-w-5xl text-center md:mb-16">
+          <p className="mb-4 inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.24em] text-primary md:text-sm">
+            <span className="size-1.5 animate-pulse rounded-full bg-primary shadow-[0_0_12px_rgba(119,252,117,0.9)] motion-reduce:animate-none" />
+            {text.eyebrow}
+          </p>
+          <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-[1.08] tracking-normal text-foreground">{text.title}</h2>
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-[1.7] text-muted-foreground md:text-lg">{text.description}</p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-5">
+        <div className="relative hidden lg:block">
+          <div aria-hidden="true" className="absolute left-[8%] right-[8%] top-[58px] h-px overflow-hidden bg-primary/25 shadow-[0_0_18px_rgba(119,252,117,0.45)]">
+            <span className="block h-full w-full animate-shimmer bg-[linear-gradient(90deg,transparent,rgba(119,252,117,1),rgba(58,221,255,0.8),transparent)] bg-[length:200%_100%] motion-reduce:animate-none" />
+          </div>
+
+          <div className="grid grid-cols-5 gap-4">
+            {text.steps.map((step, index) => {
+              const Icon = icons[index]
+
+              return (
+                <article key={step.title} className="group relative flex min-w-0 flex-col items-center">
+                  <div className="relative z-10 flex size-[116px] items-center justify-center rounded-full border border-primary/45 bg-black/90 shadow-[0_0_45px_rgba(119,252,117,0.12),inset_0_0_30px_rgba(119,252,117,0.08)] backdrop-blur-xl transition-[border-color,box-shadow,transform] duration-500 group-hover:-translate-y-1 group-hover:border-primary group-hover:shadow-[0_0_55px_rgba(119,252,117,0.3),inset_0_0_35px_rgba(119,252,117,0.13)]">
+                    <span aria-hidden="true" className="absolute inset-2 animate-[spin_16s_linear_infinite] rounded-full border border-dashed border-primary/25 motion-reduce:animate-none" />
+                    <span aria-hidden="true" className="absolute inset-5 rounded-full border border-white/10" />
+                    <div className="relative text-center">
+                      <span className="block font-mono text-2xl font-bold text-white">0{index + 1}</span>
+                      <Icon className="mx-auto mt-1 size-4 text-primary" />
+                    </div>
+                  </div>
+
+                  <span aria-hidden="true" className="h-7 w-px bg-gradient-to-b from-primary/80 to-primary/15" />
+
+                  <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_60px_rgba(0,0,0,0.28)] backdrop-blur-xl transition-[border-color,background-color,box-shadow,transform] duration-500 group-hover:-translate-y-1 group-hover:border-primary/40 group-hover:bg-primary/[0.065] group-hover:shadow-[0_0_38px_rgba(119,252,117,0.1)]">
+                    <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px -translate-x-full bg-gradient-to-r from-transparent via-primary to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                    <div className="mb-5 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.18em] text-primary/70">
+                      <span>NODE / 0{index + 1}</span>
+                      <span>{(index + 1) * 20}%</span>
+                    </div>
+                    <h3 className="mb-3 text-lg font-semibold tracking-normal text-foreground">{step.title}</h3>
+                    <p className="text-sm leading-[1.7] text-muted-foreground">{step.text}</p>
+                  </div>
+                </article>
+              )
+            })}
+          </div>
+        </div>
+
+        <div className="relative space-y-4 lg:hidden">
+          <div aria-hidden="true" className="absolute bottom-8 left-[27px] top-8 w-px bg-gradient-to-b from-primary via-primary/45 to-cyan-400/25 shadow-[0_0_14px_rgba(119,252,117,0.35)]" />
           {text.steps.map((step, index) => {
             const Icon = icons[index]
 
             return (
-              <article key={step.title} className="rounded-2xl border border-white/10 bg-white/[0.035] p-5">
-                <div className="mb-6 flex items-center justify-between">
-                  <span className="font-mono text-xs text-primary">0{index + 1}</span>
-                  <Icon className="size-5 text-primary" />
+              <article key={step.title} className="group relative grid grid-cols-[56px_1fr] gap-4">
+                <div className="relative z-10 flex size-14 items-center justify-center rounded-full border border-primary/45 bg-black shadow-[0_0_26px_rgba(119,252,117,0.16),inset_0_0_20px_rgba(119,252,117,0.08)]">
+                  <span aria-hidden="true" className="absolute inset-1.5 rounded-full border border-dashed border-primary/25" />
+                  <Icon className="relative size-5 text-primary" />
                 </div>
-                <h3 className="mb-3 text-lg font-semibold tracking-normal text-foreground">{step.title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{step.text}</p>
+                <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl">
+                  <div className="mb-3 flex items-center justify-between">
+                    <span className="font-mono text-xs font-semibold text-primary">0{index + 1}</span>
+                    <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-white/35">Process node</span>
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold tracking-normal text-foreground">{step.title}</h3>
+                  <p className="text-sm leading-[1.7] text-muted-foreground">{step.text}</p>
+                </div>
               </article>
             )
           })}

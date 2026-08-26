@@ -59,7 +59,7 @@ export function ContactSection() {
         <div className="flex min-h-[520px] flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 md:p-10">
           <div>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">{text.eyebrow}</p>
-            <h2 className="max-w-3xl text-[clamp(2.1rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-normal text-foreground">
+            <h2 className="max-w-3xl text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-[1.05] tracking-normal text-foreground">
               {text.title}
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-[1.6] text-muted-foreground md:text-lg">

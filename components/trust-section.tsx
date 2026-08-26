@@ -1,10 +1,10 @@
 "use client"
 
-import { BadgeCheck, Code2, Globe2, Languages, ShoppingBag, Workflow } from "lucide-react"
+import { Code2, Globe2, Workflow } from "lucide-react"
 
 import { useLanguage } from "@/components/language-provider"
 
-const icons = [Code2, BadgeCheck, ShoppingBag, Workflow, Languages, Globe2]
+const proofIcons = [Code2, Workflow, Globe2]
 
 const copy = {
   zh: {
@@ -76,30 +76,104 @@ const copy = {
 export function TrustSection() {
   const { language } = useLanguage()
   const text = copy[language]
+  const proofLabels = language === "zh"
+    ? ["Engineering", "Growth Context", "Global Collaboration"]
+    : ["Engineering", "Growth Context", "Global Collaboration"]
+  const proofGroups = [
+    [text.reasons[0], text.reasons[1]],
+    [text.reasons[2], text.reasons[3]],
+    [text.reasons[4], text.reasons[5]],
+  ]
+  const capabilityTags = ["SHOPIFY", "LIQUID", "CROSS-BORDER", "BILINGUAL"]
 
   return (
-    <section className="bg-background px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
-      <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-        <div className="lg:sticky lg:top-28">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">{text.eyebrow}</p>
-          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.08] tracking-normal text-foreground">{text.title}</h2>
-          <p className="mt-6 max-w-2xl text-base leading-[1.7] text-muted-foreground md:text-lg">{text.description}</p>
+    <section className="relative overflow-hidden bg-background px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-20 [background-image:radial-gradient(circle,rgba(119,252,117,0.28)_1px,transparent_1px)] [background-size:28px_28px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
+      <div aria-hidden="true" className="pointer-events-none absolute bottom-0 left-0 size-[520px] rounded-full bg-cyan-400/[0.045] blur-[130px]" />
+
+      <div className="relative mx-auto max-w-[1500px]">
+        <div className="mx-auto mb-12 max-w-5xl text-center md:mb-16">
+          <p className="mb-4 inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.24em] text-primary md:text-sm">
+            <span className="size-1.5 animate-pulse rounded-full bg-primary shadow-[0_0_12px_rgba(119,252,117,0.9)] motion-reduce:animate-none" />
+            {text.eyebrow}
+          </p>
+          <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-[1.08] tracking-normal text-foreground">{text.title}</h2>
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-[1.7] text-muted-foreground md:text-lg">{text.description}</p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          {text.reasons.map((reason, index) => {
-            const Icon = icons[index]
+        <div className="grid items-stretch gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8">
+          <div className="relative flex min-h-[430px] items-center justify-center overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.025] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_35px_90px_rgba(0,0,0,0.35)] backdrop-blur-2xl sm:min-h-[520px] sm:p-8">
+            <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(119,252,117,0.12),transparent_48%)]" />
+            <div aria-hidden="true" className="absolute inset-[12%] animate-[spin_28s_linear_infinite] rounded-full border border-dashed border-primary/20 motion-reduce:animate-none" />
+            <div aria-hidden="true" className="absolute inset-[19%] animate-[spin_20s_linear_infinite_reverse] rounded-full border border-cyan-300/15 motion-reduce:animate-none" />
 
-            return (
-              <article key={reason.title} className="rounded-2xl border border-white/10 bg-white/[0.035] p-5">
-                <span className="mb-5 flex size-11 items-center justify-center rounded-full border border-primary/20 bg-primary/10 text-primary">
-                  <Icon className="size-5" />
+            <div className="relative flex size-[235px] items-center justify-center sm:size-[310px]">
+              <div aria-hidden="true" className="absolute inset-0 animate-[spin_22s_linear_infinite] rounded-[46%_54%_57%_43%/48%_42%_58%_52%] border border-primary/35 bg-[linear-gradient(135deg,rgba(255,255,255,0.12),rgba(119,252,117,0.07),rgba(34,211,238,0.06))] shadow-[inset_0_0_55px_rgba(255,255,255,0.06),0_0_70px_rgba(119,252,117,0.12)] backdrop-blur-2xl motion-reduce:animate-none" />
+              <div aria-hidden="true" className="absolute inset-6 animate-[spin_16s_linear_infinite_reverse] rounded-[58%_42%_44%_56%/45%_55%_45%_55%] border border-white/15 bg-black/35 motion-reduce:animate-none" />
+              <div className="relative text-center">
+                <span className="block text-[clamp(4.5rem,9vw,7.5rem)] font-bold leading-none tracking-[-0.08em] text-white drop-shadow-[0_0_28px_rgba(119,252,117,0.28)]">6</span>
+                <span className="mt-1 block font-mono text-lg font-semibold tracking-[0.2em] text-primary sm:text-2xl">YEARS</span>
+                <span className="mt-3 block font-mono text-[9px] uppercase tracking-[0.2em] text-white/40">Experience core</span>
+              </div>
+            </div>
+
+            {capabilityTags.map((tag, index) => {
+              const positions = [
+                "left-4 top-6 sm:left-8 sm:top-9",
+                "right-4 top-10 sm:right-8 sm:top-14",
+                "bottom-8 left-3 sm:bottom-12 sm:left-7",
+                "bottom-5 right-3 sm:bottom-10 sm:right-7",
+              ]
+
+              return (
+                <span key={tag} className={`absolute ${positions[index]} rounded-full border border-white/15 bg-black/60 px-3 py-2 font-mono text-[9px] tracking-[0.12em] text-white/80 shadow-[0_0_24px_rgba(119,252,117,0.08)] backdrop-blur-xl sm:px-4 sm:text-[10px]`}>
+                  <span className="mr-2 inline-block size-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(119,252,117,0.85)]" />
+                  {tag}
                 </span>
-                <h3 className="mb-2 text-base font-semibold leading-snug tracking-normal text-foreground">{reason.title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{reason.text}</p>
-              </article>
-            )
-          })}
+              )
+            })}
+          </div>
+
+          <div className="grid gap-4">
+            {proofGroups.map((group, index) => {
+              const Icon = proofIcons[index]
+
+              return (
+                <article key={proofLabels[index]} className="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl transition-[border-color,background-color,box-shadow,transform] duration-500 hover:-translate-y-1 hover:border-primary/40 hover:bg-primary/[0.055] hover:shadow-[0_0_42px_rgba(119,252,117,0.1)] sm:p-6">
+                  <span aria-hidden="true" className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-primary/75 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px -translate-x-full bg-gradient-to-r from-transparent via-primary to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+                  <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
+                    <div className="flex items-center justify-between sm:block">
+                      <span className="flex size-12 shrink-0 items-center justify-center rounded-2xl border border-primary/25 bg-primary/10 text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_0_24px_rgba(119,252,117,0.08)]">
+                        <Icon className="size-5" />
+                      </span>
+                      <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-primary sm:hidden">Verified</span>
+                    </div>
+
+                    <div className="min-w-0 flex-1">
+                      <div className="mb-4 flex items-center justify-between gap-4">
+                        <h3 className="text-xl font-semibold tracking-normal text-foreground">{proofLabels[index]}</h3>
+                        <span className="hidden items-center gap-2 font-mono text-[9px] uppercase tracking-[0.14em] text-primary sm:inline-flex">
+                          <span className="size-1.5 animate-pulse rounded-full bg-primary motion-reduce:animate-none" />
+                          Verified
+                        </span>
+                      </div>
+
+                      <div className="grid gap-4 sm:grid-cols-2">
+                        {group.map((reason) => (
+                          <div key={reason.title}>
+                            <h4 className="mb-1.5 text-sm font-semibold leading-snug text-white/90">{reason.title}</h4>
+                            <p className="text-xs leading-[1.65] text-muted-foreground sm:text-sm">{reason.text}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>

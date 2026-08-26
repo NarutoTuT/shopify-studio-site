@@ -96,7 +96,7 @@ export function SolutionSection() {
             <span className="size-1.5 rounded-full bg-primary shadow-[0_0_14px_rgba(119,252,117,0.9)]" />
             {text.eyebrow}
           </p>
-          <h2 className="text-[clamp(2rem,4vw,3.6rem)] font-bold leading-[1.08] tracking-normal text-foreground">{text.title}</h2>
+          <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-[1.08] tracking-normal text-foreground">{text.title}</h2>
           <p className="mx-auto mt-6 max-w-3xl text-base leading-[1.7] text-muted-foreground md:text-lg">{text.description}</p>
         </div>
 

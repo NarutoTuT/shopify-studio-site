@@ -114,6 +114,20 @@
     0% { background-position: -200% 0; }
     100% { background-position: 200% 0; }
   }
+
+  @keyframes problem-scan {
+    0%, 100% {
+      left: 8%;
+      opacity: 0;
+    }
+    12%, 88% {
+      opacity: 1;
+    }
+    50% {
+      left: 92%;
+      opacity: 0.9;
+    }
+  }
 }
 
 @layer base {
