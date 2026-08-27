@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { StructuredData } from '@/components/structured-data'
 import { GoogleAnalytics } from '@/components/google-analytics'
-import './globals.css'
+import '../globals.css'
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -33,6 +33,10 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: '/',
+    languages: {
+      'zh-CN': '/',
+      'en': '/en',
+    },
   },
   openGraph: {
     type: 'website',

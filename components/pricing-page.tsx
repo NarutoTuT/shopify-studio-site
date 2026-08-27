@@ -268,7 +268,7 @@ const pricingFaqMeta = [
 ]
 
 export function PricingPage() {
-  const { language } = useLanguage()
+  const { language, localizedPath } = useLanguage()
   const text = copy[language]
   const [activePlan, setActivePlan] = useState(1)
   const [activeModuleGroup, setActiveModuleGroup] = useState(0)
@@ -342,7 +342,7 @@ export function PricingPage() {
             <p className="mx-auto mt-6 max-w-4xl text-lg font-semibold leading-[1.55] text-foreground/90 md:text-xl">{text.subtitle}</p>
             <p className="mx-auto mt-5 max-w-3xl text-base leading-[1.7] text-muted-foreground md:text-lg">{text.description}</p>
             <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row sm:gap-5">
-              <a href="/diagnosis" className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.28)] transition-all hover:brightness-110 active:scale-[0.98]">{text.primaryCta}<ArrowUpRight className="size-4" /></a>
+              <a href={localizedPath("/diagnosis")} className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.28)] transition-all hover:brightness-110 active:scale-[0.98]">{text.primaryCta}<ArrowUpRight className="size-4" /></a>
               <a href="#plans" className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/15 bg-black/12 px-8 text-base font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-white/[0.055]">{text.secondaryCta}</a>
             </div>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3 md:mt-14">{heroProof.map((item) => <span key={item} className="rounded-full bg-white/[0.04] px-4 py-2 text-base text-white/60 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)] backdrop-blur-sm">{item}</span>)}</div>
@@ -432,7 +432,7 @@ export function PricingPage() {
                   <p className="mt-5 font-mono text-base font-semibold tracking-[0.06em] text-primary">{pricingLabels.closingEyebrow}</p>
                   <h3 className="mt-3 text-[clamp(1.5rem,2.5vw,2.15rem)] font-bold leading-tight tracking-normal">{pricingLabels.closingTitle}</h3>
                   <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">{pricingLabels.closingText}</p>
-                  <a href="/diagnosis" className="mt-7 inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.24)] transition-all hover:brightness-110 active:scale-[0.98]">{text.primaryCta}<ArrowUpRight className="size-4" /></a>
+                  <a href={localizedPath("/diagnosis")} className="mt-7 inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.24)] transition-all hover:brightness-110 active:scale-[0.98]">{text.primaryCta}<ArrowUpRight className="size-4" /></a>
                 </div>
               </div>
             </div>
@@ -665,7 +665,7 @@ export function PricingPage() {
             <div aria-hidden="true" className="absolute bottom-[22%] right-[2%] h-px w-[62%] rotate-[-8deg] animate-shimmer bg-[linear-gradient(90deg,transparent,rgba(34,211,238,0.55),rgba(119,252,117,0.8),transparent)] bg-[length:200%_100%] shadow-[0_0_25px_rgba(119,252,117,0.35)] motion-reduce:animate-none" />
             <div className="relative grid gap-8 text-center lg:grid-cols-[1fr_auto] lg:items-center lg:text-left">
               <div><ShieldCheck className="mx-auto mb-5 size-8 text-primary lg:mx-0" /><h2 className="max-w-4xl text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.ctaTitle}</h2><p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg lg:mx-0">{text.ctaText}</p></div>
-              <a href="/diagnosis" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98]">{text.primaryCta}<ArrowUpRight className="size-4" /></a>
+              <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98]">{text.primaryCta}<ArrowUpRight className="size-4" /></a>
             </div>
           </div>
         </section>

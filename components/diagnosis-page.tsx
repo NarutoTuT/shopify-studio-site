@@ -245,22 +245,41 @@ const copy = {
 }
 
 const diagnosisStructuredData = {
-  breadcrumbs: [
-    { name: "首页", url: "https://whaleleap.studio/" },
-    { name: "Free Shopify Review", url: "https://whaleleap.studio/diagnosis" },
-  ],
-  service: {
-    name: "Free Shopify Review",
-    description: "为海外华人跨境品牌检查 Shopify 技术基础、页面转化路径和数据追踪体系，判断影响独立站增长的关键问题。",
-    url: "https://whaleleap.studio/diagnosis",
+  zh: {
+    breadcrumbs: [
+      { name: "首页", url: "https://whaleleap.studio/" },
+      { name: "Free Shopify Review", url: "https://whaleleap.studio/diagnosis" },
+    ],
+    service: {
+      name: "Free Shopify Review",
+      description: "为海外华人跨境品牌检查 Shopify 技术基础、页面转化路径和数据追踪体系，判断影响独立站增长的关键问题。",
+      url: "https://whaleleap.studio/diagnosis",
+    },
+    page: {
+      type: "WebPage" as const,
+      name: "Free Shopify Review",
+      description: "发现影响 Shopify 独立站转化的关键问题，获得 Shopify 技术、页面体验和数据追踪方面的初步优化建议。",
+      url: "https://whaleleap.studio/diagnosis",
+      about: ["Free Shopify Review", "Shopify 增长检查", "Shopify 转化优化", "Shopify 数据追踪"],
+    },
   },
-  page: {
-    type: "WebPage" as const,
-    name: "Free Shopify Review",
-    description: "发现影响 Shopify 独立站转化的关键问题，获得 Shopify 技术、页面体验和数据追踪方面的初步优化建议。",
-    url: "https://whaleleap.studio/diagnosis",
-    inLanguage: "zh-CN",
-    about: ["Free Shopify Review", "Shopify 增长检查", "Shopify 转化优化", "Shopify 数据追踪"],
+  en: {
+    breadcrumbs: [
+      { name: "Home", url: "https://whaleleap.studio/en" },
+      { name: "Free Shopify Review", url: "https://whaleleap.studio/en/diagnosis" },
+    ],
+    service: {
+      name: "Free Shopify Review",
+      description: "A review of Shopify technical foundations, conversion paths, and tracking systems to identify the issues limiting storefront growth.",
+      url: "https://whaleleap.studio/en/diagnosis",
+    },
+    page: {
+      type: "WebPage" as const,
+      name: "Free Shopify Review",
+      description: "Identify the key issues affecting Shopify conversion and get initial recommendations for engineering, page experience, and measurement.",
+      url: "https://whaleleap.studio/en/diagnosis",
+      about: ["Free Shopify Review", "Shopify growth review", "Shopify conversion optimization", "Shopify analytics"],
+    },
   },
 }
 
@@ -318,8 +337,9 @@ function SelectField({
 }
 
 export function DiagnosisPage() {
-  const { language } = useLanguage()
+  const { language, localizedPath } = useLanguage()
   const text = copy[language]
+  const structuredData = diagnosisStructuredData[language]
   const [form, setForm] = useState<FormState>(initialForm)
   const [submitState, setSubmitState] = useState<"idle" | "submitting" | "success" | "error">("idle")
   const [submitMessage, setSubmitMessage] = useState("")
@@ -460,14 +480,14 @@ export function DiagnosisPage() {
           {submitState === "submitting" ? text.submitting : text.primaryCta}
           {submitState === "submitting" ? <LoaderCircle className="size-5 animate-spin" /> : <ArrowUpRight className="size-5" />}
         </button>
-        <a href="/" className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/15 px-6 text-base font-semibold text-foreground transition-colors hover:bg-white/5">{text.secondaryCta}</a>
+        <a href={localizedPath("/")} className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/15 px-6 text-base font-semibold text-foreground transition-colors hover:bg-white/5">{text.secondaryCta}</a>
       </div>
     </form>
   )
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <PageStructuredData breadcrumbs={diagnosisStructuredData.breadcrumbs} faqItems={[]} service={diagnosisStructuredData.service} page={diagnosisStructuredData.page} />
+      <PageStructuredData breadcrumbs={structuredData.breadcrumbs} faqItems={[]} service={structuredData.service} page={structuredData.page} language={language} />
       <Navbar />
       <main>
         <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-[#020403] px-4 pb-16 pt-28 sm:px-6 md:px-10 md:pb-20 md:pt-32">
@@ -513,7 +533,7 @@ export function DiagnosisPage() {
                 {text.primaryCta}
                 <ArrowUpRight className="size-5" />
               </a>
-              <a href="/" className="pointer-events-auto inline-flex min-h-14 items-center justify-center rounded-full border border-white/15 bg-black/15 px-8 text-base font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:px-10">
+              <a href={localizedPath("/")} className="pointer-events-auto inline-flex min-h-14 items-center justify-center rounded-full border border-white/15 bg-black/15 px-8 text-base font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:px-10">
                 {text.secondaryCta}
               </a>
             </div>
@@ -766,7 +786,7 @@ export function DiagnosisPage() {
                 <p className="font-mono text-base font-semibold uppercase tracking-[0.08em] text-primary">Growth audit / next step</p>
                 <h2 className="mt-3 max-w-4xl text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.auditCtaTitle}</h2>
                 <p className="mt-4 max-w-3xl text-base leading-[1.75] text-muted-foreground md:text-lg">{text.auditCtaText}</p>
-                <a href="/#services" className="mt-5 inline-flex min-h-12 items-center text-base font-semibold text-cyan-200 underline decoration-cyan-300/35 underline-offset-4 transition-colors hover:text-primary focus-visible:rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                <a href={localizedPath("/#services")} className="mt-5 inline-flex min-h-12 items-center text-base font-semibold text-cyan-200 underline decoration-cyan-300/35 underline-offset-4 transition-colors hover:text-primary focus-visible:rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
                   {text.auditCtaSecondary}
                 </a>
               </div>

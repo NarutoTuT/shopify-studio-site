@@ -134,7 +134,7 @@ export function PricingSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
   const cardsRef = useRef<HTMLDivElement>(null)
-  const { language } = useLanguage()
+  const { language, localizedPath } = useLanguage()
   const text = copy[language]
 
   useEffect(() => {
@@ -242,7 +242,7 @@ export function PricingSection() {
               </div>
 
               <div className="text-center mt-auto">
-                <a href="/diagnosis" className={`inline-flex items-center justify-center w-full py-3.5 px-8 rounded-xl font-bold text-sm transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.97] group ${
+                <a href={localizedPath("/diagnosis")} className={`inline-flex items-center justify-center w-full py-3.5 px-8 rounded-xl font-bold text-sm transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.97] group ${
                   styles.popular ? "bg-primary text-primary-foreground shadow-xl shadow-primary/20" : "bg-white/10 text-foreground hover:bg-white/20"
                 }`}>
                   {plan.cta}

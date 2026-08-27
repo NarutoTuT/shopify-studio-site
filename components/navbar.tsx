@@ -50,10 +50,10 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
-  const { language, toggleLanguage } = useLanguage()
+  const { language, toggleLanguage, localizedPath } = useLanguage()
   const text = copy[language]
   const isHome = pathname === "/"
-  const homeHref = isHome ? "#" : "/"
+  const homeHref = isHome ? "#" : localizedPath("/")
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,7 +66,7 @@ export function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/80 backdrop-blur-md border-b border-border/50" : ""}`}>
       <div className="max-w-[1500px] mx-auto flex items-center justify-between px-6 lg:px-12 py-4">
-        <a href={homeHref} className="min-w-0" aria-label="WhaleLeap Studio 首页" onClick={() => setOpen(false)}>
+        <a href={homeHref} className="min-w-0" aria-label={language === "zh" ? "WhaleLeap Studio 首页" : "WhaleLeap Studio home"} onClick={() => setOpen(false)}>
           <BrandLogo />
         </a>
 
@@ -84,7 +84,7 @@ export function Navbar() {
                 {text.serviceLinks.map((link) => (
                   <a
                     key={link.href}
-                    href={link.href}
+                    href={localizedPath(link.href)}
                     className="block rounded-xl px-4 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
                   >
                     {link.label}
@@ -96,7 +96,7 @@ export function Navbar() {
           {text.navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={localizedPath(link.href)}
               className="text-base text-muted-foreground hover:text-foreground transition-colors duration-200 tracking-[-0.01em]"
             >
               {link.label}
@@ -113,7 +113,7 @@ export function Navbar() {
             {text.languageLabel}
           </button>
           <a
-            href="/diagnosis"
+            href={localizedPath("/diagnosis")}
             className="inline-flex bg-foreground text-background px-5 py-2.5 text-sm font-medium rounded-full hover:bg-foreground/90 transition-all duration-300 tracking-[-0.01em]"
           >
             {text.cta}
@@ -149,7 +149,7 @@ export function Navbar() {
             {text.serviceLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={localizedPath(link.href)}
                 onClick={() => setOpen(false)}
                 className="rounded-xl px-4 py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
@@ -160,7 +160,7 @@ export function Navbar() {
             {text.navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={localizedPath(link.href)}
                 onClick={() => setOpen(false)}
                 className="rounded-xl px-2 py-3 text-base text-muted-foreground transition-colors hover:text-foreground"
               >
@@ -168,7 +168,7 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href="/diagnosis"
+              href={localizedPath("/diagnosis")}
               onClick={() => setOpen(false)}
               className="mt-3 inline-flex justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground"
             >

@@ -195,7 +195,7 @@ const copy = {
 }
 
 export function AboutPage() {
-  const { language } = useLanguage()
+  const { language, localizedPath } = useLanguage()
   const text = copy[language]
 
   return (
@@ -223,7 +223,7 @@ export function AboutPage() {
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="/diagnosis"
+                  href={localizedPath("/diagnosis")}
                   className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-sm font-bold text-primary-foreground transition-all hover:brightness-110 active:scale-[0.98]"
                 >
                   {text.primaryCta}
@@ -338,7 +338,7 @@ export function AboutPage() {
             <h2 className="text-[clamp(2rem,4vw,3.4rem)] font-bold leading-tight tracking-normal">{text.ctaTitle}</h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.ctaText}</p>
             <a
-              href="/diagnosis"
+              href={localizedPath("/diagnosis")}
               className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-sm font-bold text-primary-foreground transition-all hover:brightness-110 active:scale-[0.98]"
             >
               {text.primaryCta}

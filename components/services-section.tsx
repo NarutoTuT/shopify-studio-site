@@ -88,7 +88,7 @@ export function ServicesSection() {
   const titleRef = useRef<HTMLDivElement>(null)
   const consoleRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
-  const { language } = useLanguage()
+  const { language, localizedPath } = useLanguage()
   const text = copy[language]
   const activeService = text.services[activeIndex]
   const ActiveIcon = icons[activeIndex]
@@ -249,7 +249,7 @@ export function ServicesSection() {
                 <p className="mt-3 text-sm leading-[1.75] text-white/58 md:text-base">{activeService.capability}</p>
               </div>
 
-              <a href={serviceLinks[activeIndex]} className="mt-7 inline-flex items-center gap-2 rounded-full border border-primary/35 bg-primary/10 px-6 py-3.5 text-sm font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-[0_0_28px_rgba(119,252,117,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
+              <a href={localizedPath(serviceLinks[activeIndex])} className="mt-7 inline-flex items-center gap-2 rounded-full border border-primary/35 bg-primary/10 px-6 py-3.5 text-sm font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-[0_0_28px_rgba(119,252,117,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
                 {text.cta}
                 <ArrowUpRight className="size-4" />
               </a>

@@ -23,7 +23,7 @@ const copy = {
     subtitle: "Helping global ecommerce brands build faster, more stable, and higher-converting Shopify stores.",
     description: "From Shopify engineering and theme development to conversion optimization and tracking setup, WhaleLeap helps brands turn traffic into orders.",
     primaryCta: "Free Shopify Store Review",
-    secondaryCta: "View Service System",
+    secondaryCta: "Explore Our Services",
   },
 }
 
@@ -31,7 +31,7 @@ export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const backgroundRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
-  const { language } = useLanguage()
+  const { language, localizedPath } = useLanguage()
   const text = copy[language]
 
   useEffect(() => {
@@ -245,7 +245,7 @@ export function HeroSection() {
         </p>
 
         <div className="hero-animate flex flex-wrap gap-5 font-medium justify-center">
-          <a href="/diagnosis" className="pointer-events-auto bg-primary text-primary-foreground px-8 py-4 md:px-10 md:py-5 text-base rounded-full cursor-pointer hover:brightness-110 transition-all duration-300 active:scale-[0.97] shadow-[0_0_20px_rgba(119,252,117,0.3)]">
+          <a href={localizedPath("/diagnosis")} className="pointer-events-auto bg-primary text-primary-foreground px-8 py-4 md:px-10 md:py-5 text-base rounded-full cursor-pointer hover:brightness-110 transition-all duration-300 active:scale-[0.97] shadow-[0_0_20px_rgba(119,252,117,0.3)]">
             {text.primaryCta}
           </a>
           <a href="#services" className="pointer-events-auto border border-foreground/20 text-foreground px-8 py-4 md:px-10 md:py-5 text-base rounded-full cursor-pointer hover:bg-foreground/5 transition-all duration-300 active:scale-[0.97] backdrop-blur-sm">

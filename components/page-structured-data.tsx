@@ -28,11 +28,13 @@ type PageStructuredDataProps = {
   faqItems: FaqItem[]
   service?: ServiceItem
   page?: PageItem
+  language?: "zh" | "en"
 }
 
 const siteUrl = "https://whaleleap.studio"
 
-export function PageStructuredData({ breadcrumbs, faqItems, service, page }: PageStructuredDataProps) {
+export function PageStructuredData({ breadcrumbs, faqItems, service, page, language = "zh" }: PageStructuredDataProps) {
+  const inLanguage = language === "zh" ? "zh-CN" : "en"
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -47,6 +49,7 @@ export function PageStructuredData({ breadcrumbs, faqItems, service, page }: Pag
       },
       {
         "@type": "FAQPage",
+        inLanguage,
         mainEntity: faqItems.map((item) => ({
           "@type": "Question",
           name: item.q,
@@ -63,7 +66,7 @@ export function PageStructuredData({ breadcrumbs, faqItems, service, page }: Pag
             name: page.name,
             description: page.description,
             url: page.url,
-            inLanguage: page.inLanguage ?? "zh-CN",
+            inLanguage: page.inLanguage ?? inLanguage,
             isPartOf: {
               "@type": "WebSite",
               "@id": `${siteUrl}/#website`,
@@ -79,6 +82,7 @@ export function PageStructuredData({ breadcrumbs, faqItems, service, page }: Pag
       service
         ? {
             "@type": "Service",
+            inLanguage,
             name: service.name,
             description: service.description,
             url: service.url,

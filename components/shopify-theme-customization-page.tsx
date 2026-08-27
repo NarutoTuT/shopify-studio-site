@@ -340,15 +340,29 @@ const copy = {
 }
 
 const themeCustomizationStructuredData = {
-  breadcrumbs: [
-    { name: "首页", url: "https://whaleleap.studio/" },
-    { name: "服务", url: "https://whaleleap.studio/#services" },
-    { name: "Shopify 主题定制与 Liquid 开发", url: "https://whaleleap.studio/services/shopify-theme-customization" },
-  ],
-  service: {
-    name: "Shopify 主题定制与 Liquid 开发",
-    description: "基于 Shopify 2.0、Liquid、HTML/CSS/JS 定制主题模块、页面结构、商品页、集合页和移动端体验。",
-    url: "https://whaleleap.studio/services/shopify-theme-customization",
+  zh: {
+    breadcrumbs: [
+      { name: "首页", url: "https://whaleleap.studio/" },
+      { name: "服务", url: "https://whaleleap.studio/#services" },
+      { name: "Shopify 主题定制与 Liquid 开发", url: "https://whaleleap.studio/services/shopify-theme-customization" },
+    ],
+    service: {
+      name: "Shopify 主题定制与 Liquid 开发",
+      description: "基于 Shopify 2.0、Liquid、HTML/CSS/JS 定制主题模块、页面结构、商品页、集合页和移动端体验。",
+      url: "https://whaleleap.studio/services/shopify-theme-customization",
+    },
+  },
+  en: {
+    breadcrumbs: [
+      { name: "Home", url: "https://whaleleap.studio/en" },
+      { name: "Services", url: "https://whaleleap.studio/en#services" },
+      { name: "Shopify Theme Customization", url: "https://whaleleap.studio/en/services/shopify-theme-customization" },
+    ],
+    service: {
+      name: "Shopify Theme Customization and Liquid Development",
+      description: "Shopify 2.0 theme modules, page structures, product and collection templates, and responsive storefront experiences built with Liquid, HTML, CSS, and JavaScript.",
+      url: "https://whaleleap.studio/en/services/shopify-theme-customization",
+    },
   },
 }
 
@@ -491,8 +505,9 @@ function ArtifactPreview({ index }: { index: number }) {
 }
 
 export function ShopifyThemeCustomizationPage() {
-  const { language } = useLanguage()
+  const { language, localizedPath } = useLanguage()
   const text = copy[language]
+  const structuredData = themeCustomizationStructuredData[language]
   const [comparisonPosition, setComparisonPosition] = useState(50)
   const [mobileHeroMode, setMobileHeroMode] = useState<"original" | "custom">("custom")
   const [activeSignal, setActiveSignal] = useState(0)
@@ -545,9 +560,10 @@ export function ShopifyThemeCustomizationPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageStructuredData
-        breadcrumbs={themeCustomizationStructuredData.breadcrumbs}
-        faqItems={copy.zh.faqs}
-        service={themeCustomizationStructuredData.service}
+        breadcrumbs={structuredData.breadcrumbs}
+        faqItems={text.faqs}
+        service={structuredData.service}
+        language={language}
       />
       <Navbar />
       <main>
@@ -573,7 +589,7 @@ export function ShopifyThemeCustomizationPage() {
               <p className="mt-4 hidden max-w-[650px] text-base leading-[1.75] text-muted-foreground sm:block">{text.description}</p>
 
               <div className="mt-9 flex flex-col gap-3 lg:flex-row">
-                <a href="/diagnosis" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98]">
+                <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98]">
                   {text.primaryCta}
                   <ArrowUpRight className="size-4" />
                 </a>
@@ -1144,7 +1160,7 @@ export function ShopifyThemeCustomizationPage() {
             <div aria-hidden="true" className="absolute bottom-[22%] right-[2%] h-px w-[62%] rotate-[-8deg] animate-shimmer bg-[linear-gradient(90deg,transparent,rgba(34,211,238,0.55),rgba(119,252,117,0.8),transparent)] bg-[length:200%_100%] shadow-[0_0_25px_rgba(119,252,117,0.35)] motion-reduce:animate-none" />
             <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div><ShieldCheck className="mb-5 size-8 text-primary" /><h2 className="max-w-4xl text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.ctaTitle}</h2><p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.ctaText}</p></div>
-              <a href="/diagnosis" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98]">{text.primaryCta}<ArrowUpRight className="size-4" /></a>
+              <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98]">{text.primaryCta}<ArrowUpRight className="size-4" /></a>
             </div>
           </div>
         </section>

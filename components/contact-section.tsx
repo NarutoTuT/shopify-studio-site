@@ -35,7 +35,7 @@ const copy = {
     title: "Start with a free Shopify store review.",
     description: "You do not need a complete requirements document. Submit your store, product context, and current problem. We will identify the main blockers in your Shopify growth path.",
     primaryCta: "Free Shopify Store Review",
-    secondaryCta: "View Service System",
+    secondaryCta: "Explore Our Services",
     checklistTitle: "What the review looks at",
     contactTitle: "Contact",
     emailLabel: "Email",
@@ -48,7 +48,7 @@ const copy = {
 export function ContactSection() {
   const email = "liaoshenyuan1999053@gmail.com"
   const wechat = "11058895969"
-  const { language } = useLanguage()
+  const { language, localizedPath } = useLanguage()
   const text = copy[language]
 
   return (
@@ -69,7 +69,7 @@ export function ContactSection() {
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a
-              href="/diagnosis"
+              href={localizedPath("/diagnosis")}
               className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 text-sm font-bold text-primary-foreground transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]"
             >
               {text.primaryCta}

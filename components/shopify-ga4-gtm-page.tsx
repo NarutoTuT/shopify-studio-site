@@ -287,15 +287,29 @@ const copy = {
 }
 
 const ga4GtmStructuredData = {
-  breadcrumbs: [
-    { name: "首页", url: "https://whaleleap.studio/" },
-    { name: "服务", url: "https://whaleleap.studio/#services" },
-    { name: "Shopify GA4 / GTM 数据追踪配置", url: "https://whaleleap.studio/services/shopify-ga4-gtm" },
-  ],
-  service: {
-    name: "Shopify GA4 / GTM 数据追踪配置",
-    description: "为 Shopify 店铺配置 GA4、GTM、电商事件、广告转化基础、Product Schema 和上线前追踪测试。",
-    url: "https://whaleleap.studio/services/shopify-ga4-gtm",
+  zh: {
+    breadcrumbs: [
+      { name: "首页", url: "https://whaleleap.studio/" },
+      { name: "服务", url: "https://whaleleap.studio/#services" },
+      { name: "Shopify GA4 / GTM 数据追踪配置", url: "https://whaleleap.studio/services/shopify-ga4-gtm" },
+    ],
+    service: {
+      name: "Shopify GA4 / GTM 数据追踪配置",
+      description: "为 Shopify 店铺配置 GA4、GTM、电商事件、广告转化基础、Product Schema 和上线前追踪测试。",
+      url: "https://whaleleap.studio/services/shopify-ga4-gtm",
+    },
+  },
+  en: {
+    breadcrumbs: [
+      { name: "Home", url: "https://whaleleap.studio/en" },
+      { name: "Services", url: "https://whaleleap.studio/en#services" },
+      { name: "Shopify GA4 / GTM Tracking Setup", url: "https://whaleleap.studio/en/services/shopify-ga4-gtm" },
+    ],
+    service: {
+      name: "Shopify GA4 / GTM Tracking Setup",
+      description: "GA4, GTM, ecommerce events, advertising conversions, product schema, and pre-launch tracking validation for Shopify stores.",
+      url: "https://whaleleap.studio/en/services/shopify-ga4-gtm",
+    },
   },
 }
 
@@ -309,8 +323,9 @@ const ga4GtmFaqMeta = [
 ]
 
 export function ShopifyGa4GtmPage() {
-  const { language } = useLanguage()
+  const { language, localizedPath } = useLanguage()
   const text = copy[language]
+  const structuredData = ga4GtmStructuredData[language]
   const [activeFaq, setActiveFaq] = useState(0)
   const activeFaqItem = text.faqs[activeFaq]
   const activeFaqMeta = ga4GtmFaqMeta[activeFaq]
@@ -318,9 +333,10 @@ export function ShopifyGa4GtmPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageStructuredData
-        breadcrumbs={ga4GtmStructuredData.breadcrumbs}
-        faqItems={copy.zh.faqs}
-        service={ga4GtmStructuredData.service}
+        breadcrumbs={structuredData.breadcrumbs}
+        faqItems={text.faqs}
+        service={structuredData.service}
+        language={language}
       />
       <Navbar />
       <main>
@@ -364,7 +380,7 @@ export function ShopifyGa4GtmPage() {
             <p className="sr-only sm:not-sr-only sm:mx-auto sm:mt-5 sm:max-w-3xl sm:text-base sm:leading-[1.7] sm:text-white/58 md:text-lg">{text.description}</p>
 
             <div className="mt-7 flex flex-col justify-center gap-3 sm:mt-9 sm:flex-row">
-              <a href="/diagnosis" className="pointer-events-auto inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-bold text-primary-foreground shadow-[0_0_30px_rgba(119,252,117,0.28)] transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black active:scale-[0.98] sm:px-10">
+              <a href={localizedPath("/diagnosis")} className="pointer-events-auto inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-bold text-primary-foreground shadow-[0_0_30px_rgba(119,252,117,0.28)] transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black active:scale-[0.98] sm:px-10">
                 {text.primaryCta}
                 <ArrowUpRight className="size-5" />
               </a>
@@ -766,7 +782,7 @@ export function ShopifyGa4GtmPage() {
             <div aria-hidden="true" className="absolute bottom-[22%] right-[2%] h-px w-[62%] rotate-[-8deg] animate-shimmer bg-[linear-gradient(90deg,transparent,rgba(34,211,238,0.55),rgba(119,252,117,0.8),transparent)] bg-[length:200%_100%] shadow-[0_0_25px_rgba(119,252,117,0.35)] motion-reduce:animate-none" />
             <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div><ShieldCheck className="mb-5 size-8 text-primary" /><h2 className="max-w-4xl text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.ctaTitle}</h2><p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.ctaText}</p></div>
-              <a href="/diagnosis" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary active:scale-[0.98]">{text.primaryCta}<ArrowUpRight className="size-4" /></a>
+              <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary active:scale-[0.98]">{text.primaryCta}<ArrowUpRight className="size-4" /></a>
             </div>
           </div>
         </section>
