@@ -187,7 +187,7 @@ export function ShowcaseSection() {
     <section id="work" ref={sectionRef} className="relative flex scroll-mt-24 flex-col justify-center overflow-hidden bg-background pb-[50px] pt-0 md:pb-[100px] md:pt-0">
       <div className="max-w-6xl mx-auto px-6 md:px-10 w-full">
         <div ref={titleRef} className="mb-8 text-center md:mb-16">
-          <p className="animate-line mb-4 text-sm font-semibold tracking-[0.2em] text-primary uppercase">{text.eyebrow}</p>
+          <p className="section-eyebrow animate-line mb-4 text-sm font-semibold uppercase text-primary">{text.eyebrow}</p>
           <h2 className="animate-line text-[clamp(1.8rem,3vw,2.5rem)] font-bold tracking-normal text-foreground leading-[1.12]">
             {text.title}
           </h2>
@@ -215,7 +215,7 @@ export function ShowcaseSection() {
                 className="basis-[92%] pl-3 sm:basis-[85%] md:basis-[75%] md:pl-8 lg:basis-[65%] xl:basis-[55%]"
               >
                 <div className="group">
-                  <article className="relative overflow-hidden rounded-3xl border border-border/40 bg-card shadow-2xl transition-all duration-700 hover:border-border/80 md:rounded-[2.5rem]">
+                  <article className="home-module-shell group relative transition-all duration-700 hover:-translate-y-1">
                     <div className="overflow-hidden">
                       <img
                         src={images[index]}

@@ -52,29 +52,29 @@ export function Navbar() {
   const pathname = usePathname()
   const { language, toggleLanguage, localizedPath } = useLanguage()
   const text = copy[language]
-  const isHome = pathname === "/"
+  const isHome = pathname === "/" || pathname === "/en"
   const homeHref = isHome ? "#" : localizedPath("/")
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/80 backdrop-blur-md border-b border-border/50" : ""}`}>
-      <div className="max-w-[1500px] mx-auto flex items-center justify-between px-6 lg:px-12 py-4">
-        <a href={homeHref} className="min-w-0" aria-label={language === "zh" ? "WhaleLeap Studio 首页" : "WhaleLeap Studio home"} onClick={() => setOpen(false)}>
+    <nav className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? "border-b border-border/50 bg-background/80 backdrop-blur-md" : ""}`}>
+      <div className="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-3.5 lg:px-12">
+        <a href={homeHref} className="inline-flex min-h-11 min-w-0 items-center" aria-label={language === "zh" ? "WhaleLeap Studio 首页" : "WhaleLeap Studio home"} onClick={() => setOpen(false)}>
           <BrandLogo />
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden items-center gap-8 md:flex">
           <div className="group relative">
             <button
               type="button"
-              className="inline-flex items-center gap-1 text-base text-muted-foreground transition-colors duration-200 hover:text-foreground"
+              className="inline-flex min-h-11 items-center gap-1 rounded-full px-2 text-base text-muted-foreground transition-colors duration-200 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
             >
               {text.servicesLabel}
               <ChevronDown className="size-4 transition-transform duration-200 group-hover:rotate-180" />
@@ -85,7 +85,7 @@ export function Navbar() {
                   <a
                     key={link.href}
                     href={localizedPath(link.href)}
-                    className="block rounded-xl px-4 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
+                    className="block min-h-11 rounded-xl px-4 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
                   >
                     {link.label}
                   </a>
@@ -97,34 +97,34 @@ export function Navbar() {
             <a
               key={link.href}
               href={localizedPath(link.href)}
-              className="text-base text-muted-foreground hover:text-foreground transition-colors duration-200 tracking-[-0.01em]"
+              className="inline-flex min-h-11 items-center rounded-full px-1 text-base tracking-[-0.01em] text-muted-foreground transition-colors duration-200 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
             >
               {link.label}
             </a>
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden items-center gap-3 md:flex">
           <button
             type="button"
             onClick={toggleLanguage}
-            className="inline-flex h-10 items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 text-sm font-medium text-foreground transition-colors hover:bg-white/10"
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 text-base font-medium text-foreground transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
           >
             {text.languageLabel}
           </button>
           <a
             href={localizedPath("/diagnosis")}
-            className="inline-flex bg-foreground text-background px-5 py-2.5 text-sm font-medium rounded-full hover:bg-foreground/90 transition-all duration-300 tracking-[-0.01em]"
+            className="inline-flex min-h-11 items-center rounded-full bg-foreground px-5 py-2.5 text-base font-medium tracking-[-0.01em] text-background transition-all duration-300 hover:bg-foreground/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
           >
             {text.cta}
           </a>
         </div>
 
-        <div className="md:hidden flex items-center gap-2">
+        <div className="flex items-center gap-2 md:hidden">
           <button
             type="button"
             onClick={toggleLanguage}
-            className="inline-flex h-10 items-center justify-center rounded-full border border-white/10 bg-white/5 px-3 text-sm font-medium text-foreground"
+            className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 px-3 text-base font-medium text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
           >
             {text.languageLabel}
           </button>
@@ -133,7 +133,7 @@ export function Navbar() {
             aria-label={open ? text.closeMenu : text.openMenu}
             aria-expanded={open}
             onClick={() => setOpen((value) => !value)}
-            className="inline-flex size-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-foreground"
+            className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -143,7 +143,7 @@ export function Navbar() {
       {open && (
         <div className="md:hidden border-t border-white/10 bg-background/95 backdrop-blur-xl px-6 pb-6">
           <div className="flex flex-col gap-1 pt-2">
-            <div className="px-2 pb-2 pt-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+            <div className="px-2 pb-2 pt-3 text-base font-semibold uppercase tracking-[0.08em] text-primary">
               {text.servicesLabel}
             </div>
             {text.serviceLinks.map((link) => (
@@ -151,7 +151,7 @@ export function Navbar() {
                 key={link.href}
                 href={localizedPath(link.href)}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-4 py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="min-h-11 rounded-xl px-4 py-3 text-base text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
               >
                 {link.label}
               </a>
@@ -162,7 +162,7 @@ export function Navbar() {
                 key={link.href}
                 href={localizedPath(link.href)}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-2 py-3 text-base text-muted-foreground transition-colors hover:text-foreground"
+                className="min-h-11 rounded-xl px-2 py-3 text-base text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
               >
                 {link.label}
               </a>
@@ -170,7 +170,7 @@ export function Navbar() {
             <a
               href={localizedPath("/diagnosis")}
               onClick={() => setOpen(false)}
-              className="mt-3 inline-flex justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground"
+              className="mt-3 inline-flex min-h-11 items-center justify-center rounded-full bg-primary px-5 py-3 text-base font-semibold text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
             >
               {text.cta}
             </a>

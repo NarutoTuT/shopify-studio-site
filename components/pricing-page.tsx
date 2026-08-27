@@ -138,7 +138,7 @@ const copy = {
     subtitle: "Pricing is structured by delivery depth, page complexity, and business systems, not by page count alone.",
     description:
       "The pricing below follows the current contract tiers. Final quotes depend on product category, SKU count, page structure, payments, logistics, analytics, and third-party integration scope.",
-    primaryCta: "Get Free Store Diagnosis",
+    primaryCta: "Request a Free Store Review",
     secondaryCta: "View Pricing Tiers",
     plansTitle: "Three Pricing Tiers",
     plansIntro: "Post-launch support starts at 2 months. More complex builds receive longer technical support after delivery.",
@@ -305,7 +305,7 @@ export function PricingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-background">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_76%_32%,rgba(34,211,238,0.11),transparent_30%),radial-gradient(ellipse_at_24%_60%,rgba(119,252,117,0.15),transparent_35%),linear-gradient(135deg,#020403,#07100b_52%,#010202)]" />
           <div aria-hidden="true" className="absolute -inset-x-[18%] -top-[22%] h-[118%] animate-cro-signal-orbit bg-[radial-gradient(ellipse_at_68%_36%,rgba(34,211,238,0.15),transparent_28%),radial-gradient(ellipse_at_32%_68%,rgba(119,252,117,0.2),transparent_31%)] opacity-85 blur-2xl will-change-transform motion-reduce:animate-none" />

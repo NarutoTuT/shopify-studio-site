@@ -60,7 +60,7 @@ const copy = {
     eyebrow: "GROWTH BLOCKERS",
     title: "Many Shopify stores do not lack traffic. They leak revenue across the buying path.",
     description:
-      "Chinese-founded global ecommerce brands often have products, content, and ad budgets, but the store does not guide visitors into trust, cart, and checkout.",
+      "Chinese-founded brands selling globally often have products, content, and ad budgets, but their stores still lose shoppers before trust, cart, and checkout.",
     problems: [
       {
         title: "Clicks do not become orders",
@@ -111,7 +111,7 @@ export function ProblemSection() {
 
       <div className="relative mx-auto max-w-[1500px]">
         <div className="mx-auto mb-10 max-w-5xl text-center md:mb-14">
-          <p className="mb-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+          <p className="section-eyebrow mb-4 inline-flex items-center gap-2 text-sm font-semibold uppercase text-primary">
             <span className="size-1.5 animate-pulse rounded-full bg-primary shadow-[0_0_14px_rgba(119,252,117,0.9)] motion-reduce:animate-none" />
             {text.eyebrow}
           </p>
@@ -121,6 +121,7 @@ export function ProblemSection() {
           <p className="mx-auto mt-6 max-w-3xl text-base leading-[1.7] text-muted-foreground md:text-lg">{text.description}</p>
         </div>
 
+        <div className="home-module-shell p-3 sm:p-5 lg:p-8">
         <div className="relative lg:hidden">
           <div aria-hidden="true" className="absolute bottom-7 left-[27px] top-7 w-px bg-gradient-to-b from-primary/75 via-[#ff9a3c]/55 to-[#ff654a]/20 shadow-[0_0_16px_rgba(119,252,117,0.3)]" />
 
@@ -177,7 +178,7 @@ export function ProblemSection() {
           </Accordion>
         </div>
 
-        <div className="relative hidden overflow-hidden rounded-[2rem] border border-white/10 bg-black/65 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_40px_100px_rgba(0,0,0,0.4)] backdrop-blur-2xl lg:block xl:p-8">
+        <div className="relative hidden lg:block">
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_36%,rgba(119,252,117,0.08),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.02),transparent)]" />
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-20 [background-image:radial-gradient(circle,rgba(119,252,117,0.28)_1px,transparent_1px)] [background-size:24px_24px] [mask-image:linear-gradient(to_bottom,black,transparent_76%)]" />
 
@@ -278,6 +279,7 @@ export function ProblemSection() {
               <ActiveStageIcon className="size-4 text-primary/55" />
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

@@ -186,7 +186,7 @@ export function PricingSection() {
   return (
     <section id="pricing" ref={sectionRef} className="relative py-20 md:py-24 px-6 md:px-10 bg-background min-h-screen flex flex-col justify-center overflow-hidden scroll-mt-24">
       <div ref={headerRef} className="max-w-[1500px] mx-auto mb-10 md:mb-14 text-center space-y-3">
-        <span className="text-primary text-xs font-semibold tracking-[0.2em] uppercase">{text.eyebrow}</span>
+        <span className="section-eyebrow text-xs font-semibold uppercase text-primary">{text.eyebrow}</span>
         <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold tracking-normal text-foreground leading-tight">
           {text.title}
         </h2>

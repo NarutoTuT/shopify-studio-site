@@ -24,6 +24,8 @@ import { PageStructuredData } from "@/components/page-structured-data"
 import { useLanguage } from "@/components/language-provider"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
+const SHOW_THEME_HERO_PREVIEW = false
+
 const copy = {
   zh: {
     eyebrow: "SHOPIFY THEME CUSTOMIZATION",
@@ -566,8 +568,8 @@ export function ShopifyThemeCustomizationPage() {
         language={language}
       />
       <Navbar />
-      <main>
-        <section className="relative min-h-[100svh] w-full overflow-hidden px-4 pb-12 pt-28 sm:px-6 md:px-10 md:pb-16 md:pt-32 lg:px-[clamp(2.5rem,3.25vw,5rem)] lg:pb-6 lg:pt-24">
+      <main id="main-content" tabIndex={-1}>
+        <section className="service-hero service-hero-home-layout relative w-full overflow-hidden px-4 pb-12 pt-28 sm:px-6 md:px-10 md:pb-16 md:pt-32 lg:px-[clamp(2.5rem,3.25vw,5rem)] lg:pb-8 lg:pt-24">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_48%,#0b110d_0%,#040605_48%,#010202_100%)]" />
           <div aria-hidden="true" className="absolute -inset-[42%] animate-theme-aurora-orbit rounded-[42%] bg-[conic-gradient(from_35deg,transparent_0_13%,rgba(34,211,238,0.28)_24%,transparent_38%,rgba(119,252,117,0.34)_51%,transparent_66%,rgba(34,211,238,0.2)_80%,transparent_94%)] opacity-80 blur-3xl will-change-transform motion-reduce:animate-none" />
           <div aria-hidden="true" className="absolute -inset-x-[18%] -top-[26%] h-[118%] animate-theme-aurora-drift bg-[radial-gradient(ellipse_at_62%_38%,rgba(119,252,117,0.27),transparent_27%),radial-gradient(ellipse_at_34%_68%,rgba(34,211,238,0.21),transparent_30%)] opacity-80 blur-2xl will-change-transform motion-reduce:animate-none" />
@@ -575,47 +577,51 @@ export function ShopifyThemeCustomizationPage() {
           <div aria-hidden="true" className="absolute -left-[30vw] inset-y-[7%] w-[28vw] animate-theme-liquid-compile bg-[linear-gradient(90deg,transparent,rgba(34,211,238,0.025)_18%,rgba(119,252,117,0.17)_50%,rgba(34,211,238,0.04)_72%,transparent)] mix-blend-screen will-change-transform motion-reduce:animate-none">
             <span className="absolute inset-y-0 left-1/2 w-px bg-gradient-to-b from-transparent via-primary/75 to-transparent shadow-[0_0_26px_rgba(119,252,117,0.55)]" />
           </div>
+          <div aria-hidden="true" className="theme-hero-bottom-glow motion-reduce:hidden" />
+          <div aria-hidden="true" className="theme-hero-code-stream theme-hero-code-stream-one motion-reduce:hidden" />
+          <div aria-hidden="true" className="theme-hero-code-stream theme-hero-code-stream-two motion-reduce:hidden" />
+          <div aria-hidden="true" className="theme-hero-code-stream theme-hero-code-stream-three motion-reduce:hidden" />
           <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,rgba(0,0,0,0.14)_62%,rgba(0,0,0,0.64)_100%)]" />
           <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/70 to-transparent" />
 
-          <div className="relative mx-auto grid w-full min-w-0 max-w-[1500px] gap-12 lg:min-h-[calc(100svh-7.5rem)] lg:grid-cols-[minmax(420px,0.78fr)_minmax(0,1.22fr)] lg:items-stretch lg:gap-[clamp(2rem,3vw,4.5rem)]">
-            <div className="relative z-20 min-w-0 lg:flex lg:flex-col lg:justify-center">
-              <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 font-mono text-base font-semibold uppercase tracking-[0.12em] text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_0_28px_rgba(119,252,117,0.05)]">
+          <div className="service-hero-layout relative mx-auto flex w-full min-w-0 max-w-[1500px] flex-col justify-center lg:min-h-[calc(100svh-7rem)]">
+            <div className="relative z-20 mx-auto min-w-0 max-w-6xl text-center">
+              <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary shadow-[0_0_28px_rgba(119,252,117,0.06)]">
                 <span className="size-1.5 animate-pulse rounded-full bg-primary shadow-[0_0_12px_rgba(119,252,117,0.9)] motion-reduce:animate-none" />
                 {text.eyebrow}
               </p>
-              <h1 className="max-w-[720px] text-balance text-[clamp(2.55rem,4.65vw,4.25rem)] font-bold leading-[1.02] tracking-[-0.025em]">{text.title}</h1>
-              <p className="mt-6 max-w-[660px] text-lg font-semibold leading-[1.55] text-foreground/88 md:text-xl">{text.subtitle}</p>
-              <p className="mt-4 hidden max-w-[650px] text-base leading-[1.75] text-muted-foreground sm:block">{text.description}</p>
+              <h1 className="mx-auto mb-6 max-w-[1050px] bg-gradient-to-r from-foreground via-primary to-cyan-200 bg-[length:200%_100%] bg-clip-text text-balance text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-normal text-transparent animate-shimmer motion-reduce:animate-none md:mb-8">{text.title}</h1>
+              <p className="mx-auto mb-6 max-w-[900px] text-[clamp(1rem,1.8vw,1.35rem)] font-semibold leading-[1.5] text-foreground/90 md:mb-8">{text.subtitle}</p>
+              <p className="service-hero-description mx-auto mb-8 hidden max-w-3xl text-base leading-[1.6] text-muted-foreground sm:block md:mb-12 md:text-lg">{text.description}</p>
 
-              <div className="mt-9 flex flex-col gap-3 lg:flex-row">
-                <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98]">
+              <div className="flex flex-col justify-center gap-4 sm:flex-row sm:gap-5">
+                <a href={localizedPath("/diagnosis")} className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-bold text-primary-foreground shadow-[0_0_24px_rgba(119,252,117,0.28)] transition-all duration-300 hover:brightness-110 active:scale-[0.97] md:px-10 md:py-5">
                   {text.primaryCta}
                   <ArrowUpRight className="size-4" />
                 </a>
-                <a href="#scope" className="inline-flex min-h-12 items-center justify-center rounded-full bg-white/[0.045] px-7 text-base font-semibold text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl transition-colors hover:bg-cyan-300/[0.08]">
+                <a href="#scope" className="inline-flex min-h-14 items-center justify-center rounded-full border border-foreground/20 bg-white/[0.025] px-8 py-4 text-base font-semibold text-foreground backdrop-blur-sm transition-all duration-300 hover:bg-foreground/5 active:scale-[0.97] md:px-10 md:py-5">
                   {text.secondaryCta}
                 </a>
               </div>
 
-              <div className="mt-8 grid grid-cols-2 gap-2 lg:grid-cols-3">
+              <div className="service-hero-proof mt-10 flex flex-wrap items-center justify-center gap-3 text-muted-foreground/75 md:mt-14">
                 {text.proof.map((item, index) => (
-                  <div key={item} className={"flex min-h-[64px] items-center gap-3 rounded-[1.2rem] bg-white/[0.04] px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.075)] backdrop-blur-xl " + (index === 2 ? "col-span-2 lg:col-span-1" : "")}>
+                  <div key={item} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-base font-medium">
                     <span className="font-mono text-base text-primary">0{index + 1}</span>
-                    <span className="text-base font-medium leading-snug text-foreground/76">{item}</span>
+                    <span>{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="relative min-h-[570px] min-w-0 px-1 py-5 sm:min-h-[680px] sm:px-3 sm:py-6 lg:h-full lg:min-h-0">
+            {SHOW_THEME_HERO_PREVIEW && <div className="relative mx-auto mt-7 min-h-[390px] w-full max-w-[1200px] min-w-0 overflow-hidden rounded-[2rem] bg-[linear-gradient(145deg,rgba(255,255,255,0.07),rgba(255,255,255,0.014))] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_40px_110px_rgba(0,0,0,0.44),0_0_70px_rgba(34,211,238,0.05)] backdrop-blur-2xl sm:min-h-[460px] sm:rounded-[2.6rem_1.5rem_3rem_1.8rem] sm:p-6 md:min-h-[500px]">
               <div className="relative z-20 flex flex-wrap items-center justify-between gap-2 px-1">
                 <div className="flex items-center gap-3"><span className="size-2 animate-pulse rounded-full bg-primary shadow-[0_0_14px_rgba(119,252,117,0.8)] motion-reduce:animate-none" /><span className="font-mono text-base uppercase text-primary">Theme preview / online</span></div>
                 <span className="hidden font-mono text-base uppercase text-white/35 sm:block">Original ↔ Custom</span>
               </div>
 
-              <div className="absolute inset-x-1 top-[14%] hidden md:block lg:top-[10%] sm:inset-x-3">
-                <div ref={comparisonCanvasRef} onPointerDown={(event) => { if (event.button !== 0) return; comparisonInputRef.current?.focus({ preventScroll: true }); event.currentTarget.setPointerCapture(event.pointerId); updateComparisonFromClientX(event.clientX) }} onPointerMove={(event) => { if (event.currentTarget.hasPointerCapture(event.pointerId)) updateComparisonFromClientX(event.clientX) }} onPointerUp={(event) => { updateComparisonFromClientX(event.clientX); if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId); setComparisonPosition(comparisonPendingRef.current) }} onPointerCancel={(event) => { if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId); setComparisonPosition(comparisonPendingRef.current) }} style={{ "--comparison-position": `${comparisonPosition}%`, touchAction: "none" } as CSSProperties} className="relative mx-auto aspect-[1.52/1] w-full cursor-ew-resize select-none overflow-hidden rounded-[1.35rem] bg-[#050706] shadow-[0_38px_100px_rgba(0,0,0,0.62),0_0_55px_rgba(119,252,117,0.08),inset_0_1px_0_rgba(255,255,255,0.13)]">
+              <div className="absolute inset-x-1 top-[14%] hidden md:block sm:inset-x-3">
+                <div ref={comparisonCanvasRef} onPointerDown={(event) => { if (event.button !== 0) return; comparisonInputRef.current?.focus({ preventScroll: true }); event.currentTarget.setPointerCapture(event.pointerId); updateComparisonFromClientX(event.clientX) }} onPointerMove={(event) => { if (event.currentTarget.hasPointerCapture(event.pointerId)) updateComparisonFromClientX(event.clientX) }} onPointerUp={(event) => { updateComparisonFromClientX(event.clientX); if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId); setComparisonPosition(comparisonPendingRef.current) }} onPointerCancel={(event) => { if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId); setComparisonPosition(comparisonPendingRef.current) }} style={{ "--comparison-position": `${comparisonPosition}%`, touchAction: "none" } as CSSProperties} className="relative mx-auto h-[390px] w-full max-w-[1050px] cursor-ew-resize select-none overflow-hidden rounded-[1.35rem] bg-[#050706] shadow-[0_28px_80px_rgba(0,0,0,0.58),0_0_48px_rgba(119,252,117,0.08),inset_0_1px_0_rgba(255,255,255,0.13)]">
                   <div className="flex h-10 items-center justify-between bg-black/45 px-4 font-mono text-base text-white/42 backdrop-blur-xl">
                     <span className="flex gap-2"><i className="size-2 rounded-full bg-white/35" /><i className="size-2 rounded-full bg-white/20" /><i className="size-2 rounded-full bg-white/12" /></span>
                     <span>product-template.liquid</span>
@@ -625,7 +631,7 @@ export function ShopifyThemeCustomizationPage() {
                     <span className="absolute left-5 top-4 z-10 font-mono text-base tracking-[0.12em] text-black/65">ORIGINAL</span>
                     <div className="grid h-full grid-cols-[1.08fr_0.92fr] pt-12 xl:grid-cols-[1.16fr_0.84fr]">
                       <div className="relative min-w-0 overflow-hidden bg-[#d7d9d5]">
-                        <Image src="/images/theme-customization/technical-jacket.jpg" alt="Original Shopify theme product presentation" fill priority sizes="(max-width: 1024px) 56vw, 34vw" className="object-cover object-center grayscale-[0.55] contrast-[0.88] brightness-110" />
+                        <Image src="/images/theme-customization/technical-jacket.jpg" alt="Original Shopify theme product presentation" fill loading="eager" fetchPriority="high" sizes="(max-width: 1024px) 56vw, 34vw" className="object-cover object-center grayscale-[0.55] contrast-[0.88] brightness-110" />
                         <div className="absolute inset-0 bg-white/20" />
                       </div>
                       <div className="flex flex-col justify-center px-5 lg:px-7">
@@ -641,7 +647,7 @@ export function ShopifyThemeCustomizationPage() {
                     <span className="absolute left-[calc(50%+1.25rem)] top-4 z-10 font-mono text-base tracking-[0.12em] text-primary">CUSTOM</span>
                     <div className="grid h-full grid-cols-[1.08fr_0.92fr] pt-12 xl:grid-cols-[1.16fr_0.84fr]">
                       <div className="relative min-w-0 overflow-hidden bg-[#080a09]">
-                        <Image src="/images/theme-customization/technical-jacket.jpg" alt="WhaleLeap customized Shopify product presentation" fill priority sizes="(max-width: 1024px) 56vw, 34vw" className="object-cover object-center contrast-110" />
+                        <Image src="/images/theme-customization/technical-jacket.jpg" alt="WhaleLeap customized Shopify product presentation" fill loading="eager" sizes="(max-width: 1024px) 56vw, 34vw" className="object-cover object-center contrast-110" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/10" />
                       </div>
                       <div className="relative flex flex-col justify-center bg-[radial-gradient(circle_at_0%_42%,rgba(119,252,117,0.09),transparent_45%)] px-5 lg:px-7">
@@ -660,23 +666,20 @@ export function ShopifyThemeCustomizationPage() {
                 </div>
               </div>
 
-              <div className="absolute inset-x-4 top-16 md:hidden">
+              <div className="absolute inset-x-1 top-12 md:hidden">
                 <div role="group" aria-label={language === "zh" ? "切换原始主题与定制主题" : "Switch original and custom theme"} className="mb-4 grid grid-cols-2 rounded-full bg-black/25 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                   {(["original", "custom"] as const).map((mode) => <button key={mode} type="button" aria-pressed={mobileHeroMode === mode} onClick={() => setMobileHeroMode(mode)} className={"min-h-12 rounded-full px-4 text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary motion-reduce:transition-none " + (mobileHeroMode === mode ? "bg-primary text-black shadow-[0_0_22px_rgba(119,252,117,0.18)]" : "text-white/55")}>{mode === "original" ? "Original" : "Custom"}</button>)}
                 </div>
-                <div className="relative mx-auto h-[440px] max-w-[320px] overflow-hidden rounded-[2.35rem] border-[5px] border-white/14 bg-[#050706] shadow-[0_34px_80px_rgba(0,0,0,0.65)]">
+                <div className="relative mx-auto h-[300px] max-w-[280px] overflow-hidden rounded-[2rem] border-[5px] border-white/14 bg-[#050706] shadow-[0_28px_68px_rgba(0,0,0,0.62)] sm:h-[340px] sm:max-w-[300px] sm:rounded-[2.35rem]">
                   <div className="absolute left-1/2 top-2 z-20 h-5 w-24 -translate-x-1/2 rounded-full bg-black" />
                   <div key={mobileHeroMode} className="grid h-full grid-rows-[1.1fr_0.9fr] animate-in fade-in duration-300 motion-reduce:animate-none">
-                    <div className={"relative overflow-hidden " + (mobileHeroMode === "original" ? "bg-[#e4e5e2]" : "bg-[#080a09]")}><Image src="/images/theme-customization/technical-jacket.jpg" alt="Mobile Shopify product page preview" fill priority sizes="350px" className={"object-cover object-center " + (mobileHeroMode === "original" ? "grayscale-[0.55] brightness-110" : "contrast-110")} /><div className={"absolute inset-0 " + (mobileHeroMode === "original" ? "bg-white/18" : "bg-gradient-to-t from-black/55 via-transparent to-black/10")} /></div>
-                    <div className={"flex flex-col justify-center p-5 " + (mobileHeroMode === "original" ? "bg-[#efefec] text-black" : "bg-[#050706] text-white")}><p className={"font-mono text-base uppercase " + (mobileHeroMode === "original" ? "text-black/50" : "text-primary")}>{mobileHeroMode === "original" ? "Original theme" : "WhaleLeap custom"}</p><strong className="mt-2 text-2xl leading-tight">Technical Shell Jacket</strong><p className="mt-2 text-base opacity-65">$298.00 · Waterproof</p><div className={"mt-5 flex min-h-12 items-center justify-center text-base font-bold " + (mobileHeroMode === "original" ? "bg-black/15 text-black/55" : "bg-primary text-black")}>Add to cart</div></div>
+                    <div className={"relative overflow-hidden " + (mobileHeroMode === "original" ? "bg-[#e4e5e2]" : "bg-[#080a09]")}><Image src="/images/theme-customization/technical-jacket.jpg" alt="Mobile Shopify product page preview" fill loading="eager" sizes="350px" className={"object-cover object-center " + (mobileHeroMode === "original" ? "grayscale-[0.55] brightness-110" : "contrast-110")} /><div className={"absolute inset-0 " + (mobileHeroMode === "original" ? "bg-white/18" : "bg-gradient-to-t from-black/55 via-transparent to-black/10")} /></div>
+                    <div className={"flex flex-col justify-center p-4 sm:p-5 " + (mobileHeroMode === "original" ? "bg-[#efefec] text-black" : "bg-[#050706] text-white")}><p className={"font-mono text-base uppercase " + (mobileHeroMode === "original" ? "text-black/50" : "text-primary")}>{mobileHeroMode === "original" ? "Original theme" : "WhaleLeap custom"}</p><strong className="mt-1 text-xl leading-tight sm:mt-2 sm:text-2xl">Technical Shell Jacket</strong><p className="mt-1 text-base opacity-65 sm:mt-2">$298.00 · Waterproof</p><div className={"mt-3 flex min-h-11 items-center justify-center text-base font-bold sm:mt-5 sm:min-h-12 " + (mobileHeroMode === "original" ? "bg-black/15 text-black/55" : "bg-primary text-black")}>Add to cart</div></div>
                   </div>
                 </div>
               </div>
 
-              <div className="absolute inset-x-6 bottom-6 hidden items-center justify-center gap-2 md:flex">
-                {["Section Ready", "Responsive Ready", "App Dependency Reduced"].map((label, index) => <span key={label} className={"min-h-10 items-center gap-2 rounded-full bg-white/[0.055] px-4 font-mono text-base text-white/55 shadow-[inset_0_1px_0_rgba(255,255,255,0.09)] backdrop-blur-2xl " + (index === 2 ? "hidden xl:inline-flex" : "inline-flex")}><i className="size-2 rounded-full bg-primary shadow-[0_0_10px_rgba(183,255,42,0.65)]" />{label}</span>)}
-              </div>
-            </div>
+            </div>}
           </div>
         </section>
 
@@ -1130,7 +1133,7 @@ export function ShopifyThemeCustomizationPage() {
                     const meta = relatedRouteMeta[index]
                     const Icon = meta.icon
                     return (
-                      <a key={link.href} href={link.href} className="group relative flex min-h-[220px] min-w-0 flex-col justify-between rounded-[1.45rem] bg-transparent px-4 py-6 transition-all duration-300 hover:bg-white/[0.055] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary motion-reduce:transition-none sm:px-6 lg:min-h-[240px] lg:px-8">
+                      <a key={link.href} href={localizedPath(link.href)} className="group relative flex min-h-[220px] min-w-0 flex-col justify-between rounded-[1.45rem] bg-transparent px-4 py-6 transition-all duration-300 hover:bg-white/[0.055] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary motion-reduce:transition-none sm:px-6 lg:min-h-[240px] lg:px-8">
                         <span aria-hidden="true" className={"absolute inset-0 rounded-[1.45rem] opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100 motion-reduce:transition-none " + (index === 0 ? "bg-[radial-gradient(circle_at_12%_50%,rgba(119,252,117,0.12),transparent_36%)]" : "bg-[radial-gradient(circle_at_12%_50%,rgba(34,211,238,0.11),transparent_36%)]")} />
                         <span aria-hidden="true" className={"absolute -left-10 top-1/2 hidden h-px w-14 origin-right scale-x-50 transition-transform duration-300 group-hover:scale-x-100 group-focus-visible:scale-x-100 motion-reduce:transition-none lg:block " + (index === 0 ? "bg-primary shadow-[0_0_15px_rgba(119,252,117,0.45)]" : "bg-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.4)]")} />
                         <div className="relative z-10 flex items-start gap-4">

@@ -12,5 +12,24 @@ import { SolutionSection } from "@/components/solution-section"
 import { TrustSection } from "@/components/trust-section"
 
 export default function EnglishHome() {
-  return <LanguageProvider initialLanguage="en"><SmoothScrollProvider><div className="min-h-screen bg-background"><MouseFollowLight /><Navbar /><HeroSection /><ProblemSection /><SolutionSection /><ServicesSection /><ShowcaseSection /><ProcessSection /><TrustSection /><ContactSection /></div></SmoothScrollProvider></LanguageProvider>
+  return (
+    <LanguageProvider initialLanguage="en">
+      <SmoothScrollProvider>
+        <div className="min-h-screen bg-background">
+          <MouseFollowLight />
+          <Navbar />
+          <main id="main-content" tabIndex={-1}>
+            <HeroSection />
+            <ProblemSection />
+            <SolutionSection />
+            <ServicesSection />
+            <ShowcaseSection />
+            <ProcessSection />
+            <TrustSection />
+            <ContactSection />
+          </main>
+        </div>
+      </SmoothScrollProvider>
+    </LanguageProvider>
+  )
 }

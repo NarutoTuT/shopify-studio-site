@@ -211,13 +211,13 @@ const copy = {
     scopeIntro: "Start with parts that directly affect purchase decisions, then move into finer iteration.",
     scopes: [
       {
-        title: "Homepage first viewport",
+        title: "Homepage above the fold",
         text: "Check whether visitors quickly understand brand, product, core value, and next action.",
-        outcome: "Clarify the first viewport",
+        outcome: "Clarify the first screen",
         signal: "Visitors reach the homepage but do not move into products quickly, or the next action is unclear.",
         checks: ["Whether brand and product value are understood within seconds", "Whether visual, value proposition, and CTA lead to one goal"],
-        actions: ["Compress first-view information and sharpen the core value", "Reorder the primary CTA, product entry, and trust cues"],
-        deliverable: "First-viewport issue list + information priority + structure recommendation",
+        actions: ["Compress above-the-fold information and sharpen the core value", "Reorder the primary CTA, product entry, and trust cues"],
+        deliverable: "Above-the-fold issue list + information priority + structure recommendation",
         icon: Target,
       },
       {
@@ -262,7 +262,7 @@ const copy = {
       },
       {
         title: "Mobile experience",
-        text: "Review first viewport height, button placement, image loading, long copy, sticky buy buttons, and interaction friction.",
+        text: "Review above-the-fold height, button placement, image loading, long copy, sticky buy buttons, and interaction friction.",
         outcome: "Shorten the mobile path",
         signal: "Mobile traffic is high, but long pages, hidden actions, or weak interaction feedback slow visitors down.",
         checks: ["First-view height, copy density, and one-hand access to buy actions", "Image loading, variant selection, and sticky-action stability"],
@@ -392,6 +392,8 @@ const funnelStages = [
   { label: "Purchase", value: "3.2%", total: "3,867", icon: CheckCircle2 },
 ]
 
+const signalStageIcons = [Target, PackageCheck, CreditCard, ShieldCheck, Gauge]
+
 const xrayStages = [
   { zh: "流量", en: "Traffic", icon: Target },
   { zh: "首页", en: "Homepage", icon: MousePointerClick },
@@ -492,6 +494,27 @@ export function ShopifyConversionOptimizationPage() {
   const activeFaqMeta = faqDecisionMeta[activeFaq]
   const ActiveScopeIcon = activeScopeItem.icon
   const activeXrayStage = scopeStageMap[activeScope]
+  const heroFunnelLabels = language === "zh" ? ["访问", "商品浏览", "加入购物车", "发起结账", "完成购买"] : funnelStages.map((stage) => stage.label)
+  const signalTitles = language === "zh"
+    ? ["广告点击不成交", "浏览高但加购低", "加购后继续流失", "卖点与信任不清楚", "无法判断问题来源"]
+    : ["Clicks do not convert", "Views without cart intent", "Drop-off after add to cart", "Value and trust stay unclear", "The real bottleneck is unknown"]
+  const heroUi = language === "zh"
+    ? {
+        path: "成交路径扫描",
+        live: "实时诊断",
+        sessions: "120,842 次访问",
+        signalEyebrow: "转化问题信号",
+        signalStage: "Conversion signal radar",
+        signalStatus: "5 个诊断入口",
+      }
+    : {
+        path: "Conversion path scan",
+        live: "Live diagnosis",
+        sessions: "120,842 sessions",
+        signalEyebrow: "Conversion problem signals",
+        signalStage: "Conversion signal radar",
+        signalStatus: "5 diagnostic entry points",
+      }
   const mobilePathRef = useRef<HTMLDivElement>(null)
   const stageStatus = (index: number) => {
     if (index < activeXrayStage) return language === "zh" ? "已检查" : "Checked"
@@ -520,90 +543,161 @@ export function ShopifyConversionOptimizationPage() {
         language={language}
       />
       <Navbar />
-      <main>
-        <section className="relative min-h-[100svh] overflow-hidden px-4 pb-10 pt-28 sm:px-6 md:px-10 md:pb-12 md:pt-32 lg:pb-6 lg:pt-24">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_76%_30%,rgba(34,211,238,0.1),transparent_30%),radial-gradient(ellipse_at_24%_56%,rgba(119,252,117,0.14),transparent_34%),linear-gradient(135deg,#020403,#07100b_52%,#010202)]" />
-          <div aria-hidden="true" className="absolute -inset-x-[20%] -top-[24%] h-[120%] animate-cro-signal-orbit bg-[radial-gradient(ellipse_at_66%_38%,rgba(34,211,238,0.14),transparent_28%),radial-gradient(ellipse_at_34%_64%,rgba(119,252,117,0.18),transparent_30%)] opacity-75 blur-2xl will-change-transform motion-reduce:animate-none" />
-          <div aria-hidden="true" className="absolute inset-0 opacity-[0.13] [background-image:radial-gradient(circle,rgba(119,252,117,0.32)_1px,transparent_1.4px)] [background-size:42px_42px] [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]" />
-          <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_24%,rgba(0,0,0,0.12)_62%,rgba(0,0,0,0.62)_100%)]" />
-          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/75 to-transparent" />
+      <main id="main-content" tabIndex={-1}>
+        <section className="service-hero relative flex items-center overflow-hidden px-4 pb-10 pt-28 sm:px-6 md:px-10 md:pb-14 md:pt-32 lg:pb-8 lg:pt-24">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_28%,rgba(119,252,117,0.17),transparent_28%),radial-gradient(ellipse_at_78%_58%,rgba(34,211,238,0.14),transparent_31%),radial-gradient(ellipse_at_22%_70%,rgba(119,252,117,0.11),transparent_30%),radial-gradient(ellipse_at_70%_82%,rgba(255,118,87,0.09),transparent_23%),linear-gradient(145deg,#020403,#07100b_50%,#010202)]" />
+          <div aria-hidden="true" className="absolute -inset-x-[18%] -top-[20%] h-[116%] animate-cro-signal-orbit bg-[radial-gradient(ellipse_at_66%_38%,rgba(34,211,238,0.17),transparent_27%),radial-gradient(ellipse_at_34%_64%,rgba(119,252,117,0.21),transparent_29%)] opacity-90 blur-2xl will-change-transform motion-reduce:animate-none" />
+          <div aria-hidden="true" className="absolute inset-0 opacity-[0.16] [background-image:radial-gradient(circle,rgba(119,252,117,0.36)_1px,transparent_1.4px)] [background-size:42px_42px] [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]" />
+          <div aria-hidden="true" className="cro-hero-stream cro-hero-stream-one motion-reduce:hidden" />
+          <div aria-hidden="true" className="cro-hero-stream cro-hero-stream-two motion-reduce:hidden" />
+          <div aria-hidden="true" className="cro-hero-stream cro-hero-stream-three motion-reduce:hidden" />
+          <div aria-hidden="true" className="cro-hero-stream cro-hero-leak-stream motion-reduce:hidden" />
+          <div aria-hidden="true" className="cro-hero-bottom-glow motion-reduce:hidden" />
+          <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_25%,rgba(0,0,0,0.08)_61%,rgba(0,0,0,0.5)_100%)]" />
+          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/80 to-transparent" />
 
-          <div className="relative mx-auto flex w-full max-w-[1500px] flex-col lg:min-h-[calc(100svh-7.5rem)]">
-            <div className="grid flex-1 gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-center lg:gap-6 xl:gap-10">
-              <div className="min-w-0">
-                <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 font-mono text-base font-semibold uppercase tracking-[0.12em] text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.11),0_0_28px_rgba(119,252,117,0.06)]">
+          <div className="relative mx-auto flex w-full max-w-[1500px] flex-col justify-center lg:min-h-[calc(100svh-7rem)]">
+            <div className="w-full">
+              <div className="mx-auto min-w-0 max-w-[1100px] text-center">
+                <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.11),0_0_28px_rgba(119,252,117,0.08)]">
                   <span className="size-1.5 animate-pulse rounded-full bg-primary shadow-[0_0_12px_rgba(119,252,117,0.9)] motion-reduce:animate-none" />
                   {text.eyebrow}
                 </p>
-                <h1 className="max-w-5xl text-balance text-[clamp(2.55rem,4.65vw,4.25rem)] font-bold leading-[1.02] tracking-[-0.025em]">{text.title}</h1>
-                <p className="mt-6 max-w-3xl text-lg font-semibold leading-[1.55] text-foreground/90 md:text-xl">{text.subtitle}</p>
-                <p className="mt-4 hidden max-w-3xl text-base leading-[1.75] text-muted-foreground sm:block">{text.description}</p>
+                <h1 className="mx-auto max-w-[1050px] bg-gradient-to-r from-foreground via-primary to-foreground bg-[length:200%_100%] bg-clip-text text-balance text-[clamp(2.55rem,5vw,4.5rem)] font-bold leading-[1.04] tracking-normal text-transparent animate-shimmer motion-reduce:animate-none">{text.title}</h1>
+                <p className="mx-auto mt-4 max-w-[900px] text-lg font-semibold leading-[1.55] text-foreground/90 md:text-xl">{text.subtitle}</p>
+                <p className="service-hero-description mx-auto mt-4 hidden max-w-[820px] text-base leading-[1.7] text-muted-foreground sm:block">{text.description}</p>
 
-                <div className="mt-9 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-                  <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98]">
+                <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+                  <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_30px_rgba(119,252,117,0.25)] transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary active:scale-[0.98]">
                     {text.primaryCta}<ArrowUpRight className="size-4" />
                   </a>
-                  <a href="#scope" className="inline-flex min-h-12 items-center justify-center rounded-full bg-white/[0.045] px-7 text-base font-semibold text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.09)] backdrop-blur-xl transition-colors hover:bg-cyan-300/[0.08]">{text.secondaryCta}</a>
+                  <a href="#scope" className="inline-flex min-h-12 items-center justify-center rounded-full bg-white/[0.05] px-7 text-base font-semibold text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl transition-colors hover:bg-cyan-300/[0.09] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">{text.secondaryCta}</a>
                 </div>
 
-                <div className="mt-8 grid grid-cols-2 gap-2 xl:grid-cols-3">
+                <div className="service-hero-proof mt-5 flex flex-wrap justify-center gap-x-6 gap-y-3">
                   {text.proof.map((item, index) => (
-                    <div key={item} className={"flex min-h-[64px] items-center gap-3 rounded-[1.2rem] bg-white/[0.04] px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.075)] backdrop-blur-xl " + (index === 2 ? "col-span-2 xl:col-span-1" : "")}>
-                      <span className="font-mono text-base text-primary">0{index + 1}</span>
-                      <span className="text-base font-medium leading-snug text-foreground/76">{item}</span>
-                    </div>
+                    <span key={item} className="inline-flex items-center gap-2 text-base font-medium text-foreground/68">
+                      <span className="font-mono text-primary">0{index + 1}</span>{item}
+                    </span>
                   ))}
                 </div>
               </div>
 
-              <div className="relative min-w-0 overflow-hidden rounded-[2rem] bg-white/[0.035] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_38px_100px_rgba(0,0,0,0.36)] backdrop-blur-2xl sm:rounded-[2.6rem_1.5rem_3rem_1.8rem] sm:p-6">
-                <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_70%_36%,rgba(34,211,238,0.08),transparent_28%),radial-gradient(circle_at_28%_72%,rgba(119,252,117,0.08),transparent_30%)]" />
-                <div className="relative flex flex-wrap items-center justify-between gap-3 px-1 font-mono text-base uppercase tracking-[0.06em]">
-                  <span className="flex items-center gap-2 text-cyan-300"><Gauge className="size-5" />Conversion path / live</span>
-                  <span className="flex items-center gap-2 text-white/42"><span className="size-2 animate-pulse rounded-full bg-primary shadow-[0_0_12px_rgba(119,252,117,0.85)] motion-reduce:animate-none" />120,842 sessions</span>
+              <div className="relative mx-auto mt-7 min-w-0 max-w-[1200px] overflow-hidden rounded-[2rem] bg-[linear-gradient(145deg,rgba(255,255,255,0.07),rgba(255,255,255,0.018))] p-4 text-left shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_42px_110px_rgba(0,0,0,0.4),0_0_70px_rgba(119,252,117,0.055)] backdrop-blur-2xl sm:rounded-[2.6rem_1.5rem_3rem_1.8rem] sm:p-6">
+                <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_76%_26%,rgba(34,211,238,0.12),transparent_26%),radial-gradient(circle_at_24%_78%,rgba(119,252,117,0.1),transparent_30%),radial-gradient(circle_at_75%_76%,rgba(255,118,87,0.08),transparent_24%)]" />
+                <div className="relative flex flex-wrap items-center justify-between gap-3 font-mono text-base uppercase tracking-[0.02em]">
+                  <span className="flex items-center gap-2 text-cyan-300"><Gauge className="size-5" />{heroUi.path}</span>
+                  <span className="flex items-center gap-2 text-white/48"><span className="size-2 animate-pulse rounded-full bg-primary shadow-[0_0_12px_rgba(119,252,117,0.9)] motion-reduce:animate-none" />{heroUi.live}</span>
                 </div>
 
-                <div className="relative -mx-4 mt-8 overflow-x-auto px-[calc(50%-68px)] pb-3 [scrollbar-width:none] sm:-mx-6 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden">
-                  <div className="relative grid min-w-[720px] snap-x snap-mandatory grid-cols-5 md:min-w-0">
-                    <div aria-hidden="true" className="absolute left-[10%] right-[10%] top-7 h-px overflow-hidden bg-white/14">
-                      <span className="block h-full w-[18%] animate-cro-data-flow bg-[linear-gradient(90deg,transparent,rgba(34,211,238,0.95),rgba(119,252,117,1),transparent)] shadow-[0_0_16px_rgba(119,252,117,0.55)] will-change-transform motion-reduce:animate-none" />
-                    </div>
+                <div className="relative mt-4 flex items-center justify-between gap-3 rounded-full bg-black/25 px-4 py-2.5 font-mono text-base text-white/48 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
+                  <span className="whitespace-nowrap">{heroUi.sessions}</span>
+                  <span className="whitespace-nowrap text-primary"><span className="sm:hidden">LIVE</span><span className="hidden sm:inline">03:42 / scan active</span></span>
+                </div>
+
+                <div className="relative mt-6 hidden md:grid md:grid-cols-5">
+                  <div aria-hidden="true" className="absolute left-[10%] right-[10%] top-8 h-px overflow-hidden bg-white/14">
+                    <span className="block h-full w-[18%] animate-cro-data-flow bg-[linear-gradient(90deg,transparent,rgba(34,211,238,0.95),rgba(119,252,117,1),transparent)] shadow-[0_0_18px_rgba(119,252,117,0.65)] will-change-transform motion-reduce:animate-none" />
+                  </div>
+                  {funnelStages.map((stage, index) => {
+                    const Icon = stage.icon
+                    return (
+                      <div key={stage.label} className="relative min-w-0 px-1 text-center">
+                        <span className={"relative z-10 mx-auto flex size-16 items-center justify-center rounded-full bg-[#050706] shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_0_28px_rgba(119,252,117,0.16)] " + (stage.warning ? "cro-leak-node text-[#ff9a73] ring-1 ring-[#ff7657]/75" : "text-primary ring-1 ring-primary/35")}><Icon className="size-6" /></span>
+                        <span className="mt-4 block font-mono text-base uppercase leading-[1.2] tracking-[0.02em] text-white/55">0{index + 1}</span>
+                        <span className="mt-1 block min-h-10 text-base font-medium leading-tight text-white/74">{heroFunnelLabels[index]}</span>
+                        <strong className={"mt-2 block text-[clamp(1.45rem,2vw,2rem)] leading-none tracking-[-0.03em] " + (stage.warning ? "text-[#ff8463]" : "text-primary")}>{stage.value}</strong>
+                        <span className="mt-1 block font-mono text-base leading-tight text-white/36">{stage.total}</span>
+                        {stage.warning && <span className="mt-3 inline-flex rounded-full bg-[#ff7657]/12 px-2.5 py-1 font-mono text-base uppercase tracking-[0.02em] text-[#ffad8f]">Leak</span>}
+                      </div>
+                    )
+                  })}
+                </div>
+
+                <div className="relative mt-6 md:hidden">
+                  <div aria-hidden="true" className="absolute bottom-8 left-[27px] top-8 w-px overflow-hidden bg-white/14">
+                    <span className="block h-[22%] w-full animate-cro-data-flow-y bg-[linear-gradient(180deg,transparent,rgba(34,211,238,0.95),rgba(119,252,117,1),transparent)] shadow-[0_0_14px_rgba(119,252,117,0.6)] motion-reduce:animate-none" />
+                  </div>
+                  <div className="space-y-2">
                     {funnelStages.map((stage, index) => {
                       const Icon = stage.icon
                       return (
-                        <div key={stage.label} className="relative snap-center px-1 text-center">
-                          <span className={"relative z-10 mx-auto flex size-14 items-center justify-center rounded-full bg-[#050706] shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_0_26px_rgba(119,252,117,0.15)] " + (stage.warning ? "text-[#ff8c68] ring-1 ring-[#ff7657]/65" : "text-primary ring-1 ring-primary/35")}><Icon className="size-6" /></span>
-                          <span className="mt-3 block font-mono text-base uppercase leading-[1.25] tracking-[-0.04em] text-white/55">0{index + 1}·{stage.label}</span>
-                          <strong className={"mt-1 block text-2xl leading-none tracking-[-0.03em] " + (stage.warning ? "text-[#ff7657]" : "text-primary")}>{stage.value}</strong>
-                          <span className="mt-0.5 block text-base leading-tight tracking-[-0.02em] text-white/35">{stage.total}</span>
+                        <div key={stage.label} className={"relative grid min-h-[60px] grid-cols-[50px_minmax(0,1fr)_auto] items-center gap-2 rounded-[1.1rem] px-2 py-1.5 " + (stage.warning ? "bg-[#ff7657]/[0.09] shadow-[inset_0_1px_0_rgba(255,148,112,0.17)]" : "bg-black/10")}>
+                          <span className={"relative z-10 flex size-10 items-center justify-center rounded-full bg-[#050706] " + (stage.warning ? "cro-leak-node text-[#ff9a73] ring-1 ring-[#ff7657]/75" : "text-primary ring-1 ring-primary/30")}><Icon className="size-5" /></span>
+                          <span className="min-w-0"><span className="block font-mono text-base leading-none tracking-[0.02em] text-white/42">0{index + 1}</span><strong className="mt-1 block text-base leading-tight text-white/78">{heroFunnelLabels[index]}{stage.warning && <span className="ml-2 font-mono text-base font-normal text-[#ffad8f]">LEAK</span>}</strong></span>
+                          <span className="text-right"><strong className={"block text-xl leading-none " + (stage.warning ? "text-[#ff8463]" : "text-primary")}>{stage.value}</strong><span className="mt-1 block font-mono text-base leading-none text-white/35">{stage.total}</span></span>
                         </div>
                       )
                     })}
                   </div>
                 </div>
 
-                <div className="relative mt-5 flex flex-col gap-3 rounded-[1.35rem] bg-[#ff7657]/[0.08] px-5 py-4 shadow-[inset_0_1px_0_rgba(255,148,112,0.18)] sm:flex-row sm:items-center sm:justify-between">
-                  <span className="flex items-center gap-3 font-mono text-base uppercase tracking-[0.04em] text-[#ffad4a]"><Gauge className="size-5" />Conversion leak / checkout</span>
-                  <span className="text-base leading-relaxed text-white/58">Checkout drop-off requires priority diagnosis</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8 lg:mt-6">
-              <p className="mb-3 px-1 font-mono text-base uppercase tracking-[0.08em] text-primary/70">{text.fitTitle} / diagnostic signals</p>
-              <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-[calc(50%-120px)] pb-2 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-2 sm:px-0 lg:grid-cols-5 [&::-webkit-scrollbar]:hidden">
-                {text.fitItems.map((item, index) => (
-                  <div key={item} className="flex min-h-[104px] w-[240px] shrink-0 snap-center items-start gap-3 rounded-[1.3rem] bg-white/[0.04] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.075)] backdrop-blur-xl sm:w-auto">
-                    <span className="font-mono text-base text-primary">0{index + 1}</span>
-                    <span className="text-base leading-[1.55] text-white/58">{item}</span>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
         </section>
 
-        <section id="scope" className="scroll-mt-24 bg-black px-4 py-[50px] sm:px-6 md:px-10 md:py-[100px]">
+        <section aria-labelledby="conversion-signals-title" className="relative overflow-hidden bg-black px-4 py-[50px] sm:px-6 md:px-10 md:py-[100px]">
+          <div aria-hidden="true" className="cro-signal-bridge motion-reduce:animate-none" />
+          <div className="relative mx-auto max-w-[1500px]">
+            <div className="mb-8 text-center">
+              <p className="font-mono text-base uppercase tracking-[0.02em] text-primary/75">{heroUi.signalEyebrow}</p>
+              <h2 id="conversion-signals-title" className="mt-3 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight">{text.fitTitle}</h2>
+            </div>
+            <div className="relative overflow-hidden rounded-[2rem] bg-[linear-gradient(145deg,rgba(255,255,255,0.072),rgba(255,255,255,0.018))] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_34px_100px_rgba(0,0,0,0.36),0_0_72px_rgba(119,252,117,0.045)] backdrop-blur-2xl sm:p-7 lg:p-8">
+              <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_34%,rgba(119,252,117,0.1),transparent_28%),radial-gradient(circle_at_72%_62%,rgba(34,211,238,0.08),transparent_30%),radial-gradient(circle_at_55%_86%,rgba(255,118,87,0.055),transparent_24%)]" />
+
+              <div className="relative flex flex-wrap items-center justify-between gap-3 font-mono text-base uppercase tracking-[0.02em]">
+                <span className="flex items-center gap-2 text-cyan-300"><Gauge className="size-5" />{heroUi.signalStage}</span>
+                <span className="flex items-center gap-2 text-white/46"><span className="size-2 rounded-full bg-primary shadow-[0_0_12px_rgba(119,252,117,0.85)]" />{heroUi.signalStatus}</span>
+              </div>
+
+              <div className="relative mt-9 hidden lg:block">
+                <div aria-hidden="true" className="absolute left-[9%] right-[9%] top-8 h-px overflow-hidden bg-white/14">
+                  <span className="block h-full w-[18%] animate-cro-data-flow bg-[linear-gradient(90deg,transparent,rgba(34,211,238,0.95),rgba(119,252,117,1),transparent)] shadow-[0_0_18px_rgba(119,252,117,0.6)] motion-reduce:animate-none" />
+                </div>
+                <div className="relative grid grid-cols-5 gap-5">
+                  {text.fitItems.map((item, index) => {
+                    const Icon = signalStageIcons[index]
+                    const warning = index === 2
+                    return (
+                      <div key={item} className="min-w-0 text-center">
+                        <span className={"cro-signal-node relative z-10 mx-auto flex size-16 items-center justify-center rounded-full bg-[#050706] shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_0_26px_rgba(119,252,117,0.14)] " + (warning ? "text-[#ff9874] ring-1 ring-[#ff7657]/70" : "text-primary ring-1 ring-primary/35")}><Icon className="size-6" /></span>
+                        <span className="mt-4 block font-mono text-base tracking-[0.02em] text-primary/72">0{index + 1}</span>
+                        <h3 className={"mt-2 text-lg font-bold leading-tight " + (warning ? "text-[#ff9874]" : "text-white/88")}>{signalTitles[index]}</h3>
+                        <p className="mx-auto mt-3 max-w-[230px] text-base leading-[1.6] text-white/55">{item}</p>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+
+              <div className="relative mt-7 lg:hidden">
+                <div aria-hidden="true" className="absolute bottom-8 left-[25px] top-8 w-px overflow-hidden bg-white/14">
+                  <span className="block h-[24%] w-full animate-cro-data-flow-y bg-[linear-gradient(180deg,transparent,rgba(34,211,238,0.95),rgba(119,252,117,1),transparent)] shadow-[0_0_14px_rgba(119,252,117,0.58)] motion-reduce:animate-none" />
+                </div>
+                <div className="space-y-3">
+                  {text.fitItems.map((item, index) => {
+                    const Icon = signalStageIcons[index]
+                    const warning = index === 2
+                    return (
+                      <div key={item} className="relative grid grid-cols-[50px_minmax(0,1fr)] gap-3 py-2">
+                        <span className={"cro-signal-node relative z-10 flex size-11 items-center justify-center rounded-full bg-[#050706] " + (warning ? "text-[#ff9874] ring-1 ring-[#ff7657]/70" : "text-primary ring-1 ring-primary/30")}><Icon className="size-5" /></span>
+                        <div className="min-w-0 pb-3">
+                          <span className="font-mono text-base tracking-[0.02em] text-primary/68">0{index + 1}</span>
+                          <h3 className={"mt-1 text-lg font-bold leading-tight " + (warning ? "text-[#ff9874]" : "text-white/88")}>{signalTitles[index]}</h3>
+                          <p className="mt-2 text-base leading-[1.6] text-white/56">{item}</p>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="scope" className="scroll-mt-24 bg-black px-4 pb-[50px] pt-0 sm:px-6 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto max-w-[1500px]">
             <div className="mx-auto mb-8 max-w-3xl text-center">
               <p className="mb-4 font-mono text-base uppercase tracking-[0.1em] text-primary">Bottleneck radar</p>
@@ -1116,7 +1210,7 @@ export function ShopifyConversionOptimizationPage() {
                     const meta = conversionRelatedRouteMeta[index]
                     const Icon = meta.icon
                     return (
-                      <a key={link.href} href={link.href} className="group relative flex min-h-[220px] min-w-0 flex-col justify-between rounded-[1.45rem] bg-transparent px-4 py-6 transition-all duration-300 hover:bg-white/[0.055] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary motion-reduce:transition-none sm:px-6 lg:min-h-[240px] lg:px-8">
+                      <a key={link.href} href={localizedPath(link.href)} className="group relative flex min-h-[220px] min-w-0 flex-col justify-between rounded-[1.45rem] bg-transparent px-4 py-6 transition-all duration-300 hover:bg-white/[0.055] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary motion-reduce:transition-none sm:px-6 lg:min-h-[240px] lg:px-8">
                         <span aria-hidden="true" className={"absolute inset-0 rounded-[1.45rem] opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100 motion-reduce:transition-none " + (index === 0 ? "bg-[radial-gradient(circle_at_12%_50%,rgba(119,252,117,0.12),transparent_36%)]" : "bg-[radial-gradient(circle_at_12%_50%,rgba(34,211,238,0.11),transparent_36%)]")} />
                         <span aria-hidden="true" className={"absolute -left-10 top-1/2 hidden h-px w-14 origin-right scale-x-50 transition-transform duration-300 group-hover:scale-x-100 group-focus-visible:scale-x-100 motion-reduce:transition-none lg:block " + (index === 0 ? "bg-primary shadow-[0_0_15px_rgba(119,252,117,0.45)]" : "bg-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.4)]")} />
                         <div className="relative z-10 flex items-start gap-4">

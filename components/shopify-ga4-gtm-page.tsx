@@ -339,8 +339,8 @@ export function ShopifyGa4GtmPage() {
         language={language}
       />
       <Navbar />
-      <main>
-        <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-[#020403] px-4 pb-10 pt-24 sm:px-6 sm:pb-16 sm:pt-28 md:px-10 md:pb-20 md:pt-32">
+      <main id="main-content" tabIndex={-1}>
+        <section className="service-hero relative flex items-center justify-center overflow-hidden bg-[#020403] px-4 pb-10 pt-24 sm:px-6 sm:pb-16 sm:pt-28 md:px-10 md:pb-20 md:pt-32">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_44%,rgba(119,252,117,0.12),transparent_30%),radial-gradient(ellipse_at_78%_34%,rgba(34,211,238,0.13),transparent_30%),linear-gradient(135deg,#020403,#07100b_52%,#010202)]" />
           <div aria-hidden="true" className="absolute -inset-x-[18%] -top-[22%] h-[118%] animate-cro-signal-orbit bg-[radial-gradient(ellipse_at_66%_34%,rgba(34,211,238,0.21),transparent_28%),radial-gradient(ellipse_at_34%_68%,rgba(119,252,117,0.23),transparent_31%)] opacity-90 blur-2xl will-change-transform motion-reduce:animate-none" />
           <div aria-hidden="true" className="absolute inset-0 opacity-[0.1] [background-image:linear-gradient(rgba(119,252,117,0.24)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.2)_1px,transparent_1px)] [background-size:54px_54px] [mask-image:radial-gradient(circle_at_center,black,transparent_78%)]" />
@@ -377,7 +377,7 @@ export function ShopifyGa4GtmPage() {
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 font-mono text-base font-semibold uppercase tracking-[0.08em] text-primary shadow-[0_0_28px_rgba(119,252,117,0.1)] backdrop-blur-sm sm:mb-5"><span className="size-2 animate-pulse rounded-full bg-primary shadow-[0_0_14px_rgba(119,252,117,0.9)] motion-reduce:animate-none" />{text.eyebrow}</p>
             <h1 className="mx-auto max-w-6xl bg-gradient-to-r from-white via-primary to-white bg-[length:200%_100%] bg-clip-text text-[clamp(2.25rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-normal text-transparent animate-shimmer motion-reduce:animate-none">{text.title}</h1>
             <p className="mx-auto mt-4 max-w-4xl text-base font-semibold leading-[1.6] text-white/86 sm:mt-5 md:mt-6 md:text-xl">{text.subtitle}</p>
-            <p className="sr-only sm:not-sr-only sm:mx-auto sm:mt-5 sm:max-w-3xl sm:text-base sm:leading-[1.7] sm:text-white/58 md:text-lg">{text.description}</p>
+            <p className="service-hero-description sr-only sm:not-sr-only sm:mx-auto sm:mt-5 sm:max-w-3xl sm:text-base sm:leading-[1.7] sm:text-white/58 md:text-lg">{text.description}</p>
 
             <div className="mt-7 flex flex-col justify-center gap-3 sm:mt-9 sm:flex-row">
               <a href={localizedPath("/diagnosis")} className="pointer-events-auto inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-bold text-primary-foreground shadow-[0_0_30px_rgba(119,252,117,0.28)] transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black active:scale-[0.98] sm:px-10">
@@ -389,7 +389,7 @@ export function ShopifyGa4GtmPage() {
               </a>
             </div>
 
-            <div className="mt-6 grid gap-2 sm:mt-12 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-3">
+            <div className="service-hero-proof mt-6 grid gap-2 sm:mt-12 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-3">
               {text.proof.map((item) => (
                 <span key={item} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-4 py-2 text-base text-white/62 backdrop-blur-sm">
                   <CheckCircle2 className="size-5 shrink-0 text-primary" />
@@ -760,7 +760,7 @@ export function ShopifyGa4GtmPage() {
               <div aria-hidden="true" className="absolute inset-0 opacity-[0.05] [background-image:linear-gradient(rgba(119,252,117,0.26)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.26)_1px,transparent_1px)] [background-size:58px_58px] [mask-image:radial-gradient(circle_at_center,black,transparent_82%)]" />
               <div className="relative grid divide-y divide-white/[0.08] md:grid-cols-2 md:divide-x md:divide-y-0">
               {text.relatedLinks.map((link) => (
-                <a key={link.href} href={link.href} className="group min-w-0 rounded-[1.4rem] px-4 py-6 transition-colors hover:bg-white/[0.045] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:px-6 md:px-8 md:py-8">
+                <a key={link.href} href={localizedPath(link.href)} className="group min-w-0 rounded-[1.4rem] px-4 py-6 transition-colors hover:bg-white/[0.045] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:px-6 md:px-8 md:py-8">
                   <h3 className="text-xl font-bold tracking-normal">{link.title}</h3>
                   <p className="mt-3 text-base leading-[1.75] text-muted-foreground">{link.text}</p>
                   <span className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-primary">

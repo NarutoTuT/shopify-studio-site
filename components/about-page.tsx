@@ -113,7 +113,7 @@ const copy = {
     subtitle: "A design and development studio focused on Shopify sales systems.",
     description:
       "We work with brands that are preparing to sell globally, running paid traffic, or upgrading Shopify. The goal is not a busier-looking page. The goal is to connect product, pages, theme, payments, logistics, and analytics into a system that can launch, sell, and keep improving.",
-    primaryCta: "Get Free Store Diagnosis",
+    primaryCta: "Request a Free Store Review",
     secondaryCta: "View Delivery Principles",
     proof: ["Shopify builds and theme development", "Conversion paths and analytics", "Global brand launch and iteration"],
     whatTitle: "What we do",
@@ -146,7 +146,7 @@ const copy = {
       },
     ],
     notTitle: "What we do not do",
-    notIntro: "Clear boundaries reduce wrong expectations and make projects sharper from the start.",
+    notIntro: "Clear boundaries set the right expectations and make projects sharper from the start.",
     notItems: [
       "We do not build pages that chase visuals while ignoring the sales path",
       "We do not promise unrealistic SEO, ad, or sales outcomes",
@@ -181,7 +181,7 @@ const copy = {
         icon: Gauge,
       },
     ],
-    clientTitle: "Best-fit clients",
+    clientTitle: "Who we work best with",
     clientItems: [
       "Brands with products preparing for global sales",
       "Teams running or preparing paid traffic into Shopify",
@@ -189,8 +189,8 @@ const copy = {
       "Stores that need GA4/GTM, conversion events, and product structured data for review",
       "Teams that want to keep iterating Shopify instead of treating launch as a one-off project",
     ],
-    ctaTitle: "Start with one diagnosis.",
-    ctaText: "Send your product, market, budget, current store, or goal. We will first judge how Shopify should be built, improved, or tracked.",
+    ctaTitle: "Start with a focused review.",
+    ctaText: "Share your product, market, budget, current store, or goal. We will recommend what to build, improve, or measure first.",
   },
 }
 
@@ -201,52 +201,59 @@ export function AboutPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <main>
-        <section className="relative overflow-hidden px-6 pb-16 pt-32 md:px-10 md:pb-24 md:pt-40">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#050505] via-[#101010] to-[#050505]" />
-          <div className="absolute inset-x-0 top-28 mx-auto h-80 max-w-5xl rounded-full bg-primary/10 blur-3xl" />
+      <main id="main-content" tabIndex={-1}>
+        <section className="service-hero relative flex items-center overflow-hidden bg-[#020403] px-4 pb-12 pt-28 sm:px-6 md:px-10 md:pb-16 md:pt-32 lg:pb-10 lg:pt-24">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(119,252,117,0.08),transparent_36%),linear-gradient(145deg,#020403_0%,#07100b_48%,#020403_100%)]" />
+          <div aria-hidden="true" className="absolute -inset-x-[18%] -top-[22%] h-[118%] animate-cro-signal-orbit bg-[radial-gradient(ellipse_at_68%_36%,rgba(34,211,238,0.14),transparent_28%),radial-gradient(ellipse_at_32%_68%,rgba(119,252,117,0.22),transparent_31%)] opacity-85 blur-2xl will-change-transform motion-reduce:animate-none" />
+          <div aria-hidden="true" className="absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(119,252,117,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(119,252,117,0.08)_1px,transparent_1px)] [background-size:72px_72px] [mask-image:radial-gradient(circle_at_center,black,transparent_72%)]" />
+          <div aria-hidden="true" className="absolute left-[9%] top-[22%] size-3 animate-pulse rounded-full bg-primary shadow-[0_0_24px_rgba(119,252,117,0.8)] motion-reduce:animate-none" />
+          <div aria-hidden="true" className="absolute bottom-[16%] right-[7%] size-2 animate-pulse rounded-full bg-cyan-200 shadow-[0_0_24px_rgba(34,211,238,0.7)] motion-reduce:animate-none" />
 
-          <div className="relative mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="service-hero-layout relative mx-auto grid w-full max-w-[1500px] gap-9 lg:min-h-[calc(100svh-8rem)] lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
             <div>
-              <p className="mb-5 inline-flex items-center rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+              <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.11),0_0_28px_rgba(119,252,117,0.08)] backdrop-blur-sm">
+                <span className="size-1.5 animate-pulse rounded-full bg-primary shadow-[0_0_12px_rgba(119,252,117,0.9)] motion-reduce:animate-none" />
                 {text.eyebrow}
               </p>
-              <h1 className="max-w-5xl text-[clamp(2.6rem,6vw,5.4rem)] font-bold leading-[1.02] tracking-normal">
+              <h1 className="max-w-5xl bg-gradient-to-r from-foreground via-primary to-foreground bg-[length:200%_100%] bg-clip-text text-[clamp(2.55rem,5.6vw,5rem)] font-bold leading-[1.02] tracking-[-0.025em] text-transparent animate-shimmer motion-reduce:animate-none">
                 {text.title}
               </h1>
-              <p className="mt-6 max-w-3xl text-xl font-semibold leading-[1.45] text-foreground/90 md:text-2xl">
+              <p className="mt-5 max-w-3xl text-xl font-semibold leading-[1.45] text-foreground/90 md:text-2xl">
                 {text.subtitle}
               </p>
-              <p className="mt-5 max-w-3xl text-base leading-[1.7] text-muted-foreground md:text-lg">
+              <p className="service-hero-description mt-5 max-w-3xl text-base leading-[1.75] text-muted-foreground md:text-lg">
                 {text.description}
               </p>
 
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href={localizedPath("/diagnosis")}
-                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-sm font-bold text-primary-foreground transition-all hover:brightness-110 active:scale-[0.98]"
+                  className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.25)] transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black active:scale-[0.98]"
                 >
                   {text.primaryCta}
                   <ArrowUpRight className="size-4" />
                 </a>
                 <a
                   href="#principles"
-                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/15 px-7 text-sm font-semibold text-foreground transition-colors hover:bg-white/5"
+                  className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/15 bg-black/15 px-8 text-base font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 >
                   {text.secondaryCta}
                 </a>
               </div>
             </div>
 
-            <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-5 shadow-2xl shadow-black/30 backdrop-blur md:p-7">
-              <div className="mb-6 flex size-14 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
+            <div className="service-hero-proof relative overflow-hidden rounded-[2.8rem_1.45rem_3.2rem_1.8rem] border border-white/20 bg-[radial-gradient(circle_at_28%_16%,rgba(119,252,117,0.14),transparent_32%),linear-gradient(135deg,rgba(255,255,255,0.075),rgba(255,255,255,0.018))] p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_42px_100px_rgba(0,0,0,0.42),0_0_70px_rgba(119,252,117,0.08)] backdrop-blur-2xl md:p-9">
+              <div aria-hidden="true" className="absolute -right-20 -top-20 size-52 rounded-full border border-primary/15" />
+              <div aria-hidden="true" className="absolute -right-10 -top-10 size-36 rounded-full border border-cyan-200/10" />
+              <div className="relative mb-8 flex size-14 items-center justify-center rounded-[45%_55%_42%_58%/58%_40%_60%_42%] bg-primary text-primary-foreground shadow-[0_0_35px_rgba(119,252,117,0.28)]">
                 <Compass className="size-7" />
               </div>
-              <div className="grid gap-3">
-                {text.proof.map((item) => (
-                  <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-black/25 p-4">
+              <div className="relative grid gap-1">
+                {text.proof.map((item, index) => (
+                  <div key={item} className="flex min-h-16 items-center gap-4 rounded-[1.4rem] bg-black/18 px-5 py-4 first:bg-primary/[0.08]">
+                    <span className="font-mono text-base text-primary/70">0{index + 1}</span>
                     <CheckCircle2 className="size-5 shrink-0 text-primary" />
-                    <span className="text-sm font-medium text-foreground">{item}</span>
+                    <span className="text-base font-medium text-foreground">{item}</span>
                   </div>
                 ))}
               </div>
@@ -256,38 +263,45 @@ export function AboutPage() {
 
         <section className="bg-black px-6 py-[50px] md:px-10 md:py-[100px]">
           <div className="mx-auto max-w-[1500px]">
-            <div className="mb-10 max-w-3xl">
-              <PackageCheck className="mb-5 size-8 text-primary" />
+            <div className="mx-auto mb-10 max-w-3xl text-center">
+              <PackageCheck className="mx-auto mb-5 size-8 text-primary" />
               <h2 className="text-[clamp(2rem,4vw,3.4rem)] font-bold leading-tight tracking-normal">{text.whatTitle}</h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{text.whatIntro}</p>
             </div>
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-              {text.whatItems.map((item) => {
+            <div className="relative overflow-hidden rounded-[2.8rem_1.45rem_3.2rem_1.8rem] border border-white/20 bg-[radial-gradient(circle_at_20%_18%,rgba(119,252,117,0.1),transparent_30%),radial-gradient(circle_at_82%_72%,rgba(34,211,238,0.07),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.065),rgba(255,255,255,0.012))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_42px_110px_rgba(0,0,0,0.36)] backdrop-blur-2xl sm:p-5 lg:p-7">
+              <div aria-hidden="true" className="absolute left-[8%] top-0 h-px w-[58%] animate-shimmer bg-gradient-to-r from-transparent via-primary/60 to-transparent bg-[length:200%_100%] motion-reduce:animate-none" />
+              <div className="relative grid gap-2 md:grid-cols-2 xl:grid-cols-5">
+              {text.whatItems.map((item, index) => {
                 const Icon = item.icon
 
                 return (
-                  <article key={item.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                    <Icon className="mb-5 size-6 text-primary" />
+                  <article key={item.title} className={`min-h-[250px] rounded-[1.7rem] p-6 ${index === 1 ? "bg-primary/[0.07]" : index === 3 ? "bg-cyan-200/[0.045]" : "bg-black/18"}`}>
+                    <div className="mb-7 flex items-center justify-between">
+                      <Icon className="size-6 text-primary" />
+                      <span className="font-mono text-base text-primary/55">0{index + 1}</span>
+                    </div>
                     <h3 className="mb-3 text-lg font-semibold">{item.title}</h3>
-                    <p className="text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+                    <p className="text-base leading-[1.75] text-muted-foreground">{item.text}</p>
                   </article>
                 )
               })}
+              </div>
             </div>
           </div>
         </section>
 
         <section className="bg-background px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
-          <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+          <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
             <div>
               <ShieldCheck className="mb-5 size-8 text-primary" />
               <h2 className="text-[clamp(2rem,4vw,3.4rem)] font-bold leading-tight tracking-normal">{text.notTitle}</h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{text.notIntro}</p>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {text.notItems.map((item) => (
-                <div key={item} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                  <p className="text-sm leading-relaxed text-foreground">{item}</p>
+            <div className="relative grid gap-2 overflow-hidden rounded-[2.6rem_1.4rem_3rem_1.7rem] border border-white/18 bg-[radial-gradient(circle_at_18%_20%,rgba(119,252,117,0.08),transparent_32%),linear-gradient(135deg,rgba(255,255,255,0.055),rgba(255,255,255,0.012))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_35px_90px_rgba(0,0,0,0.28)] sm:grid-cols-2 sm:p-5">
+              {text.notItems.map((item, index) => (
+                <div key={item} className="flex min-h-32 items-start gap-4 rounded-[1.5rem] bg-black/18 p-5 even:bg-white/[0.025]">
+                  <span className="font-mono text-base text-primary/60">0{index + 1}</span>
+                  <p className="text-base leading-[1.75] text-foreground/85">{item}</p>
                 </div>
               ))}
             </div>
@@ -300,32 +314,35 @@ export function AboutPage() {
               <FileSearch className="mb-5 size-8 text-primary" />
               <h2 className="text-[clamp(2rem,4vw,3.4rem)] font-bold leading-tight tracking-normal">{text.principlesTitle}</h2>
             </div>
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-              {text.principles.map((item) => {
+            <div className="relative overflow-hidden rounded-[2.8rem_1.45rem_3.2rem_1.8rem] border border-white/20 bg-[radial-gradient(circle_at_50%_8%,rgba(119,252,117,0.1),transparent_32%),linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.012))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_42px_100px_rgba(0,0,0,0.34)] sm:p-5 lg:p-7">
+              <div className="relative grid gap-2 md:grid-cols-2 xl:grid-cols-5">
+              {text.principles.map((item, index) => {
                 const Icon = item.icon
 
                 return (
-                  <article key={item.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                    <Icon className="mb-5 size-6 text-primary" />
+                  <article key={item.title} className={`min-h-[260px] rounded-[1.7rem] p-6 ${index === 2 ? "bg-primary/[0.07]" : "bg-black/18"}`}>
+                    <div className="mb-7 flex items-center justify-between"><Icon className="size-6 text-primary" /><span className="font-mono text-base text-primary/55">0{index + 1}</span></div>
                     <h3 className="mb-3 text-lg font-semibold">{item.title}</h3>
-                    <p className="text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+                    <p className="text-base leading-[1.75] text-muted-foreground">{item.text}</p>
                   </article>
                 )
               })}
+              </div>
             </div>
           </div>
         </section>
 
         <section className="bg-background px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
-          <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+          <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
             <div>
               <Target className="mb-5 size-8 text-primary" />
               <h2 className="text-[clamp(2rem,4vw,3.4rem)] font-bold leading-tight tracking-normal">{text.clientTitle}</h2>
             </div>
-            <div className="grid gap-4">
-              {text.clientItems.map((item) => (
-                <div key={item} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                  <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-primary" />
+            <div className="relative grid gap-1 overflow-hidden rounded-[2.7rem_1.45rem_3.1rem_1.8rem] border border-white/18 bg-[radial-gradient(circle_at_88%_16%,rgba(34,211,238,0.07),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.055),rgba(255,255,255,0.012))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_35px_90px_rgba(0,0,0,0.28)] sm:p-5">
+              {text.clientItems.map((item, index) => (
+                <div key={item} className="flex min-h-16 items-center gap-4 rounded-[1.4rem] bg-black/18 px-5 py-4 first:bg-primary/[0.07]">
+                  <span className="font-mono text-base text-primary/60">0{index + 1}</span>
+                  <CheckCircle2 className="size-5 shrink-0 text-primary" />
                   <p className="text-base leading-relaxed text-foreground">{item}</p>
                 </div>
               ))}
@@ -334,7 +351,7 @@ export function AboutPage() {
         </section>
 
         <section className="bg-black px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
-          <div className="mx-auto max-w-[1100px] rounded-[1.5rem] border border-primary/20 bg-primary/10 p-7 text-center md:p-12">
+          <div className="relative mx-auto max-w-[1100px] overflow-hidden rounded-[3.2rem_1.5rem_3.6rem_1.8rem] border border-white/25 bg-[linear-gradient(115deg,rgba(255,255,255,0.075),rgba(255,255,255,0.015)_38%,rgba(34,211,238,0.045)_72%,rgba(119,252,117,0.075))] p-8 text-center shadow-[inset_0_2px_0_rgba(255,255,255,0.22),0_45px_110px_rgba(0,0,0,0.45),0_0_80px_rgba(119,252,117,0.08)] backdrop-blur-3xl md:p-12">
             <h2 className="text-[clamp(2rem,4vw,3.4rem)] font-bold leading-tight tracking-normal">{text.ctaTitle}</h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.ctaText}</p>
             <a

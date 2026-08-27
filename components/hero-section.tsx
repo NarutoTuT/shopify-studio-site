@@ -18,7 +18,7 @@ const copy = {
   },
   en: {
     proofPoints: ["Shopify Theme Development", "Conversion Optimization", "Tracking Setup"],
-    eyebrow: "For Chinese-founded global ecommerce brands",
+    eyebrow: "For Chinese-founded brands selling globally",
     title: "Shopify Growth Engineering Studio",
     subtitle: "Helping global ecommerce brands build faster, more stable, and higher-converting Shopify stores.",
     description: "From Shopify engineering and theme development to conversion optimization and tracking setup, WhaleLeap helps brands turn traffic into orders.",
@@ -134,10 +134,11 @@ export function HeroSection() {
     <section ref={sectionRef} className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background">
       <div ref={backgroundRef} className="pointer-events-none absolute -inset-[3%] z-0 transform-gpu will-change-transform">
         <Image
-          src="/hero/whaleleap-growth-current-v1.png"
+          src="/hero/whaleleap-growth-current-v1.webp"
           alt=""
           fill
-          priority
+          loading="eager"
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover object-center md:object-bottom"
           aria-hidden="true"

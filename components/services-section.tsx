@@ -146,7 +146,7 @@ export function ServicesSection() {
       <div className="pointer-events-none absolute -right-48 bottom-0 size-[30rem] rounded-full bg-primary/[0.055] blur-[150px]" />
 
       <div ref={titleRef} className="relative mx-auto mb-12 max-w-[1500px] text-center md:mb-16">
-        <p className="animate-line mb-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+        <p className="section-eyebrow animate-line mb-4 inline-flex items-center gap-2 text-sm font-semibold uppercase text-primary">
           <span className="size-1.5 rounded-full bg-primary shadow-[0_0_14px_rgba(119,252,117,0.9)]" />
           {text.eyebrow}
         </p>
@@ -158,7 +158,7 @@ export function ServicesSection() {
         </p>
       </div>
 
-      <div ref={consoleRef} className="relative mx-auto max-w-[1500px] overflow-hidden rounded-[2rem] border border-white/10 bg-black/65 shadow-[0_42px_120px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-2xl">
+      <div ref={consoleRef} className="home-module-shell mx-auto max-w-[1500px]">
         <div className="pointer-events-none absolute inset-0 opacity-[0.05] [background-image:linear-gradient(rgba(119,252,117,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(119,252,117,0.4)_1px,transparent_1px)] [background-size:36px_36px]" />
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px animate-shimmer bg-gradient-to-r from-transparent via-primary to-transparent bg-[length:200%_100%] shadow-[0_0_20px_rgba(119,252,117,0.75)] motion-reduce:animate-none" />
 

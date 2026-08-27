@@ -18,6 +18,7 @@ import {
 
 import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 const tiers = [
   {
@@ -169,74 +170,82 @@ export function ShopifyWebsiteCostPage() {
         page={websiteCostStructuredData.page}
       />
       <Navbar />
-      <main>
-        <section className="relative overflow-hidden px-6 pb-16 pt-32 md:px-10 md:pb-24 md:pt-40">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#050505] via-[#0d1210] to-[#050505]" />
-          <div className="absolute inset-x-0 top-28 mx-auto h-80 max-w-5xl rounded-full bg-primary/10 blur-3xl" />
-          <div className="relative mx-auto max-w-[1180px]">
-            <p className="mb-5 inline-flex items-center rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+      <main id="main-content" tabIndex={-1}>
+        <section className="service-hero relative flex items-center overflow-hidden bg-[#020403] px-4 pb-12 pt-28 sm:px-6 md:px-10 md:pb-16 md:pt-32 lg:pb-10 lg:pt-24">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_48%,rgba(119,252,117,0.08),transparent_34%),linear-gradient(145deg,#020403_0%,#07100b_48%,#020403_100%)]" />
+          <div aria-hidden="true" className="absolute -inset-x-[18%] -top-[22%] h-[118%] animate-cro-signal-orbit bg-[radial-gradient(ellipse_at_68%_36%,rgba(34,211,238,0.15),transparent_28%),radial-gradient(ellipse_at_32%_68%,rgba(119,252,117,0.2),transparent_31%)] opacity-85 blur-2xl will-change-transform motion-reduce:animate-none" />
+          <div aria-hidden="true" className="absolute inset-0 opacity-28 [background-image:linear-gradient(rgba(119,252,117,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(119,252,117,0.08)_1px,transparent_1px)] [background-size:72px_72px] [mask-image:radial-gradient(circle_at_center,black,transparent_72%)]" />
+          <div aria-hidden="true" className="absolute left-[6%] top-[25%] font-mono text-base text-primary/22 animate-theme-aurora-drift motion-reduce:animate-none">TIER 01 · ¥20K</div>
+          <div aria-hidden="true" className="absolute right-[7%] top-[31%] font-mono text-base text-cyan-200/22 animate-cro-signal-orbit motion-reduce:animate-none">TIER 02 · ¥35K</div>
+          <div aria-hidden="true" className="absolute bottom-[15%] right-[15%] font-mono text-base text-primary/20 animate-theme-aurora-drift motion-reduce:animate-none">TIER 03 · ¥50K+</div>
+          <div className="service-hero-layout relative mx-auto grid w-full max-w-[1320px] gap-10 lg:min-h-[calc(100svh-8rem)] lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
+            <div>
+            <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.11),0_0_28px_rgba(119,252,117,0.08)] backdrop-blur-sm">
+              <span className="size-1.5 animate-pulse rounded-full bg-primary shadow-[0_0_12px_rgba(119,252,117,0.9)] motion-reduce:animate-none" />
               SHOPIFY WEBSITE COST
             </p>
-            <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
-              <div>
-                <h1 className="max-w-4xl text-[clamp(2.4rem,5vw,5rem)] font-bold leading-[1.04] tracking-normal">
+                <h1 className="max-w-4xl bg-gradient-to-r from-foreground via-primary to-foreground bg-[length:200%_100%] bg-clip-text text-[clamp(2.4rem,5vw,4.7rem)] font-bold leading-[1.04] tracking-[-0.025em] text-transparent animate-shimmer motion-reduce:animate-none">
                   Shopify 建站多少钱？
                 </h1>
                 <p className="mt-6 max-w-3xl text-xl font-semibold leading-[1.45] text-foreground/90 md:text-2xl">
                   通常从 ¥20,000 起，定制设计从 ¥35,000 起，复杂业务一般从 ¥50,000 起。
                 </p>
-              </div>
-              <div className="border-l border-white/10 pl-0 lg:pl-8">
-                <p className="text-base leading-[1.8] text-muted-foreground md:text-lg">
+            </div>
+              <div className="relative rounded-[2.8rem_1.45rem_3.2rem_1.8rem] border border-white/20 bg-[radial-gradient(circle_at_28%_16%,rgba(119,252,117,0.13),transparent_32%),linear-gradient(135deg,rgba(255,255,255,0.075),rgba(255,255,255,0.018))] p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_42px_100px_rgba(0,0,0,0.42),0_0_70px_rgba(119,252,117,0.08)] backdrop-blur-2xl md:p-9">
+                <p className="service-hero-description text-base leading-[1.8] text-muted-foreground md:text-lg">
                   这不是单纯按页面数量报价。Shopify 建站费用取决于页面结构、设计深度、SKU 复杂度、主题开发、支付物流、数据追踪和第三方系统对接范围。
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
                   <a
                     href="/diagnosis"
-                    className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-sm font-bold text-primary-foreground transition-all hover:brightness-110 active:scale-[0.98]"
+                    className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.24)] transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black active:scale-[0.98]"
                   >
                     诊断我的建站预算
                     <ArrowUpRight className="size-4" />
                   </a>
                   <a
                     href="#tiers"
-                    className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/15 px-7 text-sm font-semibold text-foreground transition-colors hover:bg-white/5"
+                    className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/15 bg-black/15 px-8 text-base font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                   >
                     查看费用梯度
                   </a>
                 </div>
-              </div>
             </div>
           </div>
         </section>
 
         <section id="tiers" className="bg-black px-6 py-[50px] md:px-10 md:py-[100px]">
           <div className="mx-auto max-w-[1500px]">
-            <div className="mb-10 max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-normal text-primary">Price tiers</p>
+            <div className="mx-auto mb-10 max-w-3xl text-center">
+              <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">Price tiers</p>
               <h2 className="mt-4 text-[clamp(2rem,4vw,3.4rem)] font-bold leading-tight tracking-normal">三档费用怎么理解</h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
                 低价方案适合先上线验证；定制方案适合承接广告和品牌增长；复杂业务需要先拆清业务流程、系统边界和测试范围。
               </p>
             </div>
-            <div className="grid gap-5 lg:grid-cols-3">
-              {tiers.map((tier) => (
+            <div className="relative overflow-hidden rounded-[2.8rem_1.45rem_3.2rem_1.8rem] border border-white/20 bg-[radial-gradient(circle_at_50%_4%,rgba(119,252,117,0.105),transparent_34%),radial-gradient(circle_at_88%_76%,rgba(34,211,238,0.065),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.065),rgba(255,255,255,0.012))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_42px_110px_rgba(0,0,0,0.36)] backdrop-blur-2xl sm:p-5 lg:p-7">
+              <div aria-hidden="true" className="absolute left-[10%] top-0 h-px w-[58%] animate-shimmer bg-gradient-to-r from-transparent via-primary/65 to-transparent bg-[length:200%_100%] motion-reduce:animate-none" />
+              <div className="relative grid gap-2 lg:grid-cols-3">
+              {tiers.map((tier, index) => (
                 <article
                   key={tier.name}
-                  className={`flex min-h-[430px] flex-col rounded-2xl border p-6 ${
-                    tier.featured ? "border-primary/35 bg-white/[0.08] shadow-[0_0_70px_rgba(119,252,117,0.08)]" : "border-white/10 bg-white/[0.03]"
+                  className={`flex min-h-[430px] flex-col rounded-[1.9rem] p-6 sm:p-7 ${
+                    tier.featured ? "bg-[radial-gradient(circle_at_50%_0%,rgba(119,252,117,0.16),transparent_40%),rgba(119,252,117,0.045)] shadow-[0_0_70px_rgba(119,252,117,0.08)]" : index === 2 ? "bg-[radial-gradient(circle_at_50%_0%,rgba(34,211,238,0.08),transparent_38%),rgba(0,0,0,0.18)]" : "bg-black/18"
                   }`}
                 >
-                  <p className="text-sm font-semibold text-primary">{tier.price}</p>
+                  <div className="flex items-center justify-between gap-4">
+                    <p className="font-mono text-base font-semibold text-primary">{tier.price}</p>
+                    <span className="font-mono text-base text-primary/55">0{index + 1}</span>
+                  </div>
                   <h3 className="mt-3 text-2xl font-bold tracking-normal">{tier.name}</h3>
-                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{tier.description}</p>
-                  <p className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/25 px-4 py-2 text-sm text-foreground/85">
+                  <p className="mt-4 text-base leading-relaxed text-muted-foreground">{tier.description}</p>
+                  <p className="mt-5 inline-flex items-center gap-2 rounded-full bg-black/25 px-4 py-2 text-base text-foreground/85">
                     <ShieldCheck className="size-4 text-primary" />
                     {tier.support}
                   </p>
                   <div className="mt-6 space-y-3">
                     {tier.points.map((point) => (
-                      <p key={point} className="flex items-center gap-3 text-sm text-foreground/85">
+                      <p key={point} className="flex items-center gap-3 text-base text-foreground/85">
                         <CheckCircle2 className="size-4 shrink-0 text-primary" />
                         {point}
                       </p>
@@ -244,13 +253,14 @@ export function ShopifyWebsiteCostPage() {
                   </div>
                   <a
                     href="/diagnosis"
-                    className="mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white/10 px-6 text-sm font-semibold text-foreground transition-colors hover:bg-white/15"
+                    className="mt-auto inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-white/10 px-6 text-base font-semibold text-foreground transition-colors hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                   >
                     获取范围判断
                     <ArrowUpRight className="size-4" />
                   </a>
                 </article>
               ))}
+              </div>
             </div>
             <div className="mt-8 grid gap-4 md:grid-cols-2">
               <a href="/pricing" className="group rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition-colors hover:bg-white/[0.07]">
@@ -287,15 +297,15 @@ export function ShopifyWebsiteCostPage() {
                 同样叫 Shopify 建站，交付可能只是模板配置，也可能包含品牌设计、前端开发、数据追踪、技术 SEO 和业务系统对接。报价差异主要来自这些变量。
               </p>
             </div>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="relative grid gap-2 overflow-hidden rounded-[2.7rem_1.45rem_3.1rem_1.8rem] border border-white/18 bg-[radial-gradient(circle_at_84%_18%,rgba(34,211,238,0.065),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.055),rgba(255,255,255,0.012))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_35px_90px_rgba(0,0,0,0.28)] sm:p-5 md:grid-cols-2">
               {factors.map((factor) => {
                 const Icon = factor.icon
 
                 return (
-                  <article key={factor.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                  <article key={factor.title} className="min-h-52 rounded-[1.6rem] bg-black/18 p-6 even:bg-white/[0.025]">
                     <Icon className="mb-4 size-6 text-primary" />
                     <h3 className="text-lg font-bold tracking-normal">{factor.title}</h3>
-                    <p className="mt-3 text-sm leading-[1.75] text-muted-foreground">{factor.text}</p>
+                    <p className="mt-3 text-base leading-[1.75] text-muted-foreground">{factor.text}</p>
                   </article>
                 )
               })}
@@ -309,11 +319,12 @@ export function ShopifyWebsiteCostPage() {
               <p className="text-sm font-semibold uppercase tracking-normal text-primary">Decision guide</p>
               <h2 className="mt-4 text-[clamp(2rem,4vw,3.2rem)] font-bold leading-tight tracking-normal">怎么判断自己适合哪一档</h2>
             </div>
-            <div className="grid gap-4 md:grid-cols-3">
-              {choices.map(([title, text]) => (
-                <article key={title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+            <div className="relative grid gap-2 overflow-hidden rounded-[2.8rem_1.45rem_3.2rem_1.8rem] border border-white/20 bg-[radial-gradient(circle_at_50%_8%,rgba(119,252,117,0.1),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.012))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_42px_100px_rgba(0,0,0,0.34)] sm:p-5 md:grid-cols-3">
+              {choices.map(([title, text], index) => (
+                <article key={title} className={`min-h-56 rounded-[1.7rem] p-6 ${index === 1 ? "bg-primary/[0.075]" : "bg-black/18"}`}>
+                  <span className="font-mono text-base text-primary/60">0{index + 1}</span>
                   <h3 className="text-xl font-bold tracking-normal">{title}</h3>
-                  <p className="mt-4 text-sm leading-[1.8] text-muted-foreground">{text}</p>
+                  <p className="mt-4 text-base leading-[1.8] text-muted-foreground">{text}</p>
                 </article>
               ))}
             </div>
@@ -328,9 +339,9 @@ export function ShopifyWebsiteCostPage() {
               <p className="mt-5 text-base leading-[1.8] text-muted-foreground">
                 一次性建站报价主要覆盖已确认的页面、开发、配置、测试和上线支持。第三方平台费用和持续运营费用需要单独计算。
               </p>
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              <div className="mt-8 grid gap-2 sm:grid-cols-2">
                 {excluded.map((item) => (
-                  <p key={item} className="flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-foreground/85">
+                  <p key={item} className="flex items-center gap-3 rounded-full bg-white/[0.045] px-4 py-3 text-base text-foreground/85">
                     <CheckCircle2 className="size-4 shrink-0 text-primary" />
                     {item}
                   </p>
@@ -340,9 +351,9 @@ export function ShopifyWebsiteCostPage() {
             <div>
               <AlertTriangle className="mb-5 size-8 text-primary" />
               <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold leading-tight tracking-normal">低价建站最容易省掉什么</h2>
-              <div className="mt-8 space-y-4">
+              <div className="mt-8 space-y-2">
                 {pitfalls.map((item) => (
-                  <p key={item} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-sm leading-[1.8] text-muted-foreground">
+                  <p key={item} className="rounded-[1.4rem] bg-white/[0.035] p-5 text-base leading-[1.8] text-muted-foreground">
                     {item}
                   </p>
                 ))}
@@ -360,19 +371,23 @@ export function ShopifyWebsiteCostPage() {
               </div>
               <HelpCircle className="hidden size-10 text-primary md:block" />
             </div>
-            <div className="grid gap-4 md:grid-cols-2">
-              {faqs.map((faq) => (
-                <article key={faq.q} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
-                  <h3 className="text-lg font-bold leading-snug tracking-normal">{faq.q}</h3>
-                  <p className="mt-4 text-sm leading-[1.8] text-muted-foreground">{faq.a}</p>
-                </article>
-              ))}
+            <div className="relative overflow-hidden rounded-[2.8rem_1.45rem_3.2rem_1.8rem] border border-white/20 bg-[radial-gradient(circle_at_78%_20%,rgba(34,211,238,0.07),transparent_30%),radial-gradient(circle_at_22%_72%,rgba(119,252,117,0.09),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.012))] px-5 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_42px_100px_rgba(0,0,0,0.34)] sm:px-7 sm:py-6 lg:px-10 lg:py-8">
+              <Accordion type="single" collapsible className="grid gap-x-8 lg:grid-cols-2">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={faq.q} value={`cost-faq-${index}`} className="border-white/10">
+                    <AccordionTrigger className="min-h-[76px] gap-4 py-5 text-left text-base font-semibold leading-snug hover:no-underline data-[state=open]:text-primary [&>svg]:size-5 [&>svg]:shrink-0 [&>svg]:text-primary">
+                      <span className="flex items-start gap-4"><span className="font-mono text-base text-primary/55">{String(index + 1).padStart(2, "0")}</span>{faq.q}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-6 pl-0 text-base leading-[1.8] text-muted-foreground sm:pl-10">{faq.a}</AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>
 
         <section className="bg-background px-6 pb-[50px] pt-0 md:px-10 md:pb-[100px] md:pt-0">
-          <div className="mx-auto max-w-[1100px] rounded-3xl border border-primary/20 bg-primary/[0.08] p-8 text-center md:p-12">
+          <div className="relative mx-auto max-w-[1100px] overflow-hidden rounded-[3.2rem_1.5rem_3.6rem_1.8rem] border border-white/25 bg-[linear-gradient(115deg,rgba(255,255,255,0.075),rgba(255,255,255,0.015)_38%,rgba(34,211,238,0.045)_72%,rgba(119,252,117,0.075))] p-8 text-center shadow-[inset_0_2px_0_rgba(255,255,255,0.22),0_45px_110px_rgba(0,0,0,0.45),0_0_80px_rgba(119,252,117,0.08)] backdrop-blur-3xl md:p-12">
             <h2 className="text-[clamp(2rem,4vw,3.4rem)] font-bold leading-tight tracking-normal">不确定预算应该放在哪一档？</h2>
             <p className="mx-auto mt-5 max-w-3xl text-base leading-[1.8] text-muted-foreground md:text-lg">
               把产品品类、参考站、SKU 数量、上线时间和当前问题发来，我们先判断是文档模板方案、设计图定制方案，还是复杂业务定制。

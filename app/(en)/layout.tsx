@@ -3,6 +3,7 @@ import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 
 import { GoogleAnalytics } from "@/components/google-analytics"
+import { SiteFooter } from "@/components/site-footer"
 import { StructuredData } from "@/components/structured-data"
 import "../globals.css"
 
@@ -53,9 +54,16 @@ export const metadata: Metadata = {
 export default function EnglishRootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased`}>
-        <StructuredData />
+      <body className={`${inter.variable} site-min-type font-sans antialiased`}>
+        <a
+          href="#main-content"
+          className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-foreground px-5 py-3 font-semibold text-background shadow-xl transition-transform focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-primary"
+        >
+          Skip to main content
+        </a>
+        <StructuredData language="en" />
         {children}
+        <SiteFooter language="en" />
         <GoogleAnalytics />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>

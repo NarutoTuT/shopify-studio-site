@@ -33,10 +33,10 @@ export function BrandLogo() {
         </svg>
       </span>
       <span className="grid min-w-0 gap-1 leading-none">
-        <span className="truncate text-[13px] font-semibold uppercase tracking-[0.16em] md:text-sm">
+        <span data-compact-type className="truncate text-[13px] font-semibold uppercase tracking-[0.16em] md:text-sm">
           WhaleLeap
         </span>
-        <span className="truncate text-[9px] font-medium uppercase tracking-[0.2em] text-primary/80 md:text-[10px]">
+        <span data-compact-type className="truncate text-[9px] font-medium uppercase tracking-[0.2em] text-primary/80 md:text-[10px]">
           Studio
         </span>
       </span>

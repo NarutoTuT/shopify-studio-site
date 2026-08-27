@@ -92,7 +92,7 @@ export function SolutionSection() {
       <div className="pointer-events-none absolute inset-x-[12%] top-[28%] h-[46%] rounded-full bg-primary/10 blur-[130px]" />
       <div className="relative mx-auto max-w-[1500px]">
         <div className="mx-auto mb-12 max-w-4xl text-center md:mb-16">
-          <p className="mb-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+          <p className="section-eyebrow mb-4 inline-flex items-center gap-2 text-sm font-semibold uppercase text-primary">
             <span className="size-1.5 rounded-full bg-primary shadow-[0_0_14px_rgba(119,252,117,0.9)]" />
             {text.eyebrow}
           </p>
@@ -100,8 +100,9 @@ export function SolutionSection() {
           <p className="mx-auto mt-6 max-w-3xl text-base leading-[1.7] text-muted-foreground md:text-lg">{text.description}</p>
         </div>
 
+        <div className="home-module-shell p-3 md:p-0">
         <div
-          className="relative hidden h-[680px] overflow-hidden rounded-[2.5rem] border border-white/10 bg-black/60 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_40px_100px_rgba(0,0,0,0.45)] backdrop-blur-xl md:block"
+          className="relative hidden h-[680px] overflow-hidden md:block"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
           onFocusCapture={() => setIsPaused(true)}
@@ -216,6 +217,7 @@ export function SolutionSection() {
               </div>
             )
           })}
+        </div>
         </div>
       </div>
     </section>

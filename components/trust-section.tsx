@@ -41,7 +41,7 @@ const copy = {
   },
   en: {
     eyebrow: "WHY WHALELEAP",
-    title: "A Shopify growth engineering partner built for Chinese-founded global brands.",
+    title: "A Shopify growth engineering partner for Chinese-founded brands selling globally.",
     description:
       "WhaleLeap is not a page-delivery outsourcing team. We connect frontend engineering, Shopify experience, and cross-border ecommerce context to growth outcomes.",
     reasons: [
@@ -93,7 +93,7 @@ export function TrustSection() {
 
       <div className="relative mx-auto max-w-[1500px]">
         <div className="mx-auto mb-12 max-w-5xl text-center md:mb-16">
-          <p className="mb-4 inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.24em] text-primary md:text-sm">
+          <p className="section-eyebrow mb-4 inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase text-primary md:text-sm">
             <span className="size-1.5 animate-pulse rounded-full bg-primary shadow-[0_0_12px_rgba(119,252,117,0.9)] motion-reduce:animate-none" />
             {text.eyebrow}
           </p>
@@ -101,7 +101,7 @@ export function TrustSection() {
           <p className="mx-auto mt-6 max-w-3xl text-base leading-[1.7] text-muted-foreground md:text-lg">{text.description}</p>
         </div>
 
-        <div className="grid items-stretch gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8">
+        <div className="home-module-shell grid items-stretch gap-6 p-4 sm:p-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8 lg:p-8">
           <div className="relative flex min-h-[430px] items-center justify-center overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.025] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_35px_90px_rgba(0,0,0,0.35)] backdrop-blur-2xl sm:min-h-[520px] sm:p-8">
             <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(119,252,117,0.12),transparent_48%)]" />
             <div aria-hidden="true" className="absolute inset-[12%] animate-[spin_28s_linear_infinite] rounded-full border border-dashed border-primary/20 motion-reduce:animate-none" />

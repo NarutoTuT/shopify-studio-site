@@ -76,7 +76,7 @@ export function ProcessSection() {
 
       <div className="relative mx-auto max-w-[1500px]">
         <div className="mx-auto mb-12 max-w-5xl text-center md:mb-16">
-          <p className="mb-4 inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.24em] text-primary md:text-sm">
+          <p className="section-eyebrow mb-4 inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase text-primary md:text-sm">
             <span className="size-1.5 animate-pulse rounded-full bg-primary shadow-[0_0_12px_rgba(119,252,117,0.9)] motion-reduce:animate-none" />
             {text.eyebrow}
           </p>
@@ -84,6 +84,7 @@ export function ProcessSection() {
           <p className="mx-auto mt-6 max-w-3xl text-base leading-[1.7] text-muted-foreground md:text-lg">{text.description}</p>
         </div>
 
+        <div className="home-module-shell p-4 sm:p-6 lg:p-8">
         <div className="relative hidden lg:block">
           <div aria-hidden="true" className="absolute left-[8%] right-[8%] top-[58px] h-px overflow-hidden bg-primary/25 shadow-[0_0_18px_rgba(119,252,117,0.45)]">
             <span className="block h-full w-full animate-shimmer bg-[linear-gradient(90deg,transparent,rgba(119,252,117,1),rgba(58,221,255,0.8),transparent)] bg-[length:200%_100%] motion-reduce:animate-none" />
@@ -143,6 +144,7 @@ export function ProcessSection() {
               </article>
             )
           })}
+        </div>
         </div>
       </div>
     </section>

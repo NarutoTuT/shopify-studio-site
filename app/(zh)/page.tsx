@@ -18,14 +18,16 @@ export default function Home() {
         <div className="bg-background min-h-screen">
           <MouseFollowLight />
           <Navbar />
-          <HeroSection />
-          <ProblemSection />
-          <SolutionSection />
-          <ServicesSection />
-          <ShowcaseSection />
-          <ProcessSection />
-          <TrustSection />
-          <ContactSection />
+          <main id="main-content" tabIndex={-1}>
+            <HeroSection />
+            <ProblemSection />
+            <SolutionSection />
+            <ServicesSection />
+            <ShowcaseSection />
+            <ProcessSection />
+            <TrustSection />
+            <ContactSection />
+          </main>
         </div>
       </SmoothScrollProvider>
     </LanguageProvider>

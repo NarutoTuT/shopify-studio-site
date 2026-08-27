@@ -9,6 +9,8 @@ import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
 import { useLanguage } from "@/components/language-provider"
 
+const SHOW_STOREFRONT_HERO_PREVIEW = false
+
 const copy = {
   zh: {
     eyebrow: "SHOPIFY ENGINEERING",
@@ -100,7 +102,7 @@ const copy = {
     title: "Shopify Engineering",
     subtitle: "Build a faster, more stable, and maintainable Shopify foundation for global ecommerce brands.",
     description:
-      "This is not just website building. WhaleLeap helps Chinese-founded global brands create a Shopify foundation that can support traffic, optimization, and long-term growth.",
+      "This is more than a website build. WhaleLeap helps Chinese-founded brands selling globally create a Shopify foundation that can support traffic, optimization, and long-term growth.",
     primaryCta: "Get a Free Shopify Review",
     secondaryCta: "View Scope",
     proof: ["Shopify Theme Development", "Liquid Development", "Performance Optimization"],
@@ -149,12 +151,12 @@ const copy = {
     process: ["Review", "Scope", "Build", "QA", "Launch"],
     fitTitle: "Who It Is For",
     fitIntro: "Use this when you need more than a launch. You need a Shopify foundation that can keep improving.",
-    fitItems: ["Chinese-founded global brands", "Shopify founders", "Amazon-to-Shopify brands", "Shopify stores needing technical upgrades"],
+    fitItems: ["Chinese-founded brands selling globally", "Shopify founders", "Amazon-to-Shopify brands", "Shopify stores needing technical upgrades"],
     faqTitle: "FAQ",
     faqs: [
       {
-        q: "How is Shopify Engineering different from a normal Shopify build?",
-        a: "A normal build focuses on launching pages. Shopify Engineering focuses on theme structure, performance, mobile UX, maintainability, and future optimization space.",
+        q: "How is Shopify Engineering different from a standard Shopify build?",
+        a: "A standard build focuses on launching pages. Shopify Engineering also addresses theme structure, performance, mobile UX, maintainability, and room for future optimization.",
       },
       {
         q: "Is this suitable for existing Shopify stores?",
@@ -224,7 +226,7 @@ const websiteBuildFaqMeta = [
   { code: "START", zh: ["免费诊断", "优先级", "实施范围"], en: ["Free review", "Priorities", "Scope"] },
 ]
 
-function DesktopStorefrontPreview() {
+function DesktopStorefrontPreview({ compact = false }: { compact?: boolean }) {
   return (
     <div className="min-w-0 overflow-hidden rounded-[1.45rem] bg-[#e9e4dc] text-[#131713] shadow-[0_28px_70px_rgba(0,0,0,0.38)]">
       <div className="flex h-10 items-center gap-2 bg-[#111512] px-4 text-white/45">
@@ -239,8 +241,8 @@ function DesktopStorefrontPreview() {
         <span className="flex size-9 items-center justify-center rounded-full bg-black text-white"><ShoppingBag className="size-4" /></span>
       </div>
 
-      <div className="relative mx-3 h-[185px] overflow-hidden rounded-[1.15rem] bg-[#17221b] px-5 py-5 text-white sm:mx-5 sm:h-[195px] sm:px-8 sm:py-5">
-        <Image src="/images/website-build/storefront-campaign-hero.webp" alt="Outdoor apparel campaign showing a technical shell jacket in a misty mountain environment" fill priority sizes="(max-width: 1024px) 90vw, 44vw" className="object-cover object-[66%_48%]" />
+      <div className={`relative mx-3 overflow-hidden rounded-[1.15rem] bg-[#17221b] px-5 py-5 text-white sm:mx-5 sm:px-8 sm:py-5 ${compact ? "h-[155px]" : "h-[185px] sm:h-[195px]"}`}>
+        <Image src="/images/website-build/storefront-campaign-hero.webp" alt="Outdoor apparel campaign showing a technical shell jacket in a misty mountain environment" fill loading="eager" fetchPriority="high" sizes="(max-width: 1024px) 90vw, 44vw" className="object-cover object-[66%_48%]" />
         <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,18,13,0.94),rgba(10,18,13,0.68)_44%,rgba(10,18,13,0.08)_72%)]" />
         <div className="relative">
           <p className="font-mono text-base uppercase tracking-[0.06em] text-primary">New collection / 2026</p>
@@ -249,7 +251,7 @@ function DesktopStorefrontPreview() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-2 px-3 pb-4 pt-3 sm:gap-3 sm:px-5 sm:pb-5">
+      <div className={`${compact ? "hidden" : "grid"} grid-cols-3 gap-2 px-3 pb-4 pt-3 sm:gap-3 sm:px-5 sm:pb-5`}>
         {storefrontProducts.map((product) => (
           <div key={product.name} className="min-w-0">
             <div className="relative h-24 overflow-hidden rounded-[0.85rem] bg-[#b8c3b6]">
@@ -264,18 +266,18 @@ function DesktopStorefrontPreview() {
   )
 }
 
-function MobileStorefrontPreview() {
+function MobileStorefrontPreview({ compact = false }: { compact?: boolean }) {
   return (
-    <div className="w-full max-w-[185px] rounded-[1.7rem] bg-[#090d0b] p-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_26px_58px_rgba(0,0,0,0.48),0_0_34px_rgba(34,211,238,0.11)] ring-1 ring-white/10">
+    <div className={`w-full rounded-[1.7rem] bg-[#090d0b] p-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_26px_58px_rgba(0,0,0,0.48),0_0_34px_rgba(34,211,238,0.11)] ring-1 ring-white/10 ${compact ? "max-w-[160px]" : "max-w-[185px]"}`}>
       <div className="mx-auto mb-2 h-1.5 w-12 rounded-full bg-white/12" />
       <div className="overflow-hidden rounded-[1.25rem] bg-[#e9e4dc] text-[#111512]">
         <div className="flex items-center justify-between px-3 py-3"><strong className="font-mono text-base">N/F</strong><ShoppingCart className="size-4" /></div>
-        <div className="relative aspect-[0.9/1] bg-[#677466]">
+        <div className={`relative bg-[#677466] ${compact ? "h-[142px]" : "aspect-[0.9/1]"}`}>
           <Image src="/images/website-build/trail-shell.webp" alt="Trail Shell product preview on mobile storefront" fill sizes="185px" className="object-cover" />
           <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/24 via-transparent to-white/5" />
           <span className="absolute bottom-3 left-3 rounded-full bg-primary px-2.5 py-1 font-mono text-base font-semibold">New</span>
         </div>
-        <div className="p-3"><strong className="block text-base">Trail Shell</strong><span className="mt-1 block text-base text-black/50">$128 · 3 colors</span><span className="mt-3 flex min-h-10 items-center justify-center rounded-full bg-black text-base font-semibold text-white">Add to cart</span></div>
+        <div className="p-3"><strong className="block text-base">Trail Shell</strong><span className="mt-1 block text-base text-black/50">$128 · 3 colors</span>{!compact && <span className="mt-3 flex min-h-10 items-center justify-center rounded-full bg-black text-base font-semibold text-white">Add to cart</span>}</div>
       </div>
     </div>
   )
@@ -484,93 +486,79 @@ export function ShopifyWebsiteBuildPage() {
     <div className="min-h-screen bg-background text-foreground">
       <PageStructuredData breadcrumbs={structuredData.breadcrumbs} faqItems={text.faqs} service={structuredData.service} language={language} />
       <Navbar />
-      <main>
-        <section className="relative min-h-[100svh] overflow-hidden px-4 pb-10 pt-28 sm:px-6 md:px-10 md:pb-12 md:pt-32 lg:pb-6 lg:pt-24">
+      <main id="main-content" tabIndex={-1}>
+        <section className="service-hero service-hero-home-layout relative overflow-hidden px-4 pb-10 pt-28 sm:px-6 md:px-10 md:pb-12 md:pt-32 lg:pb-6 lg:pt-24">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_74%_34%,rgba(34,211,238,0.105),transparent_31%),radial-gradient(ellipse_at_26%_58%,rgba(119,252,117,0.145),transparent_35%),linear-gradient(135deg,#020403,#07100b_52%,#010202)]" />
           <div aria-hidden="true" className="absolute -inset-x-[18%] -top-[22%] h-[118%] animate-cro-signal-orbit bg-[radial-gradient(ellipse_at_68%_36%,rgba(34,211,238,0.15),transparent_28%),radial-gradient(ellipse_at_32%_68%,rgba(119,252,117,0.19),transparent_31%)] opacity-80 blur-2xl will-change-transform motion-reduce:animate-none" />
           <div aria-hidden="true" className="absolute inset-0 opacity-[0.115] [background-image:radial-gradient(circle,rgba(119,252,117,0.34)_1px,transparent_1.4px)] [background-size:42px_42px] [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]" />
+          <div aria-hidden="true" className="build-hero-foundation motion-reduce:hidden" />
+          <div aria-hidden="true" className="build-hero-column build-hero-column-one motion-reduce:hidden" />
+          <div aria-hidden="true" className="build-hero-column build-hero-column-two motion-reduce:hidden" />
+          <div aria-hidden="true" className="build-hero-column build-hero-column-three motion-reduce:hidden" />
           <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,rgba(0,0,0,0.14)_64%,rgba(0,0,0,0.64)_100%)]" />
           <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/75 to-transparent" />
 
           <div className="relative mx-auto flex w-full max-w-[1500px] flex-col lg:min-h-[calc(100svh-7.5rem)]">
-            <div className="grid flex-1 gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-center lg:gap-7 xl:gap-11">
-              <div className="min-w-0">
-                <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 font-mono text-base font-semibold uppercase tracking-[0.12em] text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.11),0_0_28px_rgba(119,252,117,0.06)]">
+            <div className="service-hero-layout flex flex-1 flex-col justify-center">
+              <div className="mx-auto min-w-0 max-w-6xl text-center">
+                <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary shadow-[0_0_28px_rgba(119,252,117,0.06)]">
                   <span className="size-1.5 animate-pulse rounded-full bg-primary shadow-[0_0_12px_rgba(119,252,117,0.9)] motion-reduce:animate-none" />
                   {text.eyebrow}
                 </p>
-                <h1 className="max-w-5xl text-balance text-[clamp(2.55rem,4.65vw,4.5rem)] font-bold leading-[1.02] tracking-[-0.025em]">{text.title}</h1>
-                <p className="mt-6 max-w-3xl text-lg font-semibold leading-[1.55] text-foreground/90 md:text-xl">{text.subtitle}</p>
-                <p className="mt-4 max-w-3xl text-base leading-[1.75] text-muted-foreground">{text.description}</p>
+                <h1 className="mx-auto mb-6 max-w-[1050px] bg-gradient-to-r from-foreground via-primary to-cyan-200 bg-[length:200%_100%] bg-clip-text text-balance text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-normal text-transparent animate-shimmer motion-reduce:animate-none md:mb-8">{text.title}</h1>
+                <p className="mx-auto mb-6 max-w-[900px] text-[clamp(1rem,1.8vw,1.35rem)] font-semibold leading-[1.5] text-foreground/90 md:mb-8">{text.subtitle}</p>
+                <p className="service-hero-description mx-auto mb-8 max-w-3xl text-base leading-[1.6] text-muted-foreground md:mb-12 md:text-lg">{text.description}</p>
 
-                <div className="mt-9 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-                  <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_30px_rgba(119,252,117,0.23)] transition-all hover:brightness-110 active:scale-[0.98]">
+                <div className="flex flex-col justify-center gap-4 sm:flex-row sm:gap-5">
+                  <a href={localizedPath("/diagnosis")} className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-bold text-primary-foreground shadow-[0_0_24px_rgba(119,252,117,0.28)] transition-all duration-300 hover:brightness-110 active:scale-[0.97] md:px-10 md:py-5">
                     {text.primaryCta}<ArrowUpRight className="size-4" />
                   </a>
-                  <a href="#work" className="inline-flex min-h-12 items-center justify-center rounded-full bg-white/[0.045] px-7 text-base font-semibold text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.09)] backdrop-blur-xl transition-colors hover:bg-cyan-300/[0.08]">
+                  <a href="#work" className="inline-flex min-h-14 items-center justify-center rounded-full border border-foreground/20 bg-white/[0.025] px-8 py-4 text-base font-semibold text-foreground backdrop-blur-sm transition-all duration-300 hover:bg-foreground/5 active:scale-[0.97] md:px-10 md:py-5">
                     {text.secondaryCta}
                   </a>
                 </div>
 
-                <div className="mt-8 grid grid-cols-2 gap-2 xl:grid-cols-3">
+                <div className="service-hero-proof mt-10 flex flex-wrap items-center justify-center gap-3 text-muted-foreground/75 md:mt-14">
                   {text.proof.map((item, index) => (
-                    <div key={item} className={"flex min-h-[64px] items-center gap-3 rounded-[1.2rem] bg-white/[0.04] px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.075)] backdrop-blur-xl " + (index === 2 ? "col-span-2 xl:col-span-1" : "")}>
+                    <div key={item} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-base font-medium">
                       <span className="font-mono text-base text-primary">0{index + 1}</span>
-                      <span className="text-base font-medium leading-snug text-foreground/72">{item}</span>
+                      <span>{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="relative min-w-0 overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_78%_22%,rgba(34,211,238,0.09),transparent_28%),radial-gradient(circle_at_18%_78%,rgba(119,252,117,0.1),transparent_30%),linear-gradient(145deg,rgba(255,255,255,0.055),rgba(255,255,255,0.012))] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.13),0_40px_105px_rgba(0,0,0,0.42)] backdrop-blur-2xl sm:rounded-[2.6rem_1.5rem_3rem_1.8rem] sm:p-6">
+              {SHOW_STOREFRONT_HERO_PREVIEW && <div className="relative mx-auto mt-7 w-full max-w-[1200px] min-w-0 overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_78%_22%,rgba(34,211,238,0.09),transparent_28%),radial-gradient(circle_at_18%_78%,rgba(119,252,117,0.1),transparent_30%),linear-gradient(145deg,rgba(255,255,255,0.055),rgba(255,255,255,0.012))] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.13),0_40px_105px_rgba(0,0,0,0.42)] backdrop-blur-2xl sm:rounded-[2.6rem_1.5rem_3rem_1.8rem] sm:p-6">
                 <div aria-hidden="true" className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(34,211,238,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.3)_1px,transparent_1px)] [background-size:54px_54px] [mask-image:radial-gradient(circle_at_center,black,transparent_84%)]" />
 
                 <div className="relative flex flex-wrap items-center justify-between gap-3 px-1 font-mono text-base uppercase tracking-[0.04em]">
-                  <span className="flex items-center gap-2 text-cyan-300"><MonitorSmartphone className="size-5" />Storefront build / live</span>
-                  <span className="flex items-center gap-2 text-primary"><span className="size-2 animate-pulse rounded-full bg-primary shadow-[0_0_13px_rgba(119,252,117,0.85)] motion-reduce:animate-none" />Launch ready</span>
+                  <span className="flex items-center gap-2 text-cyan-300"><MonitorSmartphone className="size-5" /><span className="sm:hidden">Build / live</span><span className="hidden sm:inline">Storefront build / live</span></span>
+                  <span className="flex items-center gap-2 text-primary"><span className="size-2 animate-pulse rounded-full bg-primary shadow-[0_0_13px_rgba(119,252,117,0.85)] motion-reduce:animate-none" /><span className="sm:hidden">Ready</span><span className="hidden sm:inline">Launch ready</span></span>
                 </div>
 
                 <div className="relative mt-5">
                   <div role="group" aria-label={language === "zh" ? "店铺设备预览" : "Storefront device preview"} className="grid grid-cols-2 gap-2 rounded-[1.15rem] bg-black/24 p-1.5 lg:hidden">
-                    <button type="button" aria-pressed={activeStorefrontPreview === "desktop"} onClick={() => setActiveStorefrontPreview("desktop")} className={"min-h-12 rounded-[0.9rem] px-3 text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary " + (activeStorefrontPreview === "desktop" ? "bg-primary text-black shadow-[0_0_22px_rgba(119,252,117,0.16)]" : "text-white/52 hover:bg-white/[0.045] hover:text-white")}>Desktop Storefront</button>
+                    <button type="button" aria-pressed={activeStorefrontPreview === "desktop"} onClick={() => setActiveStorefrontPreview("desktop")} className={"min-h-12 rounded-[0.9rem] px-3 text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary " + (activeStorefrontPreview === "desktop" ? "bg-primary text-black shadow-[0_0_22px_rgba(119,252,117,0.16)]" : "text-white/52 hover:bg-white/[0.045] hover:text-white")}><span className="sm:hidden">Desktop</span><span className="hidden sm:inline">Desktop Storefront</span></button>
                     <button type="button" aria-pressed={activeStorefrontPreview === "mobile"} onClick={() => setActiveStorefrontPreview("mobile")} className={"min-h-12 rounded-[0.9rem] px-3 text-base font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary " + (activeStorefrontPreview === "mobile" ? "bg-cyan-300 text-black shadow-[0_0_22px_rgba(34,211,238,0.16)]" : "text-white/52 hover:bg-white/[0.045] hover:text-white")}>Mobile PDP</button>
                   </div>
 
-                  <div className="mt-4 hidden min-h-[490px] grid-cols-[minmax(0,1fr)_185px] gap-4 lg:grid">
-                    <DesktopStorefrontPreview />
+                  <div className="mt-4 hidden min-h-[350px] grid-cols-[minmax(0,1fr)_165px] gap-4 lg:grid">
+                    <DesktopStorefrontPreview compact />
                     <div className="flex min-w-0 items-center justify-center overflow-hidden rounded-[1.45rem] bg-black/22 px-2 py-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
-                      <MobileStorefrontPreview />
+                      <MobileStorefrontPreview compact />
                     </div>
                   </div>
 
-                  <div aria-live="polite" className="mt-4 min-h-[470px] lg:hidden">
+                  <div aria-live="polite" className="mt-4 min-h-[300px] sm:min-h-[330px] lg:hidden">
                     {activeStorefrontPreview === "desktop" ? (
-                      <div key="desktop-preview" className="animate-in fade-in duration-300 motion-reduce:animate-none"><DesktopStorefrontPreview /></div>
+                      <div key="desktop-preview" className="animate-in fade-in duration-300 motion-reduce:animate-none"><DesktopStorefrontPreview compact /></div>
                     ) : (
-                      <div key="mobile-preview" className="flex min-h-[470px] items-center justify-center rounded-[1.45rem] bg-black/22 px-4 py-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] animate-in fade-in duration-300 motion-reduce:animate-none"><MobileStorefrontPreview /></div>
+                      <div key="mobile-preview" className="flex min-h-[300px] items-center justify-center rounded-[1.45rem] bg-black/22 px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] animate-in fade-in duration-300 motion-reduce:animate-none sm:min-h-[330px]"><MobileStorefrontPreview compact /></div>
                     )}
                   </div>
                 </div>
 
-                <div className="relative mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
-                  {[
-                    ["Theme", "Synced"],
-                    ["Liquid", "Compiled"],
-                    ["Performance", "94 / 100"],
-                    ["Responsive QA", "Passed"],
-                  ].map(([label, status], index) => (
-                    <div key={label} className="rounded-[1rem] bg-black/28 px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
-                      <span className="block font-mono text-base leading-tight text-white/38">{label}</span>
-                      <strong className={"mt-1.5 flex items-center gap-2 text-base leading-tight " + (index === 2 ? "text-cyan-200" : "text-primary")}><CheckCircle2 className="size-4 shrink-0" />{status}</strong>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="relative mt-3 flex items-center justify-between gap-4 rounded-[1rem] bg-primary/[0.065] px-4 py-3 font-mono text-base uppercase tracking-[-0.02em] text-primary shadow-[inset_0_1px_0_rgba(119,252,117,0.12)]">
-                  <span className="flex items-center gap-2"><PackageCheck className="size-5" />Storefront output</span>
-                  <span className="text-white/42">Desktop · Mobile · QA</span>
-                </div>
-              </div>
+              </div>}
             </div>
           </div>
         </section>

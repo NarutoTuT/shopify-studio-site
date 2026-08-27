@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { StructuredData } from '@/components/structured-data'
 import { GoogleAnalytics } from '@/components/google-analytics'
+import { SiteFooter } from '@/components/site-footer'
 import '../globals.css'
 
 const inter = Inter({ 
@@ -77,9 +78,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN">
-      <body className={`${inter.variable} font-sans antialiased`}>
-        <StructuredData />
+      <body className={`${inter.variable} site-min-type font-sans antialiased`}>
+        <a
+          href="#main-content"
+          className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-foreground px-5 py-3 font-semibold text-background shadow-xl transition-transform focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-primary"
+        >
+          跳到主要内容
+        </a>
+        <StructuredData language="zh" />
         {children}
+        <SiteFooter language="zh" />
         <GoogleAnalytics />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

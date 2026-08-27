@@ -141,11 +141,11 @@ const copy = {
   },
   en: {
     eyebrow: "FREE SHOPIFY REVIEW",
-    title: "Free Shopify Store Growth Review",
+    title: "Free Shopify Growth Review",
     description: "Find the key issues affecting store conversion and get optimization direction across Shopify engineering, page experience, and tracking.",
-    primaryCta: "Start Free Review",
-    secondaryCta: "Back Home",
-    trust: ["For Chinese-founded global brands", "Reply within 1-2 business days", "No full requirements doc needed"],
+    primaryCta: "Start My Free Review",
+    secondaryCta: "Return Home",
+    trust: ["For Chinese-founded brands selling globally", "Reply within 1–2 business days", "No full requirements document needed"],
     heroCards: [
       { title: "Engineering", text: "Theme, performance, mobile UX" },
       { title: "Conversion", text: "Homepage, PDP, CTA, trust" },
@@ -200,8 +200,8 @@ const copy = {
     fitTitle: "Who It Is For",
     fitIntro: "Use this if you already have products, traffic, or a Shopify store, but are unsure what blocks conversion.",
     fitItems: ["Shopify brands", "Cross-border ecommerce brands", "Stores running paid ads", "Stores trying to improve conversion"],
-    formTitle: "Submit your Free Shopify Review brief",
-    formDescription: "The existing fields are enough to submit. The more specific the input, the sharper the first review.",
+    formTitle: "Tell us about your Shopify store",
+    formDescription: "Share what you know today. Specific context helps us make the first review more useful, but a complete requirements document is not required.",
     labels: {
       storeUrl: "Shopify store URL",
       category: "Product category",
@@ -410,12 +410,8 @@ export function DiagnosisPage() {
   }
 
   const reviewForm = (
-    <form id="review-form" onSubmit={handleSubmit} className="scroll-mt-28 rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-4 shadow-2xl shadow-black/30 backdrop-blur sm:p-5 md:p-8">
-      <div className="mb-7">
-        <p className="mb-3 text-base font-semibold uppercase tracking-[0.08em] text-primary">Review Form</p>
-        <h2 className="text-xl font-bold tracking-normal sm:text-2xl">{text.formTitle}</h2>
-        <p className="mt-2 text-base leading-relaxed text-muted-foreground">{text.formDescription}</p>
-      </div>
+    <form id="review-form" onSubmit={handleSubmit} className="scroll-mt-28">
+      <p className="mb-5 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">Review Form</p>
 
       <div className="grid gap-5">
         <Field label={text.labels.storeUrl}>
@@ -489,7 +485,7 @@ export function DiagnosisPage() {
     <div className="min-h-screen bg-background text-foreground">
       <PageStructuredData breadcrumbs={structuredData.breadcrumbs} faqItems={[]} service={structuredData.service} page={structuredData.page} language={language} />
       <Navbar />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-[#020403] px-4 pb-16 pt-28 sm:px-6 md:px-10 md:pb-20 md:pt-32">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_43%,rgba(119,252,117,0.13),transparent_31%),radial-gradient(ellipse_at_78%_36%,rgba(34,211,238,0.11),transparent_30%),linear-gradient(135deg,#020403,#07100b_52%,#010202)]" />
           <div aria-hidden="true" className="absolute -inset-x-[18%] -top-[22%] h-[118%] animate-cro-signal-orbit bg-[radial-gradient(ellipse_at_66%_34%,rgba(34,211,238,0.19),transparent_28%),radial-gradient(ellipse_at_34%_68%,rgba(119,252,117,0.24),transparent_31%)] opacity-90 blur-2xl will-change-transform motion-reduce:animate-none" />
