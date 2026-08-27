@@ -87,6 +87,12 @@
   --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   --animate-fade-in: fade-in 0.5s ease-out forwards;
   --animate-shimmer: shimmer 3s infinite;
+  --animate-theme-aurora-orbit: theme-aurora-orbit 22s linear infinite;
+  --animate-theme-aurora-drift: theme-aurora-drift 14s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+  --animate-theme-liquid-compile: theme-liquid-compile 12s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  --animate-cro-signal-orbit: cro-signal-orbit 16s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+  --animate-cro-data-flow: cro-data-flow 5.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  --animate-cro-data-flow-y: cro-data-flow-y 5.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   
   @keyframes fade-up {
     0% {
@@ -126,6 +132,78 @@
     50% {
       left: 92%;
       opacity: 0.9;
+    }
+  }
+
+  @keyframes theme-aurora-orbit {
+    from {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.08);
+    }
+    to {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+
+  @keyframes theme-aurora-drift {
+    from {
+      transform: translate3d(-8%, -5%, 0) scale(0.96);
+    }
+    to {
+      transform: translate3d(11%, 7%, 0) scale(1.08);
+    }
+  }
+
+  @keyframes theme-liquid-compile {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 0, 0) skewX(-8deg);
+    }
+    10%, 84% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate3d(650%, 0, 0) skewX(-8deg);
+    }
+  }
+
+  @keyframes cro-signal-orbit {
+    from {
+      transform: translate3d(-6%, -4%, 0) scale(0.96);
+    }
+    to {
+      transform: translate3d(8%, 6%, 0) scale(1.08);
+    }
+  }
+
+  @keyframes cro-data-flow {
+    0% {
+      opacity: 0;
+      transform: translate3d(-140%, 0, 0);
+    }
+    14%, 84% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate3d(720%, 0, 0);
+    }
+  }
+
+  @keyframes cro-data-flow-y {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -140%, 0);
+    }
+    14%, 84% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate3d(0, 360%, 0);
     }
   }
 }

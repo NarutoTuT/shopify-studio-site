@@ -12,6 +12,7 @@ const copy = {
     servicesLabel: "服务",
     serviceLinks: [
       { label: "Shopify Engineering", href: "/services/shopify-website-build" },
+      { label: "Shopify Theme Customization", href: "/services/shopify-theme-customization" },
       { label: "Conversion Optimization", href: "/services/shopify-conversion-optimization" },
       { label: "Growth Analytics & Tracking", href: "/services/shopify-ga4-gtm" },
     ],
@@ -29,6 +30,7 @@ const copy = {
     servicesLabel: "Services",
     serviceLinks: [
       { label: "Shopify Engineering", href: "/services/shopify-website-build" },
+      { label: "Shopify Theme Customization", href: "/services/shopify-theme-customization" },
       { label: "Conversion Optimization", href: "/services/shopify-conversion-optimization" },
       { label: "Growth Analytics & Tracking", href: "/services/shopify-ga4-gtm" },
     ],
