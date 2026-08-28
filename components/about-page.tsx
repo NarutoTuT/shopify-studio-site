@@ -20,6 +20,7 @@ import {
 
 import { Navbar } from "@/components/navbar"
 import { useLanguage } from "@/components/language-provider"
+import { PageStructuredData } from "@/components/page-structured-data"
 
 const aboutSectionTitleClass = "text-[clamp(2rem,4vw,3.4rem)] font-bold leading-tight tracking-normal text-foreground"
 
@@ -383,9 +384,26 @@ const copy = {
 export function AboutPage() {
   const { language, localizedPath } = useLanguage()
   const text = copy[language]
+  const aboutUrl = language === "en" ? "https://whaleleap.studio/en/about" : "https://whaleleap.studio/about"
+  const aboutStructuredData = {
+    breadcrumbs: [
+      { name: language === "en" ? "Home" : "首页", url: language === "en" ? "https://whaleleap.studio/en" : "https://whaleleap.studio/" },
+      { name: language === "en" ? "About WhaleLeap Studio" : "关于 WhaleLeap Studio", url: aboutUrl },
+    ],
+    page: {
+      type: "AboutPage" as const,
+      name: language === "en" ? "About WhaleLeap Studio" : "关于 WhaleLeap Studio",
+      description: text.description,
+      url: aboutUrl,
+      about: ["WhaleLeap Studio", "Shopify Growth Engineering", "Shopify development", "Conversion optimization", "GA4 and GTM measurement"],
+    },
+  }
+
+  // TODO: Add a Person entity only after the founder's public name, role, verified bio, and profile URLs are provided.
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <PageStructuredData breadcrumbs={aboutStructuredData.breadcrumbs} page={aboutStructuredData.page} language={language} />
       <Navbar />
       <main id="main-content" tabIndex={-1}>
         <section className="about-hero service-hero service-hero-home-layout relative overflow-hidden bg-[#020403] px-4 pb-8 pt-24 sm:px-6 sm:pb-10 sm:pt-28 md:px-10 md:pb-12 md:pt-32 lg:pb-8 lg:pt-24">
@@ -510,7 +528,7 @@ export function AboutPage() {
                   <div className="relative mx-4 mb-5 mt-4 grid grid-cols-[104px_1fr] items-center overflow-hidden rounded-[1.4rem_0.9rem_1.65rem_1rem] border border-white/20 bg-black/75 p-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_20px_55px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:mx-7 sm:mt-5 sm:grid-cols-[128px_1fr] sm:p-3 lg:absolute lg:bottom-8 lg:left-8 lg:mx-0 lg:mb-0 lg:mt-0 lg:block lg:h-[72%] lg:w-[34%] lg:min-w-[220px] lg:rounded-[2.2rem_1.15rem_2.55rem_1.35rem] lg:p-0">
                     <div className="relative aspect-square overflow-hidden rounded-[1rem_0.65rem_1.2rem_0.75rem] lg:absolute lg:inset-0 lg:aspect-auto lg:rounded-[inherit]">
                       <Image
-                        src="/images/about/founder-portrait.png"
+                        src="/images/about/founder-portrait.webp"
                         alt={text.founderAlt}
                         fill
                         priority={false}
@@ -608,11 +626,11 @@ export function AboutPage() {
               <div aria-hidden="true" className="absolute inset-x-[8%] top-0 h-px bg-gradient-to-r from-transparent via-signal/70 to-primary/55" />
               <div className="relative space-y-8 sm:space-y-10 lg:space-y-14">
               {[
-                "/images/about/project-ebike-home.png",
-                "/images/about/project-tech-collection.png",
-                "/images/about/project-smart-glasses-pdp.png",
-                "/images/about/project-rider-guides-v2.png",
-                "/images/about/project-footer-system.png",
+                "/images/about/project-ebike-home.webp",
+                "/images/about/project-tech-collection.webp",
+                "/images/about/project-smart-glasses-pdp.webp",
+                "/images/about/project-rider-guides-v2.webp",
+                "/images/about/project-footer-system.webp",
               ].map((src, index) => (
                 <article
                   key={src}
@@ -796,8 +814,8 @@ export function AboutPage() {
 
                 <div className="relative grid gap-8 lg:grid-cols-[1.16fr_0.84fr] lg:gap-3">
                   {[
-                    "/images/about/generated-measurement-validation.png",
-                    "/images/about/generated-launch-qa.png",
+                    "/images/about/generated-measurement-validation.webp",
+                    "/images/about/generated-launch-qa.webp",
                   ].map((src, index) => (
                     <article key={src} className="flex min-w-0 flex-col">
                       <div className="order-1 px-2 pb-5 pt-2 sm:px-3 sm:pb-6 lg:order-2 lg:px-5 lg:pb-3 lg:pt-6">
@@ -847,7 +865,7 @@ export function AboutPage() {
             <figure className="relative isolate overflow-hidden rounded-[2.8rem_1.45rem_3.2rem_1.8rem] border border-white/20 bg-[#030604] shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_42px_105px_rgba(0,0,0,0.38)]">
               <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/10] lg:aspect-[1918/820]">
                 <Image
-                  src="/images/about-client-fit-v2.png"
+                  src="/images/about-client-fit-v2.webp"
                   alt={text.clientImageAlt}
                   fill
                   sizes="(max-width: 640px) 88vw, (max-width: 1024px) 92vw, 1500px"

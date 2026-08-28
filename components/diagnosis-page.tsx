@@ -483,7 +483,7 @@ export function DiagnosisPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <PageStructuredData breadcrumbs={structuredData.breadcrumbs} faqItems={[]} service={structuredData.service} page={structuredData.page} language={language} />
+      <PageStructuredData breadcrumbs={structuredData.breadcrumbs} service={structuredData.service} page={structuredData.page} language={language} />
       <Navbar />
       <main id="main-content" tabIndex={-1}>
         <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-[#020403] px-4 pb-16 pt-28 sm:px-6 md:px-10 md:pb-20 md:pt-32">

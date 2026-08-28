@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   publisher: "WhaleLeap Studio",
   alternates: {
     canonical: "/en",
-    languages: { "zh-CN": "/", en: "/en" },
+    languages: { "zh-CN": "/", en: "/en", "x-default": "/" },
   },
   openGraph: {
     type: "website",
@@ -35,11 +35,13 @@ export const metadata: Metadata = {
     siteName: "WhaleLeap Studio",
     title: "WhaleLeap Studio | Shopify Growth Engineering",
     description: "Build faster, more maintainable, and conversion-ready Shopify storefronts.",
+    images: [{ url: "/hero/whaleleap-growth-current-v1.webp", width: 1672, height: 941, alt: "WhaleLeap Studio Shopify Growth Engineering" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "WhaleLeap Studio | Shopify Growth Engineering",
     description: "Shopify engineering, CRO, and analytics for global ecommerce brands.",
+    images: ["/hero/whaleleap-growth-current-v1.webp"],
   },
   icons: {
     icon: [

@@ -19,11 +19,11 @@ gsap.registerPlugin(ScrollTrigger)
 const images = [
   "/case-studies/silkgear-case-generated-v2.webp",
   "/case-studies/sculpfun-case-generated-v2.webp",
-  "/case-studies/food-gift-real-v2.png",
-  "/case-studies/outdoor-cycling-real-v2.png",
-  "/case-studies/beauty-skincare-real-v2.png",
-  "/case-studies/home-lifestyle-real-v2.png",
-  "/case-studies/sports-retail-real-v2.png",
+  "/case-studies/food-gift-real-v2.webp",
+  "/case-studies/outdoor-cycling-real-v2.webp",
+  "/case-studies/beauty-skincare-real-v2.webp",
+  "/case-studies/home-lifestyle-real-v2.webp",
+  "/case-studies/sports-retail-real-v2.webp",
 ]
 
 const copy = {
@@ -351,12 +351,20 @@ export function ShowcaseSection() {
                   onMouseLeave={() => {
                     isCarouselHoveredRef.current = false
                   }}
+                  onFocusCapture={() => {
+                    isCarouselHoveredRef.current = true
+                  }}
+                  onBlurCapture={() => {
+                    isCarouselHoveredRef.current = false
+                  }}
                 >
                   <article className="home-module-shell group relative transition-all duration-700 hover:-translate-y-1">
                     <div className="overflow-hidden">
                       <img
                         src={images[index]}
                         alt={item.title}
+                        width={1672}
+                        height={941}
                         className="aspect-[4/3] w-full object-cover object-center transition-transform duration-1000 ease-out sm:aspect-[16/9] md:group-hover:scale-105"
                         loading="lazy"
                       />

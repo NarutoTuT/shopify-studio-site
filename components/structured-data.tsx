@@ -40,8 +40,7 @@ function createStructuredData(language: "zh" | "en") {
         url: siteUrl,
         logo: `${siteUrl}/icon.svg`,
         description:
-          "WhaleLeap Studio designs and develops Shopify sales systems for global ecommerce brands, covering Shopify website builds, theme customization, conversion optimization, and GA4/GTM tracking.",
-        sameAs: [],
+          "WhaleLeap Studio is a Shopify Growth Engineering Studio for global ecommerce brands, combining Shopify website builds, theme customization, conversion optimization, and GA4/GTM measurement.",
         contactPoint: {
           "@type": "ContactPoint",
           contactType: "sales",

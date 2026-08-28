@@ -151,7 +151,7 @@ const websiteCostStructuredData = {
     { name: "Shopify 建站费用说明", url: "https://whaleleap.studio/learn/shopify-website-cost" },
   ],
   page: {
-    type: "WebPage" as const,
+    type: "Article" as const,
     name: "Shopify 建站多少钱？费用、方案与报价说明",
     description:
       "说明 Shopify 建站费用构成、¥20,000 起、¥35,000 起、¥50,000 起三档报价差异，以及 Shopify 建站通常不包含的第三方费用。",
@@ -166,7 +166,6 @@ export function ShopifyWebsiteCostPage() {
     <div className="min-h-screen bg-background text-foreground">
       <PageStructuredData
         breadcrumbs={websiteCostStructuredData.breadcrumbs}
-        faqItems={faqs}
         page={websiteCostStructuredData.page}
       />
       <Navbar />

@@ -85,66 +85,38 @@ export function ProcessSection() {
         </div>
 
         <div className="home-module-shell p-4 sm:p-6 lg:p-8">
-        <div className="relative hidden lg:block">
-          <div aria-hidden="true" className="absolute left-[8%] right-[8%] top-[58px] h-px overflow-hidden bg-primary/25 shadow-[0_0_18px_rgba(119,252,117,0.45)]">
-            <span className="block h-full w-full animate-shimmer bg-[linear-gradient(90deg,transparent,rgba(119,252,117,1),rgba(58,221,255,0.8),transparent)] bg-[length:200%_100%] motion-reduce:animate-none" />
-          </div>
+          <div className="relative grid gap-4 lg:grid-cols-5">
+            <div aria-hidden="true" className="absolute bottom-8 left-[27px] top-8 w-px bg-gradient-to-b from-primary via-primary/45 to-cyan-400/25 shadow-[0_0_14px_rgba(119,252,117,0.35)] lg:bottom-auto lg:left-[8%] lg:right-[8%] lg:top-[58px] lg:h-px lg:w-auto lg:overflow-hidden lg:bg-primary/25 lg:shadow-[0_0_18px_rgba(119,252,117,0.45)]">
+              <span className="hidden h-full w-full animate-shimmer bg-[linear-gradient(90deg,transparent,rgba(119,252,117,1),rgba(58,221,255,0.8),transparent)] bg-[length:200%_100%] motion-reduce:animate-none lg:block" />
+            </div>
 
-          <div className="grid grid-cols-5 gap-4">
             {text.steps.map((step, index) => {
               const Icon = icons[index]
 
               return (
-                <article key={step.title} className="group relative flex min-w-0 flex-col items-center">
-                  <div className="relative z-10 flex size-[116px] items-center justify-center rounded-full border border-primary/45 bg-black/90 shadow-[0_0_45px_rgba(119,252,117,0.12),inset_0_0_30px_rgba(119,252,117,0.08)] backdrop-blur-xl transition-[border-color,box-shadow,transform] duration-500 group-hover:-translate-y-1 group-hover:border-primary group-hover:shadow-[0_0_55px_rgba(119,252,117,0.3),inset_0_0_35px_rgba(119,252,117,0.13)]">
-                    <span aria-hidden="true" className="absolute inset-2 animate-[spin_16s_linear_infinite] rounded-full border border-dashed border-primary/25 motion-reduce:animate-none" />
-                    <span aria-hidden="true" className="absolute inset-5 rounded-full border border-white/10" />
-                    <div className="relative text-center">
-                      <span className="block font-mono text-2xl font-bold text-white">0{index + 1}</span>
-                      <Icon className="mx-auto mt-1 size-4 text-primary" />
-                    </div>
+                <article key={step.title} className="group relative grid min-w-0 grid-cols-[56px_1fr] gap-4 lg:flex lg:flex-col lg:items-center lg:gap-0">
+                  <div className="relative z-10 flex size-14 items-center justify-center rounded-full border border-primary/45 bg-black shadow-[0_0_26px_rgba(119,252,117,0.16),inset_0_0_20px_rgba(119,252,117,0.08)] backdrop-blur-xl transition-[border-color,box-shadow,transform] duration-500 group-hover:border-primary lg:size-[116px] lg:bg-black/90 lg:shadow-[0_0_45px_rgba(119,252,117,0.12),inset_0_0_30px_rgba(119,252,117,0.08)] lg:group-hover:-translate-y-1 lg:group-hover:shadow-[0_0_55px_rgba(119,252,117,0.3),inset_0_0_35px_rgba(119,252,117,0.13)]">
+                    <span aria-hidden="true" className="absolute inset-1.5 rounded-full border border-dashed border-primary/25 lg:inset-2 lg:animate-[spin_16s_linear_infinite] motion-reduce:animate-none" />
+                    <span aria-hidden="true" className="absolute inset-5 hidden rounded-full border border-white/10 lg:block" />
+                    <Icon className="relative size-5 text-primary lg:mt-6 lg:size-4" />
+                    <span className="absolute top-7 hidden font-mono text-2xl font-bold text-white lg:block">0{index + 1}</span>
                   </div>
 
-                  <span aria-hidden="true" className="h-7 w-px bg-gradient-to-b from-primary/80 to-primary/15" />
+                  <span aria-hidden="true" className="hidden h-7 w-px bg-gradient-to-b from-primary/80 to-primary/15 lg:block" />
 
-                  <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_60px_rgba(0,0,0,0.28)] backdrop-blur-xl transition-[border-color,background-color,box-shadow,transform] duration-500 group-hover:-translate-y-1 group-hover:border-primary/40 group-hover:bg-primary/[0.065] group-hover:shadow-[0_0_38px_rgba(119,252,117,0.1)]">
+                  <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl transition-[border-color,background-color,box-shadow,transform] duration-500 group-hover:border-primary/40 lg:bg-white/[0.035] lg:shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_60px_rgba(0,0,0,0.28)] lg:group-hover:-translate-y-1 lg:group-hover:bg-primary/[0.065] lg:group-hover:shadow-[0_0_38px_rgba(119,252,117,0.1)]">
                     <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px -translate-x-full bg-gradient-to-r from-transparent via-primary to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-                    <div className="mb-5 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.18em] text-primary/70">
-                      <span>NODE / 0{index + 1}</span>
-                      <span>{(index + 1) * 20}%</span>
+                    <div className="mb-3 flex items-center justify-between font-mono text-xs font-semibold uppercase tracking-[0.02em] text-primary lg:mb-5 lg:text-sm lg:text-primary/70">
+                      <span><span className="lg:hidden">0{index + 1}</span><span className="hidden lg:inline">NODE / 0{index + 1}</span></span>
+                      <span><span className="lg:hidden">Process node</span><span className="hidden lg:inline">{(index + 1) * 20}%</span></span>
                     </div>
-                    <h3 className="mb-3 text-lg font-semibold tracking-normal text-foreground">{step.title}</h3>
-                    <p className="text-sm leading-[1.7] text-muted-foreground">{step.text}</p>
+                    <h3 className="mb-2 text-lg font-semibold tracking-normal text-foreground lg:mb-3">{step.title}</h3>
+                    <p className="text-base leading-[1.7] text-muted-foreground">{step.text}</p>
                   </div>
                 </article>
               )
             })}
           </div>
-        </div>
-
-        <div className="relative space-y-4 lg:hidden">
-          <div aria-hidden="true" className="absolute bottom-8 left-[27px] top-8 w-px bg-gradient-to-b from-primary via-primary/45 to-cyan-400/25 shadow-[0_0_14px_rgba(119,252,117,0.35)]" />
-          {text.steps.map((step, index) => {
-            const Icon = icons[index]
-
-            return (
-              <article key={step.title} className="group relative grid grid-cols-[56px_1fr] gap-4">
-                <div className="relative z-10 flex size-14 items-center justify-center rounded-full border border-primary/45 bg-black shadow-[0_0_26px_rgba(119,252,117,0.16),inset_0_0_20px_rgba(119,252,117,0.08)]">
-                  <span aria-hidden="true" className="absolute inset-1.5 rounded-full border border-dashed border-primary/25" />
-                  <Icon className="relative size-5 text-primary" />
-                </div>
-                <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl">
-                  <div className="mb-3 flex items-center justify-between">
-                    <span className="font-mono text-xs font-semibold text-primary">0{index + 1}</span>
-                    <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-white/35">Process node</span>
-                  </div>
-                  <h3 className="mb-2 text-lg font-semibold tracking-normal text-foreground">{step.title}</h3>
-                  <p className="text-sm leading-[1.7] text-muted-foreground">{step.text}</p>
-                </div>
-              </article>
-            )
-          })}
-        </div>
         </div>
       </div>
     </section>

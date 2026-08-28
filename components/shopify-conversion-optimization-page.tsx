@@ -536,7 +536,6 @@ export function ShopifyConversionOptimizationPage() {
     <div className="min-h-screen bg-background text-foreground">
       <PageStructuredData
         breadcrumbs={structuredData.breadcrumbs}
-        faqItems={text.faqs}
         service={structuredData.service}
         language={language}
       />

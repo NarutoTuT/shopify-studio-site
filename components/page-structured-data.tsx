@@ -3,11 +3,6 @@ type BreadcrumbItem = {
   url: string
 }
 
-type FaqItem = {
-  q: string
-  a: string
-}
-
 type ServiceItem = {
   name: string
   description: string
@@ -15,7 +10,7 @@ type ServiceItem = {
 }
 
 type PageItem = {
-  type?: "WebPage" | "Article"
+  type?: "WebPage" | "AboutPage" | "Article"
   name: string
   description: string
   url: string
@@ -25,7 +20,6 @@ type PageItem = {
 
 type PageStructuredDataProps = {
   breadcrumbs: BreadcrumbItem[]
-  faqItems: FaqItem[]
   service?: ServiceItem
   page?: PageItem
   language?: "zh" | "en"
@@ -33,7 +27,7 @@ type PageStructuredDataProps = {
 
 const siteUrl = "https://whaleleap.studio"
 
-export function PageStructuredData({ breadcrumbs, faqItems, service, page, language = "zh" }: PageStructuredDataProps) {
+export function PageStructuredData({ breadcrumbs, service, page, language = "zh" }: PageStructuredDataProps) {
   const inLanguage = language === "zh" ? "zh-CN" : "en"
   const structuredData = {
     "@context": "https://schema.org",
@@ -45,18 +39,6 @@ export function PageStructuredData({ breadcrumbs, faqItems, service, page, langu
           position: index + 1,
           name: item.name,
           item: item.url,
-        })),
-      },
-      {
-        "@type": "FAQPage",
-        inLanguage,
-        mainEntity: faqItems.map((item) => ({
-          "@type": "Question",
-          name: item.q,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: item.a,
-          },
         })),
       },
       page
@@ -77,6 +59,12 @@ export function PageStructuredData({ breadcrumbs, faqItems, service, page, langu
               "@type": "Thing",
               name,
             })),
+            ...(page.type === "Article"
+              ? {
+                  author: { "@id": `${siteUrl}/#organization` },
+                  publisher: { "@id": `${siteUrl}/#organization` },
+                }
+              : {}),
           }
         : null,
       service

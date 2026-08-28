@@ -37,6 +37,7 @@ export const metadata: Metadata = {
     languages: {
       'zh-CN': '/',
       'en': '/en',
+      'x-default': '/',
     },
   },
   openGraph: {
@@ -46,11 +47,13 @@ export const metadata: Metadata = {
     siteName: 'WhaleLeap Studio',
     title: 'WhaleLeap Studio | Shopify 建站、主题定制与转化优化',
     description: '面向跨境品牌的 Shopify 建站、主题定制、转化率优化、GA4/GTM 数据追踪和基础 SEO 服务。',
+    images: [{ url: '/hero/whaleleap-growth-current-v1.webp', width: 1672, height: 941, alt: 'WhaleLeap Studio Shopify Growth Engineering' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'WhaleLeap Studio | Shopify 建站、主题定制与转化优化',
     description: '面向跨境品牌的 Shopify 建站、主题定制、转化率优化、GA4/GTM 数据追踪和基础 SEO 服务。',
+    images: ['/hero/whaleleap-growth-current-v1.webp'],
   },
   icons: {
     icon: [

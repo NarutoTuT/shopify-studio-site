@@ -15,22 +15,19 @@ const routes = [
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date()
-
   return routes.flatMap((route) => {
     const zhUrl = `${siteUrl}${route}`
     const enUrl = `${siteUrl}/en${route}`
     const shared = {
-      lastModified,
       changeFrequency: route === "" ? "weekly" as const : "monthly" as const,
       priority: route === "" ? 1 : route.startsWith("/services") ? 0.8 : 0.7,
     }
 
     if (route.startsWith("/learn/")) {
-      return [{ url: zhUrl, ...shared, alternates: { languages: { "zh-CN": zhUrl } } }]
+      return [{ url: zhUrl, ...shared, alternates: { languages: { "zh-CN": zhUrl, "x-default": zhUrl } } }]
     }
 
-    const alternates = { languages: { "zh-CN": zhUrl, en: enUrl } }
+    const alternates = { languages: { "zh-CN": zhUrl, en: enUrl, "x-default": zhUrl } }
     return [{ url: zhUrl, ...shared, alternates }, { url: enUrl, ...shared, alternates }]
   })
 }
