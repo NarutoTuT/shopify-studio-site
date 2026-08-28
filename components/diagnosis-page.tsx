@@ -410,7 +410,7 @@ export function DiagnosisPage() {
   }
 
   const reviewForm = (
-    <form id="review-form" onSubmit={handleSubmit} className="scroll-mt-28">
+    <form id="review-form" onSubmit={handleSubmit} noValidate className="scroll-mt-28">
       <p className="mb-5 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">Review Form</p>
 
       <div className="grid gap-5">
@@ -545,7 +545,18 @@ export function DiagnosisPage() {
           </div>
         </section>
 
-        <section id="growth-signals" className="scroll-mt-24 bg-black px-4 py-[50px] sm:px-6 md:px-10 md:py-[100px]">
+        <section className="bg-background px-4 py-[50px] sm:px-6 md:px-10 md:py-[100px]">
+          <div className="mx-auto grid max-w-[1500px] gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start lg:gap-10">
+            <div className="lg:sticky lg:top-28">
+              <p className="mb-4 text-base font-semibold uppercase tracking-[0.08em] text-primary">Review Form</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.formTitle}</h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{text.formDescription}</p>
+            </div>
+            {reviewForm}
+          </div>
+        </section>
+
+        <section id="growth-signals" className="scroll-mt-24 bg-black px-4 pb-[50px] pt-0 sm:px-6 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto max-w-[1500px]">
             <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
               <p className="font-mono text-base font-semibold uppercase tracking-[0.08em] text-cyan-300">Diagnostic signals / 04</p>
@@ -704,17 +715,6 @@ export function DiagnosisPage() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section className="bg-background px-4 pb-[50px] pt-0 sm:px-6 md:px-10 md:pb-[100px] md:pt-0">
-          <div className="mx-auto grid max-w-[1500px] gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start lg:gap-10">
-            <div className="lg:sticky lg:top-28">
-              <p className="mb-4 text-base font-semibold uppercase tracking-[0.08em] text-primary">Review Form</p>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.formTitle}</h2>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{text.formDescription}</p>
-            </div>
-            {reviewForm}
           </div>
         </section>
 

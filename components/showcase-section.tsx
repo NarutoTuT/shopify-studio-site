@@ -212,7 +212,7 @@ export function ShowcaseSection() {
               <CarouselItem
                 key={item.title}
                 aria-label={`${index + 1} / ${text.items.length}`}
-                className="basis-[92%] pl-3 sm:basis-[85%] md:basis-[75%] md:pl-8 lg:basis-[65%] xl:basis-[55%]"
+                className="basis-[92%] pl-3 sm:basis-[85%] md:basis-[75%] md:pl-8 lg:basis-[72%] xl:basis-[64%]"
               >
                 <div className="group">
                   <article className="home-module-shell group relative transition-all duration-700 hover:-translate-y-1">

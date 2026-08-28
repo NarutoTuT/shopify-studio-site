@@ -4,6 +4,7 @@ import { useState } from "react"
 import { ArrowUpRight, CheckCircle2, Clock3, FileWarning, HelpCircle, Layers3, Plus, ShieldCheck } from "lucide-react"
 
 import { Navbar } from "@/components/navbar"
+import { ServiceFaqPanel } from "@/components/service-faq-panel"
 import { useLanguage } from "@/components/language-provider"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
@@ -299,8 +300,6 @@ export function PricingPage() {
     closingText: "Share your product, budget, and launch target. We will identify the right delivery depth first.",
     routes: ["Quick launch", "Brand custom", "Business system"],
   }
-  const activeFaqItem = text.faqs[activeFaq]
-  const activeFaqMeta = pricingFaqMeta[activeFaq]
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -604,56 +603,21 @@ export function PricingPage() {
               <p className="mx-auto mt-4 max-w-3xl text-base leading-[1.75] text-muted-foreground">{language === "zh" ? "把方案选择、复杂业务、售后与长期维护讲清楚，再决定预算投入。" : "Clarify package fit, complex requirements, support, and ongoing care before committing budget."}</p>
             </div>
 
-            <div className="relative overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_78%_34%,rgba(34,211,238,0.075),transparent_29%),radial-gradient(circle_at_24%_68%,rgba(119,252,117,0.09),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.058),rgba(255,255,255,0.012))] px-4 py-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.13),0_40px_110px_rgba(0,0,0,0.34)] backdrop-blur-2xl sm:rounded-[2.6rem_1.5rem_3rem_1.8rem] sm:px-6 sm:py-7 lg:px-10 lg:py-9">
-              <div aria-hidden="true" className="absolute inset-0 opacity-[0.055] [background-image:linear-gradient(rgba(34,211,238,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.3)_1px,transparent_1px)] [background-size:58px_58px] [mask-image:radial-gradient(circle_at_center,black,transparent_82%)]" />
-              <div aria-hidden="true" className="absolute bottom-[16%] right-[2%] h-px w-[58%] -rotate-3 animate-shimmer bg-gradient-to-r from-transparent via-cyan-300/25 to-transparent bg-[length:200%_100%] motion-reduce:animate-none" />
-
-              <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 px-1">
-                <div className="flex items-center gap-3"><span className="size-2 animate-pulse rounded-full bg-primary shadow-[0_0_16px_rgba(119,252,117,0.8)] motion-reduce:animate-none" /><span className="font-mono text-base uppercase text-primary">Pricing knowledge / online</span></div>
-                <span className="font-mono text-base uppercase text-white/35">06 questions indexed</span>
-              </div>
-
-              <div className="relative z-10 mt-7 hidden min-w-0 grid-cols-[0.38fr_0.62fr] gap-7 lg:grid">
-                <div role="group" aria-label={language === "zh" ? "价格常见问题目录" : "Pricing FAQ directory"} className="space-y-2 rounded-[1.7rem] bg-black/20 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.065)]">
-                  {text.faqs.map((item, index) => {
-                    const isActive = activeFaq === index
-                    return (
-                      <button type="button" key={item.q} aria-pressed={isActive} aria-controls="pricing-faq-answer-panel" onClick={() => setActiveFaq(index)} className={"group relative flex min-h-[78px] w-full items-center gap-4 overflow-hidden rounded-[1.35rem] px-4 text-left transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary motion-reduce:transition-none " + (isActive ? "bg-white/[0.09] shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_0_30px_rgba(119,252,117,0.07)]" : "bg-transparent hover:bg-white/[0.035]")}>
-                        <span className={"flex size-11 shrink-0 items-center justify-center rounded-full font-mono text-base transition-colors " + (isActive ? "bg-primary text-black" : "bg-white/[0.045] text-cyan-300/42 group-hover:text-primary")}>0{index + 1}</span>
-                        <span className="min-w-0"><span className={"block font-mono text-base uppercase " + (isActive ? "text-primary" : "text-cyan-300/38")}>{pricingFaqMeta[index].code}</span><strong className={"mt-1 block text-base leading-snug " + (isActive ? "text-white" : "text-white/52 group-hover:text-white/72")}>{item.q}</strong></span>
-                        {isActive && <span aria-hidden="true" className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-primary/65 to-transparent" />}
-                      </button>
-                    )
-                  })}
-                </div>
-
-                <div id="pricing-faq-answer-panel" role="region" aria-live="polite" aria-label={language === "zh" ? "当前价格问题答案" : "Current pricing answer"} className="relative flex min-h-[510px] min-w-0 items-center overflow-hidden rounded-[1.7rem] bg-black/18 px-7 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] xl:px-12">
-                  <div aria-hidden="true" className="absolute right-[8%] top-[10%] size-52 rounded-full border border-dashed border-primary/10" />
-                  <div key={language + activeFaq} className="relative z-10 max-w-3xl animate-in fade-in slide-in-from-right-3 duration-300 motion-reduce:animate-none">
-                    <div className="flex items-center gap-4"><span className="flex size-12 items-center justify-center rounded-2xl bg-primary/12 text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]"><HelpCircle className="size-6" /></span><div><span className="font-mono text-base uppercase text-primary">Answer / 0{activeFaq + 1} of 06</span><span className="mt-1 block font-mono text-base uppercase text-white/32">{activeFaqMeta.code} knowledge</span></div></div>
-                    <h3 className="mt-7 max-w-2xl text-3xl font-bold leading-tight text-white">{activeFaqItem.q}</h3>
-                    <p className="mt-6 max-w-2xl text-base leading-[1.9] text-white/62">{activeFaqItem.a}</p>
-                    <div className="mt-8 flex flex-wrap gap-2">{activeFaqMeta[language].map((tag) => <span key={tag} className="rounded-full bg-white/[0.05] px-4 py-2 text-base text-white/55">{tag}</span>)}</div>
-                    <div className="mt-9 flex items-center gap-3 font-mono text-base uppercase text-primary"><ShieldCheck className="size-5" />Answer verified</div>
-                  </div>
-                </div>
-              </div>
-
-              <Accordion type="single" value={`pricing-faq-${activeFaq}`} onValueChange={(value) => { if (value) setActiveFaq(Number(value.replace("pricing-faq-", ""))) }} className="relative z-10 mt-6 space-y-2 lg:hidden [&_[data-slot=accordion-content]]:text-base">
-                {text.faqs.map((item, index) => (
-                  <AccordionItem key={item.q} value={`pricing-faq-${index}`} className="overflow-hidden rounded-[1.35rem] border-0 bg-black/18 px-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.055)] data-[state=open]:bg-white/[0.075] data-[state=open]:shadow-[inset_0_1px_0_rgba(255,255,255,0.11),0_0_28px_rgba(119,252,117,0.055)] sm:px-5">
-                    <AccordionTrigger className="min-h-[72px] gap-3 py-4 text-left text-base font-semibold leading-snug hover:no-underline data-[state=open]:text-primary [&>svg]:size-5 [&>svg]:shrink-0">
-                      <span className="flex min-w-0 items-center gap-3"><span className="font-mono text-base text-cyan-300/55">0{index + 1}</span><span>{item.q}</span></span>
-                    </AccordionTrigger>
-                    <AccordionContent className="pb-5 pl-0 text-base leading-[1.8] text-white/60 sm:pl-9">
-                      <p>{item.a}</p>
-                      <div className="mt-5 flex flex-wrap gap-2">{pricingFaqMeta[index][language].map((tag) => <span key={tag} className="rounded-full bg-black/20 px-3 py-2 text-base text-white/50">{tag}</span>)}</div>
-                      <div className="mt-5 flex items-center gap-2 font-mono text-base uppercase text-primary"><ShieldCheck className="size-5" />Answer verified</div>
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
+            <ServiceFaqPanel
+              entries={text.faqs.map((item, index) => ({
+                question: item.q,
+                answer: item.a,
+                category: pricingFaqMeta[index].code,
+                tags: pricingFaqMeta[index][language],
+              }))}
+              activeIndex={activeFaq}
+              onActiveIndexChange={setActiveFaq}
+              panelId="pricing-faq-answer-panel"
+              accordionPrefix="pricing-faq"
+              statusLabel="Pricing knowledge / online"
+              directoryLabel={language === "zh" ? "价格常见问题目录" : "Pricing FAQ directory"}
+              answerLabel={language === "zh" ? "当前价格问题答案" : "Current pricing answer"}
+            />
           </div>
         </section>
 

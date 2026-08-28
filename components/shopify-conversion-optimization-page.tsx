@@ -21,8 +21,8 @@ import {
 
 import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
+import { ServiceFaqPanel } from "@/components/service-faq-panel"
 import { useLanguage } from "@/components/language-provider"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 const copy = {
   zh: {
@@ -490,8 +490,6 @@ export function ShopifyConversionOptimizationPage() {
   const [activeScope, setActiveScope] = useState(0)
   const [activeFaq, setActiveFaq] = useState(0)
   const activeScopeItem = text.scopes[activeScope]
-  const activeFaqItem = text.faqs[activeFaq]
-  const activeFaqMeta = faqDecisionMeta[activeFaq]
   const ActiveScopeIcon = activeScopeItem.icon
   const activeXrayStage = scopeStageMap[activeScope]
   const heroFunnelLabels = language === "zh" ? ["访问", "商品浏览", "加入购物车", "发起结账", "完成购买"] : funnelStages.map((stage) => stage.label)
@@ -1116,62 +1114,23 @@ export function ShopifyConversionOptimizationPage() {
               <p className="mx-auto mt-4 max-w-3xl text-base leading-[1.75] text-muted-foreground">{language === "zh" ? "关于转化指标、问题定位、页面优化与数据追踪的关键答案。" : "Key answers about conversion metrics, diagnosis, page optimization, and analytics."}</p>
             </div>
 
-            <div className="relative overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_78%_34%,rgba(34,211,238,0.075),transparent_29%),radial-gradient(circle_at_24%_68%,rgba(119,252,117,0.09),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.058),rgba(255,255,255,0.012))] px-4 py-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.13),0_40px_110px_rgba(0,0,0,0.34)] backdrop-blur-2xl sm:rounded-[2.6rem_1.5rem_3rem_1.8rem] sm:px-6 sm:py-7 lg:px-10 lg:py-9">
-              <div aria-hidden="true" className="absolute inset-0 opacity-[0.055] [background-image:linear-gradient(rgba(34,211,238,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.3)_1px,transparent_1px)] [background-size:58px_58px] [mask-image:radial-gradient(circle_at_center,black,transparent_82%)]" />
-              <div aria-hidden="true" className="absolute bottom-[16%] right-[2%] h-px w-[58%] -rotate-3 animate-shimmer bg-gradient-to-r from-transparent via-cyan-300/25 to-transparent bg-[length:200%_100%] motion-reduce:animate-none" />
-
-              <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 px-1">
-                <div className="flex items-center gap-3"><span className="size-2 animate-pulse rounded-full bg-primary shadow-[0_0_16px_rgba(119,252,117,0.8)] motion-reduce:animate-none" /><span className="font-mono text-base uppercase text-primary">CRO knowledge / online</span></div>
-                <span className="font-mono text-base uppercase text-white/35">06 questions indexed</span>
-              </div>
-
-              <div className="relative z-10 mt-7 hidden min-w-0 grid-cols-[0.38fr_0.62fr] gap-7 lg:grid">
-                <div role="group" aria-label={language === "zh" ? "常见问题目录" : "FAQ directory"} className="space-y-2 rounded-[1.7rem] bg-black/20 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.065)]">
-                  {text.faqs.map((item, index) => {
-                    const isActive = activeFaq === index
-                    const meta = faqDecisionMeta[index]
-                    return (
-                      <button type="button" key={item.q} aria-pressed={isActive} aria-controls="cro-faq-answer-panel" onClick={() => setActiveFaq(index)} className={"group relative flex min-h-[78px] w-full items-center gap-4 overflow-hidden rounded-[1.35rem] px-4 text-left transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary motion-reduce:transition-none " + (isActive ? "bg-white/[0.09] shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_0_30px_rgba(119,252,117,0.07)]" : "bg-transparent hover:bg-white/[0.035]")}>
-                        <span className={"flex size-11 shrink-0 items-center justify-center rounded-full font-mono text-base transition-colors " + (isActive ? "bg-primary text-black" : "bg-white/[0.045] text-cyan-300/42 group-hover:text-primary")}><span>0{index + 1}</span></span>
-                        <span className="min-w-0"><span className={"block font-mono text-base uppercase " + (isActive ? "text-primary" : "text-cyan-300/38")}>{language === "zh" ? meta.zhCategory : meta.enCategory}</span><strong className={"mt-1 block text-base leading-snug " + (isActive ? "text-white" : "text-white/52 group-hover:text-white/72")}>{item.q}</strong></span>
-                        {isActive && <span aria-hidden="true" className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-primary/65 to-transparent" />}
-                      </button>
-                    )
-                  })}
-                </div>
-
-                <div id="cro-faq-answer-panel" role="region" aria-live="polite" aria-label={language === "zh" ? "当前问题答案" : "Current answer"} className="relative flex min-h-[510px] min-w-0 items-center overflow-hidden rounded-[1.7rem] bg-black/18 px-7 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] xl:px-12">
-                  <div aria-hidden="true" className="absolute right-[8%] top-[10%] size-52 rounded-full border border-dashed border-primary/10" />
-                  <div key={language + activeFaq} className="relative z-10 max-w-3xl animate-in fade-in slide-in-from-right-3 duration-300 motion-reduce:animate-none">
-                    <div className="flex items-center gap-4"><span className="flex size-12 items-center justify-center rounded-2xl bg-primary/12 text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]"><HelpCircle className="size-6" /></span><div><span className="font-mono text-base uppercase text-primary">Answer / 0{activeFaq + 1} of 06</span><span className="mt-1 block font-mono text-base uppercase text-white/32">{activeFaqMeta.enCategory} knowledge</span></div></div>
-                    <h3 className="mt-7 max-w-2xl text-3xl font-bold leading-tight text-white">{activeFaqItem.q}</h3>
-                    <p className="mt-6 max-w-2xl text-lg font-semibold leading-[1.65] text-white/86">{language === "zh" ? activeFaqMeta.zhConclusion : activeFaqMeta.enConclusion}</p>
-                    <p className="mt-4 max-w-2xl text-base leading-[1.9] text-white/58">{activeFaqItem.a}</p>
-                    <div className="mt-8 flex flex-wrap gap-2">{(language === "zh" ? activeFaqMeta.zhChecks : activeFaqMeta.enChecks).map((tag) => <span key={tag} className="rounded-full bg-white/[0.05] px-4 py-2 text-base text-white/55">{tag}</span>)}</div>
-                    <div className="mt-9 flex items-center gap-3 font-mono text-base uppercase text-primary"><ShieldCheck className="size-5" />Answer verified</div>
-                  </div>
-                </div>
-              </div>
-
-              <Accordion type="single" value={"faq-" + activeFaq} onValueChange={(value) => { if (value) setActiveFaq(Number(value.replace("faq-", ""))) }} className="relative z-10 mt-6 space-y-2 lg:hidden">
-                {text.faqs.map((item, index) => {
-                  const meta = faqDecisionMeta[index]
-                  return (
-                    <AccordionItem key={item.q} value={"faq-" + index} className="overflow-hidden rounded-[1.35rem] border-0 bg-black/18 px-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.055)] data-[state=open]:bg-white/[0.075] data-[state=open]:shadow-[inset_0_1px_0_rgba(255,255,255,0.11),0_0_28px_rgba(119,252,117,0.055)] sm:px-5">
-                      <AccordionTrigger className="min-h-[72px] gap-3 py-4 text-left text-base font-semibold leading-snug hover:no-underline data-[state=open]:text-primary [&>svg]:size-5 [&>svg]:shrink-0">
-                        <span className="flex min-w-0 items-center gap-3"><span className="font-mono text-base text-cyan-300/55">0{index + 1}</span><span>{item.q}</span></span>
-                      </AccordionTrigger>
-                      <AccordionContent className="pb-5 pl-0 text-base leading-[1.8] text-white/60 sm:pl-9">
-                        <p className="font-semibold text-white/82">{language === "zh" ? meta.zhConclusion : meta.enConclusion}</p>
-                        <p className="mt-3">{item.a}</p>
-                        <div className="mt-5 flex flex-wrap gap-2">{(language === "zh" ? meta.zhChecks : meta.enChecks).map((tag) => <span key={tag} className="rounded-full bg-black/20 px-3 py-2 text-base text-white/50">{tag}</span>)}</div>
-                        <div className="mt-5 flex items-center gap-2 font-mono text-base uppercase text-primary"><ShieldCheck className="size-5" />Answer verified</div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  )
-                })}
-              </Accordion>
-            </div>
+            <ServiceFaqPanel
+              entries={text.faqs.map((item, index) => ({
+                question: item.q,
+                answer: item.a,
+                category: language === "zh" ? faqDecisionMeta[index].zhCategory : faqDecisionMeta[index].enCategory,
+                knowledgeCategory: faqDecisionMeta[index].enCategory,
+                tags: language === "zh" ? faqDecisionMeta[index].zhChecks : faqDecisionMeta[index].enChecks,
+                conclusion: language === "zh" ? faqDecisionMeta[index].zhConclusion : faqDecisionMeta[index].enConclusion,
+              }))}
+              activeIndex={activeFaq}
+              onActiveIndexChange={setActiveFaq}
+              panelId="cro-faq-answer-panel"
+              accordionPrefix="faq"
+              statusLabel="CRO knowledge / online"
+              directoryLabel={language === "zh" ? "常见问题目录" : "FAQ directory"}
+              answerLabel={language === "zh" ? "当前问题答案" : "Current answer"}
+            />
           </div>
         </section>
 
@@ -1183,17 +1142,17 @@ export function ShopifyConversionOptimizationPage() {
               <p className="mx-auto mt-4 max-w-3xl text-base leading-[1.75] text-muted-foreground">{text.relatedIntro}</p>
             </div>
 
-            <div className="relative overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_25%_48%,rgba(119,252,117,0.11),transparent_27%),radial-gradient(circle_at_82%_32%,rgba(34,211,238,0.075),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.058),rgba(255,255,255,0.012))] px-4 py-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.13),0_40px_110px_rgba(0,0,0,0.35)] backdrop-blur-2xl sm:rounded-[2.6rem_1.5rem_3rem_1.8rem] sm:px-6 sm:py-7 lg:px-10 lg:py-9">
+            <div className="relative overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_25%_48%,rgba(119,252,117,0.11),transparent_27%),radial-gradient(circle_at_82%_32%,rgba(34,211,238,0.075),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.058),rgba(255,255,255,0.012))] px-4 py-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.13),0_40px_110px_rgba(0,0,0,0.35)] backdrop-blur-2xl sm:rounded-[2.6rem_1.5rem_3rem_1.8rem] sm:px-6 sm:py-7 lg:px-8 lg:py-7">
               <div aria-hidden="true" className="absolute inset-0 opacity-[0.055] [background-image:linear-gradient(rgba(34,211,238,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.3)_1px,transparent_1px)] [background-size:58px_58px] [mask-image:radial-gradient(circle_at_center,black,transparent_82%)]" />
               <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 px-1">
                 <div className="flex items-center gap-3"><span className="size-2 animate-pulse rounded-full bg-primary shadow-[0_0_16px_rgba(119,252,117,0.8)] motion-reduce:animate-none" /><span className="font-mono text-base uppercase text-primary">Service route map / online</span></div>
                 <span className="font-mono text-base uppercase text-white/35">02 next routes ready</span>
               </div>
 
-              <div className="relative z-10 mt-7 grid min-w-0 gap-7 lg:grid-cols-[0.36fr_0.64fr] lg:items-stretch lg:gap-10">
-                <div className="relative flex min-h-[360px] min-w-0 items-center justify-center overflow-hidden rounded-[1.7rem] bg-black/20 px-5 py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.065)] lg:min-h-[500px]">
+              <div className="relative z-10 mt-5 grid min-w-0 gap-5 lg:grid-cols-[0.36fr_0.64fr] lg:items-stretch lg:gap-8">
+                <div className="relative flex min-h-[280px] min-w-0 items-center justify-center overflow-hidden rounded-[1.7rem] bg-black/20 px-5 py-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.065)] lg:min-h-[400px]">
                   <div aria-hidden="true" className="absolute size-[310px] rounded-full bg-primary/[0.035] blur-2xl" />
-                  <div className="relative flex size-[260px] items-center justify-center rounded-[44%_56%_48%_52%/54%_42%_58%_46%] bg-[radial-gradient(circle_at_38%_30%,rgba(255,255,255,0.18),transparent_23%),linear-gradient(145deg,rgba(119,252,117,0.19),rgba(34,211,238,0.05)_58%,rgba(0,0,0,0.3))] text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.17),0_0_78px_rgba(119,252,117,0.13)] sm:size-[285px]">
+                  <div className="relative flex size-[220px] items-center justify-center rounded-[44%_56%_48%_52%/54%_42%_58%_46%] bg-[radial-gradient(circle_at_38%_30%,rgba(255,255,255,0.18),transparent_23%),linear-gradient(145deg,rgba(119,252,117,0.19),rgba(34,211,238,0.05)_58%,rgba(0,0,0,0.3))] text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.17),0_0_78px_rgba(119,252,117,0.13)] sm:size-[240px]">
                     <span aria-hidden="true" className="absolute inset-4 animate-[spin_24s_linear_infinite] rounded-[46%_54%_42%_58%] border border-dashed border-primary/22 motion-reduce:animate-none" />
                     <div className="relative z-10 px-8">
                       <LineChart className="mx-auto size-10 text-primary" />
@@ -1210,14 +1169,14 @@ export function ShopifyConversionOptimizationPage() {
                     const meta = conversionRelatedRouteMeta[index]
                     const Icon = meta.icon
                     return (
-                      <a key={link.href} href={localizedPath(link.href)} className="group relative flex min-h-[220px] min-w-0 flex-col justify-between rounded-[1.45rem] bg-transparent px-4 py-6 transition-all duration-300 hover:bg-white/[0.055] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary motion-reduce:transition-none sm:px-6 lg:min-h-[240px] lg:px-8">
+                      <a key={link.href} href={localizedPath(link.href)} className="group relative flex min-h-[180px] min-w-0 flex-col justify-between rounded-[1.45rem] bg-transparent px-4 py-5 transition-all duration-300 hover:bg-white/[0.055] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary motion-reduce:transition-none sm:px-6 lg:min-h-[190px] lg:px-7">
                         <span aria-hidden="true" className={"absolute inset-0 rounded-[1.45rem] opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100 motion-reduce:transition-none " + (index === 0 ? "bg-[radial-gradient(circle_at_12%_50%,rgba(119,252,117,0.12),transparent_36%)]" : "bg-[radial-gradient(circle_at_12%_50%,rgba(34,211,238,0.11),transparent_36%)]")} />
                         <span aria-hidden="true" className={"absolute -left-10 top-1/2 hidden h-px w-14 origin-right scale-x-50 transition-transform duration-300 group-hover:scale-x-100 group-focus-visible:scale-x-100 motion-reduce:transition-none lg:block " + (index === 0 ? "bg-primary shadow-[0_0_15px_rgba(119,252,117,0.45)]" : "bg-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.4)]")} />
                         <div className="relative z-10 flex items-start gap-4">
                           <span className={"flex size-12 shrink-0 items-center justify-center rounded-2xl transition-colors duration-300 motion-reduce:transition-none " + (index === 0 ? "bg-primary/12 text-primary group-hover:bg-primary group-hover:text-black" : "bg-cyan-300/10 text-cyan-300 group-hover:bg-cyan-300 group-hover:text-black")}><Icon className="size-6" /></span>
-                          <div className="min-w-0"><span className={"font-mono text-base uppercase " + (index === 0 ? "text-primary" : "text-cyan-300")}>Route / 0{index + 1} · {meta.code}</span><h3 className="mt-3 text-2xl font-bold leading-tight text-white">{link.title}</h3><p className="mt-4 max-w-2xl text-base leading-[1.8] text-white/57">{link.text}</p></div>
+                          <div className="min-w-0"><span className={"font-mono text-base uppercase " + (index === 0 ? "text-primary" : "text-cyan-300")}>Route / 0{index + 1} · {meta.code}</span><h3 className="mt-2 text-2xl font-bold leading-tight text-white">{link.title}</h3><p className="mt-3 max-w-2xl text-base leading-[1.7] text-white/57">{link.text}</p></div>
                         </div>
-                        <div className="relative z-10 mt-6 flex flex-wrap items-end justify-between gap-4 pl-0 sm:pl-16">
+                        <div className="relative z-10 mt-4 flex flex-wrap items-end justify-between gap-3 pl-0 sm:pl-16">
                           <div className="hidden flex-wrap gap-2 sm:flex">{meta[language].map((tag) => <span key={tag} className="rounded-full bg-white/[0.05] px-3 py-2 text-base text-white/52">{tag}</span>)}</div>
                           <span className={"inline-flex items-center gap-2 text-base font-semibold " + (index === 0 ? "text-primary" : "text-cyan-300")}>{link.cta}<ArrowUpRight className="size-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 motion-reduce:transition-none" /></span>
                         </div>
