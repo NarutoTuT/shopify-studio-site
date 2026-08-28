@@ -4,13 +4,28 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* Primitive accent colors */
+  --green-500: 119 99% 46%;
+  --cyan-500: 188 85% 53%;
+  --amber-500: 29 100% 62%;
+
+  /* Semantic accent roles */
+  --growth: var(--green-500);
+  --signal: var(--cyan-500);
+  --boundary: var(--amber-500);
+
+  /* Component accent roles */
+  --action-accent: var(--growth);
+  --data-accent: var(--signal);
+  --constraint-accent: var(--boundary);
+
   --background: 0 0% 0%;
   --foreground: 0 0% 100%;
   --card: 0 0% 6%;
   --card-foreground: 0 0% 100%;
   --popover: 0 0% 0%;
   --popover-foreground: 0 0% 100%;
-  --primary: 119 99% 46%;
+  --primary: var(--action-accent);
   --primary-foreground: 0 0% 0%;
   --secondary: 0 0% 10%;
   --secondary-foreground: 0 0% 100%;
@@ -52,6 +67,9 @@
   --color-popover: hsl(var(--popover));
   --color-popover-foreground: hsl(var(--popover-foreground));
   --color-primary: hsl(var(--primary));
+  --color-growth: hsl(var(--growth));
+  --color-signal: hsl(var(--signal));
+  --color-boundary: hsl(var(--boundary));
   --color-primary-foreground: hsl(var(--primary-foreground));
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
@@ -204,6 +222,29 @@
     100% {
       opacity: 0;
       transform: translate3d(0, 360%, 0);
+    }
+  }
+
+  @keyframes about-journey-flow {
+    from {
+      stroke-dashoffset: 260;
+    }
+    to {
+      stroke-dashoffset: -1040;
+    }
+  }
+
+  @keyframes studio-system-scan {
+    0% {
+      opacity: 0;
+      transform: translate3d(-180%, 0, 0) skewX(-12deg);
+    }
+    12%, 82% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate3d(560%, 0, 0) skewX(-12deg);
     }
   }
 
@@ -542,6 +583,45 @@
   justify-content: center;
 }
 
+.about-journey-flow {
+  animation: about-journey-flow 7.5s linear infinite;
+  stroke-dasharray: 74 190;
+}
+
+.about-journey-flow-secondary {
+  animation-delay: -3.75s;
+  opacity: 0.72;
+  stroke-dasharray: 28 236;
+}
+
+.delivery-rail-flow {
+  animation: about-journey-flow 6.4s linear infinite;
+  stroke-dasharray: 52 182;
+}
+
+.delivery-rail-flow-secondary {
+  animation-delay: -3.2s;
+  animation-duration: 8.6s;
+  opacity: 0.68;
+  stroke-dasharray: 20 214;
+}
+
+.studio-system-scan {
+  animation: studio-system-scan 11s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.about-journey-node {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.about-journey-node-1 { bottom: 3.5%; left: 7%; }
+.about-journey-node-2 { bottom: 5.5%; left: 32%; }
+.about-journey-node-3 { bottom: 5.5%; left: 59%; }
+.about-journey-node-4 { bottom: 3.5%; right: 6%; }
+
 @media (max-width: 1023px) {
   .service-hero {
     min-height: auto !important;
@@ -553,6 +633,12 @@
     min-height: 0 !important;
     gap: 2rem !important;
   }
+
+  .about-hero.service-hero {
+    min-height: 100svh !important;
+    padding-top: 6.75rem !important;
+    padding-bottom: 2.25rem !important;
+  }
 }
 
 @media (max-width: 639px) {
@@ -560,6 +646,22 @@
   .service-hero-proof,
   .service-hero-secondary {
     display: none !important;
+  }
+
+  .about-hero .service-hero-description,
+  .about-hero .service-hero-proof {
+    display: grid !important;
+  }
+
+  .about-hero .service-hero-proof {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about-hero .service-hero-proof > div {
+    min-height: 4.75rem;
+    flex-direction: column;
+    border-radius: 1.25rem;
+    padding-inline: 0.35rem;
   }
 }
 
