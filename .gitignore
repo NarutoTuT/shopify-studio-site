@@ -17,3 +17,7 @@ node_modules
 *.tsbuildinfo
 .DS_Store
 .vercel
+
+# Google Search Console OAuth secrets and private exports
+reports/gsc/*.json
+reports/gsc/*.csv

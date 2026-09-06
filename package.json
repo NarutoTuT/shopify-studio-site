@@ -6,7 +6,11 @@
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "gsc:auth": "node scripts/gsc/auth.mjs",
+    "gsc:28d": "node scripts/gsc/report.mjs 28",
+    "gsc:90d": "node scripts/gsc/report.mjs 90",
+    "gsc:test": "node --test scripts/gsc/*.test.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

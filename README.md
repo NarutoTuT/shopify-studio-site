@@ -136,6 +136,94 @@ Lint:
 npm run lint
 ```
 
+## Google Search Console Reports
+
+The repository includes a read-only Google Search Console exporter built with Node.js and the official Google APIs. It has no paid service dependency and does not add a dashboard.
+
+### 1. Configure Google Cloud and OAuth
+
+1. Open Google Cloud Console and create or select a project.
+2. Enable **Google Search Console API** for that project.
+3. Configure the OAuth consent screen. If the app remains in external testing mode, add the Google account that can access the WhaleLeap Search Console property as a test user.
+4. Create an **OAuth client ID** with application type **Desktop app**.
+5. Make sure the same Google account has access to the exact property in Search Console.
+
+Create the private local environment file:
+
+```bash
+cp .env.example .env.local
+```
+
+Then complete these values in `.env.local`:
+
+```bash
+GSC_SITE_URL=https://whaleleap.studio/
+GSC_CLIENT_ID=
+GSC_CLIENT_SECRET=
+GSC_REFRESH_TOKEN=
+GSC_BRAND_TERMS=whaleleap,whale leap,whaleleap studio
+GSC_MAX_ROWS=100000
+```
+
+`GSC_SITE_URL` must exactly match the accessible Search Console property. Use `https://whaleleap.studio/` for a URL-prefix property or `sc-domain:whaleleap.studio` for a Domain property.
+
+Authorize once with the read-only Search Console scope:
+
+```bash
+npm run gsc:auth
+```
+
+The command opens Google consent in the browser and stores the returned refresh token in `.env.local`. The client secret, refresh token, `.env.local`, and generated reports are excluded from Git. Never paste their values into logs, issues, or commits.
+
+### 2. Generate reports
+
+```bash
+npm run gsc:28d
+npm run gsc:90d
+```
+
+Each command exports JSON and CSV under `reports/gsc/` for:
+
+- Property summary: clicks, impressions, CTR, and average position
+- Queries, including `branded` or `non-branded` classification
+- Branded and non-branded query files
+- Pages
+- Countries
+- Devices
+- Submitted sitemaps, pending state, warnings, errors, submitted URLs, and timestamps
+
+The latest successfully requested windows are also combined in:
+
+```text
+reports/gsc/latest-summary.json
+```
+
+That file is intentionally compact and self-describing for later AI-assisted SEO analysis. Dimension JSON files include their period, row count, and whether the configured row ceiling was reached.
+
+### Data behavior and limitations
+
+- Reporting windows end on yesterday in Search Console's Pacific Time zone and request finalized web-search data.
+- An empty property response exports `clicks: 0`, `impressions: 0`, `ctr: null`, and `averagePosition: null`; the exporter does not invent performance values.
+- Query/page/dimension rows can be privacy-filtered and are ordered as Search Console's top rows. Their sums may differ from property-level totals.
+- CTR is exported as a decimal ratio, not a formatted percentage.
+- Branded segments are derived from `GSC_BRAND_TERMS`; review this list when the brand name or common misspellings change.
+- The official Sitemaps endpoint supplies submission and processing health, not Search Analytics clicks or impressions grouped by sitemap. Google also deprecated `contents.indexed`, so the exporter does not claim an indexed URL count or sitemap index rate.
+- For an external OAuth app whose publishing status remains **Testing**, Google expires refresh tokens after 7 days. This is acceptable for initial validation, but recurring unattended reports require completing the OAuth branding requirements and moving the app to **In production**. Do not publish until the consent-screen details and privacy-policy URL are accurate.
+
+Run the local parser and report-helper tests with:
+
+```bash
+npm run gsc:test
+```
+
+Official references:
+
+- [Search Console API authorization](https://developers.google.com/webmaster-tools/v1/how-tos/authorizing)
+- [OAuth 2.0 for web server applications and offline access](https://developers.google.com/identity/protocols/oauth2/web-server)
+- [Search Analytics query method](https://developers.google.com/webmaster-tools/v1/searchanalytics/query)
+- [Sitemaps list method](https://developers.google.com/webmaster-tools/v1/sitemaps/list)
+- [Sitemap resource fields](https://developers.google.com/webmaster-tools/v1/sitemaps)
+
 ## Environment Variables
 
 The contact / diagnosis form uses Resend.

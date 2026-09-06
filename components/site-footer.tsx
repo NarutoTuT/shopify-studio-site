@@ -28,6 +28,8 @@ const footerCopy = {
     contactText: "发送店铺链接、当前问题和目标，我们会先判断适合的下一步。",
     contactCta: "开始免费诊断",
     privacy: "提交的信息仅用于回复咨询和项目沟通，不会用于无关营销。",
+    privacyLink: "隐私政策",
+    gscReader: "WhaleLeap GSC Reader 是面向网站运营者的 Search Console 只读报告工具。",
     copyright: "Shopify Growth Engineering Studio",
   },
   en: {
@@ -51,6 +53,8 @@ const footerCopy = {
     contactText: "Share your store, current blocker, and goal. We will recommend the most useful next step.",
     contactCta: "Start a Free Review",
     privacy: "Submitted information is used only to reply to your inquiry and discuss a potential project.",
+    privacyLink: "Privacy Policy",
+    gscReader: "WhaleLeap GSC Reader is a read-only Search Console reporting tool for website operators.",
     copyright: "Shopify Growth Engineering Studio",
   },
 }
@@ -120,7 +124,10 @@ export function SiteFooter({ language }: SiteFooterProps) {
         </div>
 
         <div className="mt-12 flex flex-col gap-4 text-base leading-relaxed text-white/40 lg:flex-row lg:items-end lg:justify-between">
-          <p className="max-w-3xl">{text.privacy}</p>
+          <div className="max-w-3xl">
+            <p>{text.privacy}</p>
+            <p className="mt-2">{text.gscReader} <a href={localizedPath("/privacy", language)} className="text-white/70 underline decoration-white/25 underline-offset-4 transition-colors hover:text-primary focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">{text.privacyLink}</a></p>
+          </div>
           <p className="shrink-0">© {year} WhaleLeap Studio · {text.copyright}</p>
         </div>
       </div>

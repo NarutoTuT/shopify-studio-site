@@ -7,6 +7,7 @@ const routes = [
   "/diagnosis",
   "/pricing",
   "/about",
+  "/privacy",
   "/learn/shopify-website-cost",
   "/services/shopify-website-build",
   "/services/shopify-theme-customization",
