@@ -221,7 +221,7 @@ export function PrivacyPage() {
               <p className="mt-5 font-mono text-base tracking-[0.02em] text-white/45">{text.updated}</p>
             </div>
 
-            <div className="relative mx-auto mt-12 max-w-[1180px] overflow-hidden rounded-[1.75rem] border border-white/12 bg-black/35 shadow-[inset_0_1px_0_rgba(255,255,255,0.09),0_28px_80px_rgba(0,0,0,0.28)] backdrop-blur-2xl">
+            <div className="relative mx-auto mt-12 max-w-[1500px] overflow-hidden rounded-[1.75rem] border border-white/12 bg-black/35 shadow-[inset_0_1px_0_rgba(255,255,255,0.09),0_28px_80px_rgba(0,0,0,0.28)] backdrop-blur-2xl">
               <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px animate-shimmer bg-gradient-to-r from-transparent via-primary/80 to-cyan-300/70 bg-[length:200%_100%] motion-reduce:animate-none" />
               <div className="grid grid-cols-2 md:grid-cols-3">
                 {text.summary.map((item, index) => {
@@ -243,7 +243,7 @@ export function PrivacyPage() {
 
         <section className="bg-black px-4 py-[50px] sm:px-6 md:px-10 md:py-[100px]">
           <div className="mx-auto max-w-[1500px]">
-            <nav aria-label={language === "zh" ? "隐私政策目录" : "Privacy policy navigation"} className="mx-auto max-w-[1180px] rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-2 backdrop-blur-xl">
+            <nav aria-label={language === "zh" ? "隐私政策目录" : "Privacy policy navigation"} className="mx-auto max-w-[1500px] rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-2 backdrop-blur-xl">
               <ol className="grid grid-cols-2 gap-1 md:grid-cols-4">
                 {text.sections.map((section, index) => (
                   <li key={section.id} className={index === 6 ? "col-span-2 md:col-span-1" : ""}>
@@ -256,7 +256,7 @@ export function PrivacyPage() {
               </ol>
             </nav>
 
-            <div className="mx-auto mt-8 max-w-[1180px] overflow-hidden rounded-[2rem] border border-white/12 bg-[linear-gradient(145deg,rgba(255,255,255,0.055),rgba(255,255,255,0.018))] shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_32px_90px_rgba(0,0,0,0.28)] backdrop-blur-2xl md:mt-10">
+            <div className="mx-auto mt-8 max-w-[1500px] overflow-hidden rounded-[2rem] border border-white/12 bg-[linear-gradient(145deg,rgba(255,255,255,0.055),rgba(255,255,255,0.018))] shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_32px_90px_rgba(0,0,0,0.28)] backdrop-blur-2xl md:mt-10">
               <div className="p-5 sm:p-7 md:p-10 lg:p-12">
                 <div className="mb-8 flex items-center gap-3 md:mb-10">
                   <span className="flex size-11 items-center justify-center rounded-full bg-primary/10 text-primary"><FileText className="size-5" /></span>
