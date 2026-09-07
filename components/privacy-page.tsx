@@ -21,12 +21,14 @@ const copy = {
     ],
     sections: [
       {
+        id: "controller",
         title: "1. 谁在处理这些信息",
         paragraphs: [
           "WhaleLeap Studio 是本网站以及 WhaleLeap GSC Reader 的运营者。隐私相关问题、数据访问或删除请求，可发送至 liaoshenyuan1999053@gmail.com。",
         ],
       },
       {
+        id: "information",
         title: "2. 网站会处理哪些信息",
         paragraphs: [
           "当你提交 Free Shopify Review 或联系表单时，我们可能收到店铺链接、产品品类、目标市场、项目阶段、SKU 数量、预算、时间计划、问题描述、邮箱、微信，以及提交页面、来源页面和 UTM 参数。",
@@ -34,6 +36,7 @@ const copy = {
         ],
       },
       {
+        id: "services",
         title: "3. 网站分析与第三方服务",
         paragraphs: [
           "网站在配置启用时使用 Google Analytics，并在生产环境使用 Vercel Analytics。它们可能处理页面访问、来源、设备或浏览器信息、近似地区和站内交互事件，用于理解网站表现与改进体验。你可以通过浏览器设置限制 Cookie 或追踪，也可以使用 Google 提供的分析退出工具。",
@@ -61,6 +64,7 @@ const copy = {
         ],
       },
       {
+        id: "retention",
         title: "5. 使用目的、保存与共享",
         paragraphs: [
           "我们使用信息来回复咨询、评估 Shopify 项目、保障表单安全、理解网站表现，以及生成经授权的 Search Console 报告。数据只在完成这些目的、处理争议或满足法律要求所需的时间内保存。",
@@ -68,6 +72,7 @@ const copy = {
         ],
       },
       {
+        id: "requests",
         title: "6. 安全、撤销与数据请求",
         paragraphs: [
           "我们采取合理措施保护凭据、表单信息和报告，但任何互联网传输或存储方式都无法保证绝对安全。",
@@ -75,6 +80,7 @@ const copy = {
         ],
       },
       {
+        id: "updates",
         title: "7. 儿童与政策更新",
         paragraphs: [
           "本网站和 GSC Reader 面向企业与专业用户，不面向儿童。政策更新会发布在本页面，并修改顶部的更新日期。",
@@ -98,12 +104,14 @@ const copy = {
     ],
     sections: [
       {
+        id: "controller",
         title: "1. Who handles this information",
         paragraphs: [
           "WhaleLeap Studio operates this website and WhaleLeap GSC Reader. For privacy questions or requests to access or delete data, email liaoshenyuan1999053@gmail.com.",
         ],
       },
       {
+        id: "information",
         title: "2. Information handled by the website",
         paragraphs: [
           "When you submit the Free Shopify Review or contact form, we may receive your store URL, product category, target market, project stage, SKU count, budget, timeline, problem description, email, WeChat ID, submission page, referrer, and UTM parameters.",
@@ -111,6 +119,7 @@ const copy = {
         ],
       },
       {
+        id: "services",
         title: "3. Website analytics and service providers",
         paragraphs: [
           "When configured, the site uses Google Analytics and, in production, Vercel Analytics. These services may process page visits, referrers, device or browser information, approximate location, and on-site interaction events so we can understand performance and improve the experience. You can limit cookies or tracking in your browser and use Google's Analytics opt-out tool.",
@@ -138,6 +147,7 @@ const copy = {
         ],
       },
       {
+        id: "retention",
         title: "5. Purposes, retention, and sharing",
         paragraphs: [
           "We use information to respond to inquiries, assess Shopify projects, protect the form from abuse, understand website performance, and create authorized Search Console reports. Data is retained only as long as reasonably needed for these purposes, dispute handling, or legal requirements.",
@@ -145,6 +155,7 @@ const copy = {
         ],
       },
       {
+        id: "requests",
         title: "6. Security, revocation, and data requests",
         paragraphs: [
           "We take reasonable measures to protect credentials, form information, and reports, but no internet transmission or storage method can guarantee absolute security.",
@@ -152,6 +163,7 @@ const copy = {
         ],
       },
       {
+        id: "updates",
         title: "7. Children and policy updates",
         paragraphs: [
           "This website and GSC Reader are intended for businesses and professional users, not children. Updates will be posted on this page with a revised date at the top.",
@@ -190,67 +202,144 @@ export function PrivacyPage() {
       <Navbar />
 
       <main id="main-content" tabIndex={-1}>
-        <section className="relative overflow-hidden border-b border-white/8 bg-[#020403] px-4 pb-16 pt-32 sm:px-6 md:px-10 md:pb-20 md:pt-40">
-          <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_8%,rgba(119,252,117,0.16),transparent_34%),radial-gradient(ellipse_at_82%_20%,rgba(34,211,238,0.1),transparent_32%)]" />
-          <div aria-hidden="true" className="absolute inset-0 opacity-[0.11] [background-image:radial-gradient(circle,rgba(119,252,117,0.45)_1px,transparent_1.3px)] [background-size:42px_42px] [mask-image:linear-gradient(to_bottom,black,transparent_84%)]" />
+        <section className="relative overflow-hidden bg-[#020403] px-4 pb-[50px] pt-32 sm:px-6 md:px-10 md:pb-[100px] md:pt-40">
+          <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_16%_18%,rgba(119,252,117,0.2),transparent_34%),radial-gradient(ellipse_at_84%_24%,rgba(34,211,238,0.14),transparent_33%)]" />
+          <div aria-hidden="true" className="absolute -inset-x-[18%] -top-[24%] h-[112%] animate-cro-signal-orbit bg-[radial-gradient(ellipse_at_66%_34%,rgba(34,211,238,0.15),transparent_26%),radial-gradient(ellipse_at_32%_68%,rgba(119,252,117,0.19),transparent_29%)] opacity-90 blur-2xl will-change-transform motion-reduce:animate-none" />
+          <div aria-hidden="true" className="absolute inset-0 opacity-[0.13] [background-image:radial-gradient(circle,rgba(119,252,117,0.5)_1px,transparent_1.3px)] [background-size:42px_42px] [mask-image:linear-gradient(to_bottom,black,transparent_88%)]" />
+          <div aria-hidden="true" className="absolute inset-x-0 bottom-[23%] hidden h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent sm:block">
+            <span className="block h-full w-32 animate-cro-data-flow bg-gradient-to-r from-transparent via-primary to-cyan-300 shadow-[0_0_18px_rgba(119,252,117,0.7)] will-change-transform motion-reduce:hidden" />
+          </div>
 
           <div className="relative mx-auto max-w-[1500px]">
-            <div className="max-w-4xl">
-              <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">{text.eyebrow}</p>
-              <h1 className="mt-5 font-display text-[clamp(3rem,7vw,7rem)] font-bold leading-[0.94] tracking-[-0.055em] text-white">{text.title}</h1>
-              <p className="mt-7 max-w-3xl text-base leading-[1.8] text-white/68 md:text-lg">{text.intro}</p>
+            <div className="mx-auto max-w-[980px] text-center">
+              <p className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/[0.08] px-4 py-2 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary backdrop-blur-xl">
+                <span className="size-2 animate-pulse rounded-full bg-primary shadow-[0_0_14px_rgba(119,252,117,0.9)] motion-reduce:animate-none" />
+                {text.eyebrow}
+              </p>
+              <h1 className="mt-6 bg-gradient-to-r from-white via-primary to-cyan-300 bg-[length:200%_100%] bg-clip-text font-display text-[clamp(3rem,7vw,7rem)] font-bold leading-[0.94] tracking-[-0.055em] text-transparent animate-shimmer motion-reduce:animate-none">{text.title}</h1>
+              <p className="mx-auto mt-7 max-w-3xl text-base leading-[1.8] text-white/68 md:text-lg">{text.intro}</p>
               <p className="mt-5 font-mono text-base tracking-[0.02em] text-white/45">{text.updated}</p>
             </div>
 
-            <div className="mt-12 grid gap-3 md:grid-cols-3">
-              {text.summary.map((item) => {
-                const Icon = item.icon
-                return (
-                  <div key={item.title} className="flex min-w-0 items-start gap-4 rounded-[1.35rem] border border-white/10 bg-white/[0.045] p-5 backdrop-blur-xl">
-                    <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"><Icon className="size-5" /></span>
-                    <div className="min-w-0">
-                      <h2 className="text-base font-semibold text-white">{item.title}</h2>
-                      <p className="mt-1 text-base leading-relaxed text-white/52">{item.text}</p>
+            <div className="relative mx-auto mt-12 max-w-[1180px] overflow-hidden rounded-[1.75rem] border border-white/12 bg-black/35 shadow-[inset_0_1px_0_rgba(255,255,255,0.09),0_28px_80px_rgba(0,0,0,0.28)] backdrop-blur-2xl">
+              <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px animate-shimmer bg-gradient-to-r from-transparent via-primary/80 to-cyan-300/70 bg-[length:200%_100%] motion-reduce:animate-none" />
+              <div className="grid grid-cols-2 md:grid-cols-3">
+                {text.summary.map((item, index) => {
+                  const Icon = item.icon
+                  return (
+                    <div key={item.title} className={`relative flex min-w-0 items-start gap-3 p-5 sm:gap-4 sm:p-6 ${index === 2 ? "col-span-2 border-t border-white/8 md:col-span-1 md:border-l md:border-t-0" : index === 1 ? "border-l border-white/8" : ""}`}>
+                      <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"><Icon className="size-5" /></span>
+                      <div className="min-w-0">
+                        <h2 className="text-base font-semibold text-white">{item.title}</h2>
+                        <p className="mt-1 text-base leading-relaxed text-white/52">{item.text}</p>
+                      </div>
                     </div>
-                  </div>
-                )
-              })}
+                  )
+                })}
+              </div>
             </div>
           </div>
         </section>
 
         <section className="bg-black px-4 py-[50px] sm:px-6 md:px-10 md:py-[100px]">
-          <div className="mx-auto grid max-w-[1500px] gap-8 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] lg:gap-16">
-            <aside className="lg:sticky lg:top-28 lg:self-start">
-              <div className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(145deg,rgba(119,252,117,0.09),rgba(255,255,255,0.025))] p-6 md:p-8">
-                <span className="flex size-12 items-center justify-center rounded-full border border-primary/20 bg-primary/10 text-primary"><ShieldCheck className="size-6" /></span>
-                <p className="mt-6 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">WhaleLeap GSC Reader</p>
-                <h2 className="mt-3 text-2xl font-semibold leading-tight text-white md:text-3xl">{language === "zh" ? "只读访问，明确用途，本地保存。" : "Read-only access, clear purpose, local storage."}</h2>
-                <p className="mt-5 text-base leading-[1.8] text-white/58">{language === "zh" ? "工具只读取你已授权的 Search Console 数据，不会修改资源，也不会把报告自动传给第三方分析平台。" : "The tool only reads Search Console data you authorize. It does not modify resources or automatically send reports to third-party analysis platforms."}</p>
-                <a href="#gsc-reader" className="mt-6 inline-flex min-h-11 items-center rounded-full border border-white/12 px-5 text-base font-semibold text-white transition-colors hover:border-primary/35 hover:bg-primary/8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
-                  {language === "zh" ? "查看 Google 数据说明" : "Read the Google data disclosure"}
-                </a>
-              </div>
-            </aside>
+          <div className="mx-auto max-w-[1500px]">
+            <nav aria-label={language === "zh" ? "隐私政策目录" : "Privacy policy navigation"} className="mx-auto max-w-[1180px] rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-2 backdrop-blur-xl">
+              <ol className="grid grid-cols-2 gap-1 md:grid-cols-4">
+                {text.sections.map((section, index) => (
+                  <li key={section.id} className={index === 6 ? "col-span-2 md:col-span-1" : ""}>
+                    <a href={`#${section.id}`} className="group flex min-h-14 items-center gap-3 rounded-[1rem] px-3 py-2 text-left transition-colors hover:bg-primary/[0.08] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 sm:px-4">
+                      <span className="font-mono text-base text-primary">{String(index + 1).padStart(2, "0")}</span>
+                      <span className="min-w-0 text-base leading-snug text-white/62 transition-colors group-hover:text-white">{section.title.replace(/^\d+\.\s*/, "")}</span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
 
-            <div className="min-w-0 divide-y divide-white/10">
-              {text.sections.map((section) => (
-                <article key={section.title} id={section.id} className="scroll-mt-28 py-8 first:pt-0 md:py-10">
-                  <h2 className="text-2xl font-semibold leading-tight tracking-[-0.025em] text-white md:text-3xl">{section.title}</h2>
-                  <div className="mt-5 grid gap-4">
-                    {section.paragraphs.map((paragraph) => <p key={paragraph} className="text-base leading-[1.85] text-white/62">{paragraph}</p>)}
-                  </div>
-                  {section.links && (
-                    <div className="mt-6 flex flex-wrap gap-3">
-                      {section.links.map((link) => (
-                        <a key={link.href} href={link.href} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center rounded-full border border-white/10 bg-white/[0.035] px-4 text-base text-white/68 transition-colors hover:border-primary/30 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
-                          {link.label}
-                        </a>
+            <div className="mx-auto mt-8 max-w-[1180px] overflow-hidden rounded-[2rem] border border-white/12 bg-[linear-gradient(145deg,rgba(255,255,255,0.055),rgba(255,255,255,0.018))] shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_32px_90px_rgba(0,0,0,0.28)] backdrop-blur-2xl md:mt-10">
+              <div className="p-5 sm:p-7 md:p-10 lg:p-12">
+                <div className="mb-8 flex items-center gap-3 md:mb-10">
+                  <span className="flex size-11 items-center justify-center rounded-full bg-primary/10 text-primary"><FileText className="size-5" /></span>
+                  <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">{language === "zh" ? "WEBSITE DATA / 01—03" : "WEBSITE DATA / 01—03"}</p>
+                </div>
+                <div className="grid gap-8 lg:grid-cols-3 lg:gap-10">
+                  {text.sections.slice(0, 3).map((section, index) => (
+                    <article key={section.id} id={section.id} className="scroll-mt-28">
+                      <span className="font-mono text-base text-primary/72">0{index + 1}</span>
+                      <h2 className="mt-3 text-[1.65rem] font-semibold leading-[1.18] tracking-[-0.025em] text-white md:text-3xl">{section.title.replace(/^\d+\.\s*/, "")}</h2>
+                      <div className="mt-5 grid gap-4">
+                        {section.paragraphs.map((paragraph) => <p key={paragraph} className="text-base leading-[1.85] text-white/62">{paragraph}</p>)}
+                      </div>
+                      {section.links && (
+                        <div className="mt-6 flex flex-wrap gap-2">
+                          {section.links.map((link) => (
+                            <a key={link.href} href={link.href} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center rounded-full border border-white/10 bg-black/20 px-4 text-base text-white/68 transition-colors hover:border-primary/35 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
+                              {link.label}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </article>
+                  ))}
+                </div>
+              </div>
+
+              <article id={text.sections[3].id} className="relative scroll-mt-28 overflow-hidden border-y border-primary/18 bg-[radial-gradient(circle_at_12%_0%,rgba(119,252,117,0.17),transparent_42%),radial-gradient(circle_at_90%_75%,rgba(34,211,238,0.12),transparent_34%),rgba(1,12,7,0.62)] p-5 sm:p-7 md:p-10 lg:p-12">
+                <div aria-hidden="true" className="absolute inset-y-0 right-[10%] hidden w-px bg-gradient-to-b from-transparent via-primary/45 to-transparent md:block">
+                  <span className="block h-24 w-full animate-cro-data-flow-y bg-gradient-to-b from-transparent via-cyan-300 to-primary shadow-[0_0_16px_rgba(119,252,117,0.62)] motion-reduce:hidden" />
+                </div>
+                <div className="relative grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-14">
+                  <div>
+                    <span className="flex size-12 items-center justify-center rounded-full border border-primary/20 bg-primary/10 text-primary"><LockKeyhole className="size-6" /></span>
+                    <p className="mt-6 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">GOOGLE DATA VAULT / 04</p>
+                    <h2 className="mt-4 text-3xl font-semibold leading-[1.12] tracking-[-0.035em] text-white md:text-4xl">{text.sections[3].title.replace(/^\d+\.\s*/, "")}</h2>
+                    <p className="mt-5 text-base leading-[1.8] text-white/58">{language === "zh" ? "只读访问、明确用途、本地保存。授权边界与数据流向在这里集中说明。" : "Read-only access, a defined purpose, and local storage. Authorization boundaries and data flow are documented here."}</p>
+                    <div className="mt-7 grid gap-2 sm:grid-cols-3 lg:grid-cols-1">
+                      {(language === "zh" ? ["只读权限", "本地报告", "不出售数据"] : ["Read only", "Local reports", "No data sale"]).map((item) => (
+                        <div key={item} className="flex min-h-12 items-center gap-3 rounded-full border border-primary/15 bg-black/20 px-4 text-base text-white/72">
+                          <ShieldCheck className="size-4 shrink-0 text-primary" />
+                          {item}
+                        </div>
                       ))}
                     </div>
-                  )}
-                </article>
-              ))}
+                  </div>
+                  <div className="grid content-start gap-4">
+                    {text.sections[3].paragraphs.map((paragraph, index) => (
+                      <div key={paragraph} className="grid grid-cols-[auto_1fr] gap-4 rounded-[1.25rem] bg-black/22 p-4 sm:p-5">
+                        <span className="font-mono text-base text-cyan-300/75">0{index + 1}</span>
+                        <p className="text-base leading-[1.85] text-white/68">{paragraph}</p>
+                      </div>
+                    ))}
+                    {text.sections[3].links && (
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {text.sections[3].links.map((link) => (
+                          <a key={link.href} href={link.href} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center rounded-full border border-primary/20 bg-primary/[0.07] px-5 text-base text-white/76 transition-colors hover:border-primary/45 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
+                            {link.label}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </article>
+
+              <div className="p-5 sm:p-7 md:p-10 lg:p-12">
+                <div className="mb-8 flex items-center gap-3 md:mb-10">
+                  <span className="flex size-11 items-center justify-center rounded-full bg-cyan-300/10 text-cyan-300"><ShieldCheck className="size-5" /></span>
+                  <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-cyan-300">{language === "zh" ? "DATA RIGHTS / 05—07" : "DATA RIGHTS / 05—07"}</p>
+                </div>
+                <div className="grid gap-8 lg:grid-cols-3 lg:gap-10">
+                  {text.sections.slice(4).map((section, index) => (
+                    <article key={section.id} id={section.id} className="scroll-mt-28">
+                      <span className="font-mono text-base text-cyan-300/72">0{index + 5}</span>
+                      <h2 className="mt-3 text-[1.65rem] font-semibold leading-[1.18] tracking-[-0.025em] text-white md:text-3xl">{section.title.replace(/^\d+\.\s*/, "")}</h2>
+                      <div className="mt-5 grid gap-4">
+                        {section.paragraphs.map((paragraph) => <p key={paragraph} className="text-base leading-[1.85] text-white/62">{paragraph}</p>)}
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
