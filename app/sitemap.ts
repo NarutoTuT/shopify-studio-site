@@ -8,7 +8,9 @@ const routes = [
   "/pricing",
   "/about",
   "/privacy",
+  "/case-studies/silkgear",
   "/learn/shopify-website-cost",
+  "/learn/shopify-ga4-gtm-tracking-plan",
   "/services/shopify-website-build",
   "/services/shopify-theme-customization",
   "/services/shopify-conversion-optimization",
@@ -24,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: route === "" ? 1 : route.startsWith("/services") ? 0.8 : 0.7,
     }
 
-    if (route.startsWith("/learn/")) {
+    if (route.startsWith("/learn/") || route.startsWith("/case-studies/")) {
       return [{ url: zhUrl, ...shared, alternates: { languages: { "zh-CN": zhUrl, "x-default": zhUrl } } }]
     }
 

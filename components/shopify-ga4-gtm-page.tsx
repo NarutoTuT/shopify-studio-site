@@ -635,6 +635,16 @@ export function ShopifyGa4GtmPage() {
 
         <section className="bg-black px-4 pb-[50px] pt-0 sm:px-6 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto max-w-[1500px]">
+            {language === "zh" && (
+              <a href="/learn/shopify-ga4-gtm-tracking-plan" className="group mb-8 grid gap-5 rounded-[2rem] border border-primary/25 bg-[radial-gradient(circle_at_88%_18%,rgba(34,211,238,0.12),transparent_30%),linear-gradient(135deg,rgba(119,252,117,0.09),rgba(255,255,255,0.02))] p-6 transition-colors hover:border-primary/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary md:mb-10 md:grid-cols-[1fr_auto] md:items-center md:p-8">
+                <div>
+                  <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-cyan-300">Implementation guide / New</p>
+                  <h2 className="mt-3 text-[clamp(1.6rem,2.5vw,2.2rem)] font-bold leading-tight">Shopify GA4 / GTM Tracking Plan</h2>
+                  <p className="mt-3 max-w-4xl text-base leading-[1.75] text-white/58">查看事件契约、参数来源、GTM 架构选择、purchase 去重、收入差异与上线 QA 的完整实施指南。</p>
+                </div>
+                <span className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-6 text-base font-bold text-black transition-transform group-hover:translate-x-1">阅读追踪指南<ArrowUpRight className="size-5" /></span>
+              </a>
+            )}
             <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
               <p className="font-mono text-base font-semibold uppercase tracking-[0.08em] text-cyan-300">{text.processEyebrow}</p>
               <h2 className="mt-3 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.processTitle}</h2>

@@ -180,6 +180,7 @@ The command opens Google consent in the browser and stores the returned refresh 
 ```bash
 npm run gsc:28d
 npm run gsc:90d
+npm run gsc:watch
 ```
 
 Each command exports JSON and CSV under `reports/gsc/` for:
@@ -199,6 +200,14 @@ reports/gsc/latest-summary.json
 ```
 
 That file is intentionally compact and self-describing for later AI-assisted SEO analysis. Dimension JSON files include their period, row count, and whether the configured row ceiling was reached.
+
+`gsc:28d` and its `gsc:watch` alias also refresh:
+
+```text
+reports/gsc/first-impression-watch.json
+```
+
+The watch file keeps the property totals, real non-brand query rows, pages with impressions, the first observed query/page, and the current top query/page by impressions. When the API returns zero impressions, its query/page arrays remain empty and its first/top fields remain `null`. A successful 90-day export does not overwrite this 28-day observation file.
 
 ### Data behavior and limitations
 

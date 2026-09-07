@@ -382,6 +382,16 @@ export function ShowcaseSection() {
                                 {item.title}
                               </h3>
                             </div>
+                            <div className="flex flex-wrap items-center gap-2">
+                            {language === "zh" && index === 0 && (
+                              <a
+                                href="/case-studies/silkgear"
+                                className="inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full border border-cyan-300/30 bg-cyan-300/[0.08] px-3 text-sm font-semibold tracking-[0.02em] text-cyan-200 transition-colors hover:border-cyan-200/60 hover:bg-cyan-300/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                              >
+                                <span>CASE STUDY</span>
+                                <ArrowUpRight className="size-4" aria-hidden="true" />
+                              </a>
+                            )}
                             {item.url ? (
                               <a
                                 href={item.url}
@@ -398,6 +408,7 @@ export function ShowcaseSection() {
                                 SELECTED WORK
                               </span>
                             )}
+                            </div>
                           </div>
                           <div className="mt-3 grid grid-cols-2 gap-2 md:mt-2 md:gap-0">
                             {[

@@ -88,3 +88,65 @@ export function reportRows(responseRows = [], dimension) {
     averagePosition: Number.isFinite(Number(row.position)) ? Number(row.position) : null,
   }))
 }
+
+export function datedDimensionRows(responseRows = [], dimension) {
+  return responseRows.map((row) => ({
+    date: row.keys?.[0] ?? "",
+    [dimension]: row.keys?.[1] ?? "",
+    clicks: Number(row.clicks) || 0,
+    impressions: Number(row.impressions) || 0,
+    ctr: Number.isFinite(Number(row.ctr)) ? Number(row.ctr) : null,
+    averagePosition: Number.isFinite(Number(row.position)) ? Number(row.position) : null,
+  }))
+}
+
+function earliestImpressionRow(rows, dimension) {
+  return rows
+    .filter((row) => row.impressions > 0 && row[dimension])
+    .sort((left, right) => left.date.localeCompare(right.date) || right.impressions - left.impressions)[0] || null
+}
+
+function topImpressionRow(rows, dimension) {
+  return rows
+    .filter((row) => row.impressions > 0 && row[dimension])
+    .sort((left, right) => right.impressions - left.impressions || right.clicks - left.clicks)[0] || null
+}
+
+export function buildFirstImpressionWatch({
+  generatedAt,
+  siteUrl,
+  period,
+  metrics,
+  queries,
+  nonBrandedQueries,
+  pages,
+  datedQueries,
+  datedPages,
+  previous,
+}) {
+  const hasImpressions = metrics.impressions > 0
+  const firstSeenQuery = hasImpressions ? previous?.firstSeenQuery || earliestImpressionRow(datedQueries, "query") : null
+  const firstSeenPage = hasImpressions ? previous?.firstSeenPage || earliestImpressionRow(datedPages, "page") : null
+
+  return {
+    schemaVersion: 1,
+    generatedAt,
+    source: "Google Search Console API",
+    siteUrl,
+    dataState: "final",
+    period,
+    hasImpressions,
+    firstObservedAt: hasImpressions ? previous?.firstObservedAt || generatedAt : null,
+    totalClicks: metrics.clicks,
+    totalImpressions: metrics.impressions,
+    nonBrandQueries: hasImpressions ? nonBrandedQueries.filter((row) => row.impressions > 0) : [],
+    pagesWithImpressions: hasImpressions ? pages.filter((row) => row.impressions > 0) : [],
+    firstSeenQuery,
+    firstSeenPage,
+    topQueryByImpressions: hasImpressions ? topImpressionRow(queries, "query") : null,
+    topPageByImpressions: hasImpressions ? topImpressionRow(pages, "page") : null,
+    note: hasImpressions
+      ? "Query rows may be privacy-filtered by Search Console. This file contains only values returned by the official API."
+      : "No finalized impressions were returned for this period. Query and page evidence remains empty by design.",
+  }
+}

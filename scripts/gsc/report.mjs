@@ -2,7 +2,7 @@ import fs from "node:fs"
 import path from "node:path"
 
 import { loadLocalEnv, requireEnv } from "./env.mjs"
-import { aggregateMetrics, dateRangeForDays, isBrandedQuery, normalizeSiteUrl, parseBrandTerms, reportRows, summaryMetrics, toCsv } from "./utils.mjs"
+import { aggregateMetrics, buildFirstImpressionWatch, dateRangeForDays, datedDimensionRows, isBrandedQuery, normalizeSiteUrl, parseBrandTerms, reportRows, summaryMetrics, toCsv } from "./utils.mjs"
 
 loadLocalEnv()
 requireEnv(["GSC_CLIENT_ID", "GSC_CLIENT_SECRET", "GSC_REFRESH_TOKEN", "GSC_SITE_URL"])
@@ -85,13 +85,31 @@ async function fetchDimension(dimension) {
   return { rows: reportRows(rows, dimension), truncated: true }
 }
 
-const [summaryResponse, queriesResult, pagesResult, countriesResult, devicesResult, sitemapResponse] = await Promise.all([
+async function fetchDatedDimension(dimension) {
+  const rows = []
+  let startRow = 0
+  const pageSize = Math.min(25000, maxRows)
+
+  while (rows.length < maxRows) {
+    const response = await queryAnalytics(["date", dimension], startRow, Math.min(pageSize, maxRows - rows.length))
+    const batch = response.rows || []
+    rows.push(...batch)
+    if (batch.length < pageSize) return { rows: datedDimensionRows(rows, dimension), truncated: false }
+    startRow += batch.length
+  }
+
+  return { rows: datedDimensionRows(rows, dimension), truncated: true }
+}
+
+const [summaryResponse, queriesResult, pagesResult, countriesResult, devicesResult, sitemapResponse, datedQueriesResult, datedPagesResult] = await Promise.all([
   queryAnalytics([], 0, 1),
   fetchDimension("query"),
   fetchDimension("page"),
   fetchDimension("country"),
   fetchDimension("device"),
   apiJson(`https://www.googleapis.com/webmasters/v3/sites/${encodedSiteUrl}/sitemaps`),
+  days === 28 ? fetchDatedDimension("query") : Promise.resolve({ rows: [], truncated: false }),
+  days === 28 ? fetchDatedDimension("page") : Promise.resolve({ rows: [], truncated: false }),
 ])
 
 const summaryRow = summaryResponse.rows?.[0]
@@ -195,6 +213,31 @@ latest.generatedAt = generatedAt
 latest.windows[prefix] = summary
 latest.sitemap = sitemapSummary
 writeJson("latest-summary.json", latest)
+
+if (days === 28) {
+  const watchPath = path.join(outputDir, "first-impression-watch.json")
+  let previousWatch = null
+  if (fs.existsSync(watchPath)) {
+    try {
+      const parsed = JSON.parse(fs.readFileSync(watchPath, "utf8"))
+      if (parsed.siteUrl === siteUrl) previousWatch = parsed
+    } catch {
+      // Replace an invalid previous watch file with verified API data.
+    }
+  }
+  writeJson("first-impression-watch.json", buildFirstImpressionWatch({
+    generatedAt,
+    siteUrl,
+    period: summary.period,
+    metrics,
+    queries,
+    nonBrandedQueries,
+    pages: pagesResult.rows,
+    datedQueries: datedQueriesResult.rows,
+    datedPages: datedPagesResult.rows,
+    previous: previousWatch,
+  }))
+}
 
 console.log(`Wrote ${prefix} Google Search Console reports to ${path.relative(projectRoot, outputDir)}/`)
 console.log(`Period: ${period.startDate} to ${period.endDate} (finalized data, Pacific Time)`)

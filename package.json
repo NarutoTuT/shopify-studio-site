@@ -10,6 +10,7 @@
     "gsc:auth": "node scripts/gsc/auth.mjs",
     "gsc:28d": "node scripts/gsc/report.mjs 28",
     "gsc:90d": "node scripts/gsc/report.mjs 90",
+    "gsc:watch": "node scripts/gsc/report.mjs 28",
     "gsc:test": "node --test scripts/gsc/*.test.mjs"
   },
   "dependencies": {

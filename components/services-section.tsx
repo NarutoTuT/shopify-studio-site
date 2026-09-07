@@ -156,6 +156,12 @@ export function ServicesSection() {
         <p className="animate-line text-muted-foreground text-base md:text-lg leading-[1.6] mt-4 max-w-2xl mx-auto">
           {text.description}
         </p>
+        {language === "zh" && (
+          <a href="/learn/shopify-ga4-gtm-tracking-plan" className="animate-line mt-5 inline-flex min-h-11 items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/[0.05] px-5 text-base font-semibold text-cyan-200 transition-colors hover:bg-cyan-300/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/60">
+            Shopify GA4 / GTM Tracking Plan
+            <ArrowUpRight className="size-4" />
+          </a>
+        )}
       </div>
 
       <div ref={consoleRef} className="home-module-shell mx-auto max-w-[1500px]">
@@ -249,10 +255,18 @@ export function ServicesSection() {
                 <p className="mt-3 text-sm leading-[1.75] text-white/58 md:text-base">{activeService.capability}</p>
               </div>
 
-              <a href={localizedPath(serviceLinks[activeIndex])} className="mt-7 inline-flex items-center gap-2 rounded-full border border-primary/35 bg-primary/10 px-6 py-3.5 text-sm font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-[0_0_28px_rgba(119,252,117,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
-                {text.cta}
-                <ArrowUpRight className="size-4" />
-              </a>
+              <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row">
+                <a href={localizedPath(serviceLinks[activeIndex])} className="inline-flex min-h-12 items-center gap-2 rounded-full border border-primary/35 bg-primary/10 px-6 py-3.5 text-base font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-[0_0_28px_rgba(119,252,117,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
+                  {text.cta}
+                  <ArrowUpRight className="size-4" />
+                </a>
+                {language === "zh" && activeIndex === 2 && (
+                  <a href="/learn/shopify-ga4-gtm-tracking-plan" className="inline-flex min-h-12 items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/[0.06] px-6 py-3.5 text-base font-semibold text-cyan-200 transition-colors hover:bg-cyan-300/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/60">
+                    阅读 GA4 / GTM Tracking Plan
+                    <ArrowUpRight className="size-4" />
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         </div>

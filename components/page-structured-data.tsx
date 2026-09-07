@@ -16,6 +16,9 @@ type PageItem = {
   url: string
   inLanguage?: string
   about?: string[]
+  datePublished?: string
+  dateModified?: string
+  reviewedBy?: string
 }
 
 type PageStructuredDataProps = {
@@ -63,6 +66,9 @@ export function PageStructuredData({ breadcrumbs, service, page, language = "zh"
               ? {
                   author: { "@id": `${siteUrl}/#organization` },
                   publisher: { "@id": `${siteUrl}/#organization` },
+                  ...(page.datePublished ? { datePublished: page.datePublished } : {}),
+                  ...(page.dateModified ? { dateModified: page.dateModified } : {}),
+                  ...(page.reviewedBy ? { reviewedBy: { "@type": "Person", name: page.reviewedBy } } : {}),
                 }
               : {}),
           }
