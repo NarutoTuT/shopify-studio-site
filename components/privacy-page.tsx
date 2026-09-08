@@ -1,6 +1,6 @@
 "use client"
 
-import { Database, Eye, FileText, LockKeyhole, Mail, ShieldCheck } from "lucide-react"
+import { ArrowUpRight, Database, Eye, FileText, LockKeyhole, ShieldCheck } from "lucide-react"
 
 import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
@@ -344,17 +344,28 @@ export function PrivacyPage() {
           </div>
         </section>
 
-        <section className="bg-black px-4 pb-[50px] sm:px-6 md:px-10 md:pb-[100px]">
-          <div className="mx-auto max-w-[1500px] rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_0%_0%,rgba(119,252,117,0.13),transparent_38%),linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.018))] p-6 md:p-10 lg:flex lg:items-end lg:justify-between lg:gap-12">
-            <div className="max-w-3xl">
-              <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">{text.contactLabel}</p>
-              <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.035em] text-white md:text-5xl">{text.contactTitle}</h2>
-              <p className="mt-5 text-base leading-[1.8] text-white/60">{text.contactText}</p>
+        <section className="bg-background px-4 pb-[50px] pt-0 sm:px-6 md:px-10 md:pb-[100px] md:pt-0">
+          <div className="relative mx-auto max-w-[1500px] overflow-hidden rounded-[3.2rem_1.5rem_3.6rem_1.8rem] border border-white/25 bg-[linear-gradient(115deg,rgba(255,255,255,0.075),rgba(255,255,255,0.015)_38%,rgba(34,211,238,0.045)_72%,rgba(119,252,117,0.06))] px-7 py-12 shadow-[inset_0_2px_0_rgba(255,255,255,0.24),inset_0_-2px_0_rgba(119,252,117,0.1),0_45px_110px_rgba(0,0,0,0.5),0_0_80px_rgba(34,211,238,0.08)] backdrop-blur-3xl md:px-14 md:py-16">
+            <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_82%_20%,rgba(34,211,238,0.15),transparent_28%),radial-gradient(circle_at_16%_0%,rgba(255,255,255,0.08),transparent_32%)]" />
+            <div aria-hidden="true" className="absolute inset-x-[7%] top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
+            <div aria-hidden="true" className="absolute -bottom-8 right-[8%] rotate-[-8deg] space-y-2 font-mono text-base leading-relaxed text-cyan-300/16">
+              <p>privacy_request / access / deletion</p>
+              <p>authorized account · local reports</p>
+              <p>revoke / verify / process</p>
             </div>
-            <a href="mailto:liaoshenyuan1999053@gmail.com?subject=WhaleLeap%20Privacy%20Request" className="mt-7 inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-black transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 lg:mt-0">
-              <Mail className="size-5" />
-              {text.contactCta}
-            </a>
+            <div aria-hidden="true" className="absolute bottom-[22%] right-[2%] h-px w-[62%] rotate-[-8deg] animate-shimmer bg-[linear-gradient(90deg,transparent,rgba(34,211,238,0.55),rgba(119,252,117,0.8),transparent)] bg-[length:200%_100%] shadow-[0_0_25px_rgba(119,252,117,0.35)] motion-reduce:animate-none" />
+            <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+              <div className="max-w-4xl">
+                <ShieldCheck className="mb-5 size-8 text-primary" />
+                <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">{text.contactLabel}</p>
+                <h2 className="mt-3 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal text-white">{text.contactTitle}</h2>
+                <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.contactText}</p>
+              </div>
+              <a href="mailto:liaoshenyuan1999053@gmail.com?subject=WhaleLeap%20Privacy%20Request" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
+                {text.contactCta}
+                <ArrowUpRight className="size-4" />
+              </a>
+            </div>
           </div>
         </section>
       </main>

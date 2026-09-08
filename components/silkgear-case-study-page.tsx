@@ -45,9 +45,9 @@ const implementation = [
 
 function SectionHeading({ number, label, title }: { number: string; label: string; title: string }) {
   return (
-    <header className="max-w-4xl">
+    <header className="mx-auto max-w-4xl text-center">
       <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">{number} / {label}</p>
-      <h2 className="mt-3 text-[clamp(1.9rem,3.4vw,3.2rem)] font-bold leading-[1.05] tracking-[-0.025em] text-white">{title}</h2>
+      <h2 className="mt-3 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal text-white">{title}</h2>
     </header>
   )
 }
@@ -80,24 +80,24 @@ export function SilkGearCaseStudyPage() {
           <header className="relative overflow-hidden px-4 pb-[50px] pt-28 sm:px-6 md:px-10 md:pb-[100px] md:pt-36">
             <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(119,252,117,0.18),transparent_31%),radial-gradient(circle_at_82%_34%,rgba(45,212,191,0.14),transparent_34%),linear-gradient(180deg,#030806,#000)]" />
             <div aria-hidden="true" className="absolute inset-0 opacity-[0.13] [background-image:linear-gradient(rgba(119,252,117,0.22)_1px,transparent_1px),linear-gradient(90deg,rgba(45,212,191,0.18)_1px,transparent_1px)] [background-size:72px_72px] [mask-image:radial-gradient(circle_at_50%_36%,black,transparent_76%)]" />
-            <div className="relative mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-end">
-              <div>
+            <div className="relative mx-auto max-w-[1500px]">
+              <div className="mx-auto max-w-[1100px] text-center">
                 <p className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">
                   <CircleDot className="size-4" /> Real case study / 01
                 </p>
-                <h1 className="mt-7 text-[clamp(2.7rem,6.3vw,6rem)] font-bold leading-[0.92] tracking-[-0.05em]">
+                <h1 className="mx-auto mt-7 text-balance text-[clamp(2.25rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-normal">
                   SilkGear
                   <span className="mt-2 block bg-gradient-to-r from-primary via-emerald-200 to-white bg-clip-text text-transparent">Premium Tech Retail</span>
                 </h1>
-                <p className="mt-7 max-w-3xl text-lg font-semibold leading-[1.55] text-white/84 md:text-2xl">让高客单、多品类科技产品，从“看见设备”走到“理解为什么值得选”。</p>
-                <p className="mt-5 max-w-3xl text-base leading-[1.8] text-white/60 md:text-lg">这不是结果包装页。下面只记录当前可由公开店铺、项目截图和已确认合作关系支持的范围、决策与交付证据。</p>
+                <p className="mx-auto mt-7 max-w-[900px] text-lg font-semibold leading-[1.55] text-white/84 md:text-2xl">让高客单、多品类科技产品，从“看见设备”走到“理解为什么值得选”。</p>
+                <p className="mx-auto mt-5 max-w-[1000px] text-base leading-[1.8] text-white/60 md:text-lg">这不是结果包装页。下面只记录当前可由公开店铺、项目截图和已确认合作关系支持的范围、决策与交付证据。</p>
                 <a href={liveStoreUrl} target="_blank" rel="noreferrer noopener" className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-primary px-6 text-base font-bold text-black transition-transform hover:translate-x-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                   查看 SilkGear 线上店铺 <ExternalLink className="size-5" />
                 </a>
               </div>
-              <figure className="overflow-hidden rounded-[2.2rem] border border-white/15 bg-white/[0.035] p-2 shadow-[0_32px_100px_rgba(0,0,0,0.42)]">
+              <figure className="mt-10 overflow-hidden rounded-[2.2rem] border border-white/15 bg-white/[0.035] p-2 shadow-[0_32px_100px_rgba(0,0,0,0.42)] md:mt-14">
                 <div className="relative aspect-[16/10] overflow-hidden rounded-[1.8rem] bg-[#061018]">
-                  <Image src="/images/about/project-tech-collection.webp" alt="SilkGear 科技产品集合页面截图，展示按使用场景组织的商品分类" fill priority sizes="(max-width: 1024px) 92vw, 54vw" className="object-cover object-top" />
+                  <Image src="/images/about/project-tech-collection.webp" alt="SilkGear 科技产品集合页面截图，展示按使用场景组织的商品分类" fill priority sizes="(max-width: 1024px) 92vw, 96vw" className="object-contain object-top" />
                 </div>
                 <figcaption className="px-4 py-4 text-base leading-[1.6] text-white/52">公开交付截图：场景化科技产品集合入口。</figcaption>
               </figure>
@@ -109,7 +109,7 @@ export function SilkGearCaseStudyPage() {
               {sections.map((item) => (
                 <section key={item.label} className="rounded-[2rem] border border-white/12 bg-white/[0.035] p-6 sm:p-8">
                   <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">{item.number} / {item.label}</p>
-                  <h2 className="mt-4 text-2xl font-bold leading-tight tracking-[-0.02em]">{item.title}</h2>
+                  <h2 className="mt-4 text-[clamp(1.5rem,2.2vw,2rem)] font-bold leading-tight tracking-normal">{item.title}</h2>
                   <p className="mt-5 text-base leading-[1.78] text-white/62">{item.body}</p>
                 </section>
               ))}
@@ -177,12 +177,12 @@ export function SilkGearCaseStudyPage() {
             <div className="mx-auto grid max-w-[1500px] gap-4 lg:grid-cols-2">
               <section className="rounded-[2rem] border border-primary/20 bg-primary/[0.05] p-6 sm:p-8">
                 <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">07 / Outcome</p>
-                <h2 className="mt-4 text-2xl font-bold">可确认的结果，是一套已经公开运行的零售路径。</h2>
+                <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">可确认的结果，是一套已经公开运行的零售路径。</h2>
                 <p className="mt-5 text-base leading-[1.8] text-white/64">当前公开结果是：用户可以从品牌选品主张进入场景化品类，再到具体商品与购买动作，并可继续查看会员和墨尔本实体门店信息。这里不把“已经上线”解释成转化提升，也不提供未经授权的营收或流量数字。</p>
               </section>
               <section className="rounded-[2rem] border border-amber-300/20 bg-amber-300/[0.045] p-6 sm:p-8">
                 <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-amber-200">08 / Limitations</p>
-                <h2 className="mt-4 text-2xl font-bold">本案例有意保留三条边界。</h2>
+                <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">本案例有意保留三条边界。</h2>
                 <ul className="mt-5 space-y-3 text-base leading-[1.75] text-white/64">
                   <li>不公开未获授权的后台数据、投放数据或商业指标。</li>
                   <li>不将第三方应用、品牌运营或后续内容更新自动归入 WhaleLeap 的交付范围。</li>
@@ -193,15 +193,23 @@ export function SilkGearCaseStudyPage() {
           </section>
 
           <section className="px-4 pb-[50px] sm:px-6 md:px-10 md:pb-[100px]">
-            <div className="mx-auto max-w-[1500px] rounded-[2.4rem] border border-primary/25 bg-[radial-gradient(circle_at_85%_15%,rgba(45,212,191,0.15),transparent_30%),linear-gradient(135deg,rgba(119,252,117,0.09),rgba(255,255,255,0.025))] p-6 sm:p-8 lg:p-10">
-              <ShieldCheck className="size-8 text-primary" />
-              <p className="mt-6 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">09 / Related service & guide</p>
-              <h2 className="mt-4 max-w-4xl text-[clamp(1.9rem,3.4vw,3.2rem)] font-bold leading-[1.05] tracking-[-0.025em]">需要的是同类 Shopify 结构判断，而不是复制 SilkGear 的视觉。</h2>
-              <p className="mt-5 max-w-4xl text-base leading-[1.8] text-white/62 md:text-lg">建站服务负责把品牌、品类、PDP 与交付边界组织成可维护的系统；GA4 / GTM Tracking Plan 则说明上线后如何定义事件和验证数据。两者解决的是不同阶段的问题。</p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <a href="/services/shopify-website-build" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-6 text-base font-bold text-black transition-transform hover:translate-x-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">相关服务：Shopify 建站 <ArrowUpRight className="size-5" /></a>
-                <a href="/learn/shopify-ga4-gtm-tracking-plan" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/[0.06] px-6 text-base font-semibold text-cyan-200 transition-colors hover:bg-cyan-300/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300">相关 Guide：GA4 / GTM Tracking Plan <ArrowUpRight className="size-5" /></a>
-                <a href="/diagnosis" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/15 px-6 text-base font-semibold text-white transition-colors hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">免费 Shopify Review <ArrowUpRight className="size-5" /></a>
+            <div className="relative mx-auto max-w-[1500px] overflow-hidden rounded-[3.2rem_1.5rem_3.6rem_1.8rem] border border-white/25 bg-[linear-gradient(115deg,rgba(255,255,255,0.075),rgba(255,255,255,0.015)_38%,rgba(45,212,191,0.045)_72%,rgba(119,252,117,0.06))] px-7 py-12 shadow-[inset_0_2px_0_rgba(255,255,255,0.24),inset_0_-2px_0_rgba(119,252,117,0.1),0_45px_110px_rgba(0,0,0,0.5),0_0_80px_rgba(45,212,191,0.08)] backdrop-blur-3xl md:px-14 md:py-16">
+              <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_82%_20%,rgba(45,212,191,0.15),transparent_28%),radial-gradient(circle_at_16%_0%,rgba(255,255,255,0.08),transparent_32%)]" />
+              <div aria-hidden="true" className="absolute inset-x-[7%] top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
+              <div aria-hidden="true" className="absolute -bottom-8 right-[8%] rotate-[-8deg] space-y-2 font-mono text-base leading-relaxed text-cyan-300/16"><p>Shopify website build</p><p>GA4 tracking plan</p><p>free Shopify review</p></div>
+              <div aria-hidden="true" className="absolute bottom-[22%] right-[2%] h-px w-[62%] rotate-[-8deg] animate-shimmer bg-[linear-gradient(90deg,transparent,rgba(45,212,191,0.55),rgba(119,252,117,0.8),transparent)] bg-[length:200%_100%] shadow-[0_0_25px_rgba(119,252,117,0.35)] motion-reduce:animate-none" />
+              <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+                <div>
+                  <ShieldCheck className="mb-5 size-8 text-primary" />
+                  <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">09 / Related service & guide</p>
+                  <h2 className="mt-4 max-w-4xl text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">需要的是同类 Shopify 结构判断，而不是复制 SilkGear 的视觉。</h2>
+                  <p className="mt-5 max-w-4xl text-base leading-[1.8] text-white/62 md:text-lg">建站服务负责把品牌、品类、PDP 与交付边界组织成可维护的系统；GA4 / GTM Tracking Plan 则说明上线后如何定义事件和验证数据。两者解决的是不同阶段的问题。</p>
+                </div>
+                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:max-w-[25rem] lg:flex-col">
+                  <a href="/services/shopify-website-build" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-black shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">相关服务：Shopify 建站 <ArrowUpRight className="size-5" /></a>
+                  <a href="/learn/shopify-ga4-gtm-tracking-plan" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/[0.06] px-7 text-base font-semibold text-cyan-200 transition-colors hover:bg-cyan-300/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300">相关 Guide：GA4 / GTM Tracking Plan <ArrowUpRight className="size-5" /></a>
+                  <a href="/diagnosis" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.025] px-7 text-base font-semibold text-white transition-colors hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">免费 Shopify Review <ArrowUpRight className="size-5" /></a>
+                </div>
               </div>
             </div>
           </section>
