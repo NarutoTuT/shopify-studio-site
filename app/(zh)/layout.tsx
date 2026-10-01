@@ -91,7 +91,7 @@ export default function RootLayout({
         <StructuredData language="zh" />
         {children}
         <SiteFooter language="zh" />
-        <GoogleAnalytics />
+        <GoogleAnalytics language="zh" />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

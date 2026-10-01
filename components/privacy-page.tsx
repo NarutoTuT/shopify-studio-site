@@ -6,14 +6,14 @@ import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
 import { useLanguage } from "@/components/language-provider"
 
-const updatedAt = "2026-09-06"
+const updatedAt = "2026-10-01"
 
 const copy = {
   zh: {
     eyebrow: "PRIVACY / DATA USE",
     title: "隐私政策",
     intro: "这份政策说明 WhaleLeap Studio 网站和 WhaleLeap GSC Reader 如何处理信息。我们只收集完成咨询、网站分析和经授权的 Search Console 报告所需要的数据。",
-    updated: "更新日期：2026 年 9 月 6 日",
+    updated: "更新日期：2026 年 10 月 1 日",
     summary: [
       { title: "表单信息", text: "用于回复诊断与项目咨询", icon: FileText },
       { title: "网站分析", text: "用于了解页面与功能表现", icon: Eye },
@@ -39,7 +39,7 @@ const copy = {
         id: "services",
         title: "3. 网站分析与第三方服务",
         paragraphs: [
-          "网站在配置启用时使用 Google Analytics，并在生产环境使用 Vercel Analytics。它们可能处理页面访问、来源、设备或浏览器信息、近似地区和站内交互事件，用于理解网站表现与改进体验。你可以通过浏览器设置限制 Cookie 或追踪，也可以使用 Google 提供的分析退出工具。",
+          "网站仅在你同意分析后加载 Google Analytics，并在生产环境使用 Vercel Analytics。Google Analytics 可能处理页面访问、来源、设备或浏览器信息、近似地区和站内交互事件，用于理解网站表现与改进体验。你可以通过网站底部的隐私设置随时更改选择，也可以使用 Google 提供的分析退出工具。",
           "咨询表单通过 Resend 发送给 WhaleLeap Studio；如果你填写邮箱，系统还可能发送一封提交确认邮件。我们不会把咨询信息出售给第三方，也不会用于与本次咨询无关的营销。",
         ],
         links: [
@@ -96,7 +96,7 @@ const copy = {
     eyebrow: "PRIVACY / DATA USE",
     title: "Privacy Policy",
     intro: "This policy explains how the WhaleLeap Studio website and WhaleLeap GSC Reader handle information. We collect only what is needed to respond to inquiries, understand website use, and create authorized Search Console reports.",
-    updated: "Last updated: September 6, 2026",
+    updated: "Last updated: October 1, 2026",
     summary: [
       { title: "Form information", text: "Used to respond to reviews and project inquiries", icon: FileText },
       { title: "Website analytics", text: "Used to understand page and feature performance", icon: Eye },
@@ -122,7 +122,7 @@ const copy = {
         id: "services",
         title: "3. Website analytics and service providers",
         paragraphs: [
-          "When configured, the site uses Google Analytics and, in production, Vercel Analytics. These services may process page visits, referrers, device or browser information, approximate location, and on-site interaction events so we can understand performance and improve the experience. You can limit cookies or tracking in your browser and use Google's Analytics opt-out tool.",
+          "The site loads Google Analytics only after you consent and uses Vercel Analytics in production. Google Analytics may process page visits, referrers, device or browser information, approximate location, and on-site interaction events so we can understand performance and improve the experience. You can change your choice at any time through Privacy settings in the footer and use Google's Analytics opt-out tool.",
           "The inquiry form uses Resend to deliver submissions to WhaleLeap Studio. If you provide an email address, the system may also send a submission confirmation. We do not sell inquiry data or use it for marketing unrelated to your request.",
         ],
         links: [

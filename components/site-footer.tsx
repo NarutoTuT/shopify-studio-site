@@ -1,6 +1,7 @@
 import { ArrowUpRight, Mail, MessageCircle } from "lucide-react"
 
 import { BrandLogo } from "@/components/brand-logo"
+import { PrivacySettingsButton } from "@/components/privacy-settings-button"
 
 type SiteFooterProps = {
   language: "zh" | "en"
@@ -29,6 +30,7 @@ const footerCopy = {
     contactCta: "开始免费诊断",
     privacy: "提交的信息仅用于回复咨询和项目沟通，不会用于无关营销。",
     privacyLink: "隐私政策",
+    privacySettings: "隐私设置",
     gscReader: "WhaleLeap GSC Reader 是面向网站运营者的 Search Console 只读报告工具。",
     copyright: "Shopify Growth Engineering Studio",
   },
@@ -54,6 +56,7 @@ const footerCopy = {
     contactCta: "Start a Free Review",
     privacy: "Submitted information is used only to reply to your inquiry and discuss a potential project.",
     privacyLink: "Privacy Policy",
+    privacySettings: "Privacy settings",
     gscReader: "WhaleLeap GSC Reader is a read-only Search Console reporting tool for website operators.",
     copyright: "Shopify Growth Engineering Studio",
   },
@@ -126,7 +129,12 @@ export function SiteFooter({ language }: SiteFooterProps) {
         <div className="mt-12 flex flex-col gap-4 text-base leading-relaxed text-white/40 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <p>{text.privacy}</p>
-            <p className="mt-2">{text.gscReader} <a href={localizedPath("/privacy", language)} className="text-white/70 underline decoration-white/25 underline-offset-4 transition-colors hover:text-primary focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">{text.privacyLink}</a></p>
+            <p className="mt-2">
+              {text.gscReader}{" "}
+              <a href={localizedPath("/privacy", language)} className="text-white/70 underline decoration-white/25 underline-offset-4 transition-colors hover:text-primary focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">{text.privacyLink}</a>
+              <span aria-hidden="true"> · </span>
+              <PrivacySettingsButton label={text.privacySettings} />
+            </p>
           </div>
           <p className="shrink-0">© {year} WhaleLeap Studio · {text.copyright}</p>
         </div>

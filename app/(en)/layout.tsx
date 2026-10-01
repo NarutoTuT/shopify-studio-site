@@ -66,7 +66,7 @@ export default function EnglishRootLayout({ children }: Readonly<{ children: Rea
         <StructuredData language="en" />
         {children}
         <SiteFooter language="en" />
-        <GoogleAnalytics />
+        <GoogleAnalytics language="en" />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
