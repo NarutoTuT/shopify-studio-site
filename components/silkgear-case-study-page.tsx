@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ArrowUpRight, CheckCircle2, CircleDot, ExternalLink, Layers3, ShieldCheck } from "lucide-react"
+import { ArrowUpRight, CircleDot, ExternalLink, ShieldCheck } from "lucide-react"
 
 import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
@@ -13,13 +13,13 @@ const sections = [
     number: "01",
     label: "Challenge",
     title: "产品很多，但用户不能只靠参数做决定。",
-    body: "SilkGear 面向高客单、多品类科技零售。公开店铺同时覆盖 Robot Companion、Care & Wellness、Smart Device、Smart Home、Image、Wearable、Maker Shed 与 Accessories。页面要让第一次到访的用户先理解选品逻辑，再进入具体产品，而不是面对一整面缺少关系的商品。",
+    body: "SilkGear 是一家澳大利亚科技零售品牌，覆盖机器人、智能设备、户外移动设备等品类。页面需要帮助第一次到访的用户理解产品用途，缩小选择，再进入具体商品的购买决策。",
   },
   {
     number: "02",
     label: "Scope",
-    title: "把品牌发现、商品理解与线下体验接成一条路径。",
-    body: "本案例公开范围聚焦 Shopify storefront experience：主页叙事、场景化品类入口、集合与商品详情体验、会员入口，以及实体门店与联系信息。这里不把未公开的后台系统、投放账户或运营结果算进合作范围。",
+    title: "网站设计与 Shopify 开发。",
+    body: "WhaleLeap 负责网站设计与 Shopify 开发，设计由团队设计师 ZIWEI 参与执行。本次选取 Hypershell 桌面与移动端商品页，以及科技产品集合页，展示设计和当前线上页面的结构。",
   },
   {
     number: "03",
@@ -36,12 +36,37 @@ const decisions = [
   ["保留真实门店出口", "在页脚持续呈现墨尔本门店地址、营业时间、联系信息与会员入口。"],
 ]
 
-const implementation = [
-  "多品类主导航与 Explore the collection 发现入口",
-  "品牌主张、精选产品与新品内容的首页节奏",
-  "商品图集、购买信息与相关产品并置的 PDP 结构",
-  "会员、合作、联系和实体门店信息的全站出口",
+const evidenceImages = [
+  {
+    src: "/case-studies/silkgear/hypershell-design.webp",
+    title: "桌面 PDP · 设计稿",
+    alt: "SilkGear Hypershell 桌面设计稿，产品图片与购买信息并置",
+    caption: "设计将产品展示与购买信息并置，下方衔接场景、配套商品、FAQ 与会员内容。预览为设计稿上部。",
+    aspect: "aspect-[1440/940]",
+  },
+  {
+    src: "/case-studies/silkgear/hypershell-desktop.webp",
+    title: "桌面 PDP · 当前线上首屏",
+    alt: "当前 Hypershell 商品页首屏，包含型号选择、产品信息、加入购物车和到店体验入口",
+    caption: "当前页面保留了产品与购买信息并置的结构；型号、价格和素材已随运营更新。截图仅包含首屏。",
+    aspect: "aspect-video",
+  },
 ]
+
+function EvidenceImage({ src, title, alt, caption, aspect }: (typeof evidenceImages)[number]) {
+  return (
+    <figure className="min-w-0">
+      <h3 className="mb-4 text-xl font-semibold">{title}</h3>
+      <a href={src} target="_blank" rel="noreferrer noopener" aria-label={`查看原图：${title}（新标签页）`} className={`relative block overflow-hidden rounded-lg bg-[#eaeaea] ${aspect} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-black`}>
+        <Image src={src} alt={alt} fill sizes="(max-width: 767px) 92vw, 660px" className="object-cover object-top" />
+      </a>
+      <figcaption className="mt-4 text-base leading-[1.75] text-white/65">{caption}</figcaption>
+      <a href={src} target="_blank" rel="noreferrer noopener" className="mt-3 inline-flex min-h-11 items-center gap-2 text-base text-primary underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
+        查看原图 <ExternalLink className="size-4" aria-hidden="true" />
+      </a>
+    </figure>
+  )
+}
 
 function SectionHeading({ number, label, title }: { number: string; label: string; title: string }) {
   return (
@@ -80,7 +105,7 @@ export function SilkGearCaseStudyPage() {
           <header className="relative overflow-hidden px-4 pb-[50px] pt-28 sm:px-6 md:px-10 md:pb-[100px] md:pt-36">
             <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(119,252,117,0.18),transparent_31%),radial-gradient(circle_at_82%_34%,rgba(45,212,191,0.14),transparent_34%),linear-gradient(180deg,#030806,#000)]" />
             <div aria-hidden="true" className="absolute inset-0 opacity-[0.13] [background-image:linear-gradient(rgba(119,252,117,0.22)_1px,transparent_1px),linear-gradient(90deg,rgba(45,212,191,0.18)_1px,transparent_1px)] [background-size:72px_72px] [mask-image:radial-gradient(circle_at_50%_36%,black,transparent_76%)]" />
-            <div className="relative mx-auto max-w-[1500px]">
+            <div className="relative mx-auto max-w-[1400px]">
               <div className="mx-auto max-w-[1100px] text-center">
                 <p className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">
                   <CircleDot className="size-4" /> Real case study / 01
@@ -90,7 +115,7 @@ export function SilkGearCaseStudyPage() {
                   <span className="mt-2 block bg-gradient-to-r from-primary via-emerald-200 to-white bg-clip-text text-transparent">Premium Tech Retail</span>
                 </h1>
                 <p className="mx-auto mt-7 max-w-[900px] text-lg font-semibold leading-[1.55] text-white/84 md:text-2xl">让高客单、多品类科技产品，从“看见设备”走到“理解为什么值得选”。</p>
-                <p className="mx-auto mt-5 max-w-[1000px] text-base leading-[1.8] text-white/60 md:text-lg">这不是结果包装页。下面只记录当前可由公开店铺、项目截图和已确认合作关系支持的范围、决策与交付证据。</p>
+                <p className="mx-auto mt-5 max-w-[1000px] text-base leading-[1.8] text-white/60 md:text-lg">WhaleLeap 负责网站设计与 Shopify 开发。本案例选取产品详情与集合页，对照设计稿和当前线上界面，展示产品信息、浏览与购买入口如何组织。</p>
                 <a href={liveStoreUrl} target="_blank" rel="noreferrer noopener" className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-primary px-6 text-base font-bold text-black transition-transform hover:translate-x-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                   查看 SilkGear 线上店铺 <ExternalLink className="size-5" />
                 </a>
@@ -105,7 +130,7 @@ export function SilkGearCaseStudyPage() {
           </header>
 
           <section className="px-4 pb-[50px] sm:px-6 md:px-10 md:pb-[100px]">
-            <div className="mx-auto grid max-w-[1500px] gap-4 lg:grid-cols-3">
+            <div className="mx-auto grid max-w-[1400px] gap-4 lg:grid-cols-3">
               {sections.map((item) => (
                 <section key={item.label} className="rounded-[2rem] border border-white/12 bg-white/[0.035] p-6 sm:p-8">
                   <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">{item.number} / {item.label}</p>
@@ -117,7 +142,7 @@ export function SilkGearCaseStudyPage() {
           </section>
 
           <section className="px-4 pb-[50px] sm:px-6 md:px-10 md:pb-[100px]">
-            <div className="mx-auto max-w-[1500px]">
+            <div className="mx-auto max-w-[1400px]">
               <SectionHeading number="04" label="Decisions" title="四个决定，共同减少选择成本。" />
               <div className="mt-8 grid gap-4 md:grid-cols-2">
                 {decisions.map(([title, body], index) => (
@@ -132,49 +157,40 @@ export function SilkGearCaseStudyPage() {
           </section>
 
           <section className="px-4 pb-[50px] sm:px-6 md:px-10 md:pb-[100px]">
-            <div className="mx-auto max-w-[1500px]">
-              <SectionHeading number="05" label="Implementation" title="实施证据放在页面里，而不是藏在形容词里。" />
-              <div className="mt-8 grid gap-5 lg:grid-cols-[1.18fr_0.82fr]">
-                <figure className="overflow-hidden rounded-[2rem] border border-white/12 bg-white/[0.035] p-2">
-                  <div className="relative aspect-[16/10] overflow-hidden rounded-[1.6rem] bg-white">
-                    <Image src="/images/about/project-smart-glasses-pdp.webp" alt="智能眼镜 Shopify 商品详情页截图，展示商品图集、价格、购买入口与相关产品" fill sizes="(max-width: 1024px) 92vw, 58vw" className="object-contain object-top" />
-                  </div>
-                  <figcaption className="px-4 py-4 text-base leading-[1.6] text-white/52">商品详情页证据：产品图集、购买信息与相关商品处于同一决策上下文。</figcaption>
-                </figure>
-                <div className="rounded-[2rem] border border-primary/20 bg-primary/[0.055] p-6 sm:p-8">
-                  <Layers3 className="size-7 text-primary" />
-                  <h3 className="mt-5 text-2xl font-bold">公开可核验的交付面</h3>
-                  <ul className="mt-6 space-y-4">
-                    {implementation.map((item) => (
-                      <li key={item} className="flex gap-3 text-base leading-[1.7] text-white/68">
-                        <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+            <div className="mx-auto max-w-[1400px]">
+              <SectionHeading number="05" label="Design to storefront" title="Hypershell：从产品展示到购买选择。" />
+              <p className="mx-auto mt-5 max-w-3xl text-base leading-[1.8] text-white/65">这类设备需要同时解释外观、用途和购买选项。设计稿将两类信息放在同一视野；当前线上页面可看到型号选择、产品信息折叠项，以及购买和到店体验入口。</p>
+              <div className="mt-10 grid gap-10 md:grid-cols-2">
+                {evidenceImages.map((item) => <EvidenceImage key={item.src} {...item} />)}
+              </div>
+              <p className="mt-6 border-t border-white/15 pt-5 text-base leading-[1.75] text-white/55">线上截图采集于 2026 年 10 月 1 日。设计稿与当前店铺并非同一版本，不作为逐像素还原或商业效果提升的证明。</p>
+            </div>
+          </section>
+
+          <section className="px-4 pb-[50px] sm:px-6 md:px-10 md:pb-[100px]">
+            <div className="mx-auto max-w-[1400px]">
+              <SectionHeading number="06" label="Mobile & collection" title="从分类浏览，到移动端购买。" />
+              <div className="mx-auto mt-10 grid max-w-[860px] items-start gap-10 md:grid-cols-2">
+                <div className="mx-auto w-full max-w-[390px]">
+                  <EvidenceImage src="/case-studies/silkgear/hypershell-mobile-design.webp" title="移动 PDP · 设计稿" alt="Hypershell 移动端设计稿，依次展示产品、说明、型号信息和购买入口" caption="移动端设计采用单列阅读顺序。此处预览产品与购买区域，原图包含完整设计；配套商品区保留设计稿原有的空白占位。" aspect="aspect-[390/1020]" />
                 </div>
+                <div className="mx-auto w-full max-w-[390px]">
+                  <EvidenceImage src="/case-studies/silkgear/hypershell-mobile.webp" title="移动 PDP · 当前线上页面" alt="Hypershell 移动端商品页，单列呈现产品图片、说明和购买选项" caption="单列组织产品图片、说明与购买选项，下方衔接场景内容、FAQ 和会员入口。此处预览产品与购买区域，原图包含整页。" aspect="aspect-[390/1020]" />
+                </div>
+              </div>
+              <div className="mt-14 grid items-start gap-10 border-t border-white/15 pt-10 md:grid-cols-2">
+                <EvidenceImage src="/case-studies/silkgear/robotics-collection-design.webp" title="Collection · 设计稿" alt="SilkGear Robot Companion 集合页设计稿，品类主视觉下方为双列商品网格" caption="Robot Companion 集合页设计：品类主视觉衔接双列商品网格。此处为设计稿上部，原图包含完整页面，不含画布标签或评论。" aspect="aspect-[4/5]" />
+                <EvidenceImage src="/case-studies/silkgear/robotics-collection.webp" title="Collection · 当前线上页面" alt="SilkGear Robotics and Mobility 集合页，分类主视觉下方排列商品图片、名称与价格" caption="当前 Robotics & Mobility 页面使用三列商品网格，分类名称、主视觉和商品组合均已更新。此处为页面上部，原图包含当前完整网格及页脚。" aspect="aspect-[4/5]" />
+              </div>
+              <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-base text-primary">
+                <a href={`${liveStoreUrl}products/hypershell-x-series-exoskeleton`} target="_blank" rel="noreferrer noopener" className="inline-flex min-h-11 items-center gap-2 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">查看线上产品页 <ArrowUpRight className="size-4" aria-hidden="true" /></a>
+                <a href={`${liveStoreUrl}collections/robotics-mobility`} target="_blank" rel="noreferrer noopener" className="inline-flex min-h-11 items-center gap-2 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">查看线上集合页 <ArrowUpRight className="size-4" aria-hidden="true" /></a>
               </div>
             </div>
           </section>
 
           <section className="px-4 pb-[50px] sm:px-6 md:px-10 md:pb-[100px]">
-            <div className="mx-auto grid max-w-[1500px] gap-8 rounded-[2.4rem] border border-white/12 bg-white/[0.035] p-6 sm:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:p-10">
-              <div>
-                <SectionHeading number="06" label="Evidence" title="线上页面是当前证据，不是历史 KPI 的替代品。" />
-                <p className="mt-5 text-base leading-[1.8] text-white/62">截至本案例整理时，公开站点仍可看到场景化分类、精选商品、新品、会员、合作与实体门店信息。截图保留了集合、PDP 与全站信息结构，便于核对案例描述是否与实际界面一致。</p>
-                <a href={liveStoreUrl} target="_blank" rel="noreferrer noopener" className="mt-6 inline-flex min-h-11 items-center gap-2 text-base font-semibold text-primary underline decoration-primary/35 underline-offset-4 hover:text-white">核对公开站点 <ArrowUpRight className="size-4" /></a>
-              </div>
-              <figure className="overflow-hidden rounded-[1.8rem] border border-white/10 bg-black p-2">
-                <div className="relative aspect-[16/9] overflow-hidden rounded-[1.45rem]">
-                  <Image src="/images/about/project-footer-system.webp" alt="SilkGear Shopify 页脚截图，展示订阅、导航、联系方式、营业时间与社交入口" fill sizes="(max-width: 1024px) 90vw, 52vw" className="object-cover object-top" />
-                </div>
-                <figcaption className="px-4 py-4 text-base leading-[1.6] text-white/52">全站信息结构证据：订阅、导航、门店与联系信息。</figcaption>
-              </figure>
-            </div>
-          </section>
-
-          <section className="px-4 pb-[50px] sm:px-6 md:px-10 md:pb-[100px]">
-            <div className="mx-auto grid max-w-[1500px] gap-4 lg:grid-cols-2">
+            <div className="mx-auto grid max-w-[1400px] gap-4 lg:grid-cols-2">
               <section className="rounded-[2rem] border border-primary/20 bg-primary/[0.05] p-6 sm:p-8">
                 <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">07 / Outcome</p>
                 <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">可确认的结果，是一套已经公开运行的零售路径。</h2>
@@ -193,7 +209,7 @@ export function SilkGearCaseStudyPage() {
           </section>
 
           <section className="px-4 pb-[50px] sm:px-6 md:px-10 md:pb-[100px]">
-            <div className="relative mx-auto max-w-[1500px] overflow-hidden rounded-[3.2rem_1.5rem_3.6rem_1.8rem] border border-white/25 bg-[linear-gradient(115deg,rgba(255,255,255,0.075),rgba(255,255,255,0.015)_38%,rgba(45,212,191,0.045)_72%,rgba(119,252,117,0.06))] px-7 py-12 shadow-[inset_0_2px_0_rgba(255,255,255,0.24),inset_0_-2px_0_rgba(119,252,117,0.1),0_45px_110px_rgba(0,0,0,0.5),0_0_80px_rgba(45,212,191,0.08)] backdrop-blur-3xl md:px-14 md:py-16">
+            <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[3.2rem_1.5rem_3.6rem_1.8rem] border border-white/25 bg-[linear-gradient(115deg,rgba(255,255,255,0.075),rgba(255,255,255,0.015)_38%,rgba(45,212,191,0.045)_72%,rgba(119,252,117,0.06))] px-7 py-12 shadow-[inset_0_2px_0_rgba(255,255,255,0.24),inset_0_-2px_0_rgba(119,252,117,0.1),0_45px_110px_rgba(0,0,0,0.5),0_0_80px_rgba(45,212,191,0.08)] backdrop-blur-3xl md:px-14 md:py-16">
               <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_82%_20%,rgba(45,212,191,0.15),transparent_28%),radial-gradient(circle_at_16%_0%,rgba(255,255,255,0.08),transparent_32%)]" />
               <div aria-hidden="true" className="absolute inset-x-[7%] top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
               <div aria-hidden="true" className="absolute -bottom-8 right-[8%] rotate-[-8deg] space-y-2 font-mono text-base leading-relaxed text-cyan-300/16"><p>Shopify website build</p><p>GA4 tracking plan</p><p>free Shopify review</p></div>
