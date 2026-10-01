@@ -9,10 +9,25 @@ const caseUrl = `${siteUrl}/case-studies/terrawulf`
 const liveStoreUrl = "https://www.terrawulfmoto.com/"
 const livePdpUrl = `${liveStoreUrl}products/terrawulf-m7-high-performance-off-road-electric-dirt-bike`
 
-const facts = [
-  ["Industry", "Electric Mobility / eBike"],
-  ["Platform", "Shopify"],
-  ["Scope", "UI/UX, architecture, theme development, Liquid, custom sections, PDP, responsive QA, deployment"],
+const overview = [
+  {
+    number: "01",
+    label: "Challenge",
+    title: "复杂产品信息需要形成购买路径。",
+    body: "用户需要理解动力、电池、续航、几何尺寸、组件差异、配送、质保和常见问题，而不是只看到产品图和参数。",
+  },
+  {
+    number: "02",
+    label: "Scope",
+    title: "设计、架构与 Shopify 主题开发。",
+    body: "Electric Mobility / eBike · Shopify · UI/UX、architecture、Liquid、custom sections、PDP、responsive QA 与 deployment。",
+  },
+  {
+    number: "03",
+    label: "Engineering goal",
+    title: "让复杂内容可以持续管理。",
+    body: "通过 Online Store 2.0 模板、可复用 section 与 block，把车型内容组织成商家可以继续维护的页面系统。",
+  },
 ]
 
 const engineering = [
@@ -148,25 +163,20 @@ export function TerrawulfCaseStudyPage() {
           </header>
 
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
-            <div className="mx-auto grid max-w-[1400px] gap-4 lg:grid-cols-[0.85fr_1.15fr_1.15fr]">
-              {facts.map(([label, value]) => (
-                <div key={label} className="border-t border-white/20 py-6">
-                  <p className="font-mono text-base uppercase text-orange-200">{label}</p>
-                  <p className="mt-3 text-base leading-[1.75] text-white/76">{value}</p>
-                </div>
+            <div className="mx-auto grid max-w-[1400px] gap-4 lg:grid-cols-3">
+              {overview.map((item) => (
+                <section key={item.label} className="rounded-[2rem] border border-white/12 bg-white/[0.035] p-6 sm:p-8">
+                  <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-orange-200">{item.number} / {item.label}</p>
+                  <h2 className="mt-4 text-[clamp(1.5rem,2.2vw,2rem)] font-bold leading-tight tracking-normal">{item.title}</h2>
+                  <p className="mt-5 text-base leading-[1.78] text-white/62">{item.body}</p>
+                </section>
               ))}
             </div>
           </section>
 
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
             <div className="mx-auto max-w-[1400px]">
-              <SectionHeading number="01" label="Challenge" title="复杂技术信息，需要变成一条可浏览、可比较、可购买的路径。" body="Terrawulf 销售高客单电动越野车。用户在购买前需要理解动力、电池、续航、几何尺寸、组件差异、配送、质保和常见问题，而不是只看一张产品图或一组参数。" />
-            </div>
-          </section>
-
-          <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
-            <div className="mx-auto max-w-[1400px]">
-              <SectionHeading number="02" label="Design to live" title="从获批的设计方向，到生产 Shopify 店铺。" body="以下对照用于证明设计结构与线上实现的关系，不主张逐像素复制。移动端没有足够完整的 Figma 页面证据，因此不制作移动设计对照。" />
+              <SectionHeading number="04" label="Design to live" title="从获批的设计方向，到生产 Shopify 店铺。" body="以下对照用于证明设计结构与线上实现的关系，不主张逐像素复制。移动端没有足够完整的 Figma 页面证据，因此不制作移动设计对照。" />
               <div className="mt-12 space-y-16">
                 {comparisons.map((item) => (
                   <section key={item.title}>
@@ -191,7 +201,7 @@ export function TerrawulfCaseStudyPage() {
 
           <section className="bg-white/[0.035] px-4 py-[56px] sm:px-6 md:px-10 md:py-[104px]">
             <div className="mx-auto max-w-[1400px]">
-              <SectionHeading number="03" label="Shopify engineering" title="页面表现背后，是可持续管理的主题架构。" />
+              <SectionHeading number="05" label="Shopify engineering" title="页面表现背后，是可持续管理的主题架构。" />
               <div className="mt-10 grid gap-4 lg:grid-cols-3">
                 {engineering.map(({ icon: Icon, title, body, benefit }) => (
                   <section key={title} className="rounded-lg border border-white/12 bg-black/45 p-6 sm:p-8">
@@ -220,13 +230,14 @@ export function TerrawulfCaseStudyPage() {
 
           <section className="px-4 py-[56px] sm:px-6 md:px-10 md:py-[104px]">
             <div className="mx-auto max-w-[1400px]">
-              <SectionHeading number="04" label="PDP decision architecture" title="每个模块回答一个购买问题。" />
-              <div className="mt-10 overflow-hidden rounded-lg border border-white/12">
+              <SectionHeading number="06" label="PDP decision architecture" title="每个模块回答一个购买问题。" />
+              <div className="mt-10 grid gap-4 md:grid-cols-2">
                 {decisions.map(([question, answer, implementation], index) => (
-                  <div key={question} className="grid gap-4 border-b border-white/12 p-6 last:border-b-0 md:grid-cols-[1fr_1fr_1.15fr] md:p-8">
-                    <div><p className="font-mono text-sm text-orange-200">BUSINESS QUESTION</p><p className="mt-2 text-lg font-semibold">{question}</p></div>
-                    <div><p className="font-mono text-sm text-white/45">STOREFRONT ANSWER</p><p className="mt-2 text-base leading-[1.7] text-white/68">{answer}</p></div>
-                    <div><p className="font-mono text-sm text-primary">IMPLEMENTATION</p><p className="mt-2 text-base leading-[1.7] text-white/68">{implementation}</p></div>
+                  <div key={question} className="rounded-[1.8rem] border border-white/12 bg-[linear-gradient(135deg,rgba(251,146,60,0.08),rgba(255,255,255,0.025))] p-6 sm:p-8">
+                    <p className="font-mono text-base text-orange-200">0{index + 1} / BUSINESS QUESTION</p>
+                    <h3 className="mt-4 text-xl font-bold">{question}</h3>
+                    <p className="mt-5 text-base leading-[1.7] text-white/68"><span className="font-semibold text-white">Storefront answer:</span> {answer}</p>
+                    <p className="mt-3 text-base leading-[1.7] text-white/58"><span className="font-semibold text-primary">Implementation:</span> {implementation}</p>
                   </div>
                 ))}
               </div>
@@ -235,29 +246,17 @@ export function TerrawulfCaseStudyPage() {
           </section>
 
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
-            <div className="mx-auto grid max-w-[1400px] gap-4 lg:grid-cols-2">
-              <section className="rounded-lg border border-primary/20 bg-primary/[0.045] p-6 sm:p-8">
-                <p className="font-mono text-base font-semibold uppercase text-primary">05 / Responsive & QA</p>
-                <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight">从代码检查到真实视口验证。</h2>
+            <div className="mx-auto max-w-[1400px]">
+              <SectionHeading number="07" label="Responsive & QA" title="从代码检查到真实视口验证。" />
+              <div className="mx-auto mt-10 max-w-4xl rounded-[1.8rem] border border-primary/20 bg-primary/[0.045] p-6 sm:p-8">
                 <ul className="mt-6 space-y-3 text-base leading-[1.75] text-white/68">
                   <li>Desktop 1440 × 1000、Mobile 390 × 844 已进行响应式检查。</li>
                   <li>产品标题与 Add to Cart 在响应式页面流程中保持可访问；当前检查未发现文档级横向溢出。</li>
                   <li>Theme Check：127 files，0 errors，13 warnings；warnings 单独复核，不描述为 warning-free。</li>
                   <li>包含浏览器 QA、部署验证与线上回读记录。</li>
                 </ul>
-              </section>
-              <section className="rounded-lg border border-orange-300/20 bg-orange-300/[0.04] p-6 sm:p-8">
-                <p className="font-mono text-base font-semibold uppercase text-orange-200">06 / Verified outcome</p>
-                <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight">交付结果以可验证系统为准。</h2>
-                <ul className="mt-6 space-y-3 text-base leading-[1.75] text-white/68">
-                  <li>Custom Shopify storefront delivered and deployed.</li>
-                  <li>Modular Online Store 2.0 architecture.</li>
-                  <li>High-ticket information structured into reusable sections.</li>
-                  <li>Responsive storefront implemented and live.</li>
-                </ul>
-              </section>
-            </div>
-            <div className="mx-auto mt-8 grid max-w-[1400px] items-start gap-5 md:grid-cols-[1.4fr_0.55fr]">
+              </div>
+            <div className="mt-10 grid items-start gap-5 md:grid-cols-[1.4fr_0.42fr]">
               {[
                 ["Desktop / 1440 × 1000", "/case-studies/terrawulf/pdp-live.webp", "Terrawulf M7 desktop product page with gallery and purchase panel", "aspect-[3420/1902]"],
                 ["Mobile / 390 × 844", "/case-studies/terrawulf/pdp-mobile.webp", "Terrawulf M7 mobile product page showing responsive product media", "aspect-[390/844]"],
@@ -270,17 +269,26 @@ export function TerrawulfCaseStudyPage() {
                 </figure>
               ))}
             </div>
+            </div>
           </section>
 
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
-            <div className="mx-auto max-w-[1400px] border-y border-white/15 py-10">
-              <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
-                <div>
-                  <ShieldCheck className="size-8 text-primary" aria-hidden="true" />
-                  <p className="mt-4 font-mono text-base font-semibold uppercase text-primary">07 / Claim boundary</p>
-                  <h2 className="mt-3 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight">What this case study does not claim</h2>
-                </div>
-                <ul className="grid gap-3 text-base leading-[1.75] text-white/65 sm:grid-cols-2">
+            <div className="mx-auto grid max-w-[1400px] gap-4 lg:grid-cols-2">
+              <section className="rounded-[2rem] border border-primary/20 bg-primary/[0.05] p-6 sm:p-8">
+                <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">08 / Verified outcome</p>
+                <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight">交付结果以可验证系统为准。</h2>
+                <ul className="mt-5 space-y-3 text-base leading-[1.75] text-white/64">
+                  <li>Custom Shopify storefront delivered and deployed.</li>
+                  <li>Modular Online Store 2.0 architecture.</li>
+                  <li>High-ticket information structured into reusable sections.</li>
+                  <li>Responsive storefront implemented and live.</li>
+                </ul>
+              </section>
+              <section className="rounded-[2rem] border border-orange-300/20 bg-orange-300/[0.045] p-6 sm:p-8">
+                <ShieldCheck className="size-8 text-orange-200" aria-hidden="true" />
+                <p className="mt-4 font-mono text-base font-semibold uppercase tracking-[0.02em] text-orange-200">09 / Claim boundary</p>
+                <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight">What this case study does not claim</h2>
+                <ul className="mt-5 grid gap-3 text-base leading-[1.75] text-white/65 sm:grid-cols-2">
                   <li>No public revenue uplift claims.</li>
                   <li>No conversion lift claims.</li>
                   <li>GA4 / GTM implementation is not verified.</li>
@@ -288,19 +296,22 @@ export function TerrawulfCaseStudyPage() {
                   <li>Product content may evolve after handoff through merchant-managed Shopify content.</li>
                   <li>Current product-data accuracy is not presented as a WhaleLeap outcome.</li>
                 </ul>
-              </div>
+              </section>
             </div>
           </section>
 
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
-            <div className="mx-auto max-w-[1400px] rounded-lg border border-white/18 bg-[linear-gradient(120deg,rgba(251,146,60,0.08),rgba(255,255,255,0.025)_48%,rgba(119,252,117,0.07))] px-7 py-12 md:px-14 md:py-16">
-              <p className="font-mono text-base font-semibold uppercase text-primary">08 / Related services</p>
-              <h2 className="mt-4 max-w-4xl text-[clamp(1.9rem,3vw,2.7rem)] font-bold leading-tight">构建同类高客单 Shopify 体验，需要设计决策与工程架构共同工作。</h2>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a href="/services/shopify-website-build" className="inline-flex min-h-12 items-center gap-2 rounded-full bg-primary px-6 text-base font-bold text-black">Shopify Engineering <ArrowUpRight className="size-5" /></a>
-                <a href="/services/shopify-theme-customization" className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/18 px-6 text-base font-semibold">Theme / Liquid Development <ArrowUpRight className="size-5" /></a>
-                <a href="/services/shopify-conversion-optimization" className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/18 px-6 text-base font-semibold">Conversion Optimization <ArrowUpRight className="size-5" /></a>
-                <a href="/diagnosis" className="inline-flex min-h-12 items-center gap-2 rounded-full border border-orange-300/25 bg-orange-300/[0.06] px-6 text-base font-semibold text-orange-100">Free Shopify Review <ArrowUpRight className="size-5" /></a>
+            <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[3.2rem_1.5rem_3.6rem_1.8rem] border border-white/25 bg-[linear-gradient(115deg,rgba(255,255,255,0.075),rgba(255,255,255,0.015)_38%,rgba(251,146,60,0.06)_72%,rgba(119,252,117,0.06))] px-7 py-12 shadow-[inset_0_2px_0_rgba(255,255,255,0.2),0_45px_110px_rgba(0,0,0,0.5)] md:px-14 md:py-16">
+              <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+                <div>
+                  <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">10 / Related services</p>
+                  <h2 className="mt-4 max-w-4xl text-[clamp(1.9rem,3vw,2.7rem)] font-bold leading-tight">构建同类高客单 Shopify 体验，需要设计决策与工程架构共同工作。</h2>
+                </div>
+                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:max-w-[25rem] lg:flex-col">
+                  <a href="/services/shopify-website-build" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-black">Shopify Engineering <ArrowUpRight className="size-5" /></a>
+                  <a href="/services/shopify-theme-customization" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/18 px-7 text-base font-semibold">Theme / Liquid Development <ArrowUpRight className="size-5" /></a>
+                  <a href="/diagnosis" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-orange-300/25 bg-orange-300/[0.06] px-7 text-base font-semibold text-orange-100">Free Shopify Review <ArrowUpRight className="size-5" /></a>
+                </div>
               </div>
             </div>
           </section>
