@@ -83,7 +83,7 @@ function EvidenceImage({ src, alt, label, mode }: { src: string; alt: string; la
         <h3 className="text-xl font-semibold">{label}</h3>
         <span className="rounded-full border border-white/15 px-3 py-1 font-mono text-sm uppercase text-white/55">{mode === "design" ? "Figma" : "Live Shopify"}</span>
       </div>
-      <a href={src} target="_blank" rel="noreferrer noopener" className="group relative block aspect-[16/10] overflow-hidden rounded-lg border border-white/15 bg-[#111] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+      <a href={src} target="_blank" rel="noreferrer noopener" className={`group relative block overflow-hidden rounded-lg border border-white/15 bg-[#111] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${mode === "live" ? "aspect-[3420/1902]" : "aspect-[16/10]"}`}>
         <Image src={src} alt={alt} fill sizes="(max-width: 767px) 92vw, 660px" className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.01]" />
       </a>
       <a href={src} target="_blank" rel="noreferrer noopener" className="mt-3 inline-flex min-h-11 items-center gap-2 text-base text-primary underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
@@ -259,7 +259,7 @@ export function TerrawulfCaseStudyPage() {
             </div>
             <div className="mx-auto mt-8 grid max-w-[1400px] items-start gap-5 md:grid-cols-[1.4fr_0.75fr_0.42fr]">
               {[
-                ["Desktop / 1440 × 1000", "/case-studies/terrawulf/pdp-live.webp", "Terrawulf M7 desktop product page with gallery and purchase panel", "aspect-[1440/1000]"],
+                ["Desktop / 1440 × 1000", "/case-studies/terrawulf/pdp-live.webp", "Terrawulf M7 desktop product page with gallery and purchase panel", "aspect-[3420/1902]"],
                 ["Tablet / 768 × 1024", "/case-studies/terrawulf/pdp-tablet.webp", "Terrawulf M7 tablet product page showing responsive product media", "aspect-[768/1024]"],
                 ["Mobile / 390 × 844", "/case-studies/terrawulf/pdp-mobile.webp", "Terrawulf M7 mobile product page showing responsive product media", "aspect-[390/844]"],
               ].map(([label, src, alt, aspect]) => (
