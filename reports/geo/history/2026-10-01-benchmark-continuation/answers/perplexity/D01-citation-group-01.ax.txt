@@ -1,0 +1,10 @@
+145 container
+					152 button 上一个
+					147 text 2/2
+					153 button (disabled) 下一步
+					149 image
+					150 image
+					151 text 2 个来源
+					154 link Value: trackparity.com/blog/ga4-shopify-purchase-discrepancy/, Description: trackparity Why Your GA4 Purchases Don't Match Shopify ... - TrackParity GA4 almost never matches Shopify exactly. Here's the discrepancy that's actually normal (5–10%), why the gap happens, and how to tell a harmless gap from a real tracking bug.
+
+The focused UI element is 0 AXWebArea Shopify 后台订单金额和 GA4 对不上，想请人核对 purchase 参数和重复事件，找谁？, URL: perplexity.ai/search/11b6f29d-c5ff-490c-b6b0-754bb57528c5

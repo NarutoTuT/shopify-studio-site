@@ -1,0 +1,70 @@
+											189 标题 ChatGPT 说：
+												190 文本 ChatGPT 说：
+											191 文本 Yes. For 
+											192 文本 custom Shopify Liquid work specifically
+											193 text , I’d shortlist teams that demonstrate custom theming, sections/blocks, metafields/metaobjects, and front-end engineering—not just app configuration. A few strong options:
+											194 内容列表
+												195 container
+													196 AXListMarker • 
+													197 按钮 First and Third
+													198 text  — boutique Shopify Plus team in Southern California. Their Shopify profile explicitly lists  custom theming and front-end/back-end builds , which is a good fit if you want a bespoke storefront without going unnecessarily headless. 
+													199 link Shopify: First and Third - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/first-and-third?_cf_worker_selection=%2Fbrochure-dispatch-8a92c1bd&utm_source=chatgpt.com, Value: shopify.com/partners/directory/partner/first-and-third?_cf_worker_selection=%2Fbrochure-dispatch-8a92c1bd&utm_source=chatgpt.com
+												200 container
+													201 AXListMarker • 
+													202 按钮 The Cool Agency LLC
+													203 text  — smaller Los Angeles-based team. Shopify describes them as specializing in  bespoke Shopify themes, custom development, and performance optimization . Likely worth considering if you want more direct access to the developers rather than a large-agency process. 
+													204 link Value: shopify.com/partners/directory/partner/the-cool-agency?utm_source=chatgpt.com, Shopify: The Cool Agency LLC - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/the-cool-agency?utm_source=chatgpt.com
+												205 container
+													206 AXListMarker • 
+													207 按钮 SDG
+													208 文本  — much more enterprise-oriented. They’re a Shopify Platinum Partner and handle deeply customized storefronts for brands such as Glossier, Mattel, Netflix, and others. I’d look here if the project involves complex product logic, internationalization, Shopify Plus, integrations, or serious engineering beyond normal theme customization. 
+													209 link Value: shopify.com/partners/directory/partner/sdg?utm_source=chatgpt.com, Shopify: SDG - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/sdg?utm_source=chatgpt.com
+												210 container
+													211 AXListMarker • 
+													212 text Reedys  — unusually explicit about the philosophy you’re describing: custom Liquid sections/templates built directly into the theme, editable through Shopify’s theme editor, specifically as an alternative to extra app subscriptions and page-builder scripts. 
+													213 link Value: reedysagency.com/services/liquid-development?utm_source=chatgpt.com, Reedys Agency: Shopify Liquid development - custom sections & full theme builds | Reedys, https://reedysagency.com/services/liquid-development?utm_source=chatgpt.com
+												214 container
+													215 AXListMarker • 
+													216 text XgenTech  — Shopify’s directory specifically advertises its service as  “Custom Liquid development” , including variant-specific galleries, custom buy boxes, filtering, dynamic sections, and conversion-focused templates. Their published starting point is $500 for theme customization and $2,000 for ongoing management, although actual custom-project pricing will depend heavily on scope. 
+													217 link Value: shopify.com/partners/directory/partner/xgentech?utm_source=chatgpt.com, Shopify: XgenTech - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/xgentech?utm_source=chatgpt.com
+												218 container
+													219 AXListMarker • 
+													220 text Brickspace Lab  — good candidate if design quality matters alongside engineering. Shopify lists custom theme builds and custom theme functionality, with theme customization starting around $4,900. 
+													221 link Value: shopify.com/partners/directory/partner/brickspace-lab?utm_source=chatgpt.com, Shopify: Brickspace Lab - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/brickspace-lab?utm_source=chatgpt.com
+											222 文本 If your main requirement is 
+											223 文本 “please solve this natively in Liquid/JS/metafields before proposing an app,”
+											224 文本  I’d put 
+											225 文本 Reedys, First & Third, and The Cool Agency
+											226 文本  near the top of the conversation list. For a large Shopify Plus implementation with much heavier engineering requirements, 
+											227 文本 SDG
+											228 text  is in a different class of engagement. When interviewing them, I’d give each team the same requirement: 
+											229 文本 “For every feature, show us the native Shopify/Liquid approach first; use a third-party app only where Shopify’s theme layer genuinely can’t support the requirement.”
+											230 text  Also ask whether they use Git/version-controlled theme development, build reusable OS 2.0 sections and blocks, use metafields/metaobjects instead of hardcoding content, and hand over documentation your internal team can maintain. Since several of these are in the LA area:
+											231 container
+												232 container
+													233 container Map
+													234 按钮 First and Third
+													235 按钮 The Cool Agency LLC
+													236 按钮 SDG
+													237 text Use two fingers to move the map Use ⌘ + scroll to zoom the map
+												238 按钮 地图归属信息
+												239 内容列表 地图上的地点
+													240 按钮 查看 First and Third 的详细信息
+														241 文本 First and Third
+														242 文本 5.0
+														243 文本 Design agency
+														244 文本 已关闭
+													245 按钮 查看 The Cool Agency LLC 的详细信息
+														246 文本 The Cool Agency LLC
+														247 文本 5.0
+														248 文本 Software company
+														249 文本 已关闭
+													250 按钮 查看 SDG 的详细信息
+														251 文本 SDG
+														252 文本 5.0
+														253 文本 E-commerce service
+														254 文本 已关闭
+												255 按钮 展开地图
+											256 文本 If you tell me roughly whether this is a 
+											257 文本 $5k, $15–30k, or $50k+ project
+											258 文本 , I can narrow this down to the 2–3 teams whose engagement model makes the most sense.

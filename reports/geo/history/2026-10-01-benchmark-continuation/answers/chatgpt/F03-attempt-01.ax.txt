@@ -1,0 +1,105 @@
+205 heading ChatGPT 说：, Value: 4
+								206 text ChatGPT 说：
+							243 text 可以。按你们“
+							244 text 内部中文沟通、面向美国消费者销售
+							245 text ”这个组合，我会优先找既能中文协作，又真正理解 Shopify / Shopify Plus、美国 DTC 电商和英文站体验的团队，而不只是普通建站外包。 我查了目前 Shopify 官方 Partner Directory，下面几家比较值得进入你们的初筛名单：
+							246 table
+								247 row
+									248 cell
+										249 text 开发伙伴
+									250 cell
+										251 text 比较适合
+									252 cell
+										253 text 我看到的优势
+								254 row
+									255 cell
+										256 text Peter Dong / HYA Media（纽约）
+									257 cell
+										258 text 想要美国本地思维 + 中文直接沟通
+									259 cell
+										260 text Shopify 官方 Service Partner，纽约；支持英语、简体/繁体中文，也明确服务美国市场。偏网站设计、定制开发和转化体验；官方目录显示项目起价约 
+										261 text $5,000
+										262 text 。
+										263 link Value: shopify.com/partners/directory/partner/hya-media?utm_source=chatgpt.com, Description: Shopify: Peter Dong - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/hya-media?utm_source=chatgpt.com
+								264 row
+									265 cell
+										266 text EastDTC / EastDigi（隽永东方）
+									267 cell
+										268 text 中国团队做美国 DTC、项目规模较大
+									269 cell
+										270 text Shopify Plus Partner，支持中英文，官方目录目前显示 
+										271 text 5.0/50 条评价
+										272 text ；覆盖定制 App、集成、店铺建设等，且明确服务美国。
+										273 link Value: shopify.com/partners/directory/partner/eastdigi?utm_source=chatgpt.com, Description: Shopify: EastDTC/EastDigi/隽永东方 — Plus Experts | DTC Brand & GEO/AEO Growth - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/eastdigi?utm_source=chatgpt.com
+								274 row
+									275 cell
+										276 text Cheriscon 创意时空（深圳）
+									277 cell
+										278 text Shopify Plus、复杂定制、系统集成
+									279 cell
+										280 text Shopify 官方目录列为 
+										281 text Plus Partner
+										282 text ；其介绍称自 2017 年起服务中国跨境品牌，业务包括 Shopify 建站、App 开发和系统集成。
+										283 link Value: shopify.com/partners/directory/partner/dale2?utm_source=chatgpt.com, Description: Shopify: 深圳市创意时空信息技术有限公司 - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/dale2?utm_source=chatgpt.com
+								284 row
+									285 cell
+										286 text Shinetech Software
+									287 cell
+										288 text 技术型项目、ERP/API/App 集成
+									289 cell
+										290 text 中英文团队，支持美国客户；官方资料重点包括 custom apps、systems integration、迁移和性能优化，目前官方目录显示 
+										291 text 5.0/5 条评价
+										292 text 。
+										293 link Value: shopify.com/partners/directory/partner/shinetech-changchun?utm_source=chatgpt.com, Description: Shopify: Shinetech Software - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/shinetech-changchun?utm_source=chatgpt.com
+								294 row
+									295 cell
+										296 text Loomic
+									297 cell
+										298 text 中小型项目、主题深度定制、长期维护
+									299 cell
+										300 text 支持中英文和美国市场，专注 Liquid、OS 2.0、速度优化、Technical SEO、Shopify Plus B2B，也提供 ongoing maintenance。
+										301 link Value: shopify.com/partners/directory/partner/leo34?utm_source=chatgpt.com, Description: Shopify: Loomic - 技术开发 - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/leo34?utm_source=chatgpt.com
+								302 row
+									303 cell
+										304 text Hui Creative
+									305 cell
+										306 text 希望兼顾中国团队成本和北美执行
+									307 cell
+										308 text 官方资料称团队分布在
+										309 text 加拿大和中国
+										310 text ，支持中英文及美国市场；覆盖建站、迁移、主题定制和 Headless。
+										311 link Description: Shopify: Hui Creative - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/shenzhen-hui-wang-ruan-jian-ji-shu-you-x?utm_source=chatgpt.com, Value: shopify.com/partners/directory/partner/shenzhen-hui-wang-ruan-jian-ji-shu-you-x?utm_source=chatgpt.com
+							312 container
+								313 button 复制表格
+								314 pop up button (collapsed) Description: 展开表格, Secondary Actions: Expand
+							315 text 如果让我按
+							316 text 不同需求匹配
+							317 text ，而不是简单排个名，我会这么看：
+							318 content list
+								319 container
+									320 AXListMarker • 
+									321 text 希望项目负责人能直接用中文，但网站真正按美国用户习惯设计 ：先聊  Peter Dong  和  Hui Creative 。
+								322 container
+									323 AXListMarker • 
+									324 text 已经有一定销售规模，要做 Shopify Plus、ERP、WMS、订阅、B2B 或复杂 API ：重点聊  EastDTC、Cheriscon、Shinetech 。
+								325 container
+									326 AXListMarker • 
+									327 text 预算没有那么大，主要是改 Theme、做功能、持续迭代 ：可以先找  Loomic 。
+								328 container
+									329 AXListMarker • 
+									330 text 如果你们最重视美国本土时区和面对美国消费者的 UX/CRO ，Peter Dong 的匹配度尤其值得验证，因为其主地点就在纽约，同时官方资料明确列出中文支持。
+									331 link Value: shopify.com/partners/directory/partner/hya-media?utm_source=chatgpt.com, Description: Shopify: Peter Dong - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/hya-media?utm_source=chatgpt.com
+							332 text Shopify 官方本身也允许按
+							333 text 所在地、语言、服务类型和价格
+							334 text 筛选合作伙伴，所以找供应商时最好不要只看“会不会中文”，而是同时筛  Chinese + United States + Theme customization / Custom apps / Systems integration 。
+							335 link Value: shopify.com/by/partners/directory/locations/united-states?utm_source=chatgpt.com, Description: Shopify: Hire Shopify Partners in United States, https://www.shopify.com/by/partners/directory/locations/united-states?utm_source=chatgpt.com, 另外 1 个来源
+							336 text 我建议你们面试开发商时重点问这 6 件事：
+							337 text ① 最近 3 个美国 Shopify 客户案例；② 项目经理能否全程中文；③ 谁实际写代码、是否外包；④ 是否熟悉 Shopify Markets、美国税务/支付/物流相关集成；⑤ Liquid / Checkout Extensibility / Shopify Functions / Custom App 能做到什么程度；⑥ 上线以后 bug 和持续开发怎么收费。
+							338 text 如果你告诉我你们大概是 
+							339 text “新店从 0 建站 / 已有店改版 / Shopify Plus / 只找长期兼职开发”
+							340 text ，以及预算大概是 
+							341 text $5k、$10–30k 还是 $30k+
+							342 text ，我可以直接替你把这几家缩到 
+							343 text 3 家最匹配的候选，并列出询价时应该发给他们的中文需求清单
+							344 text 。
+							

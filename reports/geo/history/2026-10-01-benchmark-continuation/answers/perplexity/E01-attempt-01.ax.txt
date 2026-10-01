@@ -1,0 +1,59 @@
+73 button (collapsed) 已研究 2秒, Secondary Actions: Expand
+							74 text 已研究
+							75 text 2秒
+							76 image
+						77 container
+							78 text 有。按你强调的“懂车型规格和购买决策”，我会先约谈  VAAN ，再看  WESWOO ；如果还需要较完整的营销与建站服务，可把  Americaneagle.com  放进候选名单。以下依据都是团队公开发布的案例，尚不能代替客户背调或实际交付验收。 vaangroup +2
+						79 heading 值得先聊的团队, Value: 2
+							80 text 值得先聊的团队
+						81 container
+							82 table
+								83 row
+									84 cell
+										85 text 团队
+									86 cell
+										87 text 可核对的 eBike 项目
+									88 cell
+										89 text 为什么与你的需求相关
+								90 row
+									91 cell
+										92 container How Pedego Migrated to Shopify Plus and Streamlined ...
+											93 link Description: VAAN, Value: vaangroup.com/articles/how-pedego-migrated-to-shopify-plus-and-streamlined-dealer-management-at-scale
+									94 cell
+										95 text Pedego 迁移至 Shopify Plus
+									96 cell
+										97 text 案例明确涉及轮胎宽度、续航、骑行方式、车架类型的呈现，以及尺码、车架几何信息；还处理了经销商页面、附近库存、到店提车和试骑入口。若你有线下门店或经销网络，优先问他们。
+										98 container How Pedego Migrated to Shopify Plus and Streamlined ...
+											99 link Description: vaangroup, Value: vaangroup.com/articles/how-pedego-migrated-to-shopify-plus-and-streamlined-dealer-management-at-scale
+								100 row
+									101 cell
+										102 container 精选项目 | 全球品牌电商与 Shopify 网站 | WESWOO
+											103 link Description: WESWOO, Value: weswoo.com/case-studies/
+									104 cell
+										105 text 公开项目页列有 Gleecycle、AMZcycle、ADO E-Bike UK 等
+									106 cell
+										107 text 项目描述聚焦跨品牌规格统一、按骑行场景筛选、骑手尺寸、配件及本地服务，与你说的“帮助用户选车型”很贴近。但该页也说明，具体服务范围和成果未全部公开，洽谈时要请他们展示实际负责的页面与交付内容。
+										108 container 精选项目 | 全球品牌电商与 Shopify 网站 | WESWOO
+											109 link Description: weswoo, Value: weswoo.com/case-studies/
+								110 row
+									111 cell
+										112 container Website Development and Digital Marketing for Ecommerce | Blaupunkt
+											113 link Description: Americaneagle.com, Value: americaneagle.com/platforms/shopify/blaupunkt
+									114 cell
+										115 text Blaupunkt eBike 的 Shopify 网站
+									116 cell
+										117 text 案例涉及产品目录、库存同步、车型选项、功能热点展示和配套营销。适合同时需要网站开发与营销支持的项目；公开案例对车型比较、尺码决策的描述相对少，需进一步追问。
+										118 container Website Development and Digital Marketing for Ecommerce | Blaupunkt
+											119 link Description: americaneagle, Value: americaneagle.com/platforms/shopify/blaupunkt
+							120 container
+								121 button 复制表格
+								122 button 下载 CSV
+								123 button 展开表格
+						124 heading 怎么判断是否真懂选车, Value: 2
+							125 text 怎么判断是否真懂选车
+						126 container
+							127 text 让候选团队用你现有的  3–5 款车型 做一次小型方案，而不只是展示首页设计：请他们画出“用途筛选 → 两车比较 → 尺码确认 → 购买或试骑”的路径，并说明续航测试条件、车架尺寸、载重、配件兼容、当地交付与售后信息分别放在哪里。Pedego 案例之所以值得参考，正是它把技术规格和本地试骑、提车路径放进了同一购买体验。
+							128 container How Pedego Migrated to Shopify Plus and Streamlined ...
+								129 link Description: vaangroup, Value: vaangroup.com/articles/how-pedego-migrated-to-shopify-plus-and-streamlined-dealer-management-at-scale
+						130 text 签约前再请对方明确：案例中哪些部分由他们亲自设计和开发、能否演示后台如何维护车型参数、上线后由谁负责更新规格。这样更容易区分“做过 eBike 页面”和“能持续维护选车系统”的团队。
+						

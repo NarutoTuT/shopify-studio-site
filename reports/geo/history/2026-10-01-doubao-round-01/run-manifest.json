@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "run_id": "2026-10-01-doubao-round-01",
+  "platform": "Doubao",
+  "status": "completed_pending_human_review",
+  "planned_queries": 15,
+  "completed_queries": 15,
+  "execution": {
+    "interface": "official_web_chat",
+    "account_state": "logged_in",
+    "conversation_isolation": "fresh conversation per query",
+    "model_label_observed": "豆包 快速",
+    "personalization_controlled": false
+  },
+  "query_set_file": "../../doubao-query-set.json",
+  "raw_response_directory": "answers/doubao",
+  "limitations": [
+    "No incognito or personalization control was independently verified.",
+    "Citation labels were visible in some answers, but no resolvable source URLs were exposed in the captured main response.",
+    "Provider claims in model output were not independently verified."
+  ],
+  "human_review_status": "pending"
+}

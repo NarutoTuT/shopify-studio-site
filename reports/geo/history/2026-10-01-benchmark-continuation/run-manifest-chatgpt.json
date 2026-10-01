@@ -1,0 +1,156 @@
+{
+  "id": "2026-10-01-continuation-chatgpt",
+  "benchmark_version": "wl-geo-v1",
+  "platform": "ChatGPT",
+  "status": "collected_pending_human_review",
+  "model": null,
+  "reasoning_effort": null,
+  "product_surface": "ChatGPT consumer web in Chrome",
+  "search_mode": null,
+  "account_tier": null,
+  "region": null,
+  "ui_language": "zh-CN",
+  "memory_state": "disabled_for_each_temporary_chat",
+  "personalization_state": "non_personalized_each_chat",
+  "started_at": "2026-10-01T14:40:24+08:00",
+  "finished_at": "2026-10-01T15:17:16.590+08:00",
+  "query_ids": [
+    "A01",
+    "A02",
+    "A04",
+    "C02",
+    "B05",
+    "C01",
+    "F02",
+    "B02",
+    "E03",
+    "E01",
+    "D02",
+    "F03",
+    "D01",
+    "D03"
+  ],
+  "attempts": [
+    {
+      "query_id": "A01",
+      "attempt": 1,
+      "status": "capture_failed",
+      "notes": "Response completed; stale clipboard detected and discarded. Separate retry retained, never represented as the original.",
+      "evidence_file": "answers/chatgpt/A01-attempt-01.md"
+    },
+    {
+      "query_id": "D02",
+      "attempt": 1,
+      "status": "interrupted_unarchived",
+      "notes": "Question submission observed; control connection failed before a complete answer could be archived. Not counted. Do not silently re-use attempt 1."
+    },
+    {
+      "query_id": "A01",
+      "attempt": 2,
+      "status": "completed",
+      "captured_at": "2026-10-01T14:46:05.796+08:00",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/A01-attempt-02.md"
+    },
+    {
+      "query_id": "A02",
+      "attempt": 1,
+      "status": "completed",
+      "captured_at": "2026-10-01T14:46:16.089+08:00",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/A02-attempt-01.md"
+    },
+    {
+      "query_id": "A04",
+      "attempt": 1,
+      "status": "completed",
+      "captured_at": "2026-10-01T14:46:50.625+08:00",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/A04-attempt-01.md"
+    },
+    {
+      "query_id": "C02",
+      "attempt": 1,
+      "status": "completed",
+      "captured_at": "2026-10-01T14:47:28.522+08:00",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/C02-attempt-01.md"
+    },
+    {
+      "query_id": "B05",
+      "attempt": 1,
+      "status": "completed",
+      "captured_at": "2026-10-01T14:53:14.210+08:00",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/B05-attempt-01.md"
+    },
+    {
+      "query_id": "C01",
+      "attempt": 1,
+      "status": "completed",
+      "captured_at": "2026-10-01T14:54:35.226+08:00",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/C01-attempt-01.md"
+    },
+    {
+      "query_id": "F02",
+      "attempt": 1,
+      "status": "completed",
+      "captured_at": "2026-10-01T14:56:52.219+08:00",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/F02-attempt-01.ax.txt"
+    },
+    {
+      "query_id": "B02",
+      "attempt": 1,
+      "status": "completed",
+      "captured_at": "2026-10-01T14:56:57.264+08:00",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/B02-attempt-01.ax.txt"
+    },
+    {
+      "query_id": "E03",
+      "attempt": 1,
+      "status": "completed",
+      "captured_at": "2026-10-01T15:13:17.554+08:00",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/E03-attempt-01.ax.txt"
+    },
+    {
+      "query_id": "E01",
+      "attempt": 1,
+      "status": "completed",
+      "captured_at": "2026-10-01T15:11:45.398+08:00",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/E01-attempt-01.ax.txt"
+    },
+    {
+      "query_id": "D02",
+      "attempt": 2,
+      "status": "completed",
+      "captured_at": "2026-10-01T15:07:10.252+08:00",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/D02-attempt-02.ax.txt"
+    },
+    {
+      "query_id": "F03",
+      "attempt": 1,
+      "status": "completed",
+      "captured_at": "2026-10-01T15:08:12.864+08:00",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/F03-attempt-01.ax.txt"
+    },
+    {
+      "query_id": "D01",
+      "attempt": 1,
+      "status": "completed",
+      "captured_at": "2026-10-01T15:09:05.337+08:00",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/D01-attempt-01.ax.txt"
+    },
+    {
+      "query_id": "D03",
+      "attempt": 1,
+      "status": "completed",
+      "captured_at": "2026-10-01T15:09:59.335+08:00",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/D03-attempt-01.ax.txt"
+    }
+  ],
+  "settings_notes": "Exact frozen query only. No brand, source URL or role hints. First complete available answer retained, except explicitly logged technical failures. No regeneration to improve mentions. Initial ChatGPT segment showed Medium; resumed segment model/effort selector not inspected. Do not assume a model identity or IP region. AX captures exclude account and sidebar content.",
+  "blocker": null,
+  "human_review_status": "pending",
+  "coverage": {
+    "completed": 15,
+    "expected": 15,
+    "remaining": 0
+  },
+  "resumed_capture_provenance_file": "resumed-capture-provenance.json",
+  "frozen_query_sha256": "9db5c48958d0b1d8b83b38af647d009c8b40fc2514f7dd32e615003a6c046490"
+}

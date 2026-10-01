@@ -1,0 +1,770 @@
+{
+  "schema_version": "1.0",
+  "benchmark_version": "wl-geo-v1",
+  "baseline_date": "2026-10-01",
+  "status": "frozen",
+  "clusters": {
+    "A": "GENERAL_PROVIDER_DISCOVERY",
+    "B": "CUSTOM_DEVELOPMENT",
+    "C": "CRO_CONVERSION",
+    "D": "TRACKING",
+    "E": "VERTICAL_HIGH_TICKET",
+    "F": "CHINESE_BRANDS_GOING_GLOBAL"
+  },
+  "selection": {
+    "method": "Stratified priority set, not the mechanically highest 15 raw scores.",
+    "score_formula": "commercial_intent + whaleleap_fit + recommendation_intent",
+    "excluded_from_selection_score": [
+      "evidence_readiness"
+    ],
+    "constraints": {
+      "total": 15,
+      "per_specificity": 5,
+      "min_per_cluster": 2,
+      "max_per_cluster": 3,
+      "min_english": 5
+    },
+    "tie_break": "Within constraints: higher priority_score, then coverage of distinct user needs and language; freeze selected IDs after approval.",
+    "top_15_ids": [
+      "A01",
+      "A02",
+      "A04",
+      "C02",
+      "F02",
+      "B02",
+      "B05",
+      "C01",
+      "D02",
+      "F03",
+      "B01",
+      "D01",
+      "D03",
+      "E01",
+      "E03"
+    ],
+    "tradeoffs": [
+      "A05 与已选广义问题重叠，作为 reserve；保留 A04 英文宽泛对照。",
+      "B03 与 B01 重复 Figma 意图，首轮仅固定一个；不把翻译当独立需求。",
+      "C05 与 C02/C01 重合；保留中文症状问题与跨语种其他 cluster。",
+      "E01 得分 13 仍入选，以满足行业覆盖并检验弱证据，不靠高 evidence_readiness 筛选。",
+      "D05/F05 保留在 30 题中作为范围边界，不把服务端或 VAT 能力强行算为匹配。"
+    ],
+    "ordering": "IDs grouped by specificity for worksheet readability; not agency rank or predictive AI visibility."
+  },
+  "queries": [
+    {
+      "id": "A01",
+      "cluster": "A",
+      "language": "zh",
+      "query": "推荐几家靠谱的 Shopify 建站公司，我想先比较一下各自适合什么项目。",
+      "specificity": "broad",
+      "commercial_intent": 4,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 3,
+      "priority": "BENCHMARK",
+      "priority_score": 13,
+      "selection_order": 1,
+      "evidence_ids": [
+        "EV01",
+        "EV02",
+        "EV10"
+      ],
+      "score_reasons": {
+        "commercial_intent": "明确比较供应商，范围或采购时点仍待定。",
+        "whaleleap_fit": "建站匹配核心服务，但预算和项目范围未定。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "有服务页和具名案例，独立口碑未核验。"
+      }
+    },
+    {
+      "id": "A02",
+      "cluster": "A",
+      "language": "zh",
+      "query": "我们是小型 DTC 品牌，想找能长期合作的 Shopify 开发团队，有哪些值得聊聊？",
+      "specificity": "broad",
+      "commercial_intent": 4,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 3,
+      "priority": "BENCHMARK",
+      "priority_score": 13,
+      "selection_order": 2,
+      "evidence_ids": [
+        "EV01",
+        "EV02"
+      ],
+      "score_reasons": {
+        "commercial_intent": "明确比较供应商，范围或采购时点仍待定。",
+        "whaleleap_fit": "小团队工程合作匹配定位；长期支持容量未核验。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "公开服务与交付流程存在，持续合作记录有限。"
+      }
+    },
+    {
+      "id": "A03",
+      "cluster": "A",
+      "language": "zh",
+      "query": "第一次做 Shopify，应该找 freelancer 还是 agency？我该怎么判断？",
+      "specificity": "broad",
+      "commercial_intent": 2,
+      "whaleleap_fit": 3,
+      "recommendation_intent": 2,
+      "evidence_readiness": 2,
+      "priority": "RESERVE",
+      "priority_score": 7,
+      "selection_order": null,
+      "evidence_ids": [
+        "EV01",
+        "EV12"
+      ],
+      "score_reasons": {
+        "commercial_intent": "了解方法或自行排错，尚未找实施方。",
+        "whaleleap_fit": "属于供应商类型教育，尚未明确委托。",
+        "recommendation_intent": "主要比较方法或供应商类型。",
+        "evidence_readiness": "服务定位可解释选择，但没有独立对比证据。"
+      }
+    },
+    {
+      "id": "A04",
+      "cluster": "A",
+      "language": "en",
+      "query": "Can you recommend a Shopify development agency for a small DTC brand?",
+      "specificity": "broad",
+      "commercial_intent": 4,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 3,
+      "priority": "BENCHMARK",
+      "priority_score": 13,
+      "selection_order": 3,
+      "evidence_ids": [
+        "EV01",
+        "EV02",
+        "EV08"
+      ],
+      "score_reasons": {
+        "commercial_intent": "明确比较供应商，范围或采购时点仍待定。",
+        "whaleleap_fit": "SMB Shopify 服务匹配；不假定所有英语市场均有交付记录。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "英文定位和具名案例可见，独立推荐依据仍薄。"
+      }
+    },
+    {
+      "id": "A05",
+      "cluster": "A",
+      "language": "en",
+      "query": "We are moving beyond a DIY Shopify store. Which small agencies should we consider?",
+      "specificity": "broad",
+      "commercial_intent": 4,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 3,
+      "priority": "RESERVE",
+      "priority_score": 13,
+      "selection_order": null,
+      "evidence_ids": [
+        "EV02",
+        "EV03"
+      ],
+      "score_reasons": {
+        "commercial_intent": "明确比较供应商，范围或采购时点仍待定。",
+        "whaleleap_fit": "升级现有主题与工程服务匹配，但改版复杂度未知。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "存在改版服务范围，缺多个具名迁移/升级案例。"
+      }
+    },
+    {
+      "id": "B01",
+      "cluster": "B",
+      "language": "zh",
+      "query": "我已经有 Figma 设计稿，想找团队开发成可在后台编辑的 Shopify 主题，推荐谁？",
+      "specificity": "highly_specific",
+      "commercial_intent": 5,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 2,
+      "priority": "BENCHMARK",
+      "priority_score": 14,
+      "selection_order": 11,
+      "evidence_ids": [
+        "EV03",
+        "EV04"
+      ],
+      "score_reasons": {
+        "commercial_intent": "已有具体工作要委托，直接寻找执行方。",
+        "whaleleap_fit": "服务明确覆盖设计落地与配置模块；缺原稿到交付对照，能力判断不满分。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "有明确声明，但没有可核验的具名 Figma 对照。"
+      }
+    },
+    {
+      "id": "B02",
+      "cluster": "B",
+      "language": "en",
+      "query": "Can you recommend a team for custom Shopify Liquid development rather than app-based workarounds?",
+      "specificity": "mid_specific",
+      "commercial_intent": 5,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 3,
+      "priority": "BENCHMARK",
+      "priority_score": 14,
+      "selection_order": 6,
+      "evidence_ids": [
+        "EV03"
+      ],
+      "score_reasons": {
+        "commercial_intent": "已有具体工作要委托，直接寻找执行方。",
+        "whaleleap_fit": "Liquid 是核心服务，具体复杂度与代码质量仍需验证。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "交付范围清楚，缺公开可复现模块。"
+      }
+    },
+    {
+      "id": "B03",
+      "cluster": "B",
+      "language": "en",
+      "query": "Who can turn our Figma designs into a Shopify theme and handle mobile QA?",
+      "specificity": "highly_specific",
+      "commercial_intent": 5,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 2,
+      "priority": "RESERVE",
+      "priority_score": 14,
+      "selection_order": null,
+      "evidence_ids": [
+        "EV04",
+        "EV03"
+      ],
+      "score_reasons": {
+        "commercial_intent": "已有具体工作要委托，直接寻找执行方。",
+        "whaleleap_fit": "设计落地与移动 QA 匹配声明，但未验证具体项目链路。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "公开流程不是实际设计稿和成品对照。"
+      }
+    },
+    {
+      "id": "B04",
+      "cluster": "B",
+      "language": "zh",
+      "query": "我想做完全定制的 Shopify 网站，不用现成模板，找哪种团队合适？",
+      "specificity": "mid_specific",
+      "commercial_intent": 4,
+      "whaleleap_fit": 3,
+      "recommendation_intent": 3,
+      "evidence_readiness": 2,
+      "priority": "RESERVE",
+      "priority_score": 10,
+      "selection_order": null,
+      "evidence_ids": [
+        "EV02",
+        "EV04"
+      ],
+      "score_reasons": {
+        "commercial_intent": "明确比较供应商，范围或采购时点仍待定。",
+        "whaleleap_fit": "需先区分定制主题与 headless，不能默认全覆盖。",
+        "recommendation_intent": "询问哪种团队合适，而非直接要名单。",
+        "evidence_readiness": "现有证据主要为主题与 storefront，不证明任意架构。"
+      }
+    },
+    {
+      "id": "B05",
+      "cluster": "B",
+      "language": "zh",
+      "query": "想找人开发 Shopify 2.0 自定义 Section，让运营自己改内容，有团队推荐吗？",
+      "specificity": "mid_specific",
+      "commercial_intent": 5,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 3,
+      "priority": "BENCHMARK",
+      "priority_score": 14,
+      "selection_order": 7,
+      "evidence_ids": [
+        "EV03"
+      ],
+      "score_reasons": {
+        "commercial_intent": "已有具体工作要委托，直接寻找执行方。",
+        "whaleleap_fit": "可配置模块是明确交付项，但没有公开代码验收。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "服务及交付说明具体，真实配置案例不足。"
+      }
+    },
+    {
+      "id": "C01",
+      "cluster": "C",
+      "language": "zh",
+      "query": "Shopify 广告有点击但订单少，想找团队先诊断再改页面，有谁合适？",
+      "specificity": "mid_specific",
+      "commercial_intent": 5,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 3,
+      "priority": "BENCHMARK",
+      "priority_score": 14,
+      "selection_order": 8,
+      "evidence_ids": [
+        "EV05",
+        "EV12"
+      ],
+      "score_reasons": {
+        "commercial_intent": "已有具体工作要委托，直接寻找执行方。",
+        "whaleleap_fit": "诊断到实施路径匹配；不能保证问题来自页面或开发即可解决。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "CRO 服务与案例决策可见，无已证实提升幅度。"
+      }
+    },
+    {
+      "id": "C02",
+      "cluster": "C",
+      "language": "zh",
+      "query": "有没有同时懂 Shopify 开发和转化优化的团队可以推荐？",
+      "specificity": "broad",
+      "commercial_intent": 4,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 3,
+      "priority": "BENCHMARK",
+      "priority_score": 13,
+      "selection_order": 4,
+      "evidence_ids": [
+        "EV02",
+        "EV05"
+      ],
+      "score_reasons": {
+        "commercial_intent": "明确比较供应商，范围或采购时点仍待定。",
+        "whaleleap_fit": "工程与转化定位重合，但完整实验能力未被公开结果证明。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "双服务范围和案例提供依据，缺独立成效验证。"
+      }
+    },
+    {
+      "id": "C03",
+      "cluster": "C",
+      "language": "en",
+      "query": "Who could improve a high-ticket Shopify PDP where shoppers struggle to choose the right configuration on mobile?",
+      "specificity": "highly_specific",
+      "commercial_intent": 5,
+      "whaleleap_fit": 3,
+      "recommendation_intent": 5,
+      "evidence_readiness": 2,
+      "priority": "RESERVE",
+      "priority_score": 13,
+      "selection_order": null,
+      "evidence_ids": [
+        "EV05",
+        "EV07"
+      ],
+      "score_reasons": {
+        "commercial_intent": "已有具体工作要委托，直接寻找执行方。",
+        "whaleleap_fit": "高客单 PDP 相近；复杂配置器的真实交付证据不足。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "科技零售 PDP 不等于复杂配置器优化案例。"
+      }
+    },
+    {
+      "id": "C04",
+      "cluster": "C",
+      "language": "zh",
+      "query": "Shopify 商品页转化低，我应该先找设计师、开发团队，还是做用户研究？",
+      "specificity": "mid_specific",
+      "commercial_intent": 3,
+      "whaleleap_fit": 3,
+      "recommendation_intent": 2,
+      "evidence_readiness": 3,
+      "priority": "RESERVE",
+      "priority_score": 8,
+      "selection_order": null,
+      "evidence_ids": [
+        "EV05"
+      ],
+      "score_reasons": {
+        "commercial_intent": "评估解决路径或初步供应商类型。",
+        "whaleleap_fit": "诊断相关，但用户在选方法而非选供应商。",
+        "recommendation_intent": "主要比较方法或供应商类型。",
+        "evidence_readiness": "公开 CRO 方法可支持边界解释，不证明研究专长。"
+      }
+    },
+    {
+      "id": "C05",
+      "cluster": "C",
+      "language": "en",
+      "query": "Can you recommend a Shopify CRO partner that can also implement the changes?",
+      "specificity": "mid_specific",
+      "commercial_intent": 4,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 3,
+      "priority": "RESERVE",
+      "priority_score": 13,
+      "selection_order": null,
+      "evidence_ids": [
+        "EV02",
+        "EV05"
+      ],
+      "score_reasons": {
+        "commercial_intent": "明确比较供应商，范围或采购时点仍待定。",
+        "whaleleap_fit": "工程实施加 CRO 是定位交集，尚无公开实验成效。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "有方法与具名页面决策，缺持续实验记录。"
+      }
+    },
+    {
+      "id": "D01",
+      "cluster": "D",
+      "language": "zh",
+      "query": "Shopify 后台订单金额和 GA4 对不上，想请人核对 purchase 参数和重复事件，找谁？",
+      "specificity": "highly_specific",
+      "commercial_intent": 5,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 4,
+      "priority": "BENCHMARK",
+      "priority_score": 14,
+      "selection_order": 12,
+      "evidence_ids": [
+        "EV06"
+      ],
+      "score_reasons": {
+        "commercial_intent": "已有具体工作要委托，直接寻找执行方。",
+        "whaleleap_fit": "Guide 直接覆盖该诊断，但不承诺两个平台完全一致。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "参数、差异口径和 QA 文档详细；缺独立项目验证。"
+      }
+    },
+    {
+      "id": "D02",
+      "cluster": "D",
+      "language": "en",
+      "query": "Can you recommend a team that understands Shopify, GTM and GA4 ecommerce tracking?",
+      "specificity": "mid_specific",
+      "commercial_intent": 5,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 4,
+      "priority": "BENCHMARK",
+      "priority_score": 14,
+      "selection_order": 9,
+      "evidence_ids": [
+        "EV06"
+      ],
+      "score_reasons": {
+        "commercial_intent": "已有具体工作要委托，直接寻找执行方。",
+        "whaleleap_fit": "浏览器端事件配置与验证是明确范围，服务端能力不自动计入。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "服务加技术 Guide 提供较完整方法证据。"
+      }
+    },
+    {
+      "id": "D03",
+      "cluster": "D",
+      "language": "en",
+      "query": "Who can audit Shopify purchase tracking for Google Ads when conversions appear to be counted twice?",
+      "specificity": "highly_specific",
+      "commercial_intent": 5,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 3,
+      "priority": "BENCHMARK",
+      "priority_score": 14,
+      "selection_order": 13,
+      "evidence_ids": [
+        "EV06"
+      ],
+      "score_reasons": {
+        "commercial_intent": "已有具体工作要委托，直接寻找执行方。",
+        "whaleleap_fit": "事件去重与广告基础匹配；Ads 专属归因仍需账号验证。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "Guide 以 GA4 为主，缺 Google Ads 具名修复记录。"
+      }
+    },
+    {
+      "id": "D04",
+      "cluster": "D",
+      "language": "zh",
+      "query": "Shopify 的 purchase event 重复触发，我应该先检查哪些地方？",
+      "specificity": "highly_specific",
+      "commercial_intent": 2,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 1,
+      "evidence_readiness": 4,
+      "priority": "RESERVE",
+      "priority_score": 7,
+      "selection_order": null,
+      "evidence_ids": [
+        "EV06"
+      ],
+      "score_reasons": {
+        "commercial_intent": "了解方法或自行排错，尚未找实施方。",
+        "whaleleap_fit": "技术方法匹配，但属于自己排错而非采购需求。",
+        "recommendation_intent": "不要求推荐供应商。",
+        "evidence_readiness": "Guide 对重复链路有具体内容，不等于模型会推荐供应商。"
+      }
+    },
+    {
+      "id": "D05",
+      "cluster": "D",
+      "language": "en",
+      "query": "We need server-side Meta CAPI, consent handling and BigQuery attribution for Shopify. Which agency should we hire?",
+      "specificity": "highly_specific",
+      "commercial_intent": 5,
+      "whaleleap_fit": 2,
+      "recommendation_intent": 5,
+      "evidence_readiness": 1,
+      "priority": "RESERVE",
+      "priority_score": 12,
+      "selection_order": null,
+      "evidence_ids": [
+        "EV06"
+      ],
+      "score_reasons": {
+        "commercial_intent": "已有具体工作要委托，直接寻找执行方。",
+        "whaleleap_fit": "公开服务明确将这些工作排除或另行评估，不按核心能力打高分。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "无该完整系统的公开交付证据。"
+      }
+    },
+    {
+      "id": "E01",
+      "cluster": "E",
+      "language": "zh",
+      "query": "有没有做过 eBike Shopify 网站的团队？想找懂车型规格和购买决策的开发伙伴。",
+      "specificity": "highly_specific",
+      "commercial_intent": 5,
+      "whaleleap_fit": 3,
+      "recommendation_intent": 5,
+      "evidence_readiness": 2,
+      "priority": "BENCHMARK",
+      "priority_score": 13,
+      "selection_order": 14,
+      "evidence_ids": [
+        "EV09",
+        "EV07"
+      ],
+      "score_reasons": {
+        "commercial_intent": "已有具体工作要委托，直接寻找执行方。",
+        "whaleleap_fit": "有 eBike 素材和相近高客单语境，缺具名 eBike 交付边界。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "匿名截图不足以证明品牌归属及车型选择实施。"
+      }
+    },
+    {
+      "id": "E02",
+      "cluster": "E",
+      "language": "en",
+      "query": "Who builds Shopify stores for electric bike brands?",
+      "specificity": "mid_specific",
+      "commercial_intent": 4,
+      "whaleleap_fit": 3,
+      "recommendation_intent": 5,
+      "evidence_readiness": 2,
+      "priority": "RESERVE",
+      "priority_score": 12,
+      "selection_order": null,
+      "evidence_ids": [
+        "EV09"
+      ],
+      "score_reasons": {
+        "commercial_intent": "明确比较供应商，范围或采购时点仍待定。",
+        "whaleleap_fit": "行业相关素材存在，但不能推断垂直专家能力。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "eBike 页面示例可见，客户和职责未闭合。"
+      }
+    },
+    {
+      "id": "E03",
+      "cluster": "E",
+      "language": "en",
+      "query": "Can you recommend a Shopify team for a high-ticket consumer technology store with detailed specs and several product categories?",
+      "specificity": "highly_specific",
+      "commercial_intent": 5,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 4,
+      "priority": "BENCHMARK",
+      "priority_score": 14,
+      "selection_order": 15,
+      "evidence_ids": [
+        "EV07",
+        "EV10"
+      ],
+      "score_reasons": {
+        "commercial_intent": "已有具体工作要委托，直接寻找执行方。",
+        "whaleleap_fit": "SilkGear 的多品类科技零售范围直接相关；不等于所有硬件都已交付。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "具名案例与截图较直接，不是独立客户背书。"
+      }
+    },
+    {
+      "id": "E04",
+      "cluster": "E",
+      "language": "zh",
+      "query": "我们卖户外装备，规格和配件很多，有合适的 Shopify 团队推荐吗？",
+      "specificity": "mid_specific",
+      "commercial_intent": 4,
+      "whaleleap_fit": 3,
+      "recommendation_intent": 5,
+      "evidence_readiness": 2,
+      "priority": "RESERVE",
+      "priority_score": 12,
+      "selection_order": null,
+      "evidence_ids": [
+        "EV09",
+        "EV10"
+      ],
+      "score_reasons": {
+        "commercial_intent": "明确比较供应商，范围或采购时点仍待定。",
+        "whaleleap_fit": "首页匿名户外作品提供有限关联，兼容性功能尚无直接证据。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "只有摘要/素材，不能证明复杂配件选型实施。"
+      }
+    },
+    {
+      "id": "E05",
+      "cluster": "E",
+      "language": "en",
+      "query": "Which Shopify agency has experience with hardware brands selling products with complex accessory compatibility?",
+      "specificity": "highly_specific",
+      "commercial_intent": 4,
+      "whaleleap_fit": 3,
+      "recommendation_intent": 5,
+      "evidence_readiness": 2,
+      "priority": "RESERVE",
+      "priority_score": 12,
+      "selection_order": null,
+      "evidence_ids": [
+        "EV07",
+        "EV10"
+      ],
+      "score_reasons": {
+        "commercial_intent": "明确比较供应商，范围或采购时点仍待定。",
+        "whaleleap_fit": "专业设备摘要相关，但配件兼容引擎经验未获证实。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "首页具名摘要缺详细职责和兼容规则交付记录。"
+      }
+    },
+    {
+      "id": "F01",
+      "cluster": "F",
+      "language": "zh",
+      "query": "国内有没有适合做欧美市场的 Shopify 建站公司？我想先了解选择。",
+      "specificity": "broad",
+      "commercial_intent": 3,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 3,
+      "priority": "RESERVE",
+      "priority_score": 12,
+      "selection_order": null,
+      "evidence_ids": [
+        "EV08"
+      ],
+      "score_reasons": {
+        "commercial_intent": "评估解决路径或初步供应商类型。",
+        "whaleleap_fit": "跨境定位相关，但不能从中文沟通推断国内注册或欧美全市场履历。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "有跨境定位与澳大利亚案例，欧美具体证据不足。"
+      }
+    },
+    {
+      "id": "F02",
+      "cluster": "F",
+      "language": "zh",
+      "query": "我们是中国品牌，准备做出海 Shopify 独立站，有哪些开发团队值得比较？",
+      "specificity": "broad",
+      "commercial_intent": 4,
+      "whaleleap_fit": 5,
+      "recommendation_intent": 5,
+      "evidence_readiness": 3,
+      "priority": "BENCHMARK",
+      "priority_score": 14,
+      "selection_order": 5,
+      "evidence_ids": [
+        "EV08",
+        "EV02"
+      ],
+      "score_reasons": {
+        "commercial_intent": "明确比较供应商，范围或采购时点仍待定。",
+        "whaleleap_fit": "明确属于公开核心客户定位；5 分表示需求匹配，不是质量认证。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "定位及案例可支持候选讨论，缺独立信任。"
+      }
+    },
+    {
+      "id": "F03",
+      "cluster": "F",
+      "language": "zh",
+      "query": "我们团队用中文沟通，店铺卖给美国客户，能推荐懂 Shopify 的开发伙伴吗？",
+      "specificity": "mid_specific",
+      "commercial_intent": 5,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 3,
+      "priority": "BENCHMARK",
+      "priority_score": 14,
+      "selection_order": 10,
+      "evidence_ids": [
+        "EV08",
+        "EV01"
+      ],
+      "score_reasons": {
+        "commercial_intent": "已有具体工作要委托，直接寻找执行方。",
+        "whaleleap_fit": "中文协作与全球业务相关；美国专项履历不能假定。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "双语页面支持沟通定位，不证明具体美国案例。"
+      }
+    },
+    {
+      "id": "F04",
+      "cluster": "F",
+      "language": "en",
+      "query": "Can you recommend a Chinese-speaking Shopify agency for a brand entering the US market?",
+      "specificity": "mid_specific",
+      "commercial_intent": 4,
+      "whaleleap_fit": 4,
+      "recommendation_intent": 5,
+      "evidence_readiness": 3,
+      "priority": "RESERVE",
+      "priority_score": 13,
+      "selection_order": null,
+      "evidence_ids": [
+        "EV08"
+      ],
+      "score_reasons": {
+        "commercial_intent": "明确比较供应商，范围或采购时点仍待定。",
+        "whaleleap_fit": "跨境与中文定位匹配，美国实际交付仍待核验。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "公开服务定位明确，具名 US 项目未核验。"
+      }
+    },
+    {
+      "id": "F05",
+      "cluster": "F",
+      "language": "zh",
+      "query": "我们在做英国和欧盟市场，需要中文沟通、Shopify Markets 和复杂 VAT 自动化一起落地，推荐谁？",
+      "specificity": "highly_specific",
+      "commercial_intent": 5,
+      "whaleleap_fit": 2,
+      "recommendation_intent": 5,
+      "evidence_readiness": 1,
+      "priority": "RESERVE",
+      "priority_score": 12,
+      "selection_order": null,
+      "evidence_ids": [
+        "EV08",
+        "EV02"
+      ],
+      "score_reasons": {
+        "commercial_intent": "已有具体工作要委托，直接寻找执行方。",
+        "whaleleap_fit": "跨境定位不代表 UK/EU VAT 自动化与合规专长。",
+        "recommendation_intent": "明确询问谁能做或请求推荐团队。",
+        "evidence_readiness": "所查公开证据不能支持该复合技术与合规范围。"
+      }
+    }
+  ],
+  "freeze_status": "FROZEN",
+  "human_review": "APPROVED",
+  "authority_sprint": "NOT YET IMPLEMENTED"
+}

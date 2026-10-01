@@ -1,0 +1,38 @@
+202 heading ChatGPT 说：, Value: 4
+								203 text ChatGPT 说：
+							228 text 你这个情况，最适合找的是 
+							229 text “Shopify + GA4/GTM 数据追踪专家”
+							230 text ，而不是普通 Shopify 开发、投放优化师或纯 GA4 报表顾问。Shopify 官方 Partner Directory 里就有专门的 
+							231 text Analytics and tracking
+							232 text  服务分类，而且可以筛选中文服务。
+							233 link Description: Shopify: Hire Shopify Experts - Shopify Partners Directory, https://www.shopify.com/partners/directory/services/marketing-and-sales/analytics-and-tracking?utm_source=chatgpt.com, 另外 1 个来源, Value: shopify.com/partners/directory/services/marketing-and-sales/analytics-and-tracking?utm_source=chatgpt.com
+							234 text 你可以直接这样找人：
+							235 content list
+								236 container
+									237 AXListMarker • 
+									238 text 职位/关键词搜： Shopify GA4 Tracking Specialist / GTM Specialist / Ecommerce Analytics Consultant
+								239 container
+									240 AXListMarker • 
+									241 text 要求对方熟悉： GA4 ecommerce、GTM、Shopify Customer Events / Web Pixels、Google & YouTube app、Consent Mode
+								242 container
+									243 AXListMarker • 
+									244 text 如果你们还有 server-side GTM，再加： server-side tracking / sGTM
+								245 container
+									246 AXListMarker • 
+									247 text 优先找真正做过  Shopify purchase 去重和金额 reconciliation  的人，而不是只会“装 GA4”的人。
+							248 text 因为你现在要查的其实是两类问题：第一类是  purchase  参数本身，例如  transaction_id 、 value 、 currency 、 tax 、 shipping 、 items[]  是否按 GA4 规范传；第二类是同一笔订单是否被多个来源重复发送，比如 Shopify 官方 Google 集成、GTM、自定义 Pixel、第三方 App 或 server-side tracking 同时发 purchase。Shopify 目前的追踪体系也涉及 Web Pixels / analytics events，所以最好找熟悉 Shopify 新版 Customer Events 架构的人。
+							249 link Description: Shopify: Analytics API, https://shopify.dev/docs/api/checkout-ui-extensions/2026-01/target-apis/platform-apis/analytics-api?utm_source=chatgpt.com, Value: shopify.dev/docs/api/checkout-ui-extensions/2026-01/target-apis/platform-apis/analytics-api?utm_source=chatgpt.com
+							250 text 我会让对方交付一份 
+							251 text 逐订单核对表
+							252 text ，至少拿 20–50 个 Shopify  order_id / order number  对 GA4  transaction_id ，检查：
+							253 text 订单金额 → GA4 value → currency → purchase 次数 → event source → GTM tag / pixel 来源
+							254 text 。这样才能分清是金额定义差异，还是 duplicate purchase。 你发需求时可以直接写：
+							255 text Shopify 后台订单收入和 GA4 purchase revenue 对不上。需要核查 GA4 ecommerce purchase implementation，包括 transaction_id、value、currency、tax、shipping、items 参数，并检查是否存在 Shopify Google app、GTM、Custom Pixel 或 server-side tracking 导致的重复 purchase。希望最终提供逐订单 reconciliation、重复事件来源和修复方案。
+							256 text 官方 Shopify Partner Directory 里也确实有专门标注 
+							257 text GA4、Google Tag Manager、conversion tracking、server-side tracking
+							258 text  的服务商，例如 Logical Gecko，以及专做 Shopify GA4/GTM tracking troubleshooting 的合作伙伴。
+							259 link Value: shopify.com/partners/directory/partner/mikkel-tschentscher?utm_source=chatgpt.com, Description: Shopify: Mikkel Tschentscher - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/mikkel-tschentscher?utm_source=chatgpt.com, 另外 1 个来源
+							260 text 如果你愿意，我也可以直接帮你整理一份 
+							261 text “找 freelancer 时的招聘需求 + 面试时必问的 8 个问题”
+							262 text ，这样在 Upwork / Fiverr / Shopify Partner 上比较容易筛掉不专业的人。
+							

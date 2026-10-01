@@ -1,0 +1,10 @@
+73 button (collapsed) 已研究 1秒, Secondary Actions: Expand
+							74 text 已研究
+							75 text 1秒
+							76 image
+						77 container
+							78 text A  Shopify conversion-tracking specialist  or ecommerce analytics consultant who works with Google Ads, GA4, and Google Tag Manager can audit this. Look for someone who will trace a test order from Shopify through every purchase-tracking path, rather than only reviewing campaign settings. singlegrain +1
+						79 container
+							80 text Ask them to check the Shopify Google & YouTube app, any GTM or custom-pixel purchase tags, and GA4 imports; then review which Google Ads purchase actions are set as  primary . A common cause of apparent double counting is a Google Ads website purchase action and a GA4-imported purchase action both being primary. They should also verify that a test order fires once and carries a transaction ID. singlegrain +2
+						81 text If you’re hiring, request a written finding that identifies the duplicate path and shows the test-order evidence before any tracking settings are changed.
+						

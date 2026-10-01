@@ -1,0 +1,53 @@
+96 button (collapsed) 已研究 5秒, Secondary Actions: Expand
+							97 text 已研究
+							98 text 5秒
+							99 image
+						100 container
+							101 text 有。若你要找的是 同一团队既能改 Shopify 主题、功能和集成，又能用数据持续改善购买转化 ，我会先约谈下面三家；它们的侧重点不同。以下依据各团队公开的服务说明，不等于已独立验证其报价或实际效果。
+						102 container
+							103 table
+								104 row
+									105 cell
+										106 text 团队
+									107 cell
+										108 text 更适合的需求
+									109 cell
+										110 text 值得核实的能力
+								111 row
+									112 cell
+										113 container Services | Shopify Plus CRO Agency
+											114 link Description: Swanky, Value: swankyagency.com/services/conversion-rate-optimisation-services/
+									115 cell
+										116 text 已有一定流量、希望长期做实验的 Shopify Plus 品牌
+									117 cell
+										118 text 公开说明其策略、分析、设计、开发和测试由内部团队完成，并有持续的 CRO 测试流程。
+										119 container Services | Shopify Plus CRO Agency
+											120 link Description: 可信域名 swankyagency, Value: swankyagency.com/services/conversion-rate-optimisation-services/
+								121 row
+									122 cell
+										123 container Shopify Conversion Rate Optimization | Shopify CRO Agency
+											124 link Description: Conversion, Value: conversion.is/services/shopify-cro-agency
+									125 cell
+										126 text 想让团队直接开发、上线并衡量测试方案，而非只交审计报告
+									127 cell
+										128 text 其服务页列出 Shopify 主题开发、Liquid/React 实施、商品页与购物车 A/B 测试，以及 Plus 的结账扩展测试；“按效果付费”等条款需在洽谈时确认。
+										129 container Shopify Conversion Rate Optimization | Shopify CRO Agency
+											130 link Description: conversion, Value: conversion.is/services/shopify-cro-agency
+								131 row
+									132 cell
+										133 container 创意时空: Shopify中国区高级建站&营销服务供应商
+											134 link Description: 创意时空, Value: shopify.cheriscon.com/
+									135 cell
+										136 text 希望用中文沟通，同时需要定制建站、插件开发和营销运营支持
+									137 cell
+										138 text 官网列有主题与应用开发、数据分析、广告及提升转化的服务；但未清楚展示完整的 A/B 测试方法，若你特别重视严格的 CRO 实验，应要求他们提供实例。
+										139 container 创意时空: Shopify中国区高级建站&营销服务供应商
+											140 link Description: shopify.cheriscon, Value: shopify.cheriscon.com/
+							141 container
+								142 button 复制表格
+								143 button 下载 CSV
+								144 button 展开表格
+						145 container
+							146 text 我的建议是先给三家同一份简短需求：店铺网址、主要市场、月访问量、当前转化率、最想解决的页面问题和开发需求。面谈时请他们各自展示一个 从发现问题、提出假设、开发上线到衡量结果 的完整案例，并问清楚开发与 CRO 是否由同一团队负责、测试失败如何报告、以及报价包含多少实施工作。这样比只看“提升转化率”的宣传数字更容易选出合适团队。
+						147 text 如果你告诉我预算范围、是否使用 Shopify Plus，以及偏好中文团队还是海外团队，我可以把名单缩到更贴合的两三家。
+						

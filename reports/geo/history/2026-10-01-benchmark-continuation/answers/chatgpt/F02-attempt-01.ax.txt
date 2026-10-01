@@ -1,0 +1,190 @@
+											190 标题 ChatGPT 说：, Value: 4
+												191 文本 ChatGPT 说：
+											192 文本 如果你们是
+											193 文本 中国品牌，目标市场在欧美/澳洲/中东等海外市场
+											194 文本 ，我建议不要只找“会做 Shopify 页面”的建站公司，而是同时比较几种类型：
+											195 文本 Shopify 深度开发型、品牌+DTC 增长型、企业级集成型
+											196 文本 。Shopify 官方目前在中国区目录中列出了约 60 家合作伙伴，能力差异其实很大。
+											197 link Value: shopify.com/zh/partners/directory/locations/china?utm_source=chatgpt.com, Shopify: 在 China 聘请 Shopify 合作伙伴, https://www.shopify.com/zh/partners/directory/locations/china?utm_source=chatgpt.com, 另外 1 个来源
+											198 文本 下面这几家比较值得放进第一轮 shortlist：
+											199 表格
+												200 row
+													201 列标题
+														202 文本 团队
+													203 列标题
+														204 文本 更适合什么项目
+													205 列标题
+														206 文本 值得重点考察的能力
+												207 row
+													208 单元格
+														209 文本 翼果科技 Yiguo
+													210 单元格
+														211 文本 中大型品牌、Shopify Plus、复杂功能
+													212 单元格
+														213 文本 Shopify 官方目录目前标为 
+														214 文本 Platinum Partner
+														215 文本 ；覆盖建站、迁移、SEO、B2B、自定义 App/集成等。
+														216 link Value: shopify.com/partners/directory/partner/yiguotech1?utm_source=chatgpt.com, Shopify: 翼果科技 - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/yiguotech1?utm_source=chatgpt.com
+												217 row
+													218 单元格
+														219 文本 EastDTC / EastDigi 隽永东方
+													220 单元格
+														221 文本 DTC 品牌，希望建站之后继续做增长
+													222 单元格
+														223 文本 官方目录显示 2018 年开始合作，目前为 Select Partner，公开评价较多；服务覆盖 App/系统集成、SEO、营销、国际化等较宽。
+														224 link Value: shopify.com/partners/directory/partner/eastdigi?utm_source=chatgpt.com, Shopify: EastDTC/EastDigi/隽永东方 — Plus Experts | DTC Brand & GEO/AEO Growth - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/eastdigi?utm_source=chatgpt.com
+												225 row
+													226 单元格
+														227 文本 创意时空 Cheriscon
+													228 单元格
+														229 文本 中国品牌 0→1 出海、需要中文团队
+													230 单元格
+														231 文本 官方资料称自 2017 年起服务近 1000 家中国跨境品牌，提供 Shopify Plus、定制开发、App、系统集成，以及 SEO/GEO 等。
+														232 link Value: shopify.com/partners/directory/partner/dale2?utm_source=chatgpt.com, Shopify: 深圳市创意时空信息技术有限公司 - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/dale2?utm_source=chatgpt.com
+												233 row
+													234 单元格
+														235 文本 Cyberklick 易点天下
+													236 单元格
+														237 文本 已有一定规模，希望把技术、CRO、营销结合
+													238 单元格
+														239 文本 官方目录列出的能力包括 Headless、迁移、CRO、SEO、性能优化和自定义集成，并有 ESR 等公开案例。
+														240 link Value: shopify.com/partners/directory/partner/geekleads?utm_source=chatgpt.com, Shopify: Cyberklick 易点天下（301171.SZ） · 广州/深圳 - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/geekleads?utm_source=chatgpt.com
+												241 row
+													242 单元格
+														243 文本 WESWOO 西西木
+													244 单元格
+														245 文本 技术要求高、Headless / Hydrogen / 定制交互
+													246 单元格
+														247 文本 官方资料显示团队专注 Shopify 二次开发，公开技术栈包括 Liquid、React、Vue、Hydrogen、Node.js / Graph API，目前标为 Premier Partner。
+														248 link Value: shopify.com/partners/directory/partner/10395?utm_source=chatgpt.com, Shopify: 西西木（深圳）科技有限责任公司 - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/10395?utm_source=chatgpt.com
+												249 row
+													250 单元格
+														251 文本 上海领聚数字 Linkjoint
+													252 单元格
+														253 文本 希望建站 + 海外营销一起外包
+													254 单元格
+														255 文本 Shopify 官方目录目前标为 Plus Partner，服务覆盖建站、视觉、CRO、Google/Meta/TikTok 等营销及本地化运营。
+														256 link Value: shopify.com/partners/directory/partner/linkjoint1?utm_source=chatgpt.com, Shopify: 上海领聚数字-Linkjoint - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/linkjoint1?utm_source=chatgpt.com
+												257 row
+													258 单元格
+														259 按钮 TMO Group
+													260 单元格
+														261 文本 ERP/CRM/PIM、B2B、多市场等企业级项目
+													262 单元格
+														263 文本 更偏企业数字电商实施和复杂系统集成，也覆盖 Shopify Plus、Headless 和跨境本地化。
+												264 row
+													265 单元格
+														266 按钮 Wave Commerce - Shopify Plus Partner
+													267 单元格
+														268 文本 香港/国际团队协作、成熟品牌 Shopify Plus
+													269 单元格
+														270 文本 偏 Shopify Plus、DTC、企业集成、国际扩张和全渠道，适合需要较国际化项目管理的团队。
+											271 container
+												272 按钮 复制表格
+												273 弹出式按钮 展开表格
+											274 标题 如果是我帮中国出海品牌做招标，我会让 4 类团队同时报价, Value: 3
+												275 文本 如果是我帮中国出海品牌做招标，我会让 4 类团队同时报价
+											276 文本 不要直接找 10 家，而是各选一家，这样最容易看出差异：
+											277 文本 1. 技术型：翼果 / WESWOO
+											278 文本 如果你们最关心的是：
+											279 内容列表
+												280 container
+													281 AXListMarker • 
+													282 文本 Shopify Plus
+												283 container
+													284 AXListMarker • 
+													285 文本 ERP/WMS/PIM/CRM API 对接
+												286 container
+													287 AXListMarker • 
+													288 文本 会员体系
+												289 container
+													290 AXListMarker • 
+													291 文本 自定义促销逻辑
+												292 container
+													293 AXListMarker • 
+													294 文本 Shopify Functions
+												295 container
+													296 AXListMarker • 
+													297 文本 Headless / Hydrogen
+												298 container
+													299 AXListMarker • 
+													300 文本 页面速度
+											301 文本 这类团队比较有意义。
+											302 文本 2. DTC 综合型：EastDTC / Cheriscon
+											303 文本 如果你们现在处于：
+											304 文本 “我们产品已经有了，但海外品牌官网从 0 开始做，不知道网站结构、视觉、SEO、转化怎么规划。”
+											305 文本 这种情况下，单纯找开发公司往往不够。应该重点看他们能不能从 
+											306 文本 品牌定位 → UX/UI → Shopify → SEO → CRO → 数据分析
+											307 文本  连起来。
+											308 文本 3. 技术 + 营销型：Cyberklick / Linkjoint
+											309 文本 如果内部没有完整海外电商团队，希望供应商不只是把网站上线，而是继续参与 Google、Meta、TikTok、SEO、CRO，那么可以比较这一路线。
+											310 link Value: shopify.com/partners/directory/partner/geekleads?utm_source=chatgpt.com, Shopify: Cyberklick 易点天下（301171.SZ） · 广州/深圳 - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/geekleads?utm_source=chatgpt.com, 另外 1 个来源
+											311 文本 4. 企业实施型：TMO
+											312 文本 如果你们已经是成熟企业，存在 SAP / Oracle / 金蝶 / 用友 / Salesforce / HubSpot / OMS / WMS / PIM 等系统，网站只是全球数字化项目的一部分，那就不应该用普通“建站报价”来比较，而要用系统架构和实施能力来比较。
+											313 标题 真正招标时，我建议你们重点问这 10 个问题, Value: 2
+												314 文本 真正招标时，我建议你们重点问这 10 个问题
+											315 文本 比“你们做过多少网站”更能筛掉不合适的团队：
+											316 内容列表
+												317 container
+													318 AXListMarker 1. 
+													319 文本 过去 12 个月上线的 5 个 Shopify 项目 URL 是什么？
+												320 container
+													321 AXListMarker 2. 
+													322 text 哪几个是他们自己完成  UX/UI + Liquid 开发 ，而不是套 Theme？
+												323 container
+													324 AXListMarker 3. 
+													325 text 是否做过与你们 同品类、同目标国家 的项目？
+												326 container
+													327 AXListMarker 4. 
+													328 text 是否真正做过  Shopify Markets / 多币种 / 多语言 / 多国家域名 ？
+												329 container
+													330 AXListMarker 5. 
+													331 text 有没有做过  ERP / WMS / CRM / PIM / 3PL API ？
+												332 container
+													333 AXListMarker 6. 
+													334 文本 PageSpeed / Core Web Vitals 上线后的目标是什么？
+												335 container
+													336 AXListMarker 7. 
+													337 文本 GA4、GTM、Meta Pixel、CAPI、Google Ads Conversion 谁负责？
+												338 container
+													339 AXListMarker 8. 
+													340 文本 SEO migration、URL、301、schema、canonical 谁负责？
+												341 container
+													342 AXListMarker 9. 
+													343 text 上线之后 bug warranty 是  30 / 60 / 90 天 还是长期 SLA？
+												344 container
+													345 AXListMarker 10. 
+													346 文本 设计稿、源代码、Git repo、Shopify Owner 权限、Figma 是否全部归品牌方？
+											347 text 尤其是最后一条。 很多中国品牌第一次做独立站，后面最麻烦的并不是“网站做得丑”，而是：
+											348 文本 代码、账号、Theme license、插件、域名甚至 GA4 都掌握在服务商手里。
+											349 文本 这一点合同阶段就应该处理掉。
+											350 标题 报价也不要只比较“总价”, Value: 2
+												351 文本 报价也不要只比较“总价”
+											352 文本 建议要求每一家按照相同结构拆报价：
+											353 container
+												354 text Discovery / Strategy → UX / Sitemap → UI Design → Shopify Theme Development → Custom Functions → Apps → ERP/API Integration → Data Migration → Tracking → SEO Migration → QA → Launch → Warranty → Monthly Maintenance
+											355 text 这样你很容易发现： 一家报价 ¥8 万，另一家 ¥25 万，
+											356 文本 很可能根本不是同一份 Scope
+											357 text 。 例如有人报价只是：
+											358 文本 Theme + 首页 + PDP + Collection
+											359 文本 另一家却包含：
+											360 文本 UX research + UI + Shopify development + ERP + GA4/GTM + SEO migration + CRO
+											361 文本 单看总价没有意义。
+											362 标题 一个很实用的初筛组合, Value: 3
+												363 文本 一个很实用的初筛组合
+											364 文本 如果你们现在准备认真找供应商，我会先让：
+											365 文本 翼果 + EastDTC + Cheriscon + Cyberklick + WESWOO
+											366 文本 这 5 家基于
+											367 文本 完全相同的一份需求书
+											368 文本 提交：
+											369 container
+												370 text ① Solution Proposal ② 相关案例 ③ 项目团队配置 ④ Timeline ⑤ Fixed quotation ⑥ Maintenance quotation
+											371 text 然后再进入第二轮。 Shopify 官方 Partner Directory 本身也可以继续按 
+											372 文本 Plus / Premier / Platinum、行业、服务类型、语言
+											373 文本 过滤中国区合作伙伴，适合拿来核验供应商身份，而不要只看供应商官网自己的“Shopify Partner”Logo。
+											374 link Value: shopify.com/partners/directory/locations/china?utm_source=chatgpt.com, Shopify: Hire Shopify Partners in China, https://www.shopify.com/partners/directory/locations/china?utm_source=chatgpt.com
+											375 文本 如果你告诉我你们的
+											376 文本 产品品类、目标国家、预算大概是 5–10 万 / 10–30 万 / 30–100 万人民币，以及是否需要 ERP 对接
+											377 文本 ，我可以进一步帮你整理成一份 
+											378 文本 「5–8 家 Shopify 开发团队横向对比表 + 招标评分表」
+											379 文本 ，包括案例、技术能力、优缺点和适合的项目规模。

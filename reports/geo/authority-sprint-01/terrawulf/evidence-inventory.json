@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0",
+  "project": "Terrawulf",
+  "audit_date": "2026-10-01",
+  "classification": "POST-BASELINE AUTHORITY INVESTMENT",
+  "benchmark_v1_impact": "NONE",
+  "evidence": [
+    {
+      "id": "TW-E01",
+      "claim": "A real Terrawulf Shopify design and development engagement was commissioned.",
+      "evidence_type": "CONTRACT",
+      "source": "/Users/liaoshenyuan/Desktop/设计合同存档/Terrawulf-Shopify.pdf",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "Signed contract covers Figma UI/UX and Shopify delivery. It names individual parties, not WhaleLeap Studio; it does not prove every acceptance item was completed. Confidential material requires authorization."
+    },
+    {
+      "id": "TW-E02",
+      "claim": "The contracted scope included homepage, PDP, collection, navigation, footer, responsive delivery and conversion-path UX.",
+      "evidence_type": "CONTRACT",
+      "source": "/Users/liaoshenyuan/Desktop/设计合同存档/Terrawulf-Shopify.pdf",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "Scope evidence only. Completion must be supported by separate implementation and QA evidence."
+    },
+    {
+      "id": "TW-E03",
+      "claim": "A directly accessible Terrawulf Figma file contains full desktop homepage and PDP design frames that correspond to the implemented storefront.",
+      "evidence_type": "DESIGN",
+      "source": "Figma file fzRQO1QRaH5K62DxfDdbnd; homepage node 137:226; PDP node 180:327; internal exports under evidence/figma/",
+      "public": false,
+      "publishable": true,
+      "confidence": "HIGH",
+      "notes": "Client-approved disclosure permits homepage node 137:226 and PDP node 180:327 to be used in public design-to-live evidence. No complete mobile Figma comparison is claimed."
+    },
+    {
+      "id": "TW-E04",
+      "claim": "Terrawulf uses custom Shopify Online Store 2.0 JSON templates and Liquid sections.",
+      "evidence_type": "CODE",
+      "source": "/Users/liaoshenyuan/Desktop/Victor Jiang/templates/product.m7.json; /Users/liaoshenyuan/Desktop/Victor Jiang/sections/",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "M7 template composes product-main, story, anatomy, performance, parts, video, specs, feature carousel, FAQ and recommended products. Code publication requires authorization."
+    },
+    {
+      "id": "TW-E05",
+      "claim": "Merchant-editable PDP architecture exists through section settings and blocks.",
+      "evidence_type": "SHOPIFY",
+      "source": "/Users/liaoshenyuan/Desktop/Victor Jiang/sections/product-main.liquid; product-specs-parameters.liquid; product-faq.liquid; product-parts-showcase.liquid",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "Schemas expose product blocks, text, images, CTA behavior, collapses, spec categories, FAQ items and parts cards. This proves code capability, not current Admin-screen configuration."
+    },
+    {
+      "id": "TW-E06",
+      "claim": "The M7 purchase panel is connected to Shopify product and variant objects.",
+      "evidence_type": "CODE",
+      "source": "/Users/liaoshenyuan/Desktop/Victor Jiang/sections/product-main.liquid; /Users/liaoshenyuan/Desktop/Victor Jiang/snippets/product-block-*.liquid",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "Uses product.id, selected_or_first_available_variant, product title, price, options, availability, quantity and product form."
+    },
+    {
+      "id": "TW-E07",
+      "claim": "M7 specifications and performance content are implemented as merchant-editable template settings rather than verified custom metafields.",
+      "evidence_type": "SHOPIFY",
+      "source": "/Users/liaoshenyuan/Desktop/Victor Jiang/templates/product.m7.json; product-specs-parameters.liquid; product-performance-feature.liquid",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "Geometry/spec tables are stored in section block settings; motor, battery, range and performance copy are section settings. No custom product metafield binding was found for these facts."
+    },
+    {
+      "id": "TW-E08",
+      "claim": "The theme contains product decision-support modules for specs, geometry, performance, shipping, warranty, FAQ and related products.",
+      "evidence_type": "CODE",
+      "source": "/Users/liaoshenyuan/Desktop/Victor Jiang/templates/product.m7.json",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "Template order and settings show the modules and their content. Business outcomes are not measured."
+    },
+    {
+      "id": "TW-E09",
+      "claim": "The implementation includes explicit desktop, tablet and mobile rules.",
+      "evidence_type": "CODE",
+      "source": "/Users/liaoshenyuan/Desktop/Victor Jiang/sections/product-story-gallery.liquid; product-performance-feature.liquid; autoplay-video.liquid; collection-products.liquid",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "Sections include 1199/989/749px media rules, mobile padding/height settings and configurable collection breakpoints."
+    },
+    {
+      "id": "TW-E10",
+      "claim": "Terrawulf-specific theme work has local Git history.",
+      "evidence_type": "GIT",
+      "source": "/Users/liaoshenyuan/Desktop/yiming-shopify-v1/.git",
+      "public": false,
+      "publishable": false,
+      "confidence": "MEDIUM",
+      "notes": "Commits ce410d9 and 25d658d preserve a baseline and Product Story Gallery implementation. Much later work remains uncommitted, so Git alone does not provide a complete delivery chronology."
+    },
+    {
+      "id": "TW-E11",
+      "claim": "A Terrawulf theme was created and deployed to Shopify.",
+      "evidence_type": "DEPLOYMENT",
+      "source": "Historical release record: g1m32w-nd.myshopify.com, Terrawulf-Theme, theme ID 158541480167",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "Recorded successful Shopify CLI creation/push and later live scoped release. Credentials are excluded."
+    },
+    {
+      "id": "TW-E12",
+      "claim": "Scoped release files passed Theme Check and remote byte readback.",
+      "evidence_type": "QA",
+      "source": "Historical release record for assets/product.css and sections/product-main.liquid",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "124 files inspected with no offenses; two live files were pulled back and matched byte-for-byte. This is scoped evidence, not a current full-theme audit."
+    },
+    {
+      "id": "TW-E13",
+      "claim": "The sticky PDP media/gallery overlap was reproduced, repaired and browser-checked.",
+      "evidence_type": "QA",
+      "source": "Historical browser QA and release record for product-main.liquid and product.css",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "Seven scroll positions were checked in both directions; no rectangle overlap was observed after the final architecture change."
+    },
+    {
+      "id": "TW-E14",
+      "claim": "Launch preparation covered US market/shipping, product image alt text, collection metadata, structured data cleanup and storefront checks.",
+      "evidence_type": "QA",
+      "source": "/Users/liaoshenyuan/Desktop/yiming-shopify-v1/outputs/terrawulf-launch-change-summary.md",
+      "public": false,
+      "publishable": false,
+      "confidence": "MEDIUM",
+      "notes": "Internal delivery summary records completed checks and remaining client decisions. It is not independent evidence."
+    },
+    {
+      "id": "TW-E15",
+      "claim": "The theme was documented for merchant operation through Shopify Customize, Products, Collections, Navigation and Settings.",
+      "evidence_type": "SHOPIFY",
+      "source": "/Users/liaoshenyuan/Desktop/yiming-shopify-v1/outputs/terrawulf-user-operation-guide.md",
+      "public": false,
+      "publishable": false,
+      "confidence": "MEDIUM",
+      "notes": "Historical operator guide supports intended merchant workflow. Current Theme Editor state was not opened in this audit."
+    },
+    {
+      "id": "TW-E16",
+      "claim": "The public live M7 PDP exposes a functioning purchase and decision-support structure.",
+      "evidence_type": "LIVE_STORE",
+      "source": "https://www.terrawulfmoto.com/products/terrawulf-m7-high-performance-off-road-electric-dirt-bike",
+      "public": true,
+      "publishable": true,
+      "confidence": "HIGH",
+      "notes": "Current 2026-10-01 verification found media, title, price, color option, quantity, Add to Cart, payment methods, details, shipping, warranty, story, anatomy, performance, parts, video, specs, FAQ and related products. Public existence is cited in the approved WhaleLeap case study."
+    },
+    {
+      "id": "TW-E17",
+      "claim": "The current M7 PDP contains no document-level horizontal overflow at desktop, tablet or mobile widths.",
+      "evidence_type": "QA",
+      "source": "Current browser verification on 2026-10-01 at 1280x720, 768x1024 and 390x844",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "At each tested width scrollWidth equaled clientWidth; title and Add to Cart remained rendered. This is a limited current check, not full responsive acceptance."
+    },
+    {
+      "id": "TW-E18",
+      "claim": "The current public homepage supports model discovery, comparison, rider proof, guides and service reassurance.",
+      "evidence_type": "LIVE_STORE",
+      "source": "https://www.terrawulfmoto.com/",
+      "public": true,
+      "publishable": true,
+      "confidence": "HIGH",
+      "notes": "Current public content verified. It does not attribute the implementation to WhaleLeap."
+    },
+    {
+      "id": "TW-E19",
+      "claim": "GA4/GTM implementation for Terrawulf is verified.",
+      "evidence_type": "QA",
+      "source": "Contract scope only; no container, event map, DebugView or purchase validation evidence located.",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "Claim is NOT VERIFIED and must not be published."
+    },
+    {
+      "id": "TW-E20",
+      "claim": "Terrawulf publicly attributes the work to WhaleLeap Studio.",
+      "evidence_type": "THIRD_PARTY",
+      "source": "Current public storefront review",
+      "public": true,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "No public WhaleLeap attribution found. Independent mention is missing."
+    },
+    {
+      "id": "TW-E21",
+      "claim": "The repository proves a custom Terrawulf metafield architecture for specifications and compatibility.",
+      "evidence_type": "CODE",
+      "source": "/Users/liaoshenyuan/Desktop/Victor Jiang/sections and snippets",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "Claim not established. Only review-app metafield references were found; product decision content is stored in product objects or template settings."
+    },
+    {
+      "id": "TW-E22",
+      "claim": "The current local theme snapshot has a clean full-theme Theme Check.",
+      "evidence_type": "QA",
+      "source": "Current shopify theme check on /Users/liaoshenyuan/Desktop/Victor Jiang, 2026-10-01",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "Claim not established. Current check inspected 127 files and returned 13 warnings across 4 files: excessive settings in blog-posts/search-main, desktop navigation complexity, and deep mobile-navigation nesting. No errors were reported."
+    },
+    {
+      "id": "TW-E23",
+      "claim": "Client approved full public disclosure of the Terrawulf project subject to minimum-necessary disclosure and explicit sensitive-data exclusions.",
+      "evidence_type": "AUTHORIZATION",
+      "source": "Direct client-approval record, 2026-10-01",
+      "public": false,
+      "publishable": false,
+      "confidence": "HIGH",
+      "notes": "Authorization covers project-related evidence used to demonstrate WhaleLeap capability. It excludes banking, contract value, signatures, credentials, private contacts, customer Admin accounts and unrelated internal commercial data."
+    },
+    {
+      "id": "TW-E24",
+      "claim": "WhaleLeap published a named Terrawulf eBike Shopify Engineering case study.",
+      "evidence_type": "PUBLICATION",
+      "source": "https://whaleleap.studio/case-studies/terrawulf",
+      "public": true,
+      "publishable": true,
+      "confidence": "HIGH",
+      "notes": "Published as a post-baseline authority investment. Benchmark v1.0 and GEO Score 27/50 remain frozen."
+    }
+  ],
+  "authorization": {
+    "status": "CLIENT_APPROVED",
+    "scope": "FULL PROJECT PUBLICATION ALLOWED",
+    "recorded_at": "2026-10-01",
+    "boundary": "Minimum-necessary disclosure; credentials, banking, contract value, signatures, private contacts, Admin accounts and unrelated internal business data excluded."
+  }
+}

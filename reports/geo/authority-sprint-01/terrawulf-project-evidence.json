@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "project": "Terrawulf",
+  "website": "https://www.terrawulfmoto.com/",
+  "audit_date": "2026-10-01",
+  "relationship": {
+    "status": "verified_at_individual_delivery_level_corporate_attribution_pending",
+    "basis": [
+      "Signed Shopify design and development contract names the project parties and commissions Figma UI/UX plus Shopify delivery.",
+      "Local theme repository contains dated commits, custom Liquid sections and Terrawulf-specific implementation.",
+      "Launch summary and operator guide identify the live Shopify theme and documented deployment/QA work."
+    ],
+    "boundary": "The signed contract does not name WhaleLeap Studio. Public use of the contract, personal identities or corporate attribution requires explicit authorization."
+  },
+  "project_period": "2026-07 to 2026-08 verified; later live state checked 2026-10-01",
+  "responsibilities": {
+    "design": "Contracted; completion evidence is medium because no exportable final Figma-to-live comparison was available in this audit.",
+    "shopify_development": "Verified",
+    "theme_liquid": "Verified",
+    "frontend": "Verified",
+    "cro": "Contract includes conversion-path UX planning; live purchase hierarchy exists, but no outcome or experiment evidence.",
+    "tracking": "Contracted GA4/GTM acceptance item; implementation not verified.",
+    "seo": "Verified for scoped launch work: image alt text, collection metadata, homepage description and Organization JSON-LD cleanup.",
+    "qa": "Verified through theme checks, responsive fixes, storefront/checkout checks and remote readback documentation.",
+    "deployment": "Verified through live-theme documentation and scoped release records."
+  },
+  "public_facts": [
+    "Homepage presents M5/M7 bikes, comparison data, rider videos, guides and service assurances.",
+    "Collection lists 21 products including bikes and model-specific accessories.",
+    "M7 PDP publicly shows price, purchase action, core specifications, geometry, technical sections, shipping/warranty accordions and FAQ.",
+    "Desktop and a 390x844 mobile browser check rendered without document-level horizontal overflow in the sampled PDP."
+  ],
+  "authority_claims": [
+    {
+      "claim": "eBike Shopify and high-ticket PDP implementation experience",
+      "internal_evidence": ["Signed project scope", "Terrawulf theme repository", "Launch and operator documentation"],
+      "public_evidence": ["Live M5/M7 storefront", "Live M7 PDP", "Live product/accessory collection"],
+      "publishable_now": false,
+      "reason": "WhaleLeap attribution and publication permission are not public."
+    },
+    {
+      "claim": "Custom responsive Liquid sections for specifications, comparison and content commerce",
+      "internal_evidence": ["product-specs-parameters.liquid", "variant-product-collections-filtered.liquid", "ride-with-terrawulf-marquee.liquid"],
+      "public_evidence": ["Live specifications tabs", "Live Compare Your Ride", "Live rider content"],
+      "publishable_now": false,
+      "reason": "Requires client authorization and a verified design/code ownership boundary."
+    }
+  ],
+  "evidence_level": 4,
+  "evidence_level_label": "Engineering Evidence",
+  "third_party_attribution": "missing",
+  "independent_evidence": "missing",
+  "public_materials": ["Live storefront URLs"],
+  "internal_materials": [
+    "/Users/liaoshenyuan/Desktop/设计合同存档/Terrawulf-Shopify.pdf",
+    "/Users/liaoshenyuan/Desktop/yiming-shopify-v1/",
+    "/Users/liaoshenyuan/Desktop/yiming-shopify-v1/outputs/terrawulf-launch-change-summary.md",
+    "/Users/liaoshenyuan/Desktop/yiming-shopify-v1/outputs/terrawulf-user-operation-guide.md"
+  ]
+}

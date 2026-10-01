@@ -1,0 +1,54 @@
+72 button (collapsed) 已研究 5秒, Secondary Actions: Expand
+							73 text 已研究
+							74 text 5秒
+							75 image
+						76 container
+							77 text 可以。按“团队能用中文对接、伙伴懂 Shopify 开发、项目面向美国客户”这三个条件，我建议先联系  Shinetech Software  和  SainStore 。两家的 Shopify 官方合作伙伴资料都列出中文沟通能力及美国服务地区；但目录信息不能替代项目面谈，尤其要核实谁会实际负责英文站点的体验与验收。
+							78 image 可信域名
+							79 text shopify +1
+						80 heading 值得先聊的伙伴, Value: 2
+							81 text 值得先聊的伙伴
+						82 container
+							83 table
+								84 row
+									85 cell
+										86 text 伙伴
+									87 cell
+										88 text 更适合的需求
+									89 cell
+										90 text 选择依据
+								91 row
+									92 cell
+										93 container Shinetech Software - Shopify Partners Directory
+											94 link Description: Shinetech Software, Value: shopify.com/partners/directory/partner/shinetech-changchun
+									95 cell
+										96 text 定制功能、应用开发、ERP 等系统集成或迁移
+									97 cell
+										98 text 目录列出英语和简体中文、支持美国；服务包括定制应用、系统集成、主题开发和建站，并展示了迁移及 ERP 集成案例。
+										99 container Shinetech Software - Shopify Partners Directory
+											100 link Description: 可信域名 shopify, Value: shopify.com/partners/directory/partner/shinetech-changchun
+								101 row
+									102 cell
+										103 container SainStore - Shopify Partners Directory
+											104 link Description: SainStore 尚睿科技, Value: shopify.com/partners/directory/partner/sainstore
+									105 cell
+										106 text 建站或改版，同时需要品牌呈现、转化优化和后续运营支持
+									107 cell
+										108 text 目录列出英语、简体及繁体中文、支持美国；提供建站、迁移、主题定制和持续网站管理，案例涉及品牌策略及网站体验。
+										109 container SainStore - Shopify Partners Directory
+											110 link Description: 可信域名 shopify, Value: shopify.com/partners/directory/partner/sainstore
+							111 container
+								112 button 复制表格
+								113 button 下载 CSV
+								114 button 展开表格
+						115 container
+							116 text 怎么选： 如果难点是技术集成，先约 Shinetech；如果希望开发与面向海外消费者的店铺体验一起规划，先约 SainStore。这是根据其公开服务范围做的初筛，不是对交付质量的保证。
+							117 image 可信域名
+							118 text shopify +1
+						119 heading 联系时核实什么, Value: 2
+							120 text 联系时核实什么
+						121 container
+							122 text 给两家发送同一份简短需求：现有店铺或拟上线时间、产品类别、必须实现的功能、需要对接的系统、预算范围。请他们分别提供 面向美国消费者的实际案例 、中文项目负责人的沟通安排，以及英文文案和页面体验由谁负责；再要求报价写清交付范围、测试验收、上线后维护和额外需求的计费方式。两家目录中的所选服务价格均需联系询价。
+							123 image 可信域名
+							124 text shopify +1
+						

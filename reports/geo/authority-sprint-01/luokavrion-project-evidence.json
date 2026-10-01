@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "project": "LUOKAVRION",
+  "website": "https://www.luokavrion.com/",
+  "audit_date": "2026-10-01",
+  "relationship": {
+    "status": "verified_with_live_public_attribution",
+    "basis": [
+      "Live footer displays 'Customized by WhaleLeap Studio' and links to https://whaleleap.studio/.",
+      "Internal theme attribution names Shenzhen Zhice Xianjian Intelligent Technology Co., Ltd. (WhaleLeap Studio) as custom developer.",
+      "Release records verify scoped changes, live-theme pushes and byte-identical remote readbacks."
+    ],
+    "boundary": "Public credit proves customization attribution, not ownership of every store feature, product claim, image or base-theme component."
+  },
+  "project_period": "2026-09 verified; live state checked 2026-10-01",
+  "responsibilities": {
+    "design": "Unknown; no signed design scope or final Figma evidence found.",
+    "shopify_development": "Verified for custom theme work",
+    "theme_liquid": "Verified",
+    "frontend": "Verified",
+    "cro": "Unknown; commerce UX exists but no CRO scope or experiment evidence found.",
+    "tracking": "Not verified; launch records explicitly mark GA4/advertising events not tested.",
+    "seo": "Verified for scoped brand title, meta, structured data and vendor cleanup.",
+    "qa": "Verified for multiple scoped responsive, motion, reduced-motion, keyboard and overflow checks.",
+    "deployment": "Verified through scoped live push and readback records."
+  },
+  "public_facts": [
+    "Homepage presents model kits, featured categories, guides, community content and service assurances.",
+    "Collection currently lists multiple model kits with category navigation, price and preorder information.",
+    "Sample PDP includes purchase action, preorder process timeline and themed product storytelling.",
+    "Live footer publicly credits WhaleLeap Studio.",
+    "Live theme loads mecha-page-entry.js; internal source implements a first-home-visit Three.js assembly animation with reduced-motion and cleanup safeguards.",
+    "Desktop and a 390x844 mobile browser check rendered without document-level horizontal overflow in the sampled PDP."
+  ],
+  "authority_claims": [
+    {
+      "claim": "Custom Shopify theme and responsive interaction engineering",
+      "internal_evidence": ["Liquid sections", "release/readback records", "responsive and interaction QA documents"],
+      "public_evidence": ["Live storefront", "Live WhaleLeap footer credit"],
+      "publishable_now": true,
+      "reason": "Public attribution exists; exact scope should still remain narrow and factual."
+    },
+    {
+      "claim": "Three.js interactive storefront enhancement",
+      "internal_evidence": ["assets/mecha-page-entry.js", "vendor-three-0.160.1.module.min.js", "layout/theme.liquid loader"],
+      "public_evidence": ["Live page loads mecha-page-entry.js"],
+      "publishable_now": true,
+      "reason": "Implementation and live asset are verifiable; describe it as a first-visit decorative assembly effect, not a 3D product configurator."
+    }
+  ],
+  "evidence_level": 5,
+  "evidence_level_label": "Third-party Attribution",
+  "third_party_attribution": "strong",
+  "independent_evidence": "missing",
+  "public_materials": ["Live storefront", "Live WhaleLeap footer attribution"],
+  "internal_materials": [
+    "/Users/liaoshenyuan/Desktop/Luho-live/",
+    "/Users/liaoshenyuan/Desktop/Luho-live/docs/theme-attribution.md",
+    "/Users/liaoshenyuan/Desktop/Luho-live/docs/hero-faq-motion-2026-09-06.md",
+    "/Users/liaoshenyuan/Desktop/Luho-live/docs/tabs-series-motion-2026-09-06.md",
+    "/Users/liaoshenyuan/Desktop/Luho-live/docs/brand-title-vendor-release-2026-09-09.md"
+  ]
+}

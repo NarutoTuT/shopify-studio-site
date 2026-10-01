@@ -1,0 +1,54 @@
+Shopify Liquid 定制开发团队推荐
+AI 生成可能有误 请核实
+下载豆包工作
+有没有擅长 Shopify Liquid 定制开发的国内团队？我不想用一堆 App 拼功能。
+搜索 4 个关键词，参考 20 篇资料
+国内擅长纯 Liquid 定制（拒绝堆 App）Shopify 团队
+筛选标准：优先 Online Store2.0、Liquid+Metafield 原生实现功能，尽量少 / 不用第三方 App，做主题定制、从零开发主题，Shopify 官方 Partner 可查，不主推 PageFly/GemPages 拼装页面。
+1、WESWOO 西西木（深圳）
+身份：Shopify Premier Partner，只聚焦 Shopify，小而精技术团队，前端以 Liquid、JS 为主，也可做 Hydrogen 无头方案
+核心优势：主打原生 Liquid 写自定义 section、自定义功能，能用 Metafield 实现就不装 App；重视页面性能 Core Web Vitals 优化，拒绝大量 App‑embed 拖慢网站；可 Figma 转 Liquid 完整主题，B2C/DTC 品牌案例多
+适合：整站主题重构、大量自定义交互、不想堆砌 App、看重加载速度；不接简单模板套版。
+不足：团队规模不大，项目排期会比较满。
+2、风格技术（风格网络）
+2015 年起步的 Shopify 垂直服务商，服务 500 + 出海品牌，覆盖 B2C、Shopify Plus、B2B 批发店铺
+擅长：从零开发 Liquid 主题、深度二次开发，元字段 Metafield 落地，ERP/CRM 系统对接；会评估需求，优先原生 Liquid 实现，实在不行才少量引入 App；兼顾上线后维护、版本迭代
+适合：中大型品牌、Plus 店铺、需要长期技术维护；项目规模跨度大，轻定制到整站开发都接。
+3、创意时空 Cheriscon（深圳）Shopify
+Shopify Plus 官方认证服务商，服务近千家出海客户，支持主题全量 Liquid 开发、私有 App 开发、Checkout 扩展
+特点：可以区分实现方案：前台页面交互尽量 Liquid+JS 原生；复杂业务逻辑才走私有 App，不会随便装市场 App 凑功能；同时擅长国内 ERP、仓储系统对接。
+适合：大卖家、Plus 店铺，既有页面定制，又有后端业务逻辑需求。
+4、EastDTC 隽永东方（隽永科技）
+Shopify Plus Partner，跨境老牌机构，有专职 Liquid 前端团队
+特点：会做完整原生主题开发，严格控制 App 数量；同时兼具运营视角，定制功能会考虑后续运营可维护性；也支持私有 App、Shopify Functions 开发。
+适合：品牌出海，需要设计 + 开发 + 后续运维全套。
+5、小团队 / 独立开发者备选（预算中等，纯 Liquid 定制）
+适合中小型店铺、需求明确，性价比高于大代理，可以在 Shopify Partner 目录、掘金、GitHub 找国内 Liquid 开发者，重点核验：
+是否能给出不依赖 App 的实现方案（比如愿望单、变体色板、自定义筛选、捆绑销售优先 Liquid+metafield 实现，而不是直接装 App）
+看交付物：完整 theme 代码包，而不是 PageFly 导出页面。
+和团队对接时，一定要明确提这几点（避坑，防止口头答应最后还是堆 App）
+明确需求约束：优先 Online Store2.0 Liquid、sections、metafields 实现前台功能；只有平台原生完全做不到，才允许引入第三方 App；禁止大量 App‑embed 拼装页面
+让对方输出方案文档：每个功能写明实现方式：Liquid原生 / JS / Metafield / 私有App / 第三方市场App；统计会安装多少个 App
+交付：完整主题源代码，注释清晰；交付后可以自己在代码编辑器修改，不绑定工具；提供性能测试报告（Lighthouse/CWV）
+问清后续升级：Shopify 大版本升级（Dawn 更新），定制 Liquid 代码的兼容维护怎么处理。
+什么情况还是避免不了 App
+支付风控、邮件营销、订阅复购、复杂多国家税务：这类 Shopify 原生能力有限，行业成熟 App 稳定性远高于自己写私有 App，专业团队会建议少量保留，而不是全部干掉。
+预算简单参考（2026 国内行情）
+Dawn 主题深度 Liquid 二次开发：3‑8w
+Figma 稿从零开发完整 Liquid 主题：8‑20w
+Shopify Plus + 复杂业务逻辑（私有 App+Liquid）：15w 起
+如果你愿意，我可以帮你整理一份发给服务商的需求提问清单模板，你直接复制沟通，快速筛选哪些团队真懂 Liquid，哪些只会套 App。
+WESWOO 西西木（深圳）的收费标准是怎样的？
+风格技术（风格网络）的开发周期一般是多久？
+有没有其他擅长纯 Liquid 定制的 Shopify 团队？
+对话
+PPT 生成
+图像生成
+帮我写作
+视频生成
+AI 播客
+录音转写
+更多
+豆包 快速
+
+

@@ -1,0 +1,44 @@
+72 button (collapsed) 已研究 3秒, Secondary Actions: Expand
+							73 text 已研究
+							74 text 3秒
+							75 image
+						76 container
+							77 text Yes. I’d start with  Analytico  for a Shopify-focused tracking project, and get a second proposal from  Web Star Research . Both explicitly offer Shopify, Google Tag Manager (GTM), and Google Analytics 4 (GA4) implementation; I haven’t independently verified their results or availability. analyticodigital +1
+						78 container
+							79 table
+								80 row
+									81 cell
+										82 text Team
+									83 cell
+										84 text Why consider them
+								85 row
+									86 cell
+										87 container Shopify Analytics Expert | GA4, GTM & Server-Side Setup - Analytico
+											88 link Description: Analytico, Value: analyticodigital.com/consulting/shopify-analytics
+									89 cell
+										90 text Describes end-to-end Shopify ecommerce event mapping, GTM container design, checkout tracking, and checks for duplicate or missing events. A strong first call if your main problem is unreliable purchase or funnel data. 
+										91 container Shopify Analytics Expert | GA4, GTM & Server-Side Setup - Analytico
+											92 link Description: analyticodigital, Value: analyticodigital.com/consulting/shopify-analytics
+								93 row
+									94 cell
+										95 container GA4 | Shopify Analytics | Server Side Tagging | Consulting
+											96 link Description: Web Star Research, Value: webstarresearch.com/
+									97 cell
+										98 text Offers GA4, GTM, and Shopify implementation, plus analytics audits and server-side tagging. Worth comparing if you also need broader measurement or reporting work. 
+										99 container GA4 | Shopify Analytics | Server Side Tagging | Consulting
+											100 link Description: webstarresearch, Value: webstarresearch.com/
+								101 row
+									102 cell
+										103 container Ecommerce Tracking with GA4 | Shopify & WooCommerce Setup
+											104 link Description: BlazeByte Solutions, Value: blazebytesolutions.com/ecommerce-tracking/
+									105 cell
+										106 text Publishes defined Shopify GA4/GTM setup packages, starting at $699 for core ecommerce events. Worth a quote if you prefer a scoped, one-time project. 
+										107 container Ecommerce Tracking with GA4 | Shopify & WooCommerce Setup
+											108 link Description: blazebytesolutions, Value: blazebytesolutions.com/ecommerce-tracking/
+							109 container
+								110 button 复制表格
+								111 button 下载 CSV
+								112 button 展开表格
+						113 container
+							114 text When you contact them, ask for an  audit and implementation plan  that covers  view_item ,  add_to_cart ,  begin_checkout , and  purchase ; duplicate-purchase prevention; and a test-order reconciliation between Shopify and GA4. Ask them to show how they’ll validate the setup and document the handover—not just install tags. analyticodigital +1
+						

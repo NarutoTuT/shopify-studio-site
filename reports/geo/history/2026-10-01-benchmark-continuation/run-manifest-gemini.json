@@ -1,0 +1,49 @@
+{
+  "id": "2026-10-01-continuation-gemini",
+  "benchmark_version": "wl-geo-v1",
+  "platform": "Gemini",
+  "status": "partial_blocked_pending_human_review",
+  "model": null,
+  "reasoning_effort": null,
+  "product_surface": "Gemini consumer web in Chrome",
+  "search_mode": null,
+  "account_tier": null,
+  "region": null,
+  "ui_language": "zh-CN",
+  "memory_state": null,
+  "personalization_state": null,
+  "started_at": null,
+  "finished_at": "2026-10-01T15:17:16.590+08:00",
+  "query_ids": [],
+  "attempts": [
+    {
+      "query_id": null,
+      "attempt": 1,
+      "status": "access_failed",
+      "notes": "Official app URL ERR_TIMED_OUT"
+    },
+    {
+      "query_id": null,
+      "attempt": 2,
+      "status": "access_failed",
+      "notes": "Fresh-tab retry ERR_TIMED_OUT",
+      "evidence_file": "gemini-access-failure.png"
+    },
+    {
+      "query_id": null,
+      "attempt": 3,
+      "status": "access_failed",
+      "notes": "User-authorized continuation: new official app tab again displayed ERR_TIMED_OUT; no query submitted."
+    }
+  ],
+  "settings_notes": "Exact frozen query only. No brand, source URL or role hints. First complete available answer retained, except explicitly logged technical failures. No regeneration to improve mentions. Initial ChatGPT segment showed Medium; resumed segment model/effort selector not inspected. Do not assume a model identity or IP region. AX captures exclude account and sidebar content.",
+  "blocker": "Repeated official app access timeout; user notified",
+  "human_review_status": "pending",
+  "coverage": {
+    "completed": 0,
+    "expected": 15,
+    "remaining": 15
+  },
+  "resumed_capture_provenance_file": "resumed-capture-provenance.json",
+  "frozen_query_sha256": "9db5c48958d0b1d8b83b38af647d009c8b40fc2514f7dd32e615003a6c046490"
+}

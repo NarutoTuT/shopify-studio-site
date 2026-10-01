@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "baseline_date": "2026-10-01",
+  "status": "pending_human_confirmation",
+  "scope": "Internal public-evidence diagnostic, not a Google/ChatGPT score or probability of recommendation.",
+  "rubric": {
+    "0": "限定审查无已核验支持。",
+    "1": "仅泛化声明。",
+    "2": "有具体声明或零散材料，关键关联缺失。",
+    "3": "有连贯自有证据，可核查但覆盖/归属仍有限。",
+    "4": "清楚、详细且针对该维度可用，仍存在明确限制。",
+    "5": "该维度有完整、可复核、持续维护且适当独立支持的证据。"
+  },
+  "dimensions": [
+    {
+      "id": "entity_clarity",
+      "label": "Entity Clarity",
+      "score": 4,
+      "max": 5,
+      "evidence_ids": [
+        "EV01"
+      ],
+      "rationale": "品牌域名、定位和服务一致，缺独立实体/人物关联验证。",
+      "next_threshold": "跨站权威档案与身份链完整才考虑 5。",
+      "previous_score": null,
+      "delta": null,
+      "change_reason": "Initial baseline; no previous comparable score."
+    },
+    {
+      "id": "service_clarity",
+      "label": "Service Clarity",
+      "score": 4,
+      "max": 5,
+      "evidence_ids": [
+        "EV02",
+        "EV03",
+        "EV05",
+        "EV06",
+        "EV12"
+      ],
+      "rationale": "服务范围、交付和排除项清楚。",
+      "next_threshold": "服务声明仍需更直接连接适用案例；广泛业务不自动满分。",
+      "previous_score": null,
+      "delta": null,
+      "change_reason": "Initial baseline; no previous comparable score."
+    },
+    {
+      "id": "experience_evidence",
+      "label": "Experience Evidence",
+      "score": 3,
+      "max": 5,
+      "evidence_ids": [
+        "EV07",
+        "EV09",
+        "EV10"
+      ],
+      "rationale": "有具名案例和公开截图，部分作品仍匿名。",
+      "next_threshold": "更完整的职责、过程和可复核产物才提升。",
+      "previous_score": null,
+      "delta": null,
+      "change_reason": "Initial baseline; no previous comparable score."
+    },
+    {
+      "id": "case_study_strength",
+      "label": "Case Study Strength",
+      "score": 3,
+      "max": 5,
+      "evidence_ids": [
+        "EV07",
+        "EV10"
+      ],
+      "rationale": "SilkGear 结构完整且诚实限定结果，证据集中在单一长案例。",
+      "next_threshold": "不因缺营收数字扣成零；客户确认或更完整可核验过程可增强。",
+      "previous_score": null,
+      "delta": null,
+      "change_reason": "Initial baseline; no previous comparable score."
+    },
+    {
+      "id": "technical_content",
+      "label": "Technical Content",
+      "score": 4,
+      "max": 5,
+      "evidence_ids": [
+        "EV06"
+      ],
+      "rationale": "Guide 包含具体事件契约、参数、去重、QA、来源与边界。",
+      "next_threshold": "内容存在不等于实现已正确或所有平台更新已复核，未做全面技术事实审计。",
+      "previous_score": null,
+      "delta": null,
+      "change_reason": "Initial baseline; no previous comparable score."
+    },
+    {
+      "id": "original_information_gain",
+      "label": "Original Information Gain",
+      "score": 2,
+      "max": 5,
+      "evidence_ids": [
+        "EV06"
+      ],
+      "rationale": "有实施决策和验收组织方式，超出纯服务列表。",
+      "next_threshold": "尚无可复现原创实验、公开工具或独立验证的数据集。",
+      "previous_score": null,
+      "delta": null,
+      "change_reason": "Initial baseline; no previous comparable score."
+    },
+    {
+      "id": "third_party_mentions",
+      "label": "Third-party Mentions",
+      "score": 0,
+      "max": 5,
+      "evidence_ids": [
+        "EV13"
+      ],
+      "rationale": "限定检索内未核验独立提及；同名实体不计。",
+      "next_threshold": "0 表示当前已核验证据数不足，不证明全网没有。",
+      "previous_score": null,
+      "delta": null,
+      "change_reason": "Initial baseline; no previous comparable score."
+    },
+    {
+      "id": "vertical_authority",
+      "label": "Vertical Authority",
+      "score": 2,
+      "max": 5,
+      "evidence_ids": [
+        "EV07",
+        "EV09",
+        "EV10"
+      ],
+      "rationale": "科技零售具名案例较强，eBike/户外证据仍弱。",
+      "next_threshold": "单一案例与匿名素材不足以推出整个高客单垂直权威。",
+      "previous_score": null,
+      "delta": null,
+      "change_reason": "Initial baseline; no previous comparable score."
+    },
+    {
+      "id": "author_reviewer_identity",
+      "label": "Author / Reviewer Identity",
+      "score": 2,
+      "max": 5,
+      "evidence_ids": [
+        "EV11"
+      ],
+      "rationale": "Guide 有 Naruto 审阅署名及日期，About 有创始人肖像。",
+      "next_threshold": "二者身份关联和独立专业履历未建立。",
+      "previous_score": null,
+      "delta": null,
+      "change_reason": "Initial baseline; no previous comparable score."
+    },
+    {
+      "id": "citation_readiness",
+      "label": "Citation Readiness",
+      "score": 3,
+      "max": 5,
+      "evidence_ids": [
+        "EV01",
+        "EV06",
+        "EV07",
+        "EV13"
+      ],
+      "rationale": "服务和方法可单独引用，案例有具体边界。",
+      "next_threshold": "经验、归属和独立声誉证据较少；可引用不等于已被任何 AI 引用。",
+      "previous_score": null,
+      "delta": null,
+      "change_reason": "Initial baseline; no previous comparable score."
+    }
+  ],
+  "total": 27,
+  "max": 50,
+  "previous_total": null,
+  "delta": null,
+  "uncertainty": "Editorial judgement based on checked public materials, not exhaustive research or a measured visibility baseline.",
+  "revision_rule": "No automatic increment for more pages or AI mentions. Every change requires new public evidence, date, prior score and a dimension-specific explanation."
+}

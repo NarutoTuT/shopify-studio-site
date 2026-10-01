@@ -1,0 +1,71 @@
+72 button (collapsed) 已研究 4秒, Secondary Actions: Expand
+							73 text 已研究
+							74 text 4秒
+							75 image
+						76 container
+							77 text 有。你这个需求最好找做  Shopify Theme 开发  的团队，而不是只做整站搭建的服务商：交付重点是运营能在主题编辑器里改文案、图片、按钮，并按需增删和排序内容块。Shopify 的 Section schema 正是用来配置这些编辑项的。
+							78 image 可信域名
+							79 text shopify +1
+						80 heading 可以先联系的团队, Value: 2
+							81 text 可以先联系的团队
+						82 container
+							83 table
+								84 row
+									85 cell
+										86 text 团队
+									87 cell
+										88 text 为什么值得询价
+									89 cell
+										90 text 联系入口
+								91 row
+									92 cell
+										93 text Webvista Studio
+									94 cell
+										95 text Shopify 合作伙伴目录将其列为中国的主题开发团队；其介绍提到自有主题提供 40 多个可配置 Section。适合先问现有主题上的模块定制。
+										96 container Webvista studio - Shopify Partners Directory
+											97 link Description: 可信域名 shopify, Value: shopify.com/partners/directory/partner/gckj
+									98 cell
+										99 container Webvista studio - Shopify Partners Directory
+											100 link Description: 合作伙伴页面, Value: shopify.com/partners/directory/partner/gckj
+								101 row
+									102 cell
+										103 text MaybeDesign
+									104 cell
+										105 text 合作伙伴目录列有主题定制服务，适合同时需要页面设计与开发的项目；但要进一步确认是否承接单个 Section。
+										106 container MaybeDesign
+											107 link Description: 可信域名 shopify, Value: shopify.com/partners/directory/partner/haiyangdesign
+									108 cell
+										109 container MaybeDesign
+											110 link Description: 合作伙伴页面, Value: shopify.com/partners/directory/partner/haiyangdesign
+								111 row
+									112 cell
+										113 text Mgroup
+									114 cell
+										115 text 服务页明确提供 Online Store 2.0 自定义 Section、编辑器配置、交接文档和运营培训；页面标示单个 Section 从 600 美元起，可作为询价参照，而非保证报价。
+										116 container Custom Shopify Sections | 550+ Stores Built | Mgroup
+											117 link Description: 可信域名 mgroupweb, Value: mgroupweb.com/services/custom-shopify-sections/
+									118 cell
+										119 container Custom Shopify Sections | 550+ Stores Built | Mgroup
+											120 link Description: 服务页面, Value: mgroupweb.com/services/custom-shopify-sections/
+							121 container
+								122 button 复制表格
+								123 button 下载 CSV
+								124 button 展开表格
+						125 container
+							126 text 这不是按交付质量排的名次；我能核实的是他们公开列出的服务，不能仅凭页面保证实际项目表现。也可以从 
+							127 container 聘请Shopify 专家、开发人员、设计师和自由职业者
+								128 link Description: Shopify 合作伙伴目录, Value: shopify.com/zh/partners/directory
+							129 text  多找两家同时询价。
+							130 container 聘请Shopify 专家、开发人员、设计师和自由职业者
+								131 link Description: 可信域名 shopify, Value: shopify.com/zh/partners/directory
+						132 heading 发需求时写清楚, Value: 2
+							133 text 发需求时写清楚
+						134 text 你可以直接发这段：
+						135 container
+							136 text 我们使用 Shopify Online Store 2.0，想在现有主题开发 [模块名称]。运营需在主题编辑器中修改文案、图片、链接和按钮；[卡片/FAQ 等]需能自行增删、排序。请报价时说明：可用的页面模板、手机和桌面端适配、是否需要 metafields、草稿主题测试、源代码交付，以及运营操作说明。请提供一个你们做过的类似模块编辑器截图或演示。
+							137 button 复制
+						138 container
+							139 text 验收时，让运营人员 不碰代码，亲自完成一次内容修改和一次内容块增删 。还要确认模块带有可添加到目标页面的 preset；Shopify 文档指出，缺少相应 preset 的 Section 不能直接通过主题编辑器添加到 JSON 模板。
+							140 container Integrate sections and blocks with the theme editor
+								141 link Description: 可信域名 shopify, Value: shopify.dev/docs/storefronts/themes/best-practices/editor/integrate-sections-and-blocks
+						

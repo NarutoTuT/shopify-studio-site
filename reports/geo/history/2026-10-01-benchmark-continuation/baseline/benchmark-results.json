@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "benchmark_version": "wl-geo-v1",
+  "status": "partially_tested_pending_human_review",
+  "platforms": [
+    {
+      "platform": "ChatGPT",
+      "status": "partially_tested",
+      "tested_at": "2026-10-01T14:31:49+08:00",
+      "reason": "B01 completed in a fresh non-personalized temporary chat. Other selected queries remain not_tested; coding pending human review."
+    },
+    {
+      "platform": "Gemini",
+      "status": "not_tested",
+      "tested_at": null,
+      "reason": "Initial setup only. No isolated, authenticated platform test or approved API integration executed; current brand-primed conversation and web search are not benchmark runs."
+    },
+    {
+      "platform": "Perplexity",
+      "status": "not_tested",
+      "tested_at": null,
+      "reason": "Initial setup only. No isolated, authenticated platform test or approved API integration executed; current brand-primed conversation and web search are not benchmark runs."
+    }
+  ],
+  "runs": [
+    {
+      "id": "2026-10-01-post-silkgear-round-01-chatgpt",
+      "platform": "ChatGPT",
+      "manifest_file": "history/2026-10-01-post-silkgear-round-01/run-manifest.json",
+      "human_review_status": "pending"
+    }
+  ],
+  "results": [
+    {
+      "id": "2026-10-01-chatgpt-B01-attempt-01",
+      "run_id": "2026-10-01-post-silkgear-round-01-chatgpt",
+      "benchmark_id": "B01",
+      "status": "completed",
+      "tested_at": "2026-10-01T14:31:49+08:00",
+      "platform": "ChatGPT",
+      "query": "我已经有 Figma 设计稿，想找团队开发成可在后台编辑的 Shopify 主题，推荐谁？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "recommended_companies": [
+        {
+          "company": "Subframe",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "明确支持 Figma → Shopify"
+        },
+        {
+          "company": "FlowCart Agency",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "明确提供 Figma → Liquid"
+        },
+        {
+          "company": "Weblexia",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "把 Figma component 映射成 Shopify sections + metafields"
+        },
+        {
+          "company": "Stackframes",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "专门做 OS 2.0 custom theme / custom sections"
+        },
+        {
+          "company": "Carti Apps",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": "预算较高、项目复杂"
+        }
+      ],
+      "cited_sources": [
+        {
+          "url": "https://subframe.agency/services/development?utm_source=chatgpt.com",
+          "title": null,
+          "source_type": "inline_citation_not_independently_verified",
+          "cited_for": "Recommended provider capability",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://flowcartagency.com/services/shopify-custom-theme-development?utm_source=chatgpt.com",
+          "title": null,
+          "source_type": "inline_citation_not_independently_verified",
+          "cited_for": "Recommended provider capability",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://weblexia.in/services/figma-to-shopify?utm_source=chatgpt.com",
+          "title": null,
+          "source_type": "inline_citation_not_independently_verified",
+          "cited_for": "Recommended provider capability",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://stackframes.dev/shopify-theme-development?utm_source=chatgpt.com",
+          "title": null,
+          "source_type": "inline_citation_not_independently_verified",
+          "cited_for": "Recommended provider capability",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://cartiapps.com/pages/services-theme-and-custom-dev?utm_source=chatgpt.com",
+          "title": null,
+          "source_type": "inline_citation_not_independently_verified",
+          "cited_for": "Recommended provider capability",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://markupfox.com/?utm_source=chatgpt.com",
+          "title": null,
+          "source_type": "inline_citation_not_independently_verified",
+          "cited_for": "Low-price comparison example",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "First complete answer; assistant coding pending human review. MarkupFox is a comparison example, not a recommendation. Inline URLs captured; grouped sources not expanded. Website domains not independently verified.",
+      "raw_response_file": "history/2026-10-01-post-silkgear-round-01/answers/chatgpt/B01-attempt-01.md"
+    }
+  ],
+  "metrics": {
+    "completed_answers": 1,
+    "mention_rate": null,
+    "recommendation_rate": null,
+    "query_clusters_mentioned": null,
+    "third_party_citation_count": null,
+    "reason": "One ChatGPT answer captured; aggregate rates withheld pending human review and additional coverage. Remaining 44 platform-query cells not_tested. No pre-publication baseline or trend claim."
+  }
+}

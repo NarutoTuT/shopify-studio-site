@@ -1,0 +1,74 @@
+72 button (collapsed) 已研究 4秒, Secondary Actions: Expand
+							73 text 已研究
+							74 text 4秒
+							75 image
+						76 container
+							77 text 你已经有 Figma 设计稿，建议找 专做 Figma → Shopify 原生主题 的团队，而不是只会用页面搭建器还原外观的团队。就目前查到的资料，我会先联系  SPLIT Development、Devjour Technologies 和 MarkupFox  各报一次价；如果希望中文沟通，也可以把  WESWOO  放进候选名单。以下是候选名单，不是对交付质量的独立背书。
+							78 image 可信域名
+							79 text shopify +3
+						80 heading 候选团队, Value: 2
+							81 text 候选团队
+						82 container
+							83 table
+								84 row
+									85 cell
+										86 text 团队
+									87 cell
+										88 text 为什么值得询价
+									89 cell
+										90 text 询价时重点核实
+								91 row
+									92 cell
+										93 container SPLIT Development - Shopify Partners Directory
+											94 link Description: SPLIT Development, Value: shopify.com/partners/directory/partner/split-development
+									95 cell
+										96 text Shopify 合作伙伴目录列有将 Figma 设计转成定制 Shopify 站点的项目案例，适合先看其成品是否接近你的设计风格。
+										97 container SPLIT Development - Shopify Partners Directory
+											98 link Description: 可信域名 shopify, Value: shopify.com/partners/directory/partner/split-development
+									99 cell
+										100 text 请他们演示案例的主题编辑器，而不只看前台页面。
+								101 row
+									102 cell
+										103 container Devjour Technologies - Shopify Partners Directory
+											104 link Description: Devjour Technologies, Value: shopify.com/partners/directory/partner/dev-jour-tec
+									105 cell
+										106 text 合作伙伴目录明确列出“从 Figma 开发定制主题”，也承接商品配置器、捆绑销售等功能。
+										107 container Devjour Technologies - Shopify Partners Directory
+											108 link Description: 可信域名 shopify, Value: shopify.com/partners/directory/partner/dev-jour-tec
+									109 cell
+										110 text 若设计含复杂交互，分别报价主题开发与额外功能。
+								111 row
+									112 cell
+										113 container Design to Shopify: Custom OS 2.0 Themes | MarkupFox
+											114 link Description: MarkupFox, Value: markupfox.com/services/design-to-shopify
+									115 cell
+										116 text 其服务页明确写明用 Liquid 开发 Online Store 2.0 主题，并提供可编辑的 sections、blocks 和 metafields。
+										117 container Design to Shopify: Custom OS 2.0 Themes | MarkupFox
+											118 link Description: markupfox, Value: markupfox.com/services/design-to-shopify
+									119 cell
+										120 text 要求按你的 Figma 页面逐项列出哪些内容可编辑。
+								121 row
+									122 cell
+										123 container WESWOO – Shopify Plus定制开发专家| Shopify开发定制& 电 ...
+											124 link Description: WESWOO, Value: case.weswoo.com/
+									125 cell
+										126 text 中文服务页称可按 UI 设计稿开发，并让 Liquid 模块可配置，适合优先考虑中文沟通时询价。
+										127 container WESWOO – Shopify Plus定制开发专家| Shopify开发定制& 电 ...
+											128 link Description: case.weswoo, Value: case.weswoo.com/
+									129 cell
+										130 text 索取可操作的后台演示及合同中的维护条款。
+							131 container
+								132 button 复制表格
+								133 button 下载 CSV
+								134 button 展开表格
+						135 heading 报价时写清楚, Value: 2
+							136 text 报价时写清楚
+						137 container
+							138 text “后台可编辑”不能只写成一句承诺。请团队在报价中列出：哪些页面使用可增删、排序的  sections 和 blocks ；文字、图片、颜色等能否在主题编辑器修改；每个商品不同的内容如何用 metafields 管理；以及手机端适配、应用兼容、测试和交付文档是否包含在内。Shopify 的主题机制支持这些编辑方式，但具体能编辑到什么程度，取决于开发团队如何实现。
+							139 image 可信域名
+							140 text shopify +1
+						141 container
+							142 text 最有效的筛选办法是让每家用你的 Figma  选一页做编辑能力清单 ，并演示一个已交付项目的后台：现场改一张图、一段文字和一个商品专属字段。这样比仅看“像不像设计稿”更能判断日后你能否自己运营。Shopify 官方合作伙伴目录也提供按服务、地区和价格筛选，以及查看评价与作品的入口，可用来补充候选名单。
+							143 container Hire Shopify Experts, Developers, Designers & Freelancers
+								144 link Description: 可信域名 shopify, Value: shopify.com/partners/directory
+						

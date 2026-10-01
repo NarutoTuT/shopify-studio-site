@@ -1,0 +1,64 @@
+Shopify 2.0自定义Section开发团队推荐
+AI 生成可能有误 请核实
+下载豆包工作
+想开发 Shopify 2.0 自定义 Section，让运营能自己改内容，有团队推荐吗？
+搜索 4 个关键词，参考 22 篇资料
+Shopify 2.0 自定义 Section 开发团队 / 服务商选型
+你的需求核心：Online Store 2.0 JSON 主题，自定义 Section+schema 配置，运营在主题编辑器可视化改内容，不用碰代码，兼容 metafield/metaobject，移动端适配、页面性能，代码可维护Shopify De...。分国内中文团队、海外专业 Shopify 代理、自由开发者渠道，以及筛选标准、项目注意点。
+说明：我不做直接商业导流，只给可信选型池，你自行对接比价。
+一、国内中文团队（沟通友好，时区一致，适合国内跨境卖家）
+优先看 Shopify 官方 Partner 目录认证团队Shopify
+Loomic（苏州）
+Shopify 认证 Select Partner，主打主题二次开发、自定义 Section、MetaObject 落地；很多 DTC 卖家做首页模块、产品页自定义区块；擅长基于 Dawn 做定制，输出完整 schema，运营后台可视化编辑；中小项目友好，可做单点 section 开发，不用全主题重构Shopify。
+适合：只开发若干个自定义 section，不是整套重做主题。
+西西木跨境开发
+国内深耕 Shopify 主题 Liquid/JSON2.0 开发，大量自定义 Section 案例；可做复杂块（轮播、多卡片、FAQ、自定义产品模块），严格写 schema，运营直接拖拽修改图片、文字、链接；可单独接 section 小需求，不强制整套开发。
+氦氪跨境（深圳）
+Shopify 合作伙伴，承接主题定制、section、metaobject；适合需求多、后期有迭代维护需求的商家；可以输出操作文档教运营使用新模块。
+氦金科技、易点天下 Cyberklick
+偏向中大卖家、Shopify Plus 客户，适合 Section + 整套主题重构、系统集成；小数量 section 开发报价偏高Shopify。
+国内独立开发者渠道：Upwork、掘金、知乎跨境圈，很多专职 Shopify Liquid 开发者，适合预算有限、2‑3 个简单 Section 场景。
+二、海外专业 Shopify Agency（技术极强，适合复杂交互、Plus 商家，英文沟通，时差）
+Atwix：Shopify Plus 金牌代理，Online Store2.0 标杆团队，大量复杂自定义 Section+MetaObject 案例，质量高，价格贵，适合企业级项目。
+Eastside Co：铂金 Partner，擅长 JSON 主题、section、app‑block；海外 DTC 大量案例，工时报价。
+RaftLabs：擅长主题自定义 + Shopify Functions，适合 Section 带复杂交互逻辑（筛选、动态读取元字段）。
+海外接单平台：Shopify Experts Marketplace（官方专家市场），直接筛选：Online Store 2.0、Custom Sections、Liquid，看过往店铺案例，优先选有真实店铺链接的，不要只看截图。
+三、怎么筛选团队（非常关键，避开坑）
+你的目标是运营能可视化改内容，所以重点核验下面几条，签约前确认：
+✅必须提供真实线上店铺案例，点开店铺→主题编辑器，给你演示他们写的自定义 section，看后台是否可以直接改文字图片，不要只看效果图截图。
+✅确认使用标准 {% schema %}，不使用 Custom Liquid 硬编码内容；运营不需要改代码，全部配置放在主题编辑器设置内；支持 metafield/metaobject 动态绑定内容Shopify De...。
+✅代码归属：主题代码全部归你，开发完成把完整主题 zip 包交付，后续其他开发者可以维护，拒绝闭源锁定。
+✅性能约束：自定义 Section 不能严重拉低 LCP 分数；JS/CSS 按需加载，不写冗余代码。
+✅明确交付物：section 源码、简单运营操作说明文档；包含移动端适配；1‑2 轮 bug 修改；区分「需求变更」和「bug 修复」。
+❌避坑：拒绝用 PageFly、GemPages 这类页面构建 App 代替原生 Section。
+PageFly 是第三方 APP，加载慢、不好复用；原生 Section 是写进主题内部，全站可复用，性能最好，才是你现在要的。
+四、报价参考（2026 市场行情，原生 Section，不含 UI 设计）
+简单 Section（图文卡片、FAQ、横幅）：国内团队 1500‑3000 元 / 个
+中等复杂度（多块可重复、绑定元字段 Metaobject、多列布局）：3000‑6000 元 / 个
+高复杂度（带交互筛选、动态读取商品、AJAX 逻辑）：6000‑12000 元 / 个
+如果一次性开发多个 Section，打包会有折扣；海外 agency 一般80‑150 美元 / 小时，成本更高。
+五、给外包的需求文档模板（直接复制发给服务商）
+减少来回沟通，提高报价准确度
+店铺：Shopify，主题名称（Dawn？还是其他 JSON2.0 主题），是否 Shopify Plus
+需要开发 N 个自定义 Section，每个的功能描述；哪些页面可用（首页 / 产品页 / 集合页）
+是否要绑定 Metafield / MetaObject 动态内容
+运营要求：所有图片、文字、链接、按钮颜色，全部在主题编辑器可视化修改，不修改代码
+输出：Liquid section 文件、schema 配置、主题 zip 包，简单操作文档；移动端完全适配；保证页面速度；代码完全交付我方。
+交付周期、bug 修复周期，需求变更怎么计费。
+补充：如果你想低成本试水
+可以去 Github、Shopify dev 社区找开源 Section，但是大部分只适合参考，要二次改 schema 适配你的业务；不建议直接上生产。
+如果你愿意，我可以帮你写一份完整可直接发给服务商的Section 开发 BRD 需求文档，方便你批量询价对比。
+生成Shopify 2.0自定义Section开发方案PPT
+Loomic（苏州）的收费标准是怎样的？
+西西木跨境开发的开发周期一般是多久？
+对话
+PPT 生成
+图像生成
+帮我写作
+视频生成
+AI 播客
+录音转写
+更多
+豆包 快速
+
+

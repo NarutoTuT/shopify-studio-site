@@ -1,0 +1,52 @@
+73 button (collapsed) 已研究 5秒, Secondary Actions: Expand
+							74 text 已研究
+							75 text 5秒
+							76 image
+						77 container
+							78 text I’d shortlist  Craftberry  first for a new build or major redesign. Its work for smart-home brand Shelly directly matches your brief: multiple product types, detailed specifications, advanced filtering, and a redesigned navigation structure. I’d also speak with  Netalico  if you have an existing store to improve, especially if warranties and high-ticket purchase confidence are priorities. These are recommendations to interview, not a verdict on fit or price.
+							79 image 可信域名
+							80 text craftberry +1
+						81 heading Teams to interview, Value: 2, ID: teams-to-interview
+							82 text Teams to interview
+						83 container
+							84 table
+								85 row
+									86 cell
+										87 text Team
+									88 cell
+										89 text Why it fits
+									90 cell
+										91 text Best starting conversation
+								92 row
+									93 cell
+										94 container Shopify Agency for Tech & Electronics Brands
+											95 link Description: Craftberry, Value: craftberry.co/services/shopify-agency-for-tech-brands
+									96 cell
+										97 text Its Shelly Shopify Plus project addressed product pages, specs, filtering, and navigation across a broad smart-home range. It also describes work on configurations and spec-based filtering for tech brands. 
+										98 container
+											99 image 可信域名
+											100 text craftberry +1
+									101 cell
+										102 text Ask for a proposed category structure and a sample spec-driven product page.
+								103 row
+									104 cell
+										105 container Shopify Electronics Agency - Netalico
+											106 link Description: Netalico, Value: netalico.com/pages/shopify-electronics-agency
+									107 cell
+										108 text It focuses on electronics stores with detailed specs, high-ticket conversions, warranties, and support needs; it cites work with audio retailer Audio Advice. 
+										109 container Shopify Electronics Agency - Netalico
+											110 link Description: netalico, Value: netalico.com/pages/shopify-electronics-agency
+									111 cell
+										112 text Ask how it would improve product comparison, warranty information, and the path from research to purchase.
+							113 container
+								114 button 复制表格
+								115 button 下载 CSV
+								116 button 展开表格
+						117 heading What to request, Value: 2, ID: what-to-request
+							118 text What to request
+						119 text Give both teams the same small assignment: map two unlike categories—for example, speakers and smart-home devices—into a navigation plan, a filter scheme, and a product-page wireframe. Ask them to show which specifications are shared, which are category-specific, how shoppers compare products, and how your staff will maintain that data as the catalog grows.
+						120 container
+							121 text Request relevant live work, the people who would actually work on your account, an itemized proposal, and a post-launch support plan. Shopify’s Partner Directory can help you check work samples and reviews and filter by industry, services, location, and price range; don’t choose solely by partner tier.
+							122 image 可信域名
+							123 text help.shopify +1
+						

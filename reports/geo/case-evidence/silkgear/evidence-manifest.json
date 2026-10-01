@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "brand": "SilkGear",
+  "reviewed_on": "2026-10-01",
+  "timezone": "Asia/Shanghai",
+  "status": "published_verified_in_production_browser",
+  "publication_approved": true,
+  "publication_commit": "d506d18",
+  "publication_url": "https://whaleleap.studio/case-studies/silkgear",
+  "production_verified_on": "2026-10-01",
+  "deployment_api_status": "unavailable_403",
+  "owner_confirmed_role": ["design", "Shopify development"],
+  "selected_design_images_public_use_authorized_by_owner": true,
+  "independent_attribution_verified": false,
+  "public_footer_credit": {"label": "SITE BY ZIWEI", "url": "https://byziwei.com/", "relationship_to_whaleleap": "employee_designer", "relationship_source": "project_owner_confirmation", "attribution_conflict_resolved": true},
+  "figma_file_key": "eLcoWxLeH3MVqMwGmfOOqd",
+  "design_nodes": [
+    {"name": "Frame 194", "node_id": "366:2406", "scope": "desktop PDP", "width": 1440, "height": 5019},
+    {"name": "Frame 219", "node_id": "604:3938", "scope": "mobile PDP", "width": 390, "height": 4649},
+    {"name": "Group 52", "node_id": "366:2816", "scope": "Collection group including labels", "width": 2944, "height": 5514},
+    {"name": "Frame 190", "node_id": "366:1649", "scope": "Collection page only, inside Group 52", "width": 1440, "height": 5050}
+  ],
+  "live_sources": {
+    "pdp": "https://www.silkgear.com.au/products/hypershell-x-series-exoskeleton",
+    "collection": "https://www.silkgear.com.au/collections/robotics-mobility"
+  },
+  "assets": [
+    {"path": "evidence/figma-pdp-mobile-full.png", "type": "figma_native_export", "node_id": "604:3938", "width": 390, "height": 4649, "limitation": "Native design export; Complete the Setup contains blank product placeholders in the design. No comments included."},
+    {"path": "evidence/figma-collection-desktop-full.png", "type": "figma_native_export", "node_id": "366:1649", "width": 1440, "height": 5050, "limitation": "Design version, not current storefront; group labels and comments excluded by exporting the page frame directly."},
+    {"path": "evidence/figma-pdp-desktop-full.png", "type": "figma_native_export", "width": 1440, "height": 5019, "limitation": "Retrieved from local Downloads after native export; exact download creation time not established"},
+    {"path": "evidence/live-pdp-desktop-recapture.jpg", "type": "live_fullpage", "limitation": "Product gallery loaded; lower sections remain blank in full-page capture. Do not publish as complete page"},
+    {"path": "evidence/live-pdp-desktop-footer-recapture.jpg", "type": "live_viewport", "limitation": "Footer and partial membership section only"},
+    {"path": "evidence/live-pdp-mobile-purchase.jpg", "type": "live_viewport", "limitation": "Purchase region with sticky purchase bar; not first viewport"},
+    {"path": "evidence/live-pdp-mobile-recapture.jpg", "type": "live_fullpage", "limitation": "Visually checked: FAQ image, recommendations and membership background loaded; sticky bar retained"},
+    {"path": "evidence/live-collection-desktop-recapture.jpg", "type": "live_fullpage", "limitation": "Visually checked current rendered collection, product grid and footer; current inventory only"},
+    {"path": "evidence/figma-pdp-desktop-preview.png", "type": "figma_export_preview", "limitation": "166 x 582 low-resolution preview; not a full-resolution export"},
+    {"path": "evidence/figma-pdp-layout-overview.jpg", "type": "figma_canvas_crop", "limitation": "Low-resolution desktop/mobile overview; desktop bottom partially omitted"},
+    {"path": "evidence/figma-collection-desktop-overview.jpg", "type": "figma_canvas_crop", "limitation": "153 x 530 structural reference; labels and comments excluded"},
+    {"path": "evidence/live-pdp-desktop-viewport.jpg", "type": "live_viewport", "viewport": {"width": 1280, "height": 720}, "limitation": "First viewport only"},
+    {"path": "evidence/live-pdp-desktop.jpg", "type": "live_fullpage", "viewport": {"width": 1280, "height": 720}, "limitation": "Incomplete rendering in lower regions; unsuitable as publication after image"},
+    {"path": "evidence/live-pdp-mobile.jpg", "type": "live_fullpage", "viewport": {"width": 390, "height": 844}, "limitation": "Blank media/recommendation regions; not a complete visual QA pass"},
+    {"path": "evidence/live-collection-desktop.jpg", "type": "live_viewport", "viewport": {"width": 1280, "height": 720}, "limitation": "Hero and beginning of product grid only"}
+  ],
+  "full_resolution_figma_export_obtained": true,
+  "full_resolution_figma_exports_obtained": ["366:2406", "604:3938", "366:1649"],
+  "remaining_figma_exports": [],
+  "mobile_collection_verified": false,
+  "cart_or_checkout_tested": false,
+  "website_modified": true,
+  "website_change_status": "published_production_content_verified",
+  "website_change_scope": "Existing SilkGear case component and six optimized evidence images; desktop PDP, mobile PDP and Collection design-to-storefront pairs",
+  "geo_score_changed": false
+}

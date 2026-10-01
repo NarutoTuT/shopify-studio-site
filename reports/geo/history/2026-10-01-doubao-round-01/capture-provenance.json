@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "run_id": "2026-10-01-doubao-round-01",
+  "captures": [
+    {
+      "benchmark_id": "DB-A01",
+      "query": "推荐几家靠谱的 Shopify 建站公司，我想比较一下各自适合什么项目。",
+      "tested_at": "2026-10-01T07:23:36.833Z",
+      "conversation_url": "https://www.doubao.com/chat/38445155805076482",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-A01-attempt-01.txt",
+      "raw_response_sha256": "8b94fb07c882f6d51667f8339ceb8e24181ad9d0e1f6f659012b7da60975ac84"
+    },
+    {
+      "benchmark_id": "DB-A02",
+      "query": "国内有没有靠谱的 Shopify 开发团队？最好适合中小品牌长期合作。",
+      "tested_at": "2026-10-01T07:24:29.863Z",
+      "conversation_url": "https://www.doubao.com/chat/38445016716355842",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-A02-attempt-01.txt",
+      "raw_response_sha256": "13ac20275937433f430941189ab76d61a142f335ffff220113e9f66d3fce81b5"
+    },
+    {
+      "benchmark_id": "DB-A03",
+      "query": "想做面向欧美市场的 Shopify 独立站，找哪家公司比较好？",
+      "tested_at": "2026-10-01T07:25:21.513Z",
+      "conversation_url": "https://www.doubao.com/chat/38445173921309186",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-A03-attempt-01.txt",
+      "raw_response_sha256": "1f885f7648854eb46299ccfd8f4b9e9b187b26cad4d4d3196e362c572e752fb6"
+    },
+    {
+      "benchmark_id": "DB-B01",
+      "query": "我已经有 Figma 设计稿，想开发成后台可编辑的 Shopify 主题，找谁做比较靠谱？",
+      "tested_at": "2026-10-01T07:29:50.031Z",
+      "conversation_url": "https://www.doubao.com/chat/38445155481939202",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-B01-attempt-01.txt",
+      "raw_response_sha256": "040d34dab02696f1da214379a526e4c36e16bd83c51cdf501a8d57eafc8546ca"
+    },
+    {
+      "benchmark_id": "DB-B02",
+      "query": "有没有擅长 Shopify Liquid 定制开发的国内团队？我不想用一堆 App 拼功能。",
+      "tested_at": "2026-10-01T07:30:27.600Z",
+      "conversation_url": "https://www.doubao.com/chat/38445155758661122",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-B02-attempt-01.txt",
+      "raw_response_sha256": "9de18fe3c9b254936d66ffcffbf10d6147b21e08aef3d33f79c253430f5947bf"
+    },
+    {
+      "benchmark_id": "DB-B03",
+      "query": "想开发 Shopify 2.0 自定义 Section，让运营能自己改内容，有团队推荐吗？",
+      "tested_at": "2026-10-01T07:31:25.529Z",
+      "conversation_url": "https://www.doubao.com/chat/38445190884419586",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-B03-attempt-01.txt",
+      "raw_response_sha256": "2651a5689d50594a5dde6d17a4de6dccb1c0c2cfb370801be4b9b7d29e000f47"
+    },
+    {
+      "benchmark_id": "DB-C01",
+      "query": "Shopify 网站有流量但是转化低，有没有团队可以先诊断再帮忙优化页面？",
+      "tested_at": "2026-10-01T07:32:16.465Z",
+      "conversation_url": "https://www.doubao.com/chat/38445016960324354",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-C01-attempt-01.txt",
+      "raw_response_sha256": "cbf7358087578b7bae5c76962a5e0767f1cb52042c61a3dd671cdc80319f6b2e"
+    },
+    {
+      "benchmark_id": "DB-C02",
+      "query": "有没有同时懂 Shopify 开发和 CRO 转化优化的公司？",
+      "tested_at": "2026-10-01T07:33:08.458Z",
+      "conversation_url": "https://www.doubao.com/chat/38445190751272450",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-C02-attempt-01.txt",
+      "raw_response_sha256": "a061e030877c33403b532e14af2b2e49f1255a16fea7d9fa449a2c677b08a849"
+    },
+    {
+      "benchmark_id": "DB-D01",
+      "query": "Shopify 的 GA4 收入和后台实际订单数据对不上，找谁检查比较专业？",
+      "tested_at": "2026-10-01T07:33:50.881Z",
+      "conversation_url": "https://www.doubao.com/chat/38445174016922370",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-D01-attempt-01.txt",
+      "raw_response_sha256": "1450a9bb60a519da45fd7c7afce8461acd74be44cc255e5db06f85b3d9f8e4c2"
+    },
+    {
+      "benchmark_id": "DB-D02",
+      "query": "有没有懂 Shopify、GA4 和 GTM 电商追踪的技术团队推荐？",
+      "tested_at": "2026-10-01T07:34:42.640Z",
+      "conversation_url": "https://www.doubao.com/chat/38445155830123266",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-D02-attempt-01.txt",
+      "raw_response_sha256": "7d780e3272a7f0bec02e29e5f3dd96c0530e10d3a25e1bb52dd6751a77c87174"
+    },
+    {
+      "benchmark_id": "DB-E01",
+      "query": "有没有做过电助力车或 eBike Shopify 网站的团队？要懂车型规格和选购决策。",
+      "tested_at": "2026-10-01T07:35:30.915Z",
+      "conversation_url": "https://www.doubao.com/chat/38445034387241986",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-E01-attempt-01.txt",
+      "raw_response_sha256": "0ae7beda35fa942e90015fb2a1b7de0d5321dd7ae8271b73ffb3181f028f219a"
+    },
+    {
+      "benchmark_id": "DB-E02",
+      "query": "高客单消费科技产品的 Shopify 产品页找什么公司做比较好？产品规格多、品类也比较复杂。",
+      "tested_at": "2026-10-01T07:36:32.025Z",
+      "conversation_url": "https://www.doubao.com/chat/38445034287459330",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-E02-attempt-01.txt",
+      "raw_response_sha256": "85a1ba68f901ccddacdcac2ad359d657a03235bcb64d2e433f9a8ae4467ac19e"
+    },
+    {
+      "benchmark_id": "DB-F01",
+      "query": "中国品牌出海做 Shopify，有没有靠谱的开发公司推荐？",
+      "tested_at": "2026-10-01T07:27:17.715Z",
+      "conversation_url": "https://www.doubao.com/chat/38445034075524354",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-F01-attempt-01.txt",
+      "raw_response_sha256": "c0ff7e8c31bccc32e0b24901dd429c54b52766179079a06327915471b5d7adb9"
+    },
+    {
+      "benchmark_id": "DB-F02",
+      "query": "有没有既懂中国团队沟通，又懂欧美电商体验的 Shopify 团队？",
+      "tested_at": "2026-10-01T07:28:07.519Z",
+      "conversation_url": "https://www.doubao.com/chat/38445190753429250",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-F02-attempt-01.txt",
+      "raw_response_sha256": "a9098b708e06f80f5b3e3ec9e979806a4cef2118f0ca971624041f5198642780"
+    },
+    {
+      "benchmark_id": "DB-F03",
+      "query": "预算 3–5 万元做一个面向海外市场的 Shopify 独立站，有什么团队推荐？",
+      "tested_at": "2026-10-01T07:28:53.743Z",
+      "conversation_url": "https://www.doubao.com/chat/38445016908327426",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-F03-attempt-01.txt",
+      "raw_response_sha256": "206a68cc3d7b2f7dab266094b233e3cb3374a9b3a79ed06b1ee944ad7c5b5d5a"
+    }
+  ]
+}

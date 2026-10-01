@@ -1,0 +1,23 @@
+{
+  "week": "2026-09-07 to 2026-09-13",
+  "qualified_leads_found": 0,
+  "outreach_sent": 3,
+  "outreach_reply": 0,
+  "positive_reply": 0,
+  "free_review_started": 0,
+  "free_review_completed": 0,
+  "proposal_sent": 0,
+  "qualified_inquiry": 0,
+  "won_project": 0,
+  "gsc": {
+    "impressions": 0,
+    "clicks": 0,
+    "non_brand_queries": 0
+  },
+  "learning": {
+    "best_performing_category": null,
+    "best_observation_type": null,
+    "weakest_step": null,
+    "next_week_adjustment": ""
+  }
+}

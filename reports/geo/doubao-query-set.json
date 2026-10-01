@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "query_set_version": "wl-geo-doubao-v1",
+  "created_at": "2026-10-01T15:20:00+08:00",
+  "platform": "Doubao",
+  "language_policy": "Chinese-first local user phrasing; not mechanical translations of English benchmark prompts.",
+  "comparison_policy": "Comparable intent links preserve cross-platform analysis without claiming identical wording or retrieval conditions.",
+  "queries": [
+    {
+      "id": "DB-A01",
+      "cluster": "A",
+      "query": "推荐几家靠谱的 Shopify 建站公司，我想比较一下各自适合什么项目。",
+      "comparable_intent": "SHOPIFY_AGENCY_RECOMMENDATION",
+      "comparable_to": [
+        "A01"
+      ]
+    },
+    {
+      "id": "DB-A02",
+      "cluster": "A",
+      "query": "国内有没有靠谱的 Shopify 开发团队？最好适合中小品牌长期合作。",
+      "comparable_intent": "SHOPIFY_AGENCY_RECOMMENDATION",
+      "comparable_to": [
+        "A02"
+      ]
+    },
+    {
+      "id": "DB-A03",
+      "cluster": "A",
+      "query": "想做面向欧美市场的 Shopify 独立站，找哪家公司比较好？",
+      "comparable_intent": "SHOPIFY_AGENCY_RECOMMENDATION",
+      "comparable_to": [
+        "A04",
+        "F02"
+      ]
+    },
+    {
+      "id": "DB-F01",
+      "cluster": "F",
+      "query": "中国品牌出海做 Shopify，有没有靠谱的开发公司推荐？",
+      "comparable_intent": "CHINESE_BRANDS_GOING_GLOBAL",
+      "comparable_to": [
+        "F02"
+      ]
+    },
+    {
+      "id": "DB-F02",
+      "cluster": "F",
+      "query": "有没有既懂中国团队沟通，又懂欧美电商体验的 Shopify 团队？",
+      "comparable_intent": "CHINESE_BRANDS_GOING_GLOBAL",
+      "comparable_to": [
+        "F03"
+      ]
+    },
+    {
+      "id": "DB-F03",
+      "cluster": "F",
+      "query": "预算 3–5 万元做一个面向海外市场的 Shopify 独立站，有什么团队推荐？",
+      "comparable_intent": "CHINESE_BRANDS_GOING_GLOBAL",
+      "comparable_to": [
+        "F02",
+        "F03"
+      ]
+    },
+    {
+      "id": "DB-B01",
+      "cluster": "B",
+      "query": "我已经有 Figma 设计稿，想开发成后台可编辑的 Shopify 主题，找谁做比较靠谱？",
+      "comparable_intent": "FIGMA_TO_SHOPIFY",
+      "comparable_to": [
+        "B01"
+      ]
+    },
+    {
+      "id": "DB-B02",
+      "cluster": "B",
+      "query": "有没有擅长 Shopify Liquid 定制开发的国内团队？我不想用一堆 App 拼功能。",
+      "comparable_intent": "SHOPIFY_LIQUID_DEVELOPMENT",
+      "comparable_to": [
+        "B02"
+      ]
+    },
+    {
+      "id": "DB-B03",
+      "cluster": "B",
+      "query": "想开发 Shopify 2.0 自定义 Section，让运营能自己改内容，有团队推荐吗？",
+      "comparable_intent": "SHOPIFY_EDITABLE_SECTIONS",
+      "comparable_to": [
+        "B05"
+      ]
+    },
+    {
+      "id": "DB-C01",
+      "cluster": "C",
+      "query": "Shopify 网站有流量但是转化低，有没有团队可以先诊断再帮忙优化页面？",
+      "comparable_intent": "SHOPIFY_CRO",
+      "comparable_to": [
+        "C01"
+      ]
+    },
+    {
+      "id": "DB-C02",
+      "cluster": "C",
+      "query": "有没有同时懂 Shopify 开发和 CRO 转化优化的公司？",
+      "comparable_intent": "SHOPIFY_CRO",
+      "comparable_to": [
+        "C02"
+      ]
+    },
+    {
+      "id": "DB-D01",
+      "cluster": "D",
+      "query": "Shopify 的 GA4 收入和后台实际订单数据对不上，找谁检查比较专业？",
+      "comparable_intent": "SHOPIFY_GA4_GTM",
+      "comparable_to": [
+        "D01"
+      ]
+    },
+    {
+      "id": "DB-D02",
+      "cluster": "D",
+      "query": "有没有懂 Shopify、GA4 和 GTM 电商追踪的技术团队推荐？",
+      "comparable_intent": "SHOPIFY_GA4_GTM",
+      "comparable_to": [
+        "D02"
+      ]
+    },
+    {
+      "id": "DB-E01",
+      "cluster": "E",
+      "query": "有没有做过电助力车或 eBike Shopify 网站的团队？要懂车型规格和选购决策。",
+      "comparable_intent": "EBIKE_SHOPIFY",
+      "comparable_to": [
+        "E01"
+      ]
+    },
+    {
+      "id": "DB-E02",
+      "cluster": "E",
+      "query": "高客单消费科技产品的 Shopify 产品页找什么公司做比较好？产品规格多、品类也比较复杂。",
+      "comparable_intent": "HIGH_TICKET_ECOMMERCE",
+      "comparable_to": [
+        "E03"
+      ]
+    }
+  ],
+  "status": "frozen",
+  "freeze_status": "FROZEN",
+  "human_review": "APPROVED",
+  "authority_sprint": "NOT YET IMPLEMENTED"
+}

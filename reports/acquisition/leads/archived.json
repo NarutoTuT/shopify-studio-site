@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "description": "Archived leads that were marked WATCH, SKIP, no-fit, no-response, duplicate, or manually paused. Keep rationale evidence-based and avoid private contact data.",
+  "archive_reasons": [
+    "watch",
+    "skip",
+    "no_fit",
+    "duplicate",
+    "no_public_evidence",
+    "manual_pause",
+    "no_response",
+    "other"
+  ],
+  "lead_schema": {
+    "id": "",
+    "brand": "",
+    "website": "",
+    "country": "",
+    "category": "",
+    "shopify_confirmed": null,
+    "main_problem": "",
+    "evidence": "",
+    "why_it_matters": "",
+    "potential_business_impact": "",
+    "relevant_service": "",
+    "scores": {
+      "business_fit": 0,
+      "shopify_fit": 0,
+      "technical_problem_severity": 0,
+      "conversion_opportunity": 0,
+      "estimated_commercial_value": 0,
+      "whaleleap_experience_fit": 0
+    },
+    "lead_score": 0,
+    "priority": "SKIP",
+    "recommended_outreach_angle": "",
+    "contact_channel": null,
+    "contact_person": null,
+    "contact_source": null,
+    "outreach_status": "not_contacted",
+    "last_contact": null,
+    "next_action": "",
+    "notes": "",
+    "created_at": "",
+    "updated_at": ""
+  },
+  "leads": []
+}

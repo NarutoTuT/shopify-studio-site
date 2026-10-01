@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0",
+  "baseline_date": "2026-10-01",
+  "status": "frozen_human_review_approved",
+  "basis": "public_evidence_audit_only",
+  "current_visibility": "0 mentions and 0 recommendations in 45 human-reviewed frozen answers",
+  "causality_warning": "These are public-evidence gaps and benchmark hypotheses, not confirmed causal reasons an AI omitted WhaleLeap. The 45 answers establish observed absence only.",
+  "allowed_gap_types": [
+    "ENTITY",
+    "EVIDENCE",
+    "CASE_STUDY",
+    "CONTENT",
+    "THIRD_PARTY_MENTION",
+    "VERTICAL_AUTHORITY",
+    "REVIEWS",
+    "TECHNICAL_EXPERTISE",
+    "ORIGINAL_RESEARCH",
+    "DISTRIBUTION"
+  ],
+  "gaps": [
+    {
+      "id": "G01",
+      "gap_type": "ENTITY",
+      "clusters": [
+        "A",
+        "F"
+      ],
+      "evidence_ids": [
+        "EV01",
+        "EV11"
+      ],
+      "priority": "P2",
+      "current_visibility": "unknown",
+      "observation": "品牌定位存在，但未从所查公开材料闭合品牌、创始人与审阅者身份关系。",
+      "observation_basis": "checked_public_materials",
+      "possible_recommendation_impact": "可能限制模型验证相关主张，但尚无实际推荐回答验证这一假设。",
+      "recommended_action": "确认已有公开专业档案和真实姓名/品牌关系；优先在现有 About 与作者信息中清楚关联。",
+      "action_type": "Clarify service",
+      "closure_evidence_required": "可核验档案与站点双向身份关联。",
+      "status": "open",
+      "requires_human_approval": true,
+      "implemented": false
+    },
+    {
+      "id": "G02",
+      "gap_type": "EVIDENCE",
+      "clusters": [
+        "B"
+      ],
+      "evidence_ids": [
+        "EV04"
+      ],
+      "priority": "P1",
+      "current_visibility": "unknown",
+      "observation": "Figma 服务声明明确，未见具名项目原稿到可配置 Shopify 实现的对照。",
+      "observation_basis": "checked_public_materials",
+      "possible_recommendation_impact": "可能限制模型验证相关主张，但尚无实际推荐回答验证这一假设。",
+      "recommended_action": "先核查可公开授权的现有项目，在现有案例或服务页补原稿/成品与模块职责对照，不新建服务页。",
+      "action_type": "Add project screenshot",
+      "closure_evidence_required": "同一具名项目可公开的输入、输出、职责、响应式与编辑器证据。",
+      "status": "open",
+      "requires_human_approval": true,
+      "implemented": false
+    },
+    {
+      "id": "G03",
+      "gap_type": "CASE_STUDY",
+      "clusters": [
+        "C",
+        "E"
+      ],
+      "evidence_ids": [
+        "EV07",
+        "EV10"
+      ],
+      "priority": "P1",
+      "current_visibility": "unknown",
+      "observation": "SilkGear 有方法和交付证据，但自有案例不等于客户验证或转化提升。",
+      "observation_basis": "checked_public_materials",
+      "possible_recommendation_impact": "可能限制模型验证相关主张，但尚无实际推荐回答验证这一假设。",
+      "recommended_action": "优先完善现有 SilkGear 的可核验职责、日期与客户确认；没有获授权 KPI 就不补数字。",
+      "action_type": "Add case evidence",
+      "closure_evidence_required": "客户可公开确认的合作范围，且与现有案例相符。",
+      "status": "open",
+      "requires_human_approval": true,
+      "implemented": false
+    },
+    {
+      "id": "G04",
+      "gap_type": "CONTENT",
+      "clusters": [
+        "B",
+        "D"
+      ],
+      "evidence_ids": [
+        "EV03",
+        "EV06"
+      ],
+      "priority": "P2",
+      "current_visibility": "unknown",
+      "observation": "服务和 Guide 已存在；更多类似文章不一定增加推荐依据。",
+      "observation_basis": "checked_public_materials",
+      "possible_recommendation_impact": "可能限制模型验证相关主张，但尚无实际推荐回答验证这一假设。",
+      "recommended_action": "先完成真实 Benchmark，保留现有 Guide；仅在实际回答暴露具体理解缺口后改善原文。",
+      "action_type": "Do nothing yet",
+      "closure_evidence_required": "真实回答显示问题，且现有内容确有可定位的解释缺口。",
+      "status": "open",
+      "requires_human_approval": true,
+      "implemented": false
+    },
+    {
+      "id": "G05",
+      "gap_type": "THIRD_PARTY_MENTION",
+      "clusters": [
+        "A",
+        "F"
+      ],
+      "evidence_ids": [
+        "EV13"
+      ],
+      "priority": "P1",
+      "current_visibility": "unknown",
+      "observation": "本次定向搜索没有核验到相关独立提及。",
+      "observation_basis": "checked_public_materials",
+      "possible_recommendation_impact": "可能限制模型验证相关主张，但尚无实际推荐回答验证这一假设。",
+      "recommended_action": "经人工确认后，优先争取真实合作方对既有工作的公开归属确认；不买链接、不自动联系。",
+      "action_type": "Earn third-party mention",
+      "closure_evidence_required": "独立主体发布、明确关联 whaleleap.studio 且可核验的项目说明。",
+      "status": "open",
+      "requires_human_approval": true,
+      "implemented": false
+    },
+    {
+      "id": "G06",
+      "gap_type": "VERTICAL_AUTHORITY",
+      "clusters": [
+        "E"
+      ],
+      "evidence_ids": [
+        "EV09"
+      ],
+      "priority": "P2",
+      "current_visibility": "unknown",
+      "observation": "eBike 截图可见，但品牌、职责和 live 项目关联不足。",
+      "observation_basis": "checked_public_materials",
+      "possible_recommendation_impact": "可能限制模型验证相关主张，但尚无实际推荐回答验证这一假设。",
+      "recommended_action": "先核实素材所属项目与公开授权，在既有作品说明中补边界；不创建 eBike Pillar，不先自称专家。",
+      "action_type": "Add case evidence",
+      "closure_evidence_required": "具名品牌、确切工作范围、公开页面与授权状态可核验。",
+      "status": "open",
+      "requires_human_approval": true,
+      "implemented": false
+    },
+    {
+      "id": "G07",
+      "gap_type": "REVIEWS",
+      "clusters": [
+        "A",
+        "F"
+      ],
+      "evidence_ids": [
+        "EV13"
+      ],
+      "priority": "P2",
+      "current_visibility": "unknown",
+      "observation": "所查公开证据未提供可归属的独立客户评价。",
+      "observation_basis": "checked_public_materials",
+      "possible_recommendation_impact": "可能限制模型验证相关主张，但尚无实际推荐回答验证这一假设。",
+      "recommended_action": "先检查是否已有真实评价可验证；没有就保持未知，后续由人工在真实交付后征求自愿反馈。",
+      "action_type": "Do nothing yet",
+      "closure_evidence_required": "可核验客户与项目关联的真实评价；不预写、不伪造、不以激励要求好评。",
+      "status": "open",
+      "requires_human_approval": true,
+      "implemented": false
+    },
+    {
+      "id": "G08",
+      "gap_type": "TECHNICAL_EXPERTISE",
+      "clusters": [
+        "B",
+        "D"
+      ],
+      "evidence_ids": [
+        "EV03",
+        "EV06"
+      ],
+      "priority": "P1",
+      "current_visibility": "unknown",
+      "observation": "方法文档较具体，但缺可复现实现产物或脱敏验证过程。",
+      "observation_basis": "checked_public_materials",
+      "possible_recommendation_impact": "可能限制模型验证相关主张，但尚无实际推荐回答验证这一假设。",
+      "recommended_action": "先从有授权的已有交付中挑一项，准备最小可复现模块或事件 QA 样例；待确认再公开，绝不提交客户订单数据。",
+      "action_type": "Publish GitHub resource",
+      "closure_evidence_required": "公开许可、复现步骤、输入/预期输出、限制与测试；不暴露客户代码或凭证。",
+      "status": "open",
+      "requires_human_approval": true,
+      "implemented": false
+    },
+    {
+      "id": "G09",
+      "gap_type": "ORIGINAL_RESEARCH",
+      "clusters": [
+        "C",
+        "D"
+      ],
+      "evidence_ids": [
+        "EV05",
+        "EV06"
+      ],
+      "priority": "P3",
+      "current_visibility": "unknown",
+      "observation": "有方法组织与实施经验自述，无已核验原创实验/数据集。",
+      "observation_basis": "checked_public_materials",
+      "possible_recommendation_impact": "可能限制模型验证相关主张，但尚无实际推荐回答验证这一假设。",
+      "recommended_action": "暂不投入大规模研究；先运行多轮 Benchmark 和真实项目复盘，再决定是否有可授权的新信息。",
+      "action_type": "Do nothing yet",
+      "closure_evidence_required": "有可复现设计、方法、适用边界和非虚构数据的公开研究。",
+      "status": "open",
+      "requires_human_approval": true,
+      "implemented": false
+    },
+    {
+      "id": "G10",
+      "gap_type": "DISTRIBUTION",
+      "clusters": [
+        "D",
+        "E"
+      ],
+      "evidence_ids": [
+        "EV06",
+        "EV07",
+        "EV13"
+      ],
+      "priority": "P2",
+      "current_visibility": "unknown",
+      "observation": "Guide 与案例可直接访问，当前工具的定向搜索未返回精确页面；原因未知。",
+      "observation_basis": "checked_public_materials",
+      "possible_recommendation_impact": "可能限制模型验证相关主张，但尚无实际推荐回答验证这一假设。",
+      "recommended_action": "先在干净会话完成首轮检索型 Benchmark，记录真实引用来源，再决定已有内容的人工分发；不据此做技术 SEO 修改。",
+      "action_type": "Do nothing yet",
+      "closure_evidence_required": "有带原文与时间的平台结果证明检索/引用状态；分发效果需多轮观察。",
+      "status": "open",
+      "requires_human_approval": true,
+      "implemented": false
+    }
+  ],
+  "suggested_first_investment": {
+    "action": "在取得授权前提下，补强现有 SilkGear 案例的项目归属/职责证据与可独立核验的客户确认。",
+    "reason": "已有具名交付基础，优先提升证据可信度而非新增页面；尚非经 AI Benchmark 验证的增长结论。",
+    "gate": "用户确认方向与客户公开授权后才执行；本轮不联系或修改。",
+    "alternative": "若客户确认暂不可得，选择有权公开的最小 Liquid/Tracking QA 技术样例；不发布私有代码。"
+  },
+  "freeze_status": "FROZEN",
+  "human_review": "APPROVED",
+  "authority_sprint": "NOT YET IMPLEMENTED",
+  "post_baseline_evidence_discoveries": [
+    "LUOKAVRION public third-party attribution discovered",
+    "Terrawulf Level 4 engineering evidence confirmed",
+    "SilkGear design-to-live evidence strengthened"
+  ],
+  "post_baseline_discoveries_change_v1_hypotheses": false
+}

@@ -1,0 +1,2900 @@
+{
+  "schema_version": "1.1",
+  "status": "frozen_human_review_approved",
+  "counting_rule": "Once per archived answer and platform. Display-name aliases are normalized for the frozen v1 analysis only. Named recommended delivery providers are counted; directories, marketplaces, software, clients and generic categories are excluded.",
+  "companies": [
+    {
+      "platform": "ChatGPT",
+      "company": "Conspire",
+      "appearance_count": 3,
+      "recommended_count": 3,
+      "query_clusters": [
+        "A",
+        "B",
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-A04-attempt-01",
+        "2026-10-01-chatgpt-C02-attempt-01",
+        "2026-10-01-chatgpt-B05-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Cheriscon",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-F02-attempt-01",
+        "2026-10-01-chatgpt-F03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Convertibles",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-C02-attempt-01",
+        "2026-10-01-chatgpt-C01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "DTC Pages",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-C02-attempt-01",
+        "2026-10-01-chatgpt-C01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "EastDTC / EastDigi",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-F02-attempt-01",
+        "2026-10-01-chatgpt-F03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "First and Third",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "B",
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-C02-attempt-01",
+        "2026-10-01-chatgpt-B02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Netalico",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "A",
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-A02-attempt-01",
+        "2026-10-01-chatgpt-C01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "SDG",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "B",
+        "D"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-B02-attempt-01",
+        "2026-10-01-chatgpt-D02-attempt-02"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Subframe",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-B01-attempt-01",
+        "2026-10-01-chatgpt-B05-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Swanky",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "A",
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-A01-attempt-02",
+        "2026-10-01-chatgpt-E03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "WESWOO",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "E",
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-F02-attempt-01",
+        "2026-10-01-chatgpt-E01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Arctic Grey",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-A01-attempt-02"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Aumlytics",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "D"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-D02-attempt-02"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Avex",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-A01-attempt-02"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Barrel",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-A02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Brickspace Lab",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-B02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Byteinfy",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "D"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-D02-attempt-02"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "C2 Digital",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-A02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Carti Apps",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-B01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Cosnet",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-E01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Cyberklick",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Eastside Co",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-A01-attempt-02"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "EcomLabs",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "D"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-D02-attempt-02"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Electric Eye",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-A04-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "FlowCart Agency",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-B01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Flux",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-E03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "ForgeCRO",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-C01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Hui Creative",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-F03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "IMMACULATE",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-A02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Irish Titan",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-E03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Linkjoint",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Lintel",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-B05-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Loomic",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-F03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "MiradeWeb",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-B05-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "MS Web International",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-E03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Newthink",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-B05-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Omnycode",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-A01-attempt-02"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Peter Dong / HYA Media",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-F03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "PointerFlow",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-A02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Propeller",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-C01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Quest Digital",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-E01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "RaymondMatthew",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-C02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Reedys",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-B02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Shero Commerce",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-C02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Shinetech Software",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-F03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Simplistic",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-A01-attempt-02"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Stackframes",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-B01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "The Checkout Agency",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-B05-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "The Cool Agency",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-B02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "TMO Group",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "TrueStack",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-E01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Velstar",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-E03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Wave Commerce",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "WebContrive",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-A02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Weblexia",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-B01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "WeConvert",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-E01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "XgenTech",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-B02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Yaxify",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-B05-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "YIGO Tech",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-chatgpt-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Netalico",
+      "appearance_count": 3,
+      "recommended_count": 3,
+      "query_clusters": [
+        "A",
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-A01-attempt-02",
+        "2026-10-01-perplexity-A02-attempt-01",
+        "2026-10-01-perplexity-E03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Shinetech Software",
+      "appearance_count": 3,
+      "recommended_count": 3,
+      "query_clusters": [
+        "A",
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-A01-attempt-02",
+        "2026-10-01-perplexity-F03-attempt-01",
+        "2026-10-01-perplexity-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "WESWOO",
+      "appearance_count": 3,
+      "recommended_count": 3,
+      "query_clusters": [
+        "B",
+        "E",
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-B01-attempt-01",
+        "2026-10-01-perplexity-F02-attempt-01",
+        "2026-10-01-perplexity-E01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "EastDTC / EastDigi",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "A",
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-A01-attempt-02",
+        "2026-10-01-perplexity-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "SPLIT Development",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "A",
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-A04-attempt-01",
+        "2026-10-01-perplexity-B01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "YIGO Tech",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "A",
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-A01-attempt-02",
+        "2026-10-01-perplexity-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "1Digital",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-B02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Adex Labs",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-A02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Americaneagle.com",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-E01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Analytico",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "D"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-D02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Ask Phill",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-B02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "BlazeByte Solutions",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "D"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-D02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Cheriscon",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-C02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "CLEARgo",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Conversion",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-C02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "ConversionWise",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-C01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Craftberry",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-E03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Devjour Technologies",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-B01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "eCommerce Web Guru",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-A02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Flux",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-B02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "MarkupFox",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-B01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "MaybeDesign",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-B05-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Mgroup",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-B05-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "SainStore",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-F03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Swanky",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-C02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "UM",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-C01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "VAAN",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-E01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Web Star Research",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "D"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-D02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Webvista Studio",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-B05-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Zhenke Technology",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-perplexity-A01-attempt-02"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "WESWOO",
+      "appearance_count": 8,
+      "recommended_count": 8,
+      "query_clusters": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A02-attempt-01",
+        "2026-10-01-doubao-DB-B02-attempt-01",
+        "2026-10-01-doubao-DB-B03-attempt-01",
+        "2026-10-01-doubao-DB-E01-attempt-01",
+        "2026-10-01-doubao-DB-E02-attempt-01",
+        "2026-10-01-doubao-DB-F01-attempt-01",
+        "2026-10-01-doubao-DB-F02-attempt-01",
+        "2026-10-01-doubao-DB-F03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "EastDTC / EastDigi",
+      "appearance_count": 6,
+      "recommended_count": 6,
+      "query_clusters": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A01-attempt-01",
+        "2026-10-01-doubao-DB-A02-attempt-01",
+        "2026-10-01-doubao-DB-B02-attempt-01",
+        "2026-10-01-doubao-DB-E02-attempt-01",
+        "2026-10-01-doubao-DB-F01-attempt-01",
+        "2026-10-01-doubao-DB-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Cheriscon",
+      "appearance_count": 5,
+      "recommended_count": 5,
+      "query_clusters": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A01-attempt-01",
+        "2026-10-01-doubao-DB-A02-attempt-01",
+        "2026-10-01-doubao-DB-B02-attempt-01",
+        "2026-10-01-doubao-DB-E02-attempt-01",
+        "2026-10-01-doubao-DB-F01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "YIGO Tech",
+      "appearance_count": 5,
+      "recommended_count": 5,
+      "query_clusters": [
+        "A",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A02-attempt-01",
+        "2026-10-01-doubao-DB-C02-attempt-01",
+        "2026-10-01-doubao-DB-D02-attempt-01",
+        "2026-10-01-doubao-DB-E01-attempt-01",
+        "2026-10-01-doubao-DB-F01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Cyberklick",
+      "appearance_count": 4,
+      "recommended_count": 4,
+      "query_clusters": [
+        "A",
+        "B",
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A01-attempt-01",
+        "2026-10-01-doubao-DB-A03-attempt-01",
+        "2026-10-01-doubao-DB-B03-attempt-01",
+        "2026-10-01-doubao-DB-F01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Avex",
+      "appearance_count": 3,
+      "recommended_count": 3,
+      "query_clusters": [
+        "A",
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A01-attempt-01",
+        "2026-10-01-doubao-DB-A03-attempt-01",
+        "2026-10-01-doubao-DB-E02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Blend Commerce",
+      "appearance_count": 3,
+      "recommended_count": 3,
+      "query_clusters": [
+        "A",
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A03-attempt-01",
+        "2026-10-01-doubao-DB-C01-attempt-01",
+        "2026-10-01-doubao-DB-C02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Eastside Co",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "A",
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A03-attempt-01",
+        "2026-10-01-doubao-DB-B03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Fengge Technology",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "A",
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A02-attempt-01",
+        "2026-10-01-doubao-DB-B02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Fuel Made",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "A",
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A03-attempt-01",
+        "2026-10-01-doubao-DB-C02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "IWISH",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "C",
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-C02-attempt-01",
+        "2026-10-01-doubao-DB-F03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Kedeng Cross-border",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "A",
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A03-attempt-01",
+        "2026-10-01-doubao-DB-E01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Loomic",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "A",
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A02-attempt-01",
+        "2026-10-01-doubao-DB-B03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "RaftLabs",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "A",
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A03-attempt-01",
+        "2026-10-01-doubao-DB-B03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "WayToGlobal",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "A",
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A03-attempt-01",
+        "2026-10-01-doubao-DB-F03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "We Make Websites",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A01-attempt-01",
+        "2026-10-01-doubao-DB-A03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "WebContrive",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-E01-attempt-01",
+        "2026-10-01-doubao-DB-E02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Zalify",
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-F01-attempt-01",
+        "2026-10-01-doubao-DB-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Adlink",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Analyzify",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "D"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-D02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Atwix",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-B03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Barrel",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Beansmile",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "ConversionEX",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-C01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Convertibles",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-C02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Cquark",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-B01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Domaine",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "DTC Pages",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-C01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Elevar",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "D"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-D02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Fastlane",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Folio3",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Gigacommerce",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-C01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Helium Gold Technology",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-B03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Helium Krypton Cross-border",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-B03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Hui Creative",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Jixindesign",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Kikstart Ecom",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Liquify",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Liuyi Technology",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-F01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Meet Experience",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "PixelCrayons",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-B01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Qrolic Technologies",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-E01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Shero Commerce",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "E"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-E02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Sinobuild",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "F"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-F03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "SparkX",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "SplitBase",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-C02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Stape Care",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "D"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-D02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Swanky",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "A"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-A03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "Tenten.co",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "C"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-C02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "The4.co",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "B"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-B01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Doubao",
+      "company": "TrueMetrics",
+      "appearance_count": 1,
+      "recommended_count": 1,
+      "query_clusters": [
+        "D"
+      ],
+      "result_ids": [
+        "2026-10-01-doubao-DB-D02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    }
+  ],
+  "repeated_by_platform": {
+    "ChatGPT": [
+      {
+        "platform": "ChatGPT",
+        "company": "Conspire",
+        "appearance_count": 3,
+        "recommended_count": 3,
+        "query_clusters": [
+          "A",
+          "B",
+          "C"
+        ],
+        "result_ids": [
+          "2026-10-01-chatgpt-A04-attempt-01",
+          "2026-10-01-chatgpt-C02-attempt-01",
+          "2026-10-01-chatgpt-B05-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "ChatGPT",
+        "company": "Cheriscon",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "F"
+        ],
+        "result_ids": [
+          "2026-10-01-chatgpt-F02-attempt-01",
+          "2026-10-01-chatgpt-F03-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "ChatGPT",
+        "company": "Convertibles",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "C"
+        ],
+        "result_ids": [
+          "2026-10-01-chatgpt-C02-attempt-01",
+          "2026-10-01-chatgpt-C01-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "ChatGPT",
+        "company": "DTC Pages",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "C"
+        ],
+        "result_ids": [
+          "2026-10-01-chatgpt-C02-attempt-01",
+          "2026-10-01-chatgpt-C01-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "ChatGPT",
+        "company": "EastDTC / EastDigi",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "F"
+        ],
+        "result_ids": [
+          "2026-10-01-chatgpt-F02-attempt-01",
+          "2026-10-01-chatgpt-F03-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "ChatGPT",
+        "company": "First and Third",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "B",
+          "C"
+        ],
+        "result_ids": [
+          "2026-10-01-chatgpt-C02-attempt-01",
+          "2026-10-01-chatgpt-B02-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "ChatGPT",
+        "company": "Netalico",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "A",
+          "C"
+        ],
+        "result_ids": [
+          "2026-10-01-chatgpt-A02-attempt-01",
+          "2026-10-01-chatgpt-C01-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "ChatGPT",
+        "company": "SDG",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "B",
+          "D"
+        ],
+        "result_ids": [
+          "2026-10-01-chatgpt-B02-attempt-01",
+          "2026-10-01-chatgpt-D02-attempt-02"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "ChatGPT",
+        "company": "Subframe",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "B"
+        ],
+        "result_ids": [
+          "2026-10-01-chatgpt-B01-attempt-01",
+          "2026-10-01-chatgpt-B05-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "ChatGPT",
+        "company": "Swanky",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "A",
+          "E"
+        ],
+        "result_ids": [
+          "2026-10-01-chatgpt-A01-attempt-02",
+          "2026-10-01-chatgpt-E03-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "ChatGPT",
+        "company": "WESWOO",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "E",
+          "F"
+        ],
+        "result_ids": [
+          "2026-10-01-chatgpt-F02-attempt-01",
+          "2026-10-01-chatgpt-E01-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      }
+    ],
+    "Perplexity": [
+      {
+        "platform": "Perplexity",
+        "company": "Netalico",
+        "appearance_count": 3,
+        "recommended_count": 3,
+        "query_clusters": [
+          "A",
+          "E"
+        ],
+        "result_ids": [
+          "2026-10-01-perplexity-A01-attempt-02",
+          "2026-10-01-perplexity-A02-attempt-01",
+          "2026-10-01-perplexity-E03-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Perplexity",
+        "company": "Shinetech Software",
+        "appearance_count": 3,
+        "recommended_count": 3,
+        "query_clusters": [
+          "A",
+          "F"
+        ],
+        "result_ids": [
+          "2026-10-01-perplexity-A01-attempt-02",
+          "2026-10-01-perplexity-F03-attempt-01",
+          "2026-10-01-perplexity-F02-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Perplexity",
+        "company": "WESWOO",
+        "appearance_count": 3,
+        "recommended_count": 3,
+        "query_clusters": [
+          "B",
+          "E",
+          "F"
+        ],
+        "result_ids": [
+          "2026-10-01-perplexity-B01-attempt-01",
+          "2026-10-01-perplexity-F02-attempt-01",
+          "2026-10-01-perplexity-E01-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Perplexity",
+        "company": "EastDTC / EastDigi",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "A",
+          "F"
+        ],
+        "result_ids": [
+          "2026-10-01-perplexity-A01-attempt-02",
+          "2026-10-01-perplexity-F02-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Perplexity",
+        "company": "SPLIT Development",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "A",
+          "B"
+        ],
+        "result_ids": [
+          "2026-10-01-perplexity-A04-attempt-01",
+          "2026-10-01-perplexity-B01-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Perplexity",
+        "company": "YIGO Tech",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "A",
+          "F"
+        ],
+        "result_ids": [
+          "2026-10-01-perplexity-A01-attempt-02",
+          "2026-10-01-perplexity-F02-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      }
+    ],
+    "Doubao": [
+      {
+        "platform": "Doubao",
+        "company": "WESWOO",
+        "appearance_count": 8,
+        "recommended_count": 8,
+        "query_clusters": [
+          "A",
+          "B",
+          "E",
+          "F"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-A02-attempt-01",
+          "2026-10-01-doubao-DB-B02-attempt-01",
+          "2026-10-01-doubao-DB-B03-attempt-01",
+          "2026-10-01-doubao-DB-E01-attempt-01",
+          "2026-10-01-doubao-DB-E02-attempt-01",
+          "2026-10-01-doubao-DB-F01-attempt-01",
+          "2026-10-01-doubao-DB-F02-attempt-01",
+          "2026-10-01-doubao-DB-F03-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "EastDTC / EastDigi",
+        "appearance_count": 6,
+        "recommended_count": 6,
+        "query_clusters": [
+          "A",
+          "B",
+          "E",
+          "F"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-A01-attempt-01",
+          "2026-10-01-doubao-DB-A02-attempt-01",
+          "2026-10-01-doubao-DB-B02-attempt-01",
+          "2026-10-01-doubao-DB-E02-attempt-01",
+          "2026-10-01-doubao-DB-F01-attempt-01",
+          "2026-10-01-doubao-DB-F02-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "Cheriscon",
+        "appearance_count": 5,
+        "recommended_count": 5,
+        "query_clusters": [
+          "A",
+          "B",
+          "E",
+          "F"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-A01-attempt-01",
+          "2026-10-01-doubao-DB-A02-attempt-01",
+          "2026-10-01-doubao-DB-B02-attempt-01",
+          "2026-10-01-doubao-DB-E02-attempt-01",
+          "2026-10-01-doubao-DB-F01-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "YIGO Tech",
+        "appearance_count": 5,
+        "recommended_count": 5,
+        "query_clusters": [
+          "A",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-A02-attempt-01",
+          "2026-10-01-doubao-DB-C02-attempt-01",
+          "2026-10-01-doubao-DB-D02-attempt-01",
+          "2026-10-01-doubao-DB-E01-attempt-01",
+          "2026-10-01-doubao-DB-F01-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "Cyberklick",
+        "appearance_count": 4,
+        "recommended_count": 4,
+        "query_clusters": [
+          "A",
+          "B",
+          "F"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-A01-attempt-01",
+          "2026-10-01-doubao-DB-A03-attempt-01",
+          "2026-10-01-doubao-DB-B03-attempt-01",
+          "2026-10-01-doubao-DB-F01-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "Avex",
+        "appearance_count": 3,
+        "recommended_count": 3,
+        "query_clusters": [
+          "A",
+          "E"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-A01-attempt-01",
+          "2026-10-01-doubao-DB-A03-attempt-01",
+          "2026-10-01-doubao-DB-E02-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "Blend Commerce",
+        "appearance_count": 3,
+        "recommended_count": 3,
+        "query_clusters": [
+          "A",
+          "C"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-A03-attempt-01",
+          "2026-10-01-doubao-DB-C01-attempt-01",
+          "2026-10-01-doubao-DB-C02-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "Eastside Co",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "A",
+          "B"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-A03-attempt-01",
+          "2026-10-01-doubao-DB-B03-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "Fengge Technology",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "A",
+          "B"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-A02-attempt-01",
+          "2026-10-01-doubao-DB-B02-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "Fuel Made",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "A",
+          "C"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-A03-attempt-01",
+          "2026-10-01-doubao-DB-C02-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "IWISH",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "C",
+          "F"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-C02-attempt-01",
+          "2026-10-01-doubao-DB-F03-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "Kedeng Cross-border",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "A",
+          "E"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-A03-attempt-01",
+          "2026-10-01-doubao-DB-E01-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "Loomic",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "A",
+          "B"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-A02-attempt-01",
+          "2026-10-01-doubao-DB-B03-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "RaftLabs",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "A",
+          "B"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-A03-attempt-01",
+          "2026-10-01-doubao-DB-B03-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "WayToGlobal",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "A",
+          "F"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-A03-attempt-01",
+          "2026-10-01-doubao-DB-F03-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "We Make Websites",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "A"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-A01-attempt-01",
+          "2026-10-01-doubao-DB-A03-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "WebContrive",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "E"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-E01-attempt-01",
+          "2026-10-01-doubao-DB-E02-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      },
+      {
+        "platform": "Doubao",
+        "company": "Zalify",
+        "appearance_count": 2,
+        "recommended_count": 2,
+        "query_clusters": [
+          "F"
+        ],
+        "result_ids": [
+          "2026-10-01-doubao-DB-F01-attempt-01",
+          "2026-10-01-doubao-DB-F02-attempt-01"
+        ],
+        "evidence": [],
+        "independent_endorsement": null
+      }
+    ]
+  },
+  "cross_platform_competitors": [
+    {
+      "company": "WESWOO",
+      "platforms": [
+        "ChatGPT",
+        "Perplexity",
+        "Doubao"
+      ],
+      "total_recommended_answers": 13,
+      "by_platform": {
+        "ChatGPT": 2,
+        "Perplexity": 3,
+        "Doubao": 8
+      }
+    },
+    {
+      "company": "EastDTC / EastDigi",
+      "platforms": [
+        "ChatGPT",
+        "Perplexity",
+        "Doubao"
+      ],
+      "total_recommended_answers": 10,
+      "by_platform": {
+        "ChatGPT": 2,
+        "Perplexity": 2,
+        "Doubao": 6
+      }
+    },
+    {
+      "company": "Cheriscon",
+      "platforms": [
+        "ChatGPT",
+        "Perplexity",
+        "Doubao"
+      ],
+      "total_recommended_answers": 8,
+      "by_platform": {
+        "ChatGPT": 2,
+        "Perplexity": 1,
+        "Doubao": 5
+      }
+    },
+    {
+      "company": "YIGO Tech",
+      "platforms": [
+        "ChatGPT",
+        "Perplexity",
+        "Doubao"
+      ],
+      "total_recommended_answers": 8,
+      "by_platform": {
+        "ChatGPT": 1,
+        "Perplexity": 2,
+        "Doubao": 5
+      }
+    },
+    {
+      "company": "Swanky",
+      "platforms": [
+        "ChatGPT",
+        "Perplexity",
+        "Doubao"
+      ],
+      "total_recommended_answers": 4,
+      "by_platform": {
+        "ChatGPT": 2,
+        "Perplexity": 1,
+        "Doubao": 1
+      }
+    },
+    {
+      "company": "Cyberklick",
+      "platforms": [
+        "ChatGPT",
+        "Doubao"
+      ],
+      "total_recommended_answers": 5,
+      "by_platform": {
+        "ChatGPT": 1,
+        "Doubao": 4
+      }
+    },
+    {
+      "company": "Netalico",
+      "platforms": [
+        "ChatGPT",
+        "Perplexity"
+      ],
+      "total_recommended_answers": 5,
+      "by_platform": {
+        "ChatGPT": 2,
+        "Perplexity": 3
+      }
+    },
+    {
+      "company": "Avex",
+      "platforms": [
+        "ChatGPT",
+        "Doubao"
+      ],
+      "total_recommended_answers": 4,
+      "by_platform": {
+        "ChatGPT": 1,
+        "Doubao": 3
+      }
+    },
+    {
+      "company": "Shinetech Software",
+      "platforms": [
+        "ChatGPT",
+        "Perplexity"
+      ],
+      "total_recommended_answers": 4,
+      "by_platform": {
+        "ChatGPT": 1,
+        "Perplexity": 3
+      }
+    },
+    {
+      "company": "Convertibles",
+      "platforms": [
+        "ChatGPT",
+        "Doubao"
+      ],
+      "total_recommended_answers": 3,
+      "by_platform": {
+        "ChatGPT": 2,
+        "Doubao": 1
+      }
+    },
+    {
+      "company": "DTC Pages",
+      "platforms": [
+        "ChatGPT",
+        "Doubao"
+      ],
+      "total_recommended_answers": 3,
+      "by_platform": {
+        "ChatGPT": 2,
+        "Doubao": 1
+      }
+    },
+    {
+      "company": "Eastside Co",
+      "platforms": [
+        "ChatGPT",
+        "Doubao"
+      ],
+      "total_recommended_answers": 3,
+      "by_platform": {
+        "ChatGPT": 1,
+        "Doubao": 2
+      }
+    },
+    {
+      "company": "Loomic",
+      "platforms": [
+        "ChatGPT",
+        "Doubao"
+      ],
+      "total_recommended_answers": 3,
+      "by_platform": {
+        "ChatGPT": 1,
+        "Doubao": 2
+      }
+    },
+    {
+      "company": "WebContrive",
+      "platforms": [
+        "ChatGPT",
+        "Doubao"
+      ],
+      "total_recommended_answers": 3,
+      "by_platform": {
+        "ChatGPT": 1,
+        "Doubao": 2
+      }
+    },
+    {
+      "company": "Barrel",
+      "platforms": [
+        "ChatGPT",
+        "Doubao"
+      ],
+      "total_recommended_answers": 2,
+      "by_platform": {
+        "ChatGPT": 1,
+        "Doubao": 1
+      }
+    },
+    {
+      "company": "Flux",
+      "platforms": [
+        "ChatGPT",
+        "Perplexity"
+      ],
+      "total_recommended_answers": 2,
+      "by_platform": {
+        "ChatGPT": 1,
+        "Perplexity": 1
+      }
+    },
+    {
+      "company": "Hui Creative",
+      "platforms": [
+        "ChatGPT",
+        "Doubao"
+      ],
+      "total_recommended_answers": 2,
+      "by_platform": {
+        "ChatGPT": 1,
+        "Doubao": 1
+      }
+    },
+    {
+      "company": "Shero Commerce",
+      "platforms": [
+        "ChatGPT",
+        "Doubao"
+      ],
+      "total_recommended_answers": 2,
+      "by_platform": {
+        "ChatGPT": 1,
+        "Doubao": 1
+      }
+    }
+  ],
+  "all_three_platforms": [
+    "WESWOO",
+    "EastDTC / EastDigi",
+    "Cheriscon",
+    "YIGO Tech",
+    "Swanky"
+  ],
+  "human_review_status": "approved",
+  "freeze_status": "FROZEN",
+  "human_reviewed_at": "2026-10-01",
+  "authority_sprint": "NOT YET IMPLEMENTED"
+}

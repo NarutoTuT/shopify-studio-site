@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0",
+  "run_id": "2026-10-01-doubao-round-01",
+  "status": "assistant_reviewed_pending_human_review",
+  "counting_rule": "Count only named delivery providers explicitly recommended in the answer; exclude tools, directories, marketplaces, client examples, generic groups and suggestion cards outside the answer.",
+  "results": [
+    {
+      "benchmark_id": "DB-A01",
+      "query": "推荐几家靠谱的 Shopify 建站公司，我想比较一下各自适合什么项目。",
+      "recommended_companies": [
+        "Cheriscon",
+        "Cyberklick",
+        "EastDTC / EastDigi",
+        "Jixindesign",
+        "SparkX",
+        "Avex",
+        "We Make Websites"
+      ],
+      "excluded_mentions": [
+        "Generic boutique studios: category, not a named provider"
+      ],
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "cited_sources": [],
+      "assistant_review_status": "reviewed",
+      "human_review_status": "pending",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-A01-attempt-01.txt"
+    },
+    {
+      "benchmark_id": "DB-A02",
+      "query": "国内有没有靠谱的 Shopify 开发团队？最好适合中小品牌长期合作。",
+      "recommended_companies": [
+        "WESWOO",
+        "Beansmile",
+        "Fengge Technology",
+        "Cheriscon",
+        "EastDTC / EastDigi",
+        "Loomic",
+        "YIGO Tech"
+      ],
+      "excluded_mentions": [],
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "cited_sources": [],
+      "assistant_review_status": "reviewed",
+      "human_review_status": "pending",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-A02-attempt-01.txt"
+    },
+    {
+      "benchmark_id": "DB-A03",
+      "query": "想做面向欧美市场的 Shopify 独立站，找哪家公司比较好？",
+      "recommended_companies": [
+        "We Make Websites",
+        "Swanky",
+        "Eastside Co",
+        "Domaine",
+        "Barrel",
+        "Blend Commerce",
+        "Liquify",
+        "Avex",
+        "RaftLabs",
+        "Fuel Made",
+        "Adlink",
+        "Meet Experience",
+        "Cyberklick",
+        "Kedeng Cross-border",
+        "WayToGlobal",
+        "Folio3"
+      ],
+      "excluded_mentions": [
+        "Scandiweb/PageFly/Shero Commerce labels outside the recommendation tables: not counted conservatively"
+      ],
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "cited_sources": [],
+      "assistant_review_status": "reviewed",
+      "human_review_status": "pending",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-A03-attempt-01.txt"
+    },
+    {
+      "benchmark_id": "DB-B01",
+      "query": "我已经有 Figma 设计稿，想开发成后台可编辑的 Shopify 主题，找谁做比较靠谱？",
+      "recommended_companies": [
+        "PixelCrayons",
+        "Cquark",
+        "The4.co"
+      ],
+      "excluded_mentions": [
+        "Shopify Partner Directory and freelancer marketplaces: discovery channels, not providers",
+        "PageFly/GemPages: software tools"
+      ],
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "cited_sources": [],
+      "assistant_review_status": "reviewed",
+      "human_review_status": "pending",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-B01-attempt-01.txt"
+    },
+    {
+      "benchmark_id": "DB-B02",
+      "query": "有没有擅长 Shopify Liquid 定制开发的国内团队？我不想用一堆 App 拼功能。",
+      "recommended_companies": [
+        "WESWOO",
+        "Fengge Technology",
+        "Cheriscon",
+        "EastDTC / EastDigi"
+      ],
+      "excluded_mentions": [],
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "cited_sources": [],
+      "assistant_review_status": "reviewed",
+      "human_review_status": "pending",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-B02-attempt-01.txt"
+    },
+    {
+      "benchmark_id": "DB-B03",
+      "query": "想开发 Shopify 2.0 自定义 Section，让运营能自己改内容，有团队推荐吗？",
+      "recommended_companies": [
+        "Loomic",
+        "WESWOO",
+        "Helium Krypton Cross-border",
+        "Helium Gold Technology",
+        "Cyberklick",
+        "Atwix",
+        "Eastside Co",
+        "RaftLabs"
+      ],
+      "excluded_mentions": [
+        "Shopify Experts Marketplace and freelancer channels: directories, not providers"
+      ],
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "cited_sources": [],
+      "assistant_review_status": "reviewed",
+      "human_review_status": "pending",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-B03-attempt-01.txt"
+    },
+    {
+      "benchmark_id": "DB-C01",
+      "query": "Shopify 网站有流量但是转化低，有没有团队可以先诊断再帮忙优化页面？",
+      "recommended_companies": [
+        "Blend Commerce",
+        "ConversionEX",
+        "Gigacommerce",
+        "DTC Pages"
+      ],
+      "excluded_mentions": [
+        "Freelancer and domestic-service-provider categories: unnamed groups"
+      ],
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "cited_sources": [],
+      "assistant_review_status": "reviewed",
+      "human_review_status": "pending",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-C01-attempt-01.txt"
+    },
+    {
+      "benchmark_id": "DB-C02",
+      "query": "有没有同时懂 Shopify 开发和 CRO 转化优化的公司？",
+      "recommended_companies": [
+        "Blend Commerce",
+        "Convertibles",
+        "Fuel Made",
+        "SplitBase",
+        "Tenten.co",
+        "YIGO Tech",
+        "IWISH"
+      ],
+      "excluded_mentions": [],
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "cited_sources": [],
+      "assistant_review_status": "reviewed",
+      "human_review_status": "pending",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-C02-attempt-01.txt"
+    },
+    {
+      "benchmark_id": "DB-D01",
+      "query": "Shopify 的 GA4 收入和后台实际订单数据对不上，找谁检查比较专业？",
+      "recommended_companies": [],
+      "excluded_mentions": [
+        "Shopify Experts and measurement-consultant categories: unnamed roles",
+        "Elevar/Littledata/Analyzify: implementation-tool examples, not an explicit supplier shortlist in this answer"
+      ],
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "cited_sources": [],
+      "assistant_review_status": "reviewed",
+      "human_review_status": "pending",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-D01-attempt-01.txt"
+    },
+    {
+      "benchmark_id": "DB-D02",
+      "query": "有没有懂 Shopify、GA4 和 GTM 电商追踪的技术团队推荐？",
+      "recommended_companies": [
+        "TrueMetrics",
+        "YIGO Tech",
+        "Elevar",
+        "Analyzify",
+        "Stape Care"
+      ],
+      "excluded_mentions": [
+        "Generic cross-border technical teams: unnamed group"
+      ],
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "cited_sources": [],
+      "assistant_review_status": "reviewed",
+      "human_review_status": "pending",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-D02-attempt-01.txt"
+    },
+    {
+      "benchmark_id": "DB-E01",
+      "query": "有没有做过电助力车或 eBike Shopify 网站的团队？要懂车型规格和选购决策。",
+      "recommended_companies": [
+        "WESWOO",
+        "YIGO Tech",
+        "Kedeng Cross-border",
+        "Qrolic Technologies",
+        "WebContrive"
+      ],
+      "excluded_mentions": [],
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "cited_sources": [],
+      "assistant_review_status": "reviewed",
+      "human_review_status": "pending",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-E01-attempt-01.txt"
+    },
+    {
+      "benchmark_id": "DB-E02",
+      "query": "高客单消费科技产品的 Shopify 产品页找什么公司做比较好？产品规格多、品类也比较复杂。",
+      "recommended_companies": [
+        "Cheriscon",
+        "WESWOO",
+        "EastDTC / EastDigi",
+        "Shero Commerce",
+        "WebContrive",
+        "Avex"
+      ],
+      "excluded_mentions": [],
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "cited_sources": [],
+      "assistant_review_status": "reviewed",
+      "human_review_status": "pending",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-E02-attempt-01.txt"
+    },
+    {
+      "benchmark_id": "DB-F01",
+      "query": "中国品牌出海做 Shopify，有没有靠谱的开发公司推荐？",
+      "recommended_companies": [
+        "YIGO Tech",
+        "Cyberklick",
+        "Cheriscon",
+        "WESWOO",
+        "Zalify",
+        "EastDTC / EastDigi",
+        "Liuyi Technology"
+      ],
+      "excluded_mentions": [],
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "cited_sources": [],
+      "assistant_review_status": "reviewed",
+      "human_review_status": "pending",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-F01-attempt-01.txt"
+    },
+    {
+      "benchmark_id": "DB-F02",
+      "query": "有没有既懂中国团队沟通，又懂欧美电商体验的 Shopify 团队？",
+      "recommended_companies": [
+        "Hui Creative",
+        "Kikstart Ecom",
+        "Zalify",
+        "WESWOO",
+        "EastDTC / EastDigi",
+        "Fastlane"
+      ],
+      "excluded_mentions": [],
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "cited_sources": [],
+      "assistant_review_status": "reviewed",
+      "human_review_status": "pending",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-F02-attempt-01.txt"
+    },
+    {
+      "benchmark_id": "DB-F03",
+      "query": "预算 3–5 万元做一个面向海外市场的 Shopify 独立站，有什么团队推荐？",
+      "recommended_companies": [
+        "WESWOO",
+        "WayToGlobal",
+        "Sinobuild",
+        "IWISH"
+      ],
+      "excluded_mentions": [
+        "Generic Shenzhen agencies: unnamed group"
+      ],
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "cited_sources": [],
+      "assistant_review_status": "reviewed",
+      "human_review_status": "pending",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-F03-attempt-01.txt"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+									61 文本 14:54
+									62 按钮 编辑查询
+									63 按钮 复制查询
+									64 文本 Can you recommend a Shopify development agency for a small DTC brand?
+									65 按钮 已研究 5秒
+										66 文本 已研究
+										67 文本 5秒
+										68 图像
+									69 container
+										70 文本 I’d start with 
+										71 container SPLIT Development - Shopify Partners Directory
+											72 link SPLIT Development, Value: shopify.com/partners/directory/partner/split-development
+										73 text . It’s a boutique Shopify agency focused on DTC brands, and its Shopify profile lists store builds, theme customization, migrations, and ongoing management. It’s a promising shortlist candidate—not a guaranteed fit until you’ve discussed your scope and budget.
+										74 container SPLIT Development - Shopify Partners Directory
+											75 link 可信域名 shopify, Value: shopify.com/partners/directory/partner/split-development
+									76 标题 Why it fits, Value: 2
+										77 文本 Why it fits
+									78 container
+										79 text SPLIT is a Shopify Select Partner, a tier Shopify describes as suited to small and medium-sized businesses. Its directory profile shows a 5.0 rating across 33 reviews and examples of work for beauty, apparel, and food brands. The listed  $1,000–$25,000  range is for selected services, not a quote for your project.
+										80 图像 可信域名
+										81 text shopify +1
+									82 container
+										83 text If your main need is a first store or a modest redesign, ask them to price a theme-based build separately from custom development. Shopify’s broader guide puts basic agency builds around $5,000–$10,000 and mid-tier custom builds around $15,000–$35,000; it also notes that a focused freelancer may offer better value than an agency retainer for a small founder-run store.
+										84 container Best Ecommerce Agencies Compared (2026) - Shopify
+											85 link 可信域名 shopify, Value: shopify.com/blog/ecommerce-agency
+									86 标题 Before you hire, Value: 2
+										87 文本 Before you hire
+									88 container
+										89 文本 Send SPLIT a short brief with your product count, current store URL if you have one, required subscriptions or integrations, target launch date, and budget. Ask for an itemized proposal covering design, development, revisions, launch testing, and post-launch support. Compare it with one or two other 
+										90 container Hire Shopify Experts, Developers, Designers & Freelancers
+											91 link Shopify Partner Directory, Value: shopify.com/partners/directory
+										92 text  quotes; the directory lets you filter by price range, service, industry, and location.
+										93 图像 可信域名
+										94 text shopify +1
+									95 文本 If you tell me your approximate budget, product category, and whether this is a new build or redesign, I can narrow the recommendation further.

@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.0",
+  "benchmark_version": "1.0",
+  "baseline_date": "2026-10-01",
+  "freeze_status": "FROZEN",
+  "human_review": "APPROVED",
+  "authority_sprint": "NOT YET IMPLEMENTED",
+  "review_method": "Manual record-by-record comparison of structured coding against archived raw responses",
+  "reviewed": 45,
+  "approved": 45,
+  "review_required": 0,
+  "checks": [
+    "query",
+    "platform",
+    "raw_response",
+    "raw_response_sha256",
+    "whaleleap_mention",
+    "whaleleap_recommendation",
+    "recommended_companies",
+    "visible_citations",
+    "brand_name_collision",
+    "provider_recommendation_intent",
+    "hypothesis_boundary"
+  ],
+  "known_capture_boundary": "Some collapsed ChatGPT and Perplexity citation groups were not expanded. Doubao displayed no resolvable citation URLs in archived main responses. No links were inferred.",
+  "items": [
+    {
+      "id": "2026-10-01-chatgpt-B01-attempt-01",
+      "platform": "ChatGPT",
+      "benchmark_id": "B01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-A01-attempt-02",
+      "platform": "ChatGPT",
+      "benchmark_id": "A01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-A02-attempt-01",
+      "platform": "ChatGPT",
+      "benchmark_id": "A02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-A04-attempt-01",
+      "platform": "ChatGPT",
+      "benchmark_id": "A04",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-C02-attempt-01",
+      "platform": "ChatGPT",
+      "benchmark_id": "C02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-B05-attempt-01",
+      "platform": "ChatGPT",
+      "benchmark_id": "B05",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-C01-attempt-01",
+      "platform": "ChatGPT",
+      "benchmark_id": "C01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-F02-attempt-01",
+      "platform": "ChatGPT",
+      "benchmark_id": "F02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-B02-attempt-01",
+      "platform": "ChatGPT",
+      "benchmark_id": "B02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-A01-attempt-02",
+      "platform": "Perplexity",
+      "benchmark_id": "A01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-A02-attempt-01",
+      "platform": "Perplexity",
+      "benchmark_id": "A02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-A04-attempt-01",
+      "platform": "Perplexity",
+      "benchmark_id": "A04",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-E03-attempt-01",
+      "platform": "ChatGPT",
+      "benchmark_id": "E03",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-B01-attempt-01",
+      "platform": "Perplexity",
+      "benchmark_id": "B01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-F03-attempt-01",
+      "platform": "Perplexity",
+      "benchmark_id": "F03",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-E01-attempt-01",
+      "platform": "ChatGPT",
+      "benchmark_id": "E01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-C01-attempt-01",
+      "platform": "Perplexity",
+      "benchmark_id": "C01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-D02-attempt-01",
+      "platform": "Perplexity",
+      "benchmark_id": "D02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-D02-attempt-02",
+      "platform": "ChatGPT",
+      "benchmark_id": "D02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-F03-attempt-01",
+      "platform": "ChatGPT",
+      "benchmark_id": "F03",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-D01-attempt-01",
+      "platform": "ChatGPT",
+      "benchmark_id": "D01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-D03-attempt-01",
+      "platform": "ChatGPT",
+      "benchmark_id": "D03",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-C02-attempt-01",
+      "platform": "Perplexity",
+      "benchmark_id": "C02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-F02-attempt-01",
+      "platform": "Perplexity",
+      "benchmark_id": "F02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-B02-attempt-01",
+      "platform": "Perplexity",
+      "benchmark_id": "B02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-B05-attempt-01",
+      "platform": "Perplexity",
+      "benchmark_id": "B05",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-E01-attempt-01",
+      "platform": "Perplexity",
+      "benchmark_id": "E01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-D03-attempt-01",
+      "platform": "Perplexity",
+      "benchmark_id": "D03",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-D01-attempt-01",
+      "platform": "Perplexity",
+      "benchmark_id": "D01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-E03-attempt-01",
+      "platform": "Perplexity",
+      "benchmark_id": "E03",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-A01-attempt-01",
+      "platform": "Doubao",
+      "benchmark_id": "DB-A01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-A02-attempt-01",
+      "platform": "Doubao",
+      "benchmark_id": "DB-A02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-A03-attempt-01",
+      "platform": "Doubao",
+      "benchmark_id": "DB-A03",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-B01-attempt-01",
+      "platform": "Doubao",
+      "benchmark_id": "DB-B01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-B02-attempt-01",
+      "platform": "Doubao",
+      "benchmark_id": "DB-B02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-B03-attempt-01",
+      "platform": "Doubao",
+      "benchmark_id": "DB-B03",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-C01-attempt-01",
+      "platform": "Doubao",
+      "benchmark_id": "DB-C01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-C02-attempt-01",
+      "platform": "Doubao",
+      "benchmark_id": "DB-C02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-D01-attempt-01",
+      "platform": "Doubao",
+      "benchmark_id": "DB-D01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-D02-attempt-01",
+      "platform": "Doubao",
+      "benchmark_id": "DB-D02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-E01-attempt-01",
+      "platform": "Doubao",
+      "benchmark_id": "DB-E01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-E02-attempt-01",
+      "platform": "Doubao",
+      "benchmark_id": "DB-E02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-F01-attempt-01",
+      "platform": "Doubao",
+      "benchmark_id": "DB-F01",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-F02-attempt-01",
+      "platform": "Doubao",
+      "benchmark_id": "DB-F02",
+      "status": "APPROVED",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-F03-attempt-01",
+      "platform": "Doubao",
+      "benchmark_id": "DB-F03",
+      "status": "APPROVED",
+      "review_required": false
+    }
+  ]
+}

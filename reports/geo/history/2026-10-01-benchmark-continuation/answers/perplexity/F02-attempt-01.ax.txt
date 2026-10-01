@@ -1,0 +1,88 @@
+70 button (collapsed) 已研究 10秒, Secondary Actions: Expand
+							71 text 已研究
+							72 text 10秒
+							73 image
+						74 container
+							75 text 如果你们是中国品牌、明确要做  Shopify  出海站，我建议先比较不同能力类型的团队，而不是照“十大排名”直接选一家：找一家偏品牌与增长、一家偏技术集成，再找一家能提供目标市场本地化经验的团队，拿同一份需求书让他们报价。Shopify 官方合作伙伴目录可按服务、地区和价格筛选，并查看作品与评价；目录中的团队独立提供服务，入驻不等于 Shopify 为交付结果背书。
+							76 container Hire Shopify Experts, Developers, Designers & Freelancers
+								77 link Description: 可信域名 shopify, Value: shopify.com/partners/directory
+						78 heading 值得进入初选的团队, Value: 2
+							79 text 值得进入初选的团队
+						80 container
+							81 text 以下是 候选名单，不是质量排名 ；适配判断依据是各团队在 Shopify 官方目录列出的服务和案例，实际交付能力仍需面谈、看案例和核验人员。
+							82 image 可信域名
+							83 text shopify +1
+						179 container
+							180 table
+								181 row
+									182 cell
+										183 text 团队
+									184 cell
+										185 text 建议在什么情况下比较
+									186 cell
+										187 text 重点核验什么
+								188 row
+									189 cell
+										190 text 翼果科技（深圳）
+									191 cell
+										192 text 需要 DTC 建站，同时考虑迁移、B2B、定制应用或后续优化。其目录展示了 Anycubic、Autel 等项目，列有建站、迁移、B2B 和集成服务。
+										193 container 翼果科技 - Shopify Partners Directory
+											194 link Description: 可信域名 shopify, Value: shopify.com/partners/directory/partner/yiguotech1
+									195 cell
+										196 text 请其展示与你们品类相近的
+										197 text 实际交付范围
+										198 text ，而不只看品牌名单。
+								199 row
+									200 cell
+										201 text EastDTC／隽永东方（无锡）
+									202 cell
+										203 text 希望把品牌站开发、内容和获客一起纳入比选。目录列有自定义应用与集成、SEO 等服务。
+										204 container
+											205 image 可信域名
+											206 text shopify +1
+									207 cell
+										208 text 区分“建站团队”和“营销团队”的负责人、费用及效果责任。
+								209 row
+									210 cell
+										211 text Shinetech Software（长春）
+									212 cell
+										213 text 有 ERP、订单、库存等系统对接，或需要定制应用、数据迁移。目录明确列出系统集成、应用开发和主题定制。
+										214 container Shinetech Software - Shopify Partners Directory
+											215 link Description: 可信域名 shopify, Value: shopify.com/partners/directory/partner/shinetech-changchun
+									216 cell
+										217 text 要求给出接口方案、异常处理方式及上线后的维护安排。
+								218 row
+									219 cell
+										220 text 西西木 WESWOO（深圳）
+									221 cell
+										222 text 已有店铺，主要想做 Liquid 主题二开、交互或无头前端。其目录将这些列为专长。
+										223 container 西西木（深圳）科技有限责任公司
+											224 link Description: 可信域名 shopify, Value: shopify.com/partners/directory/partner/10395
+									225 cell
+										226 text 看开发人员的实际作品，并确认复杂前端是否值得额外维护成本。
+								227 row
+									228 cell
+										229 text CLEARgo（香港及亚洲团队）
+									230 cell
+										231 text 已有一定规模，计划做 Shopify Plus、多地区站点或线上线下会员整合。其目录展示了多市场、迁移及系统集成案例。
+										232 container Cleargo - Shopify Partners Directory
+											233 link Description: 可信域名 shopify, Value: shopify.com/partners/directory/partner/cleargo-e-business-consultancy-pte-ltd
+									234 cell
+										235 text 核对案例中由其负责的部分，以及跨地区项目的实施和维护报价。
+							236 container
+								237 button 复制表格
+								238 button 下载 CSV
+								239 button 展开表格
+						140 container
+							141 text 如果主要卖欧美，也可以让目标市场的当地团队参与一轮比稿；本地消费者体验和中文项目沟通，两者的权重取决于你们内部已有多少海外运营能力。Shopify 官方目录支持按地点、语言和服务继续筛选。
+							142 image 可信域名
+							143 text help.shopify +1
+						144 heading 怎样让报价可比, Value: 2
+							145 text 怎样让报价可比
+						146 container
+							147 text 给每家同一份简短需求书：目标国家与语言、SKU 数量、现有系统、支付与物流需求、参考网站、预计上线时间，以及谁负责英文文案和素材。要求报价 分别列出 主题与设计、功能开发、第三方应用、数据迁移、系统集成、测试上线、培训和上线后维护；同时写清哪些是一次性费用，哪些需要持续付费。官方目录中的不少团队标注“联系获取报价”，因此不宜把网上的统一价目表当作预算依据。
+							148 container Hire Shopify Partners in China
+								149 link Description: 可信域名 shopify, Value: shopify.com/partners/directory/locations/china
+						150 container
+							151 text 面谈时，最有区分度的三个要求是：演示一个与你们业务相近的真实站点；说明项目由谁设计、开发和验收；交付一份包含范围、里程碑、验收标准和维护响应的书面方案。 先明确要解决的业务问题，再决定技术复杂度 ：如果只是首次验证海外销售，不必因为供应商擅长 Shopify Plus 或无头架构，就默认从复杂方案起步。
+						

@@ -1,0 +1,61 @@
+91 button (collapsed) 已研究 3秒, Secondary Actions: Expand
+							92 text 已研究
+							93 text 3秒
+							94 image
+						95 container
+							96 text 你要找的不是单纯“改页面”的设计团队，而是能 先查清点击为何没变成订单，再按诊断结果改落地页或商品页 的 Shopify 转化率优化（CRO）团队。按公开服务内容，我会先联系 ConversionWise；如果你也怀疑广告流量质量或追踪设置有问题，把 UM 一起列入询价名单。两家的能力描述主要来自其官网，最终要看他们针对你店铺给出的诊断范围和交付方案。 conversionwise +1
+						97 heading 候选团队, Value: 2
+							98 text 候选团队
+						99 container
+							100 table
+								101 row
+									102 cell
+										103 text 选择
+									104 cell
+										105 text 适合的情况
+									106 cell
+										107 text 联系前要确认
+								108 row
+									109 cell
+										110 container ConversionWise: Shopify CRO & Post-Click Growth Agency
+											111 link Description: ConversionWise, Value: conversionwise.com/
+									112 cell
+										113 text 更侧重点击后的转化：其流程是分析商店、漏斗和用户行为，确定优先事项，再制作或优化落地页、商品页等；也提供单独的点击后审核。
+									114 cell
+										115 text 请他们明确首阶段是否能
+										116 text 只做诊断
+										117 text 、交付什么报告，以及页面修改和测试如何另行报价。
+										118 container ConversionWise: Shopify CRO & Post-Click Growth Agency
+											119 link Description: conversionwise, Value: conversionwise.com/
+								120 row
+									121 cell
+										122 container Shopify Marketing Agency | UM — 200+ Shopify Brands Scaled
+											123 link Description: UM, Value: um.marketing/
+									124 cell
+										125 text 如果需要把广告账户和网站放在一起查。官网列有 
+										126 text $299 的 Shopify 电商审核
+										127 text ，涵盖广告设置、历史及当前广告活动、网站转化建议和行动计划。
+									128 cell
+										129 text 确认审核后是否由同一团队实际设计、开发并上线页面；官网对这一交付的说明没有诊断服务那么明确。
+										130 container Shopify Marketing Agency | UM — 200+ Shopify Brands Scaled
+											131 link Description: um, Value: um.marketing/
+								132 row
+									133 cell
+										134 container 聘请Shopify 专家、开发人员、设计师和自由职业者
+											135 link Description: Shopify 合作伙伴目录, Value: shopify.com/zh/partners/directory
+									136 cell
+										137 text 想按预算、地区或语言另找团队时，可从“网站审核和优化策略”入手，再核对其页面设计或模板自定义能力、评论和作品。
+									138 cell
+										139 text 逐一询问是否接受“诊断一期、改版二期”，不要只凭目录类别判断其能包办全程。
+										140 container 聘请Shopify 专家、开发人员、设计师和自由职业者
+											141 link Description: 可信域名 shopify, Value: shopify.com/zh/partners/directory
+							142 container
+								143 button 复制表格
+								144 button 下载 CSV
+								145 button 展开表格
+						146 heading 怎么谈项目, Value: 2
+							147 text 怎么谈项目
+						148 container
+							149 text 先要求一份 诊断交付物 ，而不是直接买整站重做：让团队核对广告点击与实际到站、转化追踪、不同广告的落地页，以及用户从浏览商品到结账在哪一步流失；再列出有证据支持的页面修改优先级。这样既能查“来的是否是对的人”，也能避免把广告或追踪问题误当作页面问题。ConversionWise 的服务重点是点击后漏斗；UM 的公开审核范围同时覆盖广告与网站，因此可以让两家分别说明会查到哪一步。 conversionwise +1
+						150 text 你可以直接发给候选团队：“我们 Shopify 店广告有点击但订单少。希望先独立诊断广告到落地页再到结账的漏斗，交付问题证据、优先级和改版方案；确认诊断后，再单独决定页面设计开发。请分别报价，并说明需要哪些只读数据权限。”
+						

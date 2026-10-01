@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "benchmark_version": "1.0",
+  "freeze_status": "FROZEN",
+  "source_type_counts": {
+    "provider_owned_page": 53,
+    "platform_directory": 60,
+    "provider_owned_comparison": 1,
+    "platform_official_guidance": 11,
+    "review_platform": 1
+  },
+  "patterns": [
+    "ChatGPT and Perplexity citations are dominated by provider-owned pages and Shopify Partner Directory pages.",
+    "Only one independent review-platform source was recorded.",
+    "Doubao showed reference counts or labels but no resolvable URLs in the archived main responses; cited_sources remains empty.",
+    "Visible citation capture is not independent verification of supplier claims."
+  ]
+}

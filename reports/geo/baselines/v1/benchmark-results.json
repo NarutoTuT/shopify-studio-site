@@ -1,0 +1,4135 @@
+{
+  "schema_version": "1.0",
+  "benchmark_version": "wl-geo-v1",
+  "status": "frozen_human_review_approved",
+  "platforms": [
+    {
+      "platform": "ChatGPT",
+      "status": "frozen_human_review_approved",
+      "tested_at": "2026-10-01T15:13:17.554+08:00",
+      "reason": "15/15 archived and manually reviewed. Benchmark v1.0 frozen on 2026-10-01."
+    },
+    {
+      "platform": "Perplexity",
+      "status": "frozen_human_review_approved",
+      "tested_at": "2026-10-01T15:16:23.337+08:00",
+      "reason": "15/15 archived and manually reviewed. Benchmark v1.0 frozen on 2026-10-01."
+    },
+    {
+      "platform": "Doubao",
+      "status": "frozen_human_review_approved",
+      "tested_at": "2026-10-01T07:36:32.025Z",
+      "reason": "15/15 archived and manually reviewed. Benchmark v1.0 frozen on 2026-10-01."
+    }
+  ],
+  "runs": [
+    {
+      "id": "2026-10-01-post-silkgear-round-01-chatgpt",
+      "platform": "ChatGPT",
+      "manifest_file": "history/2026-10-01-post-silkgear-round-01/run-manifest.json",
+      "human_review_status": "approved"
+    },
+    {
+      "id": "2026-10-01-continuation-chatgpt",
+      "platform": "ChatGPT",
+      "manifest_file": "history/2026-10-01-benchmark-continuation/run-manifest-chatgpt.json",
+      "human_review_status": "approved"
+    },
+    {
+      "id": "2026-10-01-continuation-gemini",
+      "platform": "Gemini",
+      "manifest_file": "history/2026-10-01-benchmark-continuation/run-manifest-gemini.json",
+      "human_review_status": "approved"
+    },
+    {
+      "id": "2026-10-01-continuation-perplexity",
+      "platform": "Perplexity",
+      "manifest_file": "history/2026-10-01-benchmark-continuation/run-manifest-perplexity.json",
+      "human_review_status": "approved"
+    },
+    {
+      "id": "2026-10-01-doubao-round-01",
+      "platform": "Doubao",
+      "manifest_file": "history/2026-10-01-doubao-round-01/run-manifest.json",
+      "human_review_status": "approved"
+    }
+  ],
+  "results": [
+    {
+      "id": "2026-10-01-chatgpt-B01-attempt-01",
+      "run_id": "2026-10-01-post-silkgear-round-01-chatgpt",
+      "benchmark_id": "B01",
+      "status": "completed",
+      "tested_at": "2026-10-01T14:31:49+08:00",
+      "platform": "ChatGPT",
+      "query": "我已经有 Figma 设计稿，想找团队开发成可在后台编辑的 Shopify 主题，推荐谁？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "recommended_companies": [
+        {
+          "company": "Subframe",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "明确支持 Figma → Shopify"
+        },
+        {
+          "company": "FlowCart Agency",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "明确提供 Figma → Liquid"
+        },
+        {
+          "company": "Weblexia",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "把 Figma component 映射成 Shopify sections + metafields"
+        },
+        {
+          "company": "Stackframes",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "专门做 OS 2.0 custom theme / custom sections"
+        },
+        {
+          "company": "Carti Apps",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": "预算较高、项目复杂"
+        }
+      ],
+      "cited_sources": [
+        {
+          "url": "https://subframe.agency/services/development?utm_source=chatgpt.com",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "cited_for": "Recommended provider capability",
+          "independently_supports_whaleleap": null,
+          "normalized_url": "https://subframe.agency/services/development",
+          "classification_basis": "Displayed URL and answer context; not an independent content audit"
+        },
+        {
+          "url": "https://flowcartagency.com/services/shopify-custom-theme-development?utm_source=chatgpt.com",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "cited_for": "Recommended provider capability",
+          "independently_supports_whaleleap": null,
+          "normalized_url": "https://flowcartagency.com/services/shopify-custom-theme-development",
+          "classification_basis": "Displayed URL and answer context; not an independent content audit"
+        },
+        {
+          "url": "https://weblexia.in/services/figma-to-shopify?utm_source=chatgpt.com",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "cited_for": "Recommended provider capability",
+          "independently_supports_whaleleap": null,
+          "normalized_url": "https://weblexia.in/services/figma-to-shopify",
+          "classification_basis": "Displayed URL and answer context; not an independent content audit"
+        },
+        {
+          "url": "https://stackframes.dev/shopify-theme-development?utm_source=chatgpt.com",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "cited_for": "Recommended provider capability",
+          "independently_supports_whaleleap": null,
+          "normalized_url": "https://stackframes.dev/shopify-theme-development",
+          "classification_basis": "Displayed URL and answer context; not an independent content audit"
+        },
+        {
+          "url": "https://cartiapps.com/pages/services-theme-and-custom-dev?utm_source=chatgpt.com",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "cited_for": "Recommended provider capability",
+          "independently_supports_whaleleap": null,
+          "normalized_url": "https://cartiapps.com/pages/services-theme-and-custom-dev",
+          "classification_basis": "Displayed URL and answer context; not an independent content audit"
+        },
+        {
+          "url": "https://markupfox.com/?utm_source=chatgpt.com",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "cited_for": "Low-price comparison example",
+          "independently_supports_whaleleap": null,
+          "normalized_url": "https://markupfox.com/",
+          "classification_basis": "Displayed URL and answer context; not an independent content audit"
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "First complete answer; coding approved in Benchmark v1.0 final review. MarkupFox is a comparison example, not a recommendation. Inline URLs captured; grouped sources not expanded. Website domains not independently verified.",
+      "raw_response_file": "history/2026-10-01-post-silkgear-round-01/answers/chatgpt/B01-attempt-01.md",
+      "appearance_order": null,
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "excluded_mentions": [
+        "MarkupFox: price comparison example, not a shortlist recommendation",
+        "PageFly / GemPages: page-builder tools"
+      ],
+      "raw_response_sha256": "cbe972fb5c11b53341f629a3099962edbe1f96cb18b77e24be54fd446ebd14a7",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-A01-attempt-02",
+      "run_id": "2026-10-01-continuation-chatgpt",
+      "benchmark_id": "A01",
+      "status": "completed",
+      "tested_at": "2026-10-01T14:46:05.796+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "ChatGPT",
+      "query": "推荐几家靠谱的 Shopify 建站公司，我想先比较一下各自适合什么项目。",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Arctic Grey",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "复杂 Shopify Plus / B2B / ERP 集成"
+        },
+        {
+          "company": "Avex",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "高端品牌、Fashion / Beauty / Lifestyle"
+        },
+        {
+          "company": "Eastside Co",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "中大型品牌，需要建站 + 后续增长服务"
+        },
+        {
+          "company": "Swanky",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "订阅制、电商重构、国际多站点"
+        },
+        {
+          "company": "Simplistic",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": "成熟 DTC 品牌重做 Shopify 店"
+        },
+        {
+          "company": "Omnycode",
+          "website": null,
+          "appearance_order": 6,
+          "recommendation_excerpt": "中型项目、多语言 / DTC+B2B"
+        }
+      ],
+      "excluded_mentions": [
+        "Shopify Partner Directory: discovery resource, not an agency",
+        "quip, Tru Earth, NAKEDCASHMERE: client examples"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://www.shopify.com/partners/directory?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory",
+          "title": "Shopify: Hire Shopify Experts, Developers, Designers & Freelancers, https://www.shopify.com/partners/directory?utm_source=chatgpt.com, 另外 1 个来源",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/arcticgreyinc?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/arcticgreyinc",
+          "title": "Shopify: Arctic Grey - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/arcticgreyinc?utm_source=chatgpt.com",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/avexdesigns?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/avexdesigns",
+          "title": "Shopify: Avex - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/avexdesigns?utm_source=chatgpt.com",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://flux.agency/insights/best-shopify-plus-agencies-london?utm_source=chatgpt.com",
+          "normalized_url": "https://flux.agency/insights/best-shopify-plus-agencies-london",
+          "title": "Flux: Best Shopify Plus Agencies in London 2026 | Flux, https://flux.agency/insights/best-shopify-plus-agencies-london?utm_source=chatgpt.com",
+          "source_type": "provider_owned_comparison",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/swankyapple?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/swankyapple",
+          "title": "Shopify: Swanky - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/swankyapple?utm_source=chatgpt.com",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Original first answer capture failed; only separately numbered retry is analyzable. Exclude retry in strict-first-attempt sensitivity check.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/A01-attempt-02.md",
+      "raw_response_sha256": "3c3a94791adcbee780eaeda5f7dff7aa9cc39e5131a423711942af91999a851e",
+      "capture_format": "rendered_DOM_text_with_inline_links",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-A02-attempt-01",
+      "run_id": "2026-10-01-continuation-chatgpt",
+      "benchmark_id": "A02",
+      "status": "completed",
+      "tested_at": "2026-10-01T14:46:16.089+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "ChatGPT",
+      "query": "我们是小型 DTC 品牌，想找能长期合作的 Shopify 开发团队，有哪些值得聊聊？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "C2 Digital",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "小型/成长型 DTC，想找长期靠谱执行团队"
+        },
+        {
+          "company": "Netalico",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "已经有一定营收、网站需求越来越复杂"
+        },
+        {
+          "company": "WebContrive",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "预算相对克制，但需要比较全面的开发能力"
+        },
+        {
+          "company": "IMMACULATE",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "Engineer-led、senior full-stack 团队"
+        },
+        {
+          "company": "PointerFlow",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": "预算比较敏感，想先从小项目测试合作"
+        },
+        {
+          "company": "Barrel",
+          "website": null,
+          "appearance_order": 6,
+          "recommendation_excerpt": "品牌视觉和 CX 很重要"
+        }
+      ],
+      "excluded_mentions": [
+        "Klaviyo, Recharge, Gorgias, Triple Whale, GA4, Meta Pixel: software or measurement stack",
+        "Once Upon a Farm, The Outset, Bobo's: client examples"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/c2-digital?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/c2-digital",
+          "title": "Shopify: C2 Digital | Setup, Build, Migration, Redesign, Branding, Maintenance, Customization, Custom Apps - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/c2-digital?utm_source=chatgpt.com",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/netalico-llc?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/netalico-llc",
+          "title": "Shopify: Netalico - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/netalico-llc?utm_source=chatgpt.com, 另外 1 个来源",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/webcontrive?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/webcontrive",
+          "title": "Shopify: WebContrive - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/webcontrive?utm_source=chatgpt.com",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/immaculate17?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/immaculate17",
+          "title": "Shopify: IMMACULATE - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/immaculate17?utm_source=chatgpt.com",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/pixels-made?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/pixels-made",
+          "title": "Shopify: PointerFlow - Better than most of Premier Agency - B2B & DTC Agency - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/pixels-made?utm_source=chatgpt.com",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/barrel?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/barrel",
+          "title": "Shopify: Barrel - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/barrel?utm_source=chatgpt.com",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://help.shopify.com/en/partners/grow-your-business/partner-directory/how-it-works?utm_source=chatgpt.com",
+          "normalized_url": "https://help.shopify.com/en/partners/grow-your-business/partner-directory/how-it-works",
+          "title": "Shopify 帮助中心: Shopify Help Center | Overview of the Partner Directory, https://help.shopify.com/en/partners/grow-your-business/partner-directory/how-it-works?utm_source=chatgpt.com, 另外 1 个来源",
+          "source_type": "platform_official_guidance",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/zh/partners/directory/services?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/zh/partners/directory/services",
+          "title": "Shopify: 查看所有服务 - Shopify Partners Directory, https://www.shopify.com/zh/partners/directory/services?utm_source=chatgpt.com",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Triple Whale is not WhaleLeap; excluded from brand mention coding.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/A02-attempt-01.md",
+      "raw_response_sha256": "00b762aa65c257238432fbabe7ffa21bac57c71b772ceb753fc2c29d118c09a5",
+      "capture_format": "rendered_DOM_text_with_inline_links",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-A04-attempt-01",
+      "run_id": "2026-10-01-continuation-chatgpt",
+      "benchmark_id": "A04",
+      "status": "completed",
+      "tested_at": "2026-10-01T14:46:50.625+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "ChatGPT",
+      "query": "Can you recommend a Shopify development agency for a small DTC brand?",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Electric Eye",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "worth considering once you have meaningful revenue and want design + development + CRO"
+        },
+        {
+          "company": "Conspire",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "more appropriate if you’re a funded or fast-growing DTC brand"
+        }
+      ],
+      "excluded_mentions": [
+        "Storetasker: explicitly a matching marketplace, not a delivery agency; retain as adjacent procurement alternative, not direct competitor"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://www.trustpilot.com/review/storetasker.com?utm_source=chatgpt.com",
+          "normalized_url": "https://www.trustpilot.com/review/storetasker.com",
+          "title": "Trustpilot: Storetasker Reviews | Read Customer Service Reviews of storetasker.com, https://www.trustpilot.com/review/storetasker.com?utm_source=chatgpt.com",
+          "source_type": "review_platform",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/electriceye?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/electriceye",
+          "title": "Shopify: Electric Eye - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/electriceye?utm_source=chatgpt.com, 另外 1 个来源",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/conspire-agency?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/conspire-agency",
+          "title": "Shopify: Conspire Agency - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/conspire-agency?utm_source=chatgpt.com, 另外 1 个来源",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://electriceye.io/pages/services-design-development?utm_source=chatgpt.com",
+          "normalized_url": "https://electriceye.io/pages/services-design-development",
+          "title": "Electric Eye Agency: Design & Development – Electric Eye Agency, https://electriceye.io/pages/services-design-development?utm_source=chatgpt.com",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Preserve original positions 2 and 3 after excluding the matching platform; do not renumber as a ranking.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/A04-attempt-01.md",
+      "raw_response_sha256": "8bafd7bd7e19920da1920a7e354d0824be3cc9334597b05e99b5f89127e0e8fe",
+      "capture_format": "rendered_DOM_text_with_inline_links",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-C02-attempt-01",
+      "run_id": "2026-10-01-continuation-chatgpt",
+      "benchmark_id": "C02",
+      "status": "completed",
+      "tested_at": "2026-10-01T14:47:28.522+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "ChatGPT",
+      "query": "有没有同时懂 Shopify 开发和转化优化的团队可以推荐？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "DTC Pages",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "比较偏纯正的“Shopify + CRO 实验团队”"
+        },
+        {
+          "company": "RaymondMatthew",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "技术和 CRO 的结合比较完整"
+        },
+        {
+          "company": "Shero",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "强调 CRO research、A/B testing 和 Shopify 开发一起做"
+        },
+        {
+          "company": "Convertibles",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "明显偏增长型"
+        },
+        {
+          "company": "Conspire",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": "如果你希望找美国西海岸团队"
+        },
+        {
+          "company": "First and Third",
+          "website": null,
+          "appearance_order": 6,
+          "recommendation_excerpt": "复杂开发占比比较高，值得一起比较"
+        }
+      ],
+      "excluded_mentions": [
+        "GA4: measurement tool, not supplier"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/dtc-pages?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/dtc-pages",
+          "title": "Shopify: DTC Pages - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/dtc-pages?utm_source=chatgpt.com, 另外 1 个来源",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.raymondmatthew.com/?utm_source=chatgpt.com",
+          "normalized_url": "https://www.raymondmatthew.com/",
+          "title": "RaymondMatthew: Shopify Plus Development & Conversion Rate Optimization Agency | RaymondMatthew, https://www.raymondmatthew.com/?utm_source=chatgpt.com",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://sherocommerce.com/pages/shopify-cro-agency?utm_source=chatgpt.com",
+          "normalized_url": "https://sherocommerce.com/pages/shopify-cro-agency",
+          "title": "Shero Commerce: Shopify CRO Agency Services | Shero, https://sherocommerce.com/pages/shopify-cro-agency?utm_source=chatgpt.com",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://convertibles.dev/pages/shopify-cro-agency?utm_source=chatgpt.com",
+          "normalized_url": "https://convertibles.dev/pages/shopify-cro-agency",
+          "title": "CONVERTIBLES: Shopify CRO Agency for $2M+ Brands – CONVERTIBLES, https://convertibles.dev/pages/shopify-cro-agency?utm_source=chatgpt.com",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.conspireagency.com/products/shopify-cro-agency?utm_source=chatgpt.com",
+          "normalized_url": "https://www.conspireagency.com/products/shopify-cro-agency",
+          "title": "Conspire: Shopify Conversion Rate Optimization CRO Agency | Conspire, https://www.conspireagency.com/products/shopify-cro-agency?utm_source=chatgpt.com",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Conspire's long display label is normalized to Conspire. Unsupported commercial claims remain quoted platform output, not verified facts.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/C02-attempt-01.md",
+      "raw_response_sha256": "82fecb6543e4df2eee1e2574aa64a0ffbb9ca7f3c7d1e8191477081e6eed5893",
+      "capture_format": "rendered_DOM_text_with_inline_links",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-B05-attempt-01",
+      "run_id": "2026-10-01-continuation-chatgpt",
+      "benchmark_id": "B05",
+      "status": "completed",
+      "tested_at": "2026-10-01T14:53:14.210+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "ChatGPT",
+      "query": "想找人开发 Shopify 2.0 自定义 Section，让运营自己改内容，有团队推荐吗？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Yaxify",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "专门做 Custom Shopify Sections"
+        },
+        {
+          "company": "The Checkout Agency",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "更适合你后面可能持续加模块的情况"
+        },
+        {
+          "company": "Lintel",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "结构化内容他们的服务描述比较对口"
+        },
+        {
+          "company": "Subframe",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "长期可维护的主题工程"
+        },
+        {
+          "company": "MiradeWeb",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": "比较适合已有店铺继续迭代"
+        },
+        {
+          "company": "Newthink",
+          "website": null,
+          "appearance_order": 6,
+          "recommendation_excerpt": "让内部团队减少对开发人员的日常依赖"
+        },
+        {
+          "company": "Conspire",
+          "website": null,
+          "appearance_order": 7,
+          "recommendation_excerpt": "如果项目后续不只是几个 Section，可以考虑"
+        }
+      ],
+      "excluded_mentions": [
+        "Mapbox: map attribution, not a cited supplier source",
+        "Repeated map cards: count each provider once"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://yaxify.com/shopify-custom-sections-development?utm_source=chatgpt.com",
+          "normalized_url": "https://yaxify.com/shopify-custom-sections-development",
+          "title": "Yaxify: Custom Shopify Sections Development | Shopify 2.0 Section Experts | Yaxify | Yaxify.digital, https://yaxify.com/shopify-custom-sections-development?utm_source=chatgpt.com",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://thecheckoutagency.com/services/shopify-theme-development/?utm_source=chatgpt.com",
+          "normalized_url": "https://thecheckoutagency.com/services/shopify-theme-development/",
+          "title": "The Checkout Agency: Shopify Theme Development & Customization — The Checkout Agency, https://thecheckoutagency.com/services/shopify-theme-development/?utm_source=chatgpt.com",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://lintelagency.com/services/shopify-theme-development?utm_source=chatgpt.com",
+          "normalized_url": "https://lintelagency.com/services/shopify-theme-development",
+          "title": "Lintel: Shopify theme development: custom Liquid sections · Lintel, https://lintelagency.com/services/shopify-theme-development?utm_source=chatgpt.com",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://subframe.agency/services/development?utm_source=chatgpt.com",
+          "normalized_url": "https://subframe.agency/services/development",
+          "title": "subframe.agency: Custom Shopify Theme Development on Online Store 2.0, https://subframe.agency/services/development?utm_source=chatgpt.com",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Conditional location-based provider suggestions remain positive recommendations; region was not supplied or verified. Do not treat map ratings as verified reviews.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/B05-attempt-01.md",
+      "raw_response_sha256": "eec07f1e174a6c931fb9ea61755e000dd0aa0fe812783f2c3e94f04b713abb6f",
+      "capture_format": "rendered_DOM_text_with_inline_links",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-C01-attempt-01",
+      "run_id": "2026-10-01-continuation-chatgpt",
+      "benchmark_id": "C01",
+      "status": "completed",
+      "tested_at": "2026-10-01T14:54:35.226+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "ChatGPT",
+      "query": "Shopify 广告有点击但订单少，想找团队先诊断再改页面，有谁合适？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "DTC Pages",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "匹配度很高"
+        },
+        {
+          "company": "Convertibles",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "广告流量本身也可能有问题，这家值得聊"
+        },
+        {
+          "company": "Netalico",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "更适合已经有一定体量的店"
+        },
+        {
+          "company": "ForgeCRO",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "现在不想马上签长期 retainer，可以看看这家"
+        },
+        {
+          "company": "Propeller",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": "希望 Shopify 设计、开发和 CRO 一起做，也可以比较"
+        }
+      ],
+      "excluded_mentions": [
+        "Microsoft Clarity, Hotjar, Meta, Google, TikTok: tools/channels, not delivery teams"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://www.shopify.com/blog/cro-checklist?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/blog/cro-checklist",
+          "title": "Shopify: CRO Checklist: 9 CRO Steps for Ecommerce Stores (2026) - Shopify, https://www.shopify.com/blog/cro-checklist?utm_source=chatgpt.com, 另外 1 个来源",
+          "source_type": "platform_official_guidance",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/dtc-pages?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/dtc-pages",
+          "title": "Shopify: DTC Pages - Shopify Partners Directory, https://www.shopify.com/partners/directory/partner/dtc-pages?utm_source=chatgpt.com",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://convertibles.dev/pages/shopify-cro-agency?utm_source=chatgpt.com",
+          "normalized_url": "https://convertibles.dev/pages/shopify-cro-agency",
+          "title": "CONVERTIBLES: Shopify CRO Agency for $2M+ Brands – CONVERTIBLES, https://convertibles.dev/pages/shopify-cro-agency?utm_source=chatgpt.com",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://netalico.com/pages/shopify-cro-agency?utm_source=chatgpt.com",
+          "normalized_url": "https://netalico.com/pages/shopify-cro-agency",
+          "title": "Netalico: Shopify CRO Agency | Conversion Rate Optimization | Netalico, https://netalico.com/pages/shopify-cro-agency?utm_source=chatgpt.com",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://forgecro.com/shopify-cro-agency/?utm_source=chatgpt.com",
+          "normalized_url": "https://forgecro.com/shopify-cro-agency/",
+          "title": "ForgeCRO: Shopify CRO Agency - Audit-Led Conversion Fixes | ForgeCRO, https://forgecro.com/shopify-cro-agency/?utm_source=chatgpt.com, 另外 1 个来源",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.propeller.marketing/ecommerce-cro?utm_source=chatgpt.com",
+          "normalized_url": "https://www.propeller.marketing/ecommerce-cro",
+          "title": "Propeller Marketing: Ecommerce CRO Agency for Shopify | Propeller Los Angeles, https://www.propeller.marketing/ecommerce-cro?utm_source=chatgpt.com",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Diagnosis-first workflow preference is answer-observed; no evidence that it caused WhaleLeap's absence.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/C01-attempt-01.md",
+      "raw_response_sha256": "5ab721b3a1fff70874564dc9069b098ea075aef79049d679f293990ddc3dd11e",
+      "capture_format": "rendered_DOM_text_with_inline_links",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-F02-attempt-01",
+      "run_id": "2026-10-01-continuation-chatgpt",
+      "benchmark_id": "F02",
+      "status": "completed",
+      "tested_at": "2026-10-01T14:56:52.219+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "ChatGPT",
+      "query": "我们是中国品牌，准备做出海 Shopify 独立站，有哪些开发团队值得比较？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "翼果科技",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "中大型品牌、Shopify Plus、复杂功能"
+        },
+        {
+          "company": "EastDTC / EastDigi",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "DTC 品牌，希望建站之后继续做增长"
+        },
+        {
+          "company": "Cheriscon",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "中国品牌 0→1 出海、需要中文团队"
+        },
+        {
+          "company": "Cyberklick",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "技术、CRO、营销结合"
+        },
+        {
+          "company": "WESWOO",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": "技术要求高、Headless / Hydrogen / 定制交互"
+        },
+        {
+          "company": "Linkjoint",
+          "website": null,
+          "appearance_order": 6,
+          "recommendation_excerpt": "希望建站 + 海外营销一起外包"
+        },
+        {
+          "company": "TMO Group",
+          "website": null,
+          "appearance_order": 7,
+          "recommendation_excerpt": "企业级项目"
+        },
+        {
+          "company": "Wave Commerce",
+          "website": null,
+          "appearance_order": 8,
+          "recommendation_excerpt": "香港/国际团队协作"
+        }
+      ],
+      "excluded_mentions": [
+        "ESR: client example",
+        "SAP, Oracle, Salesforce, HubSpot: systems, not recommended Shopify teams"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://www.shopify.com/zh/partners/directory/locations/china?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/zh/partners/directory/locations/china",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/yiguotech1?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/yiguotech1",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/eastdigi?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/eastdigi",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/dale2?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/dale2",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/geekleads?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/geekleads",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/10395?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/10395",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/linkjoint1?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/linkjoint1",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/locations/china?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/locations/china",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Recovered original complete response through native accessibility tree, without resubmission; raw tree preserves wording and inline URLs.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/F02-attempt-01.ax.txt",
+      "raw_response_sha256": "6953617afb8b224a40981f76ed226d98e8bcc6f9d60bb03683a80a43801717cc",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-B02-attempt-01",
+      "run_id": "2026-10-01-continuation-chatgpt",
+      "benchmark_id": "B02",
+      "status": "completed",
+      "tested_at": "2026-10-01T14:56:57.264+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "ChatGPT",
+      "query": "Can you recommend a team for custom Shopify Liquid development rather than app-based workarounds?",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "First and Third",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "custom theming and front-end/back-end builds"
+        },
+        {
+          "company": "The Cool Agency",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "bespoke Shopify themes, custom development, and performance optimization"
+        },
+        {
+          "company": "SDG",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "much more enterprise-oriented"
+        },
+        {
+          "company": "Reedys",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "custom Liquid sections/templates built directly into the theme"
+        },
+        {
+          "company": "XgenTech",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": "Custom Liquid development"
+        },
+        {
+          "company": "Brickspace Lab",
+          "website": null,
+          "appearance_order": 6,
+          "recommendation_excerpt": "good candidate if design quality matters alongside engineering"
+        }
+      ],
+      "excluded_mentions": [
+        "Glossier, Mattel, Netflix: client examples",
+        "Repeated map cards: count each provider once"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/first-and-third?_cf_worker_selection=%2Fbrochure-dispatch-8a92c1bd&utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/first-and-third",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/the-cool-agency?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/the-cool-agency",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/sdg?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/sdg",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://reedysagency.com/services/liquid-development?utm_source=chatgpt.com",
+          "normalized_url": "https://reedysagency.com/services/liquid-development",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/xgentech?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/xgentech",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/brickspace-lab?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/brickspace-lab",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Recovered original complete response through native accessibility tree. SDG is retained as shown, not expanded to an unverified legal entity.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/B02-attempt-01.ax.txt",
+      "raw_response_sha256": "0a02625a4c3c5eab4ef1223357b20acc7d11f31d5f3218f36adeb1f5e71bc0bf",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-A01-attempt-02",
+      "run_id": "2026-10-01-continuation-perplexity",
+      "benchmark_id": "A01",
+      "status": "completed",
+      "tested_at": "2026-10-01T14:53:44.185+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "Perplexity",
+      "query": "推荐几家靠谱的 Shopify 建站公司，我想先比较一下各自适合什么项目。",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Zhenke Technology",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "适合先询价比较中小型项目的交付范围"
+        },
+        {
+          "company": "EastDTC / EastDigi",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "建站与 DTC 增长、营销能力一起规划"
+        },
+        {
+          "company": "翼果科技",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "出海零售站"
+        },
+        {
+          "company": "Shinetech Software",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "系统对接、定制应用、多系统整合较重"
+        },
+        {
+          "company": "Netalico",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": "面向北美的中大型 DTC"
+        }
+      ],
+      "excluded_mentions": [
+        "Big Green Egg, Audio Advice: clients",
+        "Follow-up suggestion cards: not part of the answer"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://www.shopify.com/partners/directory/locations/china",
+          "normalized_url": "https://www.shopify.com/partners/directory/locations/china",
+          "title": "Hire Shopify Partners in China",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/netalico-llc",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/netalico-llc",
+          "title": "Netalico - Shopify Partners Directory",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/services",
+          "normalized_url": "https://www.shopify.com/partners/directory/services",
+          "title": "See All Services - Shopify Partners Directory",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Attempt 1 returned a sign-in/registration gate, not a supplier answer; authenticated retry is separate.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/perplexity/A01-attempt-02.md",
+      "raw_response_sha256": "9c1c22b1593fb8251237194f33b4651cc2be2dbb3e18014565d68da11a499524",
+      "capture_format": "rendered_DOM_text_with_inline_links",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-A02-attempt-01",
+      "run_id": "2026-10-01-continuation-perplexity",
+      "benchmark_id": "A02",
+      "status": "completed",
+      "tested_at": "2026-10-01T14:54:19.999+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "Perplexity",
+      "query": "我们是小型 DTC 品牌，想找能长期合作的 Shopify 开发团队，有哪些值得聊聊？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Adex Labs",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "先聊 Adex Labs 和 eCommerce Web Guru"
+        },
+        {
+          "company": "eCommerce Web Guru",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "先聊 Adex Labs 和 eCommerce Web Guru"
+        },
+        {
+          "company": "Netalico",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "再根据预算与技术复杂度决定是否约 Netalico"
+        }
+      ],
+      "excluded_mentions": [
+        "Shopify Partner Directory: discovery resource"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/adex-labs",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/adex-labs",
+          "title": "Adex Labs - Shopify Partners Directory",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/ecommercewebguru",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/ecommercewebguru",
+          "title": "eCommerce Web Guru - Shopify Partners Directory",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://netalico.com/pages/shopify-maintenance-support",
+          "normalized_url": "https://netalico.com/pages/shopify-maintenance-support",
+          "title": "Shopify Maintenance Services & Support Plans",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory",
+          "normalized_url": "https://www.shopify.com/partners/directory",
+          "title": "Hire Shopify Experts, Developers, Designers & Freelancers",
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Conditional Netalico recommendation is retained, with small-brand mismatch caveat; quoted price is not independently verified.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/perplexity/A02-attempt-01.md",
+      "raw_response_sha256": "bf28d5b5866db728edbf8154af2231abe9289e5f1e72a507a469af1075618905",
+      "capture_format": "rendered_DOM_text_with_inline_links",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-A04-attempt-01",
+      "run_id": "2026-10-01-continuation-perplexity",
+      "benchmark_id": "A04",
+      "status": "completed",
+      "tested_at": "2026-10-01T14:56:32.754+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "Perplexity",
+      "query": "Can you recommend a Shopify development agency for a small DTC brand?",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "SPLIT Development",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "I’d start with"
+        }
+      ],
+      "excluded_mentions": [
+        "Shopify Partner Directory: discovery resource, not a supplier"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/split-development",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/split-development",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/blog/ecommerce-agency",
+          "normalized_url": "https://www.shopify.com/blog/ecommerce-agency",
+          "title": null,
+          "source_type": "platform_official_guidance",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory",
+          "normalized_url": "https://www.shopify.com/partners/directory",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Original complete response recovered as raw native accessibility text; source links exclude collapsed grouped citations.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/perplexity/A04-attempt-01.ax.txt",
+      "raw_response_sha256": "861f7984f18f79595b9d2ab7e4fe2777c71e23ee35936c1e8a8d765614c320b8",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-E03-attempt-01",
+      "run_id": "2026-10-01-continuation-chatgpt",
+      "benchmark_id": "E03",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:13:17.554+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "ChatGPT",
+      "query": "Can you recommend a Shopify team for a high-ticket consumer technology store with detailed specs and several product categories?",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Flux",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "Particularly strong match if the catalog is technically complex"
+        },
+        {
+          "company": "Irish Titan",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "premium electronics"
+        },
+        {
+          "company": "Swanky",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "strategy, UX, development, systems integration and ongoing optimization"
+        },
+        {
+          "company": "Velstar",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "ongoing ecommerce, CRO and marketing support"
+        },
+        {
+          "company": "MS Web International",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": "global or Asia-focused technology business"
+        }
+      ],
+      "excluded_mentions": [
+        "Projecta, Pioneer Electronics, Gotraka, Comet, Western Digital: client/store examples",
+        "Shopify, Sanity, Algolia: platforms/tools"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://flux.agency/work/projecta?utm_source=chatgpt.com",
+          "normalized_url": "https://flux.agency/work/projecta",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.irishtitan.com/pioneer-electronics?utm_source=chatgpt.com",
+          "normalized_url": "https://www.irishtitan.com/pioneer-electronics",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://swankyagency.com/launching-consumer-electronics-ecommerce-brand-shopify-plus-case-study-gotraka/?utm_source=chatgpt.com",
+          "normalized_url": "https://swankyagency.com/launching-consumer-electronics-ecommerce-brand-shopify-plus-case-study-gotraka/",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://velstar.agency/case-studies/comet?utm_source=chatgpt.com",
+          "normalized_url": "https://velstar.agency/case-studies/comet",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.mswebinternational.com/pages/case-study-western-digital?utm_source=chatgpt.com",
+          "normalized_url": "https://www.mswebinternational.com/pages/case-study-western-digital",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/blog/ecommerce-filters?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/blog/ecommerce-filters",
+          "title": null,
+          "source_type": "platform_official_guidance",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Case-study fit reasons retained; supplier tier and performance claims not independently verified. First appearance is not a market ranking.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/E03-attempt-01.ax.txt",
+      "raw_response_sha256": "cda8c11d826f5df149e2d8812a6a63f4a08a1a0567b41fb0d8732a53f3877337",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-B01-attempt-01",
+      "run_id": "2026-10-01-continuation-perplexity",
+      "benchmark_id": "B01",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:13:17.555+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "Perplexity",
+      "query": "我已经有 Figma 设计稿，想找团队开发成可在后台编辑的 Shopify 主题，推荐谁？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "SPLIT Development",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "我会先联系 SPLIT Development"
+        },
+        {
+          "company": "Devjour Technologies",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "Devjour Technologies"
+        },
+        {
+          "company": "MarkupFox",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "和 MarkupFox 各报一次价"
+        },
+        {
+          "company": "WESWOO",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "放进候选名单"
+        }
+      ],
+      "excluded_mentions": [
+        "Shopify Partner Directory: directory",
+        "FlowCart, Infyways: follow-up suggestion only"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://shopify.com/partners/directory/partner/split-development",
+          "normalized_url": "https://shopify.com/partners/directory/partner/split-development",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://shopify.com/partners/directory/partner/dev-jour-tec",
+          "normalized_url": "https://shopify.com/partners/directory/partner/dev-jour-tec",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://markupfox.com/services/design-to-shopify",
+          "normalized_url": "https://markupfox.com/services/design-to-shopify",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://shopify.com/partners/directory",
+          "normalized_url": "https://shopify.com/partners/directory",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "MarkupFox is an explicit supplier recommendation in this answer, unlike the prior ChatGPT B01 price-only example. Count per-context, not a global exclusion list.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/perplexity/B01-attempt-01.ax.txt",
+      "raw_response_sha256": "eea5fa6a74ebd070d125931a5befa74b2500afc711387765711b776a16ee323e",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-F03-attempt-01",
+      "run_id": "2026-10-01-continuation-perplexity",
+      "benchmark_id": "F03",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:12:46.246+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "Perplexity",
+      "query": "我们团队用中文沟通，店铺卖给美国客户，能推荐懂 Shopify 的开发伙伴吗？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Shinetech Software",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "我建议先联系 Shinetech Software"
+        },
+        {
+          "company": "SainStore",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "和 SainStore"
+        }
+      ],
+      "excluded_mentions": [
+        "Shopify: platform/directory",
+        "Wolfpoint: follow-up suggestion only"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://shopify.com/partners/directory/partner/shinetech-changchun",
+          "normalized_url": "https://shopify.com/partners/directory/partner/shinetech-changchun",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://shopify.com/partners/directory/partner/sainstore",
+          "normalized_url": "https://shopify.com/partners/directory/partner/sainstore",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Chinese/US suitability is the answer's claim, not separately validated. No account personalization changes.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/perplexity/F03-attempt-01.ax.txt",
+      "raw_response_sha256": "ea88a5bca39af35a7df22852c4bbbf1a6ee50294e0526d79c3010faf9dcefac0",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-E01-attempt-01",
+      "run_id": "2026-10-01-continuation-chatgpt",
+      "benchmark_id": "E01",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:11:45.398+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "ChatGPT",
+      "query": "有没有做过 eBike Shopify 网站的团队？想找懂车型规格和购买决策的开发伙伴。",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "WeConvert",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "和你描述最匹配的案例之一"
+        },
+        {
+          "company": "Cosnet",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "品牌站 + PDP + Shopify 开发"
+        },
+        {
+          "company": "Quest Digital",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "偏实际 Shopify 落地"
+        },
+        {
+          "company": "TrueStack",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "懂产品规格而不只是排版"
+        },
+        {
+          "company": "WESWOO",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": "SKU/车型比较多，值得聊"
+        }
+      ],
+      "excluded_mentions": [
+        "FLX Bike, Zen E-Bike, Bluejay Bikes, EVIE, A-Spadz, Gleecycle, AMZcycle, CYCROWN, State Bicycle Co.: client/store examples, not suppliers"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://www.weconvert.agency/flx?utm_source=chatgpt.com",
+          "normalized_url": "https://www.weconvert.agency/flx",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://cosnetglobal.com/portfolio/zen-e-bike?utm_source=chatgpt.com",
+          "normalized_url": "https://cosnetglobal.com/portfolio/zen-e-bike",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.questdigital.co.in/bluejay-bikes?utm_source=chatgpt.com",
+          "normalized_url": "https://www.questdigital.co.in/bluejay-bikes",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.truestack.my/work/eviebikes?utm_source=chatgpt.com",
+          "normalized_url": "https://www.truestack.my/work/eviebikes",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.weswoo.com/en/case-studies/aspadz-shopify-project/?utm_source=chatgpt.com",
+          "normalized_url": "https://www.weswoo.com/en/case-studies/aspadz-shopify-project/",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.weswoo.com/en/case-studies/cycrown-shopify-project/?utm_source=chatgpt.com",
+          "normalized_url": "https://www.weswoo.com/en/case-studies/cycrown-shopify-project/",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/my-ms/case-studies/state-bicycle-co?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/my-ms/case-studies/state-bicycle-co",
+          "title": null,
+          "source_type": "platform_official_guidance",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Provider case claims and uplift percentages are unverified output, not independent performance evidence; no follow-up accepted.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/E01-attempt-01.ax.txt",
+      "raw_response_sha256": "ee172689722dd4c4aaa0cbe31f48d95276f3a0a47a206b5ad1d6b20face2fdda",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-C01-attempt-01",
+      "run_id": "2026-10-01-continuation-perplexity",
+      "benchmark_id": "C01",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:10:48.042+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "Perplexity",
+      "query": "Shopify 广告有点击但订单少，想找团队先诊断再改页面，有谁合适？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "ConversionWise",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "我会先联系 ConversionWise"
+        },
+        {
+          "company": "UM",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "把 UM 一起列入询价名单"
+        }
+      ],
+      "excluded_mentions": [
+        "Shopify Partner Directory: directory, despite occupying a table row",
+        "Blend Commerce, 20North: follow-up suggestion only"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://shopify.com/zh/partners/directory",
+          "normalized_url": "https://shopify.com/zh/partners/directory",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "UM implementation capability caveat retained. No claim that price or results are independently verified.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/perplexity/C01-attempt-01.ax.txt",
+      "raw_response_sha256": "65cb2158b3e9588dc65a49f8f6382a8c733cb1aff5585522e99037c149ddea4d",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-D02-attempt-01",
+      "run_id": "2026-10-01-continuation-perplexity",
+      "benchmark_id": "D02",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:11:45.399+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "Perplexity",
+      "query": "Can you recommend a team that understands Shopify, GTM and GA4 ecommerce tracking?",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Analytico",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "I’d start with Analytico"
+        },
+        {
+          "company": "Web Star Research",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "get a second proposal"
+        },
+        {
+          "company": "BlazeByte Solutions",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "Worth a quote"
+        }
+      ],
+      "excluded_mentions": [
+        "BrillMark, ProAnalytics: follow-up suggestion card only",
+        "GA4, GTM, Shopify: platforms/tools"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://analyticodigital.com/consulting/shopify-analytics",
+          "normalized_url": "https://analyticodigital.com/consulting/shopify-analytics",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://blazebytesolutions.com/ecommerce-tracking/",
+          "normalized_url": "https://blazebytesolutions.com/ecommerce-tracking/",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Named providers only; answer warns results and availability are not independently verified.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/perplexity/D02-attempt-01.ax.txt",
+      "raw_response_sha256": "b179704ad69f90bfd0d31472e18f2bf8aba9219e64e332a2c5898f1172b9237b",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-D02-attempt-02",
+      "run_id": "2026-10-01-continuation-chatgpt",
+      "benchmark_id": "D02",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:07:10.252+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "ChatGPT",
+      "query": "Can you recommend a team that understands Shopify, GTM and GA4 ecommerce tracking?",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "SDG",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "probably the first team I’d speak with"
+        },
+        {
+          "company": "EcomLabs",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "audit and rebuild the tracking architecture"
+        },
+        {
+          "company": "Aumlytics",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "boutique analytics agency"
+        },
+        {
+          "company": "Byteinfy",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "potentially a good lower-cost option"
+        }
+      ],
+      "excluded_mentions": [
+        "Dolphin Analytics: background citation, not a shortlisted provider",
+        "GA4, GTM, Meta, TikTok: tools/platforms"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://www.dolphinanalytics.co.uk/blog/shopify-ga4-gtm-tracking-setup?utm_source=chatgpt.com",
+          "normalized_url": "https://www.dolphinanalytics.co.uk/blog/shopify-ga4-gtm-tracking-setup",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.sdg.la/shopify-analytics-integration/?utm_source=chatgpt.com",
+          "normalized_url": "https://www.sdg.la/shopify-analytics-integration/",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://ecomlabs.dev/services/analytics-tracking?utm_source=chatgpt.com",
+          "normalized_url": "https://ecomlabs.dev/services/analytics-tracking",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://aumlytics.com/?utm_source=chatgpt.com",
+          "normalized_url": "https://aumlytics.com/",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.byteinfy.com/services/shopify-analytics-setup?utm_source=chatgpt.com",
+          "normalized_url": "https://www.byteinfy.com/services/shopify-analytics-setup",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Original attempt was interrupted. Exact-query attempt 2 archived on resumed run; no follow-up prompt. Model and reasoning selector were not inspected on resumed run.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/D02-attempt-02.ax.txt",
+      "raw_response_sha256": "cb565ab9a23975caa48927e5531e77501c7be2fe2e754ae94e7daf13190fe5a0",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-F03-attempt-01",
+      "run_id": "2026-10-01-continuation-chatgpt",
+      "benchmark_id": "F03",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:08:12.864+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "ChatGPT",
+      "query": "我们团队用中文沟通，店铺卖给美国客户，能推荐懂 Shopify 的开发伙伴吗？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Peter Dong / HYA Media",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "美国本地思维 + 中文直接沟通"
+        },
+        {
+          "company": "EastDTC / EastDigi",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "中国团队做美国 DTC、项目规模较大"
+        },
+        {
+          "company": "Cheriscon",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "Shopify Plus、复杂定制、系统集成"
+        },
+        {
+          "company": "Shinetech Software",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "技术型项目、ERP/API/App 集成"
+        },
+        {
+          "company": "Loomic",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": "中小型项目、主题深度定制、长期维护"
+        },
+        {
+          "company": "Hui Creative",
+          "website": null,
+          "appearance_order": 6,
+          "recommendation_excerpt": "中国团队成本和北美执行"
+        }
+      ],
+      "excluded_mentions": [
+        "Shopify Partner Directory: directory, not supplier"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/hya-media?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/hya-media",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/eastdigi?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/eastdigi",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/dale2?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/dale2",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/shinetech-changchun?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/shinetech-changchun",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/leo34?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/leo34",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/shenzhen-hui-wang-ruan-jian-ji-shu-you-x?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/shenzhen-hui-wang-ruan-jian-ji-shu-you-x",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/by/partners/directory/locations/united-states?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/by/partners/directory/locations/united-states",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Display aliases normalized to prior coding only where answer explicitly names them; published prices and ratings not independently validated.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/F03-attempt-01.ax.txt",
+      "raw_response_sha256": "4567ae5fd7a478dbbf6ea7518d6e1102ad5bb6a23e7beb4ca3650487ad9dc943",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-D01-attempt-01",
+      "run_id": "2026-10-01-continuation-chatgpt",
+      "benchmark_id": "D01",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:09:05.337+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "ChatGPT",
+      "query": "Shopify 后台订单金额和 GA4 对不上，想请人核对 purchase 参数和重复事件，找谁？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [],
+      "excluded_mentions": [
+        "Logical Gecko: named directory-service example, not an explicit shortlist recommendation; conservative exclusion approved in Benchmark v1.0 final review",
+        "Mikkel Tschentscher: citation title only",
+        "Upwork, Fiverr, Shopify Partner Directory: marketplaces/directories"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://www.shopify.com/partners/directory/services/marketing-and-sales/analytics-and-tracking?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/services/marketing-and-sales/analytics-and-tracking",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://shopify.dev/docs/api/checkout-ui-extensions/2026-01/target-apis/platform-apis/analytics-api?utm_source=chatgpt.com",
+          "normalized_url": "https://shopify.dev/docs/api/checkout-ui-extensions/2026-01/target-apis/platform-apis/analytics-api",
+          "title": null,
+          "source_type": "platform_official_guidance",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://www.shopify.com/partners/directory/partner/mikkel-tschentscher?utm_source=chatgpt.com",
+          "normalized_url": "https://www.shopify.com/partners/directory/partner/mikkel-tschentscher",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Answer primarily recommends a specialist role and audit deliverables, not a named team. Neutral provider example retained in original and excluded from recommendation count.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/D01-attempt-01.ax.txt",
+      "raw_response_sha256": "3e47ae1c539254fb0a4a597268d5ed5e42c8c61a75ca6424c532210bf9770a4d",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-chatgpt-D03-attempt-01",
+      "run_id": "2026-10-01-continuation-chatgpt",
+      "benchmark_id": "D03",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:09:59.335+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "ChatGPT",
+      "query": "Who can audit Shopify purchase tracking for Google Ads when conversions appear to be counted twice?",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [],
+      "excluded_mentions": [
+        "Google Ads, Google Tag Manager, GA4, Shopify, Google & YouTube app: platforms/tools, not suppliers"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://support.google.com/merchants/answer/15458661?hl=en&utm_source=chatgpt.com",
+          "normalized_url": "https://support.google.com/merchants/answer/15458661?hl=en",
+          "title": null,
+          "source_type": "platform_official_guidance",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://support.google.com/google-ads/answer/10632359?hl=en&utm_source=chatgpt.com",
+          "normalized_url": "https://support.google.com/google-ads/answer/10632359?hl=en",
+          "title": null,
+          "source_type": "platform_official_guidance",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://help.shopify.com/en/manual/reports-and-analytics/google-analytics/google-tag-manager?utm_source=chatgpt.com",
+          "normalized_url": "https://help.shopify.com/en/manual/reports-and-analytics/google-analytics/google-tag-manager",
+          "title": null,
+          "source_type": "platform_official_guidance",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://support.google.com/google-ads/answer/6386790?hl=en&utm_source=chatgpt.com",
+          "normalized_url": "https://support.google.com/google-ads/answer/6386790?hl=en",
+          "title": null,
+          "source_type": "platform_official_guidance",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Complete answer recommends a specialist category only; no named delivery team. No follow-up or regeneration to force a shortlist.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/chatgpt/D03-attempt-01.ax.txt",
+      "raw_response_sha256": "93e6aedf0559907afa65e5f4bd13e5f66d801f3e18a04f488d07ef8706f332d0",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-C02-attempt-01",
+      "run_id": "2026-10-01-continuation-perplexity",
+      "benchmark_id": "C02",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:07:59.691+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "Perplexity",
+      "query": "有没有同时懂 Shopify 开发和转化优化的团队可以推荐？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Swanky",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "长期做实验的 Shopify Plus 品牌"
+        },
+        {
+          "company": "Conversion",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "直接开发、上线并衡量测试方案"
+        },
+        {
+          "company": "Cheriscon",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "中文沟通，同时需要定制建站、插件开发和营销运营支持"
+        }
+      ],
+      "excluded_mentions": [
+        "Convertibles, Solo Media Group, Lantern Sol: generated follow-up suggestion card only, outside answer"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://swankyagency.com/services/conversion-rate-optimisation-services/",
+          "normalized_url": "https://swankyagency.com/services/conversion-rate-optimisation-services/",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://conversion.is/services/shopify-cro-agency",
+          "normalized_url": "https://conversion.is/services/shopify-cro-agency",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Cheriscon alias based on original visible shopify.cheriscon.com link; CRO-method caveat retained. Free Pro preview observed.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/perplexity/C02-attempt-01.ax.txt",
+      "raw_response_sha256": "ed20a268777a94897dc64c4d9a052757a7d88650dfd28a59f048cedbcb104e25",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-F02-attempt-01",
+      "run_id": "2026-10-01-continuation-perplexity",
+      "benchmark_id": "F02",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:08:43.364+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "Perplexity",
+      "query": "我们是中国品牌，准备做出海 Shopify 独立站，有哪些开发团队值得比较？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "翼果科技",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "DTC 建站"
+        },
+        {
+          "company": "EastDTC / EastDigi",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "品牌站开发、内容和获客"
+        },
+        {
+          "company": "Shinetech Software",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "ERP、订单、库存等系统对接"
+        },
+        {
+          "company": "WESWOO",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": "Liquid 主题二开"
+        },
+        {
+          "company": "CLEARgo",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": "Shopify Plus、多地区站点"
+        }
+      ],
+      "excluded_mentions": [
+        "Anycubic, Autel: client examples",
+        "Shopify: platform/directory"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://shopify.com/partners/directory",
+          "normalized_url": "https://shopify.com/partners/directory",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://shopify.com/partners/directory/partner/yiguotech1",
+          "normalized_url": "https://shopify.com/partners/directory/partner/yiguotech1",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://shopify.com/partners/directory/partner/shinetech-changchun",
+          "normalized_url": "https://shopify.com/partners/directory/partner/shinetech-changchun",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://shopify.com/partners/directory/partner/10395",
+          "normalized_url": "https://shopify.com/partners/directory/partner/10395",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://shopify.com/partners/directory/partner/cleargo-e-business-consultancy-pte-ltd",
+          "normalized_url": "https://shopify.com/partners/directory/partner/cleargo-e-business-consultancy-pte-ltd",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://shopify.com/partners/directory/locations/china",
+          "normalized_url": "https://shopify.com/partners/directory/locations/china",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "First appearance order, not market rank. Collapsed source groups not expanded. Free Pro preview observed while generating.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/perplexity/F02-attempt-01.ax.txt",
+      "raw_response_sha256": "06259f757f1fe97522c2db6221aa223e6d1535e063158062e677a5e1ff34e005",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-B02-attempt-01",
+      "run_id": "2026-10-01-continuation-perplexity",
+      "benchmark_id": "B02",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:09:15.052+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "Perplexity",
+      "query": "Can you recommend a team for custom Shopify Liquid development rather than app-based workarounds?",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "1Digital",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "the team I’d contact first"
+        },
+        {
+          "company": "Flux",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "larger Shopify Plus build"
+        },
+        {
+          "company": "Ask Phill",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "Europe-based, mid-market or enterprise brand"
+        }
+      ],
+      "excluded_mentions": [
+        "Kinful, Northbeam Studio, MM Shopy Devs: follow-up suggestion only, not answer"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://1digitalagency.com/shopify-developer/",
+          "normalized_url": "https://1digitalagency.com/shopify-developer/",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://flux.agency/services/shopify-plus-developers",
+          "normalized_url": "https://flux.agency/services/shopify-plus-developers",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Source prices are unverified platform claims. Pro preview not independently observed on this cell; do not inherit prior-cell model mode.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/perplexity/B02-attempt-01.ax.txt",
+      "raw_response_sha256": "eef81f47d32807cc240ed3bd2f99ba07b43a16cc2d29070a88e4b4cd233de68a",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-B05-attempt-01",
+      "run_id": "2026-10-01-continuation-perplexity",
+      "benchmark_id": "B05",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:09:46.841+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "Perplexity",
+      "query": "想找人开发 Shopify 2.0 自定义 Section，让运营自己改内容，有团队推荐吗？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Webvista Studio",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "现有主题上的模块定制"
+        },
+        {
+          "company": "MaybeDesign",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "同时需要页面设计与开发的项目"
+        },
+        {
+          "company": "Mgroup",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "编辑器配置、交接文档和运营培训"
+        }
+      ],
+      "excluded_mentions": [
+        "Shopify Partner Directory: directory",
+        "Generated follow-up cards: outside answer"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://shopify.com/partners/directory/partner/gckj",
+          "normalized_url": "https://shopify.com/partners/directory/partner/gckj",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://shopify.com/partners/directory/partner/haiyangdesign",
+          "normalized_url": "https://shopify.com/partners/directory/partner/haiyangdesign",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://mgroupweb.com/services/custom-shopify-sections/",
+          "normalized_url": "https://mgroupweb.com/services/custom-shopify-sections/",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://shopify.com/zh/partners/directory",
+          "normalized_url": "https://shopify.com/zh/partners/directory",
+          "title": null,
+          "source_type": "platform_directory",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://shopify.dev/docs/storefronts/themes/best-practices/editor/integrate-sections-and-blocks",
+          "normalized_url": "https://shopify.dev/docs/storefronts/themes/best-practices/editor/integrate-sections-and-blocks",
+          "title": null,
+          "source_type": "platform_official_guidance",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Saved through final answer copy control, not the inline quote copy button. Preview mode not independently observed.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/perplexity/B05-attempt-01.ax.txt",
+      "raw_response_sha256": "3b6a9ff10a9b3a2c4d35322ef6554a6e162e0bf909c1489833f03e2a4f3e7036",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-E01-attempt-01",
+      "run_id": "2026-10-01-continuation-perplexity",
+      "benchmark_id": "E01",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:15:41.699+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "Perplexity",
+      "query": "有没有做过 eBike Shopify 网站的团队？想找懂车型规格和购买决策的开发伙伴。",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "VAAN",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "我会先约谈 VAAN"
+        },
+        {
+          "company": "WESWOO",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "再看 WESWOO"
+        },
+        {
+          "company": "Americaneagle.com",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": "放进候选名单"
+        }
+      ],
+      "excluded_mentions": [
+        "Pedego, Gleecycle, AMZcycle, ADO E-Bike UK, Blaupunkt: client/store examples"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://vaangroup.com/articles/how-pedego-migrated-to-shopify-plus-and-streamlined-dealer-management-at-scale",
+          "normalized_url": "https://vaangroup.com/articles/how-pedego-migrated-to-shopify-plus-and-streamlined-dealer-management-at-scale",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://weswoo.com/case-studies/",
+          "normalized_url": "https://weswoo.com/case-studies/",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://americaneagle.com/platforms/shopify/blaupunkt",
+          "normalized_url": "https://americaneagle.com/platforms/shopify/blaupunkt",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Provider-published case evidence only; WESWOO scope caveat retained. No independent client endorsement or performance verification.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/perplexity/E01-attempt-01.ax.txt",
+      "raw_response_sha256": "cddcbe037a27be704f9fb709a9cced47548a3c8310ba671deaa1a16c790988b0",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-D03-attempt-01",
+      "run_id": "2026-10-01-continuation-perplexity",
+      "benchmark_id": "D03",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:14:38.484+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "Perplexity",
+      "query": "Who can audit Shopify purchase tracking for Google Ads when conversions appear to be counted twice?",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [],
+      "excluded_mentions": [
+        "Single Grain: inline source label, not named supplier recommendation",
+        "Other source-panel publishers: retrieved sources, not recommended companies",
+        "Google Ads, GA4, GTM, Shopify: platforms/tools"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://singlegrain.com/blog-posts/analytics/google-ads-conversion-tracking-troubleshooting-and-setup/",
+          "normalized_url": "https://singlegrain.com/blog-posts/analytics/google-ads-conversion-tracking-troubleshooting-and-setup/",
+          "title": "Google Ads Conversion Tracking Troubleshooting and Setup",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "No named provider recommendation. Singlegrain inline citation domain matched to the single corresponding URL in archived D03-source-panel.ax.txt; grouped +1/+2 unresolved. Other panel URLs excluded from cited_sources.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/perplexity/D03-attempt-01.ax.txt",
+      "raw_response_sha256": "24c3db5cab349f2644c2945e2c5e42d92f13d89449d13b3c73ed79497c27278e",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-D01-attempt-01",
+      "run_id": "2026-10-01-continuation-perplexity",
+      "benchmark_id": "D01",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:13:48.929+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "Perplexity",
+      "query": "Shopify 后台订单金额和 GA4 对不上，想请人核对 purchase 参数和重复事件，找谁？",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [],
+      "excluded_mentions": [
+        "Stape, TrackParity: citation labels, not supplier recommendations",
+        "GA4/GTM: tool stack",
+        "No named team recommended; specialist-role guidance only"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://stape.io/blog/shopify-google-analytics-4-tracking",
+          "normalized_url": "https://stape.io/blog/shopify-google-analytics-4-tracking",
+          "title": "Shopify Google Analytics 4 Tracking | Expert 2026 Guide - Stape",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://trackparity.com/blog/ga4-shopify-purchase-discrepancy/",
+          "normalized_url": "https://trackparity.com/blog/ga4-shopify-purchase-discrepancy/",
+          "title": "Why Your GA4 Purchases Don't Match Shopify ... - TrackParity",
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "First inline citation group expanded: 1/2 Stape, 2/2 TrackParity. Supplemental AX file D01-citation-group-01.ax.txt preserves second card; other groups not fully expanded. Global source list excluded. No independent supplier endorsement inferred.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/perplexity/D01-attempt-01.ax.txt",
+      "raw_response_sha256": "6f34eaec60cd6648977581b8497294f60eb8424be372bb27b1017cf484928000",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-perplexity-E03-attempt-01",
+      "run_id": "2026-10-01-continuation-perplexity",
+      "benchmark_id": "E03",
+      "status": "completed",
+      "tested_at": "2026-10-01T15:16:23.337+08:00",
+      "timestamp_basis": "completed_response_capture",
+      "platform": "Perplexity",
+      "query": "Can you recommend a Shopify team for a high-ticket consumer technology store with detailed specs and several product categories?",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Craftberry",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": "I’d shortlist Craftberry first"
+        },
+        {
+          "company": "Netalico",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": "I’d also speak with Netalico"
+        }
+      ],
+      "excluded_mentions": [
+        "Shelly, Audio Advice: client/store examples",
+        "Shopify Partner Directory: directory"
+      ],
+      "cited_sources": [
+        {
+          "url": "https://craftberry.co/services/shopify-agency-for-tech-brands",
+          "normalized_url": "https://craftberry.co/services/shopify-agency-for-tech-brands",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        },
+        {
+          "url": "https://netalico.com/pages/shopify-electronics-agency",
+          "normalized_url": "https://netalico.com/pages/shopify-electronics-agency",
+          "title": null,
+          "source_type": "provider_owned_page",
+          "classification_basis": "Displayed URL and citation label; destination content not independently audited in this run",
+          "cited_for": "Supplier capability or selection guidance; refer to the original answer for exact context",
+          "independently_supports_whaleleap": null
+        }
+      ],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Supplier recommendations distinguish new build versus existing store. Case fit and project claims are platform output, not independently verified client attribution.",
+      "raw_response_file": "history/2026-10-01-benchmark-continuation/answers/perplexity/E03-attempt-01.ax.txt",
+      "raw_response_sha256": "2f148385f93bdab3545f9aeda3781e61b4c81bf13f83f80ec7112f7a751c8fd6",
+      "capture_format": "native_accessibility_tree",
+      "citation_completeness": "visible_inline_only; collapsed grouped citations not expanded; not all retrieved sources are citations",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-A01-attempt-01",
+      "run_id": "2026-10-01-doubao-round-01",
+      "benchmark_id": "DB-A01",
+      "status": "completed",
+      "tested_at": "2026-10-01T07:23:36.833Z",
+      "timestamp_basis": "raw_response_file_mtime",
+      "platform": "Doubao",
+      "query": "推荐几家靠谱的 Shopify 建站公司，我想比较一下各自适合什么项目。",
+      "comparable_intent": "SHOPIFY_AGENCY_RECOMMENDATION",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Cheriscon",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Cyberklick",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "EastDTC / EastDigi",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Jixindesign",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "SparkX",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Avex",
+          "website": null,
+          "appearance_order": 6,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "We Make Websites",
+          "website": null,
+          "appearance_order": 7,
+          "recommendation_excerpt": null
+        }
+      ],
+      "cited_sources": [],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Assistant-reviewed Doubao output. No resolvable citation URL was exposed in the captured main response. Provider claims, prices, partner tiers and client examples remain unverified platform output.",
+      "excluded_mentions": [
+        "Generic boutique studios: category, not a named provider"
+      ],
+      "conversation_url": "https://www.doubao.com/chat/38445155805076482",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-A01-attempt-01.txt",
+      "raw_response_sha256": "8b94fb07c882f6d51667f8339ceb8e24181ad9d0e1f6f659012b7da60975ac84",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-A02-attempt-01",
+      "run_id": "2026-10-01-doubao-round-01",
+      "benchmark_id": "DB-A02",
+      "status": "completed",
+      "tested_at": "2026-10-01T07:24:29.863Z",
+      "timestamp_basis": "raw_response_file_mtime",
+      "platform": "Doubao",
+      "query": "国内有没有靠谱的 Shopify 开发团队？最好适合中小品牌长期合作。",
+      "comparable_intent": "SHOPIFY_AGENCY_RECOMMENDATION",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "WESWOO",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Beansmile",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Fengge Technology",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Cheriscon",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "EastDTC / EastDigi",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Loomic",
+          "website": null,
+          "appearance_order": 6,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "YIGO Tech",
+          "website": null,
+          "appearance_order": 7,
+          "recommendation_excerpt": null
+        }
+      ],
+      "cited_sources": [],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Assistant-reviewed Doubao output. No resolvable citation URL was exposed in the captured main response. Provider claims, prices, partner tiers and client examples remain unverified platform output.",
+      "excluded_mentions": [],
+      "conversation_url": "https://www.doubao.com/chat/38445016716355842",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-A02-attempt-01.txt",
+      "raw_response_sha256": "13ac20275937433f430941189ab76d61a142f335ffff220113e9f66d3fce81b5",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-A03-attempt-01",
+      "run_id": "2026-10-01-doubao-round-01",
+      "benchmark_id": "DB-A03",
+      "status": "completed",
+      "tested_at": "2026-10-01T07:25:21.513Z",
+      "timestamp_basis": "raw_response_file_mtime",
+      "platform": "Doubao",
+      "query": "想做面向欧美市场的 Shopify 独立站，找哪家公司比较好？",
+      "comparable_intent": "SHOPIFY_AGENCY_RECOMMENDATION",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "We Make Websites",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Swanky",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Eastside Co",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Domaine",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Barrel",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Blend Commerce",
+          "website": null,
+          "appearance_order": 6,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Liquify",
+          "website": null,
+          "appearance_order": 7,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Avex",
+          "website": null,
+          "appearance_order": 8,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "RaftLabs",
+          "website": null,
+          "appearance_order": 9,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Fuel Made",
+          "website": null,
+          "appearance_order": 10,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Adlink",
+          "website": null,
+          "appearance_order": 11,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Meet Experience",
+          "website": null,
+          "appearance_order": 12,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Cyberklick",
+          "website": null,
+          "appearance_order": 13,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Kedeng Cross-border",
+          "website": null,
+          "appearance_order": 14,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "WayToGlobal",
+          "website": null,
+          "appearance_order": 15,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Folio3",
+          "website": null,
+          "appearance_order": 16,
+          "recommendation_excerpt": null
+        }
+      ],
+      "cited_sources": [],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Assistant-reviewed Doubao output. No resolvable citation URL was exposed in the captured main response. Provider claims, prices, partner tiers and client examples remain unverified platform output.",
+      "excluded_mentions": [
+        "Scandiweb/PageFly/Shero Commerce labels outside the recommendation tables: not counted conservatively"
+      ],
+      "conversation_url": "https://www.doubao.com/chat/38445173921309186",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-A03-attempt-01.txt",
+      "raw_response_sha256": "1f885f7648854eb46299ccfd8f4b9e9b187b26cad4d4d3196e362c572e752fb6",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-B01-attempt-01",
+      "run_id": "2026-10-01-doubao-round-01",
+      "benchmark_id": "DB-B01",
+      "status": "completed",
+      "tested_at": "2026-10-01T07:29:50.031Z",
+      "timestamp_basis": "raw_response_file_mtime",
+      "platform": "Doubao",
+      "query": "我已经有 Figma 设计稿，想开发成后台可编辑的 Shopify 主题，找谁做比较靠谱？",
+      "comparable_intent": "FIGMA_TO_SHOPIFY",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "PixelCrayons",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Cquark",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "The4.co",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": null
+        }
+      ],
+      "cited_sources": [],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Assistant-reviewed Doubao output. No resolvable citation URL was exposed in the captured main response. Provider claims, prices, partner tiers and client examples remain unverified platform output.",
+      "excluded_mentions": [
+        "Shopify Partner Directory and freelancer marketplaces: discovery channels, not providers",
+        "PageFly/GemPages: software tools"
+      ],
+      "conversation_url": "https://www.doubao.com/chat/38445155481939202",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-B01-attempt-01.txt",
+      "raw_response_sha256": "040d34dab02696f1da214379a526e4c36e16bd83c51cdf501a8d57eafc8546ca",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-B02-attempt-01",
+      "run_id": "2026-10-01-doubao-round-01",
+      "benchmark_id": "DB-B02",
+      "status": "completed",
+      "tested_at": "2026-10-01T07:30:27.600Z",
+      "timestamp_basis": "raw_response_file_mtime",
+      "platform": "Doubao",
+      "query": "有没有擅长 Shopify Liquid 定制开发的国内团队？我不想用一堆 App 拼功能。",
+      "comparable_intent": "SHOPIFY_LIQUID_DEVELOPMENT",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "WESWOO",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Fengge Technology",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Cheriscon",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "EastDTC / EastDigi",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": null
+        }
+      ],
+      "cited_sources": [],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Assistant-reviewed Doubao output. No resolvable citation URL was exposed in the captured main response. Provider claims, prices, partner tiers and client examples remain unverified platform output.",
+      "excluded_mentions": [],
+      "conversation_url": "https://www.doubao.com/chat/38445155758661122",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-B02-attempt-01.txt",
+      "raw_response_sha256": "9de18fe3c9b254936d66ffcffbf10d6147b21e08aef3d33f79c253430f5947bf",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-B03-attempt-01",
+      "run_id": "2026-10-01-doubao-round-01",
+      "benchmark_id": "DB-B03",
+      "status": "completed",
+      "tested_at": "2026-10-01T07:31:25.529Z",
+      "timestamp_basis": "raw_response_file_mtime",
+      "platform": "Doubao",
+      "query": "想开发 Shopify 2.0 自定义 Section，让运营能自己改内容，有团队推荐吗？",
+      "comparable_intent": "SHOPIFY_EDITABLE_SECTIONS",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Loomic",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "WESWOO",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Helium Krypton Cross-border",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Helium Gold Technology",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Cyberklick",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Atwix",
+          "website": null,
+          "appearance_order": 6,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Eastside Co",
+          "website": null,
+          "appearance_order": 7,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "RaftLabs",
+          "website": null,
+          "appearance_order": 8,
+          "recommendation_excerpt": null
+        }
+      ],
+      "cited_sources": [],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Assistant-reviewed Doubao output. No resolvable citation URL was exposed in the captured main response. Provider claims, prices, partner tiers and client examples remain unverified platform output.",
+      "excluded_mentions": [
+        "Shopify Experts Marketplace and freelancer channels: directories, not providers"
+      ],
+      "conversation_url": "https://www.doubao.com/chat/38445190884419586",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-B03-attempt-01.txt",
+      "raw_response_sha256": "2651a5689d50594a5dde6d17a4de6dccb1c0c2cfb370801be4b9b7d29e000f47",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-C01-attempt-01",
+      "run_id": "2026-10-01-doubao-round-01",
+      "benchmark_id": "DB-C01",
+      "status": "completed",
+      "tested_at": "2026-10-01T07:32:16.465Z",
+      "timestamp_basis": "raw_response_file_mtime",
+      "platform": "Doubao",
+      "query": "Shopify 网站有流量但是转化低，有没有团队可以先诊断再帮忙优化页面？",
+      "comparable_intent": "SHOPIFY_CRO",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Blend Commerce",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "ConversionEX",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Gigacommerce",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "DTC Pages",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": null
+        }
+      ],
+      "cited_sources": [],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Assistant-reviewed Doubao output. No resolvable citation URL was exposed in the captured main response. Provider claims, prices, partner tiers and client examples remain unverified platform output.",
+      "excluded_mentions": [
+        "Freelancer and domestic-service-provider categories: unnamed groups"
+      ],
+      "conversation_url": "https://www.doubao.com/chat/38445016960324354",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-C01-attempt-01.txt",
+      "raw_response_sha256": "cbf7358087578b7bae5c76962a5e0767f1cb52042c61a3dd671cdc80319f6b2e",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-C02-attempt-01",
+      "run_id": "2026-10-01-doubao-round-01",
+      "benchmark_id": "DB-C02",
+      "status": "completed",
+      "tested_at": "2026-10-01T07:33:08.458Z",
+      "timestamp_basis": "raw_response_file_mtime",
+      "platform": "Doubao",
+      "query": "有没有同时懂 Shopify 开发和 CRO 转化优化的公司？",
+      "comparable_intent": "SHOPIFY_CRO",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Blend Commerce",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Convertibles",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Fuel Made",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "SplitBase",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Tenten.co",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "YIGO Tech",
+          "website": null,
+          "appearance_order": 6,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "IWISH",
+          "website": null,
+          "appearance_order": 7,
+          "recommendation_excerpt": null
+        }
+      ],
+      "cited_sources": [],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Assistant-reviewed Doubao output. No resolvable citation URL was exposed in the captured main response. Provider claims, prices, partner tiers and client examples remain unverified platform output.",
+      "excluded_mentions": [],
+      "conversation_url": "https://www.doubao.com/chat/38445190751272450",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-C02-attempt-01.txt",
+      "raw_response_sha256": "a061e030877c33403b532e14af2b2e49f1255a16fea7d9fa449a2c677b08a849",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-D01-attempt-01",
+      "run_id": "2026-10-01-doubao-round-01",
+      "benchmark_id": "DB-D01",
+      "status": "completed",
+      "tested_at": "2026-10-01T07:33:50.881Z",
+      "timestamp_basis": "raw_response_file_mtime",
+      "platform": "Doubao",
+      "query": "Shopify 的 GA4 收入和后台实际订单数据对不上，找谁检查比较专业？",
+      "comparable_intent": "SHOPIFY_GA4_GTM",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [],
+      "cited_sources": [],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Assistant-reviewed Doubao output. No resolvable citation URL was exposed in the captured main response. Provider claims, prices, partner tiers and client examples remain unverified platform output.",
+      "excluded_mentions": [
+        "Shopify Experts and measurement-consultant categories: unnamed roles",
+        "Elevar/Littledata/Analyzify: implementation-tool examples, not an explicit supplier shortlist in this answer"
+      ],
+      "conversation_url": "https://www.doubao.com/chat/38445174016922370",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-D01-attempt-01.txt",
+      "raw_response_sha256": "1450a9bb60a519da45fd7c7afce8461acd74be44cc255e5db06f85b3d9f8e4c2",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-D02-attempt-01",
+      "run_id": "2026-10-01-doubao-round-01",
+      "benchmark_id": "DB-D02",
+      "status": "completed",
+      "tested_at": "2026-10-01T07:34:42.640Z",
+      "timestamp_basis": "raw_response_file_mtime",
+      "platform": "Doubao",
+      "query": "有没有懂 Shopify、GA4 和 GTM 电商追踪的技术团队推荐？",
+      "comparable_intent": "SHOPIFY_GA4_GTM",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "TrueMetrics",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "YIGO Tech",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Elevar",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Analyzify",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Stape Care",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": null
+        }
+      ],
+      "cited_sources": [],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Assistant-reviewed Doubao output. No resolvable citation URL was exposed in the captured main response. Provider claims, prices, partner tiers and client examples remain unverified platform output.",
+      "excluded_mentions": [
+        "Generic cross-border technical teams: unnamed group"
+      ],
+      "conversation_url": "https://www.doubao.com/chat/38445155830123266",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-D02-attempt-01.txt",
+      "raw_response_sha256": "7d780e3272a7f0bec02e29e5f3dd96c0530e10d3a25e1bb52dd6751a77c87174",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-E01-attempt-01",
+      "run_id": "2026-10-01-doubao-round-01",
+      "benchmark_id": "DB-E01",
+      "status": "completed",
+      "tested_at": "2026-10-01T07:35:30.915Z",
+      "timestamp_basis": "raw_response_file_mtime",
+      "platform": "Doubao",
+      "query": "有没有做过电助力车或 eBike Shopify 网站的团队？要懂车型规格和选购决策。",
+      "comparable_intent": "EBIKE_SHOPIFY",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "WESWOO",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "YIGO Tech",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Kedeng Cross-border",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Qrolic Technologies",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "WebContrive",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": null
+        }
+      ],
+      "cited_sources": [],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Assistant-reviewed Doubao output. No resolvable citation URL was exposed in the captured main response. Provider claims, prices, partner tiers and client examples remain unverified platform output.",
+      "excluded_mentions": [],
+      "conversation_url": "https://www.doubao.com/chat/38445034387241986",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-E01-attempt-01.txt",
+      "raw_response_sha256": "0ae7beda35fa942e90015fb2a1b7de0d5321dd7ae8271b73ffb3181f028f219a",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-E02-attempt-01",
+      "run_id": "2026-10-01-doubao-round-01",
+      "benchmark_id": "DB-E02",
+      "status": "completed",
+      "tested_at": "2026-10-01T07:36:32.025Z",
+      "timestamp_basis": "raw_response_file_mtime",
+      "platform": "Doubao",
+      "query": "高客单消费科技产品的 Shopify 产品页找什么公司做比较好？产品规格多、品类也比较复杂。",
+      "comparable_intent": "HIGH_TICKET_ECOMMERCE",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Cheriscon",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "WESWOO",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "EastDTC / EastDigi",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Shero Commerce",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "WebContrive",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Avex",
+          "website": null,
+          "appearance_order": 6,
+          "recommendation_excerpt": null
+        }
+      ],
+      "cited_sources": [],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Assistant-reviewed Doubao output. No resolvable citation URL was exposed in the captured main response. Provider claims, prices, partner tiers and client examples remain unverified platform output.",
+      "excluded_mentions": [],
+      "conversation_url": "https://www.doubao.com/chat/38445034287459330",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-E02-attempt-01.txt",
+      "raw_response_sha256": "85a1ba68f901ccddacdcac2ad359d657a03235bcb64d2e433f9a8ae4467ac19e",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-F01-attempt-01",
+      "run_id": "2026-10-01-doubao-round-01",
+      "benchmark_id": "DB-F01",
+      "status": "completed",
+      "tested_at": "2026-10-01T07:27:17.715Z",
+      "timestamp_basis": "raw_response_file_mtime",
+      "platform": "Doubao",
+      "query": "中国品牌出海做 Shopify，有没有靠谱的开发公司推荐？",
+      "comparable_intent": "CHINESE_BRANDS_GOING_GLOBAL",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "YIGO Tech",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Cyberklick",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Cheriscon",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "WESWOO",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Zalify",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "EastDTC / EastDigi",
+          "website": null,
+          "appearance_order": 6,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Liuyi Technology",
+          "website": null,
+          "appearance_order": 7,
+          "recommendation_excerpt": null
+        }
+      ],
+      "cited_sources": [],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Assistant-reviewed Doubao output. No resolvable citation URL was exposed in the captured main response. Provider claims, prices, partner tiers and client examples remain unverified platform output.",
+      "excluded_mentions": [],
+      "conversation_url": "https://www.doubao.com/chat/38445034075524354",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-F01-attempt-01.txt",
+      "raw_response_sha256": "c0ff7e8c31bccc32e0b24901dd429c54b52766179079a06327915471b5d7adb9",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-F02-attempt-01",
+      "run_id": "2026-10-01-doubao-round-01",
+      "benchmark_id": "DB-F02",
+      "status": "completed",
+      "tested_at": "2026-10-01T07:28:07.519Z",
+      "timestamp_basis": "raw_response_file_mtime",
+      "platform": "Doubao",
+      "query": "有没有既懂中国团队沟通，又懂欧美电商体验的 Shopify 团队？",
+      "comparable_intent": "CHINESE_BRANDS_GOING_GLOBAL",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "Hui Creative",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Kikstart Ecom",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Zalify",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "WESWOO",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "EastDTC / EastDigi",
+          "website": null,
+          "appearance_order": 5,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Fastlane",
+          "website": null,
+          "appearance_order": 6,
+          "recommendation_excerpt": null
+        }
+      ],
+      "cited_sources": [],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Assistant-reviewed Doubao output. No resolvable citation URL was exposed in the captured main response. Provider claims, prices, partner tiers and client examples remain unverified platform output.",
+      "excluded_mentions": [],
+      "conversation_url": "https://www.doubao.com/chat/38445190753429250",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-F02-attempt-01.txt",
+      "raw_response_sha256": "a9098b708e06f80f5b3e3ec9e979806a4cef2118f0ca971624041f5198642780",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    },
+    {
+      "id": "2026-10-01-doubao-DB-F03-attempt-01",
+      "run_id": "2026-10-01-doubao-round-01",
+      "benchmark_id": "DB-F03",
+      "status": "completed",
+      "tested_at": "2026-10-01T07:28:53.743Z",
+      "timestamp_basis": "raw_response_file_mtime",
+      "platform": "Doubao",
+      "query": "预算 3–5 万元做一个面向海外市场的 Shopify 独立站，有什么团队推荐？",
+      "comparable_intent": "CHINESE_BRANDS_GOING_GLOBAL",
+      "whaleleap_mentioned": false,
+      "whaleleap_recommended": false,
+      "whaleleap_position": null,
+      "appearance_order": null,
+      "recommended_companies": [
+        {
+          "company": "WESWOO",
+          "website": null,
+          "appearance_order": 1,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "WayToGlobal",
+          "website": null,
+          "appearance_order": 2,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "Sinobuild",
+          "website": null,
+          "appearance_order": 3,
+          "recommendation_excerpt": null
+        },
+        {
+          "company": "IWISH",
+          "website": null,
+          "appearance_order": 4,
+          "recommendation_excerpt": null
+        }
+      ],
+      "cited_sources": [],
+      "reason_whaleleap_appeared": null,
+      "possible_reason_whaleleap_missing": null,
+      "evidence_gap": [],
+      "notes": "Assistant-reviewed Doubao output. No resolvable citation URL was exposed in the captured main response. Provider claims, prices, partner tiers and client examples remain unverified platform output.",
+      "excluded_mentions": [
+        "Generic Shenzhen agencies: unnamed group"
+      ],
+      "conversation_url": "https://www.doubao.com/chat/38445016908327426",
+      "raw_response_file": "history/2026-10-01-doubao-round-01/answers/doubao/DB-F03-attempt-01.txt",
+      "raw_response_sha256": "206a68cc3d7b2f7dab266094b233e3cb3374a9b3a79ed06b1ee944ad7c5b5d5a",
+      "assistant_review_status": "reviewed",
+      "human_review_status": "approved",
+      "human_reviewer": "WhaleLeap GEO Benchmark v1.0 final sign-off",
+      "human_reviewed_at": "2026-10-01",
+      "review_required": false
+    }
+  ],
+  "metrics": {
+    "completed_answers": 45,
+    "expected_answers": 45,
+    "remaining_answers": 0,
+    "mention_count": 0,
+    "recommendation_count": 0,
+    "provisional_mention_rate": 0,
+    "provisional_recommendation_rate": 0,
+    "approved_mention_rate": 0,
+    "approved_recommendation_rate": 0,
+    "human_reviewed": 45,
+    "reason": "All 45 answers collected, manually reviewed and frozen as Benchmark v1.0.",
+    "by_platform": [
+      {
+        "platform": "ChatGPT",
+        "completed": 15,
+        "expected": 15,
+        "remaining": 0,
+        "human_reviewed": 15,
+        "mention_count": 0,
+        "recommendation_count": 0,
+        "provisional_mention_rate": 0,
+        "provisional_recommendation_rate": 0,
+        "approved_mention_rate": 0,
+        "approved_recommendation_rate": 0,
+        "missing_query_ids": [],
+        "by_cluster": [
+          {
+            "cluster": "A",
+            "completed": 3,
+            "expected": 3,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          },
+          {
+            "cluster": "B",
+            "completed": 3,
+            "expected": 3,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          },
+          {
+            "cluster": "C",
+            "completed": 2,
+            "expected": 2,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          },
+          {
+            "cluster": "D",
+            "completed": 3,
+            "expected": 3,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          },
+          {
+            "cluster": "E",
+            "completed": 2,
+            "expected": 2,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          },
+          {
+            "cluster": "F",
+            "completed": 2,
+            "expected": 2,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          }
+        ]
+      },
+      {
+        "platform": "Perplexity",
+        "completed": 15,
+        "expected": 15,
+        "remaining": 0,
+        "human_reviewed": 15,
+        "mention_count": 0,
+        "recommendation_count": 0,
+        "provisional_mention_rate": 0,
+        "provisional_recommendation_rate": 0,
+        "approved_mention_rate": 0,
+        "approved_recommendation_rate": 0,
+        "missing_query_ids": [],
+        "by_cluster": [
+          {
+            "cluster": "A",
+            "completed": 3,
+            "expected": 3,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          },
+          {
+            "cluster": "B",
+            "completed": 3,
+            "expected": 3,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          },
+          {
+            "cluster": "C",
+            "completed": 2,
+            "expected": 2,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          },
+          {
+            "cluster": "D",
+            "completed": 3,
+            "expected": 3,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          },
+          {
+            "cluster": "E",
+            "completed": 2,
+            "expected": 2,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          },
+          {
+            "cluster": "F",
+            "completed": 2,
+            "expected": 2,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          }
+        ]
+      },
+      {
+        "platform": "Doubao",
+        "completed": 15,
+        "expected": 15,
+        "remaining": 0,
+        "human_reviewed": 15,
+        "mention_count": 0,
+        "recommendation_count": 0,
+        "provisional_mention_rate": 0,
+        "provisional_recommendation_rate": 0,
+        "approved_mention_rate": 0,
+        "approved_recommendation_rate": 0,
+        "missing_query_ids": [],
+        "by_cluster": [
+          {
+            "cluster": "A",
+            "completed": 3,
+            "expected": 3,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          },
+          {
+            "cluster": "B",
+            "completed": 3,
+            "expected": 3,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          },
+          {
+            "cluster": "C",
+            "completed": 2,
+            "expected": 2,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          },
+          {
+            "cluster": "D",
+            "completed": 2,
+            "expected": 2,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          },
+          {
+            "cluster": "E",
+            "completed": 2,
+            "expected": 2,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          },
+          {
+            "cluster": "F",
+            "completed": 3,
+            "expected": 3,
+            "mentioned": 0,
+            "recommended": 0,
+            "mention_rate": 0,
+            "recommendation_rate": 0
+          }
+        ]
+      }
+    ],
+    "review_required": 0
+  },
+  "baseline_version": "1.0",
+  "baseline_date": "2026-10-01",
+  "freeze_status": "FROZEN",
+  "human_review": "APPROVED",
+  "authority_sprint": "NOT YET IMPLEMENTED"
+}

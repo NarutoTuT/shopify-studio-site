@@ -1,0 +1,42 @@
+253 heading ChatGPT 说：, Value: 4
+								254 text ChatGPT 说：
+							255 text 有，而且我会优先找
+							256 text 真正做过 eBike / 自行车 / 电动出行 Shopify 项目
+							257 text 的团队，而不是普通 Shopify 建站公司。刚查了一轮，下面几家比较值得你进一步聊：
+							258 content list
+								259 container
+									260 AXListMarker • 
+									261 text WeConvert — FLX Bike ：这是我觉得和你描述最匹配的案例之一。FLX 卖的是 $2,500+ 的高客单 eBike，他们针对“用户需要先确认这辆车适不适合自己”这个问题做了研究、重设计和 A/B 测试；案例公开数据里提到 Add-to-Cart +39%、Checkout Initiation +30%、Conversion +56%。
+									262 link Description: Weconvert: FLX, https://www.weconvert.agency/flx?utm_source=chatgpt.com, Value: weconvert.agency/flx?utm_source=chatgpt.com
+								263 container
+									264 AXListMarker • 
+									265 text Cosnet — Zen E-Bike ：明确做过加拿大 Zen E-Bike 的 Shopify，重点包括车型理解、产品发现、移动端、电商架构和可维护的内容模块，比较适合需要从品牌站 + PDP + Shopify 开发一起做的项目。
+									266 link Value: cosnetglobal.com/portfolio/zen-e-bike?utm_source=chatgpt.com, Description: Cosnet: Zen E-Bike Case Study | Cosnet, https://cosnetglobal.com/portfolio/zen-e-bike?utm_source=chatgpt.com
+								267 container
+									268 AXListMarker • 
+									269 text Quest Digital — Bluejay Bikes ：2024 年做过 Bluejay Bikes 的 Shopify，涉及 eBike models、variants、accessories、dynamic pricing、促销与 checkout flow，偏实际 Shopify 落地。
+									270 link Value: questdigital.co.in/bluejay-bikes?utm_source=chatgpt.com, Description: Quest Digital: Bluejay Bikes Shopify Development Case Study, https://www.questdigital.co.in/bluejay-bikes?utm_source=chatgpt.com
+								271 container
+									272 AXListMarker • 
+									273 text TrueStack — EVIE Bikes ：做过 EVIE 的 Shopify 商城，公开案例里直接提到 S1/T1/L1 车型选择，以及 motor、torque sensor、gear shifter 等硬件规格如何进入购买页面。这个“懂产品规格而不只是排版”的信号不错。
+									274 link Value: truestack.my/work/eviebikes?utm_source=chatgpt.com, Description: Truestack Technologies: EVIE Bikes Case Study | Shopify Ecommerce EU, https://www.truestack.my/work/eviebikes?utm_source=chatgpt.com
+								275 container
+									276 AXListMarker • 
+									277 text WESWOO ：公开了多个 eBike Shopify 项目，包括 A-Spadz、Gleecycle、AMZcycle、CYCROWN，内容里明确涉及 torque、range、sensor、battery、rider sizing、车型 comparison、financing 和 accessory compatibility。尤其如果你们 SKU/车型比较多，值得聊。
+									278 link Value: weswoo.com/en/case-studies/aspadz-shopify-project/?utm_source=chatgpt.com, Description: Weswoo: A-Spadz Shopify Project | Ecommerce Case Study | WESWOO, https://www.weswoo.com/en/case-studies/aspadz-shopify-project/?utm_source=chatgpt.com, 另外 3 个来源
+							279 text 你找这种团队，我建议面试时不要先问“会不会 Shopify Plus”，而直接拿一道 eBike 购买题考他们：
+							280 text 一个用户身高 178cm，每天通勤 15 miles，有坡，希望低维护，预算 $2,000–$3,000。你会怎样设计网站，让他在 3 分钟内判断该买哪一款？
+							281 text 好的团队应该会主动谈到 
+							282 text riding scenario → frame/fit → motor/torque → cadence vs torque sensor → battery/range → weight → drivetrain/brakes → warranty/service → financing → accessories
+							283 text ，然后告诉你这些信息该怎样分别进入 Collection、Comparison、Quiz 和 PDP，而不是单纯说“我们做一个漂亮的产品页”。 另外有一个很关键的技术判断：
+							284 text 不要把所有东西都塞 Shopify Variants。
+							285 text  颜色、电池容量等真正改变 sellable SKU 的可以做 variant；头盔、锁、后架等应该做 accessory/bundle/compatibility 数据。像 CYCROWN 的相关案例就特别讨论了这一点。
+							286 link Value: weswoo.com/en/case-studies/cycrown-shopify-project/?utm_source=chatgpt.com, Description: Weswoo: CYCROWN Shopify Project | Ecommerce Case Study | WESWOO, https://www.weswoo.com/en/case-studies/cycrown-shopify-project/?utm_source=chatgpt.com
+							287 text 如果是我帮你筛供应商，我会重点验证 6 件事：
+							288 text eBike/自行车案例、规格数据建模、车型 Compare、Bike Finder/Quiz、配件兼容逻辑、美国市场的 financing/assembly/service/warranty 流程
+							289 text 。Shopify 官方的自行车案例也说明，这类产品线上转化的关键之一就是降低“没骑过、不知道适不适合我”的购买不确定性，而不是单纯增加产品参数。
+							290 link Value: shopify.com/my-ms/case-studies/state-bicycle-co?utm_source=chatgpt.com, Description: Shopify: State Bicycle Co. increases online revenue by 500% through a customer-first approach to ecommerce - Shopify Malaysia, https://www.shopify.com/my-ms/case-studies/state-bicycle-co?utm_source=chatgpt.com, 另外 1 个来源
+							291 text 如果你准备近期找外包团队，我也可以直接按你的项目规模，帮你整理一份 
+							292 text 5–10 家 eBike Shopify agency shortlist（美国 / 中国团队都可以）+ 作品案例 + 大概预算档位 + 适合做整站还是长期 CRO
+							293 text 。
+							

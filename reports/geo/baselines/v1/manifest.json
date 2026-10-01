@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "benchmark_version": "1.0",
+  "baseline_date": "2026-10-01",
+  "freeze_status": "FROZEN",
+  "human_review": "APPROVED",
+  "geo_score": "27 / 50",
+  "authority_sprint": "NOT YET IMPLEMENTED",
+  "files": [
+    {
+      "name": "benchmark-queries.json",
+      "sha256": "7a0ee5f533fcc447a7def192f029658ecef03ca929380ee9cdd63d59376b7ce1",
+      "bytes": 28553
+    },
+    {
+      "name": "benchmark-results.json",
+      "sha256": "12f7ed949a0a00cdab9ab9dbbb0b97974498d8bbd29130963f0db0bdb0ad16e7",
+      "bytes": 195156
+    },
+    {
+      "name": "citation-patterns.json",
+      "sha256": "eab9fff40c48eebb1853d18f6c199bbe20f533b2bc142d0ec1ce4288275e4293",
+      "bytes": 696
+    },
+    {
+      "name": "competitor-observations.json",
+      "sha256": "f71570fb476bde95ff5a32c399b94c1268d6240e6601bff4e275cb13b1db5d4e",
+      "bytes": 68025
+    },
+    {
+      "name": "doubao-query-set.json",
+      "sha256": "e0deec99f0248c7ec174d82a0de7ba5fc271036dd9013eac9d47bbbcaa135069",
+      "bytes": 4536
+    },
+    {
+      "name": "final-review.md",
+      "sha256": "d502af97b2142f88ff299df2a81388b0ffa7e822d45cdbf252ee7adb61860889",
+      "bytes": 4349
+    },
+    {
+      "name": "gap-hypotheses.json",
+      "sha256": "6d25ca2ac9be07c1b05d9481b0e7d7fa79c037526b9660bcd733c5e802b3faa6",
+      "bytes": 10996
+    },
+    {
+      "name": "geo-scorecard.json",
+      "sha256": "0a1bccd5399bf41f3c1dfd25a132b23b2d6a001aae71dabde2dc90503aed2700",
+      "bytes": 6996
+    },
+    {
+      "name": "human-review.json",
+      "sha256": "8b3ecaaf9ccdfd031b9e765c0b473b16396652ecbe81236e04181ac790a3ee93",
+      "bytes": 9087
+    }
+  ]
+}

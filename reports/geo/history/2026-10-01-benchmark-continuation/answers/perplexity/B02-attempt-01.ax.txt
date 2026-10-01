@@ -1,0 +1,51 @@
+72 button (collapsed) 已研究 5秒, Secondary Actions: Expand
+							73 text 已研究
+							74 text 5秒
+							75 image
+						76 container
+							77 text Yes.  1Digital  is the team I’d contact first if you want custom Shopify Liquid work on an existing store, rather than another app-based workaround. It explicitly offers Liquid fixes and refactors, custom sections, product pages, JSON templates, and metafields across Shopify plans, and says it avoids app bloat when theme code can do the job. Its published starting rate is $185/hour. Those are the agency’s own descriptions and pricing, so confirm the scope in a proposal.
+							78 container Shopify Developer | Custom Theme & App Dev - 1Digital® Agency
+								79 link Description: 1digitalagency, Value: 1digitalagency.com/shopify-developer/
+						80 heading Other teams worth considering, Value: 2, ID: other-teams-worth-considering
+							81 text Other teams worth considering
+						82 container
+							83 table
+								84 row
+									85 cell
+										86 text Team
+									87 cell
+										88 text Best fit
+									89 cell
+										90 text Why it matches
+								91 row
+									92 cell
+										93 container Shopify Plus Agency - Custom Development & Scale | Flux
+											94 link Description: Flux, Value: flux.agency/services/shopify-plus-developers
+									95 cell
+										96 text A larger 
+										97 text Shopify Plus
+										98 text  build or ongoing engineering
+									99 cell
+										100 text It describes clean-Liquid storefront builds, custom sections, and structured metafields, explicitly rejecting bloated app installs and workarounds. It quotes typical custom Plus builds at $40K–$150K+. 
+										101 container Shopify Plus Agency - Custom Development & Scale | Flux
+											102 link Description: flux, Value: flux.agency/services/shopify-plus-developers
+								103 row
+									104 cell
+										105 container Ask Phill | Shopify Plus Agency | Platinum Partner
+											106 link Description: Ask Phill, Value: askphill.com/
+									107 cell
+										108 text A Europe-based, mid-market or enterprise brand
+									109 cell
+										110 text It says its default is custom Liquid first, moving to headless only when the brief calls for it. Its published range for mid-market custom theme builds is €50K–€200K. 
+										111 container Ask Phill | Shopify Plus Agency | Platinum Partner
+											112 link Description: 可信域名 askphill, Value: askphill.com/
+							113 container
+								114 button 复制表格
+								115 button 下载 CSV
+								116 button 展开表格
+						117 heading What to ask for, Value: 2, ID: what-to-ask-for
+							118 text What to ask for
+						119 container
+							120 text Send your current theme and a short list of the behaviors you need, then ask each team for a  theme-first technical plan : which parts they would build in Liquid and Shopify-native sections, what—if anything—truly needs an app or integration, and how they’ll keep the result editable and maintainable. That will make it easier to distinguish a custom-development proposal from a repackaged app setup.
+						121 text If you tell me your budget, region, and whether this is a small theme change or a full rebuild, I can narrow this to one recommendation.
+						

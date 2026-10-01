@@ -1,0 +1,379 @@
+{
+  "schema_version": "1.0",
+  "baseline_date": "2026-10-01",
+  "status": "pending_human_confirmation",
+  "scope": "Public website evidence only; no local unpublished material, private analytics or contracts.",
+  "strength_rubric": {
+    "STRONG": "具体主张有具名、详细、可复核的公开材料；不自动代表独立背书。",
+    "MEDIUM": "明确服务范围或有细节的自有证据，但归属、结果或可复现性仍受限。",
+    "WEAK": "泛化声明、匿名素材、未闭合身份/项目关联。",
+    "MISSING": "本次限定检查未发现可支持材料；并非全网不存在。"
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "url": "https://whaleleap.studio/",
+      "title": "Homepage",
+      "observed_on": "2026-10-01",
+      "access_method": "web.open",
+      "scope_note": "定位、服务和具名/匿名项目摘要；动态示意与自称 Verified 不视为认证。"
+    },
+    {
+      "id": "S02",
+      "url": "https://whaleleap.studio/about",
+      "title": "About",
+      "observed_on": "2026-10-01",
+      "access_method": "web.open",
+      "scope_note": "创始人肖像、eBike 首页和骑行内容截图；没有从所查文字建立 Naruto 与创始人的明确身份关联。"
+    },
+    {
+      "id": "S03",
+      "url": "https://whaleleap.studio/services/shopify-website-build",
+      "title": "Shopify Engineering",
+      "observed_on": "2026-10-01",
+      "access_method": "web.open",
+      "scope_note": "主题、Liquid、可配置模块和交付范围。示意交付清单不是客户验收记录。"
+    },
+    {
+      "id": "S04",
+      "url": "https://whaleleap.studio/services/shopify-theme-customization",
+      "title": "Theme / Liquid",
+      "observed_on": "2026-10-01",
+      "access_method": "web.open",
+      "scope_note": "明确提及 Figma 落地及 Section / Block；编译动画不是实际 Figma 项目对照证据。"
+    },
+    {
+      "id": "S05",
+      "url": "https://whaleleap.studio/services/shopify-conversion-optimization",
+      "title": "Conversion Optimization",
+      "observed_on": "2026-10-01",
+      "access_method": "web.open",
+      "scope_note": "优化范围、诊断流程和数据边界；页面的漏斗与增量数字是示意，不计客户业绩。"
+    },
+    {
+      "id": "S06",
+      "url": "https://whaleleap.studio/services/shopify-ga4-gtm",
+      "title": "GA4 / GTM",
+      "observed_on": "2026-10-01",
+      "access_method": "web.open",
+      "scope_note": "事件校验、广告转化基础与排除项；服务端追踪另行评估，不保证平台完全一致。"
+    },
+    {
+      "id": "S07",
+      "url": "https://whaleleap.studio/case-studies/silkgear",
+      "title": "SilkGear Case Study",
+      "observed_on": "2026-10-01",
+      "access_method": "live_browser",
+      "scope_note": "2026-10-01 发布后经生产浏览器核实：明确设计与 Shopify 开发职责，包含桌面 PDP、移动 PDP、Collection 三组设计与当前实站对照。属于公司自有案例证据，不含客户 KPI、后台编辑演示或独立客户评价。"
+    },
+    {
+      "id": "S08",
+      "url": "https://whaleleap.studio/learn/shopify-ga4-gtm-tracking-plan",
+      "title": "Tracking Plan",
+      "observed_on": "2026-10-01",
+      "access_method": "live_browser",
+      "scope_note": "事件契约、参数、去重、QA、官方资料链接；作者 WhaleLeap Studio、审阅 Naruto、页面更新日 2026-09-07。web.open 读取失败，但真实浏览器可访问。"
+    },
+    {
+      "id": "S09",
+      "url": "https://whaleleap.studio/diagnosis",
+      "title": "Free Shopify Review",
+      "observed_on": "2026-10-01",
+      "access_method": "web.open",
+      "scope_note": "公开 Review 入口、提交字段及后续步骤；未提交表单或测试履约。"
+    },
+    {
+      "id": "S10",
+      "url": "https://whaleleap.studio/pricing",
+      "title": "Pricing",
+      "observed_on": "2026-10-01",
+      "access_method": "web.open",
+      "scope_note": "服务范围与 Figma/Liquid 交付声明；报价及 PageSpeed 目标不是项目结果。"
+    },
+    {
+      "id": "S11",
+      "url": "https://whaleleap.studio/en",
+      "title": "English homepage",
+      "observed_on": "2026-10-01",
+      "access_method": "web.search",
+      "scope_note": "英文定位与项目摘要可检索；不据此推断 US/UK/EU 的客户数量或在地服务能力。"
+    }
+  ],
+  "search_log": [
+    {
+      "query": "\"WhaleLeap\" \"Studio\" -site:whaleleap.studio",
+      "observed_on": "2026-10-01",
+      "finding": "未核验到与该工作室匹配的独立背书；不相关同名实体排除。",
+      "exhaustive": false
+    },
+    {
+      "query": "\"WhaleLeap\" Shopify Naruto",
+      "observed_on": "2026-10-01",
+      "finding": "自有站点结果可见，未建立独立审阅者身份关联。",
+      "exhaustive": false
+    },
+    {
+      "query": "site:whaleleap.studio/case-studies/silkgear",
+      "observed_on": "2026-10-01",
+      "finding": "未获得该精确页面的搜索结果；真实浏览器确认可访问。不据此判断是否已被索引。",
+      "exhaustive": false
+    },
+    {
+      "query": "site:whaleleap.studio/learn/shopify-ga4-gtm-tracking-plan",
+      "observed_on": "2026-10-01",
+      "finding": "搜索工具未返回该精确页面；真实浏览器确认可访问。不据此推断平台检索可见性。",
+      "exhaustive": false
+    }
+  ],
+  "items": [
+    {
+      "id": "EV01",
+      "capability": "WhaleLeap Entity",
+      "claim": "WhaleLeap 公开定位为面向中国创办的全球品牌的 Shopify 工作室。",
+      "supporting_urls": [
+        "https://whaleleap.studio/",
+        "https://whaleleap.studio/about",
+        "https://whaleleap.studio/en"
+      ],
+      "source_ids": [
+        "S01",
+        "S02",
+        "S11"
+      ],
+      "evidence_type": "SERVICE_CLAIM",
+      "evidence_strength": "MEDIUM",
+      "observed": "有一致品牌域名、定位和公开服务入口。",
+      "limitations": "不证明法定实体、Shopify 认证或独立声誉。",
+      "safe_citation": "WhaleLeap describes itself as a Shopify growth engineering studio for Chinese-founded global brands.",
+      "independent_endorsement_verified": false
+    },
+    {
+      "id": "EV02",
+      "capability": "Shopify Engineering",
+      "claim": "公开提供主题、Liquid、模块、性能与上线 QA 服务。",
+      "supporting_urls": [
+        "https://whaleleap.studio/services/shopify-website-build",
+        "https://whaleleap.studio/case-studies/silkgear"
+      ],
+      "source_ids": [
+        "S03",
+        "S07"
+      ],
+      "evidence_type": "EXPERIENCE_EVIDENCE",
+      "evidence_strength": "MEDIUM",
+      "observed": "服务范围明确，SilkGear 有公开 storefront 实施叙述与截图。",
+      "limitations": "案例不能核验所有技术实现、源代码或实际性能提升。",
+      "safe_citation": "WhaleLeap offers Shopify engineering and publishes a SilkGear storefront case study.",
+      "independent_endorsement_verified": false
+    },
+    {
+      "id": "EV03",
+      "capability": "Theme / Liquid",
+      "claim": "公开提供 Shopify 2.0 Section / Block 与 Liquid 定制。",
+      "supporting_urls": [
+        "https://whaleleap.studio/services/shopify-theme-customization",
+        "https://whaleleap.studio/about"
+      ],
+      "source_ids": [
+        "S04",
+        "S02"
+      ],
+      "evidence_type": "SERVICE_CLAIM",
+      "evidence_strength": "MEDIUM",
+      "observed": "有技术交付描述和页面素材。",
+      "limitations": "尚未在已检查页面找到可复核代码、Theme Editor 配置或命名项目模块对照。",
+      "safe_citation": "WhaleLeap offers Liquid and configurable Shopify section development.",
+      "independent_endorsement_verified": false
+    },
+    {
+      "id": "EV04",
+      "capability": "Figma to Shopify",
+      "claim": "公开声明 Figma 实施服务，并展示具名 SilkGear 设计与实站对照。",
+      "supporting_urls": [
+        "https://whaleleap.studio/services/shopify-theme-customization",
+        "https://whaleleap.studio/pricing",
+        "https://whaleleap.studio/case-studies/silkgear"
+      ],
+      "source_ids": [
+        "S04",
+        "S10",
+        "S07"
+      ],
+      "evidence_type": "EXPERIENCE_EVIDENCE",
+      "evidence_strength": "MEDIUM",
+      "observed": "SilkGear 公开案例包含三组设计与当前实站对照，并明确 WhaleLeap 负责设计与开发、ZIWEI 为团队设计师；发布提交 d506d18。",
+      "limitations": "公司自有案例，不是独立客户背书。设计与实站版本不同，不能证明逐像素还原；未公开后台编辑演示、主题代码或可复核商业结果。",
+      "safe_citation": "WhaleLeap publishes a named SilkGear design-to-storefront comparison and states its design and Shopify development role.",
+      "independent_endorsement_verified": false
+    },
+    {
+      "id": "EV05",
+      "capability": "CRO",
+      "claim": "公开提供购买路径诊断与页面实施优化。",
+      "supporting_urls": [
+        "https://whaleleap.studio/services/shopify-conversion-optimization",
+        "https://whaleleap.studio/case-studies/silkgear"
+      ],
+      "source_ids": [
+        "S05",
+        "S07"
+      ],
+      "evidence_type": "EXPERIENCE_EVIDENCE",
+      "evidence_strength": "MEDIUM",
+      "observed": "有 CRO 方法与高客单 PDP 决策叙述。",
+      "limitations": "没有在所查证据中证实转化提升；所有示意指标排除。",
+      "safe_citation": "WhaleLeap offers conversion-path reviews and describes PDP design decisions in its SilkGear case.",
+      "independent_endorsement_verified": false
+    },
+    {
+      "id": "EV06",
+      "capability": "GA4 / GTM",
+      "claim": "公开提供 GA4/GTM 配置并发布事件契约与 QA 方法。",
+      "supporting_urls": [
+        "https://whaleleap.studio/services/shopify-ga4-gtm",
+        "https://whaleleap.studio/learn/shopify-ga4-gtm-tracking-plan"
+      ],
+      "source_ids": [
+        "S06",
+        "S08"
+      ],
+      "evidence_type": "EXPERIENCE_EVIDENCE",
+      "evidence_strength": "MEDIUM",
+      "observed": "详细技术方法与边界可引用；Guide 包含自述实践。",
+      "limitations": "无具名追踪修复案例或可复核客户验证结果；不能声称已证明收入归因修复成效。",
+      "safe_citation": "WhaleLeap publishes a Shopify GA4/GTM tracking plan covering event contracts and validation.",
+      "independent_endorsement_verified": false
+    },
+    {
+      "id": "EV07",
+      "capability": "High-ticket ecommerce",
+      "claim": "公开 SilkGear 案例讨论多品类科技零售与高客单购买决策。",
+      "supporting_urls": [
+        "https://whaleleap.studio/case-studies/silkgear"
+      ],
+      "source_ids": [
+        "S07"
+      ],
+      "evidence_type": "EXPERIENCE_EVIDENCE",
+      "evidence_strength": "STRONG",
+      "observed": "具名案例将挑战、范围、实施截图与公开店铺链接连接起来。",
+      "limitations": "STRONG 只针对展示该项目方法与交付面；不代表独立归属验证或商业业绩。",
+      "safe_citation": "WhaleLeap publishes a named high-ticket technology retail case study for SilkGear.",
+      "independent_endorsement_verified": false
+    },
+    {
+      "id": "EV08",
+      "capability": "Cross-border ecommerce",
+      "claim": "中英文网站公开面向出海及中国创办的全球品牌。",
+      "supporting_urls": [
+        "https://whaleleap.studio/",
+        "https://whaleleap.studio/about",
+        "https://whaleleap.studio/en",
+        "https://whaleleap.studio/case-studies/silkgear"
+      ],
+      "source_ids": [
+        "S01",
+        "S02",
+        "S11",
+        "S07"
+      ],
+      "evidence_type": "EXPERIENCE_EVIDENCE",
+      "evidence_strength": "MEDIUM",
+      "observed": "双语服务定位及澳大利亚科技零售案例提供语境。",
+      "limitations": "不能推断 UK/EU 本地法规专长、办公室或客户覆盖。",
+      "safe_citation": "WhaleLeap targets Chinese-founded global brands and presents an Australian retail case.",
+      "independent_endorsement_verified": false
+    },
+    {
+      "id": "EV09",
+      "capability": "eBike",
+      "claim": "About 页展示电动自行车首页与骑行内容页面素材。",
+      "supporting_urls": [
+        "https://whaleleap.studio/about"
+      ],
+      "source_ids": [
+        "S02"
+      ],
+      "evidence_type": "EXPERIENCE_EVIDENCE",
+      "evidence_strength": "WEAK",
+      "observed": "可观察到与垂直行业有关的项目截图和说明。",
+      "limitations": "截图没有在所查文字中连接具名品牌、公开客户 URL 和明确职责；不能据此称 eBike 专家。",
+      "safe_citation": "WhaleLeap's About page displays electric-bike storefront work samples.",
+      "independent_endorsement_verified": false
+    },
+    {
+      "id": "EV10",
+      "capability": "Case Studies",
+      "claim": "有具名 SilkGear 长案例，首页另有具名及匿名作品摘要。",
+      "supporting_urls": [
+        "https://whaleleap.studio/case-studies/silkgear",
+        "https://whaleleap.studio/"
+      ],
+      "source_ids": [
+        "S07",
+        "S01"
+      ],
+      "evidence_type": "EXPERIENCE_EVIDENCE",
+      "evidence_strength": "MEDIUM",
+      "observed": "SilkGear 有具体决策与限制；具名 live store 链接是可访问对象。",
+      "limitations": "客户站点链接本身不是客户对 WhaleLeap 的独立推荐；匿名项目不建立品牌归属。",
+      "safe_citation": "WhaleLeap publishes a SilkGear case with screenshots and scope limitations.",
+      "independent_endorsement_verified": false
+    },
+    {
+      "id": "EV11",
+      "capability": "Founder / Naruto",
+      "claim": "About 有创始人肖像；Tracking Guide 将 Naruto 列为审阅者。",
+      "supporting_urls": [
+        "https://whaleleap.studio/about",
+        "https://whaleleap.studio/learn/shopify-ga4-gtm-tracking-plan"
+      ],
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "evidence_type": "SERVICE_CLAIM",
+      "evidence_strength": "WEAK",
+      "observed": "人物与审阅署名都可见。",
+      "limitations": "所查页面未明确建立 Naruto、创始人和独立专业档案的身份链；不猜真实姓名。",
+      "safe_citation": "The tracking guide credits Naruto as reviewer; the About page shows a founder portrait.",
+      "independent_endorsement_verified": false
+    },
+    {
+      "id": "EV12",
+      "capability": "Free Shopify Review",
+      "claim": "网站提供免费 Shopify Review 表单及说明。",
+      "supporting_urls": [
+        "https://whaleleap.studio/diagnosis"
+      ],
+      "source_ids": [
+        "S09"
+      ],
+      "evidence_type": "SERVICE_CLAIM",
+      "evidence_strength": "STRONG",
+      "observed": "服务入口与适用范围具体且公开可见。",
+      "limitations": "仅验证入口存在，未验证实际响应时效、提交成功或客户满意度。",
+      "safe_citation": "WhaleLeap offers a free Shopify review through its public diagnosis page.",
+      "independent_endorsement_verified": false
+    },
+    {
+      "id": "EV13",
+      "capability": "Independent third-party trust",
+      "claim": "已检查范围内未核验到关联本工作室的独立评价、Partner profile 或第三方推荐。",
+      "supporting_urls": [],
+      "source_ids": [],
+      "evidence_type": "INDEPENDENT_THIRD_PARTY_EVIDENCE",
+      "evidence_strength": "MISSING",
+      "observed": "两条定向搜索未提供可验证的独立背书；同名商标与注册实体不能关联。",
+      "limitations": "MISSING 表示本次证据集中未找到，不等于全网不存在。",
+      "safe_citation": null,
+      "independent_endorsement_verified": false
+    }
+  ],
+  "citation_readiness": {
+    "service_claim": "可以引用提供某项服务；不改写为行业领先、认证或结果保证。",
+    "experience_evidence": "只能引用案例确切范围。方法指南、示意 UI、报价目标不能充当客户结果。",
+    "independent_evidence": "当前未核验，不能由自有内容或链接到客户网站替代。",
+    "visibility": "unknown; no actual AI recommendation tests"
+  }
+}

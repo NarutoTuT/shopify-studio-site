@@ -1,0 +1,19 @@
+72 button (collapsed) 已研究 1秒, Secondary Actions: Expand
+							73 text 已研究
+							74 text 1秒
+							75 image
+						76 container
+							77 text 找 做过 Shopify 电商追踪的 GA4/GTM 埋点实施顾问 ，而不是只负责广告投放或看报表的人。你要的是一次“订单对账＋埋点审计”：既核对  purchase  传了什么，也查是否有多个渠道重复发送同一笔订单。
+							78 image 可信域名
+							79 text stape +1
+						80 heading 找人时怎么描述, Value: 2
+							81 text 找人时怎么描述
+						82 text 可以直接发这段需求：
+						83 container
+							84 text Shopify 后台订单金额与 GA4 购买收入不一致。请按相同日期、时区、币种和收入口径抽样对账，以 Shopify 订单号核对 GA4 的  transaction_id ；检查  purchase  的  value 、 currency 、 items  及税费、运费处理；排查 Google & YouTube 应用、GTM、自定义像素和第三方应用是否重复发送事件。请交付差异原因、测试证据和修复方案。
+							85 image 可信域名
+							86 text stape +2
+							87 button 复制
+						88 container
+							89 text 筛选候选人时，问一句：“你会怎样区分 金额口径不一致 和 重复 purchase ？”能说明先对齐报表口径、再按订单号查事件来源与触发次数的人，更贴合这项工作。不要仅凭两边总金额不同就断定埋点坏了。 trackparity +1
+						

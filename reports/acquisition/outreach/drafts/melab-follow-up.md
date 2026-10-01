@@ -1,0 +1,12 @@
+# MELab Follow-up Draft
+
+Status: draft only - do not send without human approval.
+
+Hi MELab team,
+
+Just wanted to close the loop on my note about the US PDP shipping reassurance. I still have the short Shopify review ready if it would be useful.
+
+No worries if it is not a priority right now.
+
+Best,
+WhaleLeap Studio

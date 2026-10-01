@@ -1,0 +1,857 @@
+{
+  "status": "provisional_pending_human_review",
+  "coverage": [
+    {
+      "platform": "ChatGPT",
+      "completed": 15,
+      "expected": 15,
+      "remaining": 0,
+      "human_reviewed": 0,
+      "mention_count": 0,
+      "recommendation_count": 0,
+      "provisional_mention_rate": 0,
+      "provisional_recommendation_rate": 0,
+      "approved_mention_rate": null,
+      "approved_recommendation_rate": null,
+      "missing_query_ids": [],
+      "by_cluster": [
+        {
+          "cluster": "A",
+          "completed": 3,
+          "expected": 3,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": 0,
+          "recommendation_rate": 0
+        },
+        {
+          "cluster": "B",
+          "completed": 3,
+          "expected": 3,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": 0,
+          "recommendation_rate": 0
+        },
+        {
+          "cluster": "C",
+          "completed": 2,
+          "expected": 2,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": 0,
+          "recommendation_rate": 0
+        },
+        {
+          "cluster": "D",
+          "completed": 3,
+          "expected": 3,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": 0,
+          "recommendation_rate": 0
+        },
+        {
+          "cluster": "E",
+          "completed": 2,
+          "expected": 2,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": 0,
+          "recommendation_rate": 0
+        },
+        {
+          "cluster": "F",
+          "completed": 2,
+          "expected": 2,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": 0,
+          "recommendation_rate": 0
+        }
+      ]
+    },
+    {
+      "platform": "Gemini",
+      "completed": 0,
+      "expected": 15,
+      "remaining": 15,
+      "human_reviewed": 0,
+      "mention_count": 0,
+      "recommendation_count": 0,
+      "provisional_mention_rate": null,
+      "provisional_recommendation_rate": null,
+      "approved_mention_rate": null,
+      "approved_recommendation_rate": null,
+      "missing_query_ids": [
+        "A01",
+        "A02",
+        "A04",
+        "C02",
+        "F02",
+        "B02",
+        "B05",
+        "C01",
+        "D02",
+        "F03",
+        "B01",
+        "D01",
+        "D03",
+        "E01",
+        "E03"
+      ],
+      "by_cluster": [
+        {
+          "cluster": "A",
+          "completed": 0,
+          "expected": 3,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": null,
+          "recommendation_rate": null
+        },
+        {
+          "cluster": "B",
+          "completed": 0,
+          "expected": 3,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": null,
+          "recommendation_rate": null
+        },
+        {
+          "cluster": "C",
+          "completed": 0,
+          "expected": 2,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": null,
+          "recommendation_rate": null
+        },
+        {
+          "cluster": "D",
+          "completed": 0,
+          "expected": 3,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": null,
+          "recommendation_rate": null
+        },
+        {
+          "cluster": "E",
+          "completed": 0,
+          "expected": 2,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": null,
+          "recommendation_rate": null
+        },
+        {
+          "cluster": "F",
+          "completed": 0,
+          "expected": 2,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": null,
+          "recommendation_rate": null
+        }
+      ]
+    },
+    {
+      "platform": "Perplexity",
+      "completed": 15,
+      "expected": 15,
+      "remaining": 0,
+      "human_reviewed": 0,
+      "mention_count": 0,
+      "recommendation_count": 0,
+      "provisional_mention_rate": 0,
+      "provisional_recommendation_rate": 0,
+      "approved_mention_rate": null,
+      "approved_recommendation_rate": null,
+      "missing_query_ids": [],
+      "by_cluster": [
+        {
+          "cluster": "A",
+          "completed": 3,
+          "expected": 3,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": 0,
+          "recommendation_rate": 0
+        },
+        {
+          "cluster": "B",
+          "completed": 3,
+          "expected": 3,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": 0,
+          "recommendation_rate": 0
+        },
+        {
+          "cluster": "C",
+          "completed": 2,
+          "expected": 2,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": 0,
+          "recommendation_rate": 0
+        },
+        {
+          "cluster": "D",
+          "completed": 3,
+          "expected": 3,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": 0,
+          "recommendation_rate": 0
+        },
+        {
+          "cluster": "E",
+          "completed": 2,
+          "expected": 2,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": 0,
+          "recommendation_rate": 0
+        },
+        {
+          "cluster": "F",
+          "completed": 2,
+          "expected": 2,
+          "mentioned": 0,
+          "recommended": 0,
+          "mention_rate": 0,
+          "recommendation_rate": 0
+        }
+      ]
+    }
+  ],
+  "repeated_competitors": [
+    {
+      "platform": "ChatGPT",
+      "company": "Conspire",
+      "website": null,
+      "query_clusters": [
+        "A",
+        "C",
+        "B"
+      ],
+      "appearance_count": 3,
+      "recommended_count": 3,
+      "result_ids": [
+        "2026-10-01-chatgpt-A04-attempt-01",
+        "2026-10-01-chatgpt-C02-attempt-01",
+        "2026-10-01-chatgpt-B05-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Cheriscon",
+      "website": null,
+      "query_clusters": [
+        "F"
+      ],
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "result_ids": [
+        "2026-10-01-chatgpt-F02-attempt-01",
+        "2026-10-01-chatgpt-F03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Convertibles",
+      "website": null,
+      "query_clusters": [
+        "C"
+      ],
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "result_ids": [
+        "2026-10-01-chatgpt-C02-attempt-01",
+        "2026-10-01-chatgpt-C01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "DTC Pages",
+      "website": null,
+      "query_clusters": [
+        "C"
+      ],
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "result_ids": [
+        "2026-10-01-chatgpt-C02-attempt-01",
+        "2026-10-01-chatgpt-C01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "EastDTC / EastDigi",
+      "website": null,
+      "query_clusters": [
+        "F"
+      ],
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "result_ids": [
+        "2026-10-01-chatgpt-F02-attempt-01",
+        "2026-10-01-chatgpt-F03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "First and Third",
+      "website": null,
+      "query_clusters": [
+        "C",
+        "B"
+      ],
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "result_ids": [
+        "2026-10-01-chatgpt-C02-attempt-01",
+        "2026-10-01-chatgpt-B02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Netalico",
+      "website": null,
+      "query_clusters": [
+        "A",
+        "C"
+      ],
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "result_ids": [
+        "2026-10-01-chatgpt-A02-attempt-01",
+        "2026-10-01-chatgpt-C01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "SDG",
+      "website": null,
+      "query_clusters": [
+        "B",
+        "D"
+      ],
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "result_ids": [
+        "2026-10-01-chatgpt-B02-attempt-01",
+        "2026-10-01-chatgpt-D02-attempt-02"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Subframe",
+      "website": null,
+      "query_clusters": [
+        "B"
+      ],
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "result_ids": [
+        "2026-10-01-chatgpt-B01-attempt-01",
+        "2026-10-01-chatgpt-B05-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "Swanky",
+      "website": null,
+      "query_clusters": [
+        "A",
+        "E"
+      ],
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "result_ids": [
+        "2026-10-01-chatgpt-A01-attempt-02",
+        "2026-10-01-chatgpt-E03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "ChatGPT",
+      "company": "WESWOO",
+      "website": null,
+      "query_clusters": [
+        "F",
+        "E"
+      ],
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "result_ids": [
+        "2026-10-01-chatgpt-F02-attempt-01",
+        "2026-10-01-chatgpt-E01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Netalico",
+      "website": null,
+      "query_clusters": [
+        "A",
+        "E"
+      ],
+      "appearance_count": 3,
+      "recommended_count": 3,
+      "result_ids": [
+        "2026-10-01-perplexity-A01-attempt-02",
+        "2026-10-01-perplexity-A02-attempt-01",
+        "2026-10-01-perplexity-E03-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "Shinetech Software",
+      "website": null,
+      "query_clusters": [
+        "A",
+        "F"
+      ],
+      "appearance_count": 3,
+      "recommended_count": 3,
+      "result_ids": [
+        "2026-10-01-perplexity-A01-attempt-02",
+        "2026-10-01-perplexity-F03-attempt-01",
+        "2026-10-01-perplexity-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "WESWOO",
+      "website": null,
+      "query_clusters": [
+        "B",
+        "F",
+        "E"
+      ],
+      "appearance_count": 3,
+      "recommended_count": 3,
+      "result_ids": [
+        "2026-10-01-perplexity-B01-attempt-01",
+        "2026-10-01-perplexity-F02-attempt-01",
+        "2026-10-01-perplexity-E01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "EastDTC / EastDigi",
+      "website": null,
+      "query_clusters": [
+        "A",
+        "F"
+      ],
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "result_ids": [
+        "2026-10-01-perplexity-A01-attempt-02",
+        "2026-10-01-perplexity-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "SPLIT Development",
+      "website": null,
+      "query_clusters": [
+        "A",
+        "B"
+      ],
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "result_ids": [
+        "2026-10-01-perplexity-A04-attempt-01",
+        "2026-10-01-perplexity-B01-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    },
+    {
+      "platform": "Perplexity",
+      "company": "翼果科技",
+      "website": null,
+      "query_clusters": [
+        "A",
+        "F"
+      ],
+      "appearance_count": 2,
+      "recommended_count": 2,
+      "result_ids": [
+        "2026-10-01-perplexity-A01-attempt-02",
+        "2026-10-01-perplexity-F02-attempt-01"
+      ],
+      "evidence": [],
+      "independent_endorsement": null
+    }
+  ],
+  "repeated_source_types": [
+    {
+      "platform": "ChatGPT",
+      "source_type": "provider_owned_page",
+      "answer_count": 9,
+      "normalized_urls": [
+        "https://subframe.agency/services/development",
+        "https://flowcartagency.com/services/shopify-custom-theme-development",
+        "https://weblexia.in/services/figma-to-shopify",
+        "https://stackframes.dev/shopify-theme-development",
+        "https://cartiapps.com/pages/services-theme-and-custom-dev",
+        "https://markupfox.com/",
+        "https://electriceye.io/pages/services-design-development",
+        "https://www.raymondmatthew.com/",
+        "https://sherocommerce.com/pages/shopify-cro-agency",
+        "https://convertibles.dev/pages/shopify-cro-agency",
+        "https://www.conspireagency.com/products/shopify-cro-agency",
+        "https://yaxify.com/shopify-custom-sections-development",
+        "https://thecheckoutagency.com/services/shopify-theme-development/",
+        "https://lintelagency.com/services/shopify-theme-development",
+        "https://netalico.com/pages/shopify-cro-agency",
+        "https://forgecro.com/shopify-cro-agency/",
+        "https://www.propeller.marketing/ecommerce-cro",
+        "https://reedysagency.com/services/liquid-development",
+        "https://flux.agency/work/projecta",
+        "https://www.irishtitan.com/pioneer-electronics",
+        "https://swankyagency.com/launching-consumer-electronics-ecommerce-brand-shopify-plus-case-study-gotraka/",
+        "https://velstar.agency/case-studies/comet",
+        "https://www.mswebinternational.com/pages/case-study-western-digital",
+        "https://www.weconvert.agency/flx",
+        "https://cosnetglobal.com/portfolio/zen-e-bike",
+        "https://www.questdigital.co.in/bluejay-bikes",
+        "https://www.truestack.my/work/eviebikes",
+        "https://www.weswoo.com/en/case-studies/aspadz-shopify-project/",
+        "https://www.weswoo.com/en/case-studies/cycrown-shopify-project/",
+        "https://www.dolphinanalytics.co.uk/blog/shopify-ga4-gtm-tracking-setup",
+        "https://www.sdg.la/shopify-analytics-integration/",
+        "https://ecomlabs.dev/services/analytics-tracking",
+        "https://aumlytics.com/",
+        "https://www.byteinfy.com/services/shopify-analytics-setup"
+      ]
+    },
+    {
+      "platform": "ChatGPT",
+      "source_type": "platform_directory",
+      "answer_count": 9,
+      "normalized_urls": [
+        "https://www.shopify.com/partners/directory",
+        "https://www.shopify.com/partners/directory/partner/arcticgreyinc",
+        "https://www.shopify.com/partners/directory/partner/avexdesigns",
+        "https://www.shopify.com/partners/directory/partner/swankyapple",
+        "https://www.shopify.com/partners/directory/partner/c2-digital",
+        "https://www.shopify.com/partners/directory/partner/netalico-llc",
+        "https://www.shopify.com/partners/directory/partner/webcontrive",
+        "https://www.shopify.com/partners/directory/partner/immaculate17",
+        "https://www.shopify.com/partners/directory/partner/pixels-made",
+        "https://www.shopify.com/partners/directory/partner/barrel",
+        "https://www.shopify.com/zh/partners/directory/services",
+        "https://www.shopify.com/partners/directory/partner/electriceye",
+        "https://www.shopify.com/partners/directory/partner/conspire-agency",
+        "https://www.shopify.com/partners/directory/partner/dtc-pages",
+        "https://www.shopify.com/zh/partners/directory/locations/china",
+        "https://www.shopify.com/partners/directory/partner/yiguotech1",
+        "https://www.shopify.com/partners/directory/partner/eastdigi",
+        "https://www.shopify.com/partners/directory/partner/dale2",
+        "https://www.shopify.com/partners/directory/partner/geekleads",
+        "https://www.shopify.com/partners/directory/partner/10395",
+        "https://www.shopify.com/partners/directory/partner/linkjoint1",
+        "https://www.shopify.com/partners/directory/locations/china",
+        "https://www.shopify.com/partners/directory/partner/first-and-third",
+        "https://www.shopify.com/partners/directory/partner/the-cool-agency",
+        "https://www.shopify.com/partners/directory/partner/sdg",
+        "https://www.shopify.com/partners/directory/partner/xgentech",
+        "https://www.shopify.com/partners/directory/partner/brickspace-lab",
+        "https://www.shopify.com/partners/directory/partner/hya-media",
+        "https://www.shopify.com/partners/directory/partner/shinetech-changchun",
+        "https://www.shopify.com/partners/directory/partner/leo34",
+        "https://www.shopify.com/partners/directory/partner/shenzhen-hui-wang-ruan-jian-ji-shu-you-x",
+        "https://www.shopify.com/by/partners/directory/locations/united-states",
+        "https://www.shopify.com/partners/directory/services/marketing-and-sales/analytics-and-tracking",
+        "https://www.shopify.com/partners/directory/partner/mikkel-tschentscher"
+      ]
+    },
+    {
+      "platform": "ChatGPT",
+      "source_type": "platform_official_guidance",
+      "answer_count": 6,
+      "normalized_urls": [
+        "https://help.shopify.com/en/partners/grow-your-business/partner-directory/how-it-works",
+        "https://www.shopify.com/blog/cro-checklist",
+        "https://www.shopify.com/blog/ecommerce-filters",
+        "https://www.shopify.com/my-ms/case-studies/state-bicycle-co",
+        "https://shopify.dev/docs/api/checkout-ui-extensions/2026-01/target-apis/platform-apis/analytics-api",
+        "https://support.google.com/merchants/answer/15458661?hl=en",
+        "https://support.google.com/google-ads/answer/10632359?hl=en",
+        "https://help.shopify.com/en/manual/reports-and-analytics/google-analytics/google-tag-manager",
+        "https://support.google.com/google-ads/answer/6386790?hl=en"
+      ]
+    },
+    {
+      "platform": "Perplexity",
+      "source_type": "platform_directory",
+      "answer_count": 8,
+      "normalized_urls": [
+        "https://www.shopify.com/partners/directory/locations/china",
+        "https://www.shopify.com/partners/directory/partner/netalico-llc",
+        "https://www.shopify.com/partners/directory/services",
+        "https://www.shopify.com/partners/directory/partner/adex-labs",
+        "https://www.shopify.com/partners/directory/partner/ecommercewebguru",
+        "https://www.shopify.com/partners/directory",
+        "https://www.shopify.com/partners/directory/partner/split-development",
+        "https://shopify.com/partners/directory/partner/split-development",
+        "https://shopify.com/partners/directory/partner/dev-jour-tec",
+        "https://shopify.com/partners/directory",
+        "https://shopify.com/partners/directory/partner/shinetech-changchun",
+        "https://shopify.com/partners/directory/partner/sainstore",
+        "https://shopify.com/zh/partners/directory",
+        "https://shopify.com/partners/directory/partner/yiguotech1",
+        "https://shopify.com/partners/directory/partner/10395",
+        "https://shopify.com/partners/directory/partner/cleargo-e-business-consultancy-pte-ltd",
+        "https://shopify.com/partners/directory/locations/china",
+        "https://shopify.com/partners/directory/partner/gckj",
+        "https://shopify.com/partners/directory/partner/haiyangdesign"
+      ]
+    },
+    {
+      "platform": "Perplexity",
+      "source_type": "provider_owned_page",
+      "answer_count": 10,
+      "normalized_urls": [
+        "https://netalico.com/pages/shopify-maintenance-support",
+        "https://markupfox.com/services/design-to-shopify",
+        "https://analyticodigital.com/consulting/shopify-analytics",
+        "https://blazebytesolutions.com/ecommerce-tracking/",
+        "https://swankyagency.com/services/conversion-rate-optimisation-services/",
+        "https://conversion.is/services/shopify-cro-agency",
+        "https://1digitalagency.com/shopify-developer/",
+        "https://flux.agency/services/shopify-plus-developers",
+        "https://mgroupweb.com/services/custom-shopify-sections/",
+        "https://vaangroup.com/articles/how-pedego-migrated-to-shopify-plus-and-streamlined-dealer-management-at-scale",
+        "https://weswoo.com/case-studies/",
+        "https://americaneagle.com/platforms/shopify/blaupunkt",
+        "https://singlegrain.com/blog-posts/analytics/google-ads-conversion-tracking-troubleshooting-and-setup/",
+        "https://stape.io/blog/shopify-google-analytics-4-tracking",
+        "https://trackparity.com/blog/ga4-shopify-purchase-discrepancy/",
+        "https://craftberry.co/services/shopify-agency-for-tech-brands",
+        "https://netalico.com/pages/shopify-electronics-agency"
+      ]
+    },
+    {
+      "platform": "Perplexity",
+      "source_type": "platform_official_guidance",
+      "answer_count": 2,
+      "normalized_urls": [
+        "https://www.shopify.com/blog/ecommerce-agency",
+        "https://shopify.dev/docs/storefronts/themes/best-practices/editor/integrate-sections-and-blocks"
+      ]
+    }
+  ],
+  "source_types": [
+    {
+      "platform": "ChatGPT",
+      "source_type": "provider_owned_page",
+      "answer_count": 9,
+      "normalized_urls": [
+        "https://subframe.agency/services/development",
+        "https://flowcartagency.com/services/shopify-custom-theme-development",
+        "https://weblexia.in/services/figma-to-shopify",
+        "https://stackframes.dev/shopify-theme-development",
+        "https://cartiapps.com/pages/services-theme-and-custom-dev",
+        "https://markupfox.com/",
+        "https://electriceye.io/pages/services-design-development",
+        "https://www.raymondmatthew.com/",
+        "https://sherocommerce.com/pages/shopify-cro-agency",
+        "https://convertibles.dev/pages/shopify-cro-agency",
+        "https://www.conspireagency.com/products/shopify-cro-agency",
+        "https://yaxify.com/shopify-custom-sections-development",
+        "https://thecheckoutagency.com/services/shopify-theme-development/",
+        "https://lintelagency.com/services/shopify-theme-development",
+        "https://netalico.com/pages/shopify-cro-agency",
+        "https://forgecro.com/shopify-cro-agency/",
+        "https://www.propeller.marketing/ecommerce-cro",
+        "https://reedysagency.com/services/liquid-development",
+        "https://flux.agency/work/projecta",
+        "https://www.irishtitan.com/pioneer-electronics",
+        "https://swankyagency.com/launching-consumer-electronics-ecommerce-brand-shopify-plus-case-study-gotraka/",
+        "https://velstar.agency/case-studies/comet",
+        "https://www.mswebinternational.com/pages/case-study-western-digital",
+        "https://www.weconvert.agency/flx",
+        "https://cosnetglobal.com/portfolio/zen-e-bike",
+        "https://www.questdigital.co.in/bluejay-bikes",
+        "https://www.truestack.my/work/eviebikes",
+        "https://www.weswoo.com/en/case-studies/aspadz-shopify-project/",
+        "https://www.weswoo.com/en/case-studies/cycrown-shopify-project/",
+        "https://www.dolphinanalytics.co.uk/blog/shopify-ga4-gtm-tracking-setup",
+        "https://www.sdg.la/shopify-analytics-integration/",
+        "https://ecomlabs.dev/services/analytics-tracking",
+        "https://aumlytics.com/",
+        "https://www.byteinfy.com/services/shopify-analytics-setup"
+      ]
+    },
+    {
+      "platform": "ChatGPT",
+      "source_type": "platform_directory",
+      "answer_count": 9,
+      "normalized_urls": [
+        "https://www.shopify.com/partners/directory",
+        "https://www.shopify.com/partners/directory/partner/arcticgreyinc",
+        "https://www.shopify.com/partners/directory/partner/avexdesigns",
+        "https://www.shopify.com/partners/directory/partner/swankyapple",
+        "https://www.shopify.com/partners/directory/partner/c2-digital",
+        "https://www.shopify.com/partners/directory/partner/netalico-llc",
+        "https://www.shopify.com/partners/directory/partner/webcontrive",
+        "https://www.shopify.com/partners/directory/partner/immaculate17",
+        "https://www.shopify.com/partners/directory/partner/pixels-made",
+        "https://www.shopify.com/partners/directory/partner/barrel",
+        "https://www.shopify.com/zh/partners/directory/services",
+        "https://www.shopify.com/partners/directory/partner/electriceye",
+        "https://www.shopify.com/partners/directory/partner/conspire-agency",
+        "https://www.shopify.com/partners/directory/partner/dtc-pages",
+        "https://www.shopify.com/zh/partners/directory/locations/china",
+        "https://www.shopify.com/partners/directory/partner/yiguotech1",
+        "https://www.shopify.com/partners/directory/partner/eastdigi",
+        "https://www.shopify.com/partners/directory/partner/dale2",
+        "https://www.shopify.com/partners/directory/partner/geekleads",
+        "https://www.shopify.com/partners/directory/partner/10395",
+        "https://www.shopify.com/partners/directory/partner/linkjoint1",
+        "https://www.shopify.com/partners/directory/locations/china",
+        "https://www.shopify.com/partners/directory/partner/first-and-third",
+        "https://www.shopify.com/partners/directory/partner/the-cool-agency",
+        "https://www.shopify.com/partners/directory/partner/sdg",
+        "https://www.shopify.com/partners/directory/partner/xgentech",
+        "https://www.shopify.com/partners/directory/partner/brickspace-lab",
+        "https://www.shopify.com/partners/directory/partner/hya-media",
+        "https://www.shopify.com/partners/directory/partner/shinetech-changchun",
+        "https://www.shopify.com/partners/directory/partner/leo34",
+        "https://www.shopify.com/partners/directory/partner/shenzhen-hui-wang-ruan-jian-ji-shu-you-x",
+        "https://www.shopify.com/by/partners/directory/locations/united-states",
+        "https://www.shopify.com/partners/directory/services/marketing-and-sales/analytics-and-tracking",
+        "https://www.shopify.com/partners/directory/partner/mikkel-tschentscher"
+      ]
+    },
+    {
+      "platform": "ChatGPT",
+      "source_type": "provider_owned_comparison",
+      "answer_count": 1,
+      "normalized_urls": [
+        "https://flux.agency/insights/best-shopify-plus-agencies-london"
+      ]
+    },
+    {
+      "platform": "ChatGPT",
+      "source_type": "platform_official_guidance",
+      "answer_count": 6,
+      "normalized_urls": [
+        "https://help.shopify.com/en/partners/grow-your-business/partner-directory/how-it-works",
+        "https://www.shopify.com/blog/cro-checklist",
+        "https://www.shopify.com/blog/ecommerce-filters",
+        "https://www.shopify.com/my-ms/case-studies/state-bicycle-co",
+        "https://shopify.dev/docs/api/checkout-ui-extensions/2026-01/target-apis/platform-apis/analytics-api",
+        "https://support.google.com/merchants/answer/15458661?hl=en",
+        "https://support.google.com/google-ads/answer/10632359?hl=en",
+        "https://help.shopify.com/en/manual/reports-and-analytics/google-analytics/google-tag-manager",
+        "https://support.google.com/google-ads/answer/6386790?hl=en"
+      ]
+    },
+    {
+      "platform": "ChatGPT",
+      "source_type": "review_platform",
+      "answer_count": 1,
+      "normalized_urls": [
+        "https://www.trustpilot.com/review/storetasker.com"
+      ]
+    },
+    {
+      "platform": "Perplexity",
+      "source_type": "platform_directory",
+      "answer_count": 8,
+      "normalized_urls": [
+        "https://www.shopify.com/partners/directory/locations/china",
+        "https://www.shopify.com/partners/directory/partner/netalico-llc",
+        "https://www.shopify.com/partners/directory/services",
+        "https://www.shopify.com/partners/directory/partner/adex-labs",
+        "https://www.shopify.com/partners/directory/partner/ecommercewebguru",
+        "https://www.shopify.com/partners/directory",
+        "https://www.shopify.com/partners/directory/partner/split-development",
+        "https://shopify.com/partners/directory/partner/split-development",
+        "https://shopify.com/partners/directory/partner/dev-jour-tec",
+        "https://shopify.com/partners/directory",
+        "https://shopify.com/partners/directory/partner/shinetech-changchun",
+        "https://shopify.com/partners/directory/partner/sainstore",
+        "https://shopify.com/zh/partners/directory",
+        "https://shopify.com/partners/directory/partner/yiguotech1",
+        "https://shopify.com/partners/directory/partner/10395",
+        "https://shopify.com/partners/directory/partner/cleargo-e-business-consultancy-pte-ltd",
+        "https://shopify.com/partners/directory/locations/china",
+        "https://shopify.com/partners/directory/partner/gckj",
+        "https://shopify.com/partners/directory/partner/haiyangdesign"
+      ]
+    },
+    {
+      "platform": "Perplexity",
+      "source_type": "provider_owned_page",
+      "answer_count": 10,
+      "normalized_urls": [
+        "https://netalico.com/pages/shopify-maintenance-support",
+        "https://markupfox.com/services/design-to-shopify",
+        "https://analyticodigital.com/consulting/shopify-analytics",
+        "https://blazebytesolutions.com/ecommerce-tracking/",
+        "https://swankyagency.com/services/conversion-rate-optimisation-services/",
+        "https://conversion.is/services/shopify-cro-agency",
+        "https://1digitalagency.com/shopify-developer/",
+        "https://flux.agency/services/shopify-plus-developers",
+        "https://mgroupweb.com/services/custom-shopify-sections/",
+        "https://vaangroup.com/articles/how-pedego-migrated-to-shopify-plus-and-streamlined-dealer-management-at-scale",
+        "https://weswoo.com/case-studies/",
+        "https://americaneagle.com/platforms/shopify/blaupunkt",
+        "https://singlegrain.com/blog-posts/analytics/google-ads-conversion-tracking-troubleshooting-and-setup/",
+        "https://stape.io/blog/shopify-google-analytics-4-tracking",
+        "https://trackparity.com/blog/ga4-shopify-purchase-discrepancy/",
+        "https://craftberry.co/services/shopify-agency-for-tech-brands",
+        "https://netalico.com/pages/shopify-electronics-agency"
+      ]
+    },
+    {
+      "platform": "Perplexity",
+      "source_type": "platform_official_guidance",
+      "answer_count": 2,
+      "normalized_urls": [
+        "https://www.shopify.com/blog/ecommerce-agency",
+        "https://shopify.dev/docs/storefronts/themes/best-practices/editor/integrate-sections-and-blocks"
+      ]
+    }
+  ]
+}

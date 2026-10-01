@@ -1,0 +1,38 @@
+205 heading ChatGPT 说：, Value: 4
+								206 text ChatGPT 说：
+							243 text Look for a 
+							244 text Shopify + Google Ads conversion-tracking specialist
+							245 text , ideally someone experienced with 
+							246 text Google Tag Manager, GA4, Shopify Customer Events/custom pixels, and the Google & YouTube app
+							247 text . A general PPC manager may spot reporting issues, but this problem usually needs someone who can inspect the actual tag implementation. The audit should specifically check:
+							248 content list
+								249 container
+									250 AXListMarker • 
+									251 text Whether the  Google & YouTube Shopify app and GTM/custom pixels are both sending the same purchase . Google explicitly warns that having multiple Google tags or leaving legacy tracking in place after installing the Shopify integration can create duplicate events. 
+									252 link Value: support.google.com/merchants/answer/15458661?hl=en&utm_source=chatgpt.com, Description: Google 帮助: How to avoid duplicated tracking events (Google & YouTube app on Shopify) - Google Merchant Center Help, https://support.google.com/merchants/answer/15458661?hl=en&utm_source=chatgpt.com, 另外 1 个来源
+								253 container
+									254 AXListMarker • 
+									255 text Whether Google Ads has  two purchase conversion actions , for example a native Google Ads purchase plus a GA4-imported purchase, both set to  Primary  and included in bidding. Google normally recommends avoiding having both count toward optimization for the same underlying purchase. 
+									256 link Value: support.google.com/google-ads/answer/10632359?hl=en&utm_source=chatgpt.com, Description: Google 帮助: Create Google Ads conversions based on Google Analytics key events - Google Ads Help, https://support.google.com/google-ads/answer/10632359?hl=en&utm_source=chatgpt.com
+								257 container
+									258 AXListMarker • 
+									259 text Whether a purchase tag fires twice from  GTM, a Shopify custom pixel, theme code, an app, or legacy checkout tracking . Shopify also notes that combining certain built-in tracking with GTM implementations can produce duplicate measurement. 
+									260 link Description: Shopify 帮助中心: Shopify Help Center | Google Tag Manager, https://help.shopify.com/en/manual/reports-and-analytics/google-analytics/google-tag-manager?utm_source=chatgpt.com, Value: help.shopify.com/en/manual/reports-and-analytics/google-analytics/google-tag-manager?utm_source=chatgpt.com
+								261 container
+									262 AXListMarker • 
+									263 text Whether the purchase event passes a  unique transaction/order ID . Google Ads uses transaction IDs to deduplicate repeat fires from the same order, such as when a confirmation page is revisited. 
+									264 link Value: support.google.com/google-ads/answer/6386790?hl=en&utm_source=chatgpt.com, Description: Google 帮助: Use a transaction ID to minimize duplicate conversions - Google Ads Help, https://support.google.com/google-ads/answer/6386790?hl=en&utm_source=chatgpt.com
+								265 container
+									266 AXListMarker • 
+									267 text A real test order using  Google Tag Assistant , followed through Shopify → GA4/GTM → Google Ads, confirming exactly how many purchase hits are sent. Google specifically recommends Tag Assistant for diagnosing duplicate Shopify tracking. 
+									268 link Value: support.google.com/merchants/answer/15458661?hl=en&utm_source=chatgpt.com, Description: Google 帮助: How to avoid duplicated tracking events (Google & YouTube app on Shopify) - Google Merchant Center Help, https://support.google.com/merchants/answer/15458661?hl=en&utm_source=chatgpt.com, 另外 1 个来源
+							269 text When hiring, search for titles such as 
+							270 text “Shopify Google Ads tracking specialist,” “GTM/GA4 ecommerce tracking consultant,” “Shopify conversion tracking audit,”
+							271 text  or 
+							272 text “Google Ads enhanced conversions Shopify specialist.”
+							273 text For this particular issue, I’d favor an 
+							274 text analytics/tracking consultant over a typical Google Ads agency
+							275 text . The deliverable you want is not merely “we fixed it,” but a short audit showing 
+							276 text every source currently sending a purchase conversion, which one should remain, which ones should be secondary/removed, and evidence from a test transaction that one Shopify order produces one intended Google Ads purchase conversion
+							277 text .
+							
