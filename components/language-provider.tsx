@@ -16,7 +16,17 @@ const LanguageContext = createContext<LanguageContextValue | null>(null)
 function localizePath(path: string, language: Language) {
   if (!path.startsWith("/") || path.startsWith("//")) return path
   const normalized = path === "/en" ? "/" : path.replace(/^\/en(?=\/|#|\?|$)/, "") || "/"
+  if (language === "en" && !hasTranslation(normalized)) return normalized
   return language === "en" ? `/en${normalized === "/" ? "" : normalized}` : normalized
+}
+
+const chineseOnlyPaths = new Set([
+  "/learn/shopify-website-cost",
+  "/learn/shopify-ga4-gtm-tracking-plan",
+])
+
+function hasTranslation(path: string) {
+  return !chineseOnlyPaths.has(path.replace(/^\/en(?=\/|$)/, "").split(/[?#]/)[0])
 }
 
 export function LanguageProvider({ children, initialLanguage = "zh" }: { children: React.ReactNode; initialLanguage?: Language }) {
@@ -33,7 +43,7 @@ export function LanguageProvider({ children, initialLanguage = "zh" }: { childre
       window.localStorage.setItem("site-language", nextLanguage)
       document.documentElement.lang = nextLanguage === "zh" ? "zh-CN" : "en"
       const nextPath = localizePath(`${window.location.pathname}${window.location.search}${window.location.hash}`, nextLanguage)
-      window.location.assign(nextPath)
+      window.location.assign(hasTranslation(window.location.pathname) ? nextPath : "/en")
     }
 
     return {

@@ -10,6 +10,7 @@ export const metadata = createSitePageMetadata({
   path: "/case-studies/silkgear",
   language: "zh",
   zhPath: "/case-studies/silkgear",
+  enPath: "/en/case-studies/silkgear",
   type: "article",
 })
 

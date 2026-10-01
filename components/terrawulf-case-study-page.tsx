@@ -5,7 +5,6 @@ import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
 
 const siteUrl = "https://whaleleap.studio"
-const caseUrl = `${siteUrl}/case-studies/terrawulf`
 const liveStoreUrl = "https://www.terrawulfmoto.com/"
 const livePdpUrl = `${liveStoreUrl}products/terrawulf-m7-high-performance-off-road-electric-dirt-bike`
 const editorCode = `"blocks": [
@@ -53,6 +52,12 @@ const overview = [
     title: "让复杂内容可以持续管理。",
     body: "通过 Online Store 2.0 模板、可复用 section 与 block，把车型内容组织成商家可以继续维护的页面系统。",
   },
+]
+
+const englishOverview = [
+  { number: "01", label: "Challenge", title: "Complex product information needed a purchase path.", body: "Shoppers need to understand power, battery, range, geometry, component differences, shipping, warranty, and FAQs, not just product photography and specifications." },
+  { number: "02", label: "Scope", title: "Design, architecture, and Shopify theme development.", body: "Electric mobility / eBike · Shopify · UI/UX, architecture, Liquid, custom sections, PDP, responsive QA, and deployment." },
+  { number: "03", label: "Engineering goal", title: "Make complex content maintainable.", body: "Online Store 2.0 templates and reusable sections and blocks organize model information into pages merchants can continue to manage." },
 ]
 
 const engineering = [
@@ -116,7 +121,7 @@ function SectionHeading({ number, label, title, body }: { number: string; label:
   )
 }
 
-function EvidenceImage({ src, alt, label, mode }: { src: string; alt: string; label: string; mode: "design" | "live" }) {
+function EvidenceImage({ src, alt, label, mode, language = "zh" }: { src: string; alt: string; label: string; mode: "design" | "live"; language?: "zh" | "en" }) {
   return (
     <figure className="min-w-0">
       <div className="mb-4 flex items-center justify-between gap-4">
@@ -127,28 +132,31 @@ function EvidenceImage({ src, alt, label, mode }: { src: string; alt: string; la
         <Image src={src} alt={alt} fill sizes="(max-width: 767px) 92vw, 660px" className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.01]" />
       </a>
       <a href={src} target="_blank" rel="noreferrer noopener" className="mt-3 inline-flex min-h-11 items-center gap-2 text-base text-primary underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
-        查看证据图 <ExternalLink className="size-4" aria-hidden="true" />
+        {language === "en" ? "View evidence image" : "查看证据图"} <ExternalLink className="size-4" aria-hidden="true" />
       </a>
     </figure>
   )
 }
 
-export function TerrawulfCaseStudyPage() {
+export function TerrawulfCaseStudyPage({ language = "zh" }: { language?: "zh" | "en" }) {
+  const en = language === "en"
+  const text = (zh: string, englishText: string) => en ? englishText : zh
+  const pageUrl = `${siteUrl}${en ? "/en" : ""}/case-studies/terrawulf`
   return (
     <div className="min-h-screen bg-black text-white">
       <PageStructuredData
-        language="zh"
+        language={language}
         breadcrumbs={[
-          { name: "首页", url: siteUrl },
-          { name: "案例", url: `${siteUrl}/#work` },
-          { name: "Terrawulf", url: caseUrl },
+          { name: text("首页", "Home"), url: en ? `${siteUrl}/en` : siteUrl },
+          { name: text("案例", "Case studies"), url: `${siteUrl}${en ? "/en" : ""}/#work` },
+          { name: "Terrawulf", url: pageUrl },
         ]}
         page={{
           type: "Article",
           name: "Terrawulf eBike Shopify Engineering Case Study",
-          description: "WhaleLeap Studio 为 Terrawulf 构建高客单电动越野车 Shopify 店铺的设计、OS 2.0 架构、Liquid 开发、复杂 PDP 与响应式交付证据。",
-          url: caseUrl,
-          inLanguage: "zh-CN",
+          description: text("WhaleLeap Studio 为 Terrawulf 构建高客单电动越野车 Shopify 店铺的设计、OS 2.0 架构、Liquid 开发、复杂 PDP 与响应式交付证据。", "Public design, Online Store 2.0, Liquid, product-page, and responsive delivery evidence for Terrawulf's electric dirt bike Shopify storefront."),
+          url: pageUrl,
+          inLanguage: en ? "en" : "zh-CN",
           about: ["WhaleLeap Studio", "Terrawulf", "Shopify Engineering", "eBike ecommerce", "Liquid", "Online Store 2.0", "High-ticket product page"],
           datePublished: "2026-10-01",
           dateModified: "2026-10-01",
@@ -173,7 +181,7 @@ export function TerrawulfCaseStudyPage() {
                     <span className="block">Shopify Engineering</span>
                   </span>
                 </h1>
-                <p className="mx-auto mt-7 max-w-[980px] text-base leading-[1.8] text-white/68 md:text-xl">WhaleLeap 将 Terrawulf 的高客单电动越野车购买体验转化为模块化 Shopify 店铺，用于承载复杂产品信息、响应式购物和持续的商家内容管理。</p>
+                <p className="mx-auto mt-7 max-w-[980px] text-base leading-[1.8] text-white/68 md:text-xl">{text("WhaleLeap 将 Terrawulf 的高客单电动越野车购买体验转化为模块化 Shopify 店铺，用于承载复杂产品信息、响应式购物和持续的商家内容管理。", "WhaleLeap translated Terrawulf's high-ticket electric dirt bike purchase journey into a modular Shopify storefront for complex product information, responsive shopping, and ongoing merchant content management.")}</p>
                 <a href={liveStoreUrl} target="_blank" rel="noreferrer noopener" className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-black transition-transform hover:translate-x-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                   View Live Store <ExternalLink className="size-5" />
                 </a>
@@ -182,14 +190,14 @@ export function TerrawulfCaseStudyPage() {
                 <div className="relative aspect-[16/9] overflow-hidden rounded-[1.6rem] bg-[#111]">
                   <Image src="/case-studies/terrawulf/home-live.webp" alt="Terrawulf live Shopify homepage with an electric dirt bike on a mountain trail" fill priority sizes="(max-width: 1024px) 94vw, 1400px" className="object-cover object-top" />
                 </div>
-                <figcaption className="px-4 py-4 text-base leading-[1.6] text-white/55">公开线上店铺截图，采集于 2026 年 10 月 1 日。</figcaption>
+                <figcaption className="px-4 py-4 text-base leading-[1.6] text-white/55">{text("公开线上店铺截图，采集于 2026 年 10 月 1 日。", "Public live-store capture, taken October 1, 2026.")}</figcaption>
               </figure>
             </div>
           </header>
 
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
             <div className="mx-auto grid max-w-[1500px] gap-4 lg:grid-cols-3">
-              {overview.map((item) => (
+              {(en ? englishOverview : overview).map((item) => (
                 <section key={item.label} className="rounded-[2rem] border border-white/12 bg-white/[0.035] p-6 sm:p-8">
                   <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-orange-200">{item.number} / {item.label}</p>
                   <h2 className="mt-4 text-[clamp(1.5rem,2.2vw,2rem)] font-bold leading-tight tracking-normal">{item.title}</h2>
@@ -201,14 +209,14 @@ export function TerrawulfCaseStudyPage() {
 
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
             <div className="mx-auto max-w-[1500px]">
-              <SectionHeading number="04" label="Design to live" title="从获批的设计方向，到生产 Shopify 店铺。" body="以下对照用于证明设计结构与线上实现的关系，不主张逐像素复制。移动端没有足够完整的 Figma 页面证据，因此不制作移动设计对照。" />
+              <SectionHeading number="04" label="Design to live" title={text("从获批的设计方向，到生产 Shopify 店铺。", "From approved design direction to a production Shopify storefront.")} body={text("以下对照用于证明设计结构与线上实现的关系，不主张逐像素复制。移动端没有足够完整的 Figma 页面证据，因此不制作移动设计对照。", "These comparisons show the relationship between design structure and live implementation, not pixel-perfect reproduction. Complete mobile Figma page evidence is unavailable, so no mobile design comparison is claimed.")} />
               <div className="mt-12 space-y-16">
                 {comparisons.map((item) => (
                   <section key={item.title}>
                     <h3 className="text-center text-2xl font-bold md:text-3xl">{item.title}</h3>
                     <div className="mt-7 grid gap-10 md:grid-cols-2">
-                      <EvidenceImage src={item.design} alt={item.designAlt} label="Figma design" mode="design" />
-                      <EvidenceImage src={item.live} alt={item.liveAlt} label="Live implementation" mode="live" />
+                      <EvidenceImage src={item.design} alt={item.designAlt} label="Figma design" mode="design" language={language} />
+                      <EvidenceImage src={item.live} alt={item.liveAlt} label="Live implementation" mode="live" language={language} />
                     </div>
                     <dl className="mt-10 grid gap-12 lg:grid-cols-3">
                       {[["Design intent", item.intent], ["Implementation decision", item.implementation], ["Live outcome", item.outcome]].map(([term, description], index) => (
@@ -229,7 +237,7 @@ export function TerrawulfCaseStudyPage() {
 
           <section className="bg-white/[0.035] px-4 py-[56px] sm:px-6 md:px-10 md:py-[104px]">
             <div className="mx-auto max-w-[1500px]">
-              <SectionHeading number="05" label="Shopify engineering" title="页面表现背后，是可持续管理的主题架构。" />
+              <SectionHeading number="05" label="Shopify engineering" title={text("页面表现背后，是可持续管理的主题架构。", "Behind the storefront is a maintainable theme architecture.")} />
               <div className="mt-10 grid gap-4 lg:grid-cols-3">
                 {engineering.map(({ icon: Icon, title, body, benefit }) => (
                   <section key={title} className="rounded-lg border border-white/12 bg-black/45 p-6 sm:p-8">
@@ -304,7 +312,7 @@ export function TerrawulfCaseStudyPage() {
 
           <section className="px-4 py-[56px] sm:px-6 md:px-10 md:py-[104px]">
             <div className="mx-auto max-w-[1500px]">
-              <SectionHeading number="06" label="PDP decision architecture" title="每个模块回答一个购买问题。" />
+              <SectionHeading number="06" label="PDP decision architecture" title={text("每个模块回答一个购买问题。", "Each module answers a purchase question.")} />
               <div className="mt-10 grid gap-4 md:grid-cols-2">
                 {decisions.map(([question, answer, implementation], index) => (
                   <div key={question} className="rounded-[1.8rem] border border-white/12 bg-[linear-gradient(135deg,rgba(251,146,60,0.08),rgba(255,255,255,0.025))] p-6 sm:p-8">
@@ -315,13 +323,13 @@ export function TerrawulfCaseStudyPage() {
                   </div>
                 ))}
               </div>
-              <a href={livePdpUrl} target="_blank" rel="noreferrer noopener" className="mt-6 inline-flex min-h-11 items-center gap-2 text-base text-primary underline underline-offset-4">查看 M7 线上产品页 <ArrowUpRight className="size-4" /></a>
+              <a href={livePdpUrl} target="_blank" rel="noreferrer noopener" className="mt-6 inline-flex min-h-11 items-center gap-2 text-base text-primary underline underline-offset-4">{text("查看 M7 线上产品页", "View live M7 product page")} <ArrowUpRight className="size-4" /></a>
             </div>
           </section>
 
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
             <div className="mx-auto max-w-[1500px]">
-              <SectionHeading number="07" label="Responsive & QA" title="从代码检查到真实视口验证。" />
+              <SectionHeading number="07" label="Responsive & QA" title={text("从代码检查到真实视口验证。", "From code checks to real viewport verification.")} />
               <div className="mt-10 grid items-start gap-4 md:grid-cols-[minmax(0,1.4fr)_minmax(0,0.42fr)]">
                 {[
                   { label: "Desktop / 1440 × 1000", src: "/case-studies/terrawulf/pdp-live.webp", alt: "Terrawulf M7 desktop product page with gallery and purchase panel", aspect: "aspect-[3420/1902]", order: "order-2 md:order-1" },
@@ -336,14 +344,19 @@ export function TerrawulfCaseStudyPage() {
                 ))}
               </div>
               <div className="mt-12">
-                <h3 className="text-xl font-semibold">验证记录</h3>
+                <h3 className="text-xl font-semibold">{text("验证记录", "Verification record")}</h3>
                 <dl className="mt-5 grid gap-4 md:grid-cols-2">
-                  {[
+                  {(en ? [
+                    ["Viewports", "Desktop 1440 × 1000 and Mobile 390 × 844 were checked for responsive behavior."],
+                    ["Purchase access", "The product title and Add to Cart remained accessible in the responsive page flow; the check found no document-level horizontal overflow."],
+                    ["Theme Check", "127 files, 0 errors, 13 warnings. Warnings were reviewed separately; this is not described as warning-free."],
+                    ["Release verification", "The record includes browser QA, deployment verification, and a live readback."],
+                  ] : [
                     ["检查视口", "Desktop 1440 × 1000、Mobile 390 × 844 已进行响应式检查。"],
                     ["购买入口", "产品标题与 Add to Cart 在响应式页面流程中保持可访问；当前检查未发现文档级横向溢出。"],
                     ["Theme Check", "127 files，0 errors，13 warnings；warnings 单独复核，不描述为 warning-free。"],
                     ["发布验证", "包含浏览器 QA、部署验证与线上回读记录。"],
-                  ].map(([term, result]) => (
+                  ]).map(([term, result]) => (
                     <div key={term} className="rounded-[1.8rem] border border-white/12 bg-[linear-gradient(135deg,rgba(251,146,60,0.08),rgba(255,255,255,0.025))] p-6 sm:p-8">
                       <dt className="font-mono text-base font-semibold text-orange-200">{term}</dt>
                       <dd className="mt-4 text-base leading-[1.7] text-white/68">{result}</dd>
@@ -358,7 +371,7 @@ export function TerrawulfCaseStudyPage() {
             <div className="mx-auto grid max-w-[1500px] gap-4 lg:grid-cols-2">
               <section className="rounded-[2rem] border border-primary/20 bg-primary/[0.05] p-6 sm:p-8">
                 <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">08 / Verified outcome</p>
-                <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight">交付结果以可验证系统为准。</h2>
+                <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight">{text("交付结果以可验证系统为准。", "The delivery outcome is a verifiable system.")}</h2>
                 <ul className="mt-5 space-y-3 text-base leading-[1.75] text-white/64">
                   <li>Custom Shopify storefront delivered and deployed.</li>
                   <li>Modular Online Store 2.0 architecture.</li>
@@ -387,12 +400,12 @@ export function TerrawulfCaseStudyPage() {
               <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
                 <div>
                   <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">10 / Related services</p>
-                  <h2 className="mt-4 max-w-4xl text-[clamp(1.9rem,3vw,2.7rem)] font-bold leading-tight">构建同类高客单 Shopify 体验，需要设计决策与工程架构共同工作。</h2>
+                  <h2 className="mt-4 max-w-4xl text-[clamp(1.9rem,3vw,2.7rem)] font-bold leading-tight">{text("构建同类高客单 Shopify 体验，需要设计决策与工程架构共同工作。", "A comparable high-ticket Shopify experience needs design decisions and engineering architecture to work together.")}</h2>
                 </div>
                 <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:max-w-[25rem] lg:flex-col">
-                  <a href="/services/shopify-website-build" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-black">Shopify Engineering <ArrowUpRight className="size-5" /></a>
-                  <a href="/services/shopify-theme-customization" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/18 px-7 text-base font-semibold">Theme / Liquid Development <ArrowUpRight className="size-5" /></a>
-                  <a href="/diagnosis" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-orange-300/25 bg-orange-300/[0.06] px-7 text-base font-semibold text-orange-100">Free Shopify Review <ArrowUpRight className="size-5" /></a>
+                  <a href={`${en ? "/en" : ""}/services/shopify-website-build`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-black">Shopify Engineering <ArrowUpRight className="size-5" /></a>
+                  <a href={`${en ? "/en" : ""}/services/shopify-theme-customization`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/18 px-7 text-base font-semibold">Theme / Liquid Development <ArrowUpRight className="size-5" /></a>
+                  <a href={`${en ? "/en" : ""}/diagnosis`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-orange-300/25 bg-orange-300/[0.06] px-7 text-base font-semibold text-orange-100">Free Shopify Review <ArrowUpRight className="size-5" /></a>
                 </div>
               </div>
             </div>

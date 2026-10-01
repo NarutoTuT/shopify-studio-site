@@ -53,6 +53,7 @@ export function Navbar() {
   const { language, toggleLanguage, localizedPath } = useLanguage()
   const text = copy[language]
   const isHome = pathname === "/" || pathname === "/en"
+  const isChineseOnlyPage = pathname.startsWith("/learn/")
   const homeHref = isHome ? "#" : localizedPath("/")
 
   useEffect(() => {
@@ -110,7 +111,7 @@ export function Navbar() {
             onClick={toggleLanguage}
             className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 text-base font-medium text-foreground transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
           >
-            {text.languageLabel}
+            {isChineseOnlyPage ? "EN Home" : text.languageLabel}
           </button>
           <a
             href={localizedPath("/diagnosis")}
@@ -126,7 +127,7 @@ export function Navbar() {
             onClick={toggleLanguage}
             className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 px-3 text-base font-medium text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
           >
-            {text.languageLabel}
+            {isChineseOnlyPage ? "EN Home" : text.languageLabel}
           </button>
           <button
             type="button"

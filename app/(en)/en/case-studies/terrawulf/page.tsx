@@ -4,21 +4,15 @@ import { TerrawulfCaseStudyPage } from "@/components/terrawulf-case-study-page"
 import { createSitePageMetadata } from "@/lib/site-metadata"
 
 export const metadata = createSitePageMetadata({
-  title: "Terrawulf eBike Shopify Engineering 案例",
-  description: "WhaleLeap Studio 为 Terrawulf 构建电动越野车 Shopify 店铺：Figma 到线上实现、OS 2.0 架构、Liquid、复杂 PDP、响应式开发与 QA。",
-  path: "/case-studies/terrawulf",
-  language: "zh",
+  title: "Terrawulf eBike Shopify Engineering Case Study",
+  description: "Public design-to-live and Shopify engineering evidence for Terrawulf's electric dirt bike storefront, M7 product page, merchant-editable sections, and responsive QA.",
+  path: "/en/case-studies/terrawulf",
+  language: "en",
   zhPath: "/case-studies/terrawulf",
   enPath: "/en/case-studies/terrawulf",
   type: "article",
 })
 
 export default function Page() {
-  return (
-    <LanguageProvider>
-      <SmoothScrollProvider>
-        <TerrawulfCaseStudyPage />
-      </SmoothScrollProvider>
-    </LanguageProvider>
-  )
+  return <LanguageProvider initialLanguage="en"><SmoothScrollProvider><TerrawulfCaseStudyPage language="en" /></SmoothScrollProvider></LanguageProvider>
 }

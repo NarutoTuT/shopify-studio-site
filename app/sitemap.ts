@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: route === "" ? 1 : route.startsWith("/services") ? 0.8 : 0.7,
     }
 
-    if (route.startsWith("/learn/") || route.startsWith("/case-studies/")) {
+    if (route.startsWith("/learn/")) {
       return [{ url: zhUrl, ...shared, alternates: { languages: { "zh-CN": zhUrl, "x-default": zhUrl } } }]
     }
 

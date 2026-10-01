@@ -412,9 +412,9 @@ export function ShowcaseSection() {
                               </h3>
                             </div>
                             <div className="flex flex-wrap items-center gap-2">
-                            {language === "zh" && (index === 0 || index === 1) && (
+                            {(index === 0 || index === 1) && (
                               <a
-                                href={index === 0 ? "/case-studies/terrawulf" : "/case-studies/silkgear"}
+                                href={`${language === "en" ? "/en" : ""}${index === 0 ? "/case-studies/terrawulf" : "/case-studies/silkgear"}`}
                                 className="inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full border border-cyan-300/30 bg-cyan-300/[0.08] px-3 text-sm font-semibold tracking-[0.02em] text-cyan-200 transition-colors hover:border-cyan-200/60 hover:bg-cyan-300/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                               >
                                 <span>CASE STUDY</span>
