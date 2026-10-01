@@ -1085,7 +1085,7 @@ export function ShopifyThemeCustomizationPage() {
               <div aria-hidden="true" className="absolute inset-0 opacity-[0.055] [background-image:linear-gradient(rgba(34,211,238,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.3)_1px,transparent_1px)] [background-size:58px_58px] [mask-image:radial-gradient(circle_at_center,black,transparent_82%)]" />
               <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 px-1">
                 <div className="flex items-center gap-3"><span className="size-2 animate-pulse rounded-full bg-primary shadow-[0_0_16px_rgba(119,252,117,0.8)] motion-reduce:animate-none" /><span className="font-mono text-base uppercase text-primary">Service route map / online</span></div>
-                <span className="font-mono text-base uppercase text-white/35">02 next routes ready</span>
+                <span className="font-mono text-base uppercase text-white/35">{String(text.relatedLinks.length).padStart(2, "0")} next routes ready</span>
               </div>
 
               <div className="relative z-10 mt-5 grid min-w-0 gap-5 lg:grid-cols-[0.36fr_0.64fr] lg:items-stretch lg:gap-8">
