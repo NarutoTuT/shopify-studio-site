@@ -181,6 +181,12 @@ const copy = {
         href: "/learn/shopify-website-cost",
         cta: "查看费用说明",
       },
+      {
+        title: "Terrawulf 工程案例",
+        text: "查看 Figma 如何落地为 OS 2.0、Liquid、Custom Sections 与高客单 PDP。",
+        href: "/case-studies/terrawulf",
+        cta: "查看工程证据",
+      },
     ],
   },
   en: {
@@ -337,6 +343,12 @@ const copy = {
         href: "/pricing",
         cta: "View Pricing",
       },
+      {
+        title: "Terrawulf Engineering Case Study",
+        text: "See how Figma was translated into OS 2.0, Liquid, custom sections, and a high-ticket PDP.",
+        href: "/case-studies/terrawulf",
+        cta: "View Engineering Evidence",
+      },
     ],
   },
 }
@@ -467,6 +479,7 @@ const faqMeta = [
 const relatedRouteMeta = [
   { code: "BUILD", icon: Paintbrush, zh: ["从 0 建站", "主题开发", "上线检查"], en: ["New build", "Theme development", "Launch QA"] },
   { code: "BUDGET", icon: Gauge, zh: ["费用区间", "项目范围", "预算判断"], en: ["Price tiers", "Project scope", "Budget decision"] },
+  { code: "CASE", icon: FileCode2, zh: ["eBike", "Liquid", "高客单 PDP"], en: ["eBike", "Liquid", "High-ticket PDP"] },
 ]
 
 function ArtifactPreview({ index }: { index: number }) {

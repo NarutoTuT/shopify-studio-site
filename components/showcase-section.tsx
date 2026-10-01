@@ -17,6 +17,7 @@ import { useLanguage } from "@/components/language-provider"
 gsap.registerPlugin(ScrollTrigger)
 
 const images = [
+  "/case-studies/terrawulf/home-live.webp",
   "/case-studies/silkgear-case-generated-v2.webp",
   "/case-studies/sculpfun-case-generated-v2.webp",
   "/case-studies/food-gift-real-v2.webp",
@@ -32,6 +33,20 @@ const copy = {
     title: "案例不只展示视觉，更要展示增长问题如何被解决。",
     description: "这里包含可公开访问的真实项目与精选交付案例。公开项目提供线上链接；其余案例不使用虚假数据，只展示问题、方法、实施和结果。",
     items: [
+      {
+        title: "Terrawulf｜电动越野车工程",
+        url: "https://www.terrawulfmoto.com/",
+        challenge: "高客单电动越野车需要同时解释动力、电池、续航、几何、组件、配送与质保。",
+        approach: "把技术信息重组为从产品理解、型号比较到购买保障的连续决策路径。",
+        implementation: "Figma 到 Shopify、OS 2.0 架构、Liquid、Custom Sections、复杂 PDP、响应式 QA 与部署。",
+        outcome: "交付可持续管理的模块化 Shopify 店铺，并以真实设计、代码结构和线上页面作为证据。",
+        mobile: {
+          challenge: "复杂技术信息增加高客单购买成本。",
+          approach: "按购买问题组织产品与保障信息。",
+          implementation: "OS 2.0、Liquid、PDP、响应式 QA。",
+          outcome: "模块化店铺已部署并公开运行。",
+        },
+      },
       {
         title: "SilkGear｜高端科技零售",
         url: "https://www.silkgear.com.au/",
@@ -137,6 +152,20 @@ const copy = {
     title: "Case studies should show how growth problems are solved, not only visual output.",
     description: "This selection combines public live stores with selected delivery work. Live projects link to the storefront; every case avoids invented metrics and focuses on challenge, approach, implementation, and outcome.",
     items: [
+      {
+        title: "Terrawulf · Electric Dirt Bike Engineering",
+        url: "https://www.terrawulfmoto.com/",
+        challenge: "A high-ticket electric dirt bike requires clear decisions across power, battery, range, geometry, components, shipping, and warranty.",
+        approach: "Turn technical product information into a continuous path from education and comparison to purchase assurance.",
+        implementation: "Figma to Shopify, OS 2.0 architecture, Liquid, custom sections, complex PDPs, responsive QA, and deployment.",
+        outcome: "A modular, merchant-manageable Shopify storefront supported by real design, engineering, and live-store evidence.",
+        mobile: {
+          challenge: "Complex specifications raise high-ticket decision cost.",
+          approach: "Organize content around real purchase questions.",
+          implementation: "OS 2.0, Liquid, PDP, and responsive QA.",
+          outcome: "A modular storefront deployed and live.",
+        },
+      },
       {
         title: "SilkGear · Premium Tech Retail",
         url: "https://www.silkgear.com.au/",
@@ -383,9 +412,9 @@ export function ShowcaseSection() {
                               </h3>
                             </div>
                             <div className="flex flex-wrap items-center gap-2">
-                            {language === "zh" && index === 0 && (
+                            {language === "zh" && (index === 0 || index === 1) && (
                               <a
-                                href="/case-studies/silkgear"
+                                href={index === 0 ? "/case-studies/terrawulf" : "/case-studies/silkgear"}
                                 className="inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full border border-cyan-300/30 bg-cyan-300/[0.08] px-3 text-sm font-semibold tracking-[0.02em] text-cyan-200 transition-colors hover:border-cyan-200/60 hover:bg-cyan-300/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                               >
                                 <span>CASE STUDY</span>

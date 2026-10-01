@@ -9,6 +9,7 @@ const routes = [
   "/about",
   "/privacy",
   "/case-studies/silkgear",
+  "/case-studies/terrawulf",
   "/learn/shopify-website-cost",
   "/learn/shopify-ga4-gtm-tracking-plan",
   "/services/shopify-website-build",
