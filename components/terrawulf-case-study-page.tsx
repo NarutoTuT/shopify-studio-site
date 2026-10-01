@@ -180,7 +180,7 @@ export function TerrawulfCaseStudyPage() {
               <div className="mt-12 space-y-16">
                 {comparisons.map((item) => (
                   <section key={item.title}>
-                    <h3 className="text-2xl font-bold md:text-3xl">{item.title}</h3>
+                    <h3 className="text-center text-2xl font-bold md:text-3xl">{item.title}</h3>
                     <div className="mt-7 grid gap-10 md:grid-cols-2">
                       <EvidenceImage src={item.design} alt={item.designAlt} label="Figma design" mode="design" />
                       <EvidenceImage src={item.live} alt={item.liveAlt} label="Live implementation" mode="live" />
