@@ -68,10 +68,10 @@ const comparisons = [
 
 function SectionHeading({ number, label, title, body }: { number: string; label: string; title: string; body?: string }) {
   return (
-    <header className="mx-auto max-w-4xl text-center">
+    <header className="max-w-4xl">
       <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">{number} / {label}</p>
       <h2 className="mt-3 text-[clamp(1.9rem,3vw,2.7rem)] font-bold leading-tight tracking-normal text-white">{title}</h2>
-      {body ? <p className="mx-auto mt-5 max-w-3xl text-base leading-[1.8] text-white/62 md:text-lg">{body}</p> : null}
+      {body ? <p className="mt-5 max-w-3xl text-base leading-[1.8] text-white/62 md:text-lg">{body}</p> : null}
     </header>
   )
 }
@@ -122,21 +122,30 @@ export function TerrawulfCaseStudyPage() {
           <header className="relative overflow-hidden px-4 pb-[56px] pt-28 sm:px-6 md:px-10 md:pb-[104px] md:pt-36">
             <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(251,146,60,0.18),transparent_32%),radial-gradient(circle_at_82%_42%,rgba(119,252,117,0.11),transparent_31%),linear-gradient(180deg,#090604,#000)]" />
             <div className="relative mx-auto max-w-[1400px]">
-              <div className="mx-auto max-w-[1120px] text-center">
-                <p className="inline-flex max-w-full flex-wrap items-center justify-center gap-2 rounded-lg border border-orange-300/25 bg-orange-300/10 px-3 py-2 text-center font-mono text-base font-semibold uppercase tracking-[0.02em] text-orange-200 sm:rounded-full sm:px-4">
-                  <CheckCircle2 className="size-4" /> Real project / Engineering evidence
-                </p>
-                <h1 className="mx-auto mt-7 max-w-full text-balance text-[clamp(2.05rem,6vw,5.4rem)] font-bold leading-[1.05] tracking-normal [overflow-wrap:anywhere]">
-                  Terrawulf
-                  <span className="mt-3 block bg-gradient-to-r from-orange-300 via-white to-primary bg-clip-text text-transparent">
-                    <span className="block">Electric Dirt Bike</span>
-                    <span className="block">Shopify Engineering</span>
-                  </span>
-                </h1>
-                <p className="mx-auto mt-7 max-w-[980px] text-base leading-[1.8] text-white/68 md:text-xl">WhaleLeap 将 Terrawulf 的高客单电动越野车购买体验转化为模块化 Shopify 店铺，用于承载复杂产品信息、响应式购物和持续的商家内容管理。</p>
-                <a href={liveStoreUrl} target="_blank" rel="noreferrer noopener" className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-black transition-transform hover:translate-x-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black">
-                  View Live Store <ExternalLink className="size-5" />
-                </a>
+              <div className="grid items-end gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.65fr)] lg:gap-16">
+                <div>
+                  <p className="inline-flex max-w-full flex-wrap items-center gap-2 rounded-lg border border-orange-300/25 bg-orange-300/10 px-3 py-2 font-mono text-base font-semibold uppercase tracking-[0.02em] text-orange-200 sm:rounded-full sm:px-4">
+                    <CheckCircle2 className="size-4" /> Real project / Engineering evidence
+                  </p>
+                  <h1 className="mt-7 max-w-[980px] text-balance text-[clamp(2.4rem,5.6vw,5.4rem)] font-bold leading-[1.02] tracking-normal [overflow-wrap:anywhere]">
+                    Terrawulf
+                    <span className="mt-3 block bg-gradient-to-r from-orange-300 via-white to-primary bg-clip-text text-transparent">
+                      Electric Dirt Bike<br />Shopify Engineering
+                    </span>
+                  </h1>
+                  <p className="mt-7 max-w-[860px] text-base leading-[1.8] text-white/68 md:text-xl">WhaleLeap 将 Terrawulf 的高客单电动越野车购买体验转化为模块化 Shopify 店铺，用于承载复杂产品信息、响应式购物和持续的商家内容管理。</p>
+                  <a href={liveStoreUrl} target="_blank" rel="noreferrer noopener" className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-black transition-transform hover:translate-x-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black">
+                    View Live Store <ExternalLink className="size-5" />
+                  </a>
+                </div>
+                <dl className="border-y border-white/18 lg:border-b-0">
+                  {facts.map(([label, value]) => (
+                    <div key={label} className="border-b border-white/14 py-5 last:border-b-0">
+                      <dt className="font-mono text-sm uppercase text-orange-200">{label}</dt>
+                      <dd className="mt-2 text-base leading-[1.65] text-white/72">{value}</dd>
+                    </div>
+                  ))}
+                </dl>
               </div>
               <figure className="mt-11 overflow-hidden rounded-[2rem] border border-white/15 bg-white/[0.035] p-2 shadow-[0_32px_100px_rgba(0,0,0,0.45)] md:mt-16">
                 <div className="relative aspect-[16/9] overflow-hidden rounded-[1.6rem] bg-[#111]">
@@ -148,19 +157,12 @@ export function TerrawulfCaseStudyPage() {
           </header>
 
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
-            <div className="mx-auto grid max-w-[1400px] gap-4 lg:grid-cols-[0.85fr_1.15fr_1.15fr]">
-              {facts.map(([label, value]) => (
-                <div key={label} className="border-t border-white/20 py-6">
-                  <p className="font-mono text-base uppercase text-orange-200">{label}</p>
-                  <p className="mt-3 text-base leading-[1.75] text-white/76">{value}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
-            <div className="mx-auto max-w-[1400px]">
-              <SectionHeading number="01" label="Challenge" title="复杂技术信息，需要变成一条可浏览、可比较、可购买的路径。" body="Terrawulf 销售高客单电动越野车。用户在购买前需要理解动力、电池、续航、几何尺寸、组件差异、配送、质保和常见问题，而不是只看一张产品图或一组参数。" />
+            <div className="mx-auto grid max-w-[1400px] gap-8 border-t border-white/16 pt-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+              <div>
+                <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">01 / Challenge</p>
+                <h2 className="mt-3 max-w-3xl text-[clamp(1.9rem,3vw,2.7rem)] font-bold leading-tight tracking-normal text-white">复杂技术信息，需要变成一条可浏览、可比较、可购买的路径。</h2>
+              </div>
+              <p className="max-w-3xl text-base leading-[1.9] text-white/62 md:text-lg lg:pt-9">Terrawulf 销售高客单电动越野车。用户在购买前需要理解动力、电池、续航、几何尺寸、组件差异、配送、质保和常见问题，而不是只看一张产品图或一组参数。</p>
             </div>
           </section>
 
@@ -235,8 +237,8 @@ export function TerrawulfCaseStudyPage() {
           </section>
 
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
-            <div className="mx-auto grid max-w-[1400px] gap-4 lg:grid-cols-2">
-              <section className="rounded-lg border border-primary/20 bg-primary/[0.045] p-6 sm:p-8">
+            <div className="mx-auto grid max-w-[1400px] border-y border-white/15 lg:grid-cols-2">
+              <section className="py-8 lg:pr-12">
                 <p className="font-mono text-base font-semibold uppercase text-primary">05 / Responsive & QA</p>
                 <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight">从代码检查到真实视口验证。</h2>
                 <ul className="mt-6 space-y-3 text-base leading-[1.75] text-white/68">
@@ -246,7 +248,7 @@ export function TerrawulfCaseStudyPage() {
                   <li>包含浏览器 QA、部署验证与线上回读记录。</li>
                 </ul>
               </section>
-              <section className="rounded-lg border border-orange-300/20 bg-orange-300/[0.04] p-6 sm:p-8">
+              <section className="border-t border-white/15 py-8 lg:border-l lg:border-t-0 lg:pl-12">
                 <p className="font-mono text-base font-semibold uppercase text-orange-200">06 / Verified outcome</p>
                 <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight">交付结果以可验证系统为准。</h2>
                 <ul className="mt-6 space-y-3 text-base leading-[1.75] text-white/68">
@@ -257,7 +259,7 @@ export function TerrawulfCaseStudyPage() {
                 </ul>
               </section>
             </div>
-            <div className="mx-auto mt-8 grid max-w-[1400px] items-start gap-5 md:grid-cols-[1.4fr_0.55fr]">
+            <div className="mx-auto mt-10 grid max-w-[1400px] items-start gap-5 md:grid-cols-[1.4fr_0.42fr]">
               {[
                 ["Desktop / 1440 × 1000", "/case-studies/terrawulf/pdp-live.webp", "Terrawulf M7 desktop product page with gallery and purchase panel", "aspect-[3420/1902]"],
                 ["Mobile / 390 × 844", "/case-studies/terrawulf/pdp-mobile.webp", "Terrawulf M7 mobile product page showing responsive product media", "aspect-[390/844]"],
