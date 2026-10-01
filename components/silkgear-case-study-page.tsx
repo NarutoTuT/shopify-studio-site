@@ -105,7 +105,7 @@ export function SilkGearCaseStudyPage() {
           <header className="relative overflow-hidden px-4 pb-[50px] pt-28 sm:px-6 md:px-10 md:pb-[100px] md:pt-36">
             <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(119,252,117,0.18),transparent_31%),radial-gradient(circle_at_82%_34%,rgba(45,212,191,0.14),transparent_34%),linear-gradient(180deg,#030806,#000)]" />
             <div aria-hidden="true" className="absolute inset-0 opacity-[0.13] [background-image:linear-gradient(rgba(119,252,117,0.22)_1px,transparent_1px),linear-gradient(90deg,rgba(45,212,191,0.18)_1px,transparent_1px)] [background-size:72px_72px] [mask-image:radial-gradient(circle_at_50%_36%,black,transparent_76%)]" />
-            <div className="relative mx-auto max-w-[1400px]">
+            <div className="relative mx-auto max-w-[1500px]">
               <div className="mx-auto max-w-[1100px] text-center">
                 <p className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">
                   <CircleDot className="size-4" /> Real case study / 01
@@ -130,7 +130,7 @@ export function SilkGearCaseStudyPage() {
           </header>
 
           <section className="px-4 pb-[50px] sm:px-6 md:px-10 md:pb-[100px]">
-            <div className="mx-auto grid max-w-[1400px] gap-4 lg:grid-cols-3">
+            <div className="mx-auto grid max-w-[1500px] gap-4 lg:grid-cols-3">
               {sections.map((item) => (
                 <section key={item.label} className="rounded-[2rem] border border-white/12 bg-white/[0.035] p-6 sm:p-8">
                   <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">{item.number} / {item.label}</p>
@@ -142,7 +142,7 @@ export function SilkGearCaseStudyPage() {
           </section>
 
           <section className="px-4 pb-[50px] sm:px-6 md:px-10 md:pb-[100px]">
-            <div className="mx-auto max-w-[1400px]">
+            <div className="mx-auto max-w-[1500px]">
               <SectionHeading number="04" label="Decisions" title="四个决定，共同减少选择成本。" />
               <div className="mt-8 grid gap-4 md:grid-cols-2">
                 {decisions.map(([title, body], index) => (
@@ -157,7 +157,7 @@ export function SilkGearCaseStudyPage() {
           </section>
 
           <section className="px-4 pb-[50px] sm:px-6 md:px-10 md:pb-[100px]">
-            <div className="mx-auto max-w-[1400px]">
+            <div className="mx-auto max-w-[1500px]">
               <SectionHeading number="05" label="Design to storefront" title="Hypershell：从产品展示到购买选择。" />
               <p className="mx-auto mt-5 max-w-3xl text-base leading-[1.8] text-white/65">这类设备需要同时解释外观、用途和购买选项。设计稿将两类信息放在同一视野；当前线上页面可看到型号选择、产品信息折叠项，以及购买和到店体验入口。</p>
               <div className="mt-10 grid gap-10 md:grid-cols-2">
@@ -168,7 +168,7 @@ export function SilkGearCaseStudyPage() {
           </section>
 
           <section className="px-4 pb-[50px] sm:px-6 md:px-10 md:pb-[100px]">
-            <div className="mx-auto max-w-[1400px]">
+            <div className="mx-auto max-w-[1500px]">
               <SectionHeading number="06" label="Mobile & collection" title="从分类浏览，到移动端购买。" />
               <div className="mx-auto mt-10 grid max-w-[860px] items-start gap-10 md:grid-cols-2">
                 <div className="mx-auto w-full max-w-[390px]">
@@ -190,7 +190,7 @@ export function SilkGearCaseStudyPage() {
           </section>
 
           <section className="px-4 pb-[50px] sm:px-6 md:px-10 md:pb-[100px]">
-            <div className="mx-auto grid max-w-[1400px] gap-4 lg:grid-cols-2">
+            <div className="mx-auto grid max-w-[1500px] gap-4 lg:grid-cols-2">
               <section className="rounded-[2rem] border border-primary/20 bg-primary/[0.05] p-6 sm:p-8">
                 <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">07 / Outcome</p>
                 <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">可确认的结果，是一套已经公开运行的零售路径。</h2>
@@ -209,7 +209,7 @@ export function SilkGearCaseStudyPage() {
           </section>
 
           <section className="px-4 pb-[50px] sm:px-6 md:px-10 md:pb-[100px]">
-            <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[3.2rem_1.5rem_3.6rem_1.8rem] border border-white/25 bg-[linear-gradient(115deg,rgba(255,255,255,0.075),rgba(255,255,255,0.015)_38%,rgba(45,212,191,0.045)_72%,rgba(119,252,117,0.06))] px-7 py-12 shadow-[inset_0_2px_0_rgba(255,255,255,0.24),inset_0_-2px_0_rgba(119,252,117,0.1),0_45px_110px_rgba(0,0,0,0.5),0_0_80px_rgba(45,212,191,0.08)] backdrop-blur-3xl md:px-14 md:py-16">
+            <div className="relative mx-auto max-w-[1500px] overflow-hidden rounded-[3.2rem_1.5rem_3.6rem_1.8rem] border border-white/25 bg-[linear-gradient(115deg,rgba(255,255,255,0.075),rgba(255,255,255,0.015)_38%,rgba(45,212,191,0.045)_72%,rgba(119,252,117,0.06))] px-7 py-12 shadow-[inset_0_2px_0_rgba(255,255,255,0.24),inset_0_-2px_0_rgba(119,252,117,0.1),0_45px_110px_rgba(0,0,0,0.5),0_0_80px_rgba(45,212,191,0.08)] backdrop-blur-3xl md:px-14 md:py-16">
               <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_82%_20%,rgba(45,212,191,0.15),transparent_28%),radial-gradient(circle_at_16%_0%,rgba(255,255,255,0.08),transparent_32%)]" />
               <div aria-hidden="true" className="absolute inset-x-[7%] top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
               <div aria-hidden="true" className="absolute -bottom-8 right-[8%] rotate-[-8deg] space-y-2 font-mono text-base leading-relaxed text-cyan-300/16"><p>Shopify website build</p><p>GA4 tracking plan</p><p>free Shopify review</p></div>

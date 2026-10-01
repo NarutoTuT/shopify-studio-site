@@ -136,7 +136,7 @@ export function TerrawulfCaseStudyPage() {
         <article>
           <header className="relative overflow-hidden px-4 pb-[56px] pt-28 sm:px-6 md:px-10 md:pb-[104px] md:pt-36">
             <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(251,146,60,0.18),transparent_32%),radial-gradient(circle_at_82%_42%,rgba(119,252,117,0.11),transparent_31%),linear-gradient(180deg,#090604,#000)]" />
-            <div className="relative mx-auto max-w-[1400px]">
+            <div className="relative mx-auto max-w-[1500px]">
               <div className="mx-auto max-w-[1120px] text-center">
                 <p className="inline-flex max-w-full flex-wrap items-center justify-center gap-2 rounded-lg border border-orange-300/25 bg-orange-300/10 px-3 py-2 text-center font-mono text-base font-semibold uppercase tracking-[0.02em] text-orange-200 sm:rounded-full sm:px-4">
                   <CheckCircle2 className="size-4" /> Real project / Engineering evidence
@@ -163,7 +163,7 @@ export function TerrawulfCaseStudyPage() {
           </header>
 
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
-            <div className="mx-auto grid max-w-[1400px] gap-4 lg:grid-cols-3">
+            <div className="mx-auto grid max-w-[1500px] gap-4 lg:grid-cols-3">
               {overview.map((item) => (
                 <section key={item.label} className="rounded-[2rem] border border-white/12 bg-white/[0.035] p-6 sm:p-8">
                   <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-orange-200">{item.number} / {item.label}</p>
@@ -175,7 +175,7 @@ export function TerrawulfCaseStudyPage() {
           </section>
 
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
-            <div className="mx-auto max-w-[1400px]">
+            <div className="mx-auto max-w-[1500px]">
               <SectionHeading number="04" label="Design to live" title="从获批的设计方向，到生产 Shopify 店铺。" body="以下对照用于证明设计结构与线上实现的关系，不主张逐像素复制。移动端没有足够完整的 Figma 页面证据，因此不制作移动设计对照。" />
               <div className="mt-12 space-y-16">
                 {comparisons.map((item) => (
@@ -200,7 +200,7 @@ export function TerrawulfCaseStudyPage() {
           </section>
 
           <section className="bg-white/[0.035] px-4 py-[56px] sm:px-6 md:px-10 md:py-[104px]">
-            <div className="mx-auto max-w-[1400px]">
+            <div className="mx-auto max-w-[1500px]">
               <SectionHeading number="05" label="Shopify engineering" title="页面表现背后，是可持续管理的主题架构。" />
               <div className="mt-10 grid gap-4 lg:grid-cols-3">
                 {engineering.map(({ icon: Icon, title, body, benefit }) => (
@@ -229,7 +229,7 @@ export function TerrawulfCaseStudyPage() {
           </section>
 
           <section className="px-4 py-[56px] sm:px-6 md:px-10 md:py-[104px]">
-            <div className="mx-auto max-w-[1400px]">
+            <div className="mx-auto max-w-[1500px]">
               <SectionHeading number="06" label="PDP decision architecture" title="每个模块回答一个购买问题。" />
               <div className="mt-10 grid gap-4 md:grid-cols-2">
                 {decisions.map(([question, answer, implementation], index) => (
@@ -246,7 +246,7 @@ export function TerrawulfCaseStudyPage() {
           </section>
 
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
-            <div className="mx-auto max-w-[1400px]">
+            <div className="mx-auto max-w-[1500px]">
               <SectionHeading number="07" label="Responsive & QA" title="从代码检查到真实视口验证。" />
               <div className="mx-auto mt-10 max-w-4xl rounded-[1.8rem] border border-primary/20 bg-primary/[0.045] p-6 sm:p-8">
                 <ul className="mt-6 space-y-3 text-base leading-[1.75] text-white/68">
@@ -273,7 +273,7 @@ export function TerrawulfCaseStudyPage() {
           </section>
 
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
-            <div className="mx-auto grid max-w-[1400px] gap-4 lg:grid-cols-2">
+            <div className="mx-auto grid max-w-[1500px] gap-4 lg:grid-cols-2">
               <section className="rounded-[2rem] border border-primary/20 bg-primary/[0.05] p-6 sm:p-8">
                 <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">08 / Verified outcome</p>
                 <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight">交付结果以可验证系统为准。</h2>
@@ -301,7 +301,7 @@ export function TerrawulfCaseStudyPage() {
           </section>
 
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
-            <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[3.2rem_1.5rem_3.6rem_1.8rem] border border-white/25 bg-[linear-gradient(115deg,rgba(255,255,255,0.075),rgba(255,255,255,0.015)_38%,rgba(251,146,60,0.06)_72%,rgba(119,252,117,0.06))] px-7 py-12 shadow-[inset_0_2px_0_rgba(255,255,255,0.2),0_45px_110px_rgba(0,0,0,0.5)] md:px-14 md:py-16">
+            <div className="relative mx-auto max-w-[1500px] overflow-hidden rounded-[3.2rem_1.5rem_3.6rem_1.8rem] border border-white/25 bg-[linear-gradient(115deg,rgba(255,255,255,0.075),rgba(255,255,255,0.015)_38%,rgba(251,146,60,0.06)_72%,rgba(119,252,117,0.06))] px-7 py-12 shadow-[inset_0_2px_0_rgba(255,255,255,0.2),0_45px_110px_rgba(0,0,0,0.5)] md:px-14 md:py-16">
               <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
                 <div>
                   <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">10 / Related services</p>
