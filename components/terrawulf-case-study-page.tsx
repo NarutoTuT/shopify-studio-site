@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ArrowUpRight, CheckCircle2, Code2, ExternalLink, Gauge, Layers3, ShieldCheck } from "lucide-react"
+import { ArrowRight, ArrowUpRight, CheckCircle2, Code2, ExternalLink, Gauge, Layers3, ShieldCheck } from "lucide-react"
 
 import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
@@ -210,11 +210,14 @@ export function TerrawulfCaseStudyPage() {
                       <EvidenceImage src={item.design} alt={item.designAlt} label="Figma design" mode="design" />
                       <EvidenceImage src={item.live} alt={item.liveAlt} label="Live implementation" mode="live" />
                     </div>
-                    <dl className="mt-8 grid gap-4 border-t border-white/15 pt-7 md:grid-cols-3">
-                      {[["Design intent", item.intent], ["Implementation decision", item.implementation], ["Live outcome", item.outcome]].map(([term, description]) => (
-                        <div key={term}>
-                          <dt className="font-mono text-base font-semibold uppercase text-orange-200">{term}</dt>
-                          <dd className="mt-3 text-base leading-[1.75] text-white/62">{description}</dd>
+                    <dl className="mt-10 grid gap-12 lg:grid-cols-3">
+                      {[["Design intent", item.intent], ["Implementation decision", item.implementation], ["Live outcome", item.outcome]].map(([term, description], index) => (
+                        <div key={term} className="relative pt-6">
+                          <dt data-compact-type className="font-mono text-[1.3rem] font-medium uppercase text-orange-200">
+                            <span className="mr-3 text-white/45">0{index + 1}</span>{term}
+                          </dt>
+                          <dd className="mt-4 max-w-[46ch] text-base leading-[1.75] text-white/70">{description}</dd>
+                          {index < 2 ? <ArrowRight aria-hidden="true" className="absolute -bottom-9 left-1/2 size-5 -translate-x-1/2 rotate-90 text-orange-300 lg:-right-[34px] lg:bottom-auto lg:left-auto lg:top-1/2 lg:translate-x-0 lg:-translate-y-1/2 lg:rotate-0" /> : null}
                         </div>
                       ))}
                     </dl>
@@ -255,7 +258,7 @@ export function TerrawulfCaseStudyPage() {
 
           <section className="px-4 py-[56px] sm:px-6 md:px-10 md:py-[104px]" aria-labelledby="merchant-evidence-title">
             <div className="mx-auto max-w-[1500px]">
-              <header className="max-w-4xl">
+              <header className="mx-auto max-w-4xl text-center">
                 <p className="font-mono text-base font-semibold uppercase text-orange-200">ENGINEERING EVIDENCE / MERCHANT EDITABILITY</p>
                 <h2 id="merchant-evidence-title" className="mt-3 text-[clamp(1.9rem,3vw,2.7rem)] font-bold leading-tight">Merchant-editable Shopify architecture</h2>
                 <p className="mt-5 text-base leading-[1.8] text-white/68 md:text-lg">The M7 product template connects category content in Shopify’s Theme Editor to a section schema, Liquid output and the live specifications panel. The published editor exposes Geometry, Specification and What&apos;s in the box as configured blocks; Geometry includes title, specification rows, image and alt-text fields.</p>
@@ -319,27 +322,35 @@ export function TerrawulfCaseStudyPage() {
           <section className="px-4 pb-[56px] sm:px-6 md:px-10 md:pb-[104px]">
             <div className="mx-auto max-w-[1500px]">
               <SectionHeading number="07" label="Responsive & QA" title="从代码检查到真实视口验证。" />
-              <div className="mx-auto mt-10 max-w-4xl rounded-[1.8rem] border border-primary/20 bg-primary/[0.045] p-6 sm:p-8">
-                <ul className="mt-6 space-y-3 text-base leading-[1.75] text-white/68">
-                  <li>Desktop 1440 × 1000、Mobile 390 × 844 已进行响应式检查。</li>
-                  <li>产品标题与 Add to Cart 在响应式页面流程中保持可访问；当前检查未发现文档级横向溢出。</li>
-                  <li>Theme Check：127 files，0 errors，13 warnings；warnings 单独复核，不描述为 warning-free。</li>
-                  <li>包含浏览器 QA、部署验证与线上回读记录。</li>
-                </ul>
+              <div className="mt-10 grid items-start gap-4 md:grid-cols-[minmax(0,1.4fr)_minmax(0,0.42fr)]">
+                {[
+                  { label: "Desktop / 1440 × 1000", src: "/case-studies/terrawulf/pdp-live.webp", alt: "Terrawulf M7 desktop product page with gallery and purchase panel", aspect: "aspect-[3420/1902]", order: "order-2 md:order-1" },
+                  { label: "Mobile / 390 × 844", src: "/case-studies/terrawulf/pdp-mobile.webp", alt: "Terrawulf M7 mobile product page showing responsive product media", aspect: "aspect-[390/844]", order: "order-1 md:order-2" },
+                ].map(({ label, src, alt, aspect, order }) => (
+                  <figure key={src} className={`${order} min-w-0 rounded-[1.8rem] border border-white/12 bg-[linear-gradient(135deg,rgba(251,146,60,0.08),rgba(255,255,255,0.025))] p-4 sm:p-5`}>
+                    <p className="mb-4 font-mono text-base uppercase text-orange-200">{label}</p>
+                    <a href={src} target="_blank" rel="noreferrer noopener" className={`relative block overflow-hidden rounded-lg bg-white ${aspect} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary`}>
+                      <Image src={src} alt={alt} fill sizes="(max-width: 767px) 92vw, 50vw" className="object-cover object-top" />
+                    </a>
+                  </figure>
+                ))}
               </div>
-            <div className="mt-10 grid items-start gap-5 md:grid-cols-[1.4fr_0.42fr]">
-              {[
-                ["Desktop / 1440 × 1000", "/case-studies/terrawulf/pdp-live.webp", "Terrawulf M7 desktop product page with gallery and purchase panel", "aspect-[3420/1902]"],
-                ["Mobile / 390 × 844", "/case-studies/terrawulf/pdp-mobile.webp", "Terrawulf M7 mobile product page showing responsive product media", "aspect-[390/844]"],
-              ].map(([label, src, alt, aspect]) => (
-                <figure key={src}>
-                  <p className="mb-3 font-mono text-sm uppercase text-white/52">{label}</p>
-                  <a href={src} target="_blank" rel="noreferrer noopener" className={`relative block overflow-hidden rounded-lg border border-white/12 bg-white ${aspect} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary`}>
-                    <Image src={src} alt={alt} fill sizes="(max-width: 767px) 92vw, 50vw" className="object-cover object-top" />
-                  </a>
-                </figure>
-              ))}
-            </div>
+              <div className="mt-12">
+                <h3 className="text-xl font-semibold">验证记录</h3>
+                <dl className="mt-5 grid gap-4 md:grid-cols-2">
+                  {[
+                    ["检查视口", "Desktop 1440 × 1000、Mobile 390 × 844 已进行响应式检查。"],
+                    ["购买入口", "产品标题与 Add to Cart 在响应式页面流程中保持可访问；当前检查未发现文档级横向溢出。"],
+                    ["Theme Check", "127 files，0 errors，13 warnings；warnings 单独复核，不描述为 warning-free。"],
+                    ["发布验证", "包含浏览器 QA、部署验证与线上回读记录。"],
+                  ].map(([term, result]) => (
+                    <div key={term} className="rounded-[1.8rem] border border-white/12 bg-[linear-gradient(135deg,rgba(251,146,60,0.08),rgba(255,255,255,0.025))] p-6 sm:p-8">
+                      <dt className="font-mono text-base font-semibold text-orange-200">{term}</dt>
+                      <dd className="mt-4 text-base leading-[1.7] text-white/68">{result}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
             </div>
           </section>
 
