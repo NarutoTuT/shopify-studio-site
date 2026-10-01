@@ -257,7 +257,7 @@ export function TerrawulfCaseStudyPage() {
                 </ul>
               </section>
             </div>
-            <div className="mx-auto mt-8 grid max-w-[1400px] items-start gap-5 md:grid-cols-[1.4fr_0.42fr]">
+            <div className="mx-auto mt-8 grid max-w-[1400px] items-start gap-5 md:grid-cols-[1.4fr_0.55fr]">
               {[
                 ["Desktop / 1440 × 1000", "/case-studies/terrawulf/pdp-live.webp", "Terrawulf M7 desktop product page with gallery and purchase panel", "aspect-[3420/1902]"],
                 ["Mobile / 390 × 844", "/case-studies/terrawulf/pdp-mobile.webp", "Terrawulf M7 mobile product page showing responsive product media", "aspect-[390/844]"],
