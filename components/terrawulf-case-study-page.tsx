@@ -292,10 +292,10 @@ export function TerrawulfCaseStudyPage() {
                   <a href={livePdpUrl} target="_blank" rel="noreferrer noopener" className="mt-5 inline-flex min-h-11 items-center gap-2 text-base font-semibold text-primary underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">Inspect live M7 PDP <ExternalLink className="size-4" aria-hidden="true" /></a>
                 </div>
                 <figure className="min-w-0">
-                  <a href="/case-studies/terrawulf/m7-specs-live.png" target="_blank" rel="noreferrer noopener" className="relative block aspect-[16/10] overflow-hidden rounded-lg border border-white/15 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
-                    <Image src="/case-studies/terrawulf/m7-specs-live.png" alt="Current public Terrawulf M7 specifications section with Geometry, Specification and What's in the box tabs" fill sizes="(max-width: 1023px) 90vw, 760px" className="object-cover object-top" />
+                  <a href="/case-studies/terrawulf/m7-specs-live.png" target="_blank" rel="noreferrer noopener" className="relative block aspect-[3420/1770] overflow-hidden rounded-lg border border-white/15 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
+                    <Image src="/case-studies/terrawulf/m7-specs-live.png" alt="Terrawulf M7 public specifications page showing Geometry measurements beside a dimensioned bike diagram" fill sizes="(max-width: 1023px) 90vw, 760px" className="object-contain" />
                   </a>
-                  <figcaption className="mt-3 text-base leading-7 text-white/50">Public storefront capture, 2026-10-01. Current merchant content may differ from delivery.</figcaption>
+                  <figcaption className="mt-3 text-base leading-7 text-white/50">User-provided public storefront capture. Current merchant content may differ from delivery.</figcaption>
                 </figure>
               </div>
               <p className="mt-5 text-base leading-7 text-white/50">Verification boundary: the published Theme Editor was inspected read-only. Saving changes, reordering sections, and adding or deleting blocks were not tested.</p>
