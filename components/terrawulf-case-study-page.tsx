@@ -240,7 +240,7 @@ export function TerrawulfCaseStudyPage() {
                 <p className="font-mono text-base font-semibold uppercase text-primary">05 / Responsive & QA</p>
                 <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight">从代码检查到真实视口验证。</h2>
                 <ul className="mt-6 space-y-3 text-base leading-[1.75] text-white/68">
-                  <li>Desktop 1280 × 720、Tablet 768 × 1024、Mobile 390 × 844 已进行响应式检查。</li>
+                  <li>Desktop 1440 × 1000、Mobile 390 × 844 已进行响应式检查。</li>
                   <li>产品标题与 Add to Cart 在响应式页面流程中保持可访问；当前检查未发现文档级横向溢出。</li>
                   <li>Theme Check：127 files，0 errors，13 warnings；warnings 单独复核，不描述为 warning-free。</li>
                   <li>包含浏览器 QA、部署验证与线上回读记录。</li>
@@ -257,10 +257,9 @@ export function TerrawulfCaseStudyPage() {
                 </ul>
               </section>
             </div>
-            <div className="mx-auto mt-8 grid max-w-[1400px] items-start gap-5 md:grid-cols-[1.4fr_0.75fr_0.42fr]">
+            <div className="mx-auto mt-8 grid max-w-[1400px] items-start gap-5 md:grid-cols-[1.4fr_0.42fr]">
               {[
                 ["Desktop / 1440 × 1000", "/case-studies/terrawulf/pdp-live.webp", "Terrawulf M7 desktop product page with gallery and purchase panel", "aspect-[3420/1902]"],
-                ["Tablet / 768 × 1024", "/case-studies/terrawulf/pdp-tablet.webp", "Terrawulf M7 tablet product page showing responsive product media", "aspect-[768/1024]"],
                 ["Mobile / 390 × 844", "/case-studies/terrawulf/pdp-mobile.webp", "Terrawulf M7 mobile product page showing responsive product media", "aspect-[390/844]"],
               ].map(([label, src, alt, aspect]) => (
                 <figure key={src}>
