@@ -22,7 +22,7 @@ const copy = {
     emailLabel: "邮箱",
     wechatLabel: "微信",
     responseTitle: "下一步合作路径",
-    responseText: "通常在 1 个工作日内回复，判断是否需要 Growth Audit、项目实施或长期技术支持。",
+    responseText: "通常在 1–2 个工作日内回复，判断是否需要 Growth Audit、项目实施或长期技术支持。",
   },
   en: {
     checklist: [
@@ -41,7 +41,7 @@ const copy = {
     emailLabel: "Email",
     wechatLabel: "WeChat",
     responseTitle: "Next-step path",
-    responseText: "We usually reply within 1 business day and recommend whether you need a Growth Audit, implementation project, or ongoing support.",
+    responseText: "We usually reply within 1–2 business days and recommend whether you need a Growth Audit, implementation project, or ongoing support.",
   },
 }
 

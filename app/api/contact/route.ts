@@ -31,7 +31,7 @@ const labels = {
     rateLimited: "提交过于频繁，请稍后再试。",
     confirmationSubject: "我们已收到你的 Shopify 诊断信息",
     confirmationTitle: "诊断信息已收到",
-    confirmationBody: "感谢你的提交。我们会查看你的店铺、产品与当前问题，通常在 1 个工作日内回复。",
+    confirmationBody: "感谢你的提交。我们会查看你的店铺、产品与当前问题，通常在 1–2 个工作日内回复。",
   },
   en: {
     subject: "Free Shopify diagnosis inquiry",
@@ -42,7 +42,7 @@ const labels = {
     rateLimited: "Too many submissions. Please try again later.",
     confirmationSubject: "We received your Shopify diagnosis brief",
     confirmationTitle: "Your brief has been received",
-    confirmationBody: "Thanks for submitting your details. We will review your store, product, and current blockers and usually reply within 1 business day.",
+    confirmationBody: "Thanks for submitting your details. We will review your store, product, and current blockers and usually reply within 1–2 business days.",
   },
 } as const
 
