@@ -8,6 +8,31 @@ const siteUrl = "https://whaleleap.studio"
 const caseUrl = `${siteUrl}/case-studies/terrawulf`
 const liveStoreUrl = "https://www.terrawulfmoto.com/"
 const livePdpUrl = `${liveStoreUrl}products/terrawulf-m7-high-performance-off-road-electric-dirt-bike`
+const editorCode = `"blocks": [
+  {
+    "type": "category",
+    "name": "Spec Category",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Button title",
+        "default": "Geometry"
+      },
+...
+{% for block in section.blocks limit: 3 %}
+  {% liquid
+    assign specs_markup = block.settings.specs | newline_to_br
+    assign specs_rows = specs_markup | split: '<br />'
+    assign panel_image = block.settings.image
+    if panel_image == blank
+      assign panel_image = section.settings.default_image
+    endif
+    assign panel_image_alt = block.settings.image_alt
+    if panel_image_alt == blank
+      assign panel_image_alt = block.settings.title
+    endif
+  %}`
 
 const overview = [
   {
@@ -225,6 +250,52 @@ export function TerrawulfCaseStudyPage() {
   -> FAQ
   -> recommended products`}</code></pre>
               </div>
+            </div>
+          </section>
+
+          <section className="px-4 py-[56px] sm:px-6 md:px-10 md:py-[104px]" aria-labelledby="merchant-evidence-title">
+            <div className="mx-auto max-w-[1500px]">
+              <header className="max-w-4xl">
+                <p className="font-mono text-base font-semibold uppercase text-orange-200">ENGINEERING EVIDENCE / MERCHANT EDITABILITY</p>
+                <h2 id="merchant-evidence-title" className="mt-3 text-[clamp(1.9rem,3vw,2.7rem)] font-bold leading-tight">Merchant-editable Shopify architecture</h2>
+                <p className="mt-5 text-base leading-[1.8] text-white/68 md:text-lg">The M7 product template connects category content in Shopify’s Theme Editor to a section schema, Liquid output and the live specifications panel. The published editor exposes Geometry, Specification and What&apos;s in the box as configured blocks; Geometry includes title, specification rows, image and alt-text fields.</p>
+              </header>
+
+              <div className="mt-10 grid items-start gap-5 lg:grid-cols-[0.9fr_1.1fr]">
+                <div className="rounded-lg border border-white/15 bg-white/[0.035] p-6 sm:p-8">
+                  <p className="font-mono text-base font-semibold text-orange-200">01 / THEME EDITOR</p>
+                  <h3 className="mt-3 text-xl font-semibold">M7 · Specs Parameters</h3>
+                  <p className="mt-2 text-base leading-7 text-white/55">Verified configuration summary. Recreated from a read-only inspection; this is not an Admin screenshot.</p>
+                  <ul className="mt-6 space-y-3 text-base">
+                    {["Geometry", "Specification", "What's in the box"].map((name) => (
+                      <li key={name} className="border-l-2 border-primary bg-white/[0.04] px-4 py-3">{name}</li>
+                    ))}
+                  </ul>
+                  <p className="mt-6 text-base leading-7 text-white/65"><strong className="text-white">Geometry fields:</strong> Button title · Specs rows · Panel image · Image alt</p>
+                </div>
+
+                <div className="min-w-0 rounded-lg border border-white/15 bg-[#101010] p-6 sm:p-8">
+                  <p className="font-mono text-base font-semibold text-orange-200">02 / SECTION SCHEMA + LIQUID</p>
+                  <p className="mt-3 text-base leading-7 text-white/60">Short excerpts from <code>product-specs-parameters.liquid</code>; adjacent source lines are omitted and shown together for clarity.</p>
+                  <pre className="mt-5 overflow-x-auto border-t border-white/12 pt-5 font-mono text-base leading-7 text-white/80"><code>{editorCode}</code></pre>
+                </div>
+              </div>
+
+              <div className="mt-5 grid items-center gap-8 rounded-lg border border-white/15 bg-white/[0.035] p-6 sm:p-8 lg:grid-cols-[0.7fr_1.3fr]">
+                <div>
+                  <p className="font-mono text-base font-semibold text-orange-200">03 / LIVE RESULT</p>
+                  <h3 className="mt-3 text-xl font-semibold">M7 product specifications</h3>
+                  <p className="mt-3 text-base leading-7 text-white/65">The public M7 PDP renders the Geometry, Specification and What&apos;s in the box categories. Structured product information can be maintained through the configured Shopify section rather than hard-coded into one static page layout.</p>
+                  <a href={livePdpUrl} target="_blank" rel="noreferrer noopener" className="mt-5 inline-flex min-h-11 items-center gap-2 text-base font-semibold text-primary underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">Inspect live M7 PDP <ExternalLink className="size-4" aria-hidden="true" /></a>
+                </div>
+                <figure className="min-w-0">
+                  <a href="/case-studies/terrawulf/m7-specs-live.png" target="_blank" rel="noreferrer noopener" className="relative block aspect-[16/10] overflow-hidden rounded-lg border border-white/15 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
+                    <Image src="/case-studies/terrawulf/m7-specs-live.png" alt="Current public Terrawulf M7 specifications section with Geometry, Specification and What's in the box tabs" fill sizes="(max-width: 1023px) 90vw, 760px" className="object-cover object-top" />
+                  </a>
+                  <figcaption className="mt-3 text-base leading-7 text-white/50">Public storefront capture, 2026-10-01. Current merchant content may differ from delivery.</figcaption>
+                </figure>
+              </div>
+              <p className="mt-5 text-base leading-7 text-white/50">Verification boundary: the published Theme Editor was inspected read-only. Saving changes, reordering sections, and adding or deleting blocks were not tested.</p>
             </div>
           </section>
 

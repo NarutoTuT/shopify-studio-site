@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Terrawulf merchant-editable product architecture</title>
+  <desc id="desc">Verified M7 Specs Parameters configuration connects Theme Editor category blocks, section schema, Liquid, and the live product page. This is a derived diagram, not an Admin screenshot.</desc>
+  <rect width="1200" height="675" fill="#0c0c0c"/>
+  <path d="M0 0h1200" stroke="#f59b41" stroke-width="8"/>
+  <text x="72" y="76" fill="#f7a85a" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="2">REAL SHOPIFY PROJECT</text>
+  <text x="72" y="145" fill="#fff" font-family="Arial,sans-serif" font-size="42" font-weight="700">Merchant-editable product architecture</text>
+  <text x="72" y="198" fill="#ababab" font-family="Arial,sans-serif" font-size="23">Terrawulf M7 · Specs Parameters</text>
+  <g font-family="Arial,sans-serif" font-size="22" font-weight="700">
+    <rect x="72" y="275" width="230" height="136" rx="8" fill="#1e1e1e" stroke="#565656"/>
+    <text x="95" y="335" fill="#fff">Theme Editor</text>
+    <text x="95" y="370" fill="#adadad" font-size="17" font-weight="400">3 configured blocks</text>
+    <rect x="347" y="275" width="230" height="136" rx="8" fill="#1e1e1e" stroke="#565656"/>
+    <text x="370" y="335" fill="#fff">Section Schema</text>
+    <text x="370" y="370" fill="#adadad" font-size="17" font-weight="400">Editable fields</text>
+    <rect x="622" y="275" width="230" height="136" rx="8" fill="#1e1e1e" stroke="#565656"/>
+    <text x="645" y="335" fill="#fff">Liquid</text>
+    <text x="645" y="370" fill="#adadad" font-size="17" font-weight="400">Category output</text>
+    <rect x="897" y="275" width="230" height="136" rx="8" fill="#1e1e1e" stroke="#f7a85a"/>
+    <text x="920" y="335" fill="#fff">Live PDP</text>
+    <text x="920" y="370" fill="#adadad" font-size="17" font-weight="400">M7 specifications</text>
+  </g>
+  <g fill="none" stroke="#f7a85a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M314 343h24m-10-10 10 10-10 10M589 343h24m-10-10 10 10-10 10M864 343h24m-10-10 10 10-10 10"/>
+  </g>
+  <path d="M72 479h1056" stroke="#414141"/>
+  <text x="72" y="535" fill="#fff" font-family="Arial,sans-serif" font-size="23">Geometry  ·  Specification  ·  What's in the box</text>
+  <text x="72" y="617" fill="#888" font-family="Arial,sans-serif" font-size="18">Verified configuration summary · not an Admin screenshot · no edit/save operation tested</text>
+</svg>
