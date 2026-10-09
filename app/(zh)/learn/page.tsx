@@ -43,13 +43,49 @@ const resources = [
     type: "技术实施计划",
     icon: BarChart3,
   },
+  {
+    number: "03",
+    title: "Shopify 定制开发多少钱？费用构成与报价逻辑说明",
+    description: "从功能点、工时、技术风险和验收范围理解定制开发报价。",
+    href: "/learn/shopify-custom-development-cost",
+    label: "Shopify 定制开发",
+    type: "报价指南",
+    icon: Code2,
+  },
+  {
+    number: "04",
+    title: "Shopify GA4 购买事件追踪不到？排查清单与修复思路",
+    description: "用三层定位法排查 purchase 缺失、重复和金额异常。",
+    href: "/learn/shopify-ga4-purchase-tracking-fix",
+    label: "GA4 故障排查",
+    type: "排查清单",
+    icon: TimerReset,
+  },
+  {
+    number: "05",
+    title: "找 Shopify 开发者还是工作室？选择指南与避坑",
+    description: "比较 Freelancer、Agency 与 Studio 的范围、排期和责任边界。",
+    href: "/learn/hire-shopify-developer",
+    label: "合作方选择",
+    type: "选择指南",
+    icon: Library,
+  },
+  {
+    number: "06",
+    title: "Shopify 转化率优化从哪下手？PDP 检查清单",
+    description: "从 GA4 定位流失，再检查 PDP 信息、购买动作与信任阻力。",
+    href: "/learn/shopify-cro-checklist",
+    label: "Shopify CRO",
+    type: "PDP 清单",
+    icon: ChartNoAxesCombined,
+  },
 ] as const
 
 const problemLinks = [
   { title: "建站预算怎么判断", description: "先看费用区间、范围和常见额外成本。", href: "/learn/shopify-website-cost", icon: Calculator },
-  { title: "需要定制 Shopify", description: "了解主题、Liquid、Section 与上线交付范围。", href: "/services/shopify-website-build", icon: Code2 },
-  { title: "有流量但转化不稳", description: "检查购买路径、信息层级和关键页面阻力。", href: "/services/shopify-conversion-optimization", icon: ChartNoAxesCombined },
-  { title: "追踪数据对不上", description: "从事件契约、发送链路和 QA 顺序开始排查。", href: "/learn/shopify-ga4-gtm-tracking-plan", icon: TimerReset },
+  { title: "需要定制 Shopify", description: "了解功能点、工时与定制报价逻辑。", href: "/learn/shopify-custom-development-cost", icon: Code2 },
+  { title: "有流量但转化不稳", description: "用 PDP 清单检查购买路径和信息阻力。", href: "/learn/shopify-cro-checklist", icon: ChartNoAxesCombined },
+  { title: "追踪数据对不上", description: "按三层定位法排查 purchase 故障。", href: "/learn/shopify-ga4-purchase-tracking-fix", icon: TimerReset },
 ] as const
 
 export default function LearnPage() {
@@ -91,7 +127,7 @@ export default function LearnPage() {
                 <h1 className="mx-auto mt-6 max-w-[1050px] bg-gradient-to-r from-foreground via-primary to-foreground bg-[length:200%_100%] bg-clip-text text-[clamp(2.55rem,7vw,4.8rem)] font-bold leading-[1.04] tracking-normal text-transparent animate-shimmer motion-reduce:animate-none">Shopify 建站与增长学习资源</h1>
                 <p className="mx-auto mt-6 max-w-3xl text-base leading-[1.8] text-muted-foreground md:text-lg">围绕 Shopify 建站费用、数据追踪和增长工程，把复杂问题整理成可以直接用于决策与实施的指南。</p>
                 <div className="mx-auto mt-9 grid max-w-3xl gap-3 sm:grid-cols-3">
-                  {["2 篇深度指南", "建站 + 数据追踪", "持续维护更新"].map((item, index) => (
+                  {["6 篇深度指南", "建站 + 数据 + CRO", "持续维护更新"].map((item, index) => (
                     <div key={item} className={`flex min-h-14 items-center justify-center rounded-full border px-4 py-3 text-base font-semibold backdrop-blur-md ${index === 0 ? "border-primary/25 bg-primary/[0.08] text-primary" : "border-white/10 bg-black/20 text-white/68"}`}>{item}</div>
                   ))}
                 </div>

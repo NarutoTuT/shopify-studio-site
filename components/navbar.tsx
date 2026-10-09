@@ -16,6 +16,26 @@ const copy = {
       { label: "Conversion Optimization", href: "/services/shopify-conversion-optimization" },
       { label: "Growth Analytics & Tracking", href: "/services/shopify-ga4-gtm" },
     ],
+    learnLabel: "学习资源",
+    learnAllLabel: "查看全部学习资源",
+    learnGroups: [
+      {
+        label: "建站与开发",
+        links: [
+          { label: "Shopify 建站费用", href: "/learn/shopify-website-cost" },
+          { label: "Shopify 定制开发报价", href: "/learn/shopify-custom-development-cost" },
+          { label: "开发者还是工作室", href: "/learn/hire-shopify-developer" },
+        ],
+      },
+      {
+        label: "数据与增长",
+        links: [
+          { label: "GA4 / GTM Tracking Plan", href: "/learn/shopify-ga4-gtm-tracking-plan" },
+          { label: "GA4 Purchase 排查", href: "/learn/shopify-ga4-purchase-tracking-fix" },
+          { label: "PDP 转化率优化清单", href: "/learn/shopify-cro-checklist" },
+        ],
+      },
+    ],
     navLinks: [
       { label: "案例", href: "/#work" },
       { label: "价格", href: "/pricing" },
@@ -34,6 +54,26 @@ const copy = {
       { label: "Conversion Optimization", href: "/services/shopify-conversion-optimization" },
       { label: "Growth Analytics & Tracking", href: "/services/shopify-ga4-gtm" },
     ],
+    learnLabel: "Learn",
+    learnAllLabel: "View all learning resources",
+    learnGroups: [
+      {
+        label: "Build & Development",
+        links: [
+          { label: "Shopify Website Cost", href: "/learn/shopify-website-cost" },
+          { label: "Custom Development Cost", href: "/learn/shopify-custom-development-cost" },
+          { label: "Developer or Studio", href: "/learn/hire-shopify-developer" },
+        ],
+      },
+      {
+        label: "Data & Growth",
+        links: [
+          { label: "GA4 / GTM Tracking Plan", href: "/learn/shopify-ga4-gtm-tracking-plan" },
+          { label: "GA4 Purchase Troubleshooting", href: "/learn/shopify-ga4-purchase-tracking-fix" },
+          { label: "PDP CRO Checklist", href: "/learn/shopify-cro-checklist" },
+        ],
+      },
+    ],
     navLinks: [
       { label: "Case Studies", href: "/#work" },
       { label: "Pricing", href: "/pricing" },
@@ -49,11 +89,12 @@ const copy = {
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const [learnOpen, setLearnOpen] = useState(false)
   const pathname = usePathname()
   const { language, toggleLanguage, localizedPath } = useLanguage()
   const text = copy[language]
   const isHome = pathname === "/" || pathname === "/en"
-  const isChineseOnlyPage = pathname.startsWith("/learn/")
+  const isChineseOnlyPage = pathname === "/learn" || pathname.startsWith("/learn/")
   const homeHref = isHome ? "#" : localizedPath("/")
 
   useEffect(() => {
@@ -103,6 +144,30 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
+          <div className="group relative">
+            <a
+              href={localizedPath("/learn")}
+              className="inline-flex min-h-11 items-center gap-1 rounded-full px-1 text-base tracking-[-0.01em] text-muted-foreground transition-colors duration-200 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+            >
+              {text.learnLabel}
+              <ChevronDown className="size-4 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" />
+            </a>
+            <div className="invisible absolute right-0 top-full z-50 w-[min(38rem,calc(100vw-3rem))] pt-4 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              <div className="rounded-2xl border border-white/10 bg-background/95 p-3 shadow-2xl shadow-black/30 backdrop-blur-xl">
+                <div className="grid gap-2 sm:grid-cols-2">
+                  {text.learnGroups.map((group) => (
+                    <div key={group.label} className="rounded-xl bg-white/[0.025] p-2">
+                      <p className="px-3 pb-2 pt-1 font-mono text-base font-semibold text-primary">{group.label}</p>
+                      {group.links.map((link) => (
+                        <a key={link.href} href={localizedPath(link.href)} className="block min-h-11 rounded-lg px-3 py-2.5 text-base text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">{link.label}</a>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <a href={localizedPath("/learn")} className="mt-2 flex min-h-11 items-center justify-between rounded-xl border border-primary/20 bg-primary/[0.06] px-4 py-3 text-base font-semibold text-primary transition-colors hover:bg-primary/[0.1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">{text.learnAllLabel}<span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="hidden items-center gap-3 md:flex">
@@ -168,6 +233,28 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
+            <button
+              type="button"
+              aria-expanded={learnOpen}
+              onClick={() => setLearnOpen((value) => !value)}
+              className="flex min-h-11 items-center justify-between rounded-xl px-2 py-3 text-left text-base text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+            >
+              {text.learnLabel}
+              <ChevronDown className={`size-4 transition-transform duration-200 ${learnOpen ? "rotate-180" : ""}`} />
+            </button>
+            {learnOpen && (
+              <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-3">
+                {text.learnGroups.map((group) => (
+                  <div key={group.label} className="pb-3 last:pb-0">
+                    <p className="px-2 py-2 font-mono text-base font-semibold text-primary">{group.label}</p>
+                    {group.links.map((link) => (
+                      <a key={link.href} href={localizedPath(link.href)} onClick={() => { setOpen(false); setLearnOpen(false) }} className="block min-h-11 rounded-xl px-3 py-3 text-base text-muted-foreground hover:bg-white/5 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">{link.label}</a>
+                    ))}
+                  </div>
+                ))}
+                <a href={localizedPath("/learn")} onClick={() => { setOpen(false); setLearnOpen(false) }} className="mt-2 flex min-h-11 items-center justify-between rounded-xl border border-primary/20 bg-primary/[0.06] px-4 py-3 text-base font-semibold text-primary">{text.learnAllLabel}<span aria-hidden="true">→</span></a>
+              </div>
+            )}
             <a
               href={localizedPath("/diagnosis")}
               onClick={() => setOpen(false)}

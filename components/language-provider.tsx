@@ -21,8 +21,13 @@ function localizePath(path: string, language: Language) {
 }
 
 const chineseOnlyPaths = new Set([
+  "/learn",
   "/learn/shopify-website-cost",
   "/learn/shopify-ga4-gtm-tracking-plan",
+  "/learn/shopify-custom-development-cost",
+  "/learn/shopify-ga4-purchase-tracking-fix",
+  "/learn/hire-shopify-developer",
+  "/learn/shopify-cro-checklist",
 ])
 
 function hasTranslation(path: string) {
