@@ -69,8 +69,8 @@ function enableGoogleAnalytics(measurementId: string) {
   const googleWindow = window as GoogleWindow
   ;(googleWindow as unknown as Record<string, boolean>)[`ga-disable-${measurementId}`] = false
   googleWindow.dataLayer = googleWindow.dataLayer || []
-  googleWindow.gtag = googleWindow.gtag || function gtag(...args: unknown[]) {
-    googleWindow.dataLayer?.push(args)
+  googleWindow.gtag = googleWindow.gtag || function gtag(..._args: unknown[]) {
+    googleWindow.dataLayer?.push(arguments)
   }
 
   googleWindow.gtag("consent", "default", {
