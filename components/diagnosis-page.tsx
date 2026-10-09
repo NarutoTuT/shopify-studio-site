@@ -112,11 +112,11 @@ const copy = {
       wechat: "微信（选填）",
     },
     placeholders: {
-      storeUrl: "https://your-store.com",
+      storeUrl: "例如：https://brand.myshopify.com",
       category: "例如：户外装备 / 美妆护肤 / 家居生活",
       market: "例如：美国、欧洲、东南亚",
       problem: "例如：广告有点击但转化低，商品页说服力不足，数据追踪不清楚",
-      email: "name@company.com",
+      email: "请输入你的邮箱",
       wechat: "微信号",
     },
     options: {
@@ -215,11 +215,11 @@ const copy = {
       wechat: "WeChat (optional)",
     },
     placeholders: {
-      storeUrl: "https://your-store.com",
+      storeUrl: "e.g. https://brand.myshopify.com",
       category: "Outdoor gear / beauty / home lifestyle",
       market: "US, Europe, Southeast Asia",
       problem: "Paid clicks do not convert, product page lacks persuasion, analytics are unclear",
-      email: "name@company.com",
+      email: "Enter your email",
       wechat: "WeChat ID",
     },
     options: {
