@@ -60,7 +60,7 @@ export const customDevelopmentCostArticle: LearnArticle = {
   ],
   related: [
     { title: "Shopify 建站多少钱？", text: "先理解通用建站费用、三档范围与持续成本。", href: "/learn/shopify-website-cost" },
-    { title: "找 Shopify 开发者还是工作室？", text: "继续判断交付模式、团队能力与合同边界。", href: "/learn/hire-shopify-developer" },
+    { title: "Shopify 开发者怎么选？", text: "继续判断交付模式、团队能力与合同边界。", href: "/learn/hire-shopify-developer" },
     { title: "Shopify 主题定制服务", text: "查看 Liquid、Section 与可编辑主题的实施范围。", href: "/services/shopify-theme-customization" },
   ],
   ctas: [{ label: "查看三档价格", href: "/pricing" }, { label: "诊断定制范围", href: "/diagnosis", primary: true }],
@@ -68,8 +68,8 @@ export const customDevelopmentCostArticle: LearnArticle = {
 
 export const ga4PurchaseFixArticle: LearnArticle = {
   slug: "shopify-ga4-purchase-tracking-fix", eyebrow: "GA4 PURCHASE TROUBLESHOOTING",
-  title: "Shopify GA4 购买事件追踪不到？排查清单与修复思路",
-  description: "使用三层定位法排查 Shopify GA4 purchase 缺失、重复、金额异常与归因问题，并按证据顺序修复。",
+  title: "Shopify GA4 购买转化追踪不到？排查清单与修复思路",
+  description: "Shopify GA4 购买转化追踪不到？用三层定位法排查 purchase 缺失、重复、金额异常与归因问题，并按证据顺序修复。",
   intro: "追踪方案设计看《Shopify GA4 电商追踪方案》，这篇只讲排查。目标不是再装一遍代码，而是先确认故障发生在哪一层，再做最小修复，避免多个脚本同时发送 purchase。",
   introLink: { label: "查看 Shopify GA4 电商追踪方案", href: "/learn/shopify-ga4-gtm-tracking-plan" },
   published: date, modified: date, readingTime: "约 11 分钟", about: ["Shopify GA4 购买转化追踪不到", "GA4 purchase", "Shopify GTM 排查"],
@@ -117,8 +117,8 @@ export const ga4PurchaseFixArticle: LearnArticle = {
 }
 
 export const hireDeveloperArticle: LearnArticle = {
-  slug: "hire-shopify-developer", eyebrow: "HIRING GUIDE", title: "找 Shopify 开发者还是工作室？选择指南与避坑",
-  description: "对比 Freelancer、Agency 与 Studio 的适用场景、报价、交付周期和合同边界，帮助跨境品牌选择 Shopify 开发合作方。",
+  slug: "hire-shopify-developer", eyebrow: "HIRING GUIDE", title: "Shopify 开发者怎么选？工作室 vs 自由职业者选择指南",
+  description: "Shopify 开发者怎么选？对比自由职业者、Agency 与工作室的适用场景、报价、交付周期与合同边界，帮你选对合作方。",
   intro: "选择合作方不是比较谁的服务列表更长，而是看项目风险由谁承担、沟通链路是否清楚、交付能否验收。下面以海外市场 Shopify 项目常见的设计、开发、数据和上线责任为基准。",
   published: date, modified: date, readingTime: "约 10 分钟", about: ["Shopify 开发者怎么选", "Shopify 工作室", "Shopify Agency"],
   sections: [
@@ -164,8 +164,8 @@ export const hireDeveloperArticle: LearnArticle = {
 }
 
 export const croChecklistArticle: LearnArticle = {
-  slug: "shopify-cro-checklist", eyebrow: "PDP CRO CHECKLIST", title: "Shopify 转化率优化从哪下手？PDP 检查清单",
-  description: "用 GA4 报告定位商品页流失，再按 12 项 PDP 清单检查信息、规格、购买动作、信任与移动端体验。",
+  slug: "shopify-cro-checklist", eyebrow: "PDP CRO CHECKLIST", title: "Shopify 转化率优化清单：PDP 检查与实操指南",
+  description: "Shopify 转化率优化清单：从 GA4 定位商品页流失，再按 12 项 PDP 检查信息、规格、购买动作、信任与移动端体验。",
   intro: "转化率优化不是先换按钮颜色。先确认流失发生在哪个阶段，再检查商品页是否帮助用户理解产品、确认适配、评估风险并完成购买。以下清单适合有稳定流量、但 PDP 表现不确定的 Shopify 品牌。",
   published: date, modified: date, readingTime: "约 12 分钟", about: ["Shopify 转化率优化清单", "Shopify PDP", "电商 CRO"],
   sections: [

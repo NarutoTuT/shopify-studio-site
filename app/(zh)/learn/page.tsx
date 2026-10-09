@@ -54,7 +54,7 @@ const resources = [
   },
   {
     number: "04",
-    title: "Shopify GA4 购买事件追踪不到？排查清单与修复思路",
+    title: "Shopify GA4 购买转化追踪不到？排查清单与修复思路",
     description: "用三层定位法排查 purchase 缺失、重复和金额异常。",
     href: "/learn/shopify-ga4-purchase-tracking-fix",
     label: "GA4 故障排查",
@@ -63,7 +63,7 @@ const resources = [
   },
   {
     number: "05",
-    title: "找 Shopify 开发者还是工作室？选择指南与避坑",
+    title: "Shopify 开发者怎么选？工作室 vs 自由职业者选择指南",
     description: "比较 Freelancer、Agency 与 Studio 的范围、排期和责任边界。",
     href: "/learn/hire-shopify-developer",
     label: "合作方选择",
@@ -72,7 +72,7 @@ const resources = [
   },
   {
     number: "06",
-    title: "Shopify 转化率优化从哪下手？PDP 检查清单",
+    title: "Shopify 转化率优化清单：PDP 检查与实操指南",
     description: "从 GA4 定位流失，再检查 PDP 信息、购买动作与信任阻力。",
     href: "/learn/shopify-cro-checklist",
     label: "Shopify CRO",
