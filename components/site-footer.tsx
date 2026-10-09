@@ -22,6 +22,7 @@ const footerCopy = {
     ],
     navigationLinks: [
       { label: "案例", href: "/#work" },
+      { label: "学习资源", href: "/learn" },
       { label: "价格", href: "/pricing" },
       { label: "关于我们", href: "/about" },
       { label: "免费诊断", href: "/diagnosis" },

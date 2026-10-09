@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, Clock3, Code2, FileT
 
 import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
+import { RelatedCaseStudies } from "@/components/related-case-studies"
 import { ServiceFaqPanel } from "@/components/service-faq-panel"
 import { useLanguage } from "@/components/language-provider"
 
@@ -13,11 +14,11 @@ const SHOW_STOREFRONT_HERO_PREVIEW = false
 
 const copy = {
   zh: {
-    eyebrow: "SHOPIFY ENGINEERING",
-    title: "Shopify Engineering",
-    subtitle: "为跨境品牌打造更快、更稳定、更可维护的 Shopify 独立站基础。",
+    eyebrow: "SHOPIFY CUSTOM DEVELOPMENT",
+    title: "Shopify 定制开发",
+    subtitle: "为跨境品牌打造更快、更稳定、更可维护的 Shopify 独立站。",
     description:
-      "这不是简单建站。WhaleLeap 帮助海外华人跨境品牌建立能够承接流量、支持优化和持续增长的 Shopify 技术基础。",
+      "WhaleLeap 提供 Shopify 定制开发服务，帮助海外华人跨境品牌建设能够承接流量、支持优化和持续增长的主题、页面与技术基础。",
     primaryCta: "免费 Shopify 店铺诊断",
     secondaryCta: "查看工作范围",
     proof: ["Shopify Theme Development", "Liquid Development", "Performance Optimization"],
@@ -189,11 +190,11 @@ const websiteBuildStructuredData = {
     breadcrumbs: [
       { name: "首页", url: "https://whaleleap.studio/" },
       { name: "服务", url: "https://whaleleap.studio/#services" },
-      { name: "Shopify Engineering", url: "https://whaleleap.studio/services/shopify-website-build" },
+      { name: "Shopify 定制开发", url: "https://whaleleap.studio/services/shopify-website-build" },
     ],
     service: {
-      name: "Shopify Engineering",
-      description: "为海外华人跨境品牌提供 Shopify 技术建设与增长基础优化服务，覆盖主题开发、Liquid 开发、Custom Sections、性能优化、Technical SEO 和 Launch QA。",
+      name: "Shopify 定制开发",
+      description: "为海外华人跨境品牌提供 Shopify 定制开发服务，覆盖主题开发、Liquid、Custom Sections、性能优化、Technical SEO 和上线 QA。",
       url: "https://whaleleap.studio/services/shopify-website-build",
     },
   },
@@ -1053,6 +1054,7 @@ export function ShopifyWebsiteBuildPage() {
             </div>
           </div>
         </section>
+        <RelatedCaseStudies language={language} />
       </main>
     </div>
   )

@@ -4,6 +4,7 @@ import { useState } from "react"
 import { ArrowUpRight, CheckCircle2, Clock3, FileWarning, HelpCircle, Layers3, Plus, ShieldCheck } from "lucide-react"
 
 import { Navbar } from "@/components/navbar"
+import { FaqStructuredData } from "@/components/faq-structured-data"
 import { ServiceFaqPanel } from "@/components/service-faq-panel"
 import { useLanguage } from "@/components/language-provider"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -303,6 +304,7 @@ export function PricingPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <FaqStructuredData items={text.faqs} />
       <Navbar />
       <main id="main-content" tabIndex={-1}>
         <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-background">

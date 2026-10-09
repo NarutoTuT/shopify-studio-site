@@ -19,7 +19,7 @@ const serviceLinks = [
 const copy = {
   zh: {
     eyebrow: "SERVICE SYSTEM",
-    title: "围绕 Shopify 增长，而不是围绕开发任务拆服务。",
+    title: "围绕 Shopify 建站与增长，而不是围绕开发任务拆服务。",
     description: "三个服务方向对应三个核心问题：技术底座是否稳定、购买路径是否能转化、数据是否能指导下一步。",
     problemLabel: "PROBLEM",
     solutionLabel: "SOLUTION",

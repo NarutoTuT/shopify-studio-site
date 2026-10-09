@@ -4,9 +4,9 @@ import { SmoothScrollProvider } from "@/components/smooth-scroll"
 import { createSitePageMetadata } from "@/lib/site-metadata"
 
 export const metadata = createSitePageMetadata({
-  title: "Shopify Engineering | Shopify 技术建设与增长基础优化",
+  title: "Shopify 定制开发 | 主题、Liquid 与独立站开发",
   description:
-    "WhaleLeap Studio 为海外华人跨境品牌提供 Shopify Engineering 服务，覆盖 Shopify Theme Development、Liquid 开发、Custom Sections、性能优化、Technical SEO 和 Launch QA。",
+    "WhaleLeap Studio 为海外华人跨境品牌提供 Shopify 定制开发，覆盖主题开发、Liquid、Custom Sections、性能优化、Technical SEO 和上线 QA。",
   path: "/services/shopify-website-build", language: "zh", zhPath: "/services/shopify-website-build", enPath: "/en/services/shopify-website-build",
 })
 

@@ -17,6 +17,7 @@ import {
 } from "lucide-react"
 
 import { Navbar } from "@/components/navbar"
+import { FaqStructuredData } from "@/components/faq-structured-data"
 import { PageStructuredData } from "@/components/page-structured-data"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
@@ -164,6 +165,7 @@ const websiteCostStructuredData = {
 export function ShopifyWebsiteCostPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <FaqStructuredData items={faqs} />
       <PageStructuredData
         breadcrumbs={websiteCostStructuredData.breadcrumbs}
         page={websiteCostStructuredData.page}

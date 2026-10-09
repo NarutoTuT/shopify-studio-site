@@ -21,6 +21,7 @@ import {
 
 import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
+import { RelatedCaseStudies } from "@/components/related-case-studies"
 import { ServiceFaqPanel } from "@/components/service-faq-panel"
 import { useLanguage } from "@/components/language-provider"
 
@@ -1142,6 +1143,7 @@ export function ShopifyThemeCustomizationPage() {
             </div>
           </div>
         </section>
+        <RelatedCaseStudies language={language} />
       </main>
     </div>
   )

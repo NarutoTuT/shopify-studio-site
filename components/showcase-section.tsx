@@ -30,7 +30,7 @@ const images = [
 const copy = {
   zh: {
     eyebrow: "CASE STUDIES",
-    title: "案例不只展示视觉，更要展示增长问题如何被解决。",
+    title: "Shopify 建站案例不只展示视觉，更要展示增长问题如何被解决。",
     description: "这里包含可公开访问的真实项目与精选交付案例。公开项目提供线上链接；其余案例不使用虚假数据，只展示问题、方法、实施和结果。",
     items: [
       {

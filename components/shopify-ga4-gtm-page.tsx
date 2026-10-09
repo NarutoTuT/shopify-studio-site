@@ -19,7 +19,9 @@ import {
 } from "lucide-react"
 
 import { Navbar } from "@/components/navbar"
+import { FaqStructuredData } from "@/components/faq-structured-data"
 import { PageStructuredData } from "@/components/page-structured-data"
+import { RelatedCaseStudies } from "@/components/related-case-studies"
 import { ServiceFaqPanel } from "@/components/service-faq-panel"
 import { useLanguage } from "@/components/language-provider"
 
@@ -330,6 +332,7 @@ export function ShopifyGa4GtmPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <FaqStructuredData items={text.faqs} />
       <PageStructuredData
         breadcrumbs={structuredData.breadcrumbs}
         service={structuredData.service}
@@ -764,6 +767,7 @@ export function ShopifyGa4GtmPage() {
             </div>
           </div>
         </section>
+        <RelatedCaseStudies language={language} />
       </main>
     </div>
   )
