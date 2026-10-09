@@ -97,6 +97,7 @@ const copy = {
     ],
     ctaTitle: "先判断 Shopify 技术基础是否支持增长。",
     ctaText: "提交店铺链接、产品类型和当前问题，我们先判断是新建、重建、主题定制还是性能清理更适合。",
+    ctaBenefit: "提交后 1–2 个工作日内，你会收到建站与工程范围的初步判断 + 优化优先级建议。",
   },
   en: {
     eyebrow: "SHOPIFY ENGINEERING",
@@ -182,6 +183,7 @@ const copy = {
     ],
     ctaTitle: "Find out whether your Shopify foundation can support growth.",
     ctaText: "Submit your store URL, product type, and current blockers. We will judge whether new build, rebuild, theme customization, or performance cleanup fits best.",
+    ctaBenefit: "Within 1–2 business days, you'll get an initial read on your build and engineering scope plus optimization priorities.",
   },
 }
 
@@ -1049,7 +1051,7 @@ export function ShopifyWebsiteBuildPage() {
             <div aria-hidden="true" className="absolute -bottom-8 right-[8%] rotate-[-8deg] space-y-2 font-mono text-base leading-relaxed text-cyan-300/16"><p>{"{% section 'shopify-engineering' %}"}</p><p>{"theme · sections · performance · QA"}</p><p>{"responsive / maintainability / launch"}</p></div>
             <div aria-hidden="true" className="absolute bottom-[22%] right-[2%] h-px w-[62%] rotate-[-8deg] animate-shimmer bg-[linear-gradient(90deg,transparent,rgba(34,211,238,0.55),rgba(119,252,117,0.8),transparent)] bg-[length:200%_100%] shadow-[0_0_25px_rgba(119,252,117,0.35)] motion-reduce:animate-none" />
             <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-              <div><ShieldCheck className="mb-5 size-8 text-primary" /><h2 className="max-w-4xl text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.ctaTitle}</h2><p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.ctaText}</p></div>
+              <div><ShieldCheck className="mb-5 size-8 text-primary" /><h2 className="max-w-4xl text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.ctaTitle}</h2><p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.ctaText}</p><p className="mt-3 max-w-3xl text-base leading-relaxed text-primary/85 md:text-lg">{text.ctaBenefit}</p></div>
               <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98]">{text.primaryCta}<ArrowUpRight className="size-4" /></a>
             </div>
           </div>

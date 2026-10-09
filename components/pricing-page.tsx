@@ -20,6 +20,7 @@ const copy = {
     secondaryCta: "查看价格方案",
     plansTitle: "三档建站价格",
     plansIntro: "售后支持最低 2 个月，复杂度越高，交付后的技术支持周期也会更长。",
+    planBenefit: "提交后 1–2 个工作日内，你会收到店铺主要增长阻塞点的初步判断 + 优化优先级建议。",
     plans: [
       {
         name: "文档模板方案",
@@ -28,6 +29,7 @@ const copy = {
         timeline: "约 2-4 周",
         bestFor: "适合已有参考网站或模块需求明确的团队。",
         points: ["1-3 个参考站与模块拆解", "Shopify 主题开发与内容填充", "品牌色与字体基础适配", "移动端与主流浏览器兼容", "基础 SEO 优化", "测试、性能优化与部署上线", "2 次整体页面修改"],
+        cta: "免费诊断我的项目",
       },
       {
         name: "设计图定制方案",
@@ -37,6 +39,7 @@ const copy = {
         bestFor: "适合需要完整品牌表达和更强转化路径的团队。",
         points: ["4 个核心页面，Desktop + Mobile", "8 张 Figma 设计图与设计源文件", "品牌色、排版与间距设计系统", "Liquid 主题定制开发", "GSAP / Framer Motion 动效", "PC、平板与手机响应式适配", "GA4、GTM 与 Product Schema", "PageSpeed 优化目标 PC ≥ 90、移动 ≥ 80"],
         featured: true,
+        cta: "免费诊断我的项目",
       },
       {
         name: "复杂业务定制",
@@ -45,6 +48,7 @@ const copy = {
         timeline: "按范围评估",
         bestFor: "适合 B2B、批发、询价、ERP/CRM、复杂履约业务。",
         points: ["复杂业务流程与权限梳理", "客户分级、批发或询价流程", "ERP / CRM 与第三方系统对接", "商品与客户数据迁移评估", "定制前端交互与多端适配", "性能优化与技术 SEO", "分阶段测试、上线与交接"],
+        cta: "复杂项目先聊范围",
       },
     ],
     modulesTitle: "模块加购参考",
@@ -144,6 +148,7 @@ const copy = {
     secondaryCta: "View Pricing Tiers",
     plansTitle: "Three Pricing Tiers",
     plansIntro: "Post-launch support starts at 2 months. More complex builds receive longer technical support after delivery.",
+    planBenefit: "Within 1–2 business days, you'll get an initial read on your store's main growth blockers plus optimization priorities.",
     plans: [
       {
         name: "Module-Based Build",
@@ -152,6 +157,7 @@ const copy = {
         timeline: "2-4 weeks",
         bestFor: "For teams with clear references or defined module needs.",
         points: ["1-3 reference sites and module breakdown", "Shopify theme build and content population", "Brand color and typography adaptation", "Mobile and major browser compatibility", "Basic SEO optimization", "Testing, performance work, and launch", "2 overall page revision rounds"],
+        cta: "Diagnose my project",
       },
       {
         name: "Custom Design Build",
@@ -161,6 +167,7 @@ const copy = {
         bestFor: "For teams that need stronger brand expression and conversion structure.",
         points: ["4 core pages in desktop and mobile", "8 Figma screens with source files", "Color, typography, and spacing system", "Custom Liquid theme development", "GSAP / Framer Motion interactions", "Desktop, tablet, and mobile responsive build", "GA4, GTM, and Product Schema", "PageSpeed targets: desktop ≥ 90, mobile ≥ 80"],
         featured: true,
+        cta: "Diagnose my project",
       },
       {
         name: "Complex Business",
@@ -169,6 +176,7 @@ const copy = {
         timeline: "Scoped timeline",
         bestFor: "For B2B, wholesale, quote flows, ERP/CRM, or complex fulfillment.",
         points: ["Complex workflows and permissions", "Customer tiers, wholesale, or quote flow", "ERP / CRM and third-party integrations", "Product and customer data migration assessment", "Custom interactions and responsive delivery", "Performance and technical SEO", "Phased testing, launch, and handoff"],
+        cta: "Discuss scope first",
       },
     ],
     modulesTitle: "Add-On Module Reference",
@@ -392,6 +400,10 @@ export function PricingPage() {
                       <p className="text-base font-semibold text-foreground">{pricingLabels.scope}</p>
                       {plan.points.map((point) => <p key={point} className="flex items-start gap-3 text-base leading-relaxed text-foreground/80"><CheckCircle2 className="mt-1 size-4 shrink-0 text-primary" />{point}</p>)}
                     </div>
+                    <div className="mt-9">
+                      <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-primary px-6 text-base font-bold text-primary-foreground shadow-[0_0_24px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary active:scale-[0.98]">{plan.cta}<ArrowUpRight className="size-4" /></a>
+                      <p className="mt-3 text-base leading-relaxed text-muted-foreground">{text.planBenefit}</p>
+                    </div>
                   </article>
                 ))}
               </div>
@@ -420,6 +432,10 @@ export function PricingPage() {
                       <p className="flex items-start gap-3 text-base leading-relaxed text-foreground/85"><ShieldCheck className="mt-1 size-4 shrink-0 text-primary" />{plan.support}</p>
                       <p className="mb-3 mt-6 text-base font-semibold text-foreground">{pricingLabels.scope}</p>
                       <div className="space-y-3">{plan.points.map((point) => <p key={point} className="flex items-start gap-3 text-base leading-relaxed text-foreground/80"><CheckCircle2 className="mt-1 size-4 shrink-0 text-primary" />{point}</p>)}</div>
+                      <div className="mt-6">
+                        <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-primary px-6 text-base font-bold text-primary-foreground shadow-[0_0_24px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary active:scale-[0.98]">{plan.cta}<ArrowUpRight className="size-4" /></a>
+                        <p className="mt-3 text-base leading-relaxed text-muted-foreground">{text.planBenefit}</p>
+                      </div>
                     </AccordionContent>
                   </AccordionItem>
                 ))}

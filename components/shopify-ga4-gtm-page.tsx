@@ -139,6 +139,7 @@ const copy = {
     ],
     ctaTitle: "先把数据问题说清楚，再决定怎么配置。",
     ctaText: "提交你的 Shopify 店铺、广告平台、GA4/GTM 状态和当前数据问题，我们先判断追踪链路哪里需要修。",
+    ctaBenefit: "提交后 1–2 个工作日内，你会收到追踪链路的初步判断 + 优化优先级建议。",
     relatedTitle: "相关 Shopify 服务",
     relatedIntro: "数据追踪通常要和建站结构、转化优化一起看，确保页面、事件和预算范围能互相支撑。",
     relatedLinks: [
@@ -269,6 +270,7 @@ const copy = {
     ],
     ctaTitle: "Clarify the data issue before changing tracking.",
     ctaText: "Send your Shopify store, ad platforms, GA4/GTM status, and current reporting problem. We will identify which part of the tracking path needs work.",
+    ctaBenefit: "Within 1–2 business days, you'll get an initial read on your tracking path plus optimization priorities.",
     relatedTitle: "Related Shopify Services",
     relatedIntro: "Tracking should be evaluated together with site structure and CRO so pages, events, and budget scope support each other.",
     relatedLinks: [
@@ -762,7 +764,7 @@ export function ShopifyGa4GtmPage() {
             <div aria-hidden="true" className="absolute -bottom-8 right-[8%] rotate-[-8deg] space-y-2 font-mono text-base leading-relaxed text-cyan-300/16"><p>{"dataLayer.push({ event: 'purchase' })"}</p><p>{"GA4 · GTM · Pixel · conversion QA"}</p><p>{"track / validate / explain"}</p></div>
             <div aria-hidden="true" className="absolute bottom-[22%] right-[2%] h-px w-[62%] rotate-[-8deg] animate-shimmer bg-[linear-gradient(90deg,transparent,rgba(34,211,238,0.55),rgba(119,252,117,0.8),transparent)] bg-[length:200%_100%] shadow-[0_0_25px_rgba(119,252,117,0.35)] motion-reduce:animate-none" />
             <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-              <div><ShieldCheck className="mb-5 size-8 text-primary" /><h2 className="max-w-4xl text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.ctaTitle}</h2><p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.ctaText}</p></div>
+              <div><ShieldCheck className="mb-5 size-8 text-primary" /><h2 className="max-w-4xl text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.ctaTitle}</h2><p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.ctaText}</p><p className="mt-3 max-w-3xl text-base leading-relaxed text-primary/85 md:text-lg">{text.ctaBenefit}</p></div>
               <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary active:scale-[0.98]">{text.primaryCta}<ArrowUpRight className="size-4" /></a>
             </div>
           </div>

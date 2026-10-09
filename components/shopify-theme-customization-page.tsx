@@ -167,6 +167,7 @@ const copy = {
     ],
     ctaTitle: "先判断主题还能不能继续改。",
     ctaText: "提交你的店铺链接、主题名称、想改的位置和参考效果，我们先判断是局部定制、重构模块，还是重新建站更合适。",
+    ctaBenefit: "提交后 1–2 个工作日内，你会收到主题与前端范围的初步判断 + 优化优先级建议。",
     relatedTitle: "相关 Shopify 服务",
     relatedIntro: "主题定制通常会和建站范围、费用预算一起判断，先确认现有主题是否值得继续迭代。",
     relatedLinks: [
@@ -329,6 +330,7 @@ const copy = {
     ],
     ctaTitle: "Find out whether the theme is still worth customizing.",
     ctaText: "Send your store URL, theme name, requested changes, and reference effect. We will judge whether local customization, module refactoring, or rebuilding is the better path.",
+    ctaBenefit: "Within 1–2 business days, you'll get an initial read on your theme and front-end scope plus optimization priorities.",
     relatedTitle: "Related Shopify Services",
     relatedIntro: "Theme customization is usually evaluated together with build scope and budget, starting with whether the current theme is worth iterating.",
     relatedLinks: [
@@ -1138,7 +1140,7 @@ export function ShopifyThemeCustomizationPage() {
             </div>
             <div aria-hidden="true" className="absolute bottom-[22%] right-[2%] h-px w-[62%] rotate-[-8deg] animate-shimmer bg-[linear-gradient(90deg,transparent,rgba(34,211,238,0.55),rgba(119,252,117,0.8),transparent)] bg-[length:200%_100%] shadow-[0_0_25px_rgba(119,252,117,0.35)] motion-reduce:animate-none" />
             <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-              <div><ShieldCheck className="mb-5 size-8 text-primary" /><h2 className="max-w-4xl text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.ctaTitle}</h2><p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.ctaText}</p></div>
+              <div><ShieldCheck className="mb-5 size-8 text-primary" /><h2 className="max-w-4xl text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.ctaTitle}</h2><p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.ctaText}</p><p className="mt-3 max-w-3xl text-base leading-relaxed text-primary/85 md:text-lg">{text.ctaBenefit}</p></div>
               <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98]">{text.primaryCta}<ArrowUpRight className="size-4" /></a>
             </div>
           </div>

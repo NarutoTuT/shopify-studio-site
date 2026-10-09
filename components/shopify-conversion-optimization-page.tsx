@@ -174,6 +174,7 @@ const copy = {
     ],
     ctaTitle: "先判断转化断点，再决定怎么改。",
     ctaText: "提交你的店铺链接、主要流量来源、转化问题和当前数据，我们先判断最值得优化的位置。",
+    ctaBenefit: "提交后 1–2 个工作日内，你会收到转化路径的初步判断 + 优化优先级建议。",
     relatedTitle: "相关 Shopify 服务",
     relatedIntro: "转化优化通常需要结合站点结构和报价范围判断，先确认是局部优化还是需要重建关键页面。",
     relatedLinks: [
@@ -339,6 +340,7 @@ const copy = {
     ],
     ctaTitle: "Find the conversion bottleneck before changing the site.",
     ctaText: "Send your store URL, main traffic source, conversion issue, and current data. We will identify the highest-priority area to improve first.",
+    ctaBenefit: "Within 1–2 business days, you'll get an initial read on your conversion path plus optimization priorities.",
     relatedTitle: "Related Shopify Services",
     relatedIntro: "Conversion optimization is often evaluated with site structure and budget scope to decide whether local optimization or page rebuilds make sense.",
     relatedLinks: [
@@ -1198,7 +1200,7 @@ export function ShopifyConversionOptimizationPage() {
             </div>
             <div aria-hidden="true" className="absolute bottom-[22%] right-[2%] h-px w-[62%] rotate-[-8deg] animate-shimmer bg-[linear-gradient(90deg,transparent,rgba(34,211,238,0.55),rgba(119,252,117,0.8),transparent)] bg-[length:200%_100%] shadow-[0_0_25px_rgba(119,252,117,0.35)] motion-reduce:animate-none" />
             <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-              <div><LineChart className="mb-5 size-8 text-primary" /><h2 className="max-w-4xl text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.ctaTitle}</h2><p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.ctaText}</p></div>
+              <div><LineChart className="mb-5 size-8 text-primary" /><h2 className="max-w-4xl text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.ctaTitle}</h2><p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.ctaText}</p><p className="mt-3 max-w-3xl text-base leading-relaxed text-primary/85 md:text-lg">{text.ctaBenefit}</p></div>
               <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98]">{text.primaryCta}<ArrowUpRight className="size-4" /></a>
             </div>
           </div>

@@ -15,6 +15,8 @@ const copy = {
     description: "从 Shopify 技术建设、主题开发，到转化优化和数据追踪，帮助品牌把流量真正转化为订单。",
     primaryCta: "免费 Shopify 店铺诊断",
     secondaryCta: "查看服务体系",
+    ctaBenefit: "提交后 1–2 个工作日内，你会收到店铺主要增长阻塞点的初步判断 + 优化优先级建议。",
+    socialProof: { label: "已服务品牌", brands: ["Terrawulf", "SilkGear"], text: "服务过电摩、服饰等品类的跨境品牌" },
   },
   en: {
     proofPoints: ["Shopify Theme Development", "Conversion Optimization", "Tracking Setup"],
@@ -24,6 +26,8 @@ const copy = {
     description: "From Shopify engineering and theme development to conversion optimization and tracking setup, WhaleLeap helps brands turn traffic into orders.",
     primaryCta: "Free Shopify Store Review",
     secondaryCta: "Explore Our Services",
+    ctaBenefit: "Within 1–2 business days, you'll get an initial read on your store's main growth blockers plus optimization priorities.",
+    socialProof: { label: "Brands served", brands: ["Terrawulf", "SilkGear"], text: "Worked with cross-border brands across e-mobility, apparel, and related categories" },
   },
 }
 
@@ -252,6 +256,22 @@ export function HeroSection() {
           <a href="#services" className="pointer-events-auto border border-foreground/20 text-foreground px-8 py-4 md:px-10 md:py-5 text-base rounded-full cursor-pointer hover:bg-foreground/5 transition-all duration-300 active:scale-[0.97] backdrop-blur-sm">
             {text.secondaryCta}
           </a>
+        </div>
+
+        <p className="hero-animate mt-6 md:mt-7 max-w-3xl mx-auto text-base leading-[1.7] text-muted-foreground/85">
+          {text.ctaBenefit}
+        </p>
+
+        <div className="hero-animate mt-8 flex flex-col items-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-muted-foreground/75">
+            <span className="uppercase tracking-[0.08em] text-muted-foreground/45">{text.socialProof.label}</span>
+            {text.socialProof.brands.map((brand) => (
+              <span key={brand} className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-medium text-foreground/75">
+                {brand}
+              </span>
+            ))}
+          </div>
+          <p className="text-sm text-muted-foreground/60">{text.socialProof.text}</p>
         </div>
 
         <div className="hero-animate mt-10 md:mt-14 flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground/75">

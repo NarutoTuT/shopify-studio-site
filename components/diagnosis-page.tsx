@@ -99,6 +99,7 @@ const copy = {
     fitItems: ["Shopify 品牌", "跨境电商品牌", "正在投放广告的网站", "想提升转化的网站"],
     formTitle: "提交 Free Shopify Review 信息",
     formDescription: "保留现有字段即可提交。信息越具体，初步判断越准确；不确定的字段可以留空。",
+    formBenefit: "提交后 1–2 个工作日内，你会收到店铺主要增长阻塞点的初步判断 + 优化优先级建议。",
     labels: {
       storeUrl: "Shopify 店铺链接",
       category: "产品品类",
@@ -202,6 +203,7 @@ const copy = {
     fitItems: ["Shopify brands", "Cross-border ecommerce brands", "Stores running paid ads", "Stores trying to improve conversion"],
     formTitle: "Tell us about your Shopify store",
     formDescription: "Share what you know today. Specific context helps us make the first review more useful, but a complete requirements document is not required.",
+    formBenefit: "Within 1–2 business days, you'll get an initial read on your store's main growth blockers plus optimization priorities.",
     labels: {
       storeUrl: "Shopify store URL",
       category: "Product category",
@@ -478,6 +480,7 @@ export function DiagnosisPage() {
         </button>
         <a href={localizedPath("/")} className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/15 px-6 text-base font-semibold text-foreground transition-colors hover:bg-white/5">{text.secondaryCta}</a>
       </div>
+      <p className="mt-4 text-base leading-relaxed text-muted-foreground">{text.formBenefit}</p>
     </form>
   )
 
