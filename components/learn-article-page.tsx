@@ -33,6 +33,27 @@ const siteUrl = "https://whaleleap.studio"
 
 export function LearnArticlePage({ article }: { article: LearnArticle }) {
   const url = `${siteUrl}/learn/${article.slug}`
+  const editorialFaq = article.slug === "shopify-custom-development-cost"
+    ? {
+        title: "定制开发报价，常见问题一次说清",
+        description: "从计价方式、主题成本到固定总价，展开查看品牌方在确认范围前最需要问清的问题。",
+      }
+    : article.slug === "shopify-ga4-purchase-tracking-fix"
+      ? {
+          title: "购买追踪排查，先把关键问题说清",
+          description: "从事件延迟、重复发送到订单对账，展开查看修复 Shopify GA4 purchase 前最常遇到的问题。",
+        }
+      : article.slug === "hire-shopify-developer"
+        ? {
+            title: "选择开发团队前，先问清这些问题",
+            description: "从个人开发者与工作室的差异，到能力验证和合同边界，展开查看签约前最需要确认的问题。",
+          }
+        : article.slug === "shopify-cro-checklist"
+          ? {
+              title: "开始优化前，先回答这些转化问题",
+              description: "从数据基线、PDP 优先级到改版验证，展开查看 Shopify 转化率优化中最常见的判断问题。",
+            }
+      : null
 
   return (
     <LanguageProvider>
@@ -102,14 +123,48 @@ export function LearnArticlePage({ article }: { article: LearnArticle }) {
               </div>
 
               <section className="mt-20 md:mt-24">
-                <div className="text-center"><p className="font-mono text-base font-semibold text-primary">FAQ</p><h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold">常见问题</h2><HelpCircle className="mx-auto mt-5 size-8 text-primary" /></div>
-                <Accordion type="single" collapsible className="mt-8 grid gap-x-8 rounded-[2.8rem_1.45rem_3.2rem_1.8rem] border border-white/20 bg-[linear-gradient(135deg,rgba(255,255,255,0.055),rgba(255,255,255,0.012))] px-5 md:px-8 lg:grid-cols-2">
-                  {article.faqs.map((faq, index) => <AccordionItem key={faq.q} value={`faq-${index}`} className="border-white/10"><AccordionTrigger className="min-h-[76px] gap-4 text-left text-base font-semibold hover:no-underline data-[state=open]:text-primary"><span className="flex items-start gap-4"><span className="font-mono text-primary/55">{String(index + 1).padStart(2, "0")}</span>{faq.q}</span></AccordionTrigger><AccordionContent className="pb-6 text-base leading-[1.85] text-white/62 md:pl-10">{faq.a}</AccordionContent></AccordionItem>)}
-                </Accordion>
+                {editorialFaq ? (
+                  <div className="grid gap-8 lg:grid-cols-[minmax(250px,0.34fr)_minmax(0,0.66fr)] lg:gap-16">
+                    <div className="lg:sticky lg:top-28 lg:self-start">
+                      <p className="font-mono text-base font-semibold text-primary">{String(article.sections.length + 1).padStart(2, "0")} / FAQ</p>
+                      <h2 className="mt-4 max-w-md text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight">{editorialFaq.title}</h2>
+                      <p className="mt-5 max-w-md text-base leading-[1.8] text-white/58">{editorialFaq.description}</p>
+                      <div aria-hidden="true" className="mt-7 hidden h-px w-full max-w-[220px] bg-gradient-to-r from-primary/55 to-transparent lg:block" />
+                    </div>
+
+                    <Accordion type="single" collapsible className="space-y-3">
+                      {article.faqs.map((faq, index) => (
+                        <AccordionItem
+                          key={faq.q}
+                          value={`faq-${index}`}
+                          className="group overflow-hidden rounded-[1.35rem] border border-white/12 bg-white/[0.025] px-5 transition-[border-color,background-color,box-shadow] duration-300 last:border-b data-[state=open]:border-primary/35 data-[state=open]:bg-primary/[0.045] data-[state=open]:shadow-[inset_0_1px_0_rgba(255,255,255,0.09),0_18px_55px_rgba(0,0,0,0.22)] motion-reduce:transition-none sm:px-7"
+                        >
+                          <AccordionTrigger className="min-h-[88px] items-center gap-5 py-5 text-left text-base font-semibold leading-snug hover:no-underline focus-visible:ring-2 focus-visible:ring-primary/55 data-[state=open]:text-white [&>svg]:hidden">
+                            <span className="flex min-w-0 flex-1 items-center gap-4 sm:gap-5">
+                              <span className="font-mono text-base text-primary/55 transition-colors group-data-[state=open]:text-primary">{String(index + 1).padStart(2, "0")}</span>
+                              <span>{faq.q}</span>
+                            </span>
+                            <span aria-hidden="true" className="relative flex size-10 shrink-0 items-center justify-center rounded-full border border-white/12 bg-black/20 text-xl font-light text-white/65 transition-[transform,color,border-color,background-color] duration-300 group-data-[state=open]:rotate-45 group-data-[state=open]:border-primary/35 group-data-[state=open]:bg-primary/10 group-data-[state=open]:text-primary motion-reduce:transition-none">+</span>
+                          </AccordionTrigger>
+                          <AccordionContent className="pb-7 pl-8 pr-12 text-base leading-[1.85] text-white/62 sm:pl-10 sm:pr-16">
+                            <div className="border-l border-primary/25 pl-5 sm:pl-6">{faq.a}</div>
+                          </AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
+                  </div>
+                ) : (
+                  <>
+                    <div className="text-center"><p className="font-mono text-base font-semibold text-primary">FAQ</p><h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold">常见问题</h2><HelpCircle className="mx-auto mt-5 size-8 text-primary" /></div>
+                    <Accordion type="single" collapsible className="mt-8 grid gap-x-8 rounded-[2.8rem_1.45rem_3.2rem_1.8rem] border border-white/20 bg-[linear-gradient(135deg,rgba(255,255,255,0.055),rgba(255,255,255,0.012))] px-5 md:px-8 lg:grid-cols-2">
+                      {article.faqs.map((faq, index) => <AccordionItem key={faq.q} value={`faq-${index}`} className="border-white/10"><AccordionTrigger className="min-h-[76px] gap-4 text-left text-base font-semibold hover:no-underline data-[state=open]:text-primary"><span className="flex items-start gap-4"><span className="font-mono text-primary/55">{String(index + 1).padStart(2, "0")}</span>{faq.q}</span></AccordionTrigger><AccordionContent className="pb-6 text-base leading-[1.85] text-white/62 md:pl-10">{faq.a}</AccordionContent></AccordionItem>)}
+                    </Accordion>
+                  </>
+                )}
               </section>
 
               <section className="mt-20 md:mt-24">
-                <p className="font-mono text-base font-semibold text-primary">RELATED READING</p><h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold">相关阅读</h2>
+                <div className="text-center"><p className="font-mono text-base font-semibold text-primary">RELATED READING</p><h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold">相关阅读</h2></div>
                 <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">{article.related.map((item) => <a key={item.href} href={item.href} className="group min-h-[210px] rounded-[1.5rem] border border-white/12 bg-white/[0.035] p-6 transition-colors hover:bg-white/[0.06]"><h3 className="text-xl font-bold">{item.title}</h3><p className="mt-3 text-base leading-[1.7] text-white/58">{item.text}</p><span className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-primary">继续阅读<ArrowUpRight className="size-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></span></a>)}</div>
               </section>
 
