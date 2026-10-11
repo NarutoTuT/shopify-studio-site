@@ -1,6 +1,10 @@
 # WhaleLeap Studio Website
 
-WhaleLeap Studio is a Shopify Growth Engineering Studio website for Chinese-founded global ecommerce brands.
+This is the official source repository for the WhaleLeap Studio website. WhaleLeap Studio is a Shopify Growth Engineering Studio for Chinese-founded global ecommerce brands, operated by 深圳市知策先见智能科技有限公司 in Shenzhen, China.
+
+Official website: [https://whaleleap.studio](https://whaleleap.studio)
+
+Currently accepting new Shopify development and optimization projects.
 
 The site positions WhaleLeap as more than a Shopify website builder. It explains how the studio helps cross-border brands improve:
 
@@ -47,7 +51,7 @@ Primary audience:
 ```text
 /                                   Home
 /diagnosis                          Free Shopify Review
-/services/shopify-website-build     Shopify Engineering
+/services/shopify-website-build     Shopify Development Services
 /services/shopify-conversion-optimization
 /services/shopify-ga4-gtm
 /services/shopify-theme-customization
@@ -76,7 +80,7 @@ Shopify Growth Engineering Studio for Chinese-founded global ecommerce brands.
 
 The website is being organized around three core services:
 
-1. Shopify Engineering
+1. Shopify Development Services
    - Shopify Theme Development
    - Liquid Development
    - Custom Sections
