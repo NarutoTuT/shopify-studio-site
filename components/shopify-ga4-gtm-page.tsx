@@ -139,7 +139,7 @@ const copy = {
     ],
     ctaTitle: "先把数据问题说清楚，再决定怎么配置。",
     ctaText: "提交你的 Shopify 店铺、广告平台、GA4/GTM 状态和当前数据问题，我们先判断追踪链路哪里需要修。",
-    ctaBenefit: "提交后 1–2 个工作日内，你会收到追踪链路的初步判断 + 优化优先级建议。",
+    ctaBenefit: "先免费沟通追踪问题，再根据项目情况确认检查范围、报价与交付条件。",
     relatedTitle: "相关 Shopify 服务",
     relatedIntro: "数据追踪通常要和建站结构、转化优化一起看，确保页面、事件和预算范围能互相支撑。",
     relatedLinks: [
@@ -270,7 +270,7 @@ const copy = {
     ],
     ctaTitle: "Clarify the data issue before changing tracking.",
     ctaText: "Send your Shopify store, ad platforms, GA4/GTM status, and current reporting problem. We will identify which part of the tracking path needs work.",
-    ctaBenefit: "Within 1–2 business days, you'll get an initial read on your tracking path plus optimization priorities.",
+    ctaBenefit: "Start with a free consultation, then confirm the review scope, pricing, and delivery terms for the project.",
     relatedTitle: "Related Shopify Services",
     relatedIntro: "Tracking should be evaluated together with site structure and CRO so pages, events, and budget scope support each other.",
     relatedLinks: [

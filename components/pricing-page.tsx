@@ -19,13 +19,13 @@ const copy = {
     primaryCta: "免费诊断我的 Shopify 站",
     secondaryCta: "查看价格方案",
     plansTitle: "三档建站价格",
-    plansIntro: "售后支持最低 2 个月，复杂度越高，交付后的技术支持周期也会更长。",
-    planBenefit: "提交后 1–2 个工作日内，你会收到店铺主要增长阻塞点的初步判断 + 优化优先级建议。",
+    plansIntro: "开发范围、交付条件与项目售后根据每个项目的具体需求和合同单独确认。",
+    planBenefit: "免费阶段先了解需求；是否提供书面诊断、开发报价或后续方案，根据项目情况确认。",
     plans: [
       {
         name: "文档模板方案",
         price: "¥20,000 起",
-        support: "上线后 2 个月免费技术支持",
+        support: "项目售后期限、范围和条件以合同约定为准",
         timeline: "约 2-4 周",
         bestFor: "适合已有参考网站或模块需求明确的团队。",
         points: ["1-3 个参考站与模块拆解", "Shopify 主题开发与内容填充", "品牌色与字体基础适配", "移动端与主流浏览器兼容", "基础 SEO 优化", "测试、性能优化与部署上线", "2 次整体页面修改"],
@@ -34,7 +34,7 @@ const copy = {
       {
         name: "设计图定制方案",
         price: "¥35,000 起",
-        support: "上线后 2 个月免费技术支持",
+        support: "项目售后期限、范围和条件以合同约定为准",
         timeline: "约 3-6 周",
         bestFor: "适合需要完整品牌表达和更强转化路径的团队。",
         points: ["4 个核心页面，Desktop + Mobile", "8 张 Figma 设计图与设计源文件", "品牌色、排版与间距设计系统", "Liquid 主题定制开发", "GSAP / Framer Motion 动效", "PC、平板与手机响应式适配", "GA4、GTM 与 Product Schema", "PageSpeed 优化目标 PC ≥ 90、移动 ≥ 80"],
@@ -44,7 +44,7 @@ const copy = {
       {
         name: "复杂业务定制",
         price: "¥50,000 起",
-        support: "售后周期按范围确认，最低 3 个月",
+        support: "项目售后期限、范围和条件以合同约定为准",
         timeline: "按范围评估",
         bestFor: "适合 B2B、批发、询价、ERP/CRM、复杂履约业务。",
         points: ["复杂业务流程与权限梳理", "客户分级、批发或询价流程", "ERP / CRM 与第三方系统对接", "商品与客户数据迁移评估", "定制前端交互与多端适配", "性能优化与技术 SEO", "分阶段测试、上线与交接"],
@@ -125,11 +125,11 @@ const copy = {
       },
       {
         q: "售后包含什么？",
-        a: "售后主要包含已交付范围内的技术问题排查、页面和功能异常修复、上线稳定性支持。新增页面、活动、功能或长期运营优化不包含在免费售后内。",
+        a: "项目售后的期限、范围和条件根据具体交付内容写入合同，不统一承诺固定免费期限。新增页面、活动、功能和长期维护需要另行确认。",
       },
       {
         q: "后期维护怎么收费？",
-        a: "可以按月维护或按项目报价。维护内容通常包括页面小改、活动页、数据追踪调整、SEO 内容上线、功能优化和技术排查。",
+        a: "长期维护可按次或按项目报价、按小时计费，或采用月度维护合作。具体范围、费用和响应安排由双方另行约定。",
       },
     ],
     ctaTitle: "不确定选哪一档，先做诊断。",
@@ -147,13 +147,13 @@ const copy = {
     primaryCta: "Request a Free Store Review",
     secondaryCta: "View Pricing Tiers",
     plansTitle: "Three Pricing Tiers",
-    plansIntro: "Post-launch support starts at 2 months. More complex builds receive longer technical support after delivery.",
-    planBenefit: "Within 1–2 business days, you'll get an initial read on your store's main growth blockers plus optimization priorities.",
+    plansIntro: "Development scope, delivery terms, and post-launch support are agreed for each project and documented in its contract.",
+    planBenefit: "The free stage starts with requirements discovery. Any written diagnosis, development quote, or follow-up plan is confirmed case by case.",
     plans: [
       {
         name: "Module-Based Build",
         price: "from ¥20,000",
-        support: "2 months of post-launch technical support",
+        support: "Post-launch support period, scope, and terms are defined in the project contract",
         timeline: "2-4 weeks",
         bestFor: "For teams with clear references or defined module needs.",
         points: ["1-3 reference sites and module breakdown", "Shopify theme build and content population", "Brand color and typography adaptation", "Mobile and major browser compatibility", "Basic SEO optimization", "Testing, performance work, and launch", "2 overall page revision rounds"],
@@ -162,7 +162,7 @@ const copy = {
       {
         name: "Custom Design Build",
         price: "from ¥35,000",
-        support: "2 months of post-launch technical support",
+        support: "Post-launch support period, scope, and terms are defined in the project contract",
         timeline: "3-6 weeks",
         bestFor: "For teams that need stronger brand expression and conversion structure.",
         points: ["4 core pages in desktop and mobile", "8 Figma screens with source files", "Color, typography, and spacing system", "Custom Liquid theme development", "GSAP / Framer Motion interactions", "Desktop, tablet, and mobile responsive build", "GA4, GTM, and Product Schema", "PageSpeed targets: desktop ≥ 90, mobile ≥ 80"],
@@ -172,7 +172,7 @@ const copy = {
       {
         name: "Complex Business",
         price: "from ¥50,000",
-        support: "Support scoped by project, minimum 3 months",
+        support: "Post-launch support period, scope, and terms are defined in the project contract",
         timeline: "Scoped timeline",
         bestFor: "For B2B, wholesale, quote flows, ERP/CRM, or complex fulfillment.",
         points: ["Complex workflows and permissions", "Customer tiers, wholesale, or quote flow", "ERP / CRM and third-party integrations", "Product and customer data migration assessment", "Custom interactions and responsive delivery", "Performance and technical SEO", "Phased testing, launch, and handoff"],
@@ -253,11 +253,11 @@ const copy = {
       },
       {
         q: "What does post-launch support include?",
-        a: "It covers technical troubleshooting, bug fixes within delivered scope, and launch stability support. New pages, campaigns, features, or ongoing growth work are not included in free support.",
+        a: "The support period, scope, and terms are defined in each project contract. There is no standard free support period. New pages, campaigns, features, and ongoing maintenance are scoped separately.",
       },
       {
         q: "How is ongoing maintenance priced?",
-        a: "Maintenance can be monthly or project-based. It often includes page edits, campaign pages, analytics updates, SEO content publishing, feature improvements, and technical troubleshooting.",
+        a: "Ongoing maintenance is available project by project, hourly, or through a monthly retainer. Scope, fees, and response arrangements are agreed separately.",
       },
     ],
     ctaTitle: "Not sure which tier fits? Start with diagnosis.",
@@ -273,8 +273,8 @@ const pricingFaqMeta = [
   { code: "STARTER", zh: ["¥20K", "快速上线", "模板模块"], en: ["¥20K", "Quick launch", "Module build"] },
   { code: "CUSTOM", zh: ["¥35K", "Figma", "转化路径"], en: ["¥35K", "Figma", "Conversion path"] },
   { code: "SYSTEM", zh: ["B2B", "ERP / CRM", "单独评估"], en: ["B2B", "ERP / CRM", "Custom scope"] },
-  { code: "SUPPORT", zh: ["至少 2 个月", "技术支持", "Bug 修复"], en: ["2+ months", "Technical support", "Bug fixes"] },
-  { code: "CARE", zh: ["按月维护", "按项目", "持续优化"], en: ["Monthly care", "Per project", "Optimization"] },
+  { code: "SUPPORT", zh: ["合同约定", "技术支持", "交付边界"], en: ["Contract terms", "Technical support", "Delivery boundary"] },
+  { code: "CARE", zh: ["按项目", "按小时", "月度维护"], en: ["Project-based", "Hourly", "Monthly retainer"] },
 ]
 
 export function PricingPage() {
@@ -283,7 +283,7 @@ export function PricingPage() {
   const [activePlan, setActivePlan] = useState(1)
   const [activeModuleGroup, setActiveModuleGroup] = useState(0)
   const [activeFaq, setActiveFaq] = useState(0)
-  const heroProof = language === "zh" ? ["三档公开价格", "按实际范围确认", "至少 2 个月售后"] : ["Three transparent tiers", "Scoped to actual requirements", "At least 2 months support"]
+  const heroProof = language === "zh" ? ["三档公开价格", "按实际范围确认", "售后按合同约定"] : ["Three transparent tiers", "Scoped to actual requirements", "Support defined by contract"]
   const moduleLabels = language === "zh" ? { eyebrow: "ADD-ON MAP / 09", track: "模块轨道", items: "项可选模块" } : { eyebrow: "ADD-ON MAP / 09", track: "Module track", items: "optional modules" }
   const boundaryLabels = language === "zh" ? { eyebrow: "COST BOUNDARY / 06", core: "建站开发报价", coreText: "仅覆盖已确认的设计、开发与交付", groupCodes: ["平台费用 / 03", "运营费用 / 03"] } : { eyebrow: "COST BOUNDARY / 06", core: "Website build quote", coreText: "Covers confirmed design, development, and delivery", groupCodes: ["Platform costs / 03", "Operations / 03"] }
   const pricingLabels = language === "zh" ? {

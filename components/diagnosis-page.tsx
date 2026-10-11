@@ -39,10 +39,10 @@ const copy = {
   zh: {
     eyebrow: "FREE SHOPIFY REVIEW",
     title: "免费 Shopify 店铺增长检查",
-    description: "发现影响独立站转化的关键问题，获得 Shopify 技术、页面体验和数据追踪方面的优化建议。",
+    description: "通过免费初步沟通了解 Shopify 店铺、当前问题和项目需求，再判断适合的下一步。",
     primaryCta: "开始免费检查",
     secondaryCta: "返回首页",
-    trust: ["面向海外华人跨境品牌", "1-2 个工作日内回复", "不需要完整需求文档"],
+    trust: ["面向海外华人跨境品牌", "免费初步沟通", "不需要完整需求文档"],
     heroCards: [
       { title: "Engineering", text: "主题、性能、移动端体验" },
       { title: "Conversion", text: "首页、商品页、CTA、信任内容" },
@@ -73,7 +73,7 @@ const copy = {
       },
     ],
     reviewTitle: "What We Review",
-    reviewDescription: "Free Shopify Review 会从三个方向判断当前店铺的主要增长阻塞点。",
+    reviewDescription: "初步沟通会围绕三个方向了解现状；是否需要进一步检查或书面报告，会根据项目情况确认。",
     reviewAreas: [
       {
         title: "Shopify Engineering",
@@ -99,7 +99,7 @@ const copy = {
     fitItems: ["Shopify 品牌", "跨境电商品牌", "正在投放广告的网站", "想提升转化的网站"],
     formTitle: "提交 Free Shopify Review 信息",
     formDescription: "保留现有字段即可提交。信息越具体，初步判断越准确；不确定的字段可以留空。",
-    formBenefit: "提交后 1–2 个工作日内，你会收到店铺主要增长阻塞点的初步判断 + 优化优先级建议。",
+    formBenefit: "提交后我们会先了解需求并判断下一步。免费阶段不保证提供完整审计报告、深度技术检查或增长结果。",
     labels: {
       storeUrl: "Shopify 店铺链接",
       category: "产品品类",
@@ -128,25 +128,25 @@ const copy = {
     },
     emailSubject: "Shopify 免费诊断咨询",
     submitting: "正在提交…",
-    submitSuccess: "已收到请求。我们会在 1-2 个工作日内完成初步问题判断，并给出优化建议方向。",
+    submitSuccess: "已收到请求。我们会查看你提交的信息并联系你，进一步了解需求和合适的下一步。",
     submitError: "提交失败，请稍后重试，或直接发送邮件联系我们。",
     contactRequired: "请至少填写邮箱或微信，方便我们回复你。",
     emailInvalid: "请输入有效的邮箱地址。",
     afterTitle: "提交后会发生什么？",
-    afterIntro: "这不是简单的 thank you。提交后，我们会把你的店铺放入初步检查队列。",
-    afterItems: ["已收到请求", "1-2 个工作日回复", "提供初步问题判断", "给出优化建议方向"],
+    afterIntro: "提交后先进行需求了解，再根据项目情况判断是否需要书面诊断、开发项目或长期维护。",
+    afterItems: ["接收项目信息", "初步沟通需求", "确认合适的服务范围", "另行约定下一步"],
     auditCtaTitle: "需要更深入的方案？下一步是 Shopify Growth Audit。",
-    auditCtaText: "Free Review 用来判断方向。若问题复杂，我们会建议进入 Growth Audit，进一步拆解页面、技术、追踪和实施优先级。",
+    auditCtaText: "免费阶段用于初步沟通与需求了解，不保证提供完整审计报告。若项目适合进一步分析，书面诊断、开发范围和交付条件会另行确认。",
     auditCtaButton: "先提交免费检查",
     auditCtaSecondary: "查看服务体系",
   },
   en: {
     eyebrow: "FREE SHOPIFY REVIEW",
     title: "Free Shopify Growth Review",
-    description: "Find the key issues affecting store conversion and get optimization direction across Shopify Development Services, page experience, and tracking.",
+    description: "Start with a free consultation about your Shopify store, current issues, and project needs, then determine the right next step.",
     primaryCta: "Start My Free Review",
     secondaryCta: "Return Home",
-    trust: ["For Chinese-founded brands selling globally", "Reply within 1–2 business days", "No full requirements document needed"],
+    trust: ["For Chinese-founded brands selling globally", "Free initial consultation", "No full requirements document needed"],
     heroCards: [
       { title: "Engineering", text: "Theme, performance, mobile UX" },
       { title: "Conversion", text: "Homepage, PDP, CTA, trust" },
@@ -177,7 +177,7 @@ const copy = {
       },
     ],
     reviewTitle: "What We Review",
-    reviewDescription: "The Free Shopify Review identifies blockers across engineering, conversion, and tracking.",
+    reviewDescription: "The initial consultation covers three areas. Further investigation or a written report is confirmed case by case.",
     reviewAreas: [
       {
         title: "Shopify Development Services",
@@ -203,7 +203,7 @@ const copy = {
     fitItems: ["Shopify brands", "Cross-border ecommerce brands", "Stores running paid ads", "Stores trying to improve conversion"],
     formTitle: "Tell us about your Shopify store",
     formDescription: "Share what you know today. Specific context helps us make the first review more useful, but a complete requirements document is not required.",
-    formBenefit: "Within 1–2 business days, you'll get an initial read on your store's main growth blockers plus optimization priorities.",
+    formBenefit: "We will first review your request and discuss the next step. The free stage does not guarantee a full audit report, deep technical review, or business result.",
     labels: {
       storeUrl: "Shopify store URL",
       category: "Product category",
@@ -232,15 +232,15 @@ const copy = {
     },
     emailSubject: "Free Shopify diagnosis inquiry",
     submitting: "Submitting...",
-    submitSuccess: "Request received. We will complete an initial assessment within 1-2 business days and share optimization direction.",
+    submitSuccess: "Request received. We will review the information and contact you to understand the requirements and an appropriate next step.",
     submitError: "Submission failed. Please try again later or contact us by email.",
     contactRequired: "Please enter at least an email or WeChat so we can reply.",
     emailInvalid: "Please enter a valid email address.",
     afterTitle: "What happens after submission?",
-    afterIntro: "This is not a simple thank-you flow. Your store enters the first review queue.",
-    afterItems: ["Request received", "Reply within 1-2 business days", "Initial problem assessment", "Optimization direction"],
+    afterIntro: "We start by understanding the request, then decide whether a written diagnosis, development project, or ongoing maintenance is appropriate.",
+    afterItems: ["Request received", "Initial consultation", "Confirm suitable scope", "Agree the next step"],
     auditCtaTitle: "Need a deeper plan? The next step is a Shopify Growth Audit.",
-    auditCtaText: "The Free Review identifies direction. If the problem is complex, we may suggest a Growth Audit to break down page, technical, tracking, and implementation priorities.",
+    auditCtaText: "The free stage is an initial consultation and does not guarantee a complete audit report. If further analysis is appropriate, the written diagnosis, development scope, and delivery terms are agreed separately.",
     auditCtaButton: "Start with Free Review",
     auditCtaSecondary: "View Services",
   },
@@ -254,13 +254,13 @@ const diagnosisStructuredData = {
     ],
     service: {
       name: "Free Shopify Review",
-      description: "为海外华人跨境品牌检查 Shopify 技术基础、页面转化路径和数据追踪体系，判断影响独立站增长的关键问题。",
+      description: "为海外华人跨境品牌提供 Shopify 免费初步咨询，了解店铺现状、当前问题和项目需求，再判断合适的下一步。",
       url: "https://whaleleap.studio/diagnosis",
     },
     page: {
       type: "WebPage" as const,
       name: "Free Shopify Review",
-      description: "发现影响 Shopify 独立站转化的关键问题，获得 Shopify 技术、页面体验和数据追踪方面的初步优化建议。",
+      description: "通过 Shopify 免费初步咨询了解店铺现状、当前问题和项目需求，再判断是否需要进一步诊断或实施。",
       url: "https://whaleleap.studio/diagnosis",
       about: ["Free Shopify Review", "Shopify 增长检查", "Shopify 转化优化", "Shopify 数据追踪"],
     },
@@ -272,13 +272,13 @@ const diagnosisStructuredData = {
     ],
     service: {
       name: "Free Shopify Review",
-      description: "A review of Shopify technical foundations, conversion paths, and tracking systems to identify the issues limiting storefront growth.",
+      description: "A free initial Shopify consultation to understand the store, current issues, and project needs before deciding the next step.",
       url: "https://whaleleap.studio/en/diagnosis",
     },
     page: {
       type: "WebPage" as const,
       name: "Free Shopify Review",
-      description: "Identify the key issues affecting Shopify conversion and get initial recommendations for engineering, page experience, and measurement.",
+      description: "Discuss the Shopify store, current issues, and project needs before deciding whether further diagnosis or implementation is appropriate.",
       url: "https://whaleleap.studio/en/diagnosis",
       about: ["Free Shopify Review", "Shopify growth review", "Shopify conversion optimization", "Shopify analytics"],
     },
@@ -293,8 +293,8 @@ const growthSignalMeta = [
 ]
 
 const afterStepMeta = {
-  zh: ["提交后即时确认", "预计 1–2 个工作日", "识别主要增长阻塞点", "明确下一步优化优先级"],
-  en: ["Confirmed after submission", "Expected within 1–2 business days", "Identify the primary growth blockers", "Clarify the next optimization priorities"],
+  zh: ["提交后即时确认", "了解项目与当前问题", "确认适合的服务范围", "另行约定下一步"],
+  en: ["Confirmed after submission", "Understand the project and current issues", "Confirm suitable service scope", "Agree the next step separately"],
 }
 
 function Field({

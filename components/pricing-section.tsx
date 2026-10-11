@@ -36,7 +36,7 @@ const copy = {
           "基础品牌视觉适配、移动端自适应和基础 SEO",
           "可追加 GA4/GTM、动画、博客和新增 SKU",
           "项目周期约 2-4 周，最长不超过 1.5 个月",
-          "上线后 2 个月免费技术支持",
+          "项目售后期限、范围和条件以合同约定为准",
         ],
       },
       {
@@ -52,7 +52,7 @@ const copy = {
           "Liquid、HTML/CSS/JS、GSAP 或 Framer Motion 实现",
           "GA4 电商追踪、GTM 容器和 Product Schema",
           "项目周期约 3-6 周，最长不超过 2 个月",
-          "上线后 2 个月免费技术支持",
+          "项目售后期限、范围和条件以合同约定为准",
         ],
       },
       {
@@ -67,7 +67,7 @@ const copy = {
           "Xero、ERP、CRM 或物流 API 对接评估",
           "复杂物流、支付、多币种或数据迁移方案",
           "技术 SEO、性能优化和上线验收标准",
-          "按业务范围单独确认报价、排期和售后周期，最低 3 个月",
+          "按业务范围单独确认报价、排期和售后条件",
         ],
       },
     ],
@@ -92,7 +92,7 @@ const copy = {
           "Basic brand adaptation, responsive layout, and basic SEO",
           "Optional GA4/GTM, animation, blog, and extra SKU work",
           "Typical timeline: 2-4 weeks, capped at 1.5 months",
-          "2 months of post-launch technical support",
+          "Post-launch support terms defined in the project contract",
         ],
       },
       {
@@ -108,7 +108,7 @@ const copy = {
           "Liquid, HTML/CSS/JS, GSAP or Framer Motion implementation",
           "GA4 ecommerce tracking, GTM container, and Product Schema",
           "Typical timeline: 3-6 weeks, capped at 2 months",
-          "2 months of post-launch technical support",
+          "Post-launch support terms defined in the project contract",
         ],
       },
       {
@@ -123,7 +123,7 @@ const copy = {
           "Xero, ERP, CRM, or logistics API assessment",
           "Complex logistics, payments, multi-currency, or data migration",
           "Technical SEO, performance optimization, and launch acceptance checks",
-          "Final quote, timeline, and support period confirmed by scope, minimum 3 months",
+          "Final quote, timeline, and support terms confirmed by scope",
         ],
       },
     ],

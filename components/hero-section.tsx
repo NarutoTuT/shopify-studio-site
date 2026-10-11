@@ -15,7 +15,7 @@ const copy = {
     description: "从 Shopify 技术建设、主题开发，到转化优化和数据追踪，帮助品牌把流量真正转化为订单。",
     primaryCta: "免费 Shopify 店铺诊断",
     secondaryCta: "查看服务体系",
-    ctaBenefit: "提交后 1–2 个工作日内，你会收到店铺主要增长阻塞点的初步判断 + 优化优先级建议。",
+    ctaBenefit: "先免费沟通店铺现状与需求，再根据项目情况确认是否需要书面诊断或进一步实施。",
     socialProof: { label: "已服务品牌", brands: ["Terrawulf", "SilkGear"], text: "服务过电摩、服饰等品类的跨境品牌" },
   },
   en: {
@@ -26,7 +26,7 @@ const copy = {
     description: "From Shopify Development Services and custom themes to conversion optimization and tracking setup, WhaleLeap helps brands turn traffic into orders.",
     primaryCta: "Free Shopify Store Review",
     secondaryCta: "Explore Our Services",
-    ctaBenefit: "Within 1–2 business days, you'll get an initial read on your store's main growth blockers plus optimization priorities.",
+    ctaBenefit: "Start with a free consultation, then confirm whether a written diagnosis or further implementation is appropriate.",
     socialProof: { label: "Brands served", brands: ["Terrawulf", "SilkGear"], text: "Worked with cross-border brands across e-mobility, apparel, and related categories" },
   },
 }

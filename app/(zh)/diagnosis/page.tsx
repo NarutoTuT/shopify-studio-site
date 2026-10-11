@@ -6,7 +6,7 @@ import { createSitePageMetadata } from "@/lib/site-metadata"
 export const metadata = createSitePageMetadata({
   title: "Free Shopify Review | 免费 Shopify 店铺增长检查",
   description:
-    "发现影响 Shopify 独立站转化的关键问题，获得 Shopify 技术、页面体验和数据追踪方面的初步优化建议。",
+    "免费沟通 Shopify 店铺现状、当前问题与项目需求，再判断是否需要书面诊断、开发实施或长期维护。",
   path: "/diagnosis", language: "zh", zhPath: "/diagnosis", enPath: "/en/diagnosis",
 })
 

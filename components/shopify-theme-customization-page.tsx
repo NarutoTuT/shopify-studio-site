@@ -167,7 +167,7 @@ const copy = {
     ],
     ctaTitle: "先判断主题还能不能继续改。",
     ctaText: "提交你的店铺链接、主题名称、想改的位置和参考效果，我们先判断是局部定制、重构模块，还是重新建站更合适。",
-    ctaBenefit: "提交后 1–2 个工作日内，你会收到主题与前端范围的初步判断 + 优化优先级建议。",
+    ctaBenefit: "先免费沟通主题需求，再根据项目情况确认开发范围、报价与交付条件。",
     relatedTitle: "相关 Shopify 服务",
     relatedIntro: "主题定制通常会和建站范围、费用预算一起判断，先确认现有主题是否值得继续迭代。",
     relatedLinks: [
@@ -330,7 +330,7 @@ const copy = {
     ],
     ctaTitle: "Find out whether the theme is still worth customizing.",
     ctaText: "Send your store URL, theme name, requested changes, and reference effect. We will judge whether local customization, module refactoring, or rebuilding is the better path.",
-    ctaBenefit: "Within 1–2 business days, you'll get an initial read on your theme and front-end scope plus optimization priorities.",
+    ctaBenefit: "Start with a free consultation, then confirm theme scope, pricing, and delivery terms for the project.",
     relatedTitle: "Related Shopify Services",
     relatedIntro: "Theme customization is usually evaluated together with build scope and budget, starting with whether the current theme is worth iterating.",
     relatedLinks: [

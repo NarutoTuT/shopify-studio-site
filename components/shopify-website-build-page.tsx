@@ -97,7 +97,7 @@ const copy = {
     ],
     ctaTitle: "先判断 Shopify 技术基础是否支持增长。",
     ctaText: "提交店铺链接、产品类型和当前问题，我们先判断是新建、重建、主题定制还是性能清理更适合。",
-    ctaBenefit: "提交后 1–2 个工作日内，你会收到建站与工程范围的初步判断 + 优化优先级建议。",
+    ctaBenefit: "先免费沟通建站需求，再根据项目情况确认开发范围、报价与交付条件。",
   },
   en: {
     eyebrow: "SHOPIFY DEVELOPMENT SERVICES",
@@ -183,7 +183,7 @@ const copy = {
     ],
     ctaTitle: "Find out whether your Shopify foundation can support growth.",
     ctaText: "Submit your store URL, product type, and current blockers. We will judge whether new build, rebuild, theme customization, or performance cleanup fits best.",
-    ctaBenefit: "Within 1–2 business days, you'll get an initial read on your build and engineering scope plus optimization priorities.",
+    ctaBenefit: "Start with a free consultation, then confirm development scope, pricing, and delivery terms for the project.",
   },
 }
 

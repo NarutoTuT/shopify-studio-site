@@ -174,7 +174,7 @@ const copy = {
     ],
     ctaTitle: "先判断转化断点，再决定怎么改。",
     ctaText: "提交你的店铺链接、主要流量来源、转化问题和当前数据，我们先判断最值得优化的位置。",
-    ctaBenefit: "提交后 1–2 个工作日内，你会收到转化路径的初步判断 + 优化优先级建议。",
+    ctaBenefit: "先免费沟通转化问题，再根据项目情况确认是否需要书面诊断或实施方案。",
     relatedTitle: "相关 Shopify 服务",
     relatedIntro: "转化优化通常需要结合站点结构和报价范围判断，先确认是局部优化还是需要重建关键页面。",
     relatedLinks: [
@@ -340,7 +340,7 @@ const copy = {
     ],
     ctaTitle: "Find the conversion bottleneck before changing the site.",
     ctaText: "Send your store URL, main traffic source, conversion issue, and current data. We will identify the highest-priority area to improve first.",
-    ctaBenefit: "Within 1–2 business days, you'll get an initial read on your conversion path plus optimization priorities.",
+    ctaBenefit: "Start with a free consultation, then confirm whether a written diagnosis or implementation scope is appropriate.",
     relatedTitle: "Related Shopify Services",
     relatedIntro: "Conversion optimization is often evaluated with site structure and budget scope to decide whether local optimization or page rebuilds make sense.",
     relatedLinks: [
