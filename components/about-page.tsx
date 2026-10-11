@@ -40,6 +40,7 @@ const copy = {
     profileTitle: "同一张工作台，贯通策略与交付。",
     profileText:
       "WhaleLeap Studio 把策略判断、页面结构、主题开发与数据验证放在同一条工作链路里。你看到的不只是最终页面，也包括真正参与项目的人与日常工作环境。",
+    operator: "WhaleLeap Studio 由深圳市知策先见智能科技有限公司运营，位于中国深圳。",
     profileCapabilities: ["STRATEGY / 策略判断", "DEVELOPMENT / 主题开发", "MEASUREMENT / 数据验证"],
     founderCaption: "创始人 / WHALELEAP STUDIO",
     founderRole: "DESIGN · DEVELOPMENT · MEASUREMENT",
@@ -217,6 +218,7 @@ const copy = {
     profileTitle: "One desk. A connected path from strategy to delivery.",
     profileText:
       "WhaleLeap Studio keeps strategic judgment, page structure, theme development, and measurement validation in one working loop. What you see here is not only the final interface, but also the person and workspace behind the work.",
+    operator: "WhaleLeap Studio is operated by 深圳市知策先见智能科技有限公司 in Shenzhen, China.",
     profileCapabilities: ["STRATEGY / DIRECTION", "DEVELOPMENT / THEMES", "MEASUREMENT / VALIDATION"],
     founderCaption: "FOUNDER / WHALELEAP STUDIO",
     founderRole: "DESIGN · DEVELOPMENT · MEASUREMENT",
@@ -499,6 +501,7 @@ export function AboutPage() {
                   <p className="font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">{text.profileLabel}</p>
                   <h2 className="mt-4 text-[clamp(1.75rem,3.2vw,2.85rem)] font-bold leading-[1.12] tracking-normal text-foreground">{text.profileTitle}</h2>
                   <p className="mt-5 text-base leading-[1.75] text-muted-foreground sm:text-lg">{text.profileText}</p>
+                  <p className="mt-5 border-l-2 border-primary/55 pl-4 text-base leading-[1.7] text-foreground/68">{text.operator}</p>
 
                   <ul className="mt-7 flex flex-wrap justify-center gap-x-5 gap-y-3 lg:justify-start" aria-label={text.profileLabel}>
                     {text.profileCapabilities.map((item) => (

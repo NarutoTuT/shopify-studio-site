@@ -33,6 +33,7 @@ const footerCopy = {
     privacyLink: "隐私政策",
     privacySettings: "隐私设置",
     gscReader: "WhaleLeap GSC Reader 是面向网站运营者的 Search Console 只读报告工具。",
+    operator: "运营主体：深圳市知策先见智能科技有限公司 · 中国深圳",
     copyright: "Shopify Growth Engineering Studio",
   },
   en: {
@@ -59,6 +60,7 @@ const footerCopy = {
     privacyLink: "Privacy Policy",
     privacySettings: "Privacy settings",
     gscReader: "WhaleLeap GSC Reader is a read-only Search Console reporting tool for website operators.",
+    operator: "Operating entity: 深圳市知策先见智能科技有限公司 · Shenzhen, China",
     copyright: "Shopify Growth Engineering Studio",
   },
 }
@@ -136,6 +138,7 @@ export function SiteFooter({ language }: SiteFooterProps) {
               <span aria-hidden="true"> · </span>
               <PrivacySettingsButton label={text.privacySettings} />
             </p>
+            <p className="mt-2 text-white/35">{text.operator}</p>
           </div>
           <p className="shrink-0">© {year} WhaleLeap Studio · {text.copyright}</p>
         </div>

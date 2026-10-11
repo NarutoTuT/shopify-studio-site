@@ -37,8 +37,14 @@ function createStructuredData(language: "zh" | "en") {
         "@type": "Organization",
         "@id": `${siteUrl}/#organization`,
         name: "WhaleLeap Studio",
+        legalName: "深圳市知策先见智能科技有限公司",
         url: siteUrl,
         logo: `${siteUrl}/icon.svg`,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "深圳市",
+          addressCountry: "CN",
+        },
         description:
           "WhaleLeap Studio is a Shopify Growth Engineering Studio for global ecommerce brands, combining Shopify Development Services, theme customization, conversion optimization, and GA4/GTM measurement.",
         contactPoint: {
