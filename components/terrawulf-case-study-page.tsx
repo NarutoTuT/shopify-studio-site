@@ -153,11 +153,11 @@ export function TerrawulfCaseStudyPage({ language = "zh" }: { language?: "zh" | 
         ]}
         page={{
           type: "Article",
-          name: "Terrawulf eBike Shopify Engineering Case Study",
+          name: text("Terrawulf eBike Shopify Engineering Case Study", "Terrawulf eBike Shopify Development Case Study"),
           description: text("WhaleLeap Studio 为 Terrawulf 构建高客单电动越野车 Shopify 店铺的设计、OS 2.0 架构、Liquid 开发、复杂 PDP 与响应式交付证据。", "Public design, Online Store 2.0, Liquid, product-page, and responsive delivery evidence for Terrawulf's electric dirt bike Shopify storefront."),
           url: pageUrl,
           inLanguage: en ? "en" : "zh-CN",
-          about: ["WhaleLeap Studio", "Terrawulf", "Shopify Engineering", "eBike ecommerce", "Liquid", "Online Store 2.0", "High-ticket product page"],
+          about: ["WhaleLeap Studio", "Terrawulf", text("Shopify Engineering", "Shopify Development Services"), "eBike ecommerce", "Liquid", "Online Store 2.0", "High-ticket product page"],
           datePublished: "2026-10-01",
           dateModified: "2026-10-01",
           reviewedBy: "Naruto",
@@ -178,7 +178,7 @@ export function TerrawulfCaseStudyPage({ language = "zh" }: { language?: "zh" | 
                   Terrawulf
                   <span className="mt-3 block bg-gradient-to-r from-orange-300 via-white to-primary bg-clip-text text-transparent">
                     <span className="block">Electric Dirt Bike</span>
-                    <span className="block">Shopify Engineering</span>
+                    <span className="block">{text("Shopify Engineering", "Shopify Development")}</span>
                   </span>
                 </h1>
                 <p className="mx-auto mt-7 max-w-[980px] text-base leading-[1.8] text-white/68 md:text-xl">{text("WhaleLeap 将 Terrawulf 的高客单电动越野车购买体验转化为模块化 Shopify 店铺，用于承载复杂产品信息、响应式购物和持续的商家内容管理。", "WhaleLeap translated Terrawulf's high-ticket electric dirt bike purchase journey into a modular Shopify storefront for complex product information, responsive shopping, and ongoing merchant content management.")}</p>
@@ -403,7 +403,7 @@ export function TerrawulfCaseStudyPage({ language = "zh" }: { language?: "zh" | 
                   <h2 className="mt-4 max-w-4xl text-[clamp(1.9rem,3vw,2.7rem)] font-bold leading-tight">{text("构建同类高客单 Shopify 体验，需要设计决策与工程架构共同工作。", "A comparable high-ticket Shopify experience needs design decisions and engineering architecture to work together.")}</h2>
                 </div>
                 <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:max-w-[25rem] lg:flex-col">
-                  <a href={`${en ? "/en" : ""}/services/shopify-website-build`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-black">Shopify Engineering <ArrowUpRight className="size-5" /></a>
+                  <a href={`${en ? "/en" : ""}/services/shopify-website-build`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-black">{text("Shopify Engineering", "Shopify Development Services")} <ArrowUpRight className="size-5" /></a>
                   <a href={`${en ? "/en" : ""}/services/shopify-theme-customization`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/18 px-7 text-base font-semibold">Theme / Liquid Development <ArrowUpRight className="size-5" /></a>
                   <a href={`${en ? "/en" : ""}/diagnosis`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-orange-300/25 bg-orange-300/[0.06] px-7 text-base font-semibold text-orange-100">Free Shopify Review <ArrowUpRight className="size-5" /></a>
                 </div>

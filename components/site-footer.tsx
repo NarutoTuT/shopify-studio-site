@@ -37,12 +37,12 @@ const footerCopy = {
   },
   en: {
     ariaLabel: "Website footer navigation",
-    description: "Shopify engineering, theme customization, conversion optimization, and measurement for global ecommerce brands.",
+    description: "Shopify Development Services, theme customization, conversion optimization, and measurement for global ecommerce brands.",
     servicesTitle: "Services",
     navigationTitle: "Navigate",
     contactTitle: "Start a conversation",
     serviceLinks: [
-      { label: "Shopify Engineering", href: "/services/shopify-website-build" },
+      { label: "Shopify Development Services", href: "/services/shopify-website-build" },
       { label: "Theme Customization", href: "/services/shopify-theme-customization" },
       { label: "Conversion Optimization", href: "/services/shopify-conversion-optimization" },
       { label: "GA4 / GTM Tracking", href: "/services/shopify-ga4-gtm" },

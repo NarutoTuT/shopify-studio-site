@@ -52,7 +52,7 @@ const copy = {
   en: {
     servicesLabel: "Services",
     serviceLinks: [
-      { label: "Shopify Engineering", href: "/services/shopify-website-build" },
+      { label: "Shopify Development Services", href: "/services/shopify-website-build" },
       { label: "Shopify Theme Customization", href: "/services/shopify-theme-customization" },
       { label: "Conversion Optimization", href: "/services/shopify-conversion-optimization" },
       { label: "Growth Analytics & Tracking", href: "/services/shopify-ga4-gtm" },

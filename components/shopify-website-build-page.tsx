@@ -100,11 +100,11 @@ const copy = {
     ctaBenefit: "提交后 1–2 个工作日内，你会收到建站与工程范围的初步判断 + 优化优先级建议。",
   },
   en: {
-    eyebrow: "SHOPIFY ENGINEERING",
-    title: "Shopify Engineering",
+    eyebrow: "SHOPIFY DEVELOPMENT SERVICES",
+    title: "Shopify Development Services",
     subtitle: "Build a faster, more stable, and maintainable Shopify foundation for global ecommerce brands.",
     description:
-      "This is more than a website build. WhaleLeap helps Chinese-founded brands selling globally create a Shopify foundation that can support traffic, optimization, and long-term growth.",
+      "WhaleLeap provides Shopify Development Services for Chinese-founded brands selling globally, creating storefront foundations that support traffic, optimization, and long-term growth.",
     primaryCta: "Get a Free Shopify Review",
     secondaryCta: "View Scope",
     proof: ["Shopify Theme Development", "Liquid Development", "Performance Optimization"],
@@ -118,7 +118,7 @@ const copy = {
       { title: "Mobile UX is weak", mobileTitle: "Mobile UX", text: "Key information, CTAs, product modules, and purchase paths are unclear on small screens.", impact: "Product value and purchase actions fall below the fold, adding friction to conversion.", areas: ["First View", "PDP", "Cart"], action: "Reorder mobile content, improve touch targets, and keep critical purchase actions visible.", icon: Smartphone },
       { title: "Maintenance gets difficult", mobileTitle: "Maintenance", text: "Without clear modules and delivery boundaries, every optimization becomes another patch.", impact: "Merchants cannot update content safely, so every campaign remains dependent on development.", areas: ["Theme Editor", "Schema", "Handoff"], action: "Add editable settings, module guidance, and handoff documentation for safe daily iteration.", icon: ShieldCheck },
     ],
-    solutionTitle: "Shopify Engineering Method",
+    solutionTitle: "Shopify Development Services Approach",
     solutionIntro: "We treat Shopify engineering as a growth foundation, not a one-time page build.",
     solutions: [
       { title: "Shopify Theme Development", mobileTitle: "Theme Development", build: "Build a clear and extensible theme architecture for every core page.", value: "Reduce temporary overrides and duplicated code so future campaigns remain stable.", deliverables: ["Theme architecture", "Reusable templates", "Editor-ready structure"], icon: Code2 },
@@ -157,8 +157,8 @@ const copy = {
     faqTitle: "FAQ",
     faqs: [
       {
-        q: "How is Shopify Engineering different from a standard Shopify build?",
-        a: "A standard build focuses on launching pages. Shopify Engineering also addresses theme structure, performance, mobile UX, maintainability, and room for future optimization.",
+        q: "How are Shopify Development Services different from a standard Shopify build?",
+        a: "A standard build focuses on launching pages. Shopify Development Services also address theme structure, performance, mobile UX, maintainability, and room for future optimization.",
       },
       {
         q: "Is this suitable for existing Shopify stores?",
@@ -166,7 +166,7 @@ const copy = {
       },
       {
         q: "Does it include theme customization and Liquid development?",
-        a: "Yes. Shopify Theme Development, Liquid templates, Custom Sections, PDP modules, and campaign page modules are part of Shopify Engineering.",
+        a: "Yes. Shopify Theme Development, Liquid templates, Custom Sections, PDP modules, and campaign page modules are part of our Shopify Development Services.",
       },
       {
         q: "Does it include performance optimization?",
@@ -204,11 +204,11 @@ const websiteBuildStructuredData = {
     breadcrumbs: [
       { name: "Home", url: "https://whaleleap.studio/en" },
       { name: "Services", url: "https://whaleleap.studio/en#services" },
-      { name: "Shopify Engineering", url: "https://whaleleap.studio/en/services/shopify-website-build" },
+      { name: "Shopify Development Services", url: "https://whaleleap.studio/en/services/shopify-website-build" },
     ],
     service: {
-      name: "Shopify Engineering",
-      description: "Shopify engineering for cross-border brands, including theme development, Liquid modules, custom sections, performance foundations, technical SEO, and launch QA.",
+      name: "Shopify Development Services",
+      description: "Shopify Development Services for cross-border brands, including theme development, Liquid modules, custom sections, performance foundations, technical SEO, and launch QA.",
       url: "https://whaleleap.studio/en/services/shopify-website-build",
     },
   },

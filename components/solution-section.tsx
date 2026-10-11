@@ -45,7 +45,7 @@ const copy = {
     pillars: [
       {
         label: "Engineering",
-        title: "Shopify Engineering",
+        title: "Shopify Development Services",
         text: "Build Shopify themes, Liquid modules, custom sections, performance foundations, and technical SEO for a faster, maintainable store.",
       },
       {

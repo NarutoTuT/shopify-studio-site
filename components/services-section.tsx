@@ -60,7 +60,7 @@ const copy = {
     services: [
       {
         label: "01",
-        title: "Shopify Engineering",
+        title: "Shopify Development Services",
         problem: "Your Shopify store needs a stable, fast, and maintainable technical foundation.",
         solution: "We build and improve theme structure, key page modules, performance foundations, and technical SEO so your team can keep iterating.",
         capability: "For new builds, theme redesigns, Liquid modules, custom sections, and performance improvements.",

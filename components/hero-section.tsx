@@ -23,7 +23,7 @@ const copy = {
     eyebrow: "For Chinese-founded brands selling globally",
     title: "Shopify Growth Engineering Studio",
     subtitle: "Helping global ecommerce brands build faster, more stable, and higher-converting Shopify stores.",
-    description: "From Shopify engineering and theme development to conversion optimization and tracking setup, WhaleLeap helps brands turn traffic into orders.",
+    description: "From Shopify Development Services and custom themes to conversion optimization and tracking setup, WhaleLeap helps brands turn traffic into orders.",
     primaryCta: "Free Shopify Store Review",
     secondaryCta: "Explore Our Services",
     ctaBenefit: "Within 1–2 business days, you'll get an initial read on your store's main growth blockers plus optimization priorities.",

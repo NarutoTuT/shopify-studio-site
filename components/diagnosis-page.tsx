@@ -143,7 +143,7 @@ const copy = {
   en: {
     eyebrow: "FREE SHOPIFY REVIEW",
     title: "Free Shopify Growth Review",
-    description: "Find the key issues affecting store conversion and get optimization direction across Shopify engineering, page experience, and tracking.",
+    description: "Find the key issues affecting store conversion and get optimization direction across Shopify Development Services, page experience, and tracking.",
     primaryCta: "Start My Free Review",
     secondaryCta: "Return Home",
     trust: ["For Chinese-founded brands selling globally", "Reply within 1–2 business days", "No full requirements document needed"],
@@ -180,7 +180,7 @@ const copy = {
     reviewDescription: "The Free Shopify Review identifies blockers across engineering, conversion, and tracking.",
     reviewAreas: [
       {
-        title: "Shopify Engineering",
+        title: "Shopify Development Services",
         text: "Review whether the technical foundation can support a stable experience and future growth.",
         items: ["Theme", "Performance", "Mobile Experience"],
         icon: Globe2,
