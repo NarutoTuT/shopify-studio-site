@@ -3,7 +3,7 @@ const siteUrl = "https://whaleleap.studio"
 const services = [
   {
     path: "/services/shopify-website-build",
-    name: "Shopify Website Build",
+    name: "Shopify Development Services",
     alternateName: "Shopify 独立站建设服务",
     description: "Shopify website design and development for global ecommerce brands.",
   },
@@ -40,7 +40,7 @@ function createStructuredData(language: "zh" | "en") {
         url: siteUrl,
         logo: `${siteUrl}/icon.svg`,
         description:
-          "WhaleLeap Studio is a Shopify Growth Engineering Studio for global ecommerce brands, combining Shopify website builds, theme customization, conversion optimization, and GA4/GTM measurement.",
+          "WhaleLeap Studio is a Shopify Growth Engineering Studio for global ecommerce brands, combining Shopify Development Services, theme customization, conversion optimization, and GA4/GTM measurement.",
         contactPoint: {
           "@type": "ContactPoint",
           contactType: "sales",
@@ -71,7 +71,7 @@ function createStructuredData(language: "zh" | "en") {
           name: "Global",
         },
         serviceType: [
-          "Shopify website build",
+          "Shopify Development Services",
           "Shopify theme customization",
           "Shopify conversion optimization",
           "Shopify GA4 and GTM tracking setup",

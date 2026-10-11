@@ -275,7 +275,7 @@ const copy = {
     relatedIntro: "Tracking should be evaluated together with site structure and CRO so pages, events, and budget scope support each other.",
     relatedLinks: [
       {
-        title: "Shopify Website Build Service",
+        title: "Shopify Development Services",
         text: "See how page structure, basic SEO, GA4/GTM, and launch QA are planned during the build stage.",
         href: "/services/shopify-website-build",
         cta: "View Build Service",

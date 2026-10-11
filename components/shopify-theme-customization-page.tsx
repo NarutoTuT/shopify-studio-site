@@ -335,7 +335,7 @@ const copy = {
     relatedIntro: "Theme customization is usually evaluated together with build scope and budget, starting with whether the current theme is worth iterating.",
     relatedLinks: [
       {
-        title: "Shopify Website Build Service",
+        title: "Shopify Development Services",
         text: "See the full scope for new builds, page structure, theme development, payments, logistics, and launch QA.",
         href: "/services/shopify-website-build",
         cta: "View Build Service",

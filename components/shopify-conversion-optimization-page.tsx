@@ -345,7 +345,7 @@ const copy = {
     relatedIntro: "Conversion optimization is often evaluated with site structure and budget scope to decide whether local optimization or page rebuilds make sense.",
     relatedLinks: [
       {
-        title: "Shopify Website Build Service",
+        title: "Shopify Development Services",
         text: "See the full build scope from site structure, product pages, collections, and launch QA.",
         href: "/services/shopify-website-build",
         cta: "View Build Service",

@@ -267,7 +267,7 @@ const copy = {
     ],
     whatItems: [
       {
-        title: "Shopify website builds",
+        title: "Shopify Development Services",
         text: "Build Shopify stores ready for paid traffic, from page structure and theme development to payments, logistics, and launch checks.",
         icon: ShoppingBag,
       },
@@ -395,7 +395,7 @@ export function AboutPage() {
       name: language === "en" ? "About WhaleLeap Studio" : "关于 WhaleLeap Studio",
       description: text.description,
       url: aboutUrl,
-      about: ["WhaleLeap Studio", "Shopify Growth Engineering", "Shopify development", "Conversion optimization", "GA4 and GTM measurement"],
+      about: ["WhaleLeap Studio", "Shopify Development Services", "Shopify development", "Conversion optimization", "GA4 and GTM measurement"],
     },
   }
 

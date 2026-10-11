@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     default: "WhaleLeap Studio | Shopify Growth Engineering",
     template: "%s | WhaleLeap Studio",
   },
-  description: "Shopify engineering, theme customization, conversion optimization, and analytics setup for global ecommerce brands.",
+  description: "Shopify Development Services, theme customization, conversion optimization, and analytics setup for global ecommerce brands.",
   applicationName: "WhaleLeap Studio",
   authors: [{ name: "WhaleLeap Studio" }],
   creator: "WhaleLeap Studio",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "WhaleLeap Studio | Shopify Growth Engineering",
-    description: "Shopify engineering, CRO, and analytics for global ecommerce brands.",
+    description: "Shopify Development Services, CRO, and analytics for global ecommerce brands.",
     images: ["/hero/whaleleap-growth-current-v1.webp"],
   },
   icons: {

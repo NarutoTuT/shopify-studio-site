@@ -51,7 +51,7 @@ const copy = {
       },
       {
         title: "Implementation",
-        text: "Execute Shopify engineering, conversion page improvements, tracking setup, and key module development.",
+        text: "Execute Shopify Development Services, conversion page improvements, tracking setup, and key module development.",
       },
       {
         title: "Measure",
