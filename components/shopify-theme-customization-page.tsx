@@ -189,6 +189,12 @@ const copy = {
         href: "/case-studies/terrawulf",
         cta: "查看工程证据",
       },
+      {
+        title: "LUOKAVRION 技术案例",
+        text: "查看 Liquid sections、JSON templates、Theme Editor 配置与 Three.js 前端交互的核验证据。",
+        href: "/case-studies/luokavrion",
+        cta: "查看技术案例",
+      },
     ],
   },
   en: {
@@ -352,6 +358,12 @@ const copy = {
         href: "/case-studies/terrawulf",
         cta: "View Engineering Evidence",
       },
+      {
+        title: "LUOKAVRION Technical Case Study",
+        text: "See verified Liquid sections, JSON templates, Theme Editor configuration, and Three.js frontend interaction evidence.",
+        href: "/case-studies/luokavrion",
+        cta: "View Technical Case",
+      },
     ],
   },
 }
@@ -483,6 +495,7 @@ const relatedRouteMeta = [
   { code: "BUILD", icon: Paintbrush, zh: ["从 0 建站", "主题开发", "上线检查"], en: ["New build", "Theme development", "Launch QA"] },
   { code: "BUDGET", icon: Gauge, zh: ["费用区间", "项目范围", "预算判断"], en: ["Price tiers", "Project scope", "Budget decision"] },
   { code: "CASE", icon: FileCode2, zh: ["eBike", "Liquid", "高客单 PDP"], en: ["eBike", "Liquid", "High-ticket PDP"] },
+  { code: "CASE", icon: Blocks, zh: ["Liquid", "Theme Editor", "Three.js"], en: ["Liquid", "Theme Editor", "Three.js"] },
 ]
 
 function ArtifactPreview({ index }: { index: number }) {
