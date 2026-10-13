@@ -21,6 +21,13 @@ const copy = {
     learnMenuEyebrow: "SHOPIFY GROWTH LIBRARY",
     learnMenuHeading: "6 篇深度指南",
     learnMenuText: "建站、数据与 CRO，从判断到落地",
+    casesLabel: "案例",
+    casesAllLabel: "查看全部案例",
+    caseLinks: [
+      { label: "Terrawulf", href: "/case-studies/terrawulf", description: "电动越野车 · OS 2.0 / Liquid / 高客单 PDP" },
+      { label: "LUOKAVRION", href: "/case-studies/luokavrion", description: "主题定制 · Liquid Sections / Three.js" },
+      { label: "SilkGear", href: "/case-studies/silkgear", description: "科技零售 · 设计到 Shopify 实现" },
+    ],
     learnGroups: [
       {
         label: "建站与开发",
@@ -40,7 +47,6 @@ const copy = {
       },
     ],
     navLinks: [
-      { label: "案例", href: "/#work" },
       { label: "价格", href: "/pricing" },
       { label: "关于", href: "/about" },
     ],
@@ -62,6 +68,13 @@ const copy = {
     learnMenuEyebrow: "SHOPIFY GROWTH LIBRARY",
     learnMenuHeading: "6 in-depth guides",
     learnMenuText: "Build, data, and CRO — from decision to launch",
+    casesLabel: "Case Studies",
+    casesAllLabel: "View all case studies",
+    caseLinks: [
+      { label: "Terrawulf", href: "/case-studies/terrawulf", description: "Electric dirt bikes · OS 2.0 / Liquid / high-ticket PDP" },
+      { label: "LUOKAVRION", href: "/case-studies/luokavrion", description: "Theme customization · Liquid sections / Three.js" },
+      { label: "SilkGear", href: "/case-studies/silkgear", description: "Technology retail · design-to-Shopify implementation" },
+    ],
     learnGroups: [
       {
         label: "Build & Development",
@@ -81,7 +94,6 @@ const copy = {
       },
     ],
     navLinks: [
-      { label: "Case Studies", href: "/#work" },
       { label: "Pricing", href: "/pricing" },
       { label: "About", href: "/about" },
     ],
@@ -95,6 +107,7 @@ const copy = {
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const [casesOpen, setCasesOpen] = useState(false)
   const [learnOpen, setLearnOpen] = useState(false)
   const pathname = usePathname()
   const { language, toggleLanguage, localizedPath } = useLanguage()
@@ -139,6 +152,36 @@ export function Navbar() {
                     {link.label}
                   </a>
                 ))}
+              </div>
+            </div>
+          </div>
+          <div className="group relative">
+            <a
+              href={localizedPath("/#work")}
+              className="inline-flex min-h-11 items-center gap-1 rounded-full px-1 text-base tracking-[-0.01em] text-muted-foreground transition-colors duration-200 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+            >
+              {text.casesLabel}
+              <ChevronDown className="size-4 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" />
+            </a>
+            <div className="invisible absolute left-1/2 top-full z-50 w-[380px] origin-top -translate-x-1/2 -translate-y-2 scale-[0.98] pt-4 opacity-0 transition-all duration-200 ease-out group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:scale-100 group-focus-within:opacity-100">
+              <div className="rounded-2xl border border-white/10 bg-background/95 p-2 shadow-2xl shadow-black/30 backdrop-blur-xl">
+                {text.caseLinks.map((link, index) => (
+                  <a
+                    key={link.href}
+                    href={localizedPath(link.href)}
+                    style={{ transitionDelay: `${60 + index * 35}ms` }}
+                    className="group/case -translate-y-1 flex min-h-11 items-start justify-between gap-3 rounded-xl px-4 py-3 text-base opacity-0 transition-all duration-200 ease-out hover:bg-white/[0.05] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100"
+                  >
+                    <span className="min-w-0">
+                      <span className="block font-semibold text-foreground">{link.label}</span>
+                      <span className="mt-1 block leading-[1.5] text-muted-foreground">{link.description}</span>
+                    </span>
+                    <ArrowUpRight className="mt-1 size-4 shrink-0 text-white/25 transition-transform duration-200 group-hover/case:translate-x-0.5 group-hover/case:-translate-y-0.5 group-hover/case:text-primary" />
+                  </a>
+                ))}
+                <a href={localizedPath("/#work")} className="mt-1 flex min-h-11 items-center justify-between rounded-xl border border-primary/20 bg-primary/[0.06] px-4 py-3 text-base font-semibold text-primary transition-colors hover:bg-primary/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
+                  {text.casesAllLabel}<span aria-hidden="true">→</span>
+                </a>
               </div>
             </div>
           </div>
@@ -250,6 +293,29 @@ export function Navbar() {
               </a>
             ))}
             <div className="my-2 h-px bg-white/10" />
+            <button
+              type="button"
+              aria-expanded={casesOpen}
+              onClick={() => setCasesOpen((value) => !value)}
+              className="flex min-h-11 items-center justify-between rounded-xl px-2 py-3 text-left text-base text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+            >
+              {text.casesLabel}
+              <ChevronDown className={`size-4 transition-transform duration-200 ${casesOpen ? "rotate-180" : ""}`} />
+            </button>
+            {casesOpen && (
+              <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-3 animate-in fade-in slide-in-from-top-1 duration-200 ease-out">
+                {text.caseLinks.map((link) => (
+                  <a key={link.href} href={localizedPath(link.href)} onClick={() => { setOpen(false); setCasesOpen(false) }} className="flex min-h-11 items-start justify-between gap-3 rounded-xl px-3 py-3 text-base hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
+                    <span className="min-w-0">
+                      <span className="block font-semibold text-foreground">{link.label}</span>
+                      <span className="mt-1 block leading-[1.5] text-muted-foreground">{link.description}</span>
+                    </span>
+                    <ArrowUpRight className="mt-1 size-4 shrink-0 text-primary" />
+                  </a>
+                ))}
+                <a href={localizedPath("/#work")} onClick={() => { setOpen(false); setCasesOpen(false) }} className="mt-2 flex min-h-11 items-center justify-between rounded-xl border border-primary/20 bg-primary/[0.06] px-4 py-3 text-base font-semibold text-primary">{text.casesAllLabel}<span aria-hidden="true">→</span></a>
+              </div>
+            )}
             {text.navLinks.map((link) => (
               <a
                 key={link.href}

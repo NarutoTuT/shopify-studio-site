@@ -18,6 +18,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const images = [
   "/case-studies/terrawulf/home-live.webp",
+  "/case-studies/luokavrion/homepage-showcase.png",
   "/case-studies/silkgear-case-generated-v2.webp",
   "/case-studies/sculpfun-case-generated-v2.webp",
   "/case-studies/food-gift-real-v2.webp",
@@ -25,6 +26,12 @@ const images = [
   "/case-studies/beauty-skincare-real-v2.webp",
   "/case-studies/home-lifestyle-real-v2.webp",
   "/case-studies/sports-retail-real-v2.webp",
+]
+
+const caseStudyPaths = [
+  "/case-studies/terrawulf",
+  "/case-studies/luokavrion",
+  "/case-studies/silkgear",
 ]
 
 const copy = {
@@ -45,6 +52,20 @@ const copy = {
           approach: "按购买问题组织产品与保障信息。",
           implementation: "OS 2.0、Liquid、PDP、响应式 QA。",
           outcome: "模块化店铺已部署并公开运行。",
+        },
+      },
+      {
+        title: "LUOKAVRION｜主题定制与交互工程",
+        url: "https://www.luokavrion.com/",
+        challenge: "把品牌化 Figma 页面落实为可维护的 Shopify 主题，同时保留高辨识度的首次访问体验与响应式交互。",
+        approach: "将首页与产品详情页结构拆分为可复用的 Liquid Sections、JSON Templates 和商家可配置内容。",
+        implementation: "Liquid、Section Schema、Custom JavaScript、Three.js 首次访问动效、响应式实现与已发布主题核验。",
+        outcome: "关键工程文件已在 Published Theme 中核验，设计结构已转化为正式运行的 Shopify 店铺体验。",
+        mobile: {
+          challenge: "把品牌设计转化为可维护的 Shopify 主题。",
+          approach: "拆分为 Sections、Templates 与可配置内容。",
+          implementation: "Liquid、Schema、Three.js 与响应式实现。",
+          outcome: "关键文件已核验并在线运行。",
         },
       },
       {
@@ -164,6 +185,20 @@ const copy = {
           approach: "Organize content around real purchase questions.",
           implementation: "OS 2.0, Liquid, PDP, and responsive QA.",
           outcome: "A modular storefront deployed and live.",
+        },
+      },
+      {
+        title: "LUOKAVRION · Theme Customization & Interactive Engineering",
+        url: "https://www.luokavrion.com/",
+        challenge: "Translate branded Figma pages into a maintainable Shopify theme while preserving a distinctive entry experience and responsive interactions.",
+        approach: "Break the homepage and product-detail structures into reusable Liquid sections, JSON templates, and merchant-configurable content.",
+        implementation: "Liquid, section schema, custom JavaScript, a Three.js first-visit experience, responsive implementation, and published-theme verification.",
+        outcome: "Key engineering files were verified in the published theme, with the design structure implemented in the live Shopify storefront.",
+        mobile: {
+          challenge: "Turn branded design into a maintainable Shopify theme.",
+          approach: "Use sections, templates, and configurable content.",
+          implementation: "Liquid, schema, Three.js, and responsive frontend work.",
+          outcome: "Key files verified and running on the live store.",
         },
       },
       {
@@ -412,9 +447,9 @@ export function ShowcaseSection() {
                               </h3>
                             </div>
                             <div className="flex flex-wrap items-center gap-2">
-                            {(index === 0 || index === 1) && (
+                            {caseStudyPaths[index] && (
                               <a
-                                href={`${language === "en" ? "/en" : ""}${index === 0 ? "/case-studies/terrawulf" : "/case-studies/silkgear"}`}
+                                href={`${language === "en" ? "/en" : ""}${caseStudyPaths[index]}`}
                                 className="inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full border border-cyan-300/30 bg-cyan-300/[0.08] px-3 text-sm font-semibold tracking-[0.02em] text-cyan-200 transition-colors hover:border-cyan-200/60 hover:bg-cyan-300/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                               >
                                 <span>CASE STUDY</span>
