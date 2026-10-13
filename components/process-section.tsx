@@ -23,7 +23,7 @@ const copy = {
       },
       {
         title: "项目实施",
-        text: "执行 Shopify Engineering、转化页面优化、Tracking 配置和关键模块开发。",
+        text: "执行 Shopify 定制开发、转化页面优化、Tracking 配置和关键模块开发。",
       },
       {
         title: "数据验证",

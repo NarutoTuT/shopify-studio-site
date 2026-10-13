@@ -76,7 +76,7 @@ const copy = {
     reviewDescription: "初步沟通会围绕三个方向了解现状；是否需要进一步检查或书面报告，会根据项目情况确认。",
     reviewAreas: [
       {
-        title: "Shopify Engineering",
+        title: "Shopify 定制开发",
         text: "检查店铺技术基础是否支持更稳定的体验和后续增长。",
         items: ["Theme", "Performance", "Mobile Experience"],
         icon: Globe2,

@@ -28,7 +28,7 @@ const copy = {
     services: [
       {
         label: "01",
-        title: "Shopify Engineering",
+        title: "Shopify 定制开发",
         problem: "你的 Shopify 店铺需要一个稳定、快速、可维护的技术底座。",
         solution: "我们建设和优化主题结构、核心页面模块、性能基础和技术 SEO，让运营团队后续能持续迭代。",
         capability: "适合新建站、主题改版、Liquid 模块、Custom Sections 和性能优化。",

@@ -32,7 +32,7 @@ const copy = {
       { title: "移动端体验不足", mobileTitle: "移动端体验", text: "核心信息、CTA、商品模块和购买路径在手机端不够清晰。", impact: "关键卖点与购买动作被挤出首屏，触控阻力直接影响转化效率。", areas: ["First View", "PDP", "Cart"], action: "重排移动端内容顺序，优化触控区域，并强化关键购买动作的可见性。", icon: Smartphone },
       { title: "后续维护困难", mobileTitle: "维护困难", text: "缺少清晰模块和交付边界，每次优化都变成重新修补。", impact: "运营无法独立更新内容，每次活动和页面调整都重新依赖开发。", areas: ["Theme Editor", "Schema", "Handoff"], action: "补齐可编辑配置、模块说明与交付文档，让日常运营可以安全迭代。", icon: ShieldCheck },
     ],
-    solutionTitle: "Shopify Engineering 方法",
+    solutionTitle: "Shopify 定制开发方法",
     solutionIntro: "我们把 Shopify 技术建设当作增长基础，而不是一次性的页面开发。",
     solutions: [
       { title: "Shopify Theme Development", mobileTitle: "Theme Development", build: "搭建清晰、可扩展的主题结构与页面基础。", value: "减少临时覆盖和重复代码，让后续活动与页面迭代更稳定。", deliverables: ["Theme architecture", "Reusable templates", "Editor-ready structure"], icon: Code2 },
@@ -71,8 +71,8 @@ const copy = {
     faqTitle: "FAQ",
     faqs: [
       {
-        q: "Shopify Engineering 和普通 Shopify 建站有什么区别？",
-        a: "普通建站更关注页面是否上线。Shopify Engineering 更关注主题结构、性能、移动端体验、可维护性和后续优化空间，目标是建立能承接流量和持续迭代的技术基础。",
+        q: "Shopify 定制开发和普通 Shopify 建站有什么区别？",
+        a: "普通建站更关注页面是否上线。Shopify 定制开发更关注主题结构、性能、移动端体验、可维护性和后续优化空间，目标是建立能承接流量和持续迭代的技术基础。",
       },
       {
         q: "是否适合已有 Shopify 店铺改版？",
@@ -80,7 +80,7 @@ const copy = {
       },
       {
         q: "是否包含 Shopify 主题定制和 Liquid 开发？",
-        a: "包含。Shopify Theme Development、Liquid 模板开发、Custom Sections、PDP 模块和活动页模块都属于 Shopify Engineering 的工作范围。",
+        a: "包含。Shopify Theme Development、Liquid 模板开发、Custom Sections、PDP 模块和活动页模块都属于 Shopify 定制开发的工作范围。",
       },
       {
         q: "是否包含性能优化？",
