@@ -2,12 +2,17 @@
 
 import { useEffect, useState } from "react"
 
+import {
+  ANALYTICS_CONSENT_CHANGED_EVENT,
+  readAnalyticsConsent,
+  storeAnalyticsConsent,
+  type AnalyticsConsentChoice,
+} from "@/lib/analytics-consent"
+
 export const ANALYTICS_CONSENT_EVENT = "whaleleap:open-consent-settings"
 
-const CONSENT_STORAGE_KEY = "whaleleap_analytics_consent_v1"
 const GA_SCRIPT_ID = "whaleleap-google-analytics"
 
-type ConsentChoice = "granted" | "denied" | null
 type Language = "zh" | "en"
 
 type GoogleWindow = Window & {
@@ -33,25 +38,6 @@ const copy = {
     privacy: "View privacy policy",
   },
 } satisfies Record<Language, Record<string, string>>
-
-function readStoredConsent(): ConsentChoice {
-  try {
-    const stored = window.localStorage.getItem(CONSENT_STORAGE_KEY)
-    if (!stored) return null
-    const parsed = JSON.parse(stored) as { choice?: unknown }
-    return parsed.choice === "granted" || parsed.choice === "denied" ? parsed.choice : null
-  } catch {
-    return null
-  }
-}
-
-function storeConsent(choice: Exclude<ConsentChoice, null>) {
-  try {
-    window.localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify({ choice, updatedAt: new Date().toISOString() }))
-  } catch {
-    // Consent still applies for the current page when storage is unavailable.
-  }
-}
 
 function clearGoogleAnalyticsCookies() {
   const cookieNames = document.cookie
@@ -105,11 +91,11 @@ function disableGoogleAnalytics(measurementId: string) {
 
 export function GoogleAnalytics({ language }: { language: Language }) {
   const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-  const [choice, setChoice] = useState<ConsentChoice>(null)
+  const [choice, setChoice] = useState<AnalyticsConsentChoice>(null)
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
-    const storedChoice = readStoredConsent()
+    const storedChoice = readAnalyticsConsent()
     setChoice(storedChoice)
     setIsOpen(storedChoice === null)
 
@@ -128,11 +114,12 @@ export function GoogleAnalytics({ language }: { language: Language }) {
   const text = copy[language]
   const privacyPath = language === "zh" ? "/privacy" : "/en/privacy"
 
-  const choose = (nextChoice: Exclude<ConsentChoice, null>) => {
+  const choose = (nextChoice: Exclude<AnalyticsConsentChoice, null>) => {
     if (nextChoice === "denied") disableGoogleAnalytics(measurementId)
-    storeConsent(nextChoice)
+    storeAnalyticsConsent(nextChoice)
     setChoice(nextChoice)
     setIsOpen(false)
+    window.dispatchEvent(new CustomEvent(ANALYTICS_CONSENT_CHANGED_EVENT, { detail: { choice: nextChoice } }))
   }
 
   return (

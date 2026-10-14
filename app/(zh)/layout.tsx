@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { StructuredData } from '@/components/structured-data'
 import { GoogleAnalytics } from '@/components/google-analytics'
+import { AttributionTracker } from '@/components/attribution-tracker'
 import { SiteFooter } from '@/components/site-footer'
 import '../globals.css'
 
@@ -91,6 +92,7 @@ export default function RootLayout({
         <StructuredData language="zh" />
         {children}
         <SiteFooter language="zh" />
+        <AttributionTracker />
         <GoogleAnalytics language="zh" />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

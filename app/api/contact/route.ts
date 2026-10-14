@@ -1,5 +1,3 @@
-import { NextResponse } from "next/server"
-
 type ContactPayload = {
   storeUrl?: unknown
   category?: unknown
@@ -19,13 +17,24 @@ type ContactPayload = {
   utmSource?: unknown
   utmMedium?: unknown
   utmCampaign?: unknown
+  firstTouchLandingPath?: unknown
+  firstTouchReferrerHost?: unknown
+  firstTouchUtmSource?: unknown
+  firstTouchUtmMedium?: unknown
+  firstTouchUtmCampaign?: unknown
+  sessionLandingPath?: unknown
+  sessionReferrerHost?: unknown
+  sessionUtmSource?: unknown
+  sessionUtmMedium?: unknown
+  sessionUtmCampaign?: unknown
+  ctaSource?: unknown
 }
 
 const labels = {
   zh: {
     subject: "Shopify 免费诊断咨询",
     intro: "收到一份新的 Shopify 免费诊断信息：",
-    fields: ["店铺链接", "产品品类", "目标市场", "当前阶段", "SKU 数量", "预算区间", "上线时间", "主要问题", "邮箱", "微信", "提交页面", "来源页面", "UTM Source", "UTM Medium", "UTM Campaign"],
+    fields: ["店铺链接", "产品品类", "目标市场", "当前阶段", "SKU 数量", "预算区间", "上线时间", "主要问题", "邮箱", "微信", "提交页面", "来源页面", "UTM Source", "UTM Medium", "UTM Campaign", "首次访问页面", "首次来源域名", "首次 UTM Source", "首次 UTM Medium", "首次 UTM Campaign", "本次访问页面", "本次来源域名", "本次 UTM Source", "本次 UTM Medium", "本次 UTM Campaign", "CTA 来源"],
     invalid: "请至少填写邮箱或微信，并检查邮箱格式。",
     failed: "提交失败，请稍后重试。",
     rateLimited: "提交过于频繁，请稍后再试。",
@@ -36,7 +45,7 @@ const labels = {
   en: {
     subject: "Free Shopify diagnosis inquiry",
     intro: "A new Shopify diagnosis brief was submitted:",
-    fields: ["Store URL", "Product category", "Target market", "Current stage", "SKU count", "Budget", "Timeline", "Main problem", "Email", "WeChat", "Page URL", "Referrer", "UTM Source", "UTM Medium", "UTM Campaign"],
+    fields: ["Store URL", "Product category", "Target market", "Current stage", "SKU count", "Budget", "Timeline", "Main problem", "Email", "WeChat", "Page URL", "Referrer", "UTM Source", "UTM Medium", "UTM Campaign", "First-touch landing page", "First-touch referrer host", "First-touch UTM Source", "First-touch UTM Medium", "First-touch UTM Campaign", "Session landing page", "Session referrer host", "Session UTM Source", "Session UTM Medium", "Session UTM Campaign", "CTA source"],
     invalid: "Please enter an email or WeChat and check the email format.",
     failed: "Submission failed. Please try again later.",
     rateLimited: "Too many submissions. Please try again later.",
@@ -46,7 +55,7 @@ const labels = {
   },
 } as const
 
-const fieldKeys = ["storeUrl", "category", "market", "stage", "skuCount", "budget", "timeline", "problem", "email", "wechat", "pageUrl", "referrer", "utmSource", "utmMedium", "utmCampaign"] as const
+const fieldKeys = ["storeUrl", "category", "market", "stage", "skuCount", "budget", "timeline", "problem", "email", "wechat", "pageUrl", "referrer", "utmSource", "utmMedium", "utmCampaign", "firstTouchLandingPath", "firstTouchReferrerHost", "firstTouchUtmSource", "firstTouchUtmMedium", "firstTouchUtmCampaign", "sessionLandingPath", "sessionReferrerHost", "sessionUtmSource", "sessionUtmMedium", "sessionUtmCampaign", "ctaSource"] as const
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const rateLimitWindowMs = 10 * 60 * 1000
 const rateLimitMax = 5
@@ -89,7 +98,7 @@ export async function POST(request: Request) {
   try {
     payload = (await request.json()) as ContactPayload
   } catch {
-    return NextResponse.json({ message: labels.zh.invalid }, { status: 400 })
+    return Response.json({ message: labels.zh.invalid }, { status: 400 })
   }
 
   const language = payload.language === "en" ? "en" : "zh"
@@ -101,18 +110,18 @@ export async function POST(request: Request) {
   const startedAt = typeof payload.startedAt === "number" ? payload.startedAt : 0
 
   if (honeypot || !startedAt || Date.now() - startedAt < 1500) {
-    return NextResponse.json({ ok: true })
+    return Response.json({ ok: true, accepted: false })
   }
 
   if ((!email && !wechat) || (email && !emailPattern.test(email))) {
-    return NextResponse.json({ message: text.invalid }, { status: 400 })
+    return Response.json({ message: text.invalid }, { status: 400 })
   }
 
   const forwardedFor = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
   const ip = forwardedFor || request.headers.get("x-real-ip") || "unknown"
 
   if (isRateLimited(ip)) {
-    return NextResponse.json({ message: text.rateLimited }, { status: 429 })
+    return Response.json({ message: text.rateLimited }, { status: 429 })
   }
 
   const apiKey = process.env.RESEND_API_KEY
@@ -121,7 +130,7 @@ export async function POST(request: Request) {
 
   if (!apiKey || !from) {
     console.error("Contact form email is not configured: RESEND_API_KEY and RESEND_FROM_EMAIL are required.")
-    return NextResponse.json({ message: text.failed }, { status: 503 })
+    return Response.json({ message: text.failed }, { status: 503 })
   }
 
   const rows = fieldKeys.map((_, index) => `${text.fields[index]}: ${values[index] || "-"}`)
@@ -131,6 +140,8 @@ export async function POST(request: Request) {
 
   try {
     const submissionId = crypto.randomUUID()
+    const rowsWithId = [`Submission ID: ${submissionId}`, ...rows]
+    const htmlRowsWithId = `<tr><td style="padding:8px 16px 8px 0;color:#6b7280;vertical-align:top">Submission ID</td><td style="padding:8px 0;white-space:pre-wrap">${escapeHtml(submissionId)}</td></tr>${htmlRows}`
     const response = await sendEmail(
       apiKey,
       {
@@ -138,8 +149,8 @@ export async function POST(request: Request) {
           to: [to],
           reply_to: email || undefined,
           subject: text.subject,
-          text: [text.intro, "", ...rows].join("\n"),
-          html: `<div style="font-family:Arial,sans-serif;color:#111827"><p>${escapeHtml(text.intro)}</p><table style="border-collapse:collapse">${htmlRows}</table></div>`,
+          text: [text.intro, "", ...rowsWithId].join("\n"),
+          html: `<div style="font-family:Arial,sans-serif;color:#111827"><p>${escapeHtml(text.intro)}</p><table style="border-collapse:collapse">${htmlRowsWithId}</table></div>`,
       },
       `diagnosis-${submissionId}`,
     )
@@ -147,7 +158,7 @@ export async function POST(request: Request) {
     if (!response.ok) {
       const providerError = await response.text()
       console.error("Resend rejected contact form email:", response.status, providerError)
-      return NextResponse.json({ message: text.failed }, { status: 502 })
+      return Response.json({ message: text.failed }, { status: 502 })
     }
 
     if (email) {
@@ -169,9 +180,9 @@ export async function POST(request: Request) {
       }
     }
 
-    return NextResponse.json({ ok: true })
+    return Response.json({ ok: true, accepted: true, submissionId })
   } catch (error) {
     console.error("Contact form email failed:", error)
-    return NextResponse.json({ message: text.failed }, { status: 502 })
+    return Response.json({ message: text.failed }, { status: 502 })
   }
 }

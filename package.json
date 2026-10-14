@@ -12,6 +12,9 @@
     "gsc:90d": "node scripts/gsc/report.mjs 90",
     "gsc:watch": "node scripts/gsc/report.mjs 28",
     "gsc:test": "node --test scripts/gsc/*.test.mjs",
+    "ga4:auth": "node scripts/ga4/auth.mjs",
+    "ga4:90d": "node scripts/ga4/report.mjs 90",
+    "analytics:test": "node --test scripts/analytics/*.test.mjs",
     "geo:benchmark": "node scripts/geo/benchmark.mjs",
     "geo:test": "node --test scripts/geo/*.test.mjs"
   },

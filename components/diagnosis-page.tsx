@@ -1,11 +1,12 @@
 "use client"
 
-import { FormEvent, useState } from "react"
+import { FormEvent, useRef, useState } from "react"
 import { AlertCircle, ArrowUpRight, BarChart3, CheckCircle2, ChevronDown, Clock3, Gauge, Globe2, LoaderCircle, Send, ShieldCheck, Target } from "lucide-react"
 
 import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
 import { useLanguage } from "@/components/language-provider"
+import { readLeadAttribution } from "@/lib/lead-attribution"
 
 type FormState = {
   storeUrl: string
@@ -347,6 +348,7 @@ export function DiagnosisPage() {
   const [submitMessage, setSubmitMessage] = useState("")
   const [startedAt, setStartedAt] = useState(() => Date.now())
   const [activeGrowthSignal, setActiveGrowthSignal] = useState(0)
+  const submissionInFlight = useRef(false)
   const email = "liaoshenyuan1999053@gmail.com"
   const activeGrowthItem = text.whyItems[activeGrowthSignal]
   const activeGrowthMeta = growthSignalMeta[activeGrowthSignal]
@@ -362,6 +364,8 @@ export function DiagnosisPage() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
+    if (submissionInFlight.current) return
+
     if (!form.email.trim() && !form.wechat.trim()) {
       setSubmitState("error")
       setSubmitMessage(text.contactRequired)
@@ -374,10 +378,12 @@ export function DiagnosisPage() {
       return
     }
 
+    submissionInFlight.current = true
     setSubmitState("submitting")
     setSubmitMessage("")
 
     try {
+      const attribution = readLeadAttribution()
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -390,9 +396,20 @@ export function DiagnosisPage() {
           utmSource: new URLSearchParams(window.location.search).get("utm_source") || "",
           utmMedium: new URLSearchParams(window.location.search).get("utm_medium") || "",
           utmCampaign: new URLSearchParams(window.location.search).get("utm_campaign") || "",
+          firstTouchLandingPath: attribution.firstTouch?.landingPath || "",
+          firstTouchReferrerHost: attribution.firstTouch?.referrerHost || "",
+          firstTouchUtmSource: attribution.firstTouch?.utmSource || "",
+          firstTouchUtmMedium: attribution.firstTouch?.utmMedium || "",
+          firstTouchUtmCampaign: attribution.firstTouch?.utmCampaign || "",
+          sessionLandingPath: attribution.sessionTouch?.landingPath || "",
+          sessionReferrerHost: attribution.sessionTouch?.referrerHost || "",
+          sessionUtmSource: attribution.sessionTouch?.utmSource || "",
+          sessionUtmMedium: attribution.sessionTouch?.utmMedium || "",
+          sessionUtmCampaign: attribution.sessionTouch?.utmCampaign || "",
+          ctaSource: attribution.ctaSource,
         }),
       })
-      const result = (await response.json().catch(() => null)) as { message?: string } | null
+      const result = (await response.json().catch(() => null)) as { accepted?: boolean; submissionId?: string; message?: string } | null
 
       if (!response.ok) {
         throw new Error(result?.message || text.submitError)
@@ -402,12 +419,28 @@ export function DiagnosisPage() {
       setStartedAt(Date.now())
       setSubmitState("success")
       setSubmitMessage(text.submitSuccess)
-      ;(window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.("event", "generate_lead", {
-        lead_source: "diagnosis_form",
-      })
+      if (result?.accepted === true && result.submissionId) {
+        try {
+          ;(window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.("event", "generate_lead", {
+            submission_id: result.submissionId,
+            lead_source: "diagnosis_form",
+            cta_source: attribution.ctaSource || "direct_form",
+            first_touch_source: attribution.firstTouch?.utmSource || "",
+            first_touch_medium: attribution.firstTouch?.utmMedium || "",
+            first_touch_campaign: attribution.firstTouch?.utmCampaign || "",
+            session_source: attribution.sessionTouch?.utmSource || "",
+            session_medium: attribution.sessionTouch?.utmMedium || "",
+            session_campaign: attribution.sessionTouch?.utmCampaign || "",
+          })
+        } catch {
+          // Analytics failures must not change an accepted form submission.
+        }
+      }
     } catch (error) {
       setSubmitState("error")
       setSubmitMessage(error instanceof Error && error.message ? error.message : text.submitError)
+    } finally {
+      submissionInFlight.current = false
     }
   }
 
