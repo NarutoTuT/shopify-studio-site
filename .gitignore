@@ -25,3 +25,13 @@ reports/gsc/*.csv
 # Internal GEO research and private case-study dossiers
 reports/geo/**
 reports/case-studies/**
+
+# Internal SEO/GEO audits, growth research, and acquisition working files
+reports/competitive-seo-geo-*/**
+reports/growth-v8-*/**
+reports/acquisition/**
+
+# One-off GEO V5 research generators retained in the private archive
+scripts/geo/init-v5.mjs
+scripts/geo/finalize-v5.mjs
+scripts/geo/finalize-v5-round-2.mjs
