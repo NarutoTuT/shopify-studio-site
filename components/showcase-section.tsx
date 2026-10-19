@@ -34,6 +34,19 @@ const caseStudyPaths = [
   "/case-studies/silkgear",
 ]
 
+const caseCapabilities = {
+  zh: [
+    "电动越野车 Shopify 开发 · 定制 Liquid 商品页",
+    "Figma 到 Shopify · 自定义 Sections · 交互式主题",
+    "Shopify 设计与开发 · 科技零售",
+  ],
+  en: [
+    "Electric Dirt Bike Shopify Development · Custom Liquid PDP",
+    "Figma to Shopify · Custom Sections · Interactive Theme",
+    "Shopify Design & Development · Technology Retail",
+  ],
+} as const
+
 const copy = {
   zh: {
     eyebrow: "CASE STUDIES",
@@ -474,6 +487,11 @@ export function ShowcaseSection() {
                             )}
                             </div>
                           </div>
+                          {caseCapabilities[language][index] && (
+                            <p className="mt-3 text-sm font-semibold leading-relaxed text-cyan-200/85 md:text-base">
+                              {caseCapabilities[language][index]}
+                            </p>
+                          )}
                           <div className="mt-3 grid grid-cols-2 gap-2 md:mt-2 md:gap-0">
                             {[
                               ["Challenge", item.challenge, item.mobile.challenge],

@@ -9,11 +9,11 @@ import { useLanguage } from "@/components/language-provider"
 const copy = {
   zh: {
     proofPoints: ["Shopify Theme Development", "Conversion Optimization", "Tracking Setup"],
-    eyebrow: "面向海外华人跨境品牌",
-    title: "Shopify 增长工程工作室",
-    subtitle: "帮助海外华人跨境品牌打造更快、更稳定、更高转化的 Shopify 独立站。",
-    description: "从 Shopify 技术建设、主题开发，到转化优化和数据追踪，帮助品牌把流量真正转化为订单。",
-    primaryCta: "免费 Shopify 店铺诊断",
+    eyebrow: "面向做 Shopify 独立站的 DTC 品牌",
+    title: "Shopify 独立站定制开发工作室",
+    subtitle: "帮助 DTC 品牌打造更快、更稳定、更好卖的 Shopify 独立站。",
+    description: "从 Shopify 建站、主题开发，到页面转化优化和数据追踪，帮助品牌把流量真正转化为订单。",
+    primaryCta: "免费 Shopify 店铺检查",
     secondaryCta: "查看服务体系",
     ctaBenefit: "先免费沟通店铺现状与需求，再根据项目情况确认是否需要书面诊断或进一步实施。",
     socialProof: { label: "已服务品牌", brands: ["Terrawulf", "SilkGear"], text: "服务过电摩、服饰等品类的跨境品牌" },

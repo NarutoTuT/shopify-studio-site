@@ -16,13 +16,13 @@ const desktopNodePositions = [
 const copy = {
   zh: {
     eyebrow: "GROWTH METHOD",
-    title: "WhaleLeap 用工程、转化和追踪一起解决 Shopify 增长问题。",
+    title: "WhaleLeap 把建站开发、页面转化和数据追踪放在一起解决。",
     description:
-      "我们不把 Shopify 项目拆成单独的页面开发任务，而是把技术底座、购买路径和数据体系放在同一个增长框架里。",
+      "我们不会只做几个页面就结束，而是同时处理网站稳定性、购买路径和数据追踪，让店铺上线后还能继续优化。",
     pillars: [
       {
         label: "Engineering",
-        title: "Shopify 技术建设",
+        title: "Shopify 建站与主题开发",
         text: "建设 Shopify 主题、Liquid 模块、Custom Sections、性能基础和技术 SEO，让店铺稳定、快速、可维护。",
       },
       {

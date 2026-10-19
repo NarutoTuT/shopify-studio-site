@@ -28,7 +28,7 @@ const copy = {
     eyebrow: "GROWTH BLOCKERS",
     title: "很多 Shopify 建站项目不是没有流量，而是增长路径在漏单。",
     description:
-      "海外华人跨境品牌经常已经有产品、素材和广告预算，但网站没有把访客顺利带到信任、加购和下单。",
+      "很多做 Shopify 独立站的品牌已经有产品、素材和广告预算，但网站没有把访客顺利带到信任、加购和下单。",
     problems: [
       {
         title: "广告有点击，但订单少",

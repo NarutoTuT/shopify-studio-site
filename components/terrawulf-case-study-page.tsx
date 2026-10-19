@@ -405,7 +405,7 @@ export function TerrawulfCaseStudyPage({ language = "zh" }: { language?: "zh" | 
                 <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:max-w-[25rem] lg:flex-col">
                   <a href={`${en ? "/en" : ""}/services/shopify-website-build`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-black">{text("Shopify 定制开发", "Shopify Development Services")} <ArrowUpRight className="size-5" /></a>
                   <a href={`${en ? "/en" : ""}/services/shopify-theme-customization`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/18 px-7 text-base font-semibold">Theme / Liquid Development <ArrowUpRight className="size-5" /></a>
-                  <a href={`${en ? "/en" : ""}/diagnosis`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-orange-300/25 bg-orange-300/[0.06] px-7 text-base font-semibold text-orange-100">Free Shopify Review <ArrowUpRight className="size-5" /></a>
+                  <a href={`${en ? "/en" : ""}/diagnosis`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-orange-300/25 bg-orange-300/[0.06] px-7 text-base font-semibold text-orange-100">{text("免费 Shopify 店铺检查", "Free Shopify Review")} <ArrowUpRight className="size-5" /></a>
                 </div>
               </div>
             </div>

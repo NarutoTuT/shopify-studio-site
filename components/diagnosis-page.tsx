@@ -38,10 +38,10 @@ const initialForm: FormState = {
 
 const copy = {
   zh: {
-    eyebrow: "FREE SHOPIFY REVIEW",
-    title: "免费 Shopify 店铺增长检查",
+    eyebrow: "免费 Shopify 店铺检查",
+    title: "免费 Shopify 店铺检查",
     description: "通过免费初步沟通了解 Shopify 店铺、当前问题和项目需求，再判断适合的下一步。",
-    primaryCta: "开始免费检查",
+    primaryCta: "开始免费 Shopify 店铺检查",
     secondaryCta: "返回首页",
     trust: ["面向海外华人跨境品牌", "免费初步沟通", "不需要完整需求文档"],
     heroCards: [
@@ -73,7 +73,7 @@ const copy = {
         icon: BarChart3,
       },
     ],
-    reviewTitle: "What We Review",
+    reviewTitle: "我们会看什么",
     reviewDescription: "初步沟通会围绕三个方向了解现状；是否需要进一步检查或书面报告，会根据项目情况确认。",
     reviewAreas: [
       {
@@ -98,7 +98,7 @@ const copy = {
     fitTitle: "Who It Is For",
     fitIntro: "如果你已经有产品、流量或 Shopify 店铺，但不确定哪里影响转化，这个入口适合先做低成本判断。",
     fitItems: ["Shopify 品牌", "跨境电商品牌", "正在投放广告的网站", "想提升转化的网站"],
-    formTitle: "提交 Free Shopify Review 信息",
+    formTitle: "提交 Shopify 店铺信息",
     formDescription: "保留现有字段即可提交。信息越具体，初步判断越准确；不确定的字段可以留空。",
     formBenefit: "提交后我们会先了解需求并判断下一步。免费阶段不保证提供完整审计报告、深度技术检查或增长结果。",
     labels: {
@@ -136,7 +136,7 @@ const copy = {
     afterTitle: "提交后会发生什么？",
     afterIntro: "提交后先进行需求了解，再根据项目情况判断是否需要书面诊断、开发项目或长期维护。",
     afterItems: ["接收项目信息", "初步沟通需求", "确认合适的服务范围", "另行约定下一步"],
-    auditCtaTitle: "需要更深入的方案？下一步是 Shopify Growth Audit。",
+    auditCtaTitle: "需要更深入的分析？下一步可以做 Shopify 深度诊断。",
     auditCtaText: "免费阶段用于初步沟通与需求了解，不保证提供完整审计报告。若项目适合进一步分析，书面诊断、开发范围和交付条件会另行确认。",
     auditCtaButton: "先提交免费检查",
     auditCtaSecondary: "查看服务体系",
@@ -251,19 +251,19 @@ const diagnosisStructuredData = {
   zh: {
     breadcrumbs: [
       { name: "首页", url: "https://whaleleap.studio/" },
-      { name: "Free Shopify Review", url: "https://whaleleap.studio/diagnosis" },
+      { name: "免费 Shopify 店铺检查", url: "https://whaleleap.studio/diagnosis" },
     ],
     service: {
-      name: "Free Shopify Review",
+      name: "免费 Shopify 店铺检查",
       description: "为海外华人跨境品牌提供 Shopify 免费初步咨询，了解店铺现状、当前问题和项目需求，再判断合适的下一步。",
       url: "https://whaleleap.studio/diagnosis",
     },
     page: {
       type: "WebPage" as const,
-      name: "Free Shopify Review",
+      name: "免费 Shopify 店铺检查",
       description: "通过 Shopify 免费初步咨询了解店铺现状、当前问题和项目需求，再判断是否需要进一步诊断或实施。",
       url: "https://whaleleap.studio/diagnosis",
-      about: ["Free Shopify Review", "Shopify 增长检查", "Shopify 转化优化", "Shopify 数据追踪"],
+      about: ["免费 Shopify 店铺检查", "Shopify 转化优化", "Shopify 数据追踪"],
     },
   },
   en: {
@@ -446,7 +446,7 @@ export function DiagnosisPage() {
 
   const reviewForm = (
     <form id="review-form" onSubmit={handleSubmit} noValidate className="scroll-mt-28">
-      <p className="mb-5 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">Review Form</p>
+      <p className="mb-5 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">{language === "zh" ? "咨询表单" : "Review Form"}</p>
 
       <div className="grid gap-5">
         <Field label={text.labels.storeUrl}>
@@ -584,7 +584,7 @@ export function DiagnosisPage() {
         <section className="bg-background px-4 py-[50px] sm:px-6 md:px-10 md:py-[100px]">
           <div className="mx-auto grid max-w-[1500px] gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start lg:gap-10">
             <div className="lg:sticky lg:top-28">
-              <p className="mb-4 text-base font-semibold uppercase tracking-[0.08em] text-primary">Review Form</p>
+              <p className="mb-4 text-base font-semibold uppercase tracking-[0.08em] text-primary">{language === "zh" ? "店铺信息表单" : "Review Form"}</p>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.formTitle}</h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{text.formDescription}</p>
             </div>
@@ -659,7 +659,7 @@ export function DiagnosisPage() {
         <section id="review-scope" className="scroll-mt-24 bg-background px-4 pb-[50px] pt-0 sm:px-6 md:px-10 md:pb-[100px]">
           <div className="mx-auto max-w-[1500px]">
             <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
-              <p className="font-mono text-base font-semibold uppercase tracking-[0.08em] text-primary">Review scope / 03</p>
+              <p className="font-mono text-base font-semibold uppercase tracking-[0.08em] text-primary">{language === "zh" ? "检查范围 / 03" : "Review scope / 03"}</p>
               <h2 className="mt-3 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.reviewTitle}</h2>
               <p className="mx-auto mt-4 max-w-3xl text-base leading-[1.75] text-muted-foreground md:text-lg">{text.reviewDescription}</p>
             </div>
@@ -699,7 +699,7 @@ export function DiagnosisPage() {
                 <div className="relative mx-auto mt-4 flex max-w-2xl flex-col items-center overflow-hidden rounded-[42%_58%_52%_48%/58%_42%_58%_42%] bg-[radial-gradient(circle_at_35%_20%,rgba(255,255,255,0.13),transparent_24%),linear-gradient(135deg,rgba(119,252,117,0.14),rgba(34,211,238,0.055),rgba(0,0,0,0.22))] px-6 py-8 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_0_55px_rgba(119,252,117,0.09)] lg:mt-1 lg:max-w-xl">
                   <span aria-hidden="true" className="absolute inset-4 animate-[spin_28s_linear_infinite] rounded-[45%_55%_48%_52%] border border-dashed border-primary/18 motion-reduce:animate-none" />
                   <Target className="relative size-7 text-primary" />
-                  <strong className="relative mt-3 text-xl leading-tight text-white">Growth Review Coverage</strong>
+                  <strong className="relative mt-3 text-xl leading-tight text-white">{language === "zh" ? "店铺增长检查范围" : "Growth Review Coverage"}</strong>
                   <span className="relative mt-2 font-mono text-base uppercase text-primary">Engineering + Conversion + Tracking</span>
                 </div>
               </div>
@@ -757,7 +757,7 @@ export function DiagnosisPage() {
         <section className="bg-black px-4 pb-[50px] pt-0 sm:px-6 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto max-w-[1500px]">
             <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
-              <p className="font-mono text-base font-semibold uppercase tracking-[0.08em] text-cyan-300">Review pipeline / 04</p>
+              <p className="font-mono text-base font-semibold uppercase tracking-[0.08em] text-cyan-300">{language === "zh" ? "提交后流程 / 04" : "Review pipeline / 04"}</p>
               <h2 className="mt-3 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.afterTitle}</h2>
               <p className="mx-auto mt-4 max-w-3xl text-base leading-[1.75] text-muted-foreground md:text-lg">{text.afterIntro}</p>
             </div>

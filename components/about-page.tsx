@@ -31,7 +31,7 @@ const copy = {
     subtitle: "专注 Shopify 成交系统的设计与开发工作室。",
     description:
       "我们服务准备出海、正在投放或需要升级 Shopify 的品牌。工作重点不是把页面做热闹，而是把产品、页面、主题、支付物流和数据追踪组织成能上线、能成交、能继续优化的系统。",
-    primaryCta: "免费诊断我的 Shopify 站",
+    primaryCta: "免费 Shopify 店铺检查",
     secondaryCta: "查看交付原则",
     proof: ["Shopify 建站与主题开发", "转化路径与数据追踪", "跨境品牌上线与迭代"],
     proofShort: ["主题开发", "转化追踪", "全球增长"],
@@ -201,7 +201,7 @@ const copy = {
     ctaText: "提交产品、市场、预算、当前店铺或目标，我们先判断 Shopify 该怎么建、怎么改、怎么追踪。",
     ctaLabel: "NEXT STEP / 05",
     ctaSignals: ["诊断店铺现状", "判断优化优先级", "明确下一步"],
-    ctaMobile: "开始免费诊断",
+    ctaMobile: "免费 Shopify 店铺检查",
   },
   en: {
     eyebrow: "ABOUT WHALELEAP STUDIO",

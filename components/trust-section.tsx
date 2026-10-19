@@ -9,9 +9,10 @@ const proofIcons = [Code2, Workflow, Globe2]
 const copy = {
   zh: {
     eyebrow: "WHY WHALELEAP",
-    title: "更懂海外华人跨境品牌的 Shopify 技术增长伙伴。",
+    title: "更懂 DTC 品牌生意的 Shopify 开发伙伴。",
+    studioIntro: "WhaleLeap 是一人主导的 Shopify 开发工作室，没有销售转接，也不把项目转包出去。和你沟通需求的人，就是实际写代码、检查页面和负责交付的人。",
     description:
-      "WhaleLeap 不是单纯交付页面的外包团队。我们用前端工程、Shopify 经验和跨境电商理解，帮助品牌把技术建设和增长目标连接起来。",
+      "WhaleLeap 不只是把页面做完交付。我们会结合 Shopify 开发经验和独立站运营需求，把网站做成方便上线、维护和继续优化的销售渠道。",
     reasons: [
       {
         title: "6 年前端开发经验",
@@ -42,6 +43,7 @@ const copy = {
   en: {
     eyebrow: "WHY WHALELEAP",
     title: "A Shopify growth engineering partner for Chinese-founded brands selling globally.",
+    studioIntro: "",
     description:
       "WhaleLeap is not a page-delivery outsourcing team. We connect frontend engineering, Shopify experience, and cross-border ecommerce context to growth outcomes.",
     reasons: [
@@ -98,6 +100,7 @@ export function TrustSection() {
             {text.eyebrow}
           </p>
           <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-[1.08] tracking-normal text-foreground">{text.title}</h2>
+          {text.studioIntro && <p className="mx-auto mt-6 max-w-3xl text-base leading-[1.7] text-foreground/85 md:text-lg">{text.studioIntro}</p>}
           <p className="mx-auto mt-6 max-w-3xl text-base leading-[1.7] text-muted-foreground md:text-lg">{text.description}</p>
         </div>
 

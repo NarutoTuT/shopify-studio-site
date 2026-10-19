@@ -20,7 +20,7 @@ const copy = {
   zh: {
     eyebrow: "SERVICE SYSTEM",
     title: "围绕 Shopify 建站与增长，而不是围绕开发任务拆服务。",
-    description: "三个服务方向对应三个核心问题：技术底座是否稳定、购买路径是否能转化、数据是否能指导下一步。",
+    description: "三个服务方向对应三个核心问题：网站是否稳定好用、购买路径是否顺畅、数据是否能指导下一步。",
     problemLabel: "PROBLEM",
     solutionLabel: "SOLUTION",
     capabilityLabel: "BEST FOR",
@@ -29,7 +29,7 @@ const copy = {
       {
         label: "01",
         title: "Shopify 定制开发",
-        problem: "你的 Shopify 店铺需要一个稳定、快速、可维护的技术底座。",
+        problem: "你的 Shopify 店铺需要稳定、快速，而且方便后续更新和维护。",
         solution: "我们建设和优化主题结构、核心页面模块、性能基础和技术 SEO，让运营团队后续能持续迭代。",
         capability: "适合新建站、主题改版、Liquid 模块、Custom Sections 和性能优化。",
       },

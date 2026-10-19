@@ -390,7 +390,7 @@ export function ShopifyWebsiteCostPage() {
                 </p>
               </div>
               <a href="/diagnosis" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98]">
-                免费诊断 Shopify 建站范围
+                免费 Shopify 店铺检查
                 <ArrowUpRight className="size-4" />
               </a>
             </div>

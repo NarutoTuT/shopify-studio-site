@@ -1,13 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowUpRight, CheckCircle2, Clock3, FileWarning, HelpCircle, Layers3, Plus, ShieldCheck } from "lucide-react"
+import { ArrowUpRight, CheckCircle2, ChevronDown, Clock3, FileWarning, HelpCircle, Layers3, Plus, ShieldCheck } from "lucide-react"
 
 import { Navbar } from "@/components/navbar"
 import { FaqStructuredData } from "@/components/faq-structured-data"
 import { ServiceFaqPanel } from "@/components/service-faq-panel"
 import { useLanguage } from "@/components/language-provider"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 const copy = {
   zh: {
@@ -16,7 +15,7 @@ const copy = {
     subtitle: "按交付深度、页面复杂度和业务系统拆分报价，而不是简单按页面数量堆价格。",
     description:
       "下面价格参考当前合同梯度。最终报价会根据你的产品品类、SKU 数量、页面结构、支付物流、数据追踪和第三方系统对接范围确认。",
-    primaryCta: "免费诊断我的 Shopify 站",
+    primaryCta: "免费 Shopify 店铺检查",
     secondaryCta: "查看价格方案",
     plansTitle: "三档建站价格",
     plansIntro: "开发范围、交付条件与项目售后根据每个项目的具体需求和合同单独确认。",
@@ -370,76 +369,43 @@ export function PricingPage() {
               <div aria-hidden="true" className="absolute left-1/2 top-0 size-[34rem] -translate-x-1/2 -translate-y-[68%] rounded-full border border-primary/10 shadow-[0_0_90px_rgba(119,252,117,0.06)]" />
               <div aria-hidden="true" className="absolute left-1/2 top-0 size-[22rem] -translate-x-1/2 -translate-y-[66%] animate-[spin_24s_linear_infinite] rounded-full border border-dashed border-cyan-300/12 motion-reduce:animate-none" />
 
-              <div className="relative hidden lg:grid lg:grid-cols-3 lg:gap-3 lg:px-3 lg:pt-3 xl:gap-4">
+              <div className="relative grid gap-2 px-2 pb-3 pt-3 lg:grid-cols-3 lg:gap-3 lg:px-3 lg:pb-0 xl:gap-4">
                 {text.plans.map((plan, index) => (
-                  <article key={plan.name} className={`relative flex flex-col overflow-hidden rounded-[2rem] px-6 pb-10 pt-8 backdrop-blur-sm xl:px-8 ${plan.featured ? "bg-[radial-gradient(circle_at_50%_8%,rgba(119,252,117,0.15),transparent_38%),rgba(119,252,117,0.035)]" : index === 2 ? "bg-[radial-gradient(circle_at_50%_8%,rgba(34,211,238,0.08),transparent_36%),rgba(255,255,255,0.018)]" : "bg-[radial-gradient(circle_at_50%_8%,rgba(255,255,255,0.055),transparent_36%),rgba(255,255,255,0.018)]"}`}>
-                    <div className="flex min-h-16 items-center justify-between gap-4">
-                      <div className="flex items-center gap-4">
-                        <span className={`flex size-16 shrink-0 items-center justify-center rounded-full border font-mono text-base font-bold ${plan.featured ? "border-primary/50 bg-primary/12 text-primary shadow-[0_0_28px_rgba(119,252,117,0.16)]" : "border-white/15 bg-white/[0.035] text-foreground/75"}`}>0{index + 1}</span>
-                        <p className="font-mono text-base font-semibold uppercase tracking-[0.05em] text-primary">{pricingLabels.routes[index]}</p>
+                  <article key={plan.name} className={`relative overflow-hidden rounded-[1.75rem] px-3 backdrop-blur-sm sm:px-5 lg:flex lg:flex-col lg:rounded-[2rem] lg:px-6 lg:pb-10 lg:pt-8 xl:px-8 ${plan.featured ? "bg-[radial-gradient(circle_at_50%_8%,rgba(119,252,117,0.15),transparent_38%),rgba(119,252,117,0.035)]" : index === 2 ? "bg-[radial-gradient(circle_at_50%_8%,rgba(34,211,238,0.08),transparent_36%),rgba(255,255,255,0.018)]" : "bg-[radial-gradient(circle_at_50%_8%,rgba(255,255,255,0.055),transparent_36%),rgba(255,255,255,0.018)]"}`}>
+                    <button type="button" aria-expanded={activePlan === index} aria-controls={`plan-details-${index}`} onClick={() => setActivePlan(index)} className="flex w-full items-start py-6 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:pointer-events-none lg:block lg:py-0">
+                      <div className="flex min-h-12 flex-wrap items-center gap-3 lg:min-h-16 lg:justify-between lg:gap-4">
+                        <div className="flex items-center gap-3 lg:gap-4">
+                          <span className={`flex size-12 shrink-0 items-center justify-center rounded-full border font-mono text-base font-bold lg:size-16 ${plan.featured ? "border-primary/50 bg-primary/12 text-primary shadow-[0_0_28px_rgba(119,252,117,0.16)]" : "border-white/15 bg-white/[0.035] text-foreground/75"}`}>0{index + 1}</span>
+                          <p className="font-mono text-base font-semibold uppercase tracking-[0.04em] text-primary lg:tracking-[0.05em]">{pricingLabels.routes[index]}</p>
+                        </div>
+                        {plan.featured && <span className="rounded-full bg-primary/12 px-3 py-1 text-base font-semibold text-primary">{pricingLabels.recommended}</span>}
                       </div>
-                      {plan.featured && <span className="shrink-0 rounded-full bg-primary/12 px-3 py-1 text-base font-semibold text-primary">{pricingLabels.recommended}</span>}
-                    </div>
-                    <div className="mt-7">
-                      <p className="text-[clamp(1.75rem,2.4vw,2.65rem)] font-bold leading-none tracking-[-0.02em] text-foreground">{plan.price}</p>
-                      <h3 className="mt-5 text-2xl font-bold leading-tight tracking-normal">{plan.name}</h3>
-                    </div>
-                    <div className="mt-7 flex items-center justify-between gap-4">
-                      <p className="text-base text-muted-foreground">{pricingLabels.deliveryDepth} <span className="ml-2 font-mono text-primary">{index + 1} / 3</span></p>
-                      <div className="flex items-center gap-2">{[0, 1, 2].map((step) => <span key={step} className={`size-3.5 rounded-full border ${step <= index ? "border-primary bg-primary shadow-[0_0_14px_rgba(119,252,117,0.5)]" : "border-white/15 bg-white/[0.04]"}`} />)}</div>
-                    </div>
-                    <div className="mt-8 space-y-4 text-base">
-                      <p className="flex items-start gap-3 leading-relaxed text-foreground/85"><Clock3 className="mt-1 size-4 shrink-0 text-primary" />{plan.timeline}</p>
-                      <p className="flex items-start gap-3 leading-relaxed text-foreground/85"><ShieldCheck className="mt-1 size-4 shrink-0 text-primary" />{plan.support}</p>
-                    </div>
-                    <div className="mt-8">
-                      <p className="mb-3 text-base font-semibold text-foreground">{pricingLabels.suitable}</p>
-                      <p className="text-base leading-relaxed text-muted-foreground">{plan.bestFor}</p>
-                    </div>
-                    <div className="mt-8 space-y-3">
-                      <p className="text-base font-semibold text-foreground">{pricingLabels.scope}</p>
-                      {plan.points.map((point) => <p key={point} className="flex items-start gap-3 text-base leading-relaxed text-foreground/80"><CheckCircle2 className="mt-1 size-4 shrink-0 text-primary" />{point}</p>)}
-                    </div>
-                    <div className="mt-9">
-                      <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-primary px-6 text-base font-bold text-primary-foreground shadow-[0_0_24px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary active:scale-[0.98]">{plan.cta}<ArrowUpRight className="size-4" /></a>
-                      <p className="mt-3 text-base leading-relaxed text-muted-foreground">{text.planBenefit}</p>
+                      <p className="mt-4 text-[1.75rem] font-bold leading-none tracking-[-0.02em] text-foreground lg:mt-7 lg:text-[clamp(1.75rem,2.4vw,2.65rem)]">{plan.price}</p>
+                      <h3 className="mt-3 text-xl font-bold leading-tight text-foreground lg:mt-5 lg:text-2xl">{plan.name}</h3>
+                      <p className="mt-3 text-base leading-relaxed text-muted-foreground lg:hidden">{plan.bestFor}</p>
+                      <p className="mt-4 flex items-center gap-2 text-base text-foreground/80 lg:hidden"><Clock3 className="size-4 shrink-0 text-primary" />{plan.timeline}</p>
+                      <ChevronDown className={`absolute right-5 top-7 size-5 text-primary transition-transform lg:hidden ${activePlan === index ? "rotate-180" : ""}`} aria-hidden="true" />
+                    </button>
+                    <div id={`plan-details-${index}`} className={`${activePlan === index ? "block" : "hidden"} pb-7 text-base lg:block lg:pb-0`}>
+                      <div className="mb-6 flex items-center justify-between gap-4 lg:mb-0 lg:mt-7">
+                        <p className="text-base text-muted-foreground">{pricingLabels.deliveryDepth} <span className="ml-2 font-mono text-primary">{index + 1} / 3</span></p>
+                        <div className="flex items-center gap-2">{[0, 1, 2].map((step) => <span key={step} className={`size-3.5 rounded-full border ${step <= index ? "border-primary bg-primary shadow-[0_0_14px_rgba(119,252,117,0.5)]" : "border-white/15 bg-white/[0.04]"}`} />)}</div>
+                      </div>
+                      <div className="mt-8 hidden space-y-4 lg:block">
+                        <p className="flex items-start gap-3 leading-relaxed text-foreground/85"><Clock3 className="mt-1 size-4 shrink-0 text-primary" />{plan.timeline}</p>
+                      </div>
+                      <p className="mt-6 flex items-start gap-3 leading-relaxed text-foreground/85 lg:mt-4"><ShieldCheck className="mt-1 size-4 shrink-0 text-primary" />{plan.support}</p>
+                      <div className="mt-8 hidden lg:block"><p className="mb-3 text-base font-semibold text-foreground">{pricingLabels.suitable}</p><p className="text-base leading-relaxed text-muted-foreground">{plan.bestFor}</p></div>
+                      <p className="mb-3 mt-6 text-base font-semibold text-foreground lg:mt-8">{pricingLabels.scope}</p>
+                      <div className="space-y-3">{plan.points.map((point) => <p key={point} className="flex items-start gap-3 text-base leading-relaxed text-foreground/80"><CheckCircle2 className="mt-1 size-4 shrink-0 text-primary" />{point}</p>)}</div>
+                      <div className="mt-6 lg:mt-9">
+                        <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-primary px-6 text-base font-bold text-primary-foreground shadow-[0_0_24px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary active:scale-[0.98]">{plan.cta}<ArrowUpRight className="size-4" /></a>
+                        <p className="mt-3 text-base leading-relaxed text-muted-foreground">{text.planBenefit}</p>
+                      </div>
                     </div>
                   </article>
                 ))}
               </div>
-
-              <Accordion type="single" value={`plan-${activePlan}`} onValueChange={(value) => value && setActivePlan(Number(value.replace("plan-", "")))} className="relative space-y-2 px-2 pb-3 pt-3 lg:hidden [&_[data-slot=accordion-content]]:text-base">
-                {text.plans.map((plan, index) => (
-                  <AccordionItem key={plan.name} value={`plan-${index}`} className={`relative overflow-hidden rounded-[1.75rem] border-0 px-3 sm:px-5 ${activePlan === index ? "bg-[radial-gradient(circle_at_0%_0%,rgba(119,252,117,0.15),transparent_48%),rgba(119,252,117,0.035)]" : index === 2 ? "bg-cyan-300/[0.022]" : "bg-white/[0.025]"}`}>
-                    <AccordionTrigger className="relative z-10 min-h-0 py-6 text-base hover:no-underline [&>svg]:mt-1 [&>svg]:size-5 [&>svg]:text-primary">
-                      <div className="min-w-0 flex-1 pr-2">
-                        <div className="flex flex-wrap items-center gap-3">
-                          <span className={`flex size-12 shrink-0 items-center justify-center rounded-full border font-mono text-base font-bold ${activePlan === index ? "border-primary/50 bg-primary/12 text-primary" : "border-white/15 bg-white/[0.035] text-foreground/70"}`}>0{index + 1}</span>
-                          <p className="font-mono text-base font-semibold uppercase tracking-[0.04em] text-primary">{pricingLabels.routes[index]}</p>
-                          {plan.featured && <span className="rounded-full bg-primary/12 px-3 py-1 text-base font-semibold text-primary">{pricingLabels.recommended}</span>}
-                        </div>
-                        <p className="mt-4 text-[1.75rem] font-bold leading-none tracking-[-0.02em] text-foreground">{plan.price}</p>
-                        <p className="mt-3 text-xl font-bold leading-tight text-foreground">{plan.name}</p>
-                        <p className="mt-3 text-base leading-relaxed text-muted-foreground">{plan.bestFor}</p>
-                        <p className="mt-4 flex items-center gap-2 text-base text-foreground/80"><Clock3 className="size-4 shrink-0 text-primary" />{plan.timeline}</p>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="relative z-10 pb-7 text-base">
-                      <div className="mb-6 flex items-center justify-between gap-4">
-                        <p className="text-base text-muted-foreground">{pricingLabels.deliveryDepth} <span className="ml-2 font-mono text-primary">{index + 1} / 3</span></p>
-                        <div className="flex items-center gap-2">{[0, 1, 2].map((step) => <span key={step} className={`size-3.5 rounded-full border ${step <= index ? "border-primary bg-primary shadow-[0_0_12px_rgba(119,252,117,0.45)]" : "border-white/15 bg-white/[0.04]"}`} />)}</div>
-                      </div>
-                      <p className="flex items-start gap-3 text-base leading-relaxed text-foreground/85"><ShieldCheck className="mt-1 size-4 shrink-0 text-primary" />{plan.support}</p>
-                      <p className="mb-3 mt-6 text-base font-semibold text-foreground">{pricingLabels.scope}</p>
-                      <div className="space-y-3">{plan.points.map((point) => <p key={point} className="flex items-start gap-3 text-base leading-relaxed text-foreground/80"><CheckCircle2 className="mt-1 size-4 shrink-0 text-primary" />{point}</p>)}</div>
-                      <div className="mt-6">
-                        <a href={localizedPath("/diagnosis")} className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-primary px-6 text-base font-bold text-primary-foreground shadow-[0_0_24px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary active:scale-[0.98]">{plan.cta}<ArrowUpRight className="size-4" /></a>
-                        <p className="mt-3 text-base leading-relaxed text-muted-foreground">{text.planBenefit}</p>
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
 
               <div className="relative overflow-hidden px-5 py-12 text-center sm:px-7 lg:px-9 lg:py-16">
                 <div aria-hidden="true" className="absolute left-1/2 top-1/2 size-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary/8" />
@@ -469,21 +435,23 @@ export function PricingPage() {
               <div aria-hidden="true" className="pointer-events-none absolute -left-24 -top-24 size-72 rounded-full border border-primary/10" />
               <div aria-hidden="true" className="pointer-events-none absolute -right-20 top-1/2 size-56 rounded-full border border-cyan-300/8" />
 
-              <div className="relative hidden space-y-3 lg:block">
+              <div className="relative space-y-2 lg:space-y-3">
                 {text.moduleGroups.map((group, groupIndex) => (
-                  <article key={group.name} className={`grid gap-8 rounded-[2rem] px-7 py-8 lg:grid-cols-[15rem_1fr] xl:px-9 ${groupIndex === 1 ? "bg-primary/[0.035]" : groupIndex === 2 ? "bg-cyan-300/[0.02]" : "bg-white/[0.018]"}`}>
-                    <div className="flex items-start gap-4">
-                      <span className={`flex size-16 shrink-0 items-center justify-center rounded-full border font-mono text-base font-bold ${groupIndex === 1 ? "border-primary/45 bg-primary/12 text-primary shadow-[0_0_24px_rgba(119,252,117,0.16)]" : "border-white/15 bg-white/[0.035] text-foreground/75"}`}>0{groupIndex + 1}</span>
-                      <div>
-                        <p className="font-mono text-base font-semibold uppercase tracking-[0.05em] text-primary">{moduleLabels.track}</p>
-                        <h3 className="mt-2 text-2xl font-bold leading-tight tracking-normal">{group.name}</h3>
-                        <p className="mt-3 text-base leading-relaxed text-muted-foreground">{group.summary}</p>
-                        <p className="mt-3 font-mono text-base text-foreground/50">0{group.modules.length} {moduleLabels.items}</p>
+                  <article key={group.name} className={`rounded-[1.75rem] px-3 sm:px-5 lg:grid lg:grid-cols-[15rem_1fr] lg:gap-8 lg:rounded-[2rem] lg:px-7 lg:py-8 xl:px-9 ${groupIndex === 1 ? "bg-primary/[0.035]" : groupIndex === 2 ? "bg-cyan-300/[0.02]" : "bg-white/[0.018]"}`}>
+                    <button type="button" aria-expanded={activeModuleGroup === groupIndex} aria-controls={`module-group-details-${groupIndex}`} onClick={() => setActiveModuleGroup(groupIndex)} className="flex min-h-20 w-full items-center gap-3 py-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:pointer-events-none lg:min-h-0 lg:items-start lg:gap-4 lg:py-0">
+                      <span className={`flex size-12 shrink-0 items-center justify-center rounded-full border font-mono text-base font-bold lg:size-16 ${groupIndex === 1 ? "border-primary/45 bg-primary/12 text-primary shadow-[0_0_24px_rgba(119,252,117,0.16)]" : "border-white/15 bg-white/[0.035] text-foreground/75"}`}>0{groupIndex + 1}</span>
+                      <div className="min-w-0">
+                        <p className="hidden font-mono text-base font-semibold uppercase tracking-[0.05em] text-primary lg:block">{moduleLabels.track}</p>
+                        <h3 className="text-lg font-bold leading-tight text-foreground lg:mt-2 lg:text-2xl lg:tracking-normal">{group.name}</h3>
+                        <p className="mt-1 text-base leading-relaxed text-muted-foreground lg:mt-3">{group.summary}</p>
+                        <p className="mt-3 hidden font-mono text-base text-foreground/50 lg:block">0{group.modules.length} {moduleLabels.items}</p>
                       </div>
-                    </div>
-                    <div className={`grid content-start gap-x-7 gap-y-7 ${group.modules.length > 2 ? "lg:grid-cols-2 xl:grid-cols-3" : "lg:grid-cols-2"}`}>
+                      <ChevronDown className={`ml-auto size-5 shrink-0 text-primary transition-transform lg:hidden ${activeModuleGroup === groupIndex ? "rotate-180" : ""}`} aria-hidden="true" />
+                    </button>
+                    <div id={`module-group-details-${groupIndex}`} className={`${activeModuleGroup === groupIndex ? "block" : "hidden"} pb-5 lg:block lg:pb-0`}>
+                      <div className={`grid content-start gap-x-7 gap-y-1 lg:gap-y-7 ${group.modules.length > 2 ? "lg:grid-cols-2 xl:grid-cols-3" : "lg:grid-cols-2"}`}>
                       {group.modules.map((module, moduleIndex) => (
-                        <div key={module.name} className="group flex min-h-24 items-start gap-3 py-2">
+                        <div key={module.name} className="group flex items-start gap-3 py-3 lg:min-h-24 lg:py-2">
                           <span className="mt-1 flex size-9 shrink-0 items-center justify-center rounded-full bg-white/[0.05] font-mono text-base text-primary transition-colors group-hover:bg-primary/12">{String(moduleIndex + 1).padStart(2, "0")}</span>
                           <div className="min-w-0 flex-1">
                             <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
@@ -494,42 +462,11 @@ export function PricingPage() {
                           </div>
                         </div>
                       ))}
+                      </div>
                     </div>
                   </article>
                 ))}
               </div>
-
-              <Accordion type="single" value={`module-group-${activeModuleGroup}`} onValueChange={(value) => value && setActiveModuleGroup(Number(value.replace("module-group-", "")))} className="relative space-y-2 lg:hidden [&_[data-slot=accordion-content]]:text-base">
-                {text.moduleGroups.map((group, groupIndex) => (
-                  <AccordionItem key={group.name} value={`module-group-${groupIndex}`} className={`overflow-hidden rounded-[1.75rem] border-0 px-3 sm:px-5 ${activeModuleGroup === groupIndex ? "bg-primary/[0.055]" : groupIndex === 2 ? "bg-cyan-300/[0.02]" : "bg-white/[0.025]"}`}>
-                    <AccordionTrigger className="min-h-20 py-4 text-base hover:no-underline [&>svg]:mt-1 [&>svg]:size-5 [&>svg]:text-primary">
-                      <div className="flex min-w-0 flex-1 items-center gap-3 pr-2">
-                        <span className={`flex size-12 shrink-0 items-center justify-center rounded-full border font-mono text-base font-bold ${activeModuleGroup === groupIndex ? "border-primary/45 bg-primary/12 text-primary" : "border-white/15 bg-white/[0.035] text-foreground/70"}`}>0{groupIndex + 1}</span>
-                        <div className="min-w-0 text-left">
-                          <p className="text-lg font-bold leading-tight text-foreground">{group.name}</p>
-                          <p className="mt-1 text-base leading-relaxed text-muted-foreground">{group.summary}</p>
-                        </div>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="pb-5 text-base">
-                      <div className="space-y-1">
-                        {group.modules.map((module, moduleIndex) => (
-                          <div key={module.name} className="flex items-start gap-3 py-3">
-                            <span className="mt-1 flex size-9 shrink-0 items-center justify-center rounded-full bg-white/[0.05] font-mono text-base text-primary">{String(moduleIndex + 1).padStart(2, "0")}</span>
-                            <div className="min-w-0 flex-1">
-                              <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-                                <p className="text-base font-semibold text-foreground">{module.name}</p>
-                                <p className="shrink-0 text-base font-bold text-primary">{module.price}</p>
-                              </div>
-                              <p className="mt-2 text-base leading-relaxed text-muted-foreground">{module.description}</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
             </div>
           </div>
         </section>
@@ -547,18 +484,26 @@ export function PricingPage() {
               <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-[48%] size-[42rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary/8" />
               <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-[48%] size-[31rem] -translate-x-1/2 -translate-y-1/2 animate-[spin_28s_linear_infinite] rounded-full border border-dashed border-cyan-300/10 motion-reduce:animate-none" />
 
-              <div className="relative hidden min-h-[620px] grid-cols-[minmax(0,1fr)_18rem_minmax(0,1fr)] items-center gap-9 px-9 py-12 lg:grid xl:gap-14 xl:px-12">
+              <div className="relative grid gap-2 p-2 lg:min-h-[620px] lg:grid-cols-[minmax(0,1fr)_18rem_minmax(0,1fr)] lg:items-center lg:gap-9 lg:px-9 lg:py-12 xl:gap-14 xl:px-12">
+                <div className="order-1 flex items-center justify-center lg:order-2">
+                  <div className="relative my-7 flex size-56 flex-col items-center justify-center rounded-full border border-primary/30 bg-black/40 p-6 text-center shadow-[inset_0_0_55px_rgba(119,252,117,0.08),0_0_45px_rgba(119,252,117,0.08)] lg:my-0 lg:size-72 lg:bg-black/45 lg:p-8 lg:shadow-[inset_0_0_70px_rgba(119,252,117,0.08),0_0_60px_rgba(119,252,117,0.1)] lg:backdrop-blur-xl">
+                    <span className="flex size-12 items-center justify-center rounded-full bg-primary/12 text-primary lg:size-14"><Layers3 className="size-5 lg:size-6" /></span>
+                    <p className="mt-4 font-mono text-base font-semibold tracking-[0.05em] text-primary lg:mt-5">IN SCOPE</p>
+                    <h3 className="mt-2 text-xl font-bold leading-tight lg:mt-3 lg:text-2xl lg:tracking-normal">{boundaryLabels.core}</h3>
+                    <p className="mt-2 text-base leading-relaxed text-muted-foreground lg:mt-3">{boundaryLabels.coreText}</p>
+                  </div>
+                </div>
                 {text.excludedGroups.map((group, groupIndex) => (
-                  <article key={group.name} className={`space-y-7 ${groupIndex === 0 ? "order-1 text-right" : "order-3 text-left"}`}>
+                  <article key={group.name} className={`rounded-[1.75rem] p-5 lg:space-y-7 lg:rounded-none lg:bg-transparent lg:p-0 ${groupIndex === 0 ? "order-2 bg-primary/[0.045] lg:order-1 lg:text-right" : "order-3 bg-cyan-300/[0.025] lg:text-left"}`}>
                     <div>
-                      <p className={`font-mono text-base font-semibold uppercase tracking-[0.05em] ${groupIndex === 0 ? "text-primary" : "text-cyan-300"}`}>{boundaryLabels.groupCodes[groupIndex]}</p>
-                      <h3 className="mt-2 text-2xl font-bold leading-tight tracking-normal">{group.name}</h3>
-                      <p className="mt-3 text-base leading-relaxed text-muted-foreground">{group.summary}</p>
+                      <p className={`font-mono text-base font-semibold uppercase tracking-[0.04em] lg:tracking-[0.05em] ${groupIndex === 0 ? "text-primary" : "text-cyan-300"}`}>{boundaryLabels.groupCodes[groupIndex]}</p>
+                      <h3 className="mt-2 text-xl font-bold leading-tight lg:text-2xl lg:tracking-normal">{group.name}</h3>
+                      <p className="mt-2 text-base leading-relaxed text-muted-foreground lg:mt-3">{group.summary}</p>
                     </div>
-                    <div className="space-y-6">
+                    <div className="mt-5 space-y-1 lg:mt-0 lg:space-y-6">
                       {group.items.map((item, itemIndex) => (
-                        <div key={item.name} className={`flex items-start gap-4 ${groupIndex === 0 ? "flex-row-reverse" : ""}`}>
-                          <span className={`flex size-12 shrink-0 items-center justify-center rounded-full border font-mono text-base font-bold ${groupIndex === 0 ? "border-primary/35 bg-primary/10 text-primary" : "border-cyan-300/25 bg-cyan-300/[0.07] text-cyan-300"}`}>0{itemIndex + 1}</span>
+                        <div key={item.name} className={`flex items-start gap-3 py-3 lg:gap-4 lg:py-0 ${groupIndex === 0 ? "lg:flex-row-reverse" : ""}`}>
+                          <span className={`flex size-10 shrink-0 items-center justify-center rounded-full font-mono text-base font-bold lg:size-12 lg:border ${groupIndex === 0 ? "bg-primary/10 text-primary lg:border-primary/35" : "bg-cyan-300/[0.07] text-cyan-300 lg:border-cyan-300/25"}`}>0{itemIndex + 1}</span>
                           <div className="min-w-0 pt-1">
                             <h4 className="text-base font-semibold leading-snug text-foreground">{item.name}</h4>
                             <p className="mt-2 text-base leading-relaxed text-muted-foreground">{item.description}</p>
@@ -568,44 +513,6 @@ export function PricingPage() {
                     </div>
                   </article>
                 ))}
-
-                <div className="order-2 flex items-center justify-center">
-                  <div className="relative flex size-72 flex-col items-center justify-center rounded-full border border-primary/30 bg-black/45 p-8 text-center shadow-[inset_0_0_70px_rgba(119,252,117,0.08),0_0_60px_rgba(119,252,117,0.1)] backdrop-blur-xl">
-                    <span className="flex size-14 items-center justify-center rounded-full bg-primary/12 text-primary"><Layers3 className="size-6" /></span>
-                    <p className="mt-5 font-mono text-base font-semibold tracking-[0.05em] text-primary">IN SCOPE</p>
-                    <h3 className="mt-3 text-2xl font-bold leading-tight tracking-normal">{boundaryLabels.core}</h3>
-                    <p className="mt-3 text-base leading-relaxed text-muted-foreground">{boundaryLabels.coreText}</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative p-2 lg:hidden">
-                <div className="mx-auto my-7 flex size-56 flex-col items-center justify-center rounded-full border border-primary/30 bg-black/40 p-6 text-center shadow-[inset_0_0_55px_rgba(119,252,117,0.08),0_0_45px_rgba(119,252,117,0.08)]">
-                  <span className="flex size-12 items-center justify-center rounded-full bg-primary/12 text-primary"><Layers3 className="size-5" /></span>
-                  <p className="mt-4 font-mono text-base font-semibold tracking-[0.05em] text-primary">IN SCOPE</p>
-                  <h3 className="mt-2 text-xl font-bold leading-tight">{boundaryLabels.core}</h3>
-                  <p className="mt-2 text-base leading-relaxed text-muted-foreground">{boundaryLabels.coreText}</p>
-                </div>
-                <div className="space-y-2">
-                  {text.excludedGroups.map((group, groupIndex) => (
-                    <article key={group.name} className={`rounded-[1.75rem] p-5 ${groupIndex === 0 ? "bg-primary/[0.045]" : "bg-cyan-300/[0.025]"}`}>
-                      <p className={`font-mono text-base font-semibold uppercase tracking-[0.04em] ${groupIndex === 0 ? "text-primary" : "text-cyan-300"}`}>{boundaryLabels.groupCodes[groupIndex]}</p>
-                      <h3 className="mt-2 text-xl font-bold leading-tight">{group.name}</h3>
-                      <p className="mt-2 text-base leading-relaxed text-muted-foreground">{group.summary}</p>
-                      <div className="mt-5 space-y-1">
-                        {group.items.map((item, itemIndex) => (
-                          <div key={item.name} className="flex items-start gap-3 py-3">
-                            <span className={`flex size-10 shrink-0 items-center justify-center rounded-full font-mono text-base font-bold ${groupIndex === 0 ? "bg-primary/10 text-primary" : "bg-cyan-300/[0.07] text-cyan-300"}`}>0{itemIndex + 1}</span>
-                            <div className="min-w-0 pt-1">
-                              <h4 className="text-base font-semibold leading-snug text-foreground">{item.name}</h4>
-                              <p className="mt-2 text-base leading-relaxed text-muted-foreground">{item.description}</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </article>
-                  ))}
-                </div>
               </div>
 
               <p className="relative mx-auto max-w-3xl px-6 pb-9 pt-0 text-center text-base leading-relaxed text-foreground/65 md:px-10 md:pb-11">{text.excludedNote}</p>

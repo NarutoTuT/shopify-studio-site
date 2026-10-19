@@ -19,7 +19,7 @@ const copy = {
     subtitle: "为跨境品牌打造更快、更稳定、更可维护的 Shopify 独立站。",
     description:
       "WhaleLeap 提供 Shopify 定制开发服务，帮助海外华人跨境品牌建设能够承接流量、支持优化和持续增长的主题、页面与技术基础。",
-    primaryCta: "免费 Shopify 店铺诊断",
+    primaryCta: "免费 Shopify 店铺检查",
     secondaryCta: "查看工作范围",
     proof: ["Shopify Theme Development", "Liquid Development", "Performance Optimization"],
     problemTitle: "常见技术增长阻塞",
@@ -33,7 +33,7 @@ const copy = {
       { title: "后续维护困难", mobileTitle: "维护困难", text: "缺少清晰模块和交付边界，每次优化都变成重新修补。", impact: "运营无法独立更新内容，每次活动和页面调整都重新依赖开发。", areas: ["Theme Editor", "Schema", "Handoff"], action: "补齐可编辑配置、模块说明与交付文档，让日常运营可以安全迭代。", icon: ShieldCheck },
     ],
     solutionTitle: "Shopify 定制开发方法",
-    solutionIntro: "我们把 Shopify 技术建设当作增长基础，而不是一次性的页面开发。",
+    solutionIntro: "我们把 Shopify 网站当作长期使用的销售渠道来开发，而不是做完几个页面就结束。",
     solutions: [
       { title: "Shopify Theme Development", mobileTitle: "Theme Development", build: "搭建清晰、可扩展的主题结构与页面基础。", value: "减少临时覆盖和重复代码，让后续活动与页面迭代更稳定。", deliverables: ["Theme architecture", "Reusable templates", "Editor-ready structure"], icon: Code2 },
       { title: "Liquid Development", mobileTitle: "Liquid Development", build: "开发符合业务逻辑的 Liquid 模板、数据展示与动态功能。", value: "把平台原生能力转化为品牌需要的商品、内容和购买体验。", deliverables: ["Liquid logic", "Dynamic templates", "Native integrations"], icon: FileText },
@@ -64,7 +64,7 @@ const copy = {
       { title: "Launch Checklist", mobileTitle: "上线清单", format: "上线前技术、页面、表单和关键配置检查表。", validation: ["Forms", "Analytics", "Redirects"], value: "团队可以依据清单完成发布，并明确后续需要持续观察的项目。", status: "READY", icon: ShieldCheck },
     ],
     processTitle: "Working Process",
-    process: ["Review", "Scope", "Build", "QA", "Launch"],
+    process: ["需求确认", "Scope", "Build", "QA", "Launch"],
     fitTitle: "Who It Is For",
     fitIntro: "如果你需要的不只是上线一个网站，而是建立可持续优化的 Shopify 技术基础，这个服务更合适。",
     fitItems: ["海外华人跨境品牌", "Shopify 创业者", "Amazon 转独立站品牌", "需要技术升级的 Shopify 店铺"],
@@ -92,7 +92,7 @@ const copy = {
       },
       {
         q: "下一步怎么开始？",
-        a: "建议先提交免费 Shopify 店铺诊断。我们会先判断当前店铺的技术基础、页面体验和后续优化优先级，再确认具体实施范围。",
+        a: "建议先提交免费 Shopify 店铺检查。我们会先判断当前店铺的技术基础、页面体验和后续优化优先级，再确认具体实施范围。",
       },
     ],
     ctaTitle: "先判断 Shopify 技术基础是否支持增长。",
@@ -432,7 +432,7 @@ export function ShopifyWebsiteBuildPage() {
         system: "项目交付轨道",
         ready: "05 个阶段已连接",
         steps: [
-          { title: "Review", detail: "需求与现状审核", icon: Search },
+          { title: "需求确认", detail: "了解需求与当前店铺情况", icon: Search },
           { title: "Scope", detail: "明确范围与优先级", icon: Layers3 },
           { title: "Build", detail: "主题、页面与功能开发", icon: Code2 },
           { title: "QA", detail: "多设备与上线前验证", icon: ShieldCheck },
