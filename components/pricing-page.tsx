@@ -239,7 +239,7 @@ const copy = {
         a: "The difference comes from design depth, page count, SKU complexity, third-party integrations, analytics requirements, and post-launch support. A template setup and a custom sales path are different deliveries.",
       },
       {
-        q: "When should I choose the ¥20,000 tier?",
+        q: "When should I choose the Reference-Based Quick Build (¥20,000)?",
         a: "Choose it when you have references, simple brand requirements, and want to launch quickly to validate products. It focuses on stable launch and the basic sales path.",
       },
       {
@@ -260,7 +260,7 @@ const copy = {
       },
     ],
     ctaTitle: "Not sure which tier fits? Start with diagnosis.",
-    ctaText: "Send product, budget, timeline, and current blockers. We will judge whether you need a module build, custom design build, or complex business scope.",
+    ctaText: "Send product, budget, timeline, and current blockers. We'll help you decide between the Reference-Based Quick Build, a custom design build, or a complex business scope.",
     costGuideTitle: "Want to understand how Shopify build costs are scoped?",
     costGuideText: "Read the cost guide to compare pricing tiers, cost drivers, and third-party fees that are usually not included in a build quote.",
     costGuideCta: "Read Shopify Website Cost Guide",

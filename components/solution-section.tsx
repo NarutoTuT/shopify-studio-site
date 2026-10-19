@@ -41,7 +41,7 @@ const copy = {
     eyebrow: "GROWTH METHOD",
     title: "WhaleLeap solves Shopify growth problems through engineering, conversion, and tracking.",
     description:
-      "We do not treat Shopify projects as isolated page tasks. We connect technical foundations, buying paths, and data systems in one growth framework.",
+      "We don't treat Shopify projects as isolated page tasks. We handle site stability, the buying path, and tracking together — so your store keeps improving after launch.",
     pillars: [
       {
         label: "Engineering",

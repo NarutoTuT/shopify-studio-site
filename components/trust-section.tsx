@@ -42,10 +42,10 @@ const copy = {
   },
   en: {
     eyebrow: "WHY WHALELEAP",
-    title: "A Shopify growth engineering partner for Chinese-founded brands selling globally.",
-    studioIntro: "",
+    title: "A Shopify growth engineering partner for DTC brands selling globally.",
+    studioIntro: "WhaleLeap Studio is a Shenzhen-based company with a dedicated Shopify development team. The people you talk to are the people who deliver — no hand-offs, no subcontracting.",
     description:
-      "WhaleLeap is not a page-delivery outsourcing team. We connect frontend engineering, Shopify experience, and cross-border ecommerce context to growth outcomes.",
+      "WhaleLeap doesn't just deliver pages. We combine hands-on Shopify development experience with cross-border ecommerce know-how to build a sales channel that's easy to maintain and keep improving.",
     reasons: [
       {
         title: "6 years of frontend experience",
@@ -57,15 +57,15 @@ const copy = {
       },
       {
         title: "Cross-border ecommerce context",
-        text: "Understands Chinese brands going global, overseas Chinese founders, and real DTC operations.",
+        text: "Understands cross-border brands, global supply chains, and real DTC operations.",
       },
       {
         title: "Technical and commercial thinking",
         text: "Translates founder, operator, media buyer, and developer needs into executable plans.",
       },
       {
-        title: "Chinese communication",
-        text: "Complex requirements can be discussed directly in Chinese, reducing the cost of overseas service communication.",
+        title: "Bilingual communication",
+        text: "Complex requirements can be discussed in English or Chinese, reducing the cost of working across borders.",
       },
       {
         title: "Global market experience",

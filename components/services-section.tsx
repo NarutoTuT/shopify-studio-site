@@ -52,7 +52,7 @@ const copy = {
   en: {
     eyebrow: "SERVICE SYSTEM",
     title: "Services structured around Shopify growth, not development tasks.",
-    description: "Three service pillars map to three core problems: technical foundation, conversion path, and growth tracking.",
+    description: "Three service pillars map to three core questions: is your site stable and easy to use, is the buying path smooth, and does your data guide your next steps?",
     problemLabel: "PROBLEM",
     solutionLabel: "SOLUTION",
     capabilityLabel: "BEST FOR",
@@ -61,8 +61,8 @@ const copy = {
       {
         label: "01",
         title: "Shopify Development Services",
-        problem: "Your Shopify store needs a stable, fast, and maintainable technical foundation.",
-        solution: "We build and improve theme structure, key page modules, performance foundations, and technical SEO so your team can keep iterating.",
+        problem: "Your Shopify store needs to be stable, fast, and easy to maintain.",
+        solution: "We build and improve theme structure, key page sections, performance, and technical SEO so your team can keep iterating.",
         capability: "For new builds, theme redesigns, Liquid modules, custom sections, and performance improvements.",
       },
       {

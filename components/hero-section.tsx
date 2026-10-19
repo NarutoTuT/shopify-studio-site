@@ -20,7 +20,7 @@ const copy = {
   },
   en: {
     proofPoints: ["Shopify Theme Development", "Conversion Optimization", "Tracking Setup"],
-    eyebrow: "For Chinese-founded brands selling globally",
+    eyebrow: "For DTC brands selling globally",
     title: "Shopify Growth Engineering Studio",
     subtitle: "Helping global ecommerce brands build faster, more stable, and higher-converting Shopify stores.",
     description: "From Shopify Development Services and custom themes to conversion optimization and tracking setup, WhaleLeap helps brands turn traffic into orders.",

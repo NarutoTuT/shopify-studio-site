@@ -142,12 +142,12 @@ const copy = {
     auditCtaSecondary: "查看服务体系",
   },
   en: {
-    eyebrow: "FREE SHOPIFY REVIEW",
-    title: "Free Shopify Growth Review",
+    eyebrow: "FREE SHOPIFY STORE REVIEW",
+    title: "Free Shopify Store Review",
     description: "Start with a free consultation about your Shopify store, current issues, and project needs, then determine the right next step.",
     primaryCta: "Start My Free Review",
     secondaryCta: "Return Home",
-    trust: ["For Chinese-founded brands selling globally", "Free initial consultation", "No full requirements document needed"],
+    trust: ["For DTC brands selling globally", "Free initial consultation", "No full requirements document needed"],
     heroCards: [
       { title: "Engineering", text: "Theme, performance, mobile UX" },
       { title: "Conversion", text: "Homepage, PDP, CTA, trust" },
@@ -177,7 +177,7 @@ const copy = {
         icon: BarChart3,
       },
     ],
-    reviewTitle: "What We Review",
+    reviewTitle: "What We'll Look At",
     reviewDescription: "The initial consultation covers three areas. Further investigation or a written report is confirmed case by case.",
     reviewAreas: [
       {
@@ -240,7 +240,7 @@ const copy = {
     afterTitle: "What happens after submission?",
     afterIntro: "We start by understanding the request, then decide whether a written diagnosis, development project, or ongoing maintenance is appropriate.",
     afterItems: ["Request received", "Initial consultation", "Confirm suitable scope", "Agree the next step"],
-    auditCtaTitle: "Need a deeper plan? The next step is a Shopify Growth Audit.",
+    auditCtaTitle: "Need a deeper plan? The next step is an in-depth Shopify diagnosis.",
     auditCtaText: "The free stage is an initial consultation and does not guarantee a complete audit report. If further analysis is appropriate, the written diagnosis, development scope, and delivery terms are agreed separately.",
     auditCtaButton: "Start with Free Review",
     auditCtaSecondary: "View Services",
@@ -446,7 +446,7 @@ export function DiagnosisPage() {
 
   const reviewForm = (
     <form id="review-form" onSubmit={handleSubmit} noValidate className="scroll-mt-28">
-      <p className="mb-5 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">{language === "zh" ? "咨询表单" : "Review Form"}</p>
+      <p className="mb-5 font-mono text-base font-semibold uppercase tracking-[0.02em] text-primary">{language === "zh" ? "咨询表单" : "Store Information Form"}</p>
 
       <div className="grid gap-5">
         <Field label={text.labels.storeUrl}>
@@ -584,7 +584,7 @@ export function DiagnosisPage() {
         <section className="bg-background px-4 py-[50px] sm:px-6 md:px-10 md:py-[100px]">
           <div className="mx-auto grid max-w-[1500px] gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start lg:gap-10">
             <div className="lg:sticky lg:top-28">
-              <p className="mb-4 text-base font-semibold uppercase tracking-[0.08em] text-primary">{language === "zh" ? "店铺信息表单" : "Review Form"}</p>
+              <p className="mb-4 text-base font-semibold uppercase tracking-[0.08em] text-primary">{language === "zh" ? "店铺信息表单" : "Store Information Form"}</p>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.formTitle}</h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{text.formDescription}</p>
             </div>
@@ -699,7 +699,7 @@ export function DiagnosisPage() {
                 <div className="relative mx-auto mt-4 flex max-w-2xl flex-col items-center overflow-hidden rounded-[42%_58%_52%_48%/58%_42%_58%_42%] bg-[radial-gradient(circle_at_35%_20%,rgba(255,255,255,0.13),transparent_24%),linear-gradient(135deg,rgba(119,252,117,0.14),rgba(34,211,238,0.055),rgba(0,0,0,0.22))] px-6 py-8 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_0_55px_rgba(119,252,117,0.09)] lg:mt-1 lg:max-w-xl">
                   <span aria-hidden="true" className="absolute inset-4 animate-[spin_28s_linear_infinite] rounded-[45%_55%_48%_52%] border border-dashed border-primary/18 motion-reduce:animate-none" />
                   <Target className="relative size-7 text-primary" />
-                  <strong className="relative mt-3 text-xl leading-tight text-white">{language === "zh" ? "店铺检查范围" : "Growth Review Coverage"}</strong>
+                  <strong className="relative mt-3 text-xl leading-tight text-white">{language === "zh" ? "店铺检查范围" : "Store Review Coverage"}</strong>
                   <span className="relative mt-2 font-mono text-base uppercase text-primary">Engineering + Conversion + Tracking</span>
                 </div>
               </div>

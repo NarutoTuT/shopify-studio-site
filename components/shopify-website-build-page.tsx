@@ -104,12 +104,12 @@ const copy = {
     title: "Shopify Development Services",
     subtitle: "Build a faster, more stable, and maintainable Shopify foundation for global ecommerce brands.",
     description:
-      "WhaleLeap provides Shopify Development Services for Chinese-founded brands selling globally, creating storefront foundations that support traffic, optimization, and long-term growth.",
+      "WhaleLeap provides Shopify Development Services for DTC brands selling globally, creating storefront foundations that support traffic, optimization, and long-term growth.",
     primaryCta: "Get a Free Shopify Review",
     secondaryCta: "View Scope",
     proof: ["Shopify Theme Development", "Liquid Development", "Performance Optimization"],
     problemTitle: "Common technical growth blockers",
-    problemIntro: "Many Shopify stores do not need more pages first. They need a technical foundation that no longer blocks brand expression, UX, and future optimization.",
+    problemIntro: "Many Shopify stores do not need more pages first. They need a solid foundation that no longer blocks brand expression, UX, and future optimization.",
     problems: [
       { title: "Templates limit brand expression", mobileTitle: "Template limits", text: "Theme structure cannot support brand story, product value, or campaign needs.", impact: "Brand differentiation gets flattened into generic templates, making product value harder to understand.", areas: ["Homepage", "PDP", "Campaign"], action: "Rebuild configurable sections and content hierarchy so brand storytelling supports conversion.", icon: Layers3 },
       { title: "Speed hurts experience", mobileTitle: "Site speed", text: "Slow loading, heavy images, and scripts reduce patience and conversion on mobile.", impact: "Longer first-view waits increase mobile bounce and create more drop-off before checkout.", areas: ["Images", "Scripts", "Apps"], action: "Audit asset weight, script execution, and loading priority across the critical journey.", icon: Gauge },
@@ -119,7 +119,7 @@ const copy = {
       { title: "Maintenance gets difficult", mobileTitle: "Maintenance", text: "Without clear modules and delivery boundaries, every optimization becomes another patch.", impact: "Merchants cannot update content safely, so every campaign remains dependent on development.", areas: ["Theme Editor", "Schema", "Handoff"], action: "Add editable settings, module guidance, and handoff documentation for safe daily iteration.", icon: ShieldCheck },
     ],
     solutionTitle: "Shopify Development Services Approach",
-    solutionIntro: "We treat Shopify engineering as a growth foundation, not a one-time page build.",
+    solutionIntro: "We treat Shopify development as a growth foundation, not a one-time page build.",
     solutions: [
       { title: "Shopify Theme Development", mobileTitle: "Theme Development", build: "Build a clear and extensible theme architecture for every core page.", value: "Reduce temporary overrides and duplicated code so future campaigns remain stable.", deliverables: ["Theme architecture", "Reusable templates", "Editor-ready structure"], icon: Code2 },
       { title: "Liquid Development", mobileTitle: "Liquid Development", build: "Develop business-specific Liquid templates, data presentation, and dynamic behavior.", value: "Turn native Shopify capabilities into the product, content, and purchase experience the brand needs.", deliverables: ["Liquid logic", "Dynamic templates", "Native integrations"], icon: FileText },

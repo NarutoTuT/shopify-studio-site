@@ -60,7 +60,7 @@ const copy = {
     eyebrow: "GROWTH BLOCKERS",
     title: "Many Shopify stores do not lack traffic. They leak revenue across the buying path.",
     description:
-      "Chinese-founded brands selling globally often have products, content, and ad budgets, but their stores still lose shoppers before trust, cart, and checkout.",
+      "DTC brands selling globally often have products, content, and ad budgets, but their stores still lose shoppers before trust, cart, and checkout.",
     problems: [
       {
         title: "Clicks do not become orders",
