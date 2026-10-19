@@ -182,7 +182,7 @@ const copy = {
     reviewAreas: [
       {
         title: "Shopify Development Services",
-        text: "Review whether the technical foundation can support a stable experience and future growth.",
+        text: "Review whether the store is stable, easy to use, and ready for future improvements.",
         items: ["Theme", "Performance", "Mobile Experience"],
         icon: Globe2,
       },
@@ -679,7 +679,7 @@ export function DiagnosisPage() {
                   {text.reviewAreas.map((item, index) => {
                     const Icon = item.icon
                     const tone = index === 0 ? "text-primary bg-primary/11 shadow-[0_0_28px_rgba(119,252,117,0.13)]" : index === 1 ? "text-[#6ef0b7] bg-[#6ef0b7]/10 shadow-[0_0_28px_rgba(110,240,183,0.1)]" : "text-cyan-300 bg-cyan-300/10 shadow-[0_0_28px_rgba(34,211,238,0.1)]"
-                    const code = index === 0 ? "FOUNDATION" : index === 1 ? "JOURNEY" : "MEASUREMENT"
+                    const code = index === 0 ? (language === "zh" ? "FOUNDATION" : "STORE") : index === 1 ? "JOURNEY" : "MEASUREMENT"
                     return (
                       <article key={item.title} className="relative min-w-0 py-6 pl-14 pr-2 lg:min-h-[390px] lg:px-7 lg:py-9 lg:text-center xl:px-10">
                         <div aria-hidden="true" className={"absolute inset-[8%] -z-10 rounded-full blur-3xl " + (index === 0 ? "bg-primary/[0.035]" : index === 1 ? "bg-[#6ef0b7]/[0.025]" : "bg-cyan-300/[0.025]")} />

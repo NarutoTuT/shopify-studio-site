@@ -81,7 +81,7 @@ const copy = {
     arrow: "›",
     plans: [
       {
-        name: "Module-Based Build",
+        name: "Reference-Based Quick Build",
         badge: "from ¥20,000",
         price: "20,000",
         outcome: "For teams with reference sites or clear module needs. We combine selected modules and launch a stable Shopify store.",
@@ -118,7 +118,7 @@ const copy = {
         outcome: "For larger SKU catalogs, wholesale, quote flows, ERP, CRM, or complex fulfillment. We connect the site to the real business workflow.",
         cta: "Plan my complex build",
         features: [
-          "Built on the custom design and development foundation",
+          "Includes the custom design and development work",
           "B2B wholesale, customer tiers, quote, or distributor flows",
           "Xero, ERP, CRM, or logistics API assessment",
           "Complex logistics, payments, multi-currency, or data migration",

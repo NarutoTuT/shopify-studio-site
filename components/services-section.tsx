@@ -77,7 +77,7 @@ const copy = {
         title: "Growth Analytics & Tracking",
         problem: "You cannot clearly connect ads, pages, and orders.",
         solution: "We set up GA4, GTM, Meta Pixel, and Google Ads tracking so teams can see conversion paths and growth opportunities.",
-        capability: "For tracking setup, ad conversion events, attribution cleanup, and growth reporting foundations.",
+        capability: "For tracking setup, ad conversion events, attribution cleanup, and reliable growth reports.",
       },
     ],
   },

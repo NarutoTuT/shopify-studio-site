@@ -311,7 +311,7 @@ const copy = {
     faqs: [
       {
         q: "What is the difference between theme customization and rebuilding?",
-        a: "Theme customization modifies modules, templates, and interactions on the existing store and theme. Rebuilding usually rethinks the full page structure, visual system, and theme foundation. If the current base can still be iterated, customization is lighter.",
+        a: "Theme customization modifies modules, templates, and interactions on the existing store and theme. Rebuilding usually rethinks the full page structure, visual system, and theme setup. If the current theme can still be improved, customization is lighter.",
       },
       {
         q: "Can you modify an existing theme?",

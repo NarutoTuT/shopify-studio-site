@@ -150,7 +150,7 @@ const copy = {
     planBenefit: "The free stage starts with requirements discovery. Any written diagnosis, development quote, or follow-up plan is confirmed case by case.",
     plans: [
       {
-        name: "Module-Based Build",
+        name: "Reference-Based Quick Build",
         price: "from ¥20,000",
         support: "Post-launch support period, scope, and terms are defined in the project contract",
         timeline: "2-4 weeks",

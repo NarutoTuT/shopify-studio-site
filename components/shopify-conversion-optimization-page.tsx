@@ -327,7 +327,7 @@ const copy = {
       },
       {
         q: "What is the difference between CRO and rebuilding the site?",
-        a: "CRO improves bottlenecks on the existing site. Rebuilding is better when structure, brand, technology, or theme foundations are no longer suitable for iteration. The right choice depends on the current state.",
+        a: "CRO improves bottlenecks on the existing site. Rebuilding is better when the site structure, brand presentation, technology, or theme can no longer support improvements. The right choice depends on the current state.",
       },
       {
         q: "How long does it take to see results?",
@@ -458,7 +458,7 @@ const faqDecisionMeta = [
   {
     enCategory: "Strategy",
     zhCategory: "方案选择",
-    enConclusion: "Optimize local bottlenecks; rebuild only when the foundation blocks iteration.",
+    enConclusion: "Fix specific bottlenecks; rebuild only when the current site blocks further improvements.",
     zhConclusion: "局部断点优先做 CRO，基础结构无法迭代时再考虑重建。",
     enChecks: ["Current theme flexibility", "Scale of structural issues", "Cost of continued patching"],
     zhChecks: ["当前主题的扩展能力", "结构问题的影响范围", "持续修补的长期成本"],

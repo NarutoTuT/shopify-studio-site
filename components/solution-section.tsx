@@ -46,7 +46,7 @@ const copy = {
       {
         label: "Engineering",
         title: "Shopify Development Services",
-        text: "Build Shopify themes, Liquid modules, custom sections, performance foundations, and technical SEO for a faster, maintainable store.",
+        text: "Build Shopify themes, Liquid modules, custom sections, improve performance, and handle technical SEO for a faster, maintainable store.",
       },
       {
         label: "Conversion",

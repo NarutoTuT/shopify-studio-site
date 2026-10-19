@@ -7,10 +7,10 @@ This roadmap tracks the website direction, not day-to-day commits.
 WhaleLeap Studio is being positioned as:
 
 ```text
-Shopify Growth Engineering Studio for Chinese-founded global ecommerce brands.
+Shopify Growth Engineering Studio for DTC brands selling globally.
 ```
 
-The website should help visitors understand that WhaleLeap does more than build Shopify pages. The core offer is improving the Shopify foundation behind ecommerce growth:
+The website should help visitors understand that WhaleLeap does more than build Shopify pages. The core offer is improving the store experience behind ecommerce growth:
 
 - Engineering
 - Conversion

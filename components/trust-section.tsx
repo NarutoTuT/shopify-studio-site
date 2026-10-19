@@ -49,7 +49,7 @@ const copy = {
     reasons: [
       {
         title: "6 years of frontend experience",
-        text: "Strong foundation in components, performance, responsive UX, and maintainable implementation.",
+        text: "Experience building reusable components, improving performance, and delivering responsive, maintainable storefronts.",
       },
       {
         title: "Shopify Theme / Liquid experience",

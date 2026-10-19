@@ -162,13 +162,13 @@ const copy = {
     title: "Shopify GA4 / GTM Tracking Setup",
     subtitle: "Track ad clicks, product views, add-to-cart, checkout, and purchase events accurately enough to review decisions.",
     description:
-      "A Shopify store that sells is not enough. You need to know where orders come from, where visitors drop off, and why ad platforms and GA4 disagree. We build a trackable foundation around ecommerce events, GTM, ad pixels, and pre-launch testing.",
+      "A Shopify store that sells is not enough. You need to know where orders come from, where visitors drop off, and why ad platforms and GA4 disagree. We set up ecommerce events, GTM, ad pixels, and pre-launch tests so you can trust your tracking.",
     primaryCta: "Diagnose My Tracking Issue",
     secondaryCta: "View Tracking Scope",
     proof: ["GA4 ecommerce events", "GTM container setup", "Meta / Google Ads conversion basics"],
     fitTitle: "Best fit",
     fitIntro: "If any of these signals match your current store, review the tracking path before adding more tags.",
-    fitSignalTitles: ["Running or preparing paid media", "Shopify and platform data disagree", "Core ecommerce events are unreliable", "Tracking foundations are needed before launch"],
+    fitSignalTitles: ["Running or preparing paid media", "Shopify and platform data disagree", "Core ecommerce events are unreliable", "Tracking needs to be set up before launch"],
     fitResult: "One matching signal is enough to review the tracking path",
     fitItems: [
       "Stores running or preparing Meta Ads, Google Ads, or other paid channels",
@@ -178,12 +178,12 @@ const copy = {
     ],
     scopeTitle: "Scope of work",
     scopeIntro: "The goal is not more tags. The goal is a conversion path that can be tracked, validated, and explained.",
-    scopeGroupTitles: ["Foundation", "Signal collection", "Quality validation"],
+    scopeGroupTitles: ["Tracking setup", "Signal collection", "Quality validation"],
     scopeGroupDescriptions: ["GA4 + GTM", "Events + Ads", "Schema + QA"],
     scopeResults: ["Trackable", "Validated", "Explainable"],
     scopes: [
       {
-        title: "GA4 foundation",
+        title: "GA4 setup",
         text: "Confirm GA4 property, data stream, ecommerce events, and key conversion basics.",
         icon: BarChart3,
       },
@@ -318,7 +318,7 @@ const ga4GtmStructuredData = {
 }
 
 const ga4GtmFaqMeta = [
-  { code: "FOUNDATION", zh: ["Shopify", "GA4", "基础配置"], en: ["Shopify", "GA4", "Foundation"] },
+  { code: "FOUNDATION", zh: ["Shopify", "GA4", "基础配置"], en: ["Shopify", "GA4", "Setup"] },
   { code: "PLATFORM", zh: ["GA4", "GTM", "职责边界"], en: ["GA4", "GTM", "Responsibilities"] },
   { code: "ATTRIBUTION", zh: ["订单差异", "归因窗口", "数据校验"], en: ["Order variance", "Attribution", "Validation"] },
   { code: "META", zh: ["Meta Pixel", "标准事件", "广告转化"], en: ["Meta Pixel", "Standard events", "Ads"] },
@@ -499,7 +499,7 @@ export function ShopifyGa4GtmPage() {
                     return (
                       <li key={groupTitle} className="relative z-10 min-w-0 px-4 text-center">
                         <span className={`mx-auto flex size-16 items-center justify-center rounded-full bg-[#050806] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.09),0_0_30px_rgba(119,252,117,0.14)] ${groupIndex === 2 ? "text-cyan-200" : "text-primary"}`}><GroupIcon className="size-7" /></span>
-                        <p className="mt-5 font-mono text-base uppercase text-primary/70">0{groupIndex + 1} / {groupIndex === 0 ? "FOUNDATION" : groupIndex === 1 ? "SIGNALS" : "QUALITY"}</p>
+                        <p className="mt-5 font-mono text-base uppercase text-primary/70">0{groupIndex + 1} / {groupIndex === 0 ? (language === "zh" ? "FOUNDATION" : "SETUP") : groupIndex === 1 ? "SIGNALS" : "QUALITY"}</p>
                         <h3 className="mt-1 text-xl font-bold text-white">{groupTitle}</h3>
                         <p className="mt-2 font-mono text-base text-cyan-200/55">{text.scopeGroupDescriptions[groupIndex]}</p>
 
@@ -528,7 +528,7 @@ export function ShopifyGa4GtmPage() {
                       <li key={groupTitle} className="relative z-10 flex items-start gap-4 py-3">
                         <span className={`flex size-12 shrink-0 items-center justify-center rounded-full bg-[#050806] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.09),0_0_26px_rgba(119,252,117,0.12)] ${groupIndex === 2 ? "text-cyan-200" : "text-primary"}`}><GroupIcon className="size-5" /></span>
                         <div className="min-w-0 flex-1 pt-0.5">
-                          <p className="font-mono text-base uppercase text-primary/70">0{groupIndex + 1} / {groupIndex === 0 ? "FOUNDATION" : groupIndex === 1 ? "SIGNALS" : "QUALITY"}</p>
+                          <p className="font-mono text-base uppercase text-primary/70">0{groupIndex + 1} / {groupIndex === 0 ? (language === "zh" ? "FOUNDATION" : "SETUP") : groupIndex === 1 ? "SIGNALS" : "QUALITY"}</p>
                           <h3 className="mt-1 text-xl font-bold text-white">{groupTitle}</h3>
                           <p className="mt-1 font-mono text-base text-cyan-200/55">{text.scopeGroupDescriptions[groupIndex]}</p>
                           <div className="mt-5 space-y-5">

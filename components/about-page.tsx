@@ -342,7 +342,7 @@ const copy = {
       },
       {
         title: "Validate with data",
-        text: "GA4, GTM, and core events are the foundation for judging whether pages and campaigns are working.",
+        text: "GA4, GTM, and core events help us judge whether pages and campaigns are working.",
         icon: LineChart,
       },
       {

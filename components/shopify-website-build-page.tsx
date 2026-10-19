@@ -102,14 +102,14 @@ const copy = {
   en: {
     eyebrow: "SHOPIFY DEVELOPMENT SERVICES",
     title: "Shopify Development Services",
-    subtitle: "Build a faster, more stable, and maintainable Shopify foundation for global ecommerce brands.",
+    subtitle: "Build a faster, more stable Shopify store that your team can maintain.",
     description:
-      "WhaleLeap provides Shopify Development Services for DTC brands selling globally, creating storefront foundations that support traffic, optimization, and long-term growth.",
+      "WhaleLeap provides Shopify Development Services for DTC brands selling globally, building stores that can handle traffic, ongoing improvements, and long-term growth.",
     primaryCta: "Get a Free Shopify Review",
     secondaryCta: "View Scope",
     proof: ["Shopify Theme Development", "Liquid Development", "Performance Optimization"],
     problemTitle: "Common technical growth blockers",
-    problemIntro: "Many Shopify stores do not need more pages first. They need a solid foundation that no longer blocks brand expression, UX, and future optimization.",
+    problemIntro: "Many Shopify stores do not need more pages first. They need a reliable store that no longer holds back brand expression, UX, and future improvements.",
     problems: [
       { title: "Templates limit brand expression", mobileTitle: "Template limits", text: "Theme structure cannot support brand story, product value, or campaign needs.", impact: "Brand differentiation gets flattened into generic templates, making product value harder to understand.", areas: ["Homepage", "PDP", "Campaign"], action: "Rebuild configurable sections and content hierarchy so brand storytelling supports conversion.", icon: Layers3 },
       { title: "Speed hurts experience", mobileTitle: "Site speed", text: "Slow loading, heavy images, and scripts reduce patience and conversion on mobile.", impact: "Longer first-view waits increase mobile bounce and create more drop-off before checkout.", areas: ["Images", "Scripts", "Apps"], action: "Audit asset weight, script execution, and loading priority across the critical journey.", icon: Gauge },
@@ -119,20 +119,20 @@ const copy = {
       { title: "Maintenance gets difficult", mobileTitle: "Maintenance", text: "Without clear modules and delivery boundaries, every optimization becomes another patch.", impact: "Merchants cannot update content safely, so every campaign remains dependent on development.", areas: ["Theme Editor", "Schema", "Handoff"], action: "Add editable settings, module guidance, and handoff documentation for safe daily iteration.", icon: ShieldCheck },
     ],
     solutionTitle: "Shopify Development Services Approach",
-    solutionIntro: "We treat Shopify development as a growth foundation, not a one-time page build.",
+    solutionIntro: "We build Shopify stores for ongoing improvement, not just a one-time launch.",
     solutions: [
       { title: "Shopify Theme Development", mobileTitle: "Theme Development", build: "Build a clear and extensible theme architecture for every core page.", value: "Reduce temporary overrides and duplicated code so future campaigns remain stable.", deliverables: ["Theme architecture", "Reusable templates", "Editor-ready structure"], icon: Code2 },
       { title: "Liquid Development", mobileTitle: "Liquid Development", build: "Develop business-specific Liquid templates, data presentation, and dynamic behavior.", value: "Turn native Shopify capabilities into the product, content, and purchase experience the brand needs.", deliverables: ["Liquid logic", "Dynamic templates", "Native integrations"], icon: FileText },
       { title: "Custom Sections", mobileTitle: "Custom Sections", build: "Create configurable brand, product, and campaign modules for daily operations.", value: "Reduce developer dependency while keeping visual and structural consistency.", deliverables: ["Section schema", "Editable content", "Reusable modules"], icon: Layers3 },
       { title: "Performance Optimization", mobileTitle: "Performance", build: "Optimize images, third-party scripts, resource priority, and critical-page execution.", value: "Reduce mobile wait and bounce risk while keeping browsing and purchase journeys responsive.", deliverables: ["Performance audit", "Asset cleanup", "Validation record"], icon: Gauge },
-      { title: "Technical SEO", mobileTitle: "Technical SEO", build: "Improve page hierarchy, metadata, internal links, and crawlable structured content.", value: "Help search engines understand and index the site as a foundation for future content growth.", deliverables: ["SEO structure", "Metadata baseline", "Crawl checks"], icon: Search },
+      { title: "Technical SEO", mobileTitle: "Technical SEO", build: "Improve page hierarchy, metadata, internal links, and crawlable structured content.", value: "Help search engines understand and index the site so future content is easier to discover.", deliverables: ["SEO structure", "Metadata baseline", "Crawl checks"], icon: Search },
       { title: "Launch QA", mobileTitle: "Launch QA", build: "Validate critical pages, mobile behavior, interactions, forms, and launch readiness.", value: "Catch regressions and blockers before release to reduce post-launch repair cost.", deliverables: ["Responsive QA", "Launch checklist", "Issue handoff"], icon: ShieldCheck },
     ],
     workTitle: "What We Work On",
     workIntro: "For new Shopify builds, existing store rebuilds, technical upgrades, and performance cleanup.",
     workItems: [
-      { title: "New Shopify Build", mobileTitle: "New build", description: "Create a growth-ready store from information architecture and theme structure through every core page.", result: "Launch with a complete, responsive Shopify foundation that merchants can continue editing.", includes: ["Homepage", "Collection", "PDP"], preview: "build", icon: MonitorSmartphone },
-      { title: "Existing Store Rebuild", mobileTitle: "Store rebuild", description: "Keep useful content and data while rebuilding legacy theme structure, pages, and mobile UX.", result: "Reduce historical theme debt and continue iteration on a more stable foundation.", includes: ["Before / After", "Theme migration", "Mobile rebuild"], preview: "rebuild", icon: Layers3 },
+      { title: "New Shopify Build", mobileTitle: "New build", description: "Create a growth-ready store from information architecture and theme structure through every core page.", result: "Launch a complete, responsive Shopify store that merchants can continue editing.", includes: ["Homepage", "Collection", "PDP"], preview: "build", icon: MonitorSmartphone },
+      { title: "Existing Store Rebuild", mobileTitle: "Store rebuild", description: "Keep useful content and data while rebuilding legacy theme structure, pages, and mobile UX.", result: "Reduce old theme issues so your team can keep improving the store with fewer setbacks.", includes: ["Before / After", "Theme migration", "Mobile rebuild"], preview: "rebuild", icon: Layers3 },
       { title: "Theme Customization", mobileTitle: "Customization", description: "Customize theme components, layouts, and interactions around brand and operational needs.", result: "Move beyond generic templates while preserving Theme Editor flexibility.", includes: ["Brand UI", "Theme settings", "Interactions"], preview: "theme", icon: Code2 },
       { title: "Custom PDP Sections", mobileTitle: "Custom PDP", description: "Create dedicated PDP modules for product value, specifications, comparison, trust, and purchase decisions.", result: "Help shoppers understand product differences faster and shorten the path to purchase.", includes: ["Product story", "Specifications", "Purchase UI"], preview: "pdp", icon: ShoppingBag },
       { title: "Landing Pages", mobileTitle: "Landing pages", description: "Build focused landing pages for launches, paid traffic, and marketing campaigns.", result: "Align visual story, product value, and CTAs around one conversion objective.", includes: ["Campaign hero", "Offer flow", "CTA system"], preview: "landing", icon: ArrowUpRight },
@@ -152,8 +152,8 @@ const copy = {
     processTitle: "Working Process",
     process: ["Review", "Scope", "Build", "QA", "Launch"],
     fitTitle: "Who It Is For",
-    fitIntro: "Use this when you need more than a launch. You need a Shopify foundation that can keep improving.",
-    fitItems: ["Chinese-founded brands selling globally", "Shopify founders", "Amazon-to-Shopify brands", "Shopify stores needing technical upgrades"],
+    fitIntro: "Use this when you need more than a launch. You need a Shopify store your team can keep improving.",
+    fitItems: ["DTC brands selling globally", "Shopify founders", "Amazon-to-Shopify brands", "Shopify stores needing technical upgrades"],
     faqTitle: "FAQ",
     faqs: [
       {
@@ -170,7 +170,7 @@ const copy = {
       },
       {
         q: "Does it include performance optimization?",
-        a: "It includes foundational performance review and cleanup around images, scripts, section structure, app stacking, and mobile experience. Deeper performance work is scoped after review.",
+        a: "It includes a basic performance review and cleanup around images, scripts, section structure, app stacking, and mobile experience. Deeper performance work is scoped after review.",
       },
       {
         q: "Does it include SEO?",
@@ -178,10 +178,10 @@ const copy = {
       },
       {
         q: "How do we start?",
-        a: "Start with a Free Shopify Review. We first assess technical foundation, page experience, and optimization priorities, then define the implementation scope.",
+        a: "Start with a Free Shopify Review. We first assess store performance, page experience, and improvement priorities, then define the implementation scope.",
       },
     ],
-    ctaTitle: "Find out whether your Shopify foundation can support growth.",
+    ctaTitle: "Find out whether your Shopify store is ready to grow.",
     ctaText: "Submit your store URL, product type, and current blockers. We will judge whether new build, rebuild, theme customization, or performance cleanup fits best.",
     ctaBenefit: "Start with a free consultation, then confirm development scope, pricing, and delivery terms for the project.",
   },
@@ -208,7 +208,7 @@ const websiteBuildStructuredData = {
     ],
     service: {
       name: "Shopify Development Services",
-      description: "Shopify Development Services for cross-border brands, including theme development, Liquid modules, custom sections, performance foundations, technical SEO, and launch QA.",
+      description: "Shopify Development Services for cross-border brands, including theme development, Liquid modules, custom sections, performance improvements, technical SEO, and launch QA.",
       url: "https://whaleleap.studio/en/services/shopify-website-build",
     },
   },
@@ -221,7 +221,7 @@ const storefrontProducts = [
 ]
 
 const websiteBuildFaqMeta = [
-  { code: "ENGINEERING", zh: ["技术基础", "持续迭代", "增长承载"], en: ["Foundation", "Iteration", "Growth"] },
+  { code: "ENGINEERING", zh: ["技术基础", "持续迭代", "增长承载"], en: ["Store setup", "Iteration", "Growth"] },
   { code: "REBUILD", zh: ["现有店铺", "风险评估", "重建判断"], en: ["Existing store", "Risk review", "Rebuild"] },
   { code: "LIQUID", zh: ["主题开发", "Custom Sections", "PDP"], en: ["Theme build", "Custom sections", "PDP"] },
   { code: "SPEED", zh: ["图片资源", "脚本审查", "移动端"], en: ["Assets", "Scripts", "Mobile"] },
@@ -472,7 +472,7 @@ export function ShopifyWebsiteBuildPage() {
         system: "Audience fit scanner",
         matched: "04 / 04 MATCHED",
         coreTop: "Shopify",
-        coreMain: "Growth Foundation",
+        coreMain: "Store Ready",
         coreStatus: "TECHNICAL FIT / CONFIRMED",
         details: [
           "Needs brand expression with long-term flexibility",
@@ -679,7 +679,7 @@ export function ShopifyWebsiteBuildPage() {
                   <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/12 text-primary shadow-[0_0_22px_rgba(119,252,117,0.12)]"><Code2 className="size-5" /></span>
                   <div className="min-w-0">
                     <p className="font-mono text-base uppercase leading-tight tracking-[0.03em] text-primary">{solutionLabels.pipeline}</p>
-                    <p className="mt-1 hidden text-base text-white/46 sm:block">Shopify foundation build system</p>
+                    <p className="mt-1 hidden text-base text-white/46 sm:block">{language === "zh" ? "Shopify foundation build system" : "Shopify store build process"}</p>
                   </div>
                 </div>
                 <span className="flex shrink-0 items-center gap-2 font-mono text-base uppercase tracking-[-0.02em] text-cyan-200">
