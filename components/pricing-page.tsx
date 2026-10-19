@@ -22,7 +22,7 @@ const copy = {
     planBenefit: "免费阶段先了解需求；是否提供书面诊断、开发报价或后续方案，根据项目情况确认。",
     plans: [
       {
-        name: "文档模板方案",
+        name: "参考站快速建站方案",
         price: "¥20,000 起",
         support: "项目售后期限、范围和条件以合同约定为准",
         timeline: "约 2-4 周",
@@ -111,7 +111,7 @@ const copy = {
         a: "差异主要来自设计深度、页面数量、SKU 复杂度、第三方系统对接、数据追踪要求和上线后的维护范围。只套模板和完整定制销售路径，不是同一种交付。",
       },
       {
-        q: "什么时候选 ¥20,000 起的方案？",
+        q: "什么时候选参考站快速建站方案（¥20,000 起）？",
         a: "适合已有参考站、品牌视觉要求相对简单、希望尽快上线验证产品的团队。它重点解决稳定上线和基础销售路径。",
       },
       {
@@ -132,7 +132,7 @@ const copy = {
       },
     ],
     ctaTitle: "不确定选哪一档，先做诊断。",
-    ctaText: "把产品、预算、上线时间和当前问题发来，我们会先判断应该用模板方案、设计图定制，还是复杂业务定制。",
+    ctaText: "把产品、预算、上线时间和当前问题发来，我们会先判断应该用参考站快速建站方案、设计图定制，还是复杂业务定制。",
     costGuideTitle: "想先理解 Shopify 建站费用怎么算？",
     costGuideText: "查看费用说明页，了解三档报价差异、影响价格的因素，以及哪些第三方费用通常不包含在建站报价里。",
     costGuideCta: "查看 Shopify 建站费用说明",
@@ -372,16 +372,18 @@ export function PricingPage() {
               <div className="relative grid gap-2 px-2 pb-3 pt-3 lg:grid-cols-3 lg:gap-3 lg:px-3 lg:pb-0 xl:gap-4">
                 {text.plans.map((plan, index) => (
                   <article key={plan.name} className={`relative overflow-hidden rounded-[1.75rem] px-3 backdrop-blur-sm sm:px-5 lg:flex lg:flex-col lg:rounded-[2rem] lg:px-6 lg:pb-10 lg:pt-8 xl:px-8 ${plan.featured ? "bg-[radial-gradient(circle_at_50%_8%,rgba(119,252,117,0.15),transparent_38%),rgba(119,252,117,0.035)]" : index === 2 ? "bg-[radial-gradient(circle_at_50%_8%,rgba(34,211,238,0.08),transparent_36%),rgba(255,255,255,0.018)]" : "bg-[radial-gradient(circle_at_50%_8%,rgba(255,255,255,0.055),transparent_36%),rgba(255,255,255,0.018)]"}`}>
-                    <button type="button" aria-expanded={activePlan === index} aria-controls={`plan-details-${index}`} onClick={() => setActivePlan(index)} className="flex w-full items-start py-6 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:pointer-events-none lg:block lg:py-0">
-                      <div className="flex min-h-12 flex-wrap items-center gap-3 lg:min-h-16 lg:justify-between lg:gap-4">
+                    <button type="button" aria-expanded={activePlan === index} aria-controls={`plan-details-${index}`} onClick={() => setActivePlan(index)} className="relative block w-full py-6 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:pointer-events-none lg:py-0">
+                      <div className="flex min-h-12 flex-wrap items-center gap-3 pr-8 lg:min-h-16 lg:justify-between lg:gap-4 lg:pr-0">
                         <div className="flex items-center gap-3 lg:gap-4">
                           <span className={`flex size-12 shrink-0 items-center justify-center rounded-full border font-mono text-base font-bold lg:size-16 ${plan.featured ? "border-primary/50 bg-primary/12 text-primary shadow-[0_0_28px_rgba(119,252,117,0.16)]" : "border-white/15 bg-white/[0.035] text-foreground/75"}`}>0{index + 1}</span>
                           <p className="font-mono text-base font-semibold uppercase tracking-[0.04em] text-primary lg:tracking-[0.05em]">{pricingLabels.routes[index]}</p>
                         </div>
                         {plan.featured && <span className="rounded-full bg-primary/12 px-3 py-1 text-base font-semibold text-primary">{pricingLabels.recommended}</span>}
                       </div>
-                      <p className="mt-4 text-[1.75rem] font-bold leading-none tracking-[-0.02em] text-foreground lg:mt-7 lg:text-[clamp(1.75rem,2.4vw,2.65rem)]">{plan.price}</p>
-                      <h3 className="mt-3 text-xl font-bold leading-tight text-foreground lg:mt-5 lg:text-2xl">{plan.name}</h3>
+                      <div className="mt-5 flex flex-wrap items-baseline gap-x-3 gap-y-2 lg:mt-7 lg:block">
+                        <p className="text-2xl font-bold leading-none text-foreground lg:text-[clamp(1.75rem,2.4vw,2.65rem)] lg:tracking-[-0.02em]">{plan.price}</p>
+                        <h3 className="text-lg font-bold leading-tight text-foreground lg:mt-5 lg:text-2xl">{plan.name}</h3>
+                      </div>
                       <p className="mt-3 text-base leading-relaxed text-muted-foreground lg:hidden">{plan.bestFor}</p>
                       <p className="mt-4 flex items-center gap-2 text-base text-foreground/80 lg:hidden"><Clock3 className="size-4 shrink-0 text-primary" />{plan.timeline}</p>
                       <ChevronDown className={`absolute right-5 top-7 size-5 text-primary transition-transform lg:hidden ${activePlan === index ? "rotate-180" : ""}`} aria-hidden="true" />

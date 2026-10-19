@@ -43,13 +43,13 @@ const copy = {
     description: "通过免费初步沟通了解 Shopify 店铺、当前问题和项目需求，再判断适合的下一步。",
     primaryCta: "开始免费 Shopify 店铺检查",
     secondaryCta: "返回首页",
-    trust: ["面向海外华人跨境品牌", "免费初步沟通", "不需要完整需求文档"],
+    trust: ["面向做 Shopify 独立站的 DTC 品牌", "免费初步沟通", "不需要完整需求文档"],
     heroCards: [
       { title: "Engineering", text: "主题、性能、移动端体验" },
       { title: "Conversion", text: "首页、商品页、CTA、信任内容" },
       { title: "Tracking", text: "GA4、Pixel、Events" },
     ],
-    whyTitle: "为什么 Shopify 店铺需要一次增长检查？",
+    whyTitle: "为什么 Shopify 店铺需要一次店铺检查？",
     whyDescription: "很多店铺的问题不在单一页面，而是广告流量、页面说服力、技术性能和数据追踪之间没有形成闭环。",
     whyItems: [
       {
@@ -124,7 +124,7 @@ const copy = {
     options: {
       stage: ["新品牌建站", "已有 Shopify 改版", "主题功能开发", "数据追踪优化", "B2B/批发定制"],
       skuCount: ["1-20", "21-100", "101-500", "500+"],
-      budget: ["¥20,000 起", "¥35,000 左右", "¥50,000+", "需要先评估"],
+      budget: ["参考站快速建站方案（¥20,000 起）", "¥35,000 左右", "¥50,000+", "需要先评估"],
       timeline: ["2-4 周", "3-6 周", "6 周以上", "暂不确定"],
     },
     emailSubject: "Shopify 免费诊断咨询",
@@ -699,7 +699,7 @@ export function DiagnosisPage() {
                 <div className="relative mx-auto mt-4 flex max-w-2xl flex-col items-center overflow-hidden rounded-[42%_58%_52%_48%/58%_42%_58%_42%] bg-[radial-gradient(circle_at_35%_20%,rgba(255,255,255,0.13),transparent_24%),linear-gradient(135deg,rgba(119,252,117,0.14),rgba(34,211,238,0.055),rgba(0,0,0,0.22))] px-6 py-8 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_0_55px_rgba(119,252,117,0.09)] lg:mt-1 lg:max-w-xl">
                   <span aria-hidden="true" className="absolute inset-4 animate-[spin_28s_linear_infinite] rounded-[45%_55%_48%_52%] border border-dashed border-primary/18 motion-reduce:animate-none" />
                   <Target className="relative size-7 text-primary" />
-                  <strong className="relative mt-3 text-xl leading-tight text-white">{language === "zh" ? "店铺增长检查范围" : "Growth Review Coverage"}</strong>
+                  <strong className="relative mt-3 text-xl leading-tight text-white">{language === "zh" ? "店铺检查范围" : "Growth Review Coverage"}</strong>
                   <span className="relative mt-2 font-mono text-base uppercase text-primary">Engineering + Conversion + Tracking</span>
                 </div>
               </div>

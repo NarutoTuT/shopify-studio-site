@@ -25,7 +25,7 @@ const copy = {
     arrow: "›",
     plans: [
       {
-        name: "文档模板方案",
+        name: "参考站快速建站方案",
         badge: "¥20,000 起",
         price: "20,000",
         outcome: "适合已有参考网站或清楚模块需求的团队。按模块组合开发，先把 Shopify 店铺稳定上线。",

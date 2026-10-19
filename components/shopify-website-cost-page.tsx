@@ -24,7 +24,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const tiers = [
   {
-    name: "文档模板方案",
+    name: "参考站快速建站方案",
     price: "¥20,000 起",
     support: "项目售后期限、范围和条件以合同约定为准",
     description: "适合已有参考站、页面需求清晰、希望先稳定上线验证产品的团队。",
@@ -386,7 +386,7 @@ export function ShopifyWebsiteCostPage() {
                 <ShieldCheck className="mb-5 size-8 text-primary" />
                 <h2 className="max-w-4xl text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">不确定预算应该放在哪一档？</h2>
                 <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                  把产品品类、参考站、SKU 数量、上线时间和当前问题发来，我们先判断是文档模板方案、设计图定制方案，还是复杂业务定制。
+                  把产品品类、参考站、SKU 数量、上线时间和当前问题发来，我们先判断是参考站快速建站方案、设计图定制方案，还是复杂业务定制。
                 </p>
               </div>
               <a href="/diagnosis" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98]">
