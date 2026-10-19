@@ -12,7 +12,7 @@ const copy = {
     eyebrow: "面向做 Shopify 独立站的 DTC 品牌",
     title: "Shopify 独立站定制开发工作室",
     subtitle: "帮助 DTC 品牌打造更快、更稳定、更好卖的 Shopify 独立站。",
-    description: "从 Shopify 建站、主题开发，到页面转化优化和数据追踪，帮助品牌把流量真正转化为订单。",
+    description: "",
     primaryCta: "免费 Shopify 店铺检查",
     secondaryCta: "查看服务体系",
     ctaBenefit: "先免费沟通店铺现状与需求，再根据项目情况确认是否需要书面诊断或进一步实施。",
@@ -245,9 +245,11 @@ export function HeroSection() {
           {text.subtitle}
         </p>
 
-        <p className="hero-animate text-muted-foreground text-base md:text-lg font-normal leading-[1.6] mb-8 md:mb-12 max-w-3xl mx-auto">
-          {text.description}
-        </p>
+        {text.description && (
+          <p className="hero-animate text-muted-foreground text-base md:text-lg font-normal leading-[1.6] mb-8 md:mb-12 max-w-3xl mx-auto">
+            {text.description}
+          </p>
+        )}
 
         <div className="hero-animate flex flex-wrap gap-5 font-medium justify-center">
           <a href={localizedPath("/diagnosis")} className="pointer-events-auto bg-primary text-primary-foreground px-8 py-4 md:px-10 md:py-5 text-base rounded-full cursor-pointer hover:brightness-110 transition-all duration-300 active:scale-[0.97] shadow-[0_0_20px_rgba(119,252,117,0.3)]">
