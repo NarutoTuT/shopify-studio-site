@@ -10,9 +10,9 @@ const copy = {
   zh: {
     eyebrow: "WHY WHALELEAP",
     title: "更懂 DTC 品牌生意的 Shopify 开发伙伴。",
-    studioIntro: "WhaleLeap 是一人主导的 Shopify 开发工作室，没有销售转接，也不把项目转包出去。和你沟通需求的人，就是实际写代码、检查页面和负责交付的人。",
+    studioIntro: "WhaleLeap Studio 背后是深圳市知策先见智能科技有限公司，一支专注 Shopify 独立站的开发团队。和你对接需求的人直接负责项目交付，项目不转包出去。",
     description:
-      "WhaleLeap 不只是把页面做完交付。我们会结合 Shopify 开发经验和独立站运营需求，把网站做成方便上线、维护和继续优化的销售渠道。",
+      "我们不只交付页面。结合 Shopify 开发经验和独立站运营需求，把网站做成好维护、能持续优化的销售渠道。",
     reasons: [
       {
         title: "6 年前端开发经验",
