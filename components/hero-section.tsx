@@ -10,11 +10,11 @@ const copy = {
   zh: {
     proofPoints: ["Shopify Theme Development", "Conversion Optimization", "Tracking Setup"],
     eyebrow: "面向做 Shopify 独立站的 DTC 品牌",
-    title: "Shopify 独立站定制开发工作室",
-    subtitle: "帮助 DTC 品牌打造更快、更稳定、更好卖的 Shopify 独立站。",
+    title: "帮 DTC 品牌把 Shopify 独立站做成能卖货的店",
+    subtitle: "Shopify 建站、主题定制、转化优化与数据追踪，项目不转包，6 年前端经验",
     description: "",
-    primaryCta: "免费 Shopify 店铺检查",
-    secondaryCta: "查看服务体系",
+    primaryCta: "免费店铺检查",
+    secondaryCta: "查看案例",
     ctaBenefit: "先免费沟通店铺现状与需求，再根据项目情况确认是否需要书面诊断或进一步实施。",
     socialProof: { label: "已服务品牌", brands: ["Terrawulf", "SilkGear"], text: "服务过电摩、服饰等品类的跨境品牌" },
   },
@@ -252,10 +252,10 @@ export function HeroSection() {
         )}
 
         <div className="hero-animate flex flex-wrap gap-5 font-medium justify-center">
-          <a href={localizedPath("/diagnosis")} className="pointer-events-auto bg-primary text-primary-foreground px-8 py-4 md:px-10 md:py-5 text-base rounded-full cursor-pointer hover:brightness-110 transition-all duration-300 active:scale-[0.97] shadow-[0_0_20px_rgba(119,252,117,0.3)]">
+          <a href={language === "zh" ? "#store-check" : localizedPath("/diagnosis")} className="pointer-events-auto bg-primary text-primary-foreground px-8 py-4 md:px-10 md:py-5 text-base rounded-full cursor-pointer hover:brightness-110 transition-all duration-300 active:scale-[0.97] shadow-[0_0_20px_rgba(119,252,117,0.3)]">
             {text.primaryCta}
           </a>
-          <a href="#services" className="pointer-events-auto border border-foreground/20 text-foreground px-8 py-4 md:px-10 md:py-5 text-base rounded-full cursor-pointer hover:bg-foreground/5 transition-all duration-300 active:scale-[0.97] backdrop-blur-sm">
+          <a href={language === "zh" ? "/case-studies" : "#services"} className="pointer-events-auto border border-foreground/20 text-foreground px-8 py-4 md:px-10 md:py-5 text-base rounded-full cursor-pointer hover:bg-foreground/5 transition-all duration-300 active:scale-[0.97] backdrop-blur-sm">
             {text.secondaryCta}
           </a>
         </div>

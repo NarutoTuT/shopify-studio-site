@@ -74,3 +74,29 @@ test("notification provider failure is not reported as an accepted lead", async 
     process.env = originalEnv
   }
 })
+
+test("store check requires a store and problem, and accepts WhatsApp as contact", async () => {
+  const originalFetch = globalThis.fetch
+  const originalEnv = { ...process.env }
+  const sent = []
+  process.env.RESEND_API_KEY = "test-key"
+  process.env.RESEND_FROM_EMAIL = "WhaleLeap <test@example.com>"
+  process.env.CONTACT_EMAIL_TO = "inbox@example.com"
+  globalThis.fetch = async (_url, init) => {
+    sent.push(JSON.parse(init.body))
+    return new Response("{}", { status: 200 })
+  }
+  try {
+    const base = { formType: "store_check", whatsapp: "+15550000000", language: "zh", startedAt: Date.now() - 5000 }
+    assert.equal((await POST(request(base, "198.51.100.6"))).status, 400)
+    assert.equal((await POST(request({ ...base, storeUrl: "https://example.com" }, "198.51.100.7"))).status, 400)
+    assert.equal(sent.length, 0)
+    const response = await POST(request({ ...base, storeUrl: "https://example.com", problem: "速度慢" }, "198.51.100.8"))
+    assert.equal((await response.json()).accepted, true)
+    assert.equal(sent.length, 1)
+    assert.match(sent[0].text, /WhatsApp/)
+  } finally {
+    globalThis.fetch = originalFetch
+    process.env = originalEnv
+  }
+})

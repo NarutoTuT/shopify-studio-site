@@ -1,7 +1,8 @@
-import { ArrowUpRight, Mail, MessageCircle } from "lucide-react"
+import { ArrowUpRight, Mail } from "lucide-react"
 
 import { BrandLogo } from "@/components/brand-logo"
 import { PrivacySettingsButton } from "@/components/privacy-settings-button"
+import { WechatContactButton } from "@/components/wechat-contact-button"
 
 type SiteFooterProps = {
   language: "zh" | "en"
@@ -21,14 +22,14 @@ const footerCopy = {
       { label: "GA4 / GTM 数据追踪", href: "/services/shopify-ga4-gtm" },
     ],
     navigationLinks: [
-      { label: "案例", href: "/#work" },
+      { label: "案例", href: "/case-studies" },
       { label: "学习资源", href: "/learn" },
       { label: "价格", href: "/pricing" },
       { label: "关于我们", href: "/about" },
-      { label: "免费 Shopify 店铺检查", href: "/diagnosis" },
+      { label: "免费店铺检查", href: "/diagnosis" },
     ],
     contactText: "发送店铺链接、当前问题和目标，我们会先判断适合的下一步。",
-    contactCta: "免费 Shopify 店铺检查",
+    contactCta: "免费店铺检查",
     privacy: "提交的信息仅用于回复咨询和项目沟通，不会用于无关营销。",
     privacyLink: "隐私政策",
     privacySettings: "隐私设置",
@@ -49,7 +50,7 @@ const footerCopy = {
       { label: "GA4 / GTM Tracking", href: "/services/shopify-ga4-gtm" },
     ],
     navigationLinks: [
-      { label: "Case Studies", href: "/#work" },
+      { label: "Case Studies", href: "/case-studies" },
       { label: "Pricing", href: "/pricing" },
       { label: "About", href: "/about" },
       { label: "Free Review", href: "/diagnosis" },
@@ -86,14 +87,11 @@ export function SiteFooter({ language }: SiteFooterProps) {
             </a>
             <p className="mt-5 text-base leading-[1.75] text-white/58">{text.description}</p>
             <div className="mt-6 flex flex-wrap gap-3 text-base text-white/70">
-              <a href="mailto:liaoshenyuan1999053@gmail.com" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white/[0.055] px-4 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
+              <a href="mailto:hello@whaleleap.studio" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white/[0.055] px-4 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
                 <Mail className="size-5 text-primary" />
                 Email
               </a>
-              <span className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white/[0.055] px-4">
-                <MessageCircle className="size-5 text-cyan-300" />
-                WeChat 11058895969
-              </span>
+              <WechatContactButton />
             </div>
           </div>
 

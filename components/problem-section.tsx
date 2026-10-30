@@ -185,11 +185,11 @@ export function ProblemSection() {
           <div className="relative flex items-center justify-between gap-4 border-b border-white/8 pb-5">
             <div className="flex items-center gap-3">
               <span className="size-2 animate-pulse rounded-full bg-primary shadow-[0_0_14px_rgba(119,252,117,0.9)] motion-reduce:animate-none" />
-              <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">Growth Leak Scanner</span>
+              <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">{language === "zh" ? "购买路径检查" : "Growth Leak Scanner"}</span>
             </div>
             <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.16em] text-white/35">
-              <span>Scan mode</span>
-              <span className="text-white/70">Manual</span>
+              <span>{language === "zh" ? "检查方式" : "Scan mode"}</span>
+              <span className="text-white/70">{language === "zh" ? "人工" : "Manual"}</span>
             </div>
           </div>
 
@@ -248,7 +248,7 @@ export function ProblemSection() {
             <div className="p-6 xl:p-7">
               <p className="mb-4 flex items-center gap-2 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-[#ff8062]">
                 <span className="size-2 animate-pulse rounded-full bg-[#ff7657] shadow-[0_0_12px_rgba(255,107,74,0.9)] motion-reduce:animate-none" />
-                Leak detected
+                {language === "zh" ? "发现问题" : "Leak detected"}
               </p>
               <h3 className="text-xl font-bold tracking-normal text-white xl:text-2xl">{activeProblem.title}</h3>
               <p className="mt-4 text-sm leading-[1.75] text-white/58 xl:text-base">{activeProblem.text}</p>
@@ -258,7 +258,7 @@ export function ProblemSection() {
               <div aria-hidden="true" className="absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(62,220,255,0.22)_1px,transparent_1px),linear-gradient(90deg,rgba(62,220,255,0.22)_1px,transparent_1px)] [background-size:22px_22px]" />
               <div className="relative flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.16em] text-cyan-300/65">
                 <span>Signal scan</span>
-                <span>Node 0{activeIndex + 1}</span>
+                <span>{language === "zh" ? `环节 ${activeIndex + 1}` : `Node 0${activeIndex + 1}`}</span>
               </div>
               <svg aria-hidden="true" className="absolute inset-x-5 bottom-7 h-[105px] w-[calc(100%-2.5rem)]" viewBox="0 0 500 110" preserveAspectRatio="none">
                 <path d="M0 68 C45 55 62 84 105 67 S170 43 210 64 S275 88 320 59 S390 35 430 58 S470 76 500 50" fill="none" stroke="rgba(67,221,255,0.45)" strokeWidth="2" />
@@ -273,8 +273,8 @@ export function ProblemSection() {
                 <ActiveProblemIcon className="relative size-7" />
               </span>
               <div>
-                <span className="block font-mono text-[9px] uppercase tracking-[0.16em] text-white/35">Active node</span>
-                <span className="mt-1 block font-mono text-xs font-semibold text-white">{stages[activeIndex]}</span>
+                <span className="block font-mono text-[9px] uppercase tracking-[0.16em] text-white/35">{language === "zh" ? "当前环节" : "Active node"}</span>
+                <span className="mt-1 block font-mono text-xs font-semibold text-white">{language === "zh" ? ["流量", "产品", "信任", "购物车", "结账", "数据"][activeIndex] : stages[activeIndex]}</span>
               </div>
               <ActiveStageIcon className="size-4 text-primary/55" />
             </div>

@@ -16,7 +16,7 @@ import { useLanguage } from "@/components/language-provider"
 
 gsap.registerPlugin(ScrollTrigger)
 
-const images = [
+export const images = [
   "/case-studies/terrawulf/home-live.webp",
   "/case-studies/luokavrion/homepage-showcase.png",
   "/case-studies/silkgear-case-generated-v2.webp",
@@ -28,7 +28,7 @@ const images = [
   "/case-studies/sports-retail-real-v2.webp",
 ]
 
-const caseStudyPaths = [
+export const caseStudyPaths = [
   "/case-studies/terrawulf",
   "/case-studies/luokavrion",
   "/case-studies/silkgear",
@@ -47,7 +47,7 @@ const caseCapabilities = {
   ],
 } as const
 
-const copy = {
+export const copy = {
   zh: {
     eyebrow: "CASE STUDIES",
     title: "Shopify 建站案例不只展示视觉，更要展示增长问题如何被解决。",

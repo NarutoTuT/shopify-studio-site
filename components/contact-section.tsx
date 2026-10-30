@@ -46,7 +46,7 @@ const copy = {
 }
 
 export function ContactSection() {
-  const email = "liaoshenyuan1999053@gmail.com"
+  const email = "hello@whaleleap.studio"
   const wechat = "11058895969"
   const { language, localizedPath } = useLanguage()
   const text = copy[language]

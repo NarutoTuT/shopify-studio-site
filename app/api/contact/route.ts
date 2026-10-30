@@ -1,4 +1,5 @@
 type ContactPayload = {
+  formType?: unknown
   storeUrl?: unknown
   category?: unknown
   market?: unknown
@@ -9,6 +10,7 @@ type ContactPayload = {
   problem?: unknown
   email?: unknown
   wechat?: unknown
+  whatsapp?: unknown
   companyWebsite?: unknown
   language?: unknown
   startedAt?: unknown
@@ -34,8 +36,8 @@ const labels = {
   zh: {
     subject: "Shopify 免费诊断咨询",
     intro: "收到一份新的 Shopify 免费诊断信息：",
-    fields: ["店铺链接", "产品品类", "目标市场", "当前阶段", "SKU 数量", "预算区间", "上线时间", "主要问题", "邮箱", "微信", "提交页面", "来源页面", "UTM Source", "UTM Medium", "UTM Campaign", "首次访问页面", "首次来源域名", "首次 UTM Source", "首次 UTM Medium", "首次 UTM Campaign", "本次访问页面", "本次来源域名", "本次 UTM Source", "本次 UTM Medium", "本次 UTM Campaign", "CTA 来源"],
-    invalid: "请至少填写邮箱或微信，并检查邮箱格式。",
+    fields: ["店铺链接", "产品品类", "目标市场", "当前阶段", "SKU 数量", "预算区间", "上线时间", "主要问题", "邮箱", "微信", "WhatsApp", "提交页面", "来源页面", "UTM Source", "UTM Medium", "UTM Campaign", "首次访问页面", "首次来源域名", "首次 UTM Source", "首次 UTM Medium", "首次 UTM Campaign", "本次访问页面", "本次来源域名", "本次 UTM Source", "本次 UTM Medium", "本次 UTM Campaign", "CTA 来源"],
+    invalid: "请至少填写邮箱、微信或 WhatsApp，并检查邮箱格式。",
     failed: "提交失败，请稍后重试。",
     rateLimited: "提交过于频繁，请稍后再试。",
     confirmationSubject: "我们已收到你的 Shopify 诊断信息",
@@ -45,8 +47,8 @@ const labels = {
   en: {
     subject: "Free Shopify diagnosis inquiry",
     intro: "A new Shopify diagnosis brief was submitted:",
-    fields: ["Store URL", "Product category", "Target market", "Current stage", "SKU count", "Budget", "Timeline", "Main problem", "Email", "WeChat", "Page URL", "Referrer", "UTM Source", "UTM Medium", "UTM Campaign", "First-touch landing page", "First-touch referrer host", "First-touch UTM Source", "First-touch UTM Medium", "First-touch UTM Campaign", "Session landing page", "Session referrer host", "Session UTM Source", "Session UTM Medium", "Session UTM Campaign", "CTA source"],
-    invalid: "Please enter an email or WeChat and check the email format.",
+    fields: ["Store URL", "Product category", "Target market", "Current stage", "SKU count", "Budget", "Timeline", "Main problem", "Email", "WeChat", "WhatsApp", "Page URL", "Referrer", "UTM Source", "UTM Medium", "UTM Campaign", "First-touch landing page", "First-touch referrer host", "First-touch UTM Source", "First-touch UTM Medium", "First-touch UTM Campaign", "Session landing page", "Session referrer host", "Session UTM Source", "Session UTM Medium", "Session UTM Campaign", "CTA source"],
+    invalid: "Please enter an email, WeChat, or WhatsApp and check the email format.",
     failed: "Submission failed. Please try again later.",
     rateLimited: "Too many submissions. Please try again later.",
     confirmationSubject: "We received your Shopify diagnosis brief",
@@ -55,7 +57,7 @@ const labels = {
   },
 } as const
 
-const fieldKeys = ["storeUrl", "category", "market", "stage", "skuCount", "budget", "timeline", "problem", "email", "wechat", "pageUrl", "referrer", "utmSource", "utmMedium", "utmCampaign", "firstTouchLandingPath", "firstTouchReferrerHost", "firstTouchUtmSource", "firstTouchUtmMedium", "firstTouchUtmCampaign", "sessionLandingPath", "sessionReferrerHost", "sessionUtmSource", "sessionUtmMedium", "sessionUtmCampaign", "ctaSource"] as const
+const fieldKeys = ["storeUrl", "category", "market", "stage", "skuCount", "budget", "timeline", "problem", "email", "wechat", "whatsapp", "pageUrl", "referrer", "utmSource", "utmMedium", "utmCampaign", "firstTouchLandingPath", "firstTouchReferrerHost", "firstTouchUtmSource", "firstTouchUtmMedium", "firstTouchUtmCampaign", "sessionLandingPath", "sessionReferrerHost", "sessionUtmSource", "sessionUtmMedium", "sessionUtmCampaign", "ctaSource"] as const
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const rateLimitWindowMs = 10 * 60 * 1000
 const rateLimitMax = 5
@@ -106,6 +108,7 @@ export async function POST(request: Request) {
   const values = fieldKeys.map((key) => clean(payload[key], key === "problem" ? 3000 : 500))
   const email = values[fieldKeys.indexOf("email")]
   const wechat = values[fieldKeys.indexOf("wechat")]
+  const whatsapp = values[fieldKeys.indexOf("whatsapp")]
   const honeypot = clean(payload.companyWebsite)
   const startedAt = typeof payload.startedAt === "number" ? payload.startedAt : 0
 
@@ -113,8 +116,16 @@ export async function POST(request: Request) {
     return Response.json({ ok: true, accepted: false })
   }
 
-  if ((!email && !wechat) || (email && !emailPattern.test(email))) {
+  if ((!email && !wechat && !whatsapp) || (email && !emailPattern.test(email))) {
     return Response.json({ message: text.invalid }, { status: 400 })
+  }
+
+  if (payload.formType === "store_check") {
+    const storeUrl = values[fieldKeys.indexOf("storeUrl")]
+    const problem = values[fieldKeys.indexOf("problem")]
+    if (!/^https?:\/\/[^\s.]+\.[^\s]+$/.test(storeUrl) || !problem) {
+      return Response.json({ message: "请填写有效的店铺链接和想解决的问题。" }, { status: 400 })
+    }
   }
 
   const forwardedFor = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim()

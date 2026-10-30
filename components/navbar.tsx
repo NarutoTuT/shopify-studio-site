@@ -13,8 +13,8 @@ const copy = {
     serviceLinks: [
       { label: "Shopify 定制开发", href: "/services/shopify-website-build" },
       { label: "Shopify Theme Customization", href: "/services/shopify-theme-customization" },
-      { label: "Conversion Optimization", href: "/services/shopify-conversion-optimization" },
-      { label: "Growth Analytics & Tracking", href: "/services/shopify-ga4-gtm" },
+      { label: "转化率优化", href: "/services/shopify-conversion-optimization" },
+      { label: "数据分析与追踪", href: "/services/shopify-ga4-gtm" },
     ],
     learnLabel: "学习资源",
     learnAllLabel: "查看全部学习资源",
@@ -50,7 +50,7 @@ const copy = {
       { label: "价格", href: "/pricing" },
       { label: "关于", href: "/about" },
     ],
-    cta: "免费 Shopify 店铺检查",
+    cta: "免费店铺检查",
     languageLabel: "EN",
     openMenu: "打开菜单",
     closeMenu: "关闭菜单",
@@ -157,7 +157,7 @@ export function Navbar() {
           </div>
           <div className="group relative">
             <a
-              href={localizedPath("/#work")}
+              href={localizedPath("/case-studies")}
               className="inline-flex min-h-11 items-center gap-1 rounded-full px-1 text-base tracking-[-0.01em] text-muted-foreground transition-colors duration-200 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
             >
               {text.casesLabel}
@@ -179,7 +179,7 @@ export function Navbar() {
                     <ArrowUpRight className="mt-1 size-4 shrink-0 text-white/25 transition-transform duration-200 group-hover/case:translate-x-0.5 group-hover/case:-translate-y-0.5 group-hover/case:text-primary" />
                   </a>
                 ))}
-                <a href={localizedPath("/#work")} className="mt-1 flex min-h-11 items-center justify-between rounded-xl border border-primary/20 bg-primary/[0.06] px-4 py-3 text-base font-semibold text-primary transition-colors hover:bg-primary/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
+                <a href={localizedPath("/case-studies")} className="mt-1 flex min-h-11 items-center justify-between rounded-xl border border-primary/20 bg-primary/[0.06] px-4 py-3 text-base font-semibold text-primary transition-colors hover:bg-primary/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
                   {text.casesAllLabel}<span aria-hidden="true">→</span>
                 </a>
               </div>
@@ -194,6 +194,7 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
+          {language === "zh" && (
           <div className="group">
             <a
               href={localizedPath("/learn")}
@@ -238,6 +239,7 @@ export function Navbar() {
               </div>
             </div>
           </div>
+          )}
         </div>
 
         <div className="hidden items-center gap-3 md:flex">
@@ -313,7 +315,7 @@ export function Navbar() {
                     <ArrowUpRight className="mt-1 size-4 shrink-0 text-primary" />
                   </a>
                 ))}
-                <a href={localizedPath("/#work")} onClick={() => { setOpen(false); setCasesOpen(false) }} className="mt-2 flex min-h-11 items-center justify-between rounded-xl border border-primary/20 bg-primary/[0.06] px-4 py-3 text-base font-semibold text-primary">{text.casesAllLabel}<span aria-hidden="true">→</span></a>
+                <a href={localizedPath("/case-studies")} onClick={() => { setOpen(false); setCasesOpen(false) }} className="mt-2 flex min-h-11 items-center justify-between rounded-xl border border-primary/20 bg-primary/[0.06] px-4 py-3 text-base font-semibold text-primary">{text.casesAllLabel}<span aria-hidden="true">→</span></a>
               </div>
             )}
             {text.navLinks.map((link) => (
@@ -326,6 +328,7 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
+            {language === "zh" && (<>
             <button
               type="button"
               aria-expanded={learnOpen}
@@ -357,6 +360,7 @@ export function Navbar() {
                 <a href={localizedPath("/learn")} onClick={() => { setOpen(false); setLearnOpen(false) }} className="mt-2 flex min-h-11 items-center justify-between rounded-xl border border-primary/20 bg-primary/[0.06] px-4 py-3 text-base font-semibold text-primary">{text.learnAllLabel}<span aria-hidden="true">→</span></a>
               </div>
             )}
+            </>)}
             <a
               href={localizedPath("/diagnosis")}
               onClick={() => setOpen(false)}

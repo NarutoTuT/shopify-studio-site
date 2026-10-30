@@ -7,6 +7,7 @@ import { ShowcaseSection } from "@/components/showcase-section"
 import { ProcessSection } from "@/components/process-section"
 import { TrustSection } from "@/components/trust-section"
 import { ContactSection } from "@/components/contact-section"
+import { HomeStoreCheckForm } from "@/components/home-store-check-form"
 import { SmoothScrollProvider } from "@/components/smooth-scroll"
 import { MouseFollowLight } from "@/components/mouse-follow-light"
 import { LanguageProvider } from "@/components/language-provider"
@@ -26,6 +27,7 @@ export default function Home() {
             <ShowcaseSection />
             <ProcessSection />
             <TrustSection />
+            <HomeStoreCheckForm />
             <ContactSection />
           </main>
         </div>

@@ -113,10 +113,10 @@ export function SolutionSection() {
 
           <div className="absolute left-7 top-6 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-white/35">
             <span className="size-1.5 animate-pulse rounded-full bg-primary shadow-[0_0_12px_rgba(119,252,117,0.8)] motion-reduce:animate-none" />
-            Growth engine online
+            {language === "zh" ? "优化路径" : "Growth engine online"}
           </div>
           <div className="absolute right-7 top-6 font-mono text-[11px] uppercase tracking-[0.18em] text-white/30">
-            Node 0{activeIndex + 1} / 03
+            {language === "zh" ? `环节 ${activeIndex + 1} / 3` : `Node 0${activeIndex + 1} / 03`}
           </div>
 
           <svg aria-hidden="true" className="pointer-events-none absolute inset-0 size-full" viewBox="0 0 1000 680" preserveAspectRatio="none">

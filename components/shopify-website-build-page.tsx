@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, Clock3, Code2, FileT
 
 import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
+import { FaqStructuredData } from "@/components/faq-structured-data"
 import { RelatedCaseStudies } from "@/components/related-case-studies"
 import { ServiceFaqPanel } from "@/components/service-faq-panel"
 import { useLanguage } from "@/components/language-provider"
@@ -485,6 +486,7 @@ export function ShopifyWebsiteBuildPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <FaqStructuredData items={text.faqs} />
       <PageStructuredData breadcrumbs={structuredData.breadcrumbs} service={structuredData.service} language={language} />
       <Navbar />
       <main id="main-content" tabIndex={-1}>
@@ -861,7 +863,7 @@ export function ShopifyWebsiteBuildPage() {
 
               <div className="relative flex items-center justify-between gap-4 rounded-[1.1rem] bg-primary/[0.075] px-4 py-4 sm:rounded-[1.35rem] sm:px-6 sm:py-5">
                 <div className="flex min-w-0 items-center gap-3"><span className="flex size-11 shrink-0 items-center justify-center rounded-[0.9rem] bg-primary text-black"><PackageCheck className="size-6" /></span><div><p className="font-mono text-base uppercase tracking-[0.03em] text-primary">{deliveryLabels.package}</p><p className="mt-1 text-base text-white/52">Handoff / WL-2026</p></div></div>
-                <div className="shrink-0 text-right"><strong className="block text-2xl font-bold text-white sm:text-3xl">6 / 6</strong><span className="font-mono text-base text-cyan-200">READY</span></div>
+                <div className="shrink-0 text-right"><strong className="block text-2xl font-bold text-white sm:text-3xl">{language === "zh" ? "6 项" : "6 / 6"}</strong><span className="font-mono text-base text-cyan-200">{language === "zh" ? "交付清单" : "READY"}</span></div>
               </div>
 
               <div className="relative mt-3 grid gap-3 lg:mt-4 lg:grid-cols-2 lg:gap-4">
