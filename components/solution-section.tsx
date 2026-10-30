@@ -15,23 +15,23 @@ const desktopNodePositions = [
 
 const copy = {
   zh: {
-    eyebrow: "GROWTH METHOD",
+    eyebrow: "优化方法",
     title: "WhaleLeap 把建站开发、页面转化和数据追踪放在一起解决。",
     description:
       "我们不会只做几个页面就结束，而是同时处理网站稳定性、购买路径和数据追踪，让店铺上线后还能继续优化。",
     pillars: [
       {
-        label: "Engineering",
+        label: "建站开发",
         title: "Shopify 建站与主题开发",
         text: "建设 Shopify 主题、Liquid 模块、Custom Sections、性能基础和技术 SEO，让店铺稳定、快速、可维护。",
       },
       {
-        label: "Conversion",
+        label: "转化优化",
         title: "转化路径优化",
         text: "优化首页、产品页、活动页、移动端体验和购物路径，让用户更快理解产品并产生购买信任。",
       },
       {
-        label: "Tracking",
+        label: "数据追踪",
         title: "数据追踪体系",
         text: "配置 GA4、GTM、Meta Pixel 和 Google Ads Tracking，让品牌看清流量、页面和订单之间的关系。",
       },
@@ -176,7 +176,7 @@ export function SolutionSection() {
                 <ActiveIcon className="size-5" />
               </span>
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">Active node · 0{activeIndex + 1}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">{language === "zh" ? `当前环节 ${activeIndex + 1}` : `Active node · 0${activeIndex + 1}`}</p>
                 <h3 className="mt-2 text-xl font-bold text-white">{activePillar.title}</h3>
                 <p className="mt-3 max-w-3xl text-sm leading-[1.75] text-white/55 md:text-base">{activePillar.text}</p>
               </div>

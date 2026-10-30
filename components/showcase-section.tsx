@@ -49,7 +49,7 @@ const caseCapabilities = {
 
 export const copy = {
   zh: {
-    eyebrow: "CASE STUDIES",
+    eyebrow: "项目案例",
     title: "Shopify 建站案例不只展示视觉，更要展示增长问题如何被解决。",
     description: "这里包含可公开访问的真实项目与精选交付案例。公开项目提供线上链接；其余案例不使用虚假数据，只展示问题、方法、实施和结果。",
     items: [
@@ -494,10 +494,10 @@ export function ShowcaseSection() {
                           )}
                           <div className="mt-3 grid grid-cols-2 gap-2 md:mt-2 md:gap-0">
                             {[
-                              ["Challenge", item.challenge, item.mobile.challenge],
-                              ["Approach", item.approach, item.mobile.approach],
-                              ["Implementation", item.implementation, item.mobile.implementation],
-                              ["Outcome", item.outcome, item.mobile.outcome],
+                              [language === "zh" ? "挑战" : "Challenge", item.challenge, item.mobile.challenge],
+                              [language === "zh" ? "方法" : "Approach", item.approach, item.mobile.approach],
+                              [language === "zh" ? "实施" : "Implementation", item.implementation, item.mobile.implementation],
+                              [language === "zh" ? "结果" : "Outcome", item.outcome, item.mobile.outcome],
                             ].map(([label, value, mobileValue]) => (
                               <div key={label} className="min-w-0 rounded-xl border border-white/10 bg-black/10 px-2 py-2.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-sm md:rounded-none md:border-0 md:bg-transparent md:px-3 md:py-2 md:shadow-none md:backdrop-blur-none md:[&:nth-child(odd)]:border-r md:[&:nth-child(odd)]:border-white/10 md:[&:nth-child(-n+2)]:border-b md:[&:nth-child(-n+2)]:border-white/10">
                                 <div className="mb-1 whitespace-nowrap text-sm font-bold normal-case tracking-[0.02em] text-primary md:text-base md:uppercase">{label}</div>

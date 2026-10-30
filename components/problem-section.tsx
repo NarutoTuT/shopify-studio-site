@@ -25,7 +25,7 @@ const stages = ["TRAFFIC", "PRODUCT", "TRUST", "CART", "CHECKOUT", "DATA"]
 
 const copy = {
   zh: {
-    eyebrow: "GROWTH BLOCKERS",
+    eyebrow: "购买路径问题",
     title: "很多 Shopify 建站项目不是没有流量，而是增长路径在漏单。",
     description:
       "很多做 Shopify 独立站的品牌已经有产品、素材和广告预算，但网站没有把访客顺利带到信任、加购和下单。",
@@ -157,7 +157,7 @@ export function ProblemSection() {
                     <span className="min-w-0 pr-2">
                       <span className={`mb-1.5 flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.16em] ${isActive ? "text-[#ff8062]" : "text-primary/65"}`}>
                         <span>{number}</span>
-                        <span>{stages[index]}</span>
+                        <span>{language === "zh" ? ["流量", "产品", "信任", "购物车", "结账", "数据"][index] : stages[index]}</span>
                         {isActive && <span>· LEAK DETECTED</span>}
                       </span>
                       <span className="block text-[15px] font-semibold leading-snug text-foreground">
@@ -232,7 +232,7 @@ export function ProblemSection() {
                       <span aria-hidden="true" className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent to-transparent ${isActive ? "via-[#ff7657] shadow-[0_0_14px_rgba(255,107,74,0.75)]" : "via-primary/50"}`} />
                       <span className={`mb-2 flex items-center justify-center gap-2 font-mono text-[9px] uppercase tracking-[0.14em] ${isActive ? "text-[#ff8062]" : "text-primary/70"}`}>
                         <ProblemIcon className="size-3.5" />
-                        {stages[index]}
+                        {language === "zh" ? ["流量", "产品", "信任", "购物车", "结账", "数据"][index] : stages[index]}
                       </span>
                       <span className="block text-xs font-semibold leading-[1.55] text-white/88 xl:text-sm">{problem.title}</span>
                     </span>
@@ -257,7 +257,7 @@ export function ProblemSection() {
             <div className="relative min-h-[190px] overflow-hidden border-x border-white/8 bg-black/25 p-5">
               <div aria-hidden="true" className="absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(62,220,255,0.22)_1px,transparent_1px),linear-gradient(90deg,rgba(62,220,255,0.22)_1px,transparent_1px)] [background-size:22px_22px]" />
               <div className="relative flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.16em] text-cyan-300/65">
-                <span>Signal scan</span>
+                <span>{language === "zh" ? "问题定位" : "Signal scan"}</span>
                 <span>{language === "zh" ? `环节 ${activeIndex + 1}` : `Node 0${activeIndex + 1}`}</span>
               </div>
               <svg aria-hidden="true" className="absolute inset-x-5 bottom-7 h-[105px] w-[calc(100%-2.5rem)]" viewBox="0 0 500 110" preserveAspectRatio="none">

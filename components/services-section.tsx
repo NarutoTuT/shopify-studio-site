@@ -18,12 +18,12 @@ const serviceLinks = [
 
 const copy = {
   zh: {
-    eyebrow: "SERVICE SYSTEM",
+    eyebrow: "服务方向",
     title: "围绕 Shopify 建站与增长，而不是围绕开发任务拆服务。",
     description: "三个服务方向对应三个核心问题：网站是否稳定好用、购买路径是否顺畅、数据是否能指导下一步。",
-    problemLabel: "PROBLEM",
-    solutionLabel: "SOLUTION",
-    capabilityLabel: "BEST FOR",
+    problemLabel: "当前问题",
+    solutionLabel: "解决方式",
+    capabilityLabel: "适用场景",
     cta: "查看服务详情",
     services: [
       {
@@ -231,7 +231,7 @@ export function ServicesSection() {
             <div key={`${language}-${activeService.title}`} className="animate-in fade-in slide-in-from-right-3 duration-500">
               <div className="mb-8 flex items-start justify-between gap-5">
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">Active service · {activeService.label}</p>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">{language === "zh" ? `当前服务 · ${activeService.label}` : `Active service · ${activeService.label}`}</p>
                   <h3 className="mt-3 max-w-3xl text-2xl font-bold leading-tight text-white md:text-4xl">{activeService.title}</h3>
                 </div>
                 <span className="hidden size-14 shrink-0 items-center justify-center rounded-2xl border border-primary/30 bg-primary/10 text-primary shadow-[0_0_30px_rgba(119,252,117,0.15)] sm:flex">

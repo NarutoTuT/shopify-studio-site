@@ -852,7 +852,7 @@ export function ShopifyWebsiteBuildPage() {
         <section className="bg-background px-4 pb-[50px] pt-0 sm:px-6 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto max-w-[1500px]">
             <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
-              <p className="mb-4 font-mono text-base uppercase tracking-[0.12em] text-primary">Delivery manifest / 06</p>
+              <p className="mb-4 font-mono text-base uppercase tracking-[0.12em] text-primary">{language === "zh" ? "交付清单" : "Delivery manifest / 06"}</p>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.deliverablesTitle}</h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{text.deliverablesIntro}</p>
             </div>

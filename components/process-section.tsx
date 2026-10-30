@@ -8,7 +8,7 @@ const icons = [SearchCheck, ClipboardCheck, Hammer, LineChart, TrendingUp]
 
 const copy = {
   zh: {
-    eyebrow: "WORKING PROCESS",
+    eyebrow: "合作流程",
     title: "先诊断，再投入。让 Shopify 项目从一开始就降低决策风险。",
     description:
       "前期不需要一次性确定所有需求。我们先判断主要问题，再决定是做深度诊断、进入开发项目，还是安排长期技术支持。",
@@ -107,8 +107,8 @@ export function ProcessSection() {
                   <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl transition-[border-color,background-color,box-shadow,transform] duration-500 group-hover:border-primary/40 lg:bg-white/[0.035] lg:shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_60px_rgba(0,0,0,0.28)] lg:group-hover:-translate-y-1 lg:group-hover:bg-primary/[0.065] lg:group-hover:shadow-[0_0_38px_rgba(119,252,117,0.1)]">
                     <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px -translate-x-full bg-gradient-to-r from-transparent via-primary to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                     <div className="mb-3 flex items-center justify-between font-mono text-xs font-semibold uppercase tracking-[0.02em] text-primary lg:mb-5 lg:text-sm lg:text-primary/70">
-                      <span><span className="lg:hidden">0{index + 1}</span><span className="hidden lg:inline">NODE / 0{index + 1}</span></span>
-                      <span><span className="lg:hidden">Process node</span><span className="hidden lg:inline">{(index + 1) * 20}%</span></span>
+                      <span><span className="lg:hidden">0{index + 1}</span><span className="hidden lg:inline">{language === "zh" ? `步骤 ${index + 1}` : `NODE / 0${index + 1}`}</span></span>
+                      <span><span className="lg:hidden">{language === "zh" ? "合作阶段" : "Process node"}</span><span className="hidden lg:inline">{(index + 1) * 20}%</span></span>
                     </div>
                     <h3 className="mb-2 text-lg font-semibold tracking-normal text-foreground lg:mb-3">{step.title}</h3>
                     <p className="text-base leading-[1.7] text-muted-foreground">{step.text}</p>
