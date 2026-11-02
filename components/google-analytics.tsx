@@ -55,8 +55,10 @@ function enableGoogleAnalytics(measurementId: string) {
   const googleWindow = window as GoogleWindow
   ;(googleWindow as unknown as Record<string, boolean>)[`ga-disable-${measurementId}`] = false
   googleWindow.dataLayer = googleWindow.dataLayer || []
-  googleWindow.gtag = googleWindow.gtag || function gtag(...args: unknown[]) {
-    googleWindow.dataLayer?.push(args)
+  googleWindow.gtag = googleWindow.gtag || function gtag() {
+    // Google's tag queue requires the native arguments object, not a rest-parameter array.
+    // eslint-disable-next-line prefer-rest-params
+    googleWindow.dataLayer?.push(arguments)
   }
 
   googleWindow.gtag("consent", "default", {
