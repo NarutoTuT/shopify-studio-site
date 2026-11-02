@@ -79,6 +79,15 @@ const resources = [
     type: "PDP 清单",
     icon: ChartNoAxesCombined,
   },
+  {
+    number: "07",
+    title: "Shopify 开发者真会写代码吗？5 个验证方法",
+    description: "用真实代码、交付物、商家可编辑性和上线证据验证开发能力。",
+    href: "/learn/verify-shopify-developer-code",
+    label: "开发能力验证",
+    type: "代码证据指南",
+    icon: Code2,
+  },
 ] as const
 
 const problemLinks = [
@@ -127,7 +136,7 @@ export default function LearnPage() {
                 <h1 className="mx-auto mt-6 max-w-[1050px] bg-gradient-to-r from-foreground via-primary to-foreground bg-[length:200%_100%] bg-clip-text text-[clamp(2.55rem,7vw,4.8rem)] font-bold leading-[1.04] tracking-normal text-transparent animate-shimmer motion-reduce:animate-none">Shopify 建站与增长学习资源</h1>
                 <p className="mx-auto mt-6 max-w-3xl text-base leading-[1.8] text-muted-foreground md:text-lg">围绕 Shopify 建站费用、数据追踪和增长工程，把复杂问题整理成可以直接用于决策与实施的指南。</p>
                 <div className="mx-auto mt-9 grid max-w-3xl gap-3 sm:grid-cols-3">
-                  {["6 篇深度指南", "建站 + 数据 + CRO", "持续维护更新"].map((item, index) => (
+                  {["7 篇深度指南", "建站 + 数据 + CRO", "持续维护更新"].map((item, index) => (
                     <div key={item} className={`flex min-h-14 items-center justify-center rounded-full border px-4 py-3 text-base font-semibold backdrop-blur-md ${index === 0 ? "border-primary/25 bg-primary/[0.08] text-primary" : "border-white/10 bg-black/20 text-white/68"}`}>{item}</div>
                   ))}
                 </div>
