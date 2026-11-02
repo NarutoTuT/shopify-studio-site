@@ -21,12 +21,14 @@ export type LearnArticle = {
   sections: Array<{
     title: string
     lead: string
+    table?: { headers: string[]; rows: string[][] }
     blocks: Array<{ title: string; paragraphs: string[]; points?: string[] }>
   }>
   faqs: Array<{ q: string; a: string }>
   related: Array<{ title: string; text: string; href: string }>
   sources?: Array<{ label: string; href: string }>
   ctas: Array<{ label: string; href: string; primary?: boolean }>
+  ctaNote?: string
   about: string[]
 }
 
@@ -108,6 +110,12 @@ export function LearnArticlePage({ article }: { article: LearnArticle }) {
                       <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight">{section.title}</h2>
                       <p className="mt-5 text-base leading-[1.85] text-white/62 md:text-lg">{section.lead}</p>
                     </div>
+                    {section.table && <div className="mb-5 overflow-x-auto rounded-2xl border border-white/20" role="region" aria-label={`${section.title}对照表`} tabIndex={0}>
+                      <table className="w-full min-w-[640px] border-collapse text-left text-base leading-[1.7]">
+                        <thead className="bg-primary/[0.08] text-white"><tr>{section.table.headers.map((header) => <th key={header} scope="col" className="border-b border-white/15 px-5 py-4 font-semibold">{header}</th>)}</tr></thead>
+                        <tbody>{section.table.rows.map((row, index) => <tr key={index} className="border-b border-white/10 last:border-0">{row.map((cell, cellIndex) => cellIndex === 0 ? <th key={cellIndex} scope="row" className="px-5 py-4 font-semibold text-white">{cell}</th> : <td key={cellIndex} className="px-5 py-4 text-white/70">{cell}</td>)}</tr>)}</tbody>
+                      </table>
+                    </div>}
                     <div className="relative overflow-hidden rounded-[2.8rem_1.45rem_3.2rem_1.8rem] border border-white/20 bg-[radial-gradient(circle_at_84%_18%,rgba(34,211,238,0.06),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.055),rgba(255,255,255,0.012))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_35px_90px_rgba(0,0,0,0.28)] sm:p-5 lg:p-7">
                     <div className="grid gap-3 lg:grid-cols-2">
                       {section.blocks.map((block, blockIndex) => (
@@ -172,7 +180,7 @@ export function LearnArticlePage({ article }: { article: LearnArticle }) {
               {article.sources && <aside className="mt-10 text-base leading-[1.8] text-white/55" aria-label="官方资料"><p className="font-semibold text-white/75">相关官方资料（以最新说明为准）</p><ul className="mt-2 space-y-1">{article.sources.map((source) => <li key={source.href}><a href={source.href} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4">{source.label}</a></li>)}</ul></aside>}
 
               <section className="relative mt-20 overflow-hidden rounded-[3rem_1.4rem_3.4rem_1.7rem] border border-white/25 bg-[linear-gradient(115deg,rgba(255,255,255,0.075),rgba(255,255,255,0.015)_38%,rgba(34,211,238,0.045)_72%,rgba(119,252,117,0.06))] p-8 md:mt-24 md:p-12">
-                <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center"><div><ShieldCheck className="mb-5 size-8 text-primary" /><h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold">需要把判断变成可执行范围？</h2><p className="mt-4 max-w-2xl text-base leading-[1.8] text-white/62">先确认问题、证据与优先级，再决定预算和实施方式。</p></div><div className="flex flex-col gap-3 sm:flex-row lg:flex-col">{article.ctas.map((cta) => <a key={cta.href} href={cta.href} className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-7 text-base font-bold ${cta.primary ? "bg-primary text-black" : "border border-white/18 bg-white/[0.045] text-white"}`}>{cta.label}<ArrowUpRight className="size-4" /></a>)}</div></div>
+                <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center"><div><ShieldCheck className="mb-5 size-8 text-primary" /><h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold">需要把判断变成可执行范围？</h2><p className="mt-4 max-w-2xl text-base leading-[1.8] text-white/62">{article.ctaNote ?? "先确认问题、证据与优先级，再决定预算和实施方式。"}</p></div><div className="flex flex-col gap-3 sm:flex-row lg:flex-col">{article.ctas.map((cta) => <a key={cta.href} href={cta.href} className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-7 text-base font-bold ${cta.primary ? "bg-primary text-black" : "border border-white/18 bg-white/[0.045] text-white"}`}>{cta.label}<ArrowUpRight className="size-4" /></a>)}</div></div>
               </section>
               {!article.ctas.some((cta) => cta.href === "/diagnosis") && <a href="/diagnosis" className="mt-8 inline-flex min-h-12 items-center rounded-full bg-primary px-7 text-base font-bold text-black">免费店铺检查 →</a>}
             </div>
