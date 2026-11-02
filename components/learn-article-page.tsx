@@ -25,6 +25,7 @@ export type LearnArticle = {
   }>
   faqs: Array<{ q: string; a: string }>
   related: Array<{ title: string; text: string; href: string }>
+  sources?: Array<{ label: string; href: string }>
   ctas: Array<{ label: string; href: string; primary?: boolean }>
   about: string[]
 }
@@ -167,6 +168,8 @@ export function LearnArticlePage({ article }: { article: LearnArticle }) {
                 <div className="text-center"><p className="font-mono text-base font-semibold text-primary">RELATED READING</p><h2 className="mt-4 text-[clamp(1.8rem,3vw,2.5rem)] font-bold">相关阅读</h2></div>
                 <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">{article.related.map((item) => <a key={item.href} href={item.href} className="group min-h-[210px] rounded-[1.5rem] border border-white/12 bg-white/[0.035] p-6 transition-colors hover:bg-white/[0.06]"><h3 className="text-xl font-bold">{item.title}</h3><p className="mt-3 text-base leading-[1.7] text-white/58">{item.text}</p><span className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-primary">继续阅读<ArrowUpRight className="size-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></span></a>)}</div>
               </section>
+
+              {article.sources && <aside className="mt-10 text-base leading-[1.8] text-white/55" aria-label="官方资料"><p className="font-semibold text-white/75">相关官方资料（以最新说明为准）</p><ul className="mt-2 space-y-1">{article.sources.map((source) => <li key={source.href}><a href={source.href} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4">{source.label}</a></li>)}</ul></aside>}
 
               <section className="relative mt-20 overflow-hidden rounded-[3rem_1.4rem_3.4rem_1.7rem] border border-white/25 bg-[linear-gradient(115deg,rgba(255,255,255,0.075),rgba(255,255,255,0.015)_38%,rgba(34,211,238,0.045)_72%,rgba(119,252,117,0.06))] p-8 md:mt-24 md:p-12">
                 <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center"><div><ShieldCheck className="mb-5 size-8 text-primary" /><h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold">需要把判断变成可执行范围？</h2><p className="mt-4 max-w-2xl text-base leading-[1.8] text-white/62">先确认问题、证据与优先级，再决定预算和实施方式。</p></div><div className="flex flex-col gap-3 sm:flex-row lg:flex-col">{article.ctas.map((cta) => <a key={cta.href} href={cta.href} className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-7 text-base font-bold ${cta.primary ? "bg-primary text-black" : "border border-white/18 bg-white/[0.045] text-white"}`}>{cta.label}<ArrowUpRight className="size-4" /></a>)}</div></div>
