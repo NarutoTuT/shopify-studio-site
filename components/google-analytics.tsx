@@ -55,8 +55,8 @@ function enableGoogleAnalytics(measurementId: string) {
   const googleWindow = window as GoogleWindow
   ;(googleWindow as unknown as Record<string, boolean>)[`ga-disable-${measurementId}`] = false
   googleWindow.dataLayer = googleWindow.dataLayer || []
-  googleWindow.gtag = googleWindow.gtag || function gtag(..._args: unknown[]) {
-    googleWindow.dataLayer?.push(arguments)
+  googleWindow.gtag = googleWindow.gtag || function gtag(...args: unknown[]) {
+    googleWindow.dataLayer?.push(args)
   }
 
   googleWindow.gtag("consent", "default", {
@@ -96,8 +96,10 @@ export function GoogleAnalytics({ language }: { language: Language }) {
 
   useEffect(() => {
     const storedChoice = readAnalyticsConsent()
-    setChoice(storedChoice)
-    setIsOpen(storedChoice === null)
+    queueMicrotask(() => {
+      setChoice(storedChoice)
+      setIsOpen(storedChoice === null)
+    })
 
     const openSettings = () => setIsOpen(true)
     window.addEventListener(ANALYTICS_CONSENT_EVENT, openSettings)

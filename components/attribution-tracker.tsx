@@ -31,9 +31,22 @@ export function AttributionTracker() {
         const target = event.target instanceof Element ? event.target.closest("a") : null
         const href = target?.getAttribute("href")
         if (!href) return
+        const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag
+        if (href.startsWith("mailto:")) {
+          gtag?.("event", "contact_click", { method: "email" })
+          return
+        }
+        if (href.startsWith("https://wa.me/") || href.startsWith("https://api.whatsapp.com/")) {
+          gtag?.("event", "contact_click", { method: "whatsapp" })
+          return
+        }
         const destination = new URL(href, window.location.href)
-        if (destination.origin !== window.location.origin || !/^\/(?:en\/)?diagnosis\/?$/.test(destination.pathname)) return
-        window.sessionStorage.setItem(CTA_SOURCE_STORAGE_KEY, deriveCtaSource(window.location.pathname))
+        const isDiagnosis = /^\/(?:en\/)?diagnosis\/?$/.test(destination.pathname)
+        const isHomeForm = destination.pathname === "/" && destination.hash === "#store-check"
+        if (destination.origin !== window.location.origin || (!isDiagnosis && !isHomeForm)) return
+        const location = deriveCtaSource(window.location.pathname)
+        window.sessionStorage.setItem(CTA_SOURCE_STORAGE_KEY, location)
+        gtag?.("event", "cta_click", { location })
       } catch {
         // CTA attribution is optional and must not block the click.
       }

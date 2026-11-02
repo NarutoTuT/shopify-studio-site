@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, Clock3, Code2, FileT
 
 import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
+import { FaqStructuredData } from "@/components/faq-structured-data"
 import { RelatedCaseStudies } from "@/components/related-case-studies"
 import { ServiceFaqPanel } from "@/components/service-faq-panel"
 import { useLanguage } from "@/components/language-provider"
@@ -485,6 +486,7 @@ export function ShopifyWebsiteBuildPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <FaqStructuredData items={text.faqs} />
       <PageStructuredData breadcrumbs={structuredData.breadcrumbs} service={structuredData.service} language={language} />
       <Navbar />
       <main id="main-content" tabIndex={-1}>
@@ -850,7 +852,7 @@ export function ShopifyWebsiteBuildPage() {
         <section className="bg-background px-4 pb-[50px] pt-0 sm:px-6 md:px-10 md:pb-[100px] md:pt-0">
           <div className="mx-auto max-w-[1500px]">
             <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
-              <p className="mb-4 font-mono text-base uppercase tracking-[0.12em] text-primary">Delivery manifest / 06</p>
+              <p className="mb-4 font-mono text-base uppercase tracking-[0.12em] text-primary">{language === "zh" ? "交付清单" : "Delivery manifest / 06"}</p>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal">{text.deliverablesTitle}</h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{text.deliverablesIntro}</p>
             </div>
@@ -861,7 +863,7 @@ export function ShopifyWebsiteBuildPage() {
 
               <div className="relative flex items-center justify-between gap-4 rounded-[1.1rem] bg-primary/[0.075] px-4 py-4 sm:rounded-[1.35rem] sm:px-6 sm:py-5">
                 <div className="flex min-w-0 items-center gap-3"><span className="flex size-11 shrink-0 items-center justify-center rounded-[0.9rem] bg-primary text-black"><PackageCheck className="size-6" /></span><div><p className="font-mono text-base uppercase tracking-[0.03em] text-primary">{deliveryLabels.package}</p><p className="mt-1 text-base text-white/52">Handoff / WL-2026</p></div></div>
-                <div className="shrink-0 text-right"><strong className="block text-2xl font-bold text-white sm:text-3xl">6 / 6</strong><span className="font-mono text-base text-cyan-200">READY</span></div>
+                <div className="shrink-0 text-right"><strong className="block text-2xl font-bold text-white sm:text-3xl">{language === "zh" ? "6 项" : "6 / 6"}</strong><span className="font-mono text-base text-cyan-200">{language === "zh" ? "交付清单" : "READY"}</span></div>
               </div>
 
               <div className="relative mt-3 grid gap-3 lg:mt-4 lg:grid-cols-2 lg:gap-4">

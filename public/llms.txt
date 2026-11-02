@@ -1,0 +1,27 @@
+# WhaleLeap Studio
+
+WhaleLeap Studio is a Shopify development studio operated by 深圳市知策先见智能科技有限公司 in Shenzhen, China.
+
+## Services
+- [Shopify website development](https://whaleleap.studio/services/shopify-website-build)
+- [Shopify theme customization](https://whaleleap.studio/services/shopify-theme-customization)
+- [Conversion rate optimization](https://whaleleap.studio/services/shopify-conversion-optimization)
+- [GA4 / GTM tracking](https://whaleleap.studio/services/shopify-ga4-gtm)
+
+## Pricing
+The published starting prices are ¥20,000, ¥35,000, and ¥50,000. Scope and delivery terms are agreed per project.
+See [pricing](https://whaleleap.studio/pricing).
+
+## Who we work with
+DTC brands, cross-border brands founded by Chinese entrepreneurs, and merchants moving from Amazon to an independent Shopify store.
+
+## Published case studies
+- [Terrawulf](https://whaleleap.studio/case-studies/terrawulf)
+- [LUOKAVRION](https://whaleleap.studio/case-studies/luokavrion)
+- [SilkGear](https://whaleleap.studio/case-studies/silkgear)
+
+## Learning guides
+[Shopify learning resources](https://whaleleap.studio/learn) are currently published in Chinese.
+
+## Contact
+[Free initial consultation](https://whaleleap.studio/diagnosis) · hello@whaleleap.studio

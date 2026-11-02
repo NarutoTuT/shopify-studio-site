@@ -6,14 +6,14 @@ import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
 import { useLanguage } from "@/components/language-provider"
 
-const updatedAt = "2026-10-11"
+const updatedAt = "2026-10-31"
 
 const copy = {
   zh: {
     eyebrow: "PRIVACY / DATA USE",
     title: "隐私政策",
     intro: "这份政策说明 WhaleLeap Studio 网站和 WhaleLeap GSC Reader 如何处理信息。我们只收集完成咨询、网站分析和经授权的 Search Console 报告所需要的数据。",
-    updated: "更新日期：2026 年 10 月 11 日",
+    updated: "更新日期：2026 年 10 月 31 日",
     summary: [
       { title: "表单信息", text: "用于回复诊断与项目咨询", icon: FileText },
       { title: "网站分析", text: "用于了解页面与功能表现", icon: Eye },
@@ -24,7 +24,7 @@ const copy = {
         id: "controller",
         title: "1. 谁在处理这些信息",
         paragraphs: [
-          "深圳市知策先见智能科技有限公司以 WhaleLeap Studio 品牌运营本网站及 WhaleLeap GSC Reader，并负责本政策所述的信息处理。公司位于中国深圳。隐私相关问题、数据访问或删除请求，可发送至 liaoshenyuan1999053@gmail.com。",
+          "深圳市知策先见智能科技有限公司以 WhaleLeap Studio 品牌运营本网站及 WhaleLeap GSC Reader，并负责本政策所述的信息处理。公司位于中国深圳。隐私相关问题、数据访问或删除请求，可发送至 hello@whaleleap.studio。",
         ],
       },
       {
@@ -96,7 +96,7 @@ const copy = {
     eyebrow: "PRIVACY / DATA USE",
     title: "Privacy Policy",
     intro: "This policy explains how the WhaleLeap Studio website and WhaleLeap GSC Reader handle information. We collect only what is needed to respond to inquiries, understand website use, and create authorized Search Console reports.",
-    updated: "Last updated: October 11, 2026",
+    updated: "Last updated: October 31, 2026",
     summary: [
       { title: "Form information", text: "Used to respond to reviews and project inquiries", icon: FileText },
       { title: "Website analytics", text: "Used to understand page and feature performance", icon: Eye },
@@ -107,7 +107,7 @@ const copy = {
         id: "controller",
         title: "1. Who handles this information",
         paragraphs: [
-          "深圳市知策先见智能科技有限公司 operates this website and WhaleLeap GSC Reader under the WhaleLeap Studio brand and is responsible for the information handling described in this policy. The company is located in Shenzhen, China. For privacy questions or requests to access or delete data, email liaoshenyuan1999053@gmail.com.",
+          "深圳市知策先见智能科技有限公司 operates this website and WhaleLeap GSC Reader under the WhaleLeap Studio brand and is responsible for the information handling described in this policy. The company is located in Shenzhen, China. For privacy questions or requests to access or delete data, email hello@whaleleap.studio.",
         ],
       },
       {
@@ -361,7 +361,7 @@ export function PrivacyPage() {
                 <h2 className="mt-3 text-[clamp(1.8rem,3vw,2.5rem)] font-bold leading-tight tracking-normal text-white">{text.contactTitle}</h2>
                 <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">{text.contactText}</p>
               </div>
-              <a href="mailto:liaoshenyuan1999053@gmail.com?subject=WhaleLeap%20Privacy%20Request" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
+              <a href="mailto:hello@whaleleap.studio?subject=WhaleLeap%20Privacy%20Request" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_0_28px_rgba(119,252,117,0.22)] transition-all hover:brightness-110 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
                 {text.contactCta}
                 <ArrowUpRight className="size-4" />
               </a>

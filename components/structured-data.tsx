@@ -50,7 +50,7 @@ function createStructuredData(language: "zh" | "en") {
         contactPoint: {
           "@type": "ContactPoint",
           contactType: "sales",
-          email: "liaoshenyuan1999053@gmail.com",
+          email: "hello@whaleleap.studio",
           availableLanguage: ["zh-CN", "en"],
         },
       },

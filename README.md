@@ -251,6 +251,18 @@ CONTACT_EMAIL_TO=
 
 If `CONTACT_EMAIL_TO` is not set, the API currently falls back to the configured default recipient in `app/api/contact/route.ts`.
 
+### Analytics and contact events
+
+Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` to the GA4 web stream Measurement ID (`G-...`) in the Vercel Production environment and redeploy. This is different from the numeric GA4 Property ID. The GA4 script loads asynchronously only after analytics consent. The site sends `cta_click` with `location` when a review CTA is clicked, `contact_click` with `method` for clickable email, WeChat, or WhatsApp contacts, and `generate_lead` only after the contact API accepts a submission. The existing API uses `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `CONTACT_EMAIL_TO`; no Formspree endpoint is needed. Set `CONTACT_EMAIL_TO` deliberately before publishing changes to the receiving mailbox.
+
+To mark leads as key events in GA4: **Admin → Data display → Events**, find `generate_lead`, and mark it as a key event. If it has not appeared yet, create the key event by name in **Admin → Data display → Key events**. Do not send a production test inquiry solely to populate this list. The public contact address is `hello@whaleleap.studio`; verify mailbox receipt separately.
+
+Run `SITE_ORIGIN=http://localhost:3000 node scripts/check-internal-links.mjs` against a local production server to check sitemap and rendered internal links.
+
+TODO (edge redirect): Production HTTP currently returns Vercel 308 before Next.js can handle it. If an exact HTTP 301 is required, confirm both apex and `www` DNS records are proxied by Cloudflare, then create a Cloudflare Single Redirect for HTTP apex and either-scheme `www` to `https://whaleleap.studio` plus the original path, status 301, **Preserve query string** enabled. Verify with `curl -I` for both hosts and a path with query parameters. The Next.js proxy already redirects `www` to the apex with 301 when that request reaches the app; it cannot override a Vercel redirect that happens first.
+
+TODO (verification): After deployment, run the public service, pricing, and article URLs through Google's Rich Results Test. Local JSON parsing validates syntax and required fields, but does not establish Google eligibility.
+
 ## Form Flow
 
 The main lead form lives on:

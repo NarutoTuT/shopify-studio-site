@@ -64,6 +64,7 @@ export function PageStructuredData({ breadcrumbs, service, page, language = "zh"
             })),
             ...(page.type === "Article"
               ? {
+                  headline: page.name,
                   author: { "@id": `${siteUrl}/#organization` },
                   publisher: { "@id": `${siteUrl}/#organization` },
                   ...(page.datePublished ? { datePublished: page.datePublished } : {}),

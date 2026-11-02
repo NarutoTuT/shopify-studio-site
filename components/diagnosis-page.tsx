@@ -349,7 +349,7 @@ export function DiagnosisPage() {
   const [startedAt, setStartedAt] = useState(() => Date.now())
   const [activeGrowthSignal, setActiveGrowthSignal] = useState(0)
   const submissionInFlight = useRef(false)
-  const email = "liaoshenyuan1999053@gmail.com"
+  const email = "hello@whaleleap.studio"
   const activeGrowthItem = text.whyItems[activeGrowthSignal]
   const activeGrowthMeta = growthSignalMeta[activeGrowthSignal]
 

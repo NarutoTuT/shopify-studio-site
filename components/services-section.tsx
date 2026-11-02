@@ -18,12 +18,12 @@ const serviceLinks = [
 
 const copy = {
   zh: {
-    eyebrow: "SERVICE SYSTEM",
+    eyebrow: "服务方向",
     title: "围绕 Shopify 建站与增长，而不是围绕开发任务拆服务。",
     description: "三个服务方向对应三个核心问题：网站是否稳定好用、购买路径是否顺畅、数据是否能指导下一步。",
-    problemLabel: "PROBLEM",
-    solutionLabel: "SOLUTION",
-    capabilityLabel: "BEST FOR",
+    problemLabel: "当前问题",
+    solutionLabel: "解决方式",
+    capabilityLabel: "适用场景",
     cta: "查看服务详情",
     services: [
       {
@@ -35,14 +35,14 @@ const copy = {
       },
       {
         label: "02",
-        title: "Conversion Optimization",
+        title: "转化率优化",
         problem: "你有流量，但用户没有被顺利带到信任、加购和下单。",
         solution: "我们重组首页、产品页、活动页、移动端体验和购买路径，让页面更清楚地服务成交。",
         capability: "适合广告落地页、PDP 优化、移动端体验、信任内容和活动页面优化。",
       },
       {
         label: "03",
-        title: "Growth Analytics & Tracking",
+        title: "数据分析与追踪",
         problem: "你不知道广告、页面和订单之间的真实关系。",
         solution: "我们配置 GA4、GTM、Meta Pixel 和 Google Ads Tracking，帮助团队看清转化路径和增长机会。",
         capability: "适合基础数据追踪、广告转化事件、归因问题排查和增长复盘体系。",
@@ -171,9 +171,9 @@ export function ServicesSection() {
         <div className="relative flex items-center justify-between border-b border-white/10 px-5 py-4 md:px-7">
           <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-white/35 md:text-[11px]">
             <span className="size-1.5 animate-pulse rounded-full bg-primary shadow-[0_0_10px_rgba(119,252,117,0.8)] motion-reduce:animate-none" />
-            Service command center
+            {language === "zh" ? "服务概览" : "Service command center"}
           </div>
-          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-primary/70 md:text-[11px]">System 0{activeIndex + 1} / 03</span>
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-primary/70 md:text-[11px]">{language === "zh" ? `服务 ${activeIndex + 1} / 3` : `System 0${activeIndex + 1} / 03`}</span>
         </div>
 
         <div className="relative border-b border-white/10 p-3 lg:hidden" role="tablist" aria-label={text.eyebrow}>
@@ -231,7 +231,7 @@ export function ServicesSection() {
             <div key={`${language}-${activeService.title}`} className="animate-in fade-in slide-in-from-right-3 duration-500">
               <div className="mb-8 flex items-start justify-between gap-5">
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">Active service · {activeService.label}</p>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">{language === "zh" ? `当前服务 · ${activeService.label}` : `Active service · ${activeService.label}`}</p>
                   <h3 className="mt-3 max-w-3xl text-2xl font-bold leading-tight text-white md:text-4xl">{activeService.title}</h3>
                 </div>
                 <span className="hidden size-14 shrink-0 items-center justify-center rounded-2xl border border-primary/30 bg-primary/10 text-primary shadow-[0_0_30px_rgba(119,252,117,0.15)] sm:flex">

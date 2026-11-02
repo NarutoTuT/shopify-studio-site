@@ -21,6 +21,7 @@ import {
 
 import { Navbar } from "@/components/navbar"
 import { PageStructuredData } from "@/components/page-structured-data"
+import { FaqStructuredData } from "@/components/faq-structured-data"
 import { RelatedCaseStudies } from "@/components/related-case-studies"
 import { ServiceFaqPanel } from "@/components/service-faq-panel"
 import { useLanguage } from "@/components/language-provider"
@@ -588,6 +589,7 @@ export function ShopifyThemeCustomizationPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <FaqStructuredData items={text.faqs} />
       <PageStructuredData
         breadcrumbs={structuredData.breadcrumbs}
         service={structuredData.service}
