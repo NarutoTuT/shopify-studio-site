@@ -19,7 +19,7 @@ const copy = {
     learnLabel: "学习资源",
     learnAllLabel: "查看全部学习资源",
     learnMenuEyebrow: "SHOPIFY GROWTH LIBRARY",
-    learnMenuHeading: "6 篇深度指南",
+    learnMenuHeading: "7 篇深度指南",
     learnMenuText: "建站、数据与 CRO，从判断到落地",
     casesLabel: "案例",
     casesAllLabel: "查看全部案例",
@@ -35,6 +35,7 @@ const copy = {
           { label: "Shopify 建站费用", href: "/learn/shopify-website-cost", icon: Calculator, description: "费用构成、三档方案与逻辑" },
           { label: "Shopify 定制开发报价", href: "/learn/shopify-custom-development-cost", icon: Code2, description: "功能点、工时与定制报价逻辑" },
           { label: "开发者还是工作室", href: "/learn/hire-shopify-developer", icon: Library, description: "合作模式、报价与合同边界" },
+          { label: "开发者代码能力怎么验证", href: "/learn/verify-shopify-developer-code", icon: Code2, description: "真实代码、交付与上线证据" },
         ],
       },
       {
@@ -66,7 +67,7 @@ const copy = {
     learnLabel: "Learn (中文)",
     learnAllLabel: "View all learning resources",
     learnMenuEyebrow: "SHOPIFY GROWTH LIBRARY",
-    learnMenuHeading: "6 in-depth guides",
+    learnMenuHeading: "7 in-depth guides",
     learnMenuText: "Build, data, and CRO — from decision to launch",
     casesLabel: "Case Studies",
     casesAllLabel: "View all case studies",
@@ -82,6 +83,7 @@ const copy = {
           { label: "Shopify Website Cost", href: "/learn/shopify-website-cost", icon: Calculator, description: "Cost, tiers, pricing logic" },
           { label: "Custom Development Cost", href: "/learn/shopify-custom-development-cost", icon: Code2, description: "Scope, effort, and quoting logic" },
           { label: "Developer or Studio", href: "/learn/hire-shopify-developer", icon: Library, description: "Models, pricing, contract scope" },
+          { label: "Verify developer code skills (中文)", href: "/learn/verify-shopify-developer-code", icon: Code2, description: "Code, handoff, live proof" },
         ],
       },
       {
