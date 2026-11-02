@@ -88,6 +88,15 @@ const resources = [
     type: "代码证据指南",
     icon: Code2,
   },
+  {
+    number: "08",
+    title: "Shopify vs Shopline vs WooCommerce：独立站选型对比",
+    description: "按预算、技术能力、海外销售和维护成本，选择适合当前阶段的平台。",
+    href: "/learn/shopify-vs-shopline-vs-woocommerce",
+    label: "独立站平台选型",
+    type: "选型指南",
+    icon: Compass,
+  },
 ] as const
 
 const problemLinks = [
@@ -136,7 +145,7 @@ export default function LearnPage() {
                 <h1 className="mx-auto mt-6 max-w-[1050px] bg-gradient-to-r from-foreground via-primary to-foreground bg-[length:200%_100%] bg-clip-text text-[clamp(2.55rem,7vw,4.8rem)] font-bold leading-[1.04] tracking-normal text-transparent animate-shimmer motion-reduce:animate-none">Shopify 建站与增长学习资源</h1>
                 <p className="mx-auto mt-6 max-w-3xl text-base leading-[1.8] text-muted-foreground md:text-lg">围绕 Shopify 建站费用、数据追踪和增长工程，把复杂问题整理成可以直接用于决策与实施的指南。</p>
                 <div className="mx-auto mt-9 grid max-w-3xl gap-3 sm:grid-cols-3">
-                  {["7 篇深度指南", "建站 + 数据 + CRO", "持续维护更新"].map((item, index) => (
+                  {["8 篇深度指南", "建站 + 数据 + CRO", "持续维护更新"].map((item, index) => (
                     <div key={item} className={`flex min-h-14 items-center justify-center rounded-full border px-4 py-3 text-base font-semibold backdrop-blur-md ${index === 0 ? "border-primary/25 bg-primary/[0.08] text-primary" : "border-white/10 bg-black/20 text-white/68"}`}>{item}</div>
                   ))}
                 </div>

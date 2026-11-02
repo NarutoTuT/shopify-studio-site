@@ -28,6 +28,7 @@ const chineseOnlyPaths = new Set([
   "/learn/shopify-ga4-purchase-tracking-fix",
   "/learn/hire-shopify-developer",
   "/learn/verify-shopify-developer-code",
+  "/learn/shopify-vs-shopline-vs-woocommerce",
   "/learn/shopify-cro-checklist",
 ])
 
