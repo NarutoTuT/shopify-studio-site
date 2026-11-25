@@ -11,17 +11,18 @@ export default function ThemeSupportPage() {
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     if (state === "sending") return
+    const form = event.currentTarget
     setState("sending")
     setMessage("")
     try {
-      const body = new FormData(event.currentTarget)
+      const body = new FormData(form)
       body.set("startedAt", String(startedAt))
       const response = await fetch("/api/theme-support", { method: "POST", body })
       const result = await response.json() as { message?: string; ticketId?: string; receiptSent?: boolean }
       if (!response.ok) throw new Error(result.message || "We could not send your request. Please try again.")
       setState("sent")
       setMessage(`Request received. Your reference is ${result.ticketId}.${result.receiptSent ? " A receipt has been sent to your email." : " Save this reference; the email receipt is delayed."}`)
-      event.currentTarget.reset()
+      form.reset()
     } catch (error) {
       setState("error")
       setMessage(error instanceof Error ? error.message : "We could not send your request. Please try again.")
